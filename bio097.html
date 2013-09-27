@@ -1,0 +1,553 @@
+<base href="http://www.ashe.org/">
+ 
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="activedate" content="">
+<meta name="gsadate" content="">
+<meta name="robots" content="index,follow" />
+<!--[if IE 7]><link href="inc-ashe/css/ie.css" rel="Stylesheet" type="text/css" /><![endif]-->
+	<!--[if IE 6]><link href="inc-ashe/css/ie.css" rel="Stylesheet" type="text/css" /><![endif]-->
+    	<!--[if IE 8]><link href="inc-ashe/css/ie.css" rel="Stylesheet" type="text/css" /><![endif]-->
+<!-- begin ad files -->
+<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="/inc-ashe/js/AC_RunActiveContent.js" language="javascript"></script>
+
+<!-- end ad files -->
+
+<title>ASHE - American Society for Healthcare Engineering</title>
+<script type="text/javascript"  src="/inc-ashe/js/jquery.tools.min.js"></script>
+<script type="text/javascript"  src="/inc-ashe/js/superfish.js"></script>
+
+<script type="text/javascript">
+<!--//
+$(function(){ 
+
+//Drop Menus
+$('ul.sf-menu').superfish(); 
+
+});
+//-->
+</script>
+
+<!-- Urchin Tracking -->
+<script type="text/javascript" src="/inc-ashe/__utm.js"></script>
+
+<!-- OAM -->
+<script type="text/javascript" language="javascript" src="/oam-ashe/siteinfo.js"></script>
+<script type="text/javascript" language="javascript" src="/oam/js/lib/aha-lib.js"></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="/inc-ashe/css/style-130718.css" />
+<link rel="stylesheet" type="text/css" media="print" href="/inc-ashe/css/print-style.css" />
+<link rel="shortcut icon" href="/inc-ashe/i/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/inc-ashe/i/favicon.ico" type="image/x-icon" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42208078-2', 'ashe.org');
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="/inc-ashe/js/jquery.cycle.all.min.js " language="javascript"></script>
+<script src="/inc-ashe/js/jquery.hoveraccordion.js " language="javascript"></script>
+<!-- Files for add homepage bar -->
+<script language="javascript" src="/inc-ashe/js/jquery.cookies.js"></script>
+<script language="javascript" src="/inc-ashe/js/jquery.homepage.js"></script>
+
+
+<link rel="stylesheet" type="text/css" media="all" href="/inc-ashe/css/add-homepage.css" />
+
+<script src="/inc-ashe/js/ad_functions.js" language="javascript"></script>
+<script type="text/javascript">
+<!--//
+	$(document).ready(function() {
+		$.get('/inc-ashe/dhtml/aha-news-now.dhtml', { ITEMS:"3" }, function(data){
+			$("#news_items").replaceWith(data);
+		});
+		
+		 $('#rightAccord').hoverAccordion({
+      keepHeight: false,
+      activateItem: 1,
+      speed: 'fast'
+   });
+
+	});	
+	
+		
+
+	$(function(){ 
+		$('div#tabs ul').tabs('div.panes > div');// Tabs
+		$('ul.sf-menu').superfish();// Drop Menus	
+		
+
+	});	
+
+     
+//-->
+</script>
+ 
+ 
+</head>
+
+<body>
+
+<div id="make-homepage-bar">
+	<p>Would you like to make ASHE your homepage?</p>
+    <a id="homepage-yes" href="#"><img src="/inc-ashe/i/homepage-yes.gif" /></a> <a id="homepage-no" href="#"><img src="/inc-ashe/i/homepage-no.gif" /></a>
+</div>
+
+<div id="wrap">
+	<div id="hdr2">
+		<h1><a href="/"><span>ASHE - Dedicated to optimizing the healthcare physical environment</span></a></h1>
+	</div>
+
+	<div id="hdrbar">
+	
+    <ul class="nolist">
+		<li class="search">
+        
+       		<form method="get" action="/search" id="search">
+                <input type="text" id="q" name="q" style="background: url(&quot;http://www.hospitalconnect.com/hospitalconnect/search/hcwrapper/images/gs_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);">
+                <input type="image" value="Search" name="submit"  src="/inc-ashe/i/searchGo.png" id="searchbtn" ><div class="styled-select">
+                <div class="select">
+                <select id="site" name="site" class="default">
+                    <option value="ASHE" >Search this site</option>
+                    <option value="default_collection">Search the portal</option>
+                </select>
+                </div>
+                </div>
+                <input type="hidden" value="ASHE_1_0" name="client">
+                <input type="hidden" value="ASHE_1_0" name="proxystylesheet">
+                <input type="hidden" value="xml_no_dtd" name="output">
+                <input type="hidden" value="0" name="filter">
+			</form>
+            
+            <script language="javascript" type="text/javascript">
+				// this script controls the watermark
+				var search_field = document.getElementById('q');
+				search_field.onfocus = watermark_off; 
+				search_field.onblur = watermark_on;
+				watermark_on();
+				
+				function watermark_off(){
+					search_field.style.background = '#FFF none';
+					return;
+				}
+				function watermark_on(){
+					if (search_field.value == ''){
+						search_field.style.background = '#FFF url(http://www.hospitalconnect.com/hospitalconnect/search/hcwrapper/images/gs_watermark.gif) left no-repeat';
+					}
+					return;
+				}	
+			</script>
+            
+		</li>
+		<li class="login">
+			<h4><span id="ELEMENToamwelcome"></span>&nbsp;<span id="ELEMENToamregister"><a class="oamRegisterLinkCurrent" href="#">Register</a></span><span id="ELEMENToamprofile"></span>&nbsp;|&nbsp;<span id="ELEMENToamlink"><a class="oamLoginLink" href="#">Log in</a></span></h4>
+		</li>
+	</ul>
+	
+    </div>
+    
+
+
+<div id="content" class="home">	
+
+	<div id="nav">
+		<ul class="nolist inline sf-menu">
+
+    <li class="home"><a id="asheMenu" href="/"><span>Home</span></a></li>
+    
+    <li class="abou"><a id="aboutMenu" href="/about/"><span>About</span></a>
+        <ul class="dropmenu">
+        	<li><a href="/about/chapters/">Affiliated Chapters</a>
+        		<ul>
+        			<!-- <li><a href="/about/chapters/awards.html">Awards Program</a></li> -->
+        			<li><a href="/about/chapters/calendar.html">Chapter Calendar</a></li>
+        			<li><a href="/about/chapters/chapterlist.html">Chapter List</a></li>
+        			<li><a href="/about/chapters/handbook.html">Chapter Handbook and Forms</a></li>
+        		</ul>
+        	</li>
+            <li><a href="/about/awards/">Award Programs</a>
+                <ul>
+                    <li><a href="/about/awards/crystal_eagle/index.html">Crystal Eagle</a></li>
+					<li><a href="/about/awards/regional_leader/index.html">Emerging Regional Leader</a></li>
+					<li><a href="/about/awards/facility_management/index.html">Excellence in Facility Management</a></li>
+					<li><a href="/about/awards/president/index.html">President's Award</a></li>
+					<li><a href="/about/awards/vista/index.html">Vista Awards Program</a></li>
+                </ul>
+            </li>
+            <li><a href="/about/ASHE_membership">ASHE Membership</a></li>
+            <li><a href="/about/volunteer.html">Call for Volunteers</a></li>
+            <li><a href="/about/certifications/">Certifications</a></li>
+            <li><a href="/about/governance/">Governance</a>
+               	 <ul>
+               	 	
+                 	<!-- <li><a href="/about/governance/annualbusinessmeeting.html">Annual Business Meeting</a></li> -->
+                    <li><a href="/about/governance/board.html">Board of Directors</a></li>
+                    <li><a href="/about/governance/committees.html">Committees</a></li>
+                    <li><a href="/about/governance/elections/">Elections</a></li>
+                    <li><a href="/about/governance/mission.html">Mission, Vision & Bylaws</a></li>
+                    <li><a href="/about/governance/pastpresidents.html">Past Presidents</a></li>
+                    <li><a href="/about/governance/strategicplan.html">Strategic Plan</a></li>
+                </ul>
+            </li>
+            <li><a href="/about/missionpartners.html">Corporate Sponsors</a></li>
+             <li><a href="/press/">Press Releases</a></li>
+           <li><a href="/about/designations/">Senior/Fellow Programs</a></li>
+            <li><a href="/about/staff.html">Staff Directory</a></li>            
+        </ul>
+    </li>
+    
+    <li class="conn"><a id="connectMenu" href="/connect/"><span>Connect</span></a>
+        <ul class="dropmenu">
+            <li><a href="/connect/member/listserv.html">ASHE LISTSERV&nbsp;&nbsp;<img class="img-icon" title="Members Only" alt="Members Only" src="/img/icon/glyf_nav_lock-grn.png" border="0" /></a></li>
+            <li><a href="http://www.ashepages.com" target="_blank">ASHE Pages</a></li>
+            <li><a href="/connect/ask-ashe/">Just Ask ASHE</a></li>
+            <li class="mo"><a href="/connect/member/directory/">Member Directory&nbsp;&nbsp;<img class="img-icon" title="Members Only" alt="Members Only" src="/img/icon/glyf_nav_lock-grn.png" border="0" /></a></li>
+            <li><a href="/about/staff.html">Contact ASHE</a></li>
+            <li class="mo"><a href="http://www.facebook.com/pages/ASHE-American-Society-for-Healthcare-Engineering/353881514045?ref=sgm" target="_blank">ASHE on Facebook&nbsp;&nbsp;<img src="/img/icon/glyf_facebook_grn_14x16.png" alt="Facebook" width="14" height="16" border="0" class="img-icon" title="Facebook" /></a></li>	
+            <li><a href="http://www.twitter.com/asheaha" target="_blank">ASHE on Twitter</a></li>		
+            <li><a href="http://www.linkedin.com/groups?gid=2132968&trk=hb_side_g" target="_blank">ASHE on LinkedIn</a></li>
+<li><a href="/member/blog">ASHE Blog</a></li>
+            <li><a href="https://www.youtube.com/user/asheaha " target="_blank">ASHE on YouTube</a></li>
+            
+     <li><a href="/promotional/index.html">Promotional Opportunities</a></li>       
+            					
+        </ul>
+    </li>
+    
+    <li class="lear"><a id="educationMenu" href="/learn/"><span>Learn</span></a>
+        <ul class="dropmenu">
+        
+	        
+			<li><a href="/learn/calendar.html">ASHE Calendar</a></li>
+			<li><a href="/learn/seminars_and_workshops/">Seminars &amp; Workshops</a>
+			<ul>
+		
+				<li><a href="/learn/seminars_and_workshops/bootcamp/index.html">Fundamentals </a></li>
+                <li><a href="/learn/seminars_and_workshops/CHC/">CHC Exam Review Course</a></li>
+				<li><a href="/learn/seminars_and_workshops/CHFM/">CHFM Exam Review Course</a></li>
+          		<li><a href="/learn/seminars_and_workshops/CJC/index.html">Managing Accreditation</a></li>
+				<li><a href="/learn/seminars_and_workshops/HCC/index.html">Healthcare Construction Certificate (HCC)</a></li>
+				<li><a href="/learn/seminars_and_workshops/HCPM/index.html">Managing the PDC Process</a></li>
+				<li><a href="/learn/seminars_and_workshops/IC/index.html">Infection Prevention (IP)</a></li>
+				<li><a href="/learn/seminars_and_workshops/HFCx/index.html">Commissioning (HFCx)</a></li>
+               
+			</ul>
+			</li>
+			<li><a href="/annual/" target="_blank">Annual Conference &amp; Exhibition</a></li>
+			<li><a href="/PDC/" target="_blank">PDC Summit &amp; Exhibition</a></li>
+			<li><a href="/learn/e-learning_programs/energy_university/index.html">Energy University</a></li>
+			<li><a href="/learn/e-learning_programs/">E-Learning Programs</a>
+            <ul>
+            	<li><a href="http://elearning.ashe.org" target="_blank">Angel Login</a></li>
+				<li><a href="/learn/e-learning_programs/managing_life_safety/">Managing Life Safety</a></li>
+				<li><a href="/learn/e-learning_programs/subcontractor/">Health Care Construction: Subcontractor Program</a></li>
+            </ul></li>
+			<li><a href="/learn/HCTV/">HCTV</a></li>
+			<li><a href="/learn/internship/">Internship Program</a></li>
+			<li><a href="http://www.softconference.com/ashe/" target="_blank">Live Learning Center</a></li>
+			<li><a href="/learn/regional_conferences/">Regional Conferences</a>
+				<ul><li><a href="/learn/regional_conferences/region_6_educational_conference/">Region 6 Conference</a></li>
+				  <li><a href="/learn/regional_conferences/region_9_educational_conference/index.html">Region 9 Conference</a></li>
+				</ul>
+		  </li>
+
+			<li><a href="/learn/webinars/">Webinars</a></li>									
+        </ul>
+    </li>
+    
+    <li class="reso"><a id="resourcesMenu" href="/resources/"><span>Resources</span></a></li>
+    
+    <li class="advo"><a id="advocacyMenu" href="/advocacy/"><span>Advocacy</span></a>
+        <ul class="dropmenu">
+        	<li><a href="/advocacy/action_plans/">Committee Action Plans</a></li>
+            <li><a href="/advocacy/advisories/">Alerts, Briefs &amp; Articles</a></li>
+            <li><a href="http://www.ashe.org/advocacyhighway">Advocacy Highway</a></li>
+          	<li><a href="/advocacy/member/radar/">Advocacy Radar&nbsp;&nbsp;<img class="img-icon" title="Members Only" alt="Members Only" src="/img/icon/glyf_nav_lock-grn.png" border="0" /></a></li>
+            <!--<li><a href="http://www.ashe.org/codereform">Code Reform</a></li> -->
+            <li><a href="/advocacy/organizations/">Industry Organizations</a>
+				<ul>
+					<li><a href="/advocacy/organizations/AIA/">AIA Academy of Architecture for Health (AAH)</a></li>			
+					<li><a href="/advocacy/organizations/CDC/">Centers for Disease Control and Prevention (CDC)</a></li>					
+					<li><a href="/advocacy/organizations/CMS/">Center for Medicare &amp; Medicaid Services (CMS)</a></li>					
+					<li><a href="/advocacy/organizations/EPA/">Environmental Protection Agency (EPA)</a></li>					
+					<li><a href="/advocacy/organizations/FGI/">Facility Guidelines Institute</a></li>					
+					<li><a href="/advocacy/organizations/FDA/">Food &amp; Drug Administration (FDA)</a></li>					
+					<li><a href="/advocacy/organizations/ICC/">International Code Council</a></li>					
+					<li><a href="/advocacy/organizations/TJC/">The Joint Commission</a></li>					
+					<li><a href="/advocacy/organizations/NFPA/">National Fire Protection Association (NFPA)</a></li>					
+					<li><a href="/advocacy/organizations/OSHA/">Occupational Safety and Health Administration (OSHA)</a></li>					
+					<li><a href="/advocacy/organizations/USP/">United States Pharmacopeia (USP)</a></li>
+				</ul>			
+			</li>
+			<li><a href="/advocacy/research/">Research &amp; Statistics</a></li>
+        </ul>
+    </li>
+    
+    <li class="stor"><a href="http://www.ashestore.com" target="_blank"><span>Store</span></a></li>
+    
+</ul>
+		
+    </div><!-- /#nav -->
+	<div id="addthis">
+      <div style="padding-bottom: 10px;">
+    	<!-- AddThis Button BEGIN -->
+    	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e5fa1633a72d1af"></script>  	
+    	<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+		<div class="addthis_toolbox addthis_default_style ">
+		<a class="addthis_button_email"></a>
+		<a class="addthis_button_print"></a>
+		<a class="addthis_button_twitter"></a>
+		<a class="addthis_button_facebook"></a>	
+		<a class="addthis_button_linkedin"></a>
+		<a class="addthis_button_raiseyourvoice"></a>
+		<a class="addthis_button_compact"></a>
+		</div>
+		<!-- AddThis Button END -->
+</div>
+      </div>
+			<div class="tickerpad"><div id="ticker"> </div></div>
+			  <!--top left -->
+  <div id="leftCol">
+		<div id="slideshow">
+			   
+                
+				
+                   	
+                    
+						<a href="/resources/ashenews/2013/jc_update_g_mills_130819.html"><img src="/images/carousel/2013/spotlight_130820.png" alt="" width="650" height="324" /></a>
+
+                        
+                  
+					
+                
+				
+                   	
+                    
+						<a href="/resources/asheinsider/2013/spotlight_130813.html"><img src="/images/carousel/2013/spotlight_130813.png" alt="" width="650" height="324" /></a>
+
+                        
+                  
+					
+                
+				
+                   	
+                    
+						<a href="/resources/asheinsider/2013/spotlight_130806.html"><img src="/images/carousel/2013/spotlight_130806.png" alt="" width="650" height="324" /></a>
+
+                        
+                  
+					
+                
+				
+                   	
+                    
+						<a href="/press/2013/arch_gallery_130729.html"><img src="/images/carousel/2013/spotlight_130730.png" alt="" width="650" height="324" /></a>
+
+                        
+                  
+					
+                                   	
+                <!--home-gallery-->
+		 
+			 
+                 </div></div>  <!--home-gallery-->								
+					<!--top left end-->
+  <!--top right-->
+			<div id="rightCol"><div class="content">
+           <ul id="rightAccord">
+                <li class="firstitem active">
+                    <a href="#" class="header opened">Featured Resources</a>
+                    <ul style="height: auto;">
+                        <li style="display: list-item;">
+                           <div class="content"><ul>
+                            
+                            <li><a href="/resources/careerflashinfo.html">Career Flash</a></li><li><a href="http://www.ashe.org/resources/ashenews.html">News</a></li><li><a href="/resources/WMTS/onlineregistration.html">WMTS Registration</a></li><li><a href="/member/blog/index.php">ASHE Blog</a></li><li><a href="http://www.sustainabilityroadmap.org/">Sustainability Roadmap</a></li>              
+                            
+                            </ul>  </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="header closed">ASHE Calendar</a>
+                    <ul style="height: 0px;">
+                        <li style="display: none;">
+                         <div class="content"><ul>
+                           <li><a href="/learn/seminars_and_workshops/HCC/index.html">Aug. 19-20, HCC</a></li><li><a href="/learn/seminars_and_workshops/ic/index.html">Aug. 19-20, IP</a></li><li><a href="/learn/seminars_and_workshops/HFCx/index.html">Aug. 19-20, HFCx</a></li><li><a href="/learn/seminars_and_workshops/CHC/index.html">June 12, CHC Review</a></li><li><a href="/learn/calendar.html">View Full Calendar of Events</a></li> 
+                           
+                              </ul> </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lastitem">
+                    <a href="#" class="header closed">ASHE Pages</a>
+                    <ul style="height: 0px;">
+                        <li style="display: none;">
+                        <div class="content">
+                        <div align="center" style="margin-top: -10px; margin-left:-45px; margin-bottom:-5px"><a href="http://ashepages.com/" target="_blank"><img src="/inc-ashe/channel/images/Grainger-logo-home.gif" border="0" vspace="0" hspace="0" /></a></div>
+                        <p>ASHE Pages is an online directory of services and products in health care design, construction, and operations. Click the image below to begin researching solutions for your current and future projects.</p>
+                     <form id="input" name="input" action="http://ashepages.com/results.php" method="get" target="_blank">
+
+<input maxlength="40" size="30" name="term"><input type="hidden" value="keyword" name="search_type"><br/>
+
+<input type="image" height="32" width="101" src="/inc-ashe/i/search.png">
+
+</form>
+<!--<p ><small><a target="_blank" href="http://ashepages.com/">www.ASHEPages.com</a></small></p>
+
+<p ><strong><em>ASHE Pages</em> is sponsored by</strong></p>
+
+<center><a target="_blank" href="http://www.grainger.com/"><img width="175" height="40" border="0" src="/img/logo/logo_grainger_cl_175x040.jpg" alt="Grainger"></a></center>
+
+<p ><a target="_blank" href="http://www.grainger.com/">www.grainger.com</a></p> 
+
+<p></p>-->
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+          
+            </ul>
+        
+				 </div>
+                </div>
+                 
+<div id="bottomBox">
+<div class="b1">
+<h1>What's New</h1>
+<div class="content"><div id="ad"><script type="text/javascript">
+var sads1 = new adArray2('/images/ads/14_arc_showcase_68x68.png','/promotional/archdisplay.html','Ad 1 - 2014 Architecture Showcase','Showcase your best health care designs with the 2014 Architecture for Health Showcase. ','/images/ads/14_arc_showcase_68x68.png','/promotional/archdisplay.html','Ad 2 - 2014 Architecture Showcase','Showcase your best health care designs with the 2014 Architecture for Health Showcase. ','/images/ads/14_arc_showcase_68x68.png','/promotional/archdisplay.html','Ad 3 - 2014 Architecture Showcase','Showcase your best health care designs with the 2014 Architecture for Health Showcase. ');
+displaySideAds();
+</script></div> </div>
+</div>
+
+<div class="b2">
+<div class="content">
+<h1>AHA News Now</h1>
+  <div id="news_items"></div>
+ <div class="more"><a href="http://www.ahanews.com" target="_blank">more</a></div>
+</div>
+</div>
+
+<div class="b3">
+<div class="content">
+
+ 
+
+<a href="http://www.ashe.org/about/ASHE_membership/ "><img alt="" src="/inc-ashe/i/asheJoinNow.png" border="0"></a>&nbsp;&nbsp;
+
+    
+
+</div>
+</div>
+
+
+	</div>
+</div><!-- /content -->
+
+<div id="footer">
+    <div id="top">
+
+    <div id="b1">
+	<ul>
+<li>
+<h3><a href="http://www.ashe.org/">Home</a></h3>
+</li>
+<li>
+<h3><strong>About:</strong></h3>
+<ul>
+<li><a href="http://www.ashe.org/press/">Press Releases</a></li>
+<li><a href="http://www.ashe.org/about/staff.html">Staff Directory</a></li>
+<li><a href="http://www.ashe.org/about/governance/strategicplan.html">Strategic Plan</a></li>
+<li><a href="http://www.ashe.org/about/governance/board.html">Board of Directors</a></li>
+<li><a href="http://www.ashe.org/about/governance/committees.html">Committees</a></li>
+<li><a href="http://www.ashe.org/about/chapters/">Affiliated Chapters</a></li>
+<li><a href="http://www.ashe.org/about/ASHE_membership/">ASHE Membership</a></li>
+</ul>
+&nbsp;</li>
+</ul>
+	</div>
+<div id="b2">
+<ul>
+<li>
+<h3><strong>Connect:</strong></h3>
+<ul>
+<li><a href="http://www.ashe.org/connect/member/listserv.html">ASHE List SERV</a></li>
+<li><a href="http://www.ashe.org/connect/ask-ashe/">Ask ASHE</a></li>
+<li><a href="http://www.ashe.org/connect/member/directory/">Member Directory</a></li>
+<li><a href="https://www.youtube.com/user/asheaha">ASHE on YouTube</a></li>
+<li><a href="http://www.ashe.org/promotional/index.html">Promotional Opportunities</a></li>
+</ul>
+</li>
+<li>
+<h3><strong>Learn:</strong></h3>
+<ul>
+<li><a href="http://www.ashe.org/learn/calendar.html">ASHE Calendar</a></li>
+<li><a href="http://www.ashe.org/PDC/">PDC Summit</a></li>
+<li><a href="http://www.ashe.org/annual/">ASHE Annual Conference</a></li>
+<li><a href="http://www.softconference.com/ashe/">Live Learning Center</a></li>
+</ul>
+&nbsp;</li>
+</ul>
+</div>
+<div id="b3">
+<ul>
+<li>
+<h3><strong>Advocacy:</strong></h3>
+<ul>
+<li><a href="http://www.ashe.org/advocacy/advisories/">Alerts, Briefs &amp; Articles</a></li>
+<li><a href="http://www.ashe.org/advocacy/action_plans/">Committee Action Plans</a></li>
+<li><a href="http://www.ashe.org/advocacy/member/radar/">Advocacy Radar</a></li>
+<li><a href="http://www.ashe.org/advocacy/highway/dhtml/communicate.dhtml">Advocacy Highway</a></li>
+</ul>
+</li>
+<li>
+<h3><strong>Resources:</strong></h3>
+<ul>
+<li><a href="http://www.ashe.org/resources/management_monographs/">Monographs</a></li>
+<li><a href="http://www.sustainabilityroadmap.org/">Sustainability Roadmap</a></li>
+<li><a href="http://www.ashe.org/resources/inside_ASHE/">Inside ASHE</a></li>
+<li><a href="http://www.ashe.org/resources/member/physicalenvironmentrefs.html">Physical Environment References</a>&nbsp;</li>
+<li><a href="http://www.ashe.org/resources/tools/">Tools</a></li>
+<li><a href="/resources/WMTS/">WMTS</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+		
+
+The American Society for Healthcare Engineering of the American Hospital Association
+<br>
+155 N. Wacker Drive, Suite 400. Chicago, IL 60606
+<br>
+Phone: 312-422-3800 | Fax: 312-422-4571
+<br>
+<a href="mailto:ashe@aha.org">ashe@aha.org</a>
+    
+
+	</div><!-- /ftr -->
+
+	</div></body>
+</html>
+
+
+
+

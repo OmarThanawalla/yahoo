@@ -1,0 +1,407 @@
+<base href="http://www.upscale.utoronto.ca/GeneralInterest/Harrison/QuantTeleport/QuantTeleport.html">
+<!DOCTYPE HTML PUBLIC "-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//EN" "hmpro6.dtd">
+<HTML> 
+  <HEAD> 
+	 <TITLE>Quantum Teleportation</TITLE> 
+  </HEAD> 
+  <BODY> 
+	 <H1 ALIGN="CENTER">Quantum Teleportation, Information and Cryptography</H1>
+	 
+	 
+<P>Click <A HREF="http://www.upscale.utoronto.ca/">here</A> to go to the UPSCALE 
+  home page.<BR>
+  Click <A HREF="http://faraday.physics.utoronto.ca/PVB/GeneralInterest.html">here</A> 
+  to go to the Physics Virtual Bookshelf home page.</P>
+<HR>
+<H2 ALIGN="CENTER">INTRODUCTION</H2> 
+	 <P>In March 1993 Charles H. Bennett from IBM proposed a scheme, based on
+		Quantum Mechanics, that in principle could be used to teleport an object. The
+		scheme was experimentally verified by Dik Bouwmeester et al. in the Fall of
+	   1997. In 2004 researchers at the University of Vienna and the Austrian Academy of Science used an 800m-long optical fibre fed through a public sewer system tunnel to connect labs on opposite sides of the River Danube to achieve such teleportation.. </P> 
+	 <P>Here we explore this phenomenon of <I>Quantum Teleportation</I>. We will
+		then extend the discussion to <I>Quantum Information</I> and <I>Quantum
+		Cryptography</I>. The document is based on a discussion with an upper year
+		course in modern Physics without mathematics given at the University of
+		Toronto. </P> 
+	 <P>Although the discussion is almost totally non-mathematical, it requires
+		considerable understanding of the Quantum Correlation experiments used in
+		describing <I>Bell's Theorem</I>. A document on Bell's Theorem is available
+		<A
+		 HREF="http://www.upscale.utoronto.ca/PVB/Harrison/BellsTheorem/BellsTheorem.html">here</A>;
+		total file size including graphics is about 47k.</P> <HR> 
+	 <H2 ALIGN="CENTER">TELEPORTATION</H2> 
+	 <P>In <I>Star Trek</I>, when Captain Kirk is beamed from the starship
+		Enterprise to the surface of a planet, Captain Kirk de-materialises on the
+		Enterprise, and then re-materialises on the planet. On the TV show, an
+		unanswered question is whether the transporter physically disassembles Captain
+		Kirk, moves the atoms from his body to the planet, and then reassembles them.
+		Another perhaps more reasonable alternative would be to scan all the
+		information about Captain Kirk's physical state, and transmit that information
+		to the planet surface where it is used to construct a new Captain Kirk out of
+		raw materials found on the planet. Note that in either case the transporter
+		needs to have complete information on Kirk's physical state in order to
+		reconstruct him.</P> 
+	 <P>However, the Heisenberg Uncertainty Principle means that it is
+		impossible to obtain this complete information about Kirk. Thus, it seems that
+		the best the transporter can do is make an approximate copy of him on the
+		planet surface. Quantum Teleportation provides a way to "beat" the Uncertainty
+		Principle and make an exact copy.</P> 
+	 <P>As we shall see, the mechanism that beats the Uncertainty Principle is
+		the same one used to beat it in the Quantum Correlation experiments we examined
+		when we discussed Bell's Theorem. We shall also see that although the collapse
+		of the state for the two measurements in the correlation experiments occurs
+		instantaneously, the teleportation can not occur faster than the speed of
+		light.</P> 
+	 <P>Finally, a little terminology. Before we were discussing Quantum
+		Correlation experiments in which we were measuring the spins of two separate
+		electrons whose total spin was zero. We call the states of those two electrons
+		<I>entangled</I>.</P><HR> 
+	 <H2 ALIGN="CENTER">BELL-STATE MEASUREMENTS</H2> 
+	 <P>In previous discussions we almost always talked about the spin state of
+		electrons, although we regularly pointed out that the same situations exist for
+		the polarization of light, albeit with a difference of a factor of 2 in the
+		angles being used. Here we will reverse the situation, and mostly talk about
+		polarization states for photons, although the arguments also apply to spin
+		states of electrons.</P> 
+	 <P>The fact that we may talk about light polarization in almost the same
+		way that we discuss electron spin is not a coincidence. It turns out that
+		photons have spins which can exist in only two different states. And those
+		different spins states are related to the polarization of the light when we
+		think of it as a wave.</P> 
+	 <P>Here we shall prepare pairs of entangled photons with opposite
+		polarizations; we shall call them <I><FONT COLOR="#0099FF">E1</FONT></I> and
+		<I><FONT COLOR="#0099FF">E2</FONT></I>. The entanglement means that if we
+		measure a beam of, say, <I><FONT COLOR="#0099FF">E1</FONT></I> photons with a
+		polarizer, one-half of the incident photons will pass the filter, regardless of
+		the orientation of the polarizer. Whether a particular photon will pass the
+		filter is random. However, if we measure its companion <I><FONT
+		COLOR="#0099FF">E2</FONT></I> photon with a polarizer oriented at 90 degrees
+		relative to the first, then if <I><FONT COLOR="#0099FF">E1</FONT></I> passes
+		its filter <I><FONT COLOR="#0099FF">E2</FONT></I> will also pass its filter.
+		Similarly if <I><FONT COLOR="#0099FF">E1</FONT></I> does not pass its filter
+		its companion <I><FONT COLOR="#0099FF">E2</FONT></I> will not.</P> 
+	 <P>Earlier we discussed the Michelson-Morley experiment, and later the
+		Mach-Zehnder interferometer. You will recall that for both of these we had
+		half-silvered mirrors, which reflect one-half of the light incident on them and
+		transmit the other half without reflection. These mirrors are sometimes called
+		<I>beam splitters</I> because they split a light beam into two equal parts.</P>
+	 <P>We shall use a half-silvered mirror to perform <I>Bell State
+		Measurements</I>. The name is after the originator of Bell's Theorem.</P> 
+	 <TABLE WIDTH="100%"> 
+		<TR> 
+		  <TD> 
+			 <P>We direct one of the entangled photons, say <I><FONT
+				COLOR="#0099FF">E1</FONT></I>, to the beam splitter.</P> 
+			 <P>Meanwhile, we prepare another photon with a polarization of
+				45<SUP>0</SUP>, and direct it to the same beam splitter from the other side, as
+				shown. This is the photon whose properties will be transported; we label it
+				<I><FONT COLOR="#FF3300">K</FONT></I> (for Kirk). We time it so that both
+				<I><FONT COLOR="#0099FF">E1</FONT></I> and <I><FONT
+				COLOR="#FF3300">K</FONT></I> reach the beam splitter at the same time.</P></TD>
+		  
+		  <TD><IMG SRC="Images/TwoPhotons1.png"
+			 ALT="2 photons incident on a beam splitter" WIDTH="188" HEIGHT="225"
+			 BORDER="0"></TD> 
+		</TR> 
+		<TR> 
+		  <TD COLSPAN="2"><HR></TD> 
+		</TR> 
+		<TR> 
+		  <TD> 
+			 <P>The <I><FONT COLOR="#0099FF">E1</FONT></I> photon incident from
+				above will be reflected by the beam splitter some of the time and will be
+				transmitted some of the time. Similarly for the <I><FONT
+				COLOR="#FF3300">K</FONT></I> photon that is incident from below. So sometimes
+				both photons will end up going up and to the right as shown.</P> 
+			 <P>Similarly, sometimes both photons will end up going <I>down</I>
+				and to the right.</P></TD> 
+		  <TD><IMG SRC="Images/TwoPhotons2.png" WIDTH="220" HEIGHT="225"
+			 BORDER="0" ALT="A possible outcome"></TD> 
+		</TR> 
+		<TR> 
+		  <TD COLSPAN="2"><HR></TD> 
+		</TR> 
+		<TR> 
+		  <TD> 
+			 <P>But sometimes one photon will end up going upwards and the other
+				will be going downwards, as shown. This will occur when either both photons
+				have been reflected or both photons have been transmitted.</P> 
+			 <P>Thus there are three possible arrangements for the photons from
+				the beam splitter: both upwards, both downwards, or one upwards and one
+				downwards.</P> 
+			 <P>Which of these three possibilities has occurred can be determined
+				if we put detectors in the paths of the photons after they have left the beam
+				splitter.</P> 
+			 <P>However, in the case of one photon going upwards and the other
+				going downwards, we can not tell which is which. Perhaps both photons were
+				reflected by the beam splitter, but perhaps both were transmitted.</P> 
+			 <P>This means that the two photons have become <I>entangled</I>.</P> 
+			 <P>If we have a large beam of identically prepared photon pairs
+				incident on the beam splitter, the case of one photon ending up going upwards
+				and the other downwards occurs, perhaps surprisingly, 25% of the time.</P></TD>
+		  
+		  <TD><IMG SRC="Images/TwoPhtons3.png" WIDTH="219" HEIGHT="225"
+			 BORDER="0" ALT="Another possible outcome"></TD> 
+		</TR> 
+	 </TABLE> 
+	 <P>Also somewhat surprisingly, for a single pair of photons incident on the
+		beam splitter, the photon <I><FONT COLOR="#0099FF">E1</FONT></I> has now
+		collapsed into a state where its polarization is -45<SUP>0</SUP>, the opposite
+		polarization of the prepared 45<SUP>0</SUP> one. This is because the photons
+		have become entangled. So although we don't know which photon is which, we know
+		the polarizations of both of them.</P> 
+	 <P>The explanation of these two somewhat surprising results is beyond the
+		level of this discussion, but can be explained by the <I>phase shifts</I> the
+		light experiences when reflected, the mixture of polarization states of
+		<I><FONT COLOR="#0099FF">E1</FONT></I>, and the consequent <I>interference</I>
+		between the two photons.</P> <HR> 
+	 <H2 ALIGN="CENTER">THE TELEPORTER</H2> 
+	 <TABLE WIDTH="100%"> 
+		<TR> 
+		  <TD> 
+			 <P>Now we shall think about the <I><FONT
+				COLOR="#0099FF">E2</FONT></I> companion to <I><FONT
+				COLOR="#0099FF">E1</FONT></I>.</P> 
+			 <P>25 percent of the time, the Bell-state measurement resulted in the
+				circumstance shown, and in these cases we have collapsed the state of the
+				<I><FONT COLOR="#0099FF">E1</FONT></I> photon into a state where its
+				polarization is -45<SUP>0</SUP>.</P> 
+			 <P>But since the two photon system <FONT COLOR="#0099FF">E1</FONT>
+				and <FONT COLOR="#0099FF">E2</FONT> was prepared with opposite polarizations,
+				this means that the companion to <FONT COLOR="#0099FF">E1</FONT>, <I><FONT
+				COLOR="#0099FF">E2</FONT></I>, now has a polarization of +45<SUP>0</SUP>. Thus
+				the state of the <I><FONT COLOR="#FF3300">K</FONT></I> photon has now been
+				transferred to the <I><FONT COLOR="#0099FF">E2</FONT></I> photon. We have
+				teleported the information about the <I><FONT COLOR="#FF3300">K</FONT></I>
+				photon to <I><FONT COLOR="#0099FF">E2</FONT></I>.</P> 
+			 <P>Although this collapse of <I><FONT COLOR="#0099FF">E2</FONT></I>
+				into a 45<SUP>0</SUP> polarization state occurs instantaneously, we haven't
+				achieved teleportation until we communicate that the Bell-state measurement has
+				yielded the result shown. Thus the teleportation does not occur
+				instantaneously.</P> 
+			 <P>Note that the teleportation has destroyed the state of the
+				original <I><FONT COLOR="#FF3300">K</FONT></I> photon.</P> 
+			 <P>Quantum entanglements such as exist between <FONT
+				COLOR="#0099FF">E1</FONT> and <FONT COLOR="#0099FF">E2</FONT> in principle are
+				independent of how far apart the two photons become. This has been
+				experimentally verified for distances as large as 10km. Thus, the Quantum
+				Teleportation is similarly independent of the distance.</P></TD> 
+		  <TD><IMG SRC="Images/Teleporter.png" ALT="The teleporter" ALIGN="RIGHT"
+			 WIDTH="220" HEIGHT="387" BORDER="0"></TD> 
+		</TR> 
+	 </TABLE>
+<H3>The Original State of the Teleported Photon <EM>Must</EM> Be Destroyed</H3>
+<P>Above we saw that the <FONT COLOR="#FF0000">K</FONT> photon's state was destroyed 
+  when the <FONT COLOR="#0000FF">E2</FONT> photon acquired it. Consider for a 
+  moment that this was not the case, so we end up with two photons with identical 
+  polarization states. Then we could measure the polarization of one of the photons 
+  at, say, 45<SUP>0</SUP> and the other photon at 22.5<SUP>0</SUP>. Then we would 
+  know the polarization state of both photons for both of those angles.</P>
+<P>As we saw in our discussion of Bell's Theorem, the Heisenberg Uncertainty Principle 
+  says that this is impossible: we can never know the polarization of a photon 
+  for these two angles. Thus any teleporter must destroy the state of the object 
+  being teleported.</P>
+<HR> 
+	 <H2 ALIGN="CENTER">OTHER APPLICATIONS</H2> 
+	 <P>Teleporting the polarization state of a single photon a quarter of the
+		time is a long long way from reliably teleporting Captain Kirk. However, there
+		are other applications of the above sort of apparatus that may be closer to
+		being useful.</P> 
+	 <H3>Quantum Information</H3> 
+	 <P>As you probably know, computers store information as sequences of
+		<I>0</I>'s and <I>1</I>'s. For example, in the <I>ASCII</I> encoding the letter
+		<I>A</I> is represented by the number 65. As a binary number this is:</P> 
+	 <P ALIGN="CENTER"><TT>1,000,001</TT></P> 
+	 <P>Inside the computer, there are transistors that are either on or off,
+		and we assign the on-state be <I>1</I> and the off state <I>0</I>. However, the
+		same information can be stored in exactly the same way in any system that has
+		two mutually exclusive binary states.</P> 
+	 <P>For example, if we have a collection photons we could represent the
+		<I>1</I>'s as photons whose polarization is +45<SUP>0</SUP> and the <I>0</I>'s
+		as polarizations of -45<SUP>0</SUP>. We could similarly use electrons with
+		spin-up and spin-down states to encode the information. These quantum bits of
+		information are called <I>qubits</I>.</P> 
+	 <P>Above we were thinking about an apparatus to do Quantum Teleportation.
+		Now we see that we can think of the same apparatus as transferring Quantum
+		Information. Note that, as opposed to, say, a fax, when transferring Quantum
+		Information the original, the polarization of the <I><FONT
+		COLOR="#FF3300">K</FONT></I> photon, is destroyed.</P> 
+	 <H3>Quantum Cryptography</H3> 
+	 <P>Cryptography depends on both the sender and receiver of the encrypted
+		information both knowing a <I>key</I>. The sender uses the key to encrypt the
+		information and the receiver uses the same key to decrypt it.</P> 
+	 <P>The key can be something very simple, such as both parties knowing that
+		each letter has been shifted up by 13 places, with letters above the thirteenth
+		in the alphabet rotated to the beginning. Or they can be very complex, such as
+		a very very long string of binary digits.</P> 
+	 <P>Here is an example of using binary numbers to encrypt and decrypt a
+		message, in this case the letter <I>A</I>, which we have seen is
+		<TT>1,000,001</TT> in a binary ASCII encoding. We shall use as the key the
+		number 23, which in binary is <TT>0,010,111</TT>. We will use the key to encode
+		the letter using a rule that if the corresponding bits of the letter and key
+		are the same, the result is a <I>1</I>, and otherwise a <I>0</I>.</P> 
+	 <TABLE BORDER="1" ALIGN="CENTER"> 
+		<TR> 
+		  <TH ALIGN="CENTER">A</TH> 
+		  <TD>1</TD> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		</TR> 
+		<TR> 
+		  <TH ALIGN="CENTER">Key</TH> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		  <TD>1</TD> 
+		  <TD>1</TD> 
+		</TR> 
+		<TR> 
+		  <TH ALIGN="CENTER">Encrypted</TH> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		</TR> 
+	 </TABLE> 
+	 <P>The encrypted value is 41, which in ASCII is the right parenthesis:
+		)</P> 
+	 <P>To decrypt the message we use the key and the same procedure:</P> 
+	 <TABLE BORDER="1" ALIGN="CENTER"> 
+		<TR> 
+		  <TH ALIGN="CENTER">Encrypted</TH> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		</TR> 
+		<TR> 
+		  <TH ALIGN="CENTER">Key</TH> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		  <TD>1</TD> 
+		  <TD>1</TD> 
+		</TR> 
+		<TR> 
+		  <TH ALIGN="CENTER">A</TH> 
+		  <TD>1</TD> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>0</TD> 
+		  <TD>1</TD> 
+		</TR> 
+	 </TABLE> 
+	 <P>Any classical encryption scheme is vulnerable on two counts:</P> 
+	 <UL> 
+		<LI>If the "bad guys" get hold of the key they too can decrypt the
+		  message. So-called <I>public key</I> encryptation schemes reveals on an open
+		  channel a long string of binary digits which must be converted to the key by
+		  means of a secret procedure; here security is based on the computational
+		  complexity of "cracking" the secret procedure.</LI> 
+		<LI>Because there are patterns in all messages, such as the fact that the
+		  letter <I>e</I> predominates, then if multiple messages are intercepted using
+		  the same key the bad guys can begin to decipher them.</LI> 
+	 </UL> 
+	 <P>To be really secure, then, there must be a unique secret key for each
+		message. So the question becomes how can we generate a unique key and be sure
+		that the bad guys don't know what it is.</P> 
+	 <P>To send a key in <I>Quantum Cryptography</I>, simply send photons in one
+		of four polarizations: -45, 0, 45, or 90 degrees. As you know, the receiver can
+		measure, say, whether or not a photon is polarized at 90 degrees and if it is
+		not then be sure than it was polarized at 0 degrees. Similarly the receiver can
+		measure whether a photon was polarized at 45 degrees, and if it is not then it
+		is surely polarized at -45 degrees. However the receiver can not measure both
+		the 0 degree state and 45 degree state, since the first measurement destroys
+		the information of the second one, regardless of which one is performed
+		first.</P> 
+	 <P>The receiver measures the incoming photons, randomly choosing whether to
+		measure at 90 degrees or 45 degrees, and records the results but keeps them
+		secret. The receiver contacts the sender and tells her on an open channel which
+		type of measurement was done for each, without revealing the result. The sender
+		tells the receiver which of the measurements were of the correct type. Both the
+		sender and receiver keep only the qubits that were measured correctly, and they
+		have now formed the key.</P> 
+	 <P>If the bad guys intercept the transmission of photons, measure their
+		polarizations, and then send them on to the receiver, they will inevitably
+		introduce errors because they don't know which polarization measurement to
+		perform. The two legitimate users of the quantum channel test for eavesdropping
+		by revealing a random subset of the key bits and checking the error rate on an
+		open channel. Although they cannot prevent eavesdropping, they will never be
+		fooled by an eavesdropper because any, however subtle and sophisticated, effort
+		to tap the channel will be detected. Whenever they are not happy with the
+		security of the channel they can try to set up the key distribution again.</P> 
+	 <P>By February 2000 a working Quantum Cryptography system using the above
+		scheme achieved the admittedly modest rates of 10 bits per second over a 30 cm
+		length.</P> 
+	 
+<P>There is another method of Quantum Cryptography which uses entangled photons. 
+  A sequence of correlated particle pairs is generated, with one member of each 
+  pair being detected by each party (for example, a pair of photons whose polarisations 
+  are measured by the parties). An eavesdropper on this communication would have 
+  to detect a particle to read the signal, and retransmit it in order for his 
+  presence to remain unknown. However, the act of detection of one particle of 
+  a pair destroys its quantum correlation with the other, and the two parties 
+  can easily verify whether this has been done, without revealing the results 
+  of their own measurements, by communication over an open channel.</P>
+<HR>
+<H2 ALIGN="CENTER">AUTHOR</H2>
+<P>This document was written in March 2001 by David M. Harrison, Dept. of Physics, 
+  Univ. of Toronto, <A
+		HREF="mailto:harrison@physics.utoronto.ca.">mailto:harrison@physics.utoronto.ca</A>. 
+  This is $Revision: 1.3 $, $Date: 2004/08/31 11:52:45 $ (year/month/day UTC).</P>
+<P>The document and images are Copyright &copy; 2001 - 2004 David M. Harrison</P>
+<table align="center">
+  <tr>
+    <td><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank" rel="license"><img alt="Creative Commons License" border="0" src="http://creativecommons.org/images/public/somerights20.gif" /></a></td>
+    <td><!-- Creative Commons License -->
+      This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank" rel="license">Creative Commons License</a>.
+      <!-- /Creative Commons License -->
+      <!--
+
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:date>2004</dc:date>
+   <dc:creator><Agent>
+      <dc:title>David M. Harrison</dc:title>
+   </Agent></dc:creator>
+   <dc:rights><Agent>
+      <dc:title>David M. Harrison</dc:title>
+   </Agent></dc:rights>
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+
+--></td>
+  </tr>
+</table>
+  </BODY>
+</HTML>

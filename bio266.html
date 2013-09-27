@@ -1,0 +1,791 @@
+<base href="http://www.pharmacology.med.umn.edu/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<!-- University of Minnesota Web template:  v3.090302 -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="University of Minnesota, Minneapolis, Department of Pharmacology School of Medicine home page and index. " />
+
+<meta name="keywords" content="university-of-minnesota,pharmacology,mcbda,research,drug,addiction,molecular,cellular,biology,drug-addiction,resources,activities,seminars" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Dept of Pharmacology Univ of MN</title>
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+<link href="lib/css/reset.css" rel="stylesheet" type="text/css" />
+<link href="lib/css/text.css" rel="stylesheet" type="text/css" />
+<link href="lib/css/template.css" rel="stylesheet" type="text/css" />
+
+<link href="lib/css/optional.css" rel="stylesheet" type="text/css" />
+
+<link href="lib/css/print.css" rel="stylesheet" type="text/css" media="print" />
+<script type="text/javascript" src="../lib/js/searchfield.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+
+<style type="text/css">
+
+<!--
+
+/** 
+
+ * Slideshow style rules.
+
+ */
+ 
+ 
+
+#slideshow {
+
+	margin:0 auto;
+
+	width:655px;
+
+	height:380px;
+
+	
+
+	position:relative;
+
+}
+
+#slideshow #slidesContainer {
+
+  margin:0 auto;
+
+  width:545px;
+
+  height:380px;
+
+  overflow:auto; /* allow scrollbar */
+
+  position:relative;
+
+
+}
+
+#slideshow #slidesContainer .slide {
+
+ margin:0 auto;
+
+  width:525px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+
+  height:380px;
+
+
+}
+
+
+
+/** 
+
+ * Slideshow controls style rules.
+
+ */
+
+.control {
+
+  display:block;
+
+  width:39px;
+
+  height:345px;
+
+  text-indent:-10000px;
+
+  position:absolute;
+
+  cursor: pointer;
+
+}
+
+#leftControl {
+
+  top:0;
+
+  left:0;
+
+  background:transparent url(assets/img/left-control.jpg) no-repeat 0 0;
+
+}
+
+#rightControl {
+
+  top:0;
+
+  right:0;
+
+  background:transparent url(assets/img/right-control.jpg) no-repeat 0 0;
+
+}
+
+
+
+/** 
+
+ * Style rules for Demo page
+
+ */
+
+* 
+
+
+
+#pageContainer {
+
+  margin:0 auto;
+
+  width:680px;
+
+}
+
+#pageContainer h1 {
+
+  display:block;
+
+  width:680px;
+
+  height:30px;
+
+  background:transparent  top left;
+
+  text-indent: -10000px;
+
+}
+.slide {font:bold;}
+.slide h2, .slide p {
+
+  margin-left: -15px;
+    font: 14px Georgia, "Times New Roman", Times, serif;
+height: 12px;
+  color:#000;
+
+}
+
+.slide h2 {
+
+  font:bold 12px Georgia, "Times New Roman", Times, serif;
+margin-left: -15px;
+  color:#000;
+height: 12px;
+ 
+
+}
+
+
+.slide img {
+
+  float:right;
+
+  margin:0 0px;
+
+}
+
+
+
+-->
+
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+  var currentPosition = 0;
+
+  var slideWidth = 545;
+
+  var slides = $('.slide');
+
+  var numberOfSlides = slides.length;
+
+
+
+  // Remove scrollbar in JS
+
+  $('#slidesContainer').css('overflow', 'hidden');
+
+
+
+  // Wrap all .slides with #slideInner div
+
+  slides
+
+    .wrapAll('<div id="slideInner"></div>')
+
+    // Float left to display horizontally, readjust .slides width
+
+	.css({
+
+      'float' : 'left',
+
+      'width' : slideWidth
+
+    });
+
+
+
+  // Set #slideInner width equal to total width of all slides
+
+  $('#slideInner').css('width', slideWidth * numberOfSlides);
+
+
+
+  // Insert controls in the DOM
+
+  $('#slideshow')
+
+    .prepend('<span class="control" id="leftControl">Clicking moves left</span>')
+
+    .append('<span class="control" id="rightControl">Clicking moves right</span>');
+
+
+
+  // Hide left arrow control on first load
+
+  manageControls(currentPosition);
+
+
+
+  // Create event listeners for .controls clicks
+
+  $('.control')
+
+    .bind('click', function(){
+
+    // Determine new position
+
+	currentPosition = ($(this).attr('id')=='rightControl') ? currentPosition+1 : currentPosition-1;
+
+    
+
+	// Hide / show controls
+
+    manageControls(currentPosition);
+
+    // Move slideInner using margin-left
+
+    $('#slideInner').animate({
+
+      'marginLeft' : slideWidth*(-currentPosition)
+
+    });
+
+  });
+
+
+
+  // manageControls: Hides and Shows controls depending on currentPosition
+
+  function manageControls(position){
+
+    // Hide left arrow if position is first slide
+
+	if(position==0){ $('#leftControl').hide() } else{ $('#leftControl').show() }
+
+	// Hide right arrow if position is last slide
+
+    if(position==numberOfSlides-1){ $('#rightControl').hide() } else{ $('#rightControl').show() }
+
+  }	
+
+});
+
+</script>
+
+
+
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<!-- Copyright 2001, 2002, 2003, 2004, 2005 Macromedia, Inc. All rights reserved. -->
+<!-- Remove the following SCRIPT tag if you are modifying this file for your own use. -->
+<!-- End removal area. -->
+<link href="../../fields.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body class="container-bg" onload="initUI()">
+<div class="center">
+
+<!--BEGIN CAMPUS LINKS-->
+<div id="campus_links" class="campus_links">
+<p class="jump"><a href="#mainnav"><img src="assets/img/trans.gif" alt="Jump to main navigation." width="10" height="5" /></a><a href="#maincontent"><img src="../assets/img/trans.gif" alt="Jump to main content." width="10" height="5" /></a></p>
+
+    <ul>
+
+    <li class="campus">Campuses :</li>
+
+    <li><a href="http://www.umn.edu">Twin Cities</a></li>
+    <li><a href="http://www.crk.umn.edu">Crookston</a></li>
+    <li><a href="http://www.d.umn.edu">Duluth</a></li>
+	<li><a href="http://www.morris.umn.edu/">Morris</a></li>
+    <li><a href="http://www.r.umn.edu">Rochester</a></li>
+
+    <li><a href="http://www.umn.edu/twincities/campuses.php">Other Locations</a></li>
+
+</ul>
+</div>
+<!--END CAMPUS LINKS-->
+<!--BEGIN WORDMARK AND UNIT IDENTIFICATION FOR PRINT -->
+<!--Use this code along with the print.css to retain the University's wordmark on you printed Web pages and to identify your unit -->
+<div class="leftprint">
+<img src="assets/img/smMwdmk.gif"  alt="" width="216" height="55" hspace="10" align="left" />
+</div>
+<div class="rightprint"><strong>University Relations</strong><br />
+http://www.umn.edu/urelate<br />
+612-624-6868</div>
+
+<!--END WORDMARK AND UNIT IDENTIFICATION FOR PRINT -->
+
+<!--BEGIN UofM TEMPLATE HEADER-->
+
+<div class="grid_7" id="header">
+  <a href="http://www.umn.edu"><img src="assets/img/logo_uofm_D2D.gif" alt="Go to the U of M home page." width="320" height="62" /></a></div>
+<!--BEGIN search div-->
+<div class="grid_5" id="search_area">
+   <div id="search_nav">
+    <a href="https://www.myu.umn.edu/" id="btn_myu">myU</a>
+    <a href="http://onestop.umn.edu/" id="btn_onestop">OneStop</a>
+
+</div>
+
+   <br class="clearabove" />  
+
+<!-- Begin search form -->
+<div class="search"> 
+   <form action="http://google.umn.edu/search" method="get" name="gsearch" id="gsearch" title="Search U of M Web sites">
+     <input class="right" type="text" id="search_field" name="q" value="Search U of M Web sites"  title="Search text" />
+     <input class="search_btn" type="image" src="assets/img/search_button.gif" alt="Submit Search" value="Search" />
+     <input name="client" value="searchumn" type="hidden" />
+     <input name="proxystylesheet" value="searchumn" type="hidden" />
+     <input name="output" value="xml_no_dtd" type="hidden" />
+   </form>  
+
+</div> <!-- End search form -->
+
+<br class="clearabove" />   
+</div>
+
+<!--END UofM TEMPLATE HEADER-->
+
+
+
+
+<!-- BEGIN Unit Graphic Header for secondary page -->
+
+<!-- BEGIN OPTIONAL HORIZONTAL NAV-->
+
+<div id="header_sub" >
+
+	<ul id="header_sub_nav">
+
+		<li class="tl_menu">
+
+			<span class="headerAudience"><a href="http://www.pharmacology.med.umn.edu/index.html">About the Department</a></span>
+
+			<div id="nav_cat1" class="dd_menu_top">
+
+				<ul class="dd_menu">     
+                     
+                   
+                    
+					<li class="first"><a href="http://www.pharmacology.med.umn.edu/greetings.html">Welcome</a></li>
+                    	
+                    <li><a href="http://www.pharmacology.med.umn.edu/facts.html">Facts</a></li>
+
+					<li><a href="http://www.pharmacology.med.umn.edu/staff.html">Staff Directory</a></li>
+                    
+                    
+                     <li><a href="http://www.pharmacology.med.umn.edu/news.html">News</a></li>
+
+					<li><a href="http://www.pharmacology.med.umn.edu/jobopps.html">Job Opportunities</a></li>
+                    
+                    <li><a href="http://www.pharmacology.med.umn.edu/staff.html">Contact us</a></li>
+
+				</ul>
+
+			</div>
+
+		</li>
+
+		<li class="tl_menu">
+
+			<span class="headerAudience"><a href="http://www.pharmacology.med.umn.edu/grad-prog.html">Graduate Program</a></span>
+
+			<div id="nav_cat2" class="dd_menu_top">
+
+				<ul class="dd_menu">
+
+					<li class="first"><a href="http://www.pharmacology.med.umn.edu/grad-prog.html">Graduate Program</a></li>
+                    <li><a href=
+                        "handbook2013-2014.pdf">Handbook-doctoral</a></li>
+
+                  <li><a href=
+                        "http://www.pharmacology.med.umn.edu/recentgrads.html">Graduate Students</a></li>
+
+                        <li><a href=
+                        "http://www.pharmacology.med.umn.edu/courses.html">Course Information</a></li>
+
+                       
+
+				</ul>
+
+			</div>
+
+		</li>
+
+		
+		
+<li class="tl_menu">
+
+			<span class="headerAudience"><a href="http://www.pharmacology.med.umn.edu/faculty.html">Faculty &amp; Research</a></span>
+
+			<div id="nav_cat3" class="dd_menu_top" >	
+
+				<ul class="dd_menu">
+
+					<li class="first"><a href="http://www.pharmacology.med.umn.edu/faculty.html">Faculty</a></li>
+                    
+				
+
+					<li><a href="http://www.pharmacology.med.umn.edu/research.html">Research</a></li>
+
+					<li><a href="http://www.pharmacology.med.umn.edu/recent-publications.html">Recent Publications</a></li>
+                    
+                    
+                    
+                    </ul>
+
+			</div>
+		</li>
+<li class="tl_menu">
+
+			<span class="headerAudience"><a href="http://www.pharmacology.med.umn.edu/facilities.html">Resources</a></span>
+
+			<div id="nav_cat4"  class="dd_menu_top dd_last">
+
+				<ul class="dd_menu">
+
+			<li class="first"><a href="http://www.pharmacology.med.umn.edu/resourcesfaculty.html">Faculty Resources</a></li>
+          
+                    <li><a href="http://www.pharmacology.med.umn.edu/resourcesstaff.html">Staff Resources</a></li>
+
+					<li><a href="http://www.pharmacology.med.umn.edu/facilities.html">Core Facilities</a></li>
+                    <li><a href="http://www.pharmacology.med.umn.edu/resources.html">Useful Links</a></li>
+
+					<li><a href="http://www.dehs.umn.edu/">Laboratory Safety</a></li>
+                    
+					    </ul>
+                    
+                
+
+			</div>
+
+		</li>
+
+	</ul>
+     
+     
+     
+     
+	<div class="unit">
+
+		<p><a href="http://www.pharmacology.med.umn.edu/index.html">Department of Pharmacology</a></p>
+
+	</div>
+
+	<br class="clearabove" />
+
+</div>
+
+<!-- END Unit Graphic Header for secondary page -->
+
+
+
+ 
+<div style="background-color:white; float:right; padding-top:30px; width:240px; ">                           
+ <h2>What is Pharmacology</h2>
+              <p>Pharmacology is the study of drugs and their interactions with specific targets (receptors) and signaling pathways in human and other species.  By studying the biochemical reactions underlying both the therapeutic and adverse effects of drugs, pharmacologists hope to unravel mysteries of physiology and pathophysiology, with the ultimate goal of identifying safer and more effective treatments for discomfort and disease.  
+ <a href="what-is-pharm.html">(read more)</a> <br /><br /></p>
+ 
+ <h2
+              style="border-width: 3px; border-style:ridge; border-color: #808cff; font-size: 110%;  padding:0 0 0 0;  text-align: center; margin-left:15px; margin-bottom:20px;  background-color: #FFE87C; width: 160px; height:22px"      >Popular Links</h2>
+
+ <ul><li><a href="grad-prog.html">Graduate Program</a></li>
+ <li style="color:white;">.</li>
+            
+          <li><a href="https://webapps-prd.oit.umn.edu/pcas/viewCatalogProgram.do?programID=6061&amp;strm=1133">Pharmacology minor</a><br />
+            <br />
+            <a href="https://www.facebook.com/PharmacologyClubUMN">Pharmacology Club</a><br />  
+            <br />
+          <a href="http://www.pharmacology.med.umn.edu/courses.html">Course Information</a></li>
+    </ul>
+ <ul><li style="color:white;">.</li>
+   <li><a href="http://mcbda.ahc.umn.edu/index.html">MCBDA </a>The Basic Research Center on Molecular and Cellular Biology of Drug Addiction.</li>
+   <li style="color:white;">.</li >
+   <li><a href="calendar.html">Calendar</a></li>
+   <li style="color:white;">.</li>
+   <li>     <a href="http://www.pharmacology.med.umn.edu/seminars.html">Seminar Schedule</a></li>
+   <li style="color:white;">.</li>
+   <li>     <a href="Lab Safety Plan 2013.pdf">Lab Safety Plan</a> (307 Kb pdf)</li>
+   <li style="color:white;">.</li>
+   <li><a href="http://www.pharmacology.med.umn.edu/AR2011.pdf">Annual Report</a> (65 MB pdf)</li>
+   <li style="color:white;">.</li>
+ </ul>
+ </div>
+
+				
+	
+	
+
+ 
+
+  <!-- Slideshow HTML -->
+<div style="width:680px;  margin-top:40px; float:left; margin-left:30px; margin-bottom:40px;">
+  <div id="slideshow">
+
+    <div id="slidesContainer">
+    
+    
+
+<div class="slide">
+
+      
+ <h2>Click on 6 images below to learn more about our <a href="research.html">research focus areas.</a></h2>
+ 
+ <div style="background-image:url('assets/img/slide-research-w.jpg'); height:345px; width:545px; ">
+ 
+ <a href="drug-discov.html"><img src="assets/img/overlay.gif" width="170" height="170" alt="resarch-cancer" /></a>
+ 
+ <a href="drug-addiction.html"><img src="assets/img/overlay.gif" width="170" height="170" alt="resarch" /></a>
+ 
+ <a href="research-cancer.html"><img src="assets/img/overlay.gif" width="170" height="170" alt="resarch-cancer" /></a>
+ 
+ <a href="genomic-stability.html"><img src="assets/img/overlay.gif" width="170" height="170" alt="resarch" /></a>
+ 
+ <a href="signal-transduction.html"><img src="assets/img/overlay.gif" width="170" height="170" alt="resarch" /></a>
+ 
+ <a href="neuronal-diseases.html"><img src="assets/img/overlay.gif" width="170" height="170" alt="resarch" /></a>
+ 
+ </div>
+
+        
+
+      </div>
+
+      <div class="slide">
+
+     <h2>Majority of the faculty is located on the 3rd floor of Nils Hasselmo Hall</h2>
+
+        <a href="grad-prog.html"><img src="assets/img/slide-hasselmohall.jpg" width="545" height="345" alt="Graduate Program" /></a>
+
+        
+
+      </div>
+      
+      
+    
+      
+     
+      
+
+
+      
+
+        <div class="slide">
+
+       
+
+       <h2>Dr. Li-Na Wei receives Distinguished Women Scholars Award</h2>
+<img src="assets/img/slide-wei.jpg" alt="Dr. Li-Na Wei receives award" width="545" height="345" />
+      </div>
+     
+
+    
+      
+
+
+
+
+ <div class="slide">
+
+       
+
+       <h2>Congratulations to Daniel Ho, first place winner in Louise Nutter Poster Session</h2>
+<img src="assets/img/slide-ho.jpg" alt="Daniel Ho first place winner in Louise Nutter Poster Session" width="545" height="345" />
+      </div>
+     
+
+    
+      
+
+    </div>
+
+</div>
+
+
+      <div class="slide">
+
+
+
+       
+
+
+
+       <h2>Nobel Laureate <a href="steitz.html">Dr. Thomas Steitz</a> is this year's <a href="steitz.html">Shideman-Sterling lecturer.</a></h2>
+
+<a href="steitz.html"><img src="assets/img/slide7.jpg" alt="Dr. Thomas Steitz" width="545" height="345" /></a>
+
+      </div>
+
+
+<br class="clearabove" />
+  <!-- Slideshow HTML -->
+
+  
+
+
+                 
+				
+          
+                
+	
+                    
+                    <div style="background-color:white; width:220px; float:right; padding-right:15px;"> 
+                    <h2
+              style="border-width: 3px; border-style:ridge; border-color: #808cff; font-size: 110%;  padding:0 0 0 0;  text-align: center; margin-left:15px; margin-bottom:20px;  background-color: #FFE87C; width: 160px; height:22px"      >Department News</h2>
+           
+           <p><strong>Jill M. Siegfried, Ph.D.</strong>, named head of the Department of Pharmacology and associate director for Experimental Therapeutics at the Masonic Cancer Center<br />
+               <a href="http://news.med.umn.edu/content/jill-m-siegfried-phd-named-head-department-pharmacology-and-associate-director-experimental">Read full announcement</a><br />
+           </p>
+           <p>Welcome to new  faculty member, <strong>Dr. Cheuk Leung</strong>, Assistant Professor of Pharmacology.</p>
+           <p><strong>Aug 2012 Dr. Kevin Wickman</strong> is the recipient of the <strong>Year One Distinguished Teaching Award for 2012-13</strong>. Award will be presented at the Medical School-Minnesota Medical Foundation Honors and Awards Program on April 17, 2013. </p>
+           <p><strong>For more news</strong> - <a href="http://www.pharmacology.med.umn.edu/news.html" title="Pharmacology Departmen News Archive">News Archive</a>
+             <br />
+             <br />
+</p>   
+                  
+   
+</div>
+					
+<div   style="background-color:white; width:220px; padding-right:10px; float:right;">
+                        <h2
+              style="border-width: 3px; border-style:ridge; border-color: #808cff; font-size: 110%;  padding:0 0 0 0;  text-align: center; margin-left:15px; margin-bottom:20px;  background-color: #FFE87C; width: 160px; height:22px"      >Current Events</h2>
+   <h3><strong>Upcoming seminars</strong></h3>
+   <p><strong>Graduate Faculty Candidates:</strong></p>
+   <p>May 28, 4:00 p.m., 2-101 NHH<br />
+     Ameeta Kelekar, Ph.D.</p>
+   <p>June 4, 4:00 p.m., 2-101 NHH<br />
+     Masato Yamamoto, M.D., Ph.D.</p>
+   <p>June 11, 4:00 p.m., 2-101 NHH<br />
+     Tim O'Connell, Ph.D.</p>
+   <p>June 18, 4:00 p.m., 2-101 NHH<br />
+     Kim Carpenter Mansky, Ph.D.</p>
+   <p><a href="seminars.html">Click here for details and full seminar schedule</a><br />
+   </p>
+   <p><br />
+   </p>
+</div>
+                    
+                    <div  style="background-color:white; width:220px; padding-top:3px;">                  
+
+ <h2
+              style="border-width: 3px; border-style:ridge; border-color: #808cff; font-size: 110%;  padding:0 0 0 0;  text-align: center; margin-left:15px; margin-bottom:20px;  background-color: #FFE87C; width: 160px; height:22px"      >Research Focus Areas</h2>
+				
+             
+				 <ul>
+                        <li><a href=
+                        "research-cancer.html">Cancer and infectious disease pharmacology</a></li><li style="color:white;">.</li>
+
+                        <li><a href=
+                        "genomic-stability.html">Genomic stability, transcription and translation control, cell fate</a></li><li style="color:white;">.</li>
+
+                        <li><a href=
+                        "drug-addiction.html">Drug addiction: mechanism. pharmacology, toxicity and treatment</a></li>
+                        <li style="color:white;">.</li>
+
+                        
+
+                        <li><a href="drug-discov.html">Drug discovery and development</a></li><li style="color:white;">.</li>
+
+                        <li><a href="neuronal-diseases.html">Neurodegenerative diseases,
+neuronal function</a></li>
+                        <li style="color:white;" >.</li>
+                   <li><a href="signal-transduction.html">Signal transduction: regulation <br />of intracellular second messengers, ion channels and metabolism</a></li>
+                        <li style="color:white;">.</li>
+                    </ul>
+              
+                    
+                    </div>
+                  
+                 
+
+</div>
+				
+  
+    
+
+
+           
+
+          
+          
+         	          
+  
+
+	
+	
+
+
+<!-- BEGIN OPTIONAL UNIT FOOTER -->
+<div class="grid_12" style="background-color:#FFE87C; height:55px; width:960px; ">
+
+    <p style="color: #7a0019;background-color:#FFE87C; text-align:center; margin-top:8px;">
+6-120 Jackson Hall, 321 Church <acronym class="acronym_border" title="Street Southeast">St. SE</acronym>, Minneapolis, MN 55455-0217 <br /> Phone: 612-625-9997 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fax: 612-625-8408 &nbsp;&nbsp;&nbsp;&nbsp;<span><a style="background-color:#FFE87C; padding: 2px 10px 2px 10px; "  href="http://www.pharmacology.med.umn.edu/staff.html">Contact Pharmacology</a></span></p>
+
+
+ </div>
+<!-- END OPTIONAL UNIT FOOTER -->
+
+<!-- BEGIN UofM FOOTER -->
+
+<div class="grid_7 alpha" id="footer_inner" >
+   <ul class="copyright">
+    <li>&copy; 2012 Regents of the University of Minnesota. All rights reserved.</li>
+
+    <li>The University of Minnesota is an equal opportunity educator and employer</li>
+    <li>Last modified on 
+      <!-- #BeginDate format:Am1 -->July 9, 2013<!-- #EndDate -->
+    </li>
+   </ul>
+	  <p>&nbsp;</p>
+</div>
+   <div class="grid_5 omega" id="footer_right" >
+
+    <ul class="footer_links">
+    <li>Twin Cities Campus: </li>
+    <li><a href="http://www1.umn.edu/pts/">Parking &amp; Transportation</a></li>
+
+	<li><a href="http://www.umn.edu/twincities/maps/index.html">Maps &amp; Directions</a></li></ul>
+    <br class="clearabove" />
+
+    <ul class="footer_links"><li><a href="http://www.directory.umn.edu/">Directories</a></li>
+    <li><a href="http://www.umn.edu/twincities/contact/">Contact U of M</a></li>
+    <li><a href="http://www.privacy.umn.edu/">Privacy</a></li>
+    </ul>
+
+    <p>&nbsp;</p>
+  
+<br class="clearabove" />
+  </div>
+<!-- END UofM FOOTER -->
+
+<br class="clearabove" />
+ </div>
+</body>
+</html>

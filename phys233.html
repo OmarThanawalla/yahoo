@@ -1,0 +1,786 @@
+<base href="http://rmp.aps.org/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- WEST-->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <title>Reviews of Modern Physics</title>
+
+  <script src= "http://tesseract-assets.aps.org/ads/adloader.js" type="text/javascript"></script>
+  <script src="/misc/jquery-1[1][1].2.1.min.js" type="text/javascript"></script>
+  <script src="/misc/dimensions.min.js" type="text/javascript"></script>
+  <script src="/misc/tabs.min.js" type="text/javascript"></script>
+  <script src="/misc/menus.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/misc/searchbox.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("form#vols select.volume").change(function() {
+      window.location = $("form#vols").attr("action") + "/" + $.trim($("form#vols select.volume").val());
+    });
+  });
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    initMenus('.menu-call');
+    initTabs('#tabsearch', 1);
+    initTabs('#tabcontent', 1);
+    if(location.hash){
+      $("a"+location.hash+"-link").click();
+    }
+    initShadows();
+    initCitationSearchbox("#tabsearch-citation");
+    loadAdImages();
+  });
+  </script>
+
+
+  <link rel="stylesheet" href="sites/rmp.staging.ridge.aps.org/themes/RMP/style.css" type="text/css" title="default" />
+  <link rel="stylesheet" href="/misc/featurebox.css" type="text/css" title="default" />
+  <link rel="alternate" type="application/rss+xml" title="Recently Published Articles" href="http://feeds.aps.org/rss/recent/rmp.xml"/>
+  <link rel="alternate" type="application/rss+xml" title="Accepted Papers" href="http://feeds.aps.org/rss/accepted/rmp.xml"/>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3894348-8']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  <div><img src="sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/page_tlc.gif" width="9" height="9" alt="" id="page-tlc" /></div>
+  <div><img src="sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/page_trc.gif" width="9" height="9" alt="" id="page-trc" /></div>
+<div class="menu-journals current-issues-left" id="current-issues" style="display: none;">
+    <div class="menu-shadow">
+    <div class="menu-shadow-left"></div>
+    <div class="menu-shadow-center"></div>
+    <div class="menu-shadow-right"></div>
+
+  </div>
+</div>
+
+  <div id="page">
+
+    <div id="page-bounds">
+
+      <div id="banner">
+
+        <div id="banner-options">
+
+          <div id="banner-aps">
+
+            <p>
+              <a href = "http://www.aps.org/">American Physical Society &nbsp;&nbsp; <img src="sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/logo_aps_physics.png" width="86" height="67" alt="American Physical Society" title="American Physical Society" /></a>
+            </p>
+
+          </div>
+
+
+          <div id="banner-menu">
+            <p class="login-links"><a href ="https://publish.aps.org/login?rt=http%3A%2F%2Frmp.aps.org%2F">Log in</a> &nbsp;|&nbsp; <a href="https://publish.aps.org/signup">Create Account</a>  (<a href="https://publish.aps.org/help/accounts">what's this?</a>) </p><p>
+        <img src="/sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/icon_rss_on.gif" width="12" height="12" alt="RSS" title="RSS" class="padright" /><a href= "http://feeds.aps.org">RSS Feeds</a> &nbsp;|&nbsp; <a href="http://publish.aps.org/alerts">Email Alerts</a></p>          </div>
+
+        </div>
+
+        <a href = "/"><img src="sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/banner_rmp.jpg" width="454" height="125" alt="Reviews of Modern Physics"  title="Reviews of Modern Physics" id="banner-image" /></a>
+
+      </div>    
+
+      <div id="content">
+
+  <div class="menu-journals" id="aps-menu-journals" style="display: none;">
+          <a href="http://prl.aps.org/">Physical Review Letters</a>
+          <span class="current">Reviews of Modern Physics</span>
+          <a href="http://pra.aps.org/">Physical Review A</a>
+          <a href="http://prb.aps.org/">Physical Review B</a>
+          <a href="http://prc.aps.org/">Physical Review C</a>
+          <a href="http://prd.aps.org/">Physical Review D</a>
+          <a href="http://pre.aps.org/">Physical Review E</a>
+          <a href="http://prx.aps.org/">Physical Review X</a>
+          <a href="http://prst-ab.aps.org/">Physical Review ST: Accelerators and Beams</a>
+
+          <a href="http://prst-per.aps.org/">Physical Review ST: Physics Education Research</a>
+          <a class="menu-sep" href="http://prola.aps.org/">Physical Review Online Archive (PROLA)</a>
+
+          <a href="http://physics.aps.org/">Physics - Spotlighting Exceptional Research</a>
+          
+          <a href="http://www.virtualjournals.org/">Virtual Journals in Science and Technology</a>
+          <a href="http://publish.aps.org/annualindex/">Annual Index</a>
+          
+          <div class="menu-shadow">
+
+            <div id="menu-journals-shadow-left" class="menu-shadow-left"></div>
+            <div id="menu-journals-shadow-center" class="menu-shadow-center"></div>
+            <div id="menu-journals-shadow-right" class="menu-shadow-right"></div>
+          </div>
+        </div>
+        <table cellspacing="0" summary="simple robust layout table" class="content-columns">
+          <tbody>
+            <tr>
+
+              <td class="content-left">
+ 
+   <img src="/sites/rmp.aps.org/themes/RMP/graphics/page_left_tlc.gif" width="11" height="11" alt="arrow icon" id="page-left-tlc" />
+
+   <div class="bounds">
+
+     <div class="leftmenu-main">
+       <a class="menu-call first" rel="aps-menu-journals" href="http://publish.aps.org/" style="">APS Journals</a>
+       <ul>
+         <li><a href="http://link.aps.org/issues/RMP/current">Current Issue</a></li>
+         <li><a href="/browse">Earlier Issues</a></li>
+         <li><a href="/about">About This Journal</a></li>
+         <li><a href="/staff">Journal Staff</a></li>
+         <!--<li><a href="/info/RMPreprintpolicy.html">Reprints</a></li>-->
+       </ul>
+     </div>
+
+     <div class="leftmenu-sub">
+       <ul>
+         <li><a href="http://publish.aps.org/about">About the Journals</a></li>
+         <li><a href="http://prola.aps.org/search">Search the Journals</a></li>
+         <li><a href="http://www.aps.org/">APS Home</a></li>
+         <li><a href="http://www.aps.org/membership/join.cfm">Join APS</a></li>
+       </ul>
+     </div>
+
+     <div class="leftmenu-group">
+
+       <p><b>Authors</b></p>
+
+       <ul>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://publish.aps.org/author-information">General Information</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="https://authors.aps.org/Submissions/">Submit a Manuscript</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://publish.aps.org/pub_rights.html">Publication Rights</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://publish.aps.org/open_access.html">Open Access</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="/info/procedures.html">Editorial Procedures</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://publish.aps.org/authors/tips-authors-physical-review-physical-review-letters">Tips for Authors</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://publish.aps.org/authors/professional-conduct-ethics">Professional Conduct</a></li>
+       </ul>
+
+     </div>
+
+     <div class="leftmenu-group">
+
+       <p><b>Referees</b></p>
+       <ul>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="/referee-information">General Information</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://referees.aps.org/">Submit a Report</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://referees.aps.org/">Update Your Information</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="/info/procedures.html">Editorial Procedures</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://publish.aps.org/referees/faq.html">Referee FAQ</a></li>
+        <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="/referees/advice-referees-reviews-modern-physics">Advice to Referees</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://publish.aps.org/OutstandingReferees">Outstanding Referees</a></li>
+       </ul>
+
+     </div>
+
+     <div class="leftmenu-group">
+
+       <p><b>Librarians</b></p>
+       <ul>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://librarians.aps.org/">General Information</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://librarians.aps.org/institutional.html">Subscriptions</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://librarians.aps.org/sitelicense.pdf">Online License Agreement</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="pointer icon" class="padright" /><a href="http://counter.aps.org/">Usage Statistics</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="pointer icon" class="padright" /><a href="https://librarians.aps.org/account">Your Account</a></li>>
+       </ul>
+
+     </div>
+
+     <div class="leftmenu-group">
+
+       <p><b>Students</b></p>
+       <ul>
+        <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href = "http://physics.aps.org/">Physics</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href = "http://focus.aps.org/">Physical Review Focus</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://www.physicscentral.com/">PhysicsCentral</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="arrow icon" class="padright" /><a href="http://www.aps.org/membership/student.cfm">Student Membership</a></li>
+       </ul>
+
+     </div>
+
+
+     <div class="leftmenu-group">
+
+       <p><b>APS Members</b></p>
+         <ul>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="pointer icon" class="padright" /><a href="http://www.aps.org/membership/aps-publications.cfm">Subscriptions</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="pointer icon" class="padright" /><a href="http://publish.aps.org/article-packs">Article Packs</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="pointer icon" class="padright" /><a href="http://www.aps.org/memb/">Membership</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="pointer icon" class="padright" /><a href="http://www.aps.org/membership/faq.cfm">FAQ</a></li>
+        <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="pointer icon" class="padright" /><a href="http://www.aps.org/publications/apsnews/index.cfm">APS News</a></li>
+         <li><img src="/sites/rmp.aps.org/themes/RMP/graphics/icon_pointer.gif" width="6" height="10" alt="pointer icon" class="padright" /><a href="http://www.aps.org/meetings/index.cfm">Meetings and Events</a></li>
+       </ul>
+
+     </div>
+
+   </div>
+   </td>
+              <td class="content-center">
+
+                <div class="bounds">
+
+                                                  <div class="breadcrumb">
+                    <p>
+                      <a href ="http://www.aps.org/">APS</a> &raquo; <a href ="http://publish.aps.org/">Journals</a> &raquo; <a href="/">Reviews of Modern Physics</a>                    </p>
+                  </div>
+
+                  <h1>
+                    Reviews of Modern Physics
+                  </h1>
+
+                  <div class="tabbox" id="tabcontent">
+                    <div id="tabcontent-top" class="tabtop tab1"></div>
+                    <div class="tab tab1"><a href="#tabcontent-highlights" class="on">Welcome</a></div>
+                    <div class="tab tab2"><a id ="recent-link" href="#tabcontent-recent" class="separator">Recent Papers<img id="tabcontent-recent-rss" src="sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/icon_rss_off.gif" width="12" height="12" alt="RSS" title="RSS" class="padleft" longdesc="http://feeds.aps.org/rss/recent/rmp.xml" /></a></div>
+                    <div class="tab tab3"><a id ="accepted-link" href="#tabcontent-accepted" class="separator">Accepted Papers<img id="tabcontent-accepted-rss" src="sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/icon_rss_off.gif" width="12" height="12" alt="RSS" title="RSS" class="padleft" longdesc="http://feeds.aps.org/rss/accepted/rmp.xml" /></a></div>
+                  </div>
+
+                  <div class="tab-group" id="tabcontent-highlights">
+                    <div class="article-title"><a href="/about">About <span style="font-style:italic">Reviews of Modern Physics</span></a></div>
+<p><span class="italic">Reviews of Modern Physics (RMP)</span> serves both students and senior researchers in a broad range of fields. Its review articles offer in-depth treatment of a research area, surveying recent work and providing an introduction that is aimed at physics graduate students and nonspecialists. These reviews also feature bibliographies that are of great value to the specialist. The journal's shorter Colloquia describe recent work of interest to all physicists, especially work at the frontiers of physics, which may have an impact on several different subfields.&nbsp;&nbsp;&nbsp;<a href="/about">More...</a></p>
+<br/>
+                    
+<br/>
+<table cellspacing="0" summary="simple layout table">
+<tbody>
+<tr>
+<td class = "caption"><p><a href= "covers/85/3"><img src ="/files/cover_image/thumb_rmpimagev8503.png" alt = "RMPimage for v85 i03"/></a></p>
+</td>
+<td class = "caption"><div class ="article-title"><a href="covers/85/3">On the Cover</a> </div>
+<div class="article-teaser"><span style="white-space: nowrap;" class="key"></span></div><div class ="article-teaser">Colloquium: Cluster growth on surfaces: Densities, size distributions, and morphologies.   [Mario Einax, Wolfgang Dieterich, and Philipp Maass, <span class="journal">Rev. Mod. Phys.</span> <span class="volume" style="font-weight: bold;">85</span>, <span class="page">921</span> (2013)<abbr class="issue" title="3"></abbr><abbr class="doi" title="10.1103/RevModPhys.85.921"></abbr><abbr class="date-published" title="2013-07-08T00:00:00Z"></abbr>]</div>
+<p class = "article-read-more"><a href="http://link.aps.org/abstract/RMP/v85/p921">Read Article</a> | <a href = "/covers/85/rmp">More Covers </a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>                    
+<table cellspacing="0" summary="simple layout table">
+<tbody>
+<tr>
+<td class = "caption"><div class = "article-title"><a href="/edannounce/go-mobile">Introducing Mobile Subscriptions for APS Journals</a></div><div class="article-teaser"><span class ="key" style="white-space: nowrap;">March 12, 2013</span></div><div class ="article-teaser" style ="font-size:1em;"><p><img src="/files/go-mobile-200x100.png" style="float: left; padding-right: 1em; width: 200px; height: 100px;"/> Readers can now conveniently access APS journals from home, on mobile devices, or while traveling by linking their institution’s subscriptions to their personal APS Journal Account. To link the subscriptions, simply click on the new <b>Go Mobile!</b> button that appears on article pages when accessing the journals from your institution.</p>
+</div>
+<p class = "article-read-more"><a href = "/edannounce">More News/Announcements</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<table cellspacing="0" summary="simple layout table">
+<tbody>
+<tr>
+<td class = "caption"><div class = "article-title"><a href="/edannounce/2013-Outstanding-Referees">APS Announces 142 New <i>Outstanding Referees</i> for 2013</a></div><div class="article-teaser"><span class ="key" style="white-space: nowrap;">February 6, 2013</span></div><div class ="article-teaser" style ="font-size:1em;"><p><img src="/files/OutstandingPin.gif" height="130" alt="Outstanding Referee Pin" style="float:left; padding:1em;"/>The editors of the APS journals have selected 142 new Outstanding Referees for 2013, out of more than 60,000 currently active referees. Initiated in 2008, the highly selective Outstanding Referee program recognizes scientists who have been exceptionally helpful in assessing manuscripts for publication in the APS journals. Selections are based on two decades of records on the number, quality, and timeliness of referee reports. The 2013 honorees come from 27 different countries, with large contingents from the US, Germany, UK, Canada, and France. The decisions were difficult and there are many excellent referees who have yet to be recognized. By means of the program, APS expresses appreciation to all referees, whose efforts in peer review not only keep the standards of the journals at a high level, but in many cases also help authors to improve the quality and readability of their articles—even those that are not published by APS. For more information and a listing of all Outstanding Referees, please visit <a href="http://publish.aps.org/OutstandingReferees">http://publish.aps.org/OutstandingReferees</a>.</p></div>
+<p class = "article-read-more"><a href = "/edannounce">More News/Announcements</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<table cellspacing="0" summary="simple layout table">
+<tbody>
+<tr>
+<td class = "caption"><div class = "article-title"><a href="/edannounce/aps-orcid-launch-2012">APS Partners with ORCID For Launch</a></div><div class="article-teaser"><span class ="key" style="white-space: nowrap;">October 16, 2012</span></div><div class ="article-teaser" style ="font-size:1em;"><p><img src="/files/orcid-logo.png" alt="ORCID logo" height="43" width="140" style="float:left; padding-right:1em;">Today <a href="http://www.orcid.org/">ORCID</a> opened its registry allowing researchers in all fields and from around the world to distinguish themselves by registering for their own unique identifier. APS has been a long-time supporter of ORCID and, as one of the official Launch Partners, we have updated our author profile application so that authors may register their ORCID within our database of authors and referees. Widespread adoption of ORCID identifiers will improve the scholarly record and help researchers receive proper credit for all of their contributions. To get started, simply visit the <a href="https://authors.aps.org/Profile/">APS Author Profile</a> application.</p></div>
+<p class = "article-read-more"><a href = "/edannounce">More News/Announcements</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<table cellspacing="0" summary="simple layout table">
+<tbody>
+<tr>
+<td class = "caption"><div class = "article-title"><a href="/edannounce/2012-nobel-physics">2012 Nobel Prize in Physics: Quantum Mechanics of Photons and Atoms</a></div><div class="article-teaser"><span class ="key" style="white-space: nowrap;">October 9, 2012</span></div><div class ="article-teaser"><img src="/files/2012_nobel_physics.png" alt="2012 nobel prize in physics recipients" height="125" width="125" style="float:left; padding-right:1em;">The APS congratulates Serge Haroche and David WIneland for their 2012 Nobel Prize in Physics.  They and their collaborators have made significant advances in the realization of quantum phenomena with many beautiful experiments.  Their ability to manipulate atoms and photons to demonstrate fundamental aspects of quantum physics has been documented in many journal articles.  We are very pleased that much of this seminal work has been published in the APS journals <i>Physical Review Letters</i>, <i>Physical Review A</i>, and <i>Reviews of Modern Physics</i>.  To honor these laureates and their collaborators, we have made freely available five of their many APS publications that demonstrate some of the key insights of their pioneering work.</div>
+<p class = "article-read-more"><a href="/edannounce/2012-nobel-physics">Read More</a> | <a href = "/edannounce">More News/Announcements</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+     
+                  </div>
+
+                  <div class="tab-group" id="tabcontent-recent" style="display: none;">
+                  <p>Recently published articles in <i>Reviews of Modern Physics.</i> See the <a href="http://link.aps.org/issues/RMP/current/">current issues</a> for more.</p>
+                                  
+                    
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.1295">Thermal conduction phenomena in carbon nanotubes and related nanostructured materials</a></div>
+<div class = "feed-creator">Amy M. Marconnet, Matthew A. Panzer, and Kenneth E. Goodson</div>
+<div class = "feed-description"><p>The extremely high thermal conductivities of carbon nanotubes have motivated a wealth of research. Progress includes innovative conduction metrology based on microfabricated platforms and scanning thermal probes as well as simulations exploring phonon dispersion and scattering using both transport theory and molecular dynamics. This article highlights these advancements as part of a detailed review of heat conduction research on both individual carbon nanotubes and nanostructured films consisting of arrays of nanotubes or disordered nanotube mats. Nanotube length, diameter, and chirality strongly influence the thermal conductivities of individual nanotubes and the transition from primarily diffusive to ballistic heat transport with decreasing temperature. A key experimental challenge, for both individual nanotubes and aligned films, is the separation of intrinsic and contact resistances. Molecular dynamics simulations have studied the impacts of specific types of imperfections on the nanotube conductance and its variation with length and chirality. While the properties of aligned films fall short of predictions based on individual nanotube data, improvements in surface engagement and postfabrication nanotube quality are promising for a variety of applications including mechanically compliant thermal contacts.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 1295 (2013)] Published Fri Aug 16, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.1245">White organic light-emitting diodes: Status and perspective</a></div>
+<div class = "feed-creator">Sebastian Reineke, Michael Thomschke, Björn Lüssem, and Karl Leo</div>
+<div class = "feed-description"><p>White organic light-emitting diodes (OLEDs) are ultrathin, large-area light sources made from organic semiconductor materials. Over the past decades, much research has been spent on finding suitable materials to realize highly efficient monochrome and white OLEDs. With their high efficiency, color tunability, and color quality, white OLEDs are emerging as one of the next-generation light sources. In this review, the physics of a variety of device concepts that have been introduced to realize white OLEDs based on both polymer and small-molecule organic materials are discussed. Owing to the fact that about 80% of the internally generated photons are trapped within the thin-film layer structure, a second focus is put on reviewing promising concepts for improved light outcoupling.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 1245 (2013)] Published Tue Jul 30, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.1191">Spinor Bose gases: Symmetries, magnetism, and quantum dynamics</a></div>
+<div class = "feed-creator">Dan M. Stamper-Kurn and Masahito Ueda</div>
+<div class = "feed-description"><p>Spinor Bose gases form a family of quantum fluids manifesting both magnetic order and superfluidity. This article reviews experimental and theoretical progress in understanding the static and dynamic properties of these fluids. The connection between system properties and the rotational symmetry properties of the atomic states and their interactions are investigated. Following a review of the experimental techniques used for characterizing spinor gases, their mean-field and many-body ground states, both in isolation and under the application of symmetry-breaking external fields, are discussed. These states serve as the starting point for understanding low-energy dynamics, spin textures, and topological defects, effects of magnetic-dipole interactions, and various nonequilibrium collective spin-mixing phenomena. The paper aims to form connections and establish coherence among the vast range of works on spinor Bose gases, so as to point to open questions and future research opportunities.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 1191 (2013)] Published Fri Jul 26, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.1143">Hydrodynamics of soft active matter</a></div>
+<div class = "feed-creator">M. C. Marchetti, J. F. Joanny, S. Ramaswamy, T. B. Liverpool, J. Prost, Madan Rao, and R. Aditi Simha</div>
+<div class = "feed-description"><p>This review summarizes theoretical progress in the field of active matter, placing it in the context of recent experiments. This approach offers a unified framework for the mechanical and statistical properties of living matter: biofilaments and molecular motors <span style="font-style: italic;">in vitro</span> or <span style="font-style: italic;">in vivo</span>, collections of motile microorganisms, animal flocks, and chemical or mechanical imitations. A major goal of this review is to integrate several approaches proposed in the literature, from semimicroscopic to phenomenological. In particular, first considered are “dry” systems, defined as those where momentum is not conserved due to friction with a substrate or an embedding porous medium. The differences and similarities between two types of orientationally ordered states, the nematic and the polar, are clarified. Next, the active hydrodynamics of suspensions or “wet” systems is discussed and the relation with and difference from the dry case, as well as various large-scale instabilities of these nonequilibrium states of matter, are highlighted. Further highlighted are various large-scale instabilities of these nonequilibrium states of matter. Various semimicroscopic derivations of the continuum theory are discussed and connected, highlighting the unifying and generic nature of the continuum model. Throughout the review, the experimental relevance of these theories for describing bacterial swarms and suspensions, the cytoskeleton of living cells, and vibrated granular material is discussed. Promising extensions toward greater realism in specific contexts from cell biology to animal behavior are suggested, and remarks are given on some exotic active-matter analogs. Last, the outlook for a quantitative understanding of active matter, through the interplay of detailed theory with controlled experiments on simplified systems, with living or artificial constituents, is summarized.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 1143 (2013)] Published Fri Jul 19, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.1115">Principles of maximum entropy and maximum caliber in statistical physics</a></div>
+<div class = "feed-creator">Steve Pressé, Kingshuk Ghosh, Julian Lee, and Ken A. Dill</div>
+<div class = "feed-description"><p>The variational principles called <span style="font-style: italic;">maximum entropy</span> (MaxEnt) and <span style="font-style: italic;">maximum caliber</span> (MaxCal) are reviewed. MaxEnt originated in the statistical physics of Boltzmann and Gibbs, as a theoretical tool for predicting the equilibrium states of thermal systems. Later, entropy maximization was also applied to matters of information, signal transmission, and image reconstruction. Recently, since the work of Shore and Johnson, MaxEnt has been regarded as a principle that is broader than either physics or information alone. MaxEnt is a procedure that ensures that inferences drawn from stochastic data satisfy basic self-consistency requirements. The different historical justifications for the entropy <span><span style="font-style: italic;">S</span>=-∑<span style="font-style: italic;">i</span><span style="font-style: italic;">p</span><sub><span style="font-style: italic;">i</span></sub>log⁡<span style="font-style: italic;">p</span><sub><span style="font-style: italic;">i</span></sub></span> and its corresponding variational principles are reviewed. As an illustration of the broadening purview of maximum entropy principles, maximum caliber, which is path entropy maximization applied to the trajectories of dynamical systems, is also reviewed. Examples are given in which maximum caliber is used to interpret dynamical fluctuations in biology and on the nanoscale, in single-molecule and few-particle systems such as molecular motors, chemical reactions, biological feedback circuits, and diffusion in microfluidics devices.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 1115 (2013)] Published Tue Jul 16, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.1103">Nobel Lecture: Superposition, entanglement, and raising Schrödinger’s cat</a></div>
+<div class = "feed-creator">David J. Wineland</div>
+<div class = "feed-description"><p>The 2012 Nobel Prize for Physics was shared by Serge Haroche and David J. Wineland. These papers are the text of the address given in conjunction with the award.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 1103 (2013)] Published Fri Jul 12, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.1021">The molecular universe</a></div>
+<div class = "feed-creator">A. G. G. M. Tielens</div>
+<div class = "feed-description"><p>Molecular absorption and emission bands dominate the visible, infrared, and submillimeter spectra of most objects with associated gas. These observations reveal a surprisingly rich array of molecular species and attest to a complex chemistry taking place in the harsh environment of the interstellar medium of galaxies. Molecules are truly everywhere and an important component of interstellar gas. This review surveys molecular observations in the various spectral windows and summarizes the chemical and physical processes involved in the formation and evolution of interstellar molecules. The rich organic inventory of space reflects the multitude of chemical processes involved that, on the one hand, build up molecules an atom at a time and, on the other hand, break down large molecules injected by stars to smaller fragments. Both this bottom-up and the trickle-down chemistry are reviewed. The emphasis is on understanding the characteristics of complex polycyclic aromatic hydrocarbon molecules and fullerenes and their role in chemistry as well as the intricate interaction of gas-phase ion-molecule and neutral-neutral reactions and the chemistry taking place on grain surfaces in dense clouds in setting the organic inventory of regions of star and planet formation and their implications for the chemical history of the Solar System. Many aspects of molecular astrophysics are illustrated with recent observations of the HIFI instrument on the Herschel Space Observatory.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 1021 (2013)] Published Fri Jul 12, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.1083">Nobel Lecture: Controlling photons in a box and exploring the quantum to classical boundary</a></div>
+<div class = "feed-creator">Serge Haroche</div>
+<div class = "feed-description"><p>Microwave photons trapped in a superconducting cavity constitute an ideal system to realize some of the thought experiments imagined by the founding fathers of quantum physics. The interaction of these trapped photons with Rydberg atoms crossing the cavity illustrates fundamental aspects of measurement theory. The experiments performed with this “photon box” at Ecole Normale Supérieure (ENS) belong to the domain of quantum optics called “cavity quantum electrodynamics.” We have realized the nondestructive counting of photons, the recording of field quantum jumps, the preparation and reconstruction of “Schrödinger cat” states of radiation and the study of their decoherence, which provides a striking illustration of the transition from the quantum to the classical world. These experiments have also led to the demonstration of basic steps in quantum information processing, including the deterministic entanglement of atoms and the realization of quantum gates using atoms and photons as quantum bits. This lecture starts by an introduction stressing the connection between the ENS photon box and the ion-trap experiments of David Wineland, whose accompanying lecture recalls his own contribution to the field of single particle control. I give then a personal account of the early days of cavity quantum electrodynamics before describing the main experiments performed at ENS during the last 20 years and concluding by a discussion comparing our work to other researches dealing with the control of single quantum particles.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 1083 (2013)] Published Fri Jul 12, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.961">Silicon quantum electronics</a></div>
+<div class = "feed-creator">Floris A. Zwanenburg, Andrew S. Dzurak, Andrea Morello, Michelle Y. Simmons, Lloyd C. L. Hollenberg, Gerhard Klimeck, Sven Rogge, Susan N. Coppersmith, and Mark A. Eriksson</div>
+<div class = "feed-description"><p>This review describes recent groundbreaking results in Si, <span>Si/SiGe</span>, and dopant-based quantum dots, and it highlights the remarkable advances in Si-based quantum physics that have occurred in the past few years. This progress has been possible thanks to materials development of Si quantum devices, and the physical understanding of quantum effects in silicon. Recent critical steps include the isolation of single electrons, the observation of spin blockade, and single-shot readout of individual electron spins in both dopants and gated quantum dots in Si. Each of these results has come with physics that was not anticipated from previous work in other material systems. These advances underline the significant progress toward the realization of spin quantum bits in a material with a long spin coherence time, crucial for quantum computation and spintronics.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 961 (2013)] Published Wed Jul 10, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.941"><span style="font-style: italic;">Colloquium</span>: Coherent diffusion of polaritons in atomic media</a></div>
+<div class = "feed-creator">O. Firstenberg, M. Shuker, A. Ron, and N. Davidson</div>
+<div class = "feed-description"><p>Coherent diffusion pertains to the motion of atomic dipoles experiencing frequent collisions in vapor while maintaining their coherence. Recent theoretical and experimental studies on the effect of coherent diffusion on key Raman processes, namely, Raman spectroscopy, slow polariton propagation, and stored light, are reviewed in this Colloquium.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 941 (2013)] Published Mon Jul 8, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.921"><span style="font-style: italic;">Colloquium</span>: Cluster growth on surfaces: Densities, size distributions, and morphologies</a></div>
+<div class = "feed-creator">Mario Einax, Wolfgang Dieterich, and Philipp Maass</div>
+<div class = "feed-description"><p>Understanding and control of cluster and thin-film growth on solid surfaces is a subject of intensive research to develop nanomaterials with new physical properties. In this Colloquium a review of basic theoretical concepts to describe submonolayer growth kinetics under nonequilibrium conditions is given. It is shown how these concepts can be extended and further developed to treat self-organized cluster formation in material systems of current interest, such as nanoalloys and molecular clusters in organic thin-film growth. The presentation is focused on ideal flat surfaces to limit the scope and to discuss key ideas in a transparent way. Open experimental and theoretical challenges are pointed out.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 921 (2013)] Published Mon Jul 8, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.919">Erratum: Hidden variables and the two theorems of John Bell [Rev. Mod. Phys. <span style="font-weight: bold;">65</span>, 803 (1993)]</a></div>
+<div class = "feed-creator">N. David Mermin</div>
+<div class = "feed-description"></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 919 (2013)] Published Fri Jun 28, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.869">Leaking chaotic systems</a></div>
+<div class = "feed-creator">Eduardo G. Altmann, Jefferson S. E. Portela, and Tamás Tél</div>
+<div class = "feed-description"><p>There are numerous physical situations in which a hole or leak is introduced in an otherwise closed chaotic system. The leak can have a natural origin, it can mimic measurement devices, and it can also be used to reveal dynamical properties of the closed system. A unified treatment of leaking systems is provided and applications to different physical problems, in both the classical and quantum pictures, are reviewed. The treatment is based on the transient chaos theory of open systems, which is essential because real leaks have finite size and therefore estimations based on the closed system differ essentially from observations. The field of applications reviewed is very broad, ranging from planetary astronomy and hydrodynamical flows to plasma physics and quantum fidelity. The theory is expanded and adapted to the case of partial leaks (partial absorption and/or transmission) with applications to room acoustics and optical microcavities in mind. Simulations in the limaçon family of billiards illustrate the main text. Regarding billiard dynamics, it is emphasized that a correct discrete-time representation can be given only in terms of the so-called true-time maps, while traditional Poincaré maps lead to erroneous results. Perron-Frobenius-type operators are generalized so that they describe true-time maps with partial leaks.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 869 (2013)] Published Wed May 29, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.849"><span style="font-style: italic;">Colloquium</span>: The unexpected properties of alkali metal iron selenide superconductors</a></div>
+<div class = "feed-creator">Elbio Dagotto</div>
+<div class = "feed-description"><p>The iron-based superconductors that contain FeAs layers as the fundamental building block in the crystal structures have been rationalized in the past using ideas based on the Fermi surface nesting of hole and electron pockets when in the presence of weak Hubbard <span><span style="font-style: italic;">U</span></span> interactions. This approach seemed appropriate considering the small values of the magnetic moments in the parent compounds and the clear evidence based on photoemission experiments of the required electron and hole pockets. However, recent results in the context of alkali metal iron selenides, with generic chemical composition <span>A<sub>x</sub>Fe<sub>2-y</sub>Se<sub>2</sub></span> (<span><span style="font-style: italic;">A</span>=alkali</span> metal element), have challenged those previous ideas since at particular compositions <span><span style="font-style: italic;">y</span></span> the low-temperature ground states are insulating and display antiferromagnetic order with large iron magnetic moments. Moreover, angle-resolved photoemission studies have revealed the absence of hole pockets at the Fermi level in these materials. The present status of this exciting area of research, with the potential to alter conceptually our understanding of the iron-based superconductors, is here reviewed, covering both experimental and theoretical investigations. Other recent related developments are also briefly reviewed, such as the study of selenide two-leg ladders and the discovery of superconductivity in a single layer of FeSe. The conceptual issues considered established for the alkali metal iron selenides, as well as several issues that still require further work, are discussed.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 849 (2013)] Published Mon May 20, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.809">Pregalactic metal enrichment: The chemical signatures of the first stars</a></div>
+<div class = "feed-creator">Torgny Karlsson, Volker Bromm, and Joss Bland-Hawthorn</div>
+<div class = "feed-description"><p>The emergence of the first sources of light at redshifts of <span><span style="font-style: italic;">z</span>∼10–30</span> signaled the transition from the simple initial state of the Universe to one of increasing complexity. Recent progress in our understanding of the formation of the first stars and galaxies, starting with cosmological initial conditions, primordial gas cooling, and subsequent collapse and fragmentation are reviewed. The important open question of how the pristine gas was enriched with heavy chemical elements in the wake of the first supernovae is emphasized. The review concludes by discussing how the chemical abundance patterns conceivably allow us to probe the properties of the first stars, and allow us to test models of early metal enrichment.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 809 (2013)] Published Wed May 15, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.795"><span style="font-style: italic;">Colloquium</span>: New physics search with flavor in the LHC era</a></div>
+<div class = "feed-creator">Tobias Hurth and Farvah Mahmoudi</div>
+<div class = "feed-description"><p>A status report on quark flavor physics in view of the latest data from the <span><span style="font-style: italic;">B</span></span> factories and the LHC is given, and the impact of the latest experimental results on new physics in the minimal flavor violation framework is discussed. Also shown are some examples of the implications in supersymmetry.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 795 (2013)] Published Wed May 15, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.751">Ion acceleration by superintense laser-plasma interaction</a></div>
+<div class = "feed-creator">Andrea Macchi, Marco Borghesi, and Matteo Passoni</div>
+<div class = "feed-description"><p>Ion acceleration driven by superintense laser pulses is attracting an impressive and steadily increasing effort. Motivations can be found in the applicative potential and in the perspective to investigate novel regimes as available laser intensities will be increasing. Experiments have demonstrated, over a wide range of laser and target parameters, the generation of multi-MeV proton and ion beams with unique properties such as ultrashort duration, high brilliance, and low emittance. An overview is given of the state of the art of ion acceleration by laser pulses as well as an outlook on its future development and perspectives. The main features observed in the experiments, the observed scaling with laser and plasma parameters, and the main models used both to interpret experimental data and to suggest new research directions are described.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 751 (2013)] Published Fri May 10, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.693">Theory and application of explicitly correlated Gaussians</a></div>
+<div class = "feed-creator">Jim Mitroy, Sergiy Bubin, Wataru Horiuchi, Yasuyuki Suzuki, Ludwik Adamowicz, Wojciech Cencek, Krzysztof Szalewicz, Jacek Komasa, D. Blume, and Kálmán Varga</div>
+<div class = "feed-description"><p>The variational method complemented with the use of explicitly correlated Gaussian basis functions is one of the most powerful approaches currently used for calculating the properties of few-body systems. Despite its conceptual simplicity, the method offers great flexibility, high accuracy, and can be used to study diverse quantum systems, ranging from small atoms and molecules to light nuclei, hadrons, quantum dots, and Efimov systems. The basic theoretical foundations are discussed, recent advances in the applications of explicitly correlated Gaussians in physics and chemistry are reviewed, and the strengths and weaknesses of the explicitly correlated Gaussians approach are compared with other few-body techniques.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 693 (2013)] Published Mon May 6, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.655">The spin structure of the nucleon</a></div>
+<div class = "feed-creator">Christine A. Aidala, Steven D. Bass, Delia Hasch, and Gerhard K. Mallot</div>
+<div class = "feed-description"><p>This article reviews our present understanding of QCD spin physics: the proton spin puzzle and new developments aimed at understanding the transverse structure of the nucleon. Present experimental investigations of the nucleon’s internal spin structure, the theoretical interpretation of the different measurements, and the open questions and challenges for future investigation are discussed.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 655 (2013)] Published Fri Apr 12, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.623">Hybrid quantum circuits: Superconducting circuits interacting with other quantum systems</a></div>
+<div class = "feed-creator">Ze-Liang Xiang, Sahel Ashhab, J. Q. You, and Franco Nori</div>
+<div class = "feed-description"><p>Hybrid quantum circuits combine two or more physical systems, with the goal of harnessing the advantages and strengths of the different systems in order to better explore new phenomena and potentially bring about novel quantum technologies. This article presents a brief overview of the progress achieved so far in the field of hybrid circuits involving atoms, spins, and solid-state devices (including superconducting and nanomechanical systems). How these circuits combine elements from atomic physics, quantum optics, condensed matter physics, and nanoscience is discussed, and different possible approaches for integrating various systems into a single circuit are presented. In particular, hybrid quantum circuits can be fabricated on a chip, facilitating their future scalability, which is crucial for building future quantum technologies, including quantum detectors, simulators, and computers.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 623 (2013)] Published Tue Apr 9, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.603"><span style="font-style: italic;">Colloquium</span>: Homochirality: Symmetry breaking in systems driven far from equilibrium</a></div>
+<div class = "feed-creator">Yukio Saito and Hiroyuki Hyuga</div>
+<div class = "feed-description"><p>Subsequent to the discovery of chirality of organic molecules by Pasteur, living organisms have been found to utilize biomolecules of only one handedness. The origin of this homochirality in life still remains unknown. It is believed that homochirality is attained in two stages: the initial creation of a chirality bias and its subsequent amplification to pure chirality. In the last two decades, two novel experiments have established the second stage in different fields: Soai and co-workers achieved the amplification of enantiomeric excess in the production of chiral organic molecules, and Viedma obtained homochirality in the solution growth of sodium chlorate crystals. These experiments are explained by a theory with a nonlinear evolution equation for the chiral order parameter; nonlinear processes in reactions or in crystal growth induce enantiomeric excess amplification, and the recycling of achiral elements ensures homochirality. Recycling drives the system to a state far from equilibrium with a free energy higher than that of the equilibrium state.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 603 (2013)] Published Tue Apr 2, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.553">Cold atoms in cavity-generated dynamical optical potentials</a></div>
+<div class = "feed-creator">Helmut Ritsch, Peter Domokos, Ferdinand Brennecke, and Tilman Esslinger</div>
+<div class = "feed-description"><p>This is a review of state-of-the-art theory and experiment of the motion of cold and ultracold atoms coupled to the radiation field within a high-finesse optical resonator in the dispersive regime of the atom-field interaction with small internal excitation. The optical dipole force on the atoms together with the backaction of atomic motion onto the light field gives rise to a complex nonlinear coupled dynamics. As the resonator constitutes an open driven and damped system, the dynamics is nonconservative and in general enables cooling and confining the motion of polarizable particles. In addition the emitted cavity field allows for real-time monitoring of the particle’s position with minimal perturbation up to subwavelength accuracy. For many-body systems, the resonator field mediates controllable long-range atom-atom interactions, which set the stage for collective phenomena. Besides the correlated motion of distant particles, one finds critical behavior and nonequilibrium phase transitions between states of different atomic order in conjunction with superradiant light scattering. Quantum-degenerate gases inside optical resonators can be used to emulate optomechanics as well as novel quantum phases such as supersolids and spin glasses. Nonequilibrium quantum phase transitions as predicted by, e.g., the Dicke Hamiltonian can be controlled and explored in real time via monitoring the cavity field. In combination with optical lattices, the cavity field can be utilized for nondestructive probing Hubbard physics and tailoring long-range interactions for ultracold quantum systems.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 553 (2013)] Published Tue Apr 2, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.471">Models of wave-function collapse, underlying theories, and experimental tests</a></div>
+<div class = "feed-creator">Angelo Bassi, Kinjalk Lochan, Seema Satin, Tejinder P. Singh, and Hendrik Ulbricht</div>
+<div class = "feed-description"><p>Quantum mechanics is an extremely successful theory that agrees with every experimental test. However, the principle of linear superposition, a central tenet of the theory, apparently contradicts a commonplace observation: macroscopic objects are never found in a linear superposition of position states. Moreover, the theory does not explain why during a quantum measurement, deterministic evolution is replaced by probabilistic evolution, whose random outcomes obey the Born probability rule. In this article a review is given of an experimentally falsifiable phenomenological proposal, known as continuous spontaneous collapse: a stochastic nonlinear modification of the Schrödinger equation, which resolves these problems, while giving the same experimental results as quantum theory in the microscopic regime. Two underlying theories for this phenomenology are reviewed: trace dynamics and gravity-induced collapse. As the macroscopic scale is approached, predictions of this proposal begin to differ appreciably from those of quantum theory and are being confronted by ongoing laboratory experiments that include molecular interferometry and optomechanics. These experiments, which test the validity of linear superposition for large systems, are reviewed here, and their technical challenges, current results, and future prospects summarized. It is likely that over the next two decades or so, these experiments can verify or rule out the proposed stochastic modification of quantum theory.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 471 (2013)] Published Tue Apr 2, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.529"><span style="font-style: italic;">Colloquium</span>: Modeling friction: From nanoscale to mesoscale</a></div>
+<div class = "feed-creator">Andrea Vanossi, Nicola Manini, Michael Urbakh, Stefano Zapperi, and Erio Tosatti</div>
+<div class = "feed-description"><p>The physics of sliding friction is gaining impulse from nanoscale and mesoscale experiments, simulations, and theoretical modeling. This Colloquium reviews some recent developments in modeling and in atomistic simulation of friction, covering open-ended directions, unconventional nanofrictional systems, and unsolved problems.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 529 (2013)] Published Tue Apr 2, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://link.aps.org/doi/10.1103/RevModPhys.85.421">Complex photonics: Dynamics and applications of delay-coupled semiconductors lasers</a></div>
+<div class = "feed-creator">Miguel C. Soriano, Jordi García-Ojalvo, Claudio R. Mirasso, and Ingo Fischer</div>
+<div class = "feed-description"><p>Complex phenomena in photonics, in particular, dynamical properties of semiconductor lasers due to delayed coupling, are reviewed. Although considered a nuisance for a long time, these phenomena now open interesting perspectives. Semiconductor laser systems represent excellent test beds for the study of nonlinear delay-coupled systems, which are of fundamental relevance in various areas. At the same time delay-coupled lasers provide opportunities for photonic applications. In this review an introduction into the properties of single and two delay-coupled lasers is followed by an extension to network motifs and small networks. A particular emphasis is put on emerging complex behavior, deterministic chaos, synchronization phenomena, and application of these properties that range from encrypted communication and fast random bit sequence generators to bioinspired information processing.</p></div>
+<div class = "feed-identifier">[Rev. Mod. Phys. 85, 421 (2013)] Published Wed Mar 20, 2013</div>
+</div>                  </div>
+
+                  <div class="tab-group" id="tabcontent-accepted" style="display: none;">
+
+                    <p>Papers recently accepted for publication in <i>Reviews of Modern Physics </i> (view <a href="/accepted">more</a>).</p>
+
+                                  
+
+                    
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/b907dEa0C101bf06008a3590782e34c5b7307f2fe">Galaxy masses</a></div>
+<div class = "feed-creator">Stéphane Courteau, Michele Cappellari, Roelof S. de Jong, Aaron A. Dutton, Eric Emsellem, Henk Hoekstra, L. V. E. Koopmans, Gary A. Mamon, Claudia Maraston, Tommaso Treu, and Lawrence M. Widrow</div>
+<div class = "feed-identifier">Accepted Tue Aug 13, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/40078E16C2eE3019d0ca0bb3e7fdd0504adcd39f9">Colloquium: Laser probing of neutron-rich nuclei in light atoms</a></div>
+<div class = "feed-creator">Z.-T. Lu, P. Mueller, G. W. F. Drake, W. Nörtershäuser, Steve C. Pieper, and Z.-C. Yan</div>
+<div class = "feed-identifier">Accepted Mon Jul 29, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/8c07bE4eR0dEa31ff0440d36f2cc1cfb3725cc6da">Colloquium: Beta-delayed fission of atomic nuclei</a></div>
+<div class = "feed-creator">Andrei N. Andreyev, Mark Huyse, and Piet Van Duppen</div>
+<div class = "feed-identifier">Accepted Thu Jul 11, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/24076E13T341be08c0de23c7e6ae4ca02621acbeb">Fermi gases in one dimension: From Bethe Ansatz to experiments</a></div>
+<div class = "feed-creator">Xi-Wen Guan, Murray T. Batchelor, and Chaohong Lee</div>
+<div class = "feed-identifier">Accepted Thu Jul 11, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/d707aEc6X551650dc0f130f316c12287ab327b6d5">Defect identification in semiconductors with positron annihilation: Experiment and theory</a></div>
+<div class = "feed-creator">Filip Tuomisto and Ilja Makkonen</div>
+<div class = "feed-identifier">Accepted Mon Jul 8, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/3c07eE32T4514c0fa04b1447564e903d2d6222c25">Standard model Higgs boson searches through the 125 GeV discovery</a></div>
+<div class = "feed-creator">Gregorio Bernardi and Matthew Herndon</div>
+<div class = "feed-identifier">Accepted Wed Jul 3, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/1d074Ec3X7919a02104b2a53a05cfb868d4c7397f">Colloquium: Multimessenger astronomy with gravitational waves and high-energy neutrinos</a></div>
+<div class = "feed-creator">Shin’ichiro Ando et al.</div>
+<div class = "feed-identifier">Accepted Mon Jun 24, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/7907bEdcD4917f0e00c64a51a080bc56b11a14564">Life at the interface of particle physics and string theory</a></div>
+<div class = "feed-creator">A. N. Schellekens</div>
+<div class = "feed-identifier">Accepted Mon Jun 24, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/86072Ea5Sec1380380a54ad4c782711221b30179b">Quantum-Bayesian coherence</a></div>
+<div class = "feed-creator">Christopher A. Fuchs and Rüdiger Schack</div>
+<div class = "feed-identifier">Accepted Mon Jun 24, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/12073E83Rd7Ec315f0a21b2064870ebadf671060e">Colloquium: Annual modulation of dark matter</a></div>
+<div class = "feed-creator">Katherine Freese, Mariangela Lisanti, and Christopher Savage</div>
+<div class = "feed-identifier">Accepted Fri Jun 21, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/3807bEdeAd9Ec51bb0f91a5236367c0e95bb2e44e">Colloquium: Artificial spin ice: Controlling geometry, engineering frustration</a></div>
+<div class = "feed-creator">Cristiano Nisoli, Roderich Moessner, and Peter Schiffer</div>
+<div class = "feed-identifier">Accepted Tue Jun 11, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/cf079E91S321f90ea0e650452a30da68d94f0042d">Single-electron current sources: Towards a refined definition of ampere</a></div>
+<div class = "feed-creator">Jukka P. Pekola, Olli-Pentti Saira, Ville F. Maisi, Antti Kemppinen, Mikko Möttönen, Yuri A. Pashkin, and Dmitri V. Averin</div>
+<div class = "feed-identifier">Accepted Mon May 6, 2013</div>
+</div>
+<div class = "feed-item"><div class = "feed-title"><a href="http://rmp.aps.org/accepted/R/aa07cE37L841ab0ac08825f78820852cf303d1c3d">Physics of adherent cells</a></div>
+<div class = "feed-creator">Ulrich S. Schwarz and Samuel A. Safran</div>
+<div class = "feed-identifier">Accepted Mon Apr 22, 2013</div>
+</div>                    <p><a href="/accepted">All Accepted Papers</a></p>
+                  </div>
+                  <table cellspacing="0" summary="simple layout table" class="navout">
+                    <tbody>
+                      <tr class="bottom">
+
+                        <td>
+                          <p>
+                             <a href="http://link.aps.org/issues/RMP/current">Current Issue</a>
+                          </p>
+                        </td>
+
+                        <td class="right">
+                          <p>
+                            <a href="/browse">Earlier Issues</a>
+                          </p>
+                        </td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </td>     
+
+              <td class="content-right">
+                    <div class="bounds">
+    <div class="tabbox" id="tabsearch">
+      <div id="tabsearch-top" class="tabtop tab1"></div>
+      <div class="tab tab1"><a href="#tabsearch-citation" class="on">Article Lookup</a></div>
+      <div class="tab tab2"><a href="#tabsearch-journal">Journal Search</a></div>
+      <div class="tab tab3"><a href="#tabsearch-site">Site Search</a></div>
+    </div>
+  </div>
+  <div class="bounds-border">
+    <div class="tabsearch-section"></div>
+    <div id="tabsearch-citation" class="tab-group-search" >
+      <form action="http://link.aps.org/citesearch">
+        <table cellspacing="0" summary="simple layout table">
+          <tbody>
+            <tr>
+              <td colspan="2">
+                <p>
+                  <select name="journal" class="formtext">
+                                          <option value="PRL" >Phys. Rev. Lett.</option>
+                                          <option value="PRA" >Phys. Rev. A</option>
+                                          <option value="PRB" >Phys. Rev. B</option>
+                                          <option value="PRC" >Phys. Rev. C</option>
+                                          <option value="PRD" >Phys. Rev. D</option>
+                                          <option value="PRE" >Phys. Rev. E</option>
+                                          <option value="PRX" >Phys. Rev. X</option>
+                                          <option value="PRSTAB" >Phys. Rev. ST AB</option>
+                                          <option value="PRSTPER" >Phys. Rev. ST PER</option>
+                                          <option value="PHYSICS" >Physics</option>
+                                          <option value="PRI" >Phys. Rev. (Series I)</option>
+                                          <option value="PR" >Phys. Rev.</option>
+                                          <option value="RMP" selected="selected">Rev. Mod. Phys.</option>
+                                       </select>
+                   Vol.:<input type="text" maxlength="3" size="3" class="formtext" name="volume"/>
+                   Article:<input type="text" maxlength="6" size="6" class="formtext" name="article"/>
+               </p>
+             </td>
+             </tr>
+             <tr>
+               <td style="text-align: center; padding-top: 0px; padding-bottom: 0px;" colspan="2">
+                 <p><b>or by citation or DOI</b></p>
+               </td>
+             </tr>
+             <tr>
+               <td>
+                 <p>
+                   <input type="text" name="query" style="width: 20em;" class="formtext greyed" id="citation-searchbox"/>
+                   <input type="image" class="formimage padleft" title="Go" alt="Go" src="/sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/button_go.gif"/>
+                 </p>
+               </td>
+             </tr>
+           </tbody>
+         </table>
+       </form>
+     </div>
+  </div>
+
+  <div class="tab-group-search" id="tabsearch-journal" style="display: none;">
+    <form action="http://publish.aps.org/search" method="get" id="search">
+      <table cellspacing="0" summary="simple layout table">
+        <tbody>
+          <tr>
+            <td><p>Search:</p></td>
+            <td class="second">
+              <p>
+                <input type="text" class="formtext" style="width: 170px;" name="c[][value]" />
+                <input type="hidden" name="c[][operator]" value="AND" />
+                                <input type="hidden" name="journal[]" value="RMP" />
+                              </p>
+              <p>
+                <select style="width: 175px;" name="c[][field]">
+                  <option value="abstitle" selected="selected">Abstract/title</option>
+                  <option value="author">Author:</option>
+                  <option value="all">Full Record:</option>
+                  <option value="fulltext">Full Text:</option>
+                  <option value="title">Title:</option>
+                  <option value="abstract">Abstract:</option>
+                  <option value="refauth">Cited Author:</option>
+                  <option value="collaboration">Collaboration:</option>
+                  <option value="affiliation">Affiliation:</option>
+                  <option value="pacs">PACS:</option>
+                </select>
+                <input type="image" src="/sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/button_go.gif" alt="Go" title="Go" class="formimage padleft" value="Search" /><br />
+                <a href="http://publish.aps.org/search">Advanced Search</a>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+
+  <div class="tab-group-search" id="tabsearch-site" style="display: none;">
+    <form id="searchbox" action="/site_search" method="post">
+      <table cellspacing="0" summary="simple layout table">
+        <tbody>
+          <tr>
+            <td><p>Search:</p></td>
+            <td class="second">
+              <p>
+                <input type="hidden" name="page" value="1"/>
+                <input type="text" class="formtext" value="" name="query" style="width: 190px;" />
+                <input type="image" src="/sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/button_go.gif" alt="Go" title="Go" class="formimage padleft" />
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+                  <div class="group ad physics-ad">
+                    <div class="loadable-ad" src="physics_with_content">
+                    </div>
+                  </div>
+                  <div class="group ad">
+                    <p style="font-weight:bold;">
+                      <span class="loadable-ad" src="homepage"/>
+                    </p>
+                  </div>  
+
+
+                  <div class="group">
+                    <h2>
+                      News, Announcements, and Editorials
+                    </h2>
+                                        <ul><li class="news"><h2><a href="/edannounce/go-mobile">Introducing Mobile Subscriptions for APS Journals<span style="white-space: nowrap;"> (March 12, 2013)</span></a> </h2>
+</li></ul><ul><li class="news"><h2><a href="/edannounce/2013-Outstanding-Referees">APS Announces 142 New <i>Outstanding Referees</i> for 2013<span style="white-space: nowrap;"> (February 6, 2013)</span></a> </h2>
+</li></ul><ul><li class="news"><h2><a href="/edannounce/aps-orcid-launch-2012">APS Partners with ORCID For Launch<span style="white-space: nowrap;"> (October 16, 2012)</span></a> </h2>
+</li></ul><ul><li class="news"><h2><a href="/edannounce/2012-nobel-physics">2012 Nobel Prize in Physics: Quantum Mechanics of Photons and Atoms<span style="white-space: nowrap;"> (October 9, 2012)</span></a> </h2>
+</li></ul>                    <p>
+                      <a href="/edannounce">More News</a>
+                    </p>
+                  </div>
+                  <div class="group">
+                    <table cellspacing="0" summary="simple layout table">
+                      <tbody>
+                        <tr>
+                                                    
+<td>
+<h2>Did you know?</h2>
+<p>National Association of Science Writers (NASW) members are eligible to receive <a href="https://www.nasw.org/journal-access-nasw-members">free access</a> to the journals of the American Physical Society.</p>
+</td>
+<td>
+</td>                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="group">
+                                   
+                    <h2>Most cited articles from 1953</h2>
+    <table class="list" cellspacing="0" summary="simple layout table"> <tr >
+
+      <td class="num">
+      <p>1</p>
+      </td>
+
+      <td class="data">
+      <p><a href="http://link.aps.org/doi/10.1103/RevModPhys.25.269">Exchange Narrowing in Paramagnetic Resonance</a></p>
+      </td>
+      </tr> <tr class = "even">
+
+      <td class="num">
+      <p>2</p>
+      </td>
+
+      <td class="data">
+      <p><a href="http://link.aps.org/doi/10.1103/RevModPhys.25.729">Theory of Angular Correlation of Nuclear Radiations</a></p>
+      </td>
+      </tr> <tr >
+
+      <td class="num">
+      <p>3</p>
+      </td>
+
+      <td class="data">
+      <p><a href="http://link.aps.org/doi/10.1103/RevModPhys.25.469">Table of Isotopes</a></p>
+      </td>
+      </tr> <tr class = "even">
+
+      <td class="num">
+      <p>4</p>
+      </td>
+
+      <td class="data">
+      <p><a href="http://link.aps.org/doi/10.1103/RevModPhys.25.390">The Energy Levels and the Structure of Light Nuclei</a></p>
+      </td>
+      </tr> <tr >
+
+      <td class="num">
+      <p>5</p>
+      </td>
+
+      <td class="data">
+      <p><a href="http://link.aps.org/doi/10.1103/RevModPhys.25.831">Virial Coefficients and Models of Molecules in Gases</a></p>
+      </td>
+      </tr> <tr class = "even">
+
+      <td class="num">
+      <p>6</p>
+      </td>
+
+      <td class="data">
+      <p><a href="http://link.aps.org/doi/10.1103/RevModPhys.25.353">On the Theory of the Ising Model of Ferromagnetism</a></p>
+      </td>
+      </tr> <tr >
+
+      <td class="num">
+      <p>7</p>
+      </td>
+
+      <td class="data">
+      <p><a href="http://link.aps.org/doi/10.1103/RevModPhys.25.779">Passage of Heavy Particles through Matter</a></p>
+      </td>
+      </tr> <tr class = "even">
+
+      <td class="num">
+      <p>8</p>
+      </td>
+
+      <td class="data">
+      <p><a href="http://link.aps.org/doi/10.1103/RevModPhys.25.220">Models of Exchange Coupling in Ferromagnetic Media</a></p>
+      </td>
+      </tr> <tr >
+
+      <td class="num">
+      <p>9</p>
+      </td>
+
+      <td class="data">
+      <p><a href="http://link.aps.org/doi/10.1103/RevModPhys.25.100">Neutron Diffraction Studies of Various Transition Elements</a></p>
+      </td>
+      </tr> <tr class = "even">
+
+      <td class="num">
+      <p>10</p>
+      </td>
+
+      <td class="data">
+      <p><a href="http://link.aps.org/doi/10.1103/RevModPhys.25.714">An Introduction to Spinors</a></p>
+      </td>
+      </tr></table> 
+                  </div>
+
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div id="footer">
+        <div><img src="sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/page_blc.gif" width="9" height="9" alt="" id="page-blc" /></div>
+        <div><img src="sites/rmp.staging.ridge.aps.org/themes/RMP/graphics/page_brc.gif" width="9" height="9" alt="" id="page-brc" /></div>
+         <p><a href="http://www.aps.org/">APS</a> &nbsp;|&nbsp; <a href="http://publish.aps.org/">Journals</a> &nbsp;|&nbsp;  <a href="http://www.aps.org/about/privacy.cfm">Privacy</a>  &nbsp;|&nbsp;  <a href="http://publish.aps.org/policies">Policies</a> &nbsp;|&nbsp;   <a href="http://publish.aps.org/contact.html">Contact Information</a> &nbsp;|&nbsp; <a href="/">RMP</a> &nbsp;|&nbsp;  <a href="http://www.aps.org/membership/join.cfm">Join APS</a> &nbsp;|&nbsp; <a href="mailto:feedback@aps.org">Feedback</a></p>
+<p>ISSN 1539-0756 (online), 0034-6861 (print). Use of the <a href="http://www.aps.org">American Physical Society</a> websites and journals implies that the user has read and agrees to our <a href="http://publish.aps.org/info/terms.html">Terms and Conditions</a> and any applicable <a href="http://librarians.aps.org/files/sitelicense.pdf">Subscription Agreement</a>. <i>Reviews of Modern Physics</i> ® is a trademark of the American Physical Society. </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

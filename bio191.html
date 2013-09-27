@@ -1,0 +1,147 @@
+<base href="http://www.santafe.edu/~pth/simplex.html">
+<HTML>
+<HEAD>
+<TITLE>The RNA Simplex</TITLE>
+</HEAD>
+<BODY BACKGROUND="pictures/rna-str-back.gif" BGCOLOR="#eeeeee" TEXT="#400000" LINK="#004020" VLINK="#008040">
+
+<HR>
+<CENTER>
+<H1>The RNA Simplex:
+An Interactive Graphics Tool for Visualizing RNA Composition Space</H1>
+
+<H3>Erik Schultes, <I>Whitehead Institute for Biomedical Research</I><BR>
+    Peter T. Hraber, <I>National Center for Genome Resources</I><BR>
+    Thomas H. LaBean, <I>Computer Science & Biochemistry, Duke University</I></H3>
+
+<I>Last updated September 1999</I><BR>
+</CENTER>
+<HR>
+<P>The RNA Simplex is a tool for the analysis of nucleotide base
+composition in RNA (or DNA) sequences. The RNA Simplex can be
+geometrically represented as points within the volume of a tetrahedron
+where the four homopolymers (poly-A, poly-C, poly-G, poly-U) reside at
+the vertices while sequences having an equal number of the four
+nucleotides reside at the center of gravity of the tetrahedron,
+equidistant from the homopolymers.</P>
+
+<P>We have visualized the RNA Simplex using an interactive graphics
+package that is freely available (see below). Also available are the
+data sets used in our analysis of RNA base composition from both
+naturally and artificially evolved RNA sequences and our analysis of
+relationship between base composition and thermodynamic stability of
+RNA secondary structure.<P>
+
+<P>If the RNA Simplex or the accompanying data are used in further research,
+please cite:</P>
+
+<UL>
+<LI>E. Schultes, P.T. Hraber and T.H. LaBean.  1997.  Global
+similarities in nucleotide base composition among disparate functional
+classes of single-stranded RNA imply adaptive evolutionary
+convergence.  <I>RNA</I> 3:792-806.
+
+<LI>E. Schultes, P.T. Hraber and T.H. LaBean.  1999.  A
+parameterization of RNA sequence space.  <I>Complexity</I> 4:61-71.
+</UL>
+
+<H3>MAGE and KINEMAGES</H3>
+
+<P>MAGE is a general-purpose, interactive graphics program created at
+the Department of Biochemistry, Duke University, by <A
+HREF="http://marini.biochem.duke.edu/Faculty/Richardson.html">Dave and
+Jane Richardson</A>.  MAGE allows the user to display and manipulate
+multi-dimensional graphical data.  The data sets used by MAGE are
+called KINEMAGES (or <B>KINE</B>tic i<B>MAGES</B>). A KINEMAGE is a
+plain-text file of coordinate data and commented display lists.</P>
+
+<P>Though the program is most often used to visualize molecular
+structures in three dimensions, we have used it to represent the RNA
+Simplex and the distributions of observed RNAs and our theoretical
+predictions.</P>
+
+<P>Click <A HREF="http://kinemage.biochem.duke.edu/kinemage/magepage.php"
+target="newpage">here</A> to lean more about MAGE and KINEMAGES on the
+Official Kinemage Homepage.</P>
+
+<P>Click <A HREF="http://kinemage.biochem.duke.edu/software/mage.php"
+target="newpage">here</A> for MAGE software.</P>
+
+<H3>The RNA Simplex KINEMAGES</H3>
+
+<P>To work with the RNA simplex, open KINEMAGE files with your copy of
+MAGE. It is best to use a large format monitor. The simplex can be
+rotated in any direction using the mouse and various data can be
+toggled on and off using buttons on the right-hand side of the
+window. Instructions for using the RNA Simplex are provided <A
+HREF="http://www.santafe.edu/~pth/simplex-doc.html">here</A>.</P>
+
+<P>Currently, we have two RNA Simplex KINEMAGES available (labeled
+name.kin). The first, is <A
+HREF="ftp://ftp.santafe.edu/pub/pth/rna/RNA_simplex.kin">RNA_simplex.kin</a>,
+which summarizes the nucleotide base composition of over 2800
+individual single-stranded RNA sequences from 15 functional
+classes. All data is phylogenetically representative and taken from
+sequences that are more than 90% complete. Included are artificial
+sequences evolved in vitro.</P>
+
+<P>The second KINEMAGE, is <A
+HREF="ftp://ftp.santafe.edu/pub/pth/rna/RNA_simulation.kin">
+simulation_simplex.kin</A>, which is an analysis of RNA thermodynamic
+properties as a function of base composition.  These simulations were
+conducted to explain the observed distributions discovered in
+RNA_Simplex.kin.</P>
+
+<P>Future KINEMAGES will include the InVitro_simplex.kin (analysis of
+artificial ribozymes evolved in vitro from random-sequence RNA pools)
+and Genome_simplex.kin (base composition analyses of entire
+genomes).</P>
+
+
+
+<H3>RNA Base Composition Text Data Files</H3>
+
+<P>These text files (labeled name.txt) contain the composition vectors of
+over 2800, phylogenetically representative, single-stranded RNA
+sequences. These files are named by functional class. Composition
+vectors were calculated from full length sequence data collected from
+various electronic sources. These files have a constant format
+consisting of 14, tab delimited columns: 
+<OL>
+<LI>ACCESSION NUMBER
+<LI>RNA FUNCTIONAL CLASS
+<LI>ORGANISM NAME
+<LI>DOMAIN
+<LI>SUB-TAXON
+<LI>NUMBER OF A RESIDUES
+<LI>NUMBER OF C RESIDUES
+<LI>NUMBER OF G RESIDUES
+<LI>NUMBER OF U RESIDUES
+<LI>TOTAL NUMBER OF RESIDUES (N)
+<LI>MAGE-FORMATTED NAME (IN BRACKETS {})
+<LI>FRACTION A RESIDUES
+<LI>FRACTION C RESIDUES
+<LI>FRACTION G RESIDUES
+</OL>
+
+<P>Columns having missing data are marked with a short string
+of X's. Because some sequences had ambiguous sites, the sum of A, C,
+G, and U residues may not, in all cases, equal N. Click <A
+HREF="ftp://ftp.santafe.edu/pub/pth/rna/">here</A> to obtain these
+text files.</P>
+
+<P>Click <A HREF="http://www.santafe.edu/~pth/rna.html">here</A> to learn
+more about RNA in general.</P>
+
+<P>If you have any questions please email <A
+HREF="mailto:schultes@wi.mit.edu">Erik Schultes</A>, <FONT COLOR="RED">Mage Magnate</FONT>.</P>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2902533-2";
+urchinTracker();
+</script>
+</BODY>
+</HTML>
+

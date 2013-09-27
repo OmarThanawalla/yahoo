@@ -1,0 +1,2949 @@
+<base href="http://ojps.aip.org/jcpo/">
+
+      
+      	      	      			
+		
+		
+					
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+                          <meta name="robots" content="index" />
+          <meta name="robots" content="ACAP allow-index" />   
+            
+                  
+            
+                    
+                    
+                              
+		                      			      			      		                                                  			      		              					<link rel="shortcut icon" href="/polopoly_fs/1.1681486!/menu/standard/file/favicon.ico">
+		                
+                        
+
+                                            
+       
+        <title>Journal of Chemical Physics</title>
+                <link type="text/css" rel="stylesheet" href="/css/commons/reset.css" /> 
+        <link type="text/css" rel="stylesheet" href="/css/commons/jquery.css" />
+        <link type="text/css" rel="stylesheet" href="/css/commons/mathstyle.css" />
+
+        <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-ui-1.7.2.custom.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.tooltip.js"></script>
+        <script type="text/javascript" src="/js/jquery.extensions.js"></script>
+        <script type="text/javascript" src="/js/yui/utilities.js"></script>           
+        <script type="text/javascript" src="/js/scitation.utilities.js"></script>  
+        <script type="text/javascript" src="/js/jquery.galleryview-1.1.js"></script>                  
+        <script type="text/javascript" src="/js/jquery.validate.min.js"></script> 
+        <script type="text/javascript" src="/js/jquery.form.js"></script>
+        <script type="text/javascript" src="/js/membership.js"></script>                 
+        <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+       
+                                     
+                         
+                                            <link type="text/css" rel="stylesheet" href="http://jcp.aip.org/cmlink/7.146" />
+                            <link type="text/css" rel="stylesheet" href="http://jcp.aip.org/cmlink/7.7704" />
+                                                                    <link type="text/css" rel="stylesheet" href="http://jcp.aip.org/cmlink/7.202" />
+                                                    
+                        
+        
+                                                                      
+
+          <script type="text/javascript">
+               $(function() { $('.boxy').boxy({modal: true}); });
+               
+               var newwindow;
+               
+               $(document).ready(function(){ 
+               
+                    /* AQS Listener ************ */
+                    $(".aqslistener").click(function (e) {
+                                                var searchcoden = 'JCPSA6';
+                        if (searchcoden == '') searchcoden = searchkey;
+                        var articleInfo = $(this).parent(".authorList").attr("name");
+                        AQSlistener($(this).html(),'', searchcoden, e.pageX, e.pageY, articleInfo,'/search');
+                    });
+                    $(".popuplink").click(function() {
+                       javascript:window.open($(this).attr('href'));
+                       return false;
+                    });
+		            $(".link_shownextprevious").hover(
+		                function (e) { 
+		                    var prevnextdom = $(this).attr("alt");
+		                    $("#prevnext_floater").show();
+		                    LaunchArticlePrevNext(prevnextdom, e.pageX, e.pageY);
+		                },
+		                function() {
+                            $("#prevnext_floater").animate({"opacity":"0.0"},50, function() {
+                                $("#prevnext_floater").hide(); 
+                            });
+		                }
+		            );
+		            $(".launchMedia").click(
+		                function () { return launchMedia(this); }
+		            );
+		            
+		            $(".launchImage").click(
+		                function () { 
+		                    return launchImage(this);
+		                }
+		            );            
+		            
+                    $(".articlereferenceslist li a, .edItem_block li a").click(function (e) {
+                        var cvips = $(this).find("span").html();
+                        if (cvips == null) return true; 
+	                    var previewurl = "http://jcp.aip.org/cmlink/15.470?cvips=" + cvips + "&absurl=" + escape($(this).attr("href"));
+	                    LaunchAJAXContentPreview(previewurl, e.pageX, e.pageY);
+	                    return false; 
+                    });
+                    $(".ft_firstpara .citeref_collection").remove();
+                    $("#singlePreview").draggable();
+                });
+               
+               var feedbackresolver = "http://jcp.aip.org/cmlink/15.498";
+               
+           </script>
+                          
+        <link rel="alternate" type="application/rss+xml" title="Announcements" href="http://jcp.aip.org/feed/announcements?localLinksEnabled=false&amp;mode=feed" />
+                        
+        <link rel="alternate" type="application/rss+xml" title="Recent Communications" href="http://jcp.aip.org/feed/recent_communications?localLinksEnabled=false&amp;mode=feed" />
+                        
+        <link rel="alternate" type="application/rss+xml" title="Research Highlights" href="http://jcp.aip.org/feed/research_highlights?localLinksEnabled=false&amp;mode=feed" />
+                      
+            
+                
+        
+
+          
+      </head>
+      <body>
+      
+       	   
+                   
+                     
+              
+             
+          <div id="accessibilityBar">
+            <div id="accessibilityBarContent">
+               <div id="jumpToContent"><a href="#mainWithRight"><img src="/img/icons/jumpContent.gif" alt="" /> Jump to Content</a></div>
+               <div id="textSize">
+                  <a href="" class="increaseTextSize">Increase text size</a>
+                  <a href="" class="decreaseTextSize">Decrease text size</a>
+               </div>
+             </div>
+          </div>
+          
+         
+          <div id="pageWrapper">
+          
+          
+                        <div class="topBorderLayout header">
+               
+                  
+    
+      
+        
+        
+                        <!------ OAS AD 'Top' begin ------>
+<div class="ad1">
+<div id="OAS_Top">
+<noscript>
+<a target="_blank" href="http://oasc12039.247realmedia.com/RealMedia/ads/click_nx.ads/
+jcp.aip.org/@Top!Top">
+<img border="0" alt="OAS Ad" title="OAS Ad" src="http://oasc12039.247realmedia.com/RealMedia/ads/click_nx.ads/
+jcp.aip.org/@Top!Top" />
+</a>
+</noscript>
+</div></div>
+<!------ OAS AD 'Top' end ------>
+
+      
+      
+          
+        
+		                        
+                                 
+        <div class="elementGroup topNavLinks">
+       
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+         
+
+                
+                                
+                 
+                	        	        	            <ul class="entitlement-menu">
+        						            <li><img src="/img/icons/entitle-lock.png" alt="" class="ent-lock" /><a href="/log_in">Sign In</a></li>
+                            <li><a href="http://commerce.aip.org/cart.do"><img src="/img/icons/entitlements-cart.png" class="ent-cart" alt="View Items in Cart" /> View Cart</a></li>
+        </ul>
+        
+      
+          
+        
+        
+                        <ul class="topNavLinks-listing">
+ 
+<li><a href="/feedback/">Feedback</a></li>
+<li><a href="/help">Help</a></li>
+</ul>
+      
+      
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+      
+  
+                      </div><!-- end class="topBorderLayout header" -->
+                    
+        
+        <div class="borderLayout canbestyled">
+         
+                    
+          
+          <div class="borderLayoutMastHead">
+          
+                                        
+                       
+                       
+                  
+    
+      
+        
+		                        
+                                 
+        <div class="elementGroup headersection">
+       
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+        
+        
+        
+                        
+				       
+		        <div class="image">
+			        			        			        <a href="http://jcp.aip.org/">
+			        			        
+			        <img src="/polopoly_fs/7.204!/image/1711512246.jpg_gen/derivatives/default/1711512246.jpg" alt="JCP Nameplate" />
+			        
+			        			        </a>
+			        		        </div>
+		
+      
+      
+          
+         
+      
+              
+                                
+                        
+
+                
+                
+                                                        
+                         
+										        
+        
+                        
+                                    
+                            
+                                
+                        
+                                        
+        
+                        
+
+                
+                
+        <script type="text/javascript">
+        //<![CDATA[
+        var searchkey = "JCPSA6";
+        var searchtype = "";
+        
+                
+        var map;
+        $(document).ready(function(){ 
+        
+        	var showingpanel = $(".search_content_pane:visible");
+        	if(showingpanel) {
+        		var showingid = showingpanel.attr('id');
+        		if(showingid)
+        			searchtype = showingid.substring(showingid.indexOf("_")+1, showingid.length);
+        	}
+        		
+			if($('#searchfield').val() != "enter search here...")
+				$('#searchfield').css("color","#000000");
+    
+        	//$("#SearchPullDown_SelectedOption img").attr("src", "searchicon-" + $('#searchzone').val() + ".png");
+	        $("#SearchPullDown_SelectedOption").click(
+	            function () 
+	            { 
+	            	$("#SearchPullDown_Wrapper").toggle('fast'); 
+	            }
+	        );
+	        $("ul.SearchPullDown li").click(
+	            function () { 
+	            	updateSearchPullDown(this,'#SearchPullDown_SelectedOption'); 
+	            	$("#SearchPullDown_Wrapper").toggle('fast');
+	            }
+	        );		
+		});
+       	
+       	
+       	
+        //]]>    
+        </script>
+        
+        
+                              <form id="searchpanelform" onsubmit="return false;" action="/search" method="get">
+                   <div id="AIP_SearchPanel">
+                        
+                        <fieldset style="display:none;">
+                                                        <input type="hidden" value="JCPSA6" name="key" id="key"/>
+                                                                                    <input type="hidden" value="AIP" name="societykey" id="societykey"/>
+                                                        <input type="hidden" value="JCPSA6" name="coden" id="coden" />
+                            <input type="hidden" value="" name="q" id="q" />
+                            <input type="hidden" value="AIP" name="displayid" id="displayid" />
+                            
+                            
+                            		                    		                    		                    <input type="hidden" value="newestdate" name="sortby" id="sortby" />
+		                    
+                            <input type="hidden" value="faceted" name="faceted" id="faceted" />
+                            <input type="hidden" value="newestdate" name="sortby" id="sortby" />
+                            <input type="hidden" value="false" name="CP_Style" id="CP_Style" />
+                            <input type="hidden" value="" name="alias" id="alias" />
+                            <!--[if IE]>
+                            <input type="text" value="iefix" style="display:none;" disabled="disabled" size="1" />
+                            <![endif]-->
+                         </fieldset>  
+                      
+                                                                                                
+                        	                        <div id="tab_listing_wrapper">
+	                        <ul id="tab_listing">
+						        								        								             
+        
+                	        	        	<li class="searchtab selectedtab" id="volpagetab" onclick="return switchsearchtab(this, 'volpage');">Volume/Page</li>
+		       
+        
+        
+        								        								             
+                                	        	        	<li class="searchtab " id="keywordtab" onclick="return switchsearchtab(this, 'searchin');">Keyword</li>
+		        
+        
+        
+        
+        								        								             
+        
+                	        	        	<li class="searchtab " id="doitab" onclick="return switchsearchtab(this, 'doi');">DOI</li>
+		        
+        
+        
+        
+        								        								             
+        
+                	        	        	<li class="searchtab " id="citationtab" onclick="return switchsearchtab(this, 'citation');">Citation</li>
+		        
+        
+        
+        
+        								        								             
+        
+                                
+                	        	                         <li class="searchtab"><a href="/search">Advanced</a></li>
+              		        
+        
+        								        									                        </ul>
+	                        </div>
+                                                
+                        <div id="searchpanel_wrapper">
+                                                                                    
+                            <div id="submitbuttonbox"><input value="" class="searchsubmit" onclick="launchsearch('marklogic')" type="submit" /></div>
+                            <div id="searchpanel">
+                                
+                                
+						        									        									             
+        
+                    <div id="search_volpage" class="search_content_pane">
+                    <label for="vol">Volume:</label>&nbsp;
+                    <input id="vol" class="smallsearchfield" value="" size="5" />
+                    <label for="pg">Page/Article:</label>&nbsp;
+                    <input id="pg" class="smallsearchfield" value="" size="5" />
+            </div>
+		       
+        
+        
+        									        									             
+                        
+			       			        			        			        
+			        			        			        			
+			        			        			        
+			        			        			        			        			        			        			        
+			        			         			        
+																												        
+			        			
+			        			        			        
+			        			        			        			        			        			        			        			             
+			        
+			         				     				     				     				     				     				     				     				     				                         <div id="search_searchin" class="search_content_pane">
+                       <label for="searchzone" class="hidelabel">Search Content Type</label>
+                                                                                            
+                                              		<span id="searchfield_wrap"><input value="enter search here..." class="smallsearchfield" style="color:#ccc;" id="searchfield" onfocus="closeSearchError(); checkThisInput(this,'enter search here...');" onblur="checkThisInput(this,'enter search here...');" />&nbsp;</span>
+                                                                     <select id="searchzone" name="searchzone" class="searchdropdown">
+                                                                                 <option value="2" >Peer-reviewed articles</option>                                                                                 <option value="9"  class="dropdownshow">All AIP Journals</option>
+                                                      <option value="4">Scitation</option>                                                                                 
+                                                                                 <option value="7">PubMed</option>                           <option value="8">Google Scholar</option>                       </select>
+                                          </div>
+		        
+        
+        
+        
+        									        									             
+        
+        	          <div id="search_doi" class="search_content_pane">
+	              <label for="doi">article doi:</label>&nbsp;
+	              <input id="doi" class="smallsearchfield" value="enter doi... (ie:10.1063/1.3441405)" style="width:180px; color:#ccc;" onfocus="closeSearchError(); checkThisInput(this,'enter doi... (ie:10.1063/1.3441405)');" onblur="checkThisInput(this,'enter doi... (ie:10.1063/1.3441405)');" />
+	          </div>
+		        
+        
+        
+        
+        									        									             
+        
+        	           <div id="search_citation" class="search_content_pane">
+	                   <label for="cit">Citation:</label>&nbsp; 
+	                   <input id="cit" class="smallsearchfield" value="enter citation..." style="width:180px; color:#ccc;" onfocus="closeSearchError(); checkThisInput(this,'enter citation...');" onblur="checkThisInput(this,'enter citation...');" />
+	           </div>
+		        
+        
+        
+        
+        									        									             
+        
+                                
+        			
+		        
+        
+        									        								                            </div> 
+                                                </div>
+                       
+                        <div id="AIP_SearchPanel_Error" onclick="closeSearchError()"></div>  
+                       
+                                            </div>
+                    </form>  
+        
+
+
+
+
+        <a name="top"></a>
+        
+        
+                      
+      
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+          
+         
+        
+                
+        
+                
+                    
+                        
+            
+        
+                        
+                        
+            
+                        
+                        
+            <script type="text/javascript">
+            // <![CDATA[
+            $(document).ready(function(){$("ul.fancyNav").superfish({ speed:'fast'});}); 
+            //]]>
+            </script>
+            
+            
+                <div id="fancyNavMenu">
+                <ul class="fancyNav">
+                                                    
+            
+            
+                                     <li><a href="/" class="$selected">Home</a></li> 
+                        
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                <li><a href="/browse">Browse</a>
+               
+                                             <ul>
+                                                        
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://jcp.aip.org/resource/1/jcpsa6/v139/i8" >J. Chem. Phys.</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://link.aip.org/link/jcpbcp" >JCP: BioChem. Phys.</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="/features/most_downloaded" >Most Read</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="/features/most_cited" >Most Cited</a> 
+      
+  
+</li>                         
+                                                                                                                          
+                          </ul>                                            
+              
+              </li>                                 
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                <li><a href="/about">About</a>
+               
+                                             <ul>
+                                                        
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/about/about_the_journal">About the Journal</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://librarians.aip.org/promote/informationCards/jcp_infocard.pdf" >Information Card</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/about/masthead_archive">Masthead Archive</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/about/citation_format">Citation Format</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/about/rights_and_permissions">Rights and Permissions</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                                                           
+                          </ul>                                            
+              
+              </li>                                 
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                <li><a href="/authors">Authors</a>
+               
+                                             <ul>
+                                                        
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/authors/information_for_contributors">Information for Contributors</a>
+                                                                                   <ul>
+                                                
+                                                                                        
+                                                                                                  
+                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                          
+                                                				                                                                                  <li>
+      
+                <a class="link externalLink" href="http://jcp.aip.org/polopoly_fs/1.2708009!/menu/standard/file/JCP_Sample_MS.pdf" >Sample Manuscript</a> 
+      
+  
+</li>                         
+                                                                                                                                         
+                                                                                                  
+                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                          
+                                                				                                                                                                                                        <li><a href="/authors/information_for_contributors/guidelines_for_multimedia">Guidelines for Multimedia</a></li> 
+                                                                                                                                                                                             
+                                                                                                  
+                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                          
+                                                				                                                                                                                                        <li><a href="/authors/information_for_contributors/how_to_prepare_illustrations">How to Prepare Illustrations</a></li> 
+                                                                                                                                                                                                                              
+                                            </ul>                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/authors/submit_your_manuscript">Submit your Manuscript</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/authors/general_editorial_policies">General Editorial Policies</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/authors/open_access_publication">Open Access Publication</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/authors/publication_charges">Publication Charges</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://www.aip.org/pubservs/web_posting_guidelines.html" >Web Posting Guidelines</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://www.aip.org/pubservs/ethics.html" >Author Responsibilities</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="mailto:editor-jcp@chem.upenn.edu"  title="editor-jcp@chem.upenn.edu">Contact Editorial Office</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="mailto:jcp@aip.org"  title="jcp@aip.org">Contact Production Office</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://www.aip.org/pubservs/epaps.html" >Supplemental Material</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://www.aip.org/pacs/" >PACS&reg;</a> 
+      
+  
+</li>                         
+                                                                                                                          
+                          </ul>                                            
+              
+              </li>                                 
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                <li><a href="/librarians">Librarians</a>
+               
+                                             <ul>
+                                                        
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://librarians.aip.org/" >Information for Librarians</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://librarians.scitation.org/" >Library Service Center</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://librarians.aip.org/newsletter.html" >AIP Library Matters Newsletter</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/librarians/recommend_to_librarians">Recommend to Librarians</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://www.aip.org/journal_catalog/" >Information for Institutional Subscribers</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://librarians.aip.org/promote/posters/JCP.pdf" >JCP Poster</a> 
+      
+  
+</li>                         
+                                                                                                                          
+                          </ul>                                            
+              
+              </li>                                 
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                <li><a href="/features">Features</a>
+               
+                                             <ul>
+                                                        
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/features/table_of_contents_alerts">Table of Contents Alerts</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/features/rss_feeds">RSS Feeds</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://twitter.com/aip_publishing" ><em>Twitter</em></a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/features/calendar">Calendar</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://www.flickr.com/photos/39565660@N03/sets/72157621750268513/" >Flickr</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://www.youtube.com/JChemPhys" >YouTube</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://labs.aip.org/labs/iresearch-1.298.html" >iResearch</a> 
+      
+  
+</li>                         
+                                                                                                                          
+                          </ul>                                            
+              
+              </li>                                 
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                <li><a href="/purchase_content">Purchase Content</a>
+               
+                                             <ul>
+                                                        
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                                                                          
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/purchase_content/subscriptions_and_pricing">Subscriptions and Pricing</a>
+                                                                                   <ul>
+                                                
+                                                                                        
+                                                                                                  
+                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                          
+                                                				                                                                                  <li>
+      
+                <a class="link externalLink" href="http://journals.aip.org/aip_2013_prices.pdf" >Institutions</a> 
+      
+  
+</li>                         
+                                                                                                                                         
+                                                                                                  
+                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                          
+                                                				                                                                                  <li>
+      
+                <a class="link externalLink" href="http://journals.aip.org/member_rates_2013.pdf" >Individuals</a> 
+      
+  
+</li>                         
+                                                                                                                                                                          
+                                            </ul>                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://scitation.aip.org/documentstore/" >DocumentStore</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://scitation.aip.org/articlepacks/" >View Article Pack</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/purchase_content/free_sample_issue">Free Sample Issue</a>
+                                                                            
+                                    </li>                                                                                                                               
+                                                                      
+                                                                                                                                            
+                                                                                                                                      
+                                                                                                                                                                                          
+                             
+                                					                                                                                       
+                                    
+                                    <li><a href="/purchase_content/rent_article">Rent Article</a>
+                                                                            
+                                    </li>                                                                                                                                                                
+                          </ul>                                            
+              
+              </li>                                 
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                <li><a href="/advertisers">Advertisers</a>
+               
+                                             <ul>
+                                                        
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+    
+          
+
+<a href="/polopoly_fs/1.2655134!/menu/standard/file/AIP_Media_kit.pdf">Media Kit</a>  </li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+    
+          
+
+<a href="/polopoly_fs/1.2992072!/menu/standard/file/JCP.pdf">Rate Card</a>  </li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://www.aip.org/pubs/advertising.html" >Advertising Opportunities</a> 
+      
+  
+</li>                         
+                                                                                                                          
+                          </ul>                                            
+              
+              </li>                                 
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                <li><a href="/scitation">Scitation</a>
+               
+                                             <ul>
+                                                        
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://scitation.aip.org"  title="http://scitation.aip.org">Scitation Home</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://scitation.aip.org/browse" >Browse Scitation</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://scitation.aip.org/search_scitation" >Search Scitation</a> 
+      
+  
+</li>                         
+                                                                                         
+                                                                      
+                                                                                                         
+                                                                                                   
+                                                                                                                                                                                          
+                             
+                                					                                              <li>
+      
+                <a class="link externalLink" href="http://scitation.aip.org/myscitation/myJournals.do" >MyScitation</a> 
+      
+  
+</li>                         
+                                                                                                                          
+                          </ul>                                            
+              
+              </li>                                 
+                           
+               
+                              
+                                                           
+                                                                                          
+                                                  <li>
+      
+                <a class="link externalLink" href="http://journals.aip.org/" >AIP Journals</a> 
+      
+  
+</li>    
+                 
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                           
+               
+                              
+                                                                                         
+                                                                                          
+                                                                    
+                         
+            
+            </ul>
+            </div>
+                
+        
+        
+        
+        
+          
+        
+        
+                        <div id="icons">
+<p>
+<a href="http://www.youtube.com/jchemphys" target="_blank" class="interactive_icons"><img src="/polopoly_fs/7.3120!/youtube.png" alt="You Tube" title="You Tube"/></a>
+<a href="http://www.flickr.com/photos/39565660@N03/sets/" target="_blank" class="interactive_icons"><img src="/polopoly_fs/7.3120!/flickr.png" alt="Flickr" title="Flickr"/></a>
+<a href="http://twitter.com/aip_publishing" target="_blank" class="interactive_icons"><img src="/polopoly_fs/7.3120!/twitter.png" alt="Twitter" title="Twitter"/></a>
+<a href="http://scitation.aip.org/iphone" target="_blank" class="interactive_icons"><img src="/polopoly_fs/7.3120!/iresearch.png" alt="iResearch App" title="iResearch App"/></a>
+<a href="https://www.facebook.com/pages/The-Journal-of-Chemical-Physics/251219934903554?ref=pb" target="_blank" class="interactive_icons"><img src="/polopoly_fs/7.3120!/facebook.png" alt="Facebook" title="Facebook""/></a>
+</p>
+</div>
+
+
+      
+      
+      
+  
+                     
+          </div><!-- end class="borderLayoutMastHead" -->
+           
+                                                                                                   
+                    <div id="mainContentWrapper">
+          
+                                  
+          
+                    <div class="borderLayoutColumn " id="mainWithRight">
+         
+     
+      			 
+               
+
+                    	            		            		            
+		            		             
+                  
+    
+      
+        
+        
+                        <style type="text/css">
+.edanz {
+visibility: visible!important; position: absoulte;
+float: right; margin-right: 15px; margin-top: 1px;
+}
+
+</style>
+
+
+      
+      
+          
+        
+
+    
+        <div class="container twoColumnsLeftHeavy">
+          <div class="col1">
+        
+                  
+    
+      
+        
+		                        
+                                 
+        <div class="elementGroup elementGroupBoxHomeSpotlight">
+       
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+        
+
+    
+        <div class="container twoColumnsRightHeavy">
+          <div class="col1">
+        
+                  
+    
+      
+        
+      
+            
+                      
+           
+                                   
+                        <a href="http://jcp.aip.org/free_media/issue_files/JCPSA6/139_8.pdf">
+            <img src='/polopoly_fs/1.3005842!/image/1138645999.jpg' alt='linkcovejr 139 8' />            </a> 
+                 
+  
+
+      
+  
+                </div>
+          <div class="col2">
+        
+                  
+    
+      
+        
+		                        
+                                 
+        <div class="elementGroup imageAndLinks">
+       
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+        
+
+    
+        <div class="container twoColumnsLeftHeavy">
+          <div class="col1">
+        
+                  
+    
+      
+        
+      
+            
+                      
+           
+                                   
+                        <a href="http://jcp.aip.org/resource/1/jcpsa6/v139/i8/p084701_s1">
+            <img src='/polopoly_fs/1.3005843!/image/914766473.jpg' alt='linkcoverart 139 8' />            </a> 
+                 
+  
+
+      
+  
+                </div>
+          <div class="col2">
+        
+                  
+    
+      
+        
+		                        
+                                 
+        <div class="elementGroup featurelists">
+       
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+        
+        
+        
+		
+
+        
+    <div class="element list">      
+          
+                                      <ul class="linklist">
+                        
+                                      
+          
+                        
+                              	                	                  					  					    <li>
+      
+                <a class="link externalLink" href="http://jcp.aip.org/resource/1/jcpsa6/v139/i8" >Current Issue</a> 
+      
+  
+</li>
+	                  	            	                                              	                	                  					  					    <li>
+      
+                <a class="link externalLink" href="http://jcp.peerx-press.org/cgi-bin/main.plex" >Submit Manuscript</a> 
+      
+  
+</li>
+	                  	            	                                              	                	                  					  					    <li>
+    
+                      
+      
+      
+              <a href="/features/most_downloaded"  class="link">Most Read</a>
+      </li>
+	                  	            	                                              	                	                  					  					    <li>
+      
+                <a class="link externalLink" href="/features/most_cited" >Most Cited</a> 
+      
+  
+</li>
+	                  	            	                                              	                	                  					  					    <li>
+    
+                      
+      
+      
+              <a href="/ec2012"  class="link">Editors' Choice - 2012</a>
+      </li>
+	                  	            	                                          
+                            </ul>
+                        
+                  
+    </div>
+		
+		
+    
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+      
+  
+                </div>
+        </div>
+
+
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+      
+  
+                </div>
+        </div>
+
+
+          
+        
+        
+                        <div style="text-align:center; width:380px; .width: 370px;"><a href="http://jcp.aip.org/resource/1/jcpsa6/v139/i8/p084701_s1">Read the article</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+          
+        
+		                        
+                                 
+        <div class="elementGroup elementGroupBoxHomeSpotlight">
+       
+                   <div class="groupTitle">
+              <h2>Recent Communications</h2>
+                                <a href="http://jcp.aip.org/search_rss?sortby=newestdate&amp;recordspage=25&amp;q=communications&amp;searchzone=2&amp;searchtype=searchin&amp;faceted=faceted&amp;alias=&amp;key=JCPSA6&amp;todate=present&amp;fromdate=1901-1-1&amp;showMap=&amp;possible1=communications&amp;possible1zone=sec1&amp;z=&amp;figtabcap=&amp;fromvolume=&amp;fromissue=&amp;tovolume=&amp;toissue=&amp;rss=rss&amp;rsstitle=Journal%20of%20Chemical%20Physics%20Saved%20Search"><img src="/img/icons/rss.gif" class="right" alt="RSS" /></a>
+                        </div>
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+        
+            
+	            	            <div id="sse_7_9245_1329157212" class="search_syndication_element">Loading...</div>
+	            <script type="text/javascript">
+                  var params = {"contentId": "7.9245.1329157212"};
+	              jQuery.get("http://jcp.aip.org/cmlink/15.678",params, function(data) {
+	                 jQuery("#sse_7_9245_1329157212").html(data);
+	              });
+	            </script>
+            
+            
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+          
+        
+		                        
+                                 
+        <div class="elementGroup elementGroupBoxHome">
+       
+                   <div class="groupTitle">
+              <h2>Research Highlights</h2>
+                                <a href="/feed/jcp/research_highlights"><img src="/img/icons/rss.gif" class="right" alt="RSS" /></a>
+                        </div>
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+        
+        
+        
+		
+
+        
+    <div class="element list">      
+          
+                                      
+                                      
+          
+                        
+                              	                	                  
+        
+                        
+                                     
+        <div class="spotlightElement">
+                              
+          <div class="spotlightElement_content">
+                                          
+                <img title='Photo: N/A, License: N/A' class='spotlightImage' src='/polopoly_fs/1.3003786!/image/1685715887.jpg' alt='034705' />                          
+                              <p><strong>Catalytic micromotor generating self-propelled regular motion through random fluctuation </strong></p>
+<p>Daigo Yamamoto, Atsushi Mukai, Naoaki Okita, Kenichi Yoshikawa, and Akihisa Shioi</p>
+<p>Most of the current studies on nano/microscale motors to generate regular motion have adapted the strategy to fabricate a composite with different materials. In this paper, we report that a simple object solely made of platinum generates regular motion driven by a catalytic chemical reaction with hydrogen peroxide. Depending on the morphological symmetry of the catalytic particles, a rich variety of random and regular motions are observed.</p>
+<p align="right"><a href="http://jcp.aip.org/resource/1/jcpsa6/v139/i3/p034705_s1">J. Chem. Phys. <strong>139</strong>, 034705 (2013)</a></p>
+                          
+                        </div><!-- ends spotlight_content -->
+        
+        </div><!-- ends spotlight -->            
+        
+      	                                                              	                	                  
+        
+                        
+                                     
+        <div class="spotlightElement">
+                              
+          <div class="spotlightElement_content">
+                                          
+                <img title='Photo: N/A, License: N/A' class='spotlightImage' src='/polopoly_fs/1.3003787!/image/1929572332.jpg' alt='024705' />                          
+                              <p><strong>Understanding the role of vibrations, exact exchange, and many-body van der Waals interactions in the cohesive properties of molecular crystals </strong></p>
+<p>Anthony M. Reilly and Alexandre Tkatchenko</p>
+<p>The development and application of computational methods for studying molecular crystals, particularly density-functional theory (DFT), is a large and ever-growing field, driven by their numerous applications. Here we expand on our recent study of the importance of many-body van der Waals interactions in molecular crystals [A. M. Reilly and A. Tkatchenko, J. Phys. Chem. Lett. 4, 1028 (2013)10.1021/jz400226x], with a larger database of 23 molecular crystals. Particular attention has been paid to the role of the vibrational contributions that are required to compare experiment sublimation enthalpies with calculated lattice energies, employing both phonon calculations and experimental heat-capacity data to provide harmonic and anharmonic estimates of the vibrational contributions.</p>
+<p align="right"><a href="http://jcp.aip.org/resource/1/jcpsa6/v139/i2/p024705_s1">J. Chem. Phys. <strong>139</strong>, 024705 (2013)</a></p>
+                          
+                        </div><!-- ends spotlight_content -->
+        
+        </div><!-- ends spotlight -->            
+        
+      	                                                              	                	                  
+        
+                        
+                                     
+        <div class="spotlightElement">
+                              
+          <div class="spotlightElement_content">
+                                          
+                <img title='Photo: N/A, License: N/A' class='spotlightImage' src='/polopoly_fs/1.3003788!/image/680551616.jpg' alt='014501' />                          
+                              <p><strong>Three-dimensional infrared spectroscopy of isotope-diluted ice Ih </strong></p>
+<p>Fivos Perakis, Joanna A. Borek, and Peter Hamm</p>
+<p>Using three-dimensional infrared (3D-IR) spectroscopy, we investigate the vibrational dynamics of isotope-diluted ice Ih. By probing the OD stretch mode of HOD in H<sub>2</sub>O, we observe an extremely rapid decay (&asymp;200 fs) of the population from the second vibrational excited state. Quantum simulations based on a two-dimensional Lippincott-Schroeder potential agree nearly quantitatively with the experimental 3D-IR lineshapes and dynamics.</p>
+<p align="right"><a href="http://jcp.aip.org/resource/1/jcpsa6/v139/i1/p014501_s1">J. Chem. Phys. <strong>139</strong>, 014501 (2013)</a></p>
+                          
+                        </div><!-- ends spotlight_content -->
+        
+        </div><!-- ends spotlight -->            
+        
+      	                                                              	                	                  
+        
+                        
+                                     
+        <div class="spotlightElement">
+                              
+          <div class="spotlightElement_content">
+                                          
+                <img title='Photo: N/A, License: N/A' class='spotlightImage' src='/polopoly_fs/1.3003789!/image/694150675.jpg' alt='014105' />                          
+                              <p><strong>A quantum description of radiation damping and the free induction signal in magnetic resonance </strong></p>
+<p>James Tropp</p>
+<p>This paper applies the methods of cavity quantum electrodynamics (CQED), to obtain a microscopic and fully quantum-mechanical picture of radiation damping in magnetic resonance, and the nascent formation of the free induction signal. Numerical solution of the Tavis-Cummings model &ndash; i.e., multiple spins 1/2 coupled to a lossless single-mode cavity &ndash; shows in fine detail the transfer of Zeeman energy, via spin coherence, to excite the cavity &ndash; represented here by a quantized LC resonator.</p>
+<p align="right"><a href="http://jcp.aip.org/resource/1/jcpsa6/v139/i1/p014105_s1">J. Chem. Phys. <strong>139</strong>, 014105 (2013)</a></p>
+                          
+                        </div><!-- ends spotlight_content -->
+        
+        </div><!-- ends spotlight -->            
+        
+      	                                                              	                	                  
+        
+                        
+                                     
+        <div class="spotlightElement">
+                              
+          <div class="spotlightElement_content">
+                                          
+                <img title='Photo: N/A, License: N/A' class='spotlightImage' src='/polopoly_fs/1.2980171!/image/996106510.jpg' alt='224102' />                          
+                              <p><strong>On the connection of semiclassical instanton theory with Marcus theory for electron transfer in solution</strong></p>
+<p>Philip Shushkov</p>
+<p>This paper presents a derivation of Marcus theory of electron transfer in solution starting from semiclassical instanton theory. The results have implications on the performance of ring polymer molecular dynamics for the study of electron transfer dynamics.</p>
+<p align="right"><a href="http://jcp.aip.org/resource/1/jcpsa6/v138/i22/p224102_s1">J. Chem. Phys. <strong>138</strong>, 224102 (2013)</a></p>
+                          
+                        </div><!-- ends spotlight_content -->
+        
+        </div><!-- ends spotlight -->            
+        
+      	                                                          
+                        
+                  
+    </div>
+		
+		
+    
+          
+        
+		                
+                                         
+        <div style='float:right;' class="elementGroup">
+       
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+        
+    
+                      
+      
+      
+              <a href="/research_highlights_archive"  class="link">More Research Highlights</a>
+      
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+      
+  
+                </div>
+          <div class="col2">
+        
+                  
+    
+      
+        
+		                        
+                                 
+        <div class="elementGroup elementGroupBoxHome ">
+       
+                  
+         <div class="groupContent">
+                      <div align="center">
+                  
+          
+                  
+    
+      
+        
+        
+                        <h2 style="padding:0;margin:0;"><a href="/about/spotlight">JCP Spotlight Collections</a></h2>
+
+
+      
+      
+          
+        
+       
+      
+                
+                
+                 
+                 
+                          
+        
+                  
+                           
+                  
+                            
+            
+                           
+         
+                                 
+                  
+                           
+                  
+                           
+         
+                  
+                           
+                  
+                                 
+    <script type="text/javascript" src="/js/jquery.cycle.all.js"></script>     
+	<script type="text/javascript">
+	    $(document).ready(function(){
+
+	        $('#slides7_8992').cycle({
+	           timeout: '5100',
+                pager:  '#nav7_8992',
+                next: '#controls7_8992 .next',
+                prev: '#controls7_8992 .prev',
+                cleartype: '1', 
+                speed: '400',
+                pause: '1',
+                fx: 'fade', 
+                height: 220,
+                width: 193
+	        });
+	    });
+	</script>
+
+
+    
+<div id="newjcpspotlight_slideshow" class="slides">
+	
+	
+		
+		   <div id="nav7_8992" class="nav"></div>	
+		
+	           <div id="controls7_8992">
+        <span><a href="" class="prev"></a></span>
+        <span><a href="" class="next"></a></span>
+    </div>
+    
+<div id="slides7_8992">
+
+    
+       
+     <div id="slide1">
+        <div>
+                <img title="" src="/polopoly_fs/1.2950075!/image/2628040568.jpg" alt="Gillespie"/>
+                <div class="overlay">
+                   <a href='/about/spotlight/daniel_gillespie'>See Collection</a>                </div>
+        </div>
+    </div>  
+  
+
+
+           
+     <div id="slide2">
+        <div>
+                <img title="" src="/polopoly_fs/1.2934308!/image/327419160.jpg" alt="Biroli Garrehan"/>
+                <div class="overlay">
+                   <a href='/about/spotlight/biroli_garrehan'>See Collection</a>                </div>
+        </div>
+    </div>  
+  
+
+
+           
+     <div id="slide3">
+        <div>
+                <img title="" src="/polopoly_fs/1.2898630!/image/1103282822.jpg" alt="Raymond Kapral"/>
+                <div class="overlay">
+                   <a href='/about/spotlight/raymond_kapral'>See Collection</a>                </div>
+        </div>
+    </div>  
+  
+
+
+           
+     <div id="slide4">
+        <div>
+                <img title="" src="/polopoly_fs/1.2887688!/image/1252139008.jpg" alt="Mobley"/>
+                <div class="overlay">
+                   <a href='/about/spotlight/david_mobley'>See Collection</a>                </div>
+        </div>
+    </div>  
+  
+
+
+           
+     <div id="slide5">
+        <div>
+                <img title="" src="/polopoly_fs/1.2864503!/image/3625397086.jpg" alt="Tully"/>
+                <div class="overlay">
+                   <a href='/about/spotlight/john_tully'>See Collection</a>                </div>
+        </div>
+    </div>  
+  
+
+
+           
+     <div id="slide6">
+        <div>
+                <img title="" src="/polopoly_fs/1.2847034!/image/2732562603.jpg" alt="Michaelides_spotlight"/>
+                <div class="overlay">
+                   <a href='/about/spotlight/angelos_michaelides'>See Collection</a>                </div>
+        </div>
+    </div>  
+  
+
+
+           
+     <div id="slide7">
+        <div>
+                <img title="" src="/polopoly_fs/1.2841468!/image/4108829200.jpg" alt="Metiu_Spotlight"/>
+                <div class="overlay">
+                   <a href='/about/spotlight/horia_metiu'>See Collection</a>                </div>
+        </div>
+    </div>  
+  
+
+
+           
+     <div id="slide8">
+        <div>
+                <img title="" src="/polopoly_fs/1.2841061!/image/407123059.jpg" alt="mark_ediger_small"/>
+                <div class="overlay">
+                   <a href='/about/spotlight/mark_ediger'>See Collection</a>                </div>
+        </div>
+    </div>  
+  
+
+
+           
+     <div id="slide9">
+        <div>
+                <img title="" src="/polopoly_fs/1.2798718!/image/1969303618.jpg" alt="miller_spotlight"/>
+                <div class="overlay">
+                   <a href='/about/spotlight/william_miller'>See Collection</a>                </div>
+        </div>
+    </div>  
+  
+
+
+           
+     <div id="slide10">
+        <div>
+                <img title="" src="/polopoly_fs/1.2779775!/image/3564920375.jpg" alt="Jochen Autschbach_small "/>
+                <div class="overlay">
+                   <a href='/about/spotlight/jochen_autschbach'>See Collection</a>                </div>
+        </div>
+    </div>  
+  
+
+
+      </div>  
+ </div>   
+       
+      
+			
+      
+  
+              
+                      </div>
+                    </div>
+          
+        </div>
+     
+          
+        
+		                        
+                                 
+        <div class="elementGroup elementGroupBoxHome ">
+       
+                   <div class="groupTitle">
+              <h2>Announcements</h2>
+                        </div>
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+        
+      <div class="page">
+
+		                       
+       
+            
+                        
+                  
+    
+  
+  
+      
+        </div>
+
+      
+      
+          
+        
+      <div class="page">
+
+		                       
+       
+                          <ul>
+    <li><a href="http://jcp.aip.org/resource/1/jcpsa6/v139/i12"><strong>New Special Topic:  Chemical Physics of Biological Systems</strong></a><br />
+    <em>The Journal of Chemical Physics</em> is pleased to announce a special topic section on the Chemical Physics of Biological Systems. This special topic will showcase the far reaches of the experimental, theoretical, and computational tools in physical chemistry and chemical physics that tackle problems of fundamental importance in biology.  It features a wide range of contributions, all the way from the molecular level, to molecular assemblies, chemical physics of the cell, and systems-level approaches that captures the excitement in all of these rapidly growing areas.  Martin Gruebele and Dave Thirumalai served as Guest Editors and worked with JCP Editor John Straub to produce this section.  <a href="http://jcp.aip.org/resource/1/jcpsa6/v139/i12">The partial issue is now available to view online</a>; the full issue will publish in September 2013.</li>
+    <li><img align="left" alt="Journal Impact Factor" src="/polopoly_fs/1.2812188.1340913533!/image/638625043.jpg" /><strong><em>The Journal of Chemical Physics </em>Retains the Top Spot as the Most Highly Cited Journal in the Atomic, Molecular, and Chemical Physics Category</strong><br />
+    Journal metrics just released by Thomson Reuters*, once again show JCP to be the most highly cited journal tracked in the Atomic, Molecular, and Chemical Physics Category, with 188,038 total citations in 2012.<br />
+    IMPACT FACTOR: 3.164<br />
+    <a href="http://jcp.aip.org/about/about_the_journal">Read more.</a><br />
+    <em>*2012 Journal Citation Reports</em><em>&reg; </em>(Thomson Reuters, 2013)</li>
+    <li><strong>Check out the <a href="http://jcp.aip.org/top_20_reviewers_for_2012">Top 20 Reviewers for 2012</a></strong><br />
+    The editors and authors express their deep appreciation to the outstanding and exceptional referees for their conscientious efforts ensuring the consistent, high quality of the research papers submitted to and/or published in <em>The Journal of Chemical Physics</em> during 2012.</li>
+    <li><strong>Editors' Choice 2012</strong><br />
+    The Editors at <em>The Journal of Chemical Physics</em> facilitate publication of the most innovative and influential articles in the field of Chemical Physics each year. The Editors have selected a few of the many notable JCP articles published in 2012 that present ground-breaking research. This collection is representative of the broad cross-section of topics that the journal covers. These seminal articles are freely available online at <a href="http://jcp.aip.org/ec2012">http://jcp.aip.org/ec2012</a> until the end of 2013.</li>
+    <li><strong>Special Topic: Glass Transition</strong><br />
+    The <em>Journal of Chemical Physics</em> is pleased to announce a special topic section on the <a href="http://jcp.aip.org/polopoly_fs/1.3003785!/menu/standard/file/JCP Glass Transition_final.pdf ">Glass Transition</a>. This section provides a timely discussion of modern developments in our understanding of the behavior of supercooled liquids and amorphous materials, which have implications in diverse fields ranging from biology to materials science. In spite of decades of intense theoretical and experimental study, the fundamental causes of vitrification are still debated. David Reichman served as Guest Editor and worked with James Skinner and other JCP Associate Editors to produce this section.</li>
+    <li><strong>JCP welcomes three new Associate Editors in 2013</strong><br />
+    <a href="http://jcp.aip.org/about/hamm">Peter Hamm</a> from the University of Zurich, <a href="http://jcp.aip.org/about/michaelides">Angelos Michaelides</a> from University College London, and <a href="http://jcp.aip.org/about/thiel">Patricia A. Thiel</a> from Iowa State University.</li>
+    <li><strong>CrossMark Implemented on AIP journals</strong><br />
+    <img align="left" alt="crossmark" img="" src="http://pof.aip.org/polopoly_fs/1.2892860.1359658230!/image/3901003944.jpg" />AIP Publishing is dedicated to scientific accuracy and integrity and as a result has implemented CrossMark on its publications. As of December 2012, a CrossMark logo will appear on an HTML page or PDF file indicating that the publisher is maintaining the published document through any updates, corrections, enhancements, retractions, and other such changes. Clicking the CrossMark logo reveals status information about the document and tells readers whether they are accessing the most recent and reliable version or not. A link to any updated version will be included. You can learn more about CrossMark from the <a href="http://www.crossref.org/crossmark/index.html">CrossRef website</a>.
+    <ul>
+        <li><strong>Special Topic: Nonadiabatic Dynamics</strong><br />
+        <em>The Journal of Chemical Physics</em> is pleased to announce a&nbsp; special topic section on <a href="http://jcp.aip.org/resource/1/jcpsa6/v137/i22?&amp;section=special-topic-nonadiabatic-dynamics&amp;page=1">Nonadiabatic Dynamics</a>. This section provides a timely discussion of modern developments, applications, and challenges in dynamics beyond the Born-Oppenheimer approximation. Xiaosong Li and Oleg Prezdho served as Guest Editors and worked with JCP Associate Editors Ernest Davidson and Todd Martinez to produce this section.&nbsp; This Special Topic leads off with a Perspective: Nonadiabatic Dynamics Theory by John C. Tully.</li>
+        <li><a href="http://journals.aip.org/Nobel2012.html"><strong>The 2012 Nobel Prize in Physics</strong></a>&nbsp;
+        <p><img width="90" align="left" alt="Nobel Medal for Physics and Chemistry" style="margin-right: 10px" src="/polopoly_fs/1.2862094.1349779280!/image/2794333218.jpg" /> The American Institute of Physics congratulates this year's Nobel Laureates in Physics, Serge Haroche and David J. Wineland &ldquo;for ground-breaking experimental methods that enable measuring and manipulation of individual quantum systems.&quot;</p>
+        </li>
+        <li><strong>Special Topic: Photochemistry at Surfaces</strong><br />
+        <em>The Journal of Chemical Physics</em> is pleased to announce a&nbsp; special topic section on <a href="http://jcp.aip.org/resource/1/jcpsa6/v137/i9?&amp;section=special-topic-photochemistry-at-surfaces&amp;page=1">Photochemistry at Surfaces.</a> Essays in this section present personal perspectives on the field and provide an overview of promising areas for future research on photo-initiated processes at surfaces using advanced experimental techniques. JCP Associate Editor Horia Metiu served as Editor of this section.</li>
+    </ul>
+    </li>
+</ul>
+<p><strong><!-- start the congratulations panel --></strong></p>
+<p><style type="text/css">
+.shadow {
+box-shadow: 3px 3px #cecece;
+-webkit-box-shadow: 3px 3px #cecece;
+-moz-box-shadow: 3px 3px #cecece;
+filter: progid:DXImageTransform.Microsoft.dropShadow(color=#cecece, offX=5, offY=5, positive=true);
+border: 1px dotted #cecece;
+background-color: #f0f1f4;
+background: -moz-linear-gradient(left, #f0f1f4 10%, #fff 100%);
+background: -webkit-gradient(linear, left top, left bottom, from(#f0f1f4), to(#fff));
+background: -o-gradient(left, #f0f1f4 , #fff);
+}
+#indent {
+margin-left: 10px;
+}</style></p>
+<div style="border-bottom: #2c4ca3 1px solid; border-left: #2c4ca3 1px solid; padding-bottom: 5px; background-color: #ecf0fa; padding-left: 5px; padding-right: 5px; border-top: #2c4ca3 1px solid; border-right: #2c4ca3 1px solid; padding-top: 5px"><strong><strong>Congratulations to JCP award winning authors</strong></strong></div>
+<div class="shadow"><strong>
+<ul>
+    <li id="indent">Congratulations to <a href="http://jcp.aip.org/2013_jcp_sponsored_earle_k_plyler_prize">Brooks Pate</a>, winner of the 2013 Earle K. Plyler Prize for Molecular Spectroscopy and Dynamics.</li>
+    <li id="indent">Congratulations to the ACS 2013 Award winners including <a href="http://jcp.aip.org/acs_2013_award_winners">JCP prominent and recent authors</a>.</li>
+    <li id="indent">Congratulations to the AAAS 2012 Fellows, including <a href="http://jcp.aip.org/aaas_2012_fellows">prominent and recent JCP authors</a>.</li>
+    <li id="indent">JCP congratulates the following authors on their election to the National Academy of Sciences:&nbsp; Naomi J. Halas, Galen D. Stucky, Chi-Ming Che, Robert W. Field, Joseph S. Francisco, Martin Gruebele, Wilson Ho, John H. Seinfeld, David Vanderbilt, Gerhard Wagner, and Christopher M. Dobson</li>
+    <li id="indent">Congratulations to the APS&nbsp;2013 Award winners including <a href="http://jcp.aip.org/aps_2013_award_winners">JCP prominent and recent authors</a>.</li>
+</ul>
+</strong></div>
+<p><strong><!-- end the "award winning authors" panel --></strong></p>
+<p style="margin-top: -1.2em">&nbsp;</p>
+<ul><!--  <li>Congratulations to JCP author Henry F. Schaefer III, University of Georgia, on receiving the <a target="blank" href="http://www.eurekalert.org/pub_releases/2011-11/uog-ruc113011.php">Humboldt Research Award</a>.</li> --><!--<li><strong><em>The Journal of Chemical Physics</em> is adding new features to the journal website</strong>: Check out the &ldquo;<a href="/features/most_downloaded" target="blank">Most Read</a>&rdquo; and &ldquo;<a href="/features/most_cited" target="blank">Most Cited</a>&rdquo; on the journal homepage to find out the most downloaded articles for the month and papers that are most highly cited by other scientific researchers.--><!-- <li>JCP adds <a href="http://jcp.aip.org/about/spotlight">Spotlight Collection</a> on <a href="http://jcp.aip.org/about/spotlight/graphene">The Dawning of the Age of Graphene</a></li>
+    <li>JCP adds <a href="http://jcp.aip.org/about/spotlight">Spotlight Collection</a> on <a href="http://jcp.aip.org/about/spotlight/water_cluster_mediated_atmospheric_chemistry">Water Cluster Mediated Atmospheric Chemistry</a></li> --><!--<li><strong><em>The Journal of Chemical Physics</em> is pleased to announce a new Advanced Experimental Techniques section in the Journal.</strong> This section highlights significant breakthroughs in experimental methodologies that are likely to open new avenues of research in chemical physics. <a href="http://jcp.aip.org/resource/1/jcpsa6/v135/i1/p010201_s1?view=fulltext">Read more.</a></li>--><!--<li>Journal metrics released by Thomson Reuters* show <a href="/about/2010_journal_citation_data"><em>The Journal of Chemical Physics</em> to be the most highly cited journal in Atomic, Molecular &amp; Chemical Physics.</a><br />
+    *<em>2010 Journal Citation Reports<sup>&reg;</sup></em> (Thomson Reuters, 2011)--><!--  <li>Check out the <a href="/top_20_reviewers_for_2010">&quot;Top 20 Reviewers for 2010&quot;</a></li> --><strong>
+    <ul>
+        <li><a href="http://link.aip.org/link/?JCPSA6/131/040201/1">Free color for <em>The Journal of Chemical Physics</em></a></li>
+        <li><a href="http://scitation.aip.org/getpdf/servlet/GetPDFServlet?filetype=pdf&amp;id=JCPSA6000130000021210201000001&amp;idtype=cvips&amp;prog=normal">JCP Communications now freely available</a>&nbsp;<img border="0" alt="pdf" src="/img/dbt/pdf_small.gif" /></li>
+    </ul>
+    </strong></ul>
+    <p>&nbsp;</p>
+    <p align="right"><strong><a href="/about/announcement_archive">More Announcements</a></strong></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+            
+                        
+                  
+    
+  
+  
+      
+        </div>
+
+      
+      
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+          
+        
+		                        
+                                 
+        <div class="elementGroup elementGroupBoxHome ">
+       
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+        <div class="element">
+
+<div id="tabs_7_198_1250190543" class="flora">
+  <ul>
+      <li><a href="#tabs_7_198_1250190543_tab1"><span>Special<br />Content</span></a></li>
+      <li><a href="#tabs_7_198_1250190543_tab2"><span>Other <br/> Publications</span></a></li>
+      <li><a href="#tabs_7_198_1250190543_tab3"><span>Other <br/> Resources</span></a></li>
+    </ul>
+        <div id="tabs_7_198_1250190543_tab1">
+        
+        
+                        <ul>
+<li><a href="http://jcp.aip.org/about/spotlight">Spotlight Collections</a></li>
+<li><a href="/about/special_topics_section">Special Topic Sections</a></li>
+<li><a href="http://jcp.aip.org/award_recipients">JCP Award-Winning Authors</a></li>
+<li><a href="http://scitation.aip.org/journals/doc/JCPSA6-home/vid_archive/featured_vid.jsp">JCP Video Archive</a></li>
+<li><a href="http://search.eurekalert.org/e3/query.html?charset=iso-8859-1&col=ev3rel&qc=ev3rel&rf=1&qt=%22journal+of+chemical+physics%22">Press Releases</a> for JCP articles through <a href="http://www.eurekalert.org/jrnls/aip/" target="_blank">AIP EurekAlert</a>.
+<li style="list-style:none;">Your paper may receive additional exposure in this <em>Spotlight Publication</em>:</li>
+<li><a href="http://jcp-bcp.aip.org/bcp">JCP: BioChemical Physics</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+              <br class="clearit" />
+      </div>
+        <div id="tabs_7_198_1250190543_tab2">
+        
+        
+                        <ul>
+<li><a href="http://jcp-bcp.aip.org/bcp">JCP: BioChemical Physics</a></li>	   
+<li><a href="http://jpcrd.aip.org/jpcrd">J. Chem. Phys. Ref. Data</a></li>	   
+<li><a href="http://rsi.aip.org/rsi">Rev. Sci. Instrum.</a></li> 
+<li><a href="http://scitation.aip.org/proceedings/volume.jsp?key=APCPCS&scode=ATMOP
+">AIP Conf. Proc. in Atom., Molec., and Opt. Phys.</a></li>	   
+<li><a href="http://www.aip.org/pt/">Physics Today</a></li>	   
+<li><a href="http://cise.aip.org/cise">Comput. Sci. & Eng.</a></li>	   
+</ul>
+
+
+      
+              <br class="clearit" />
+      </div>
+        <div id="tabs_7_198_1250190543_tab3">
+        
+        
+                        <ul>
+<li><a href="http://www.physicstoday.org/jobs/">Physics Today Jobs</a></li>
+<li><a href="http://www.aip.org/pacs/">PACS: Physics & Astronomy Classification Scheme</a></li>
+<li><a href="http://www.aip.org/fyi/">FYI: The AIP Bulletin of Science Policy News</a></li>	   
+<li><a href="http://www.aip.org/dbis/">DBIS: Discoveries & Breakthroughs Inside Science</a></li>   
+<li><a href="http://www.aip.org/success/">Physics Success Stories</a></li>	   
+<li><a href="http://www.aip.org/isns/">Inside Science News Service</a></li>	   
+<li><a href="http://www.aip.org/pnu/">Physics News Update: The AIP Bulletin of Physics News</a></li>	   
+<li><a href="http://www.aip.org/statistics/">AIP Statistical Research Center</a></li>	   
+<li><a href="http://www.aip.org/history/">AIP Center for History of Physics</a></li>  
+</ul>
+
+
+      
+              <br class="clearit" />
+      </div>
+  </div>
+<script type="text/javascript">
+//<![CDATA[
+  $(document).ready(function(){
+    $("#tabs_7_198_1250190543").tabs();
+  });
+//]]>
+</script>
+</div>
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+      
+  
+                </div>
+        </div>
+
+
+      
+  
+      		            	           	                 
+      
+      			 
+      </div><!-- end class="borderLayoutColumn mainColumn" -->    
+			
+        
+                    <div class="borderLayoutColumn bannerColumn" id="rightCol">
+           
+                        
+                         
+                  
+    
+      
+        
+        
+                        <div class="googleCal"> <a href="/features/calendar" class="interactive_icons"><img src="/polopoly_fs/7.3123!/googleCal.png" alt="Google Calendar" title="Google Calendar" /></a> </div>
+
+
+      
+      
+          
+        
+        
+                        ADVERTISEMENT<br />
+<!------ OAS AD 'Right1' start ------>
+		<div id="OAS_Right1">
+            		<noscript>
+            		<a target="_blank" href="http://oascentral.aip.org/RealMedia/ads/click_nx.ads/jcp.aip.org/@Top,Right1,Right2!Right1">
+            		<img border="0" alt="OAS Ad" title="OAS Ad" src="http://oasc12039.247realmedia.com/RealMedia/ads/click_nx.ads/jcp.aip.org/@Right1,Right2!Right1" />
+            		</a>
+            		</noscript>
+		</div>
+<!------ OAS AD 'Right1' end ------>
+
+<!------ OAS AD 'Right2' start ------>
+        	<div id="OAS_Right2">
+            		<noscript>
+            		<a target="_blank" href="http://oascentral.aip.org/RealMedia/ads/click_nx.ads/jcp.aip.org/@Top,Right1,Right2!Right2">
+            		<img border="0" alt="OAS Ad" title="OAS Ad" src="http://oasc12039.247realmedia.com/RealMedia/ads/click_nx.ads/jcp.aip.org/@Right1,Right2!Right2" />
+            		</a>
+            		</noscript>
+		</div>
+<!------ OAS AD 'Right2' end ------>
+      
+      
+      
+  
+                              
+                     
+                      </div><!-- end class="borderLayoutColumn bannerColumn" id="rightCol" -->
+                   <br class="clearit" />
+        </div><!-- end class="borderLayout" -->
+        </div><!-- end mainContentWrapper -->
+        
+        
+        
+                              <div class="topBorderLayout">
+              <div class="footer">
+              
+                  
+    
+      
+               
+			  
+		  		  	  
+        
+    
+          
+        
+
+
+        <div class="container twoColumns">
+          <div class="col1">
+        
+                  
+    
+      
+        
+        
+                        <a href="http://aip.org"><img src="/polopoly_fs/7.740!/AIPPubLogo.jpg" alt="Go to AIP Home" style="margin-bottom: -1px;"/></a>
+ &nbsp; &copy;
+
+<!--*********COPYRIGHT INCLUDE********************-->
+<script type="text/javascript">
+//<![CDATA[
+var year="";
+mydate = new Date();
+myyear= mydate.getFullYear();
+year = myyear;
+document.write(year);
+//]]>
+</script>
+<a href="/about/rights_and_permissions">AIP Publishing LLC</a><br>
+      
+      
+      
+  
+                </div>
+          <div class="col2">
+        
+                  
+    
+      
+        
+		                        
+                                 
+        <div class="elementGroup footerAndLogo">
+       
+                  
+         <div class="groupContent">
+                  
+          
+                  
+    
+      
+        
+
+
+        <div class="container twoColumns">
+          <div class="col1">
+        
+                  
+    
+      
+        
+        
+                        <div class="edanz">
+
+
+
+<a href="http://www.edanzediting.com/aip1" target="_blank">
+
+<img src="/polopoly_fs/7.6987!/Edanz_banner.png" alt=""/></a>
+
+
+
+</div>
+
+
+      
+      
+      
+  
+                </div>
+          <div class="col2">
+        
+                  
+    
+      
+        
+        
+                        <div class="crosscheck">
+<a href="" onclick="window.open('http://scitation.aip.org/jhtml/scitation/crosscheck.jsp','mywindow','width=350,height=250');"><img src="/polopoly_fs/7.741!/cc_depositor.jpg" alt=""/></a>
+</div>
+      
+      
+      
+  
+                </div>
+        </div>
+
+
+      
+  
+              
+                    </div>
+          
+        </div>
+     
+      
+  
+                </div>
+        </div>
+
+
+          
+        
+        
+        
+                        
+              
+      
+          
+        
+        
+                        <script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-8315090-4']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+      
+      
+          
+        
+        
+                        <script type="text/javascript">
+$(document).ready(function(){
+	$('.flora ul li a span').click(function(){
+		var intabtext = jQuery.trim($(this).html());
+		var tabtext = "";
+		if(intabtext.indexOf('Abstract') >= 0)
+			tabtext = "Abstract"
+		else if(intabtext.indexOf('References') >= 0)
+			tabtext = "References"
+		else if(intabtext.indexOf('Objects') >= 0)
+			tabtext = "Article Objects"
+		else if(intabtext.indexOf('Related') >= 0)
+			tabtext = "Related Content"
+		else if(intabtext.indexOf('Citing') >= 0)
+			tabtext = "Citing Articles"
+		if(tabtext != "")
+			_gaq.push(['_trackEvent', 'Abstract', 'Tab Click', tabtext]);
+	});
+        $('.interactive_icons').click(function(){
+	   var imgobj = $(this).find("img");
+           var imgtitle = $(imgobj).attr('title'); 
+           if(imgtitle != null)
+	      _gaq.push(['_trackEvent', 'Site Events', 'Social Tools', imgtitle]);
+        });
+});
+</script>
+      
+      
+          
+        
+        
+                        <!------ OAS MJX Config Begins ------>
+
+<script type="text/javascript">
+
+// Define OAS Variables
+OAS_url = 'http://oascentral.aip.org/RealMedia/ads/'; 
+OAS_sitepage = 'jcp.aip.org';
+OAS_listpos = 'Top,Right1,Right2'; 
+OAS_query = '';
+OAS_target = '_blank'; // Window parameter for clicks : (_top or _blank)
+</script>
+<script type="text/javascript">
+// Generate random number for cache busting
+OAS_rn = new String(Math.random());
+OAS_rns = OAS_rn.substring(2, 11);
+// Function to find the object in the DOM model
+function getObj(name) {
+if (document.getElementById) this.obj = document.getElementById(name);
+else if (document.all) this.obj = document.all[name];
+else if (document.layers) this.obj = document.layers[name];
+if (this.obj) this.style = this.obj.style;
+}
+// Add a body load function, not overridding existing ones
+function addLoad(func) {
+if (window.addEventListener) window.addEventListener('load', func, false);
+else if (document.addEventListener) document.addEventListener('load', func, false);
+else if (window.attachEvent) window.attachEvent('onload', func);
+else if (typeof window.onload != 'function') window.onload = func;
+else {
+var oldonload = window.onload;
+window.onload = function() {
+oldonload();
+func();
+};
+}
+}
+// onLoad function that move objects in the DOM and make them visible
+function OAS_AMJX_init() {
+var apos = OAS_listpos.split(',');
+var olddocwrite = document.write;
+for (var i = 0; i < apos.length; i++) {
+var object_togo = new getObj('OAS_' + apos[i]);
+var object_tomove = new getObj('Hidden_OAS_' + apos[i]);
+html = "";
+if (typeof (object_togo.obj) != 'undefined' && typeof (object_tomove.obj) !=
+'undefined') {
+object_togo.obj.appendChild(object_tomove.obj);
+object_tomove.style.display = 'inline';
+}
+}
+}
+// write the MJX call
+document.write('<script type="text/javascript" src="' + OAS_url + 'adstream_mjx.ads/'
++ OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '?' + OAS_query + '"></scr' +
+'ipt>');
+// Check for DOM Support
+if (document.getElementById && document.createTextNode) addLoad(OAS_AMJX_init);
+// Function to deliver if OAS is unreachable
+function OAS_NORMAL(pos) {
+document.write('<a href="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' +
+OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" target=' + OAS_target +
+'>');
+document.write('<img src="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1'
++ OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" border="0" /></a>');
+}
+// Function to Select Ad Function
+function OAS_AD(pos) {
+typeof OAS_RICH != 'undefined' ? OAS_RICH(pos) : OAS_NORMAL(pos);
+//OAS_version >= 11 ? OAS_RICH(pos) : OAS_NORMAL(pos);
+}
+</script>
+<!------ OAS MJX Footer Config Ends ------>
+<!------ OAS MJX Footer Ad Calls Begin ------>
+
+<div id="Hidden_OAS_Top" style="display: none;">
+<script language="javascript" type="text/javascript">
+<!--
+OAS_AD('Top');
+//-->
+</script>
+</div>
+
+<div id="Hidden_OAS_Right1" style="display: none;">
+<script language="javascript" type="text/javascript">
+<!--
+OAS_AD('Right1');
+//-->
+</script>
+</div>
+<div id="Hidden_OAS_Right2" style="display: none;">
+<script language="javascript" type="text/javascript">
+<!--
+OAS_AD('Right2');
+//-->
+</script>
+</div>
+<!------ OAS MJX Footer Ad Calls End ------>
+
+
+      
+      
+          
+        
+        
+                        <!-- start crazy egg code -->
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/5927.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+<!-- end crazy egg code -->
+
+
+      
+      
+      
+  
+                    </div>
+            </div>
+                  </div><!-- close pageWapper -->
+
+        
+        <!-- js -->
+        <script type="text/javascript" src="/js/site-min.js"></script>
+        <!-- /js -->
+    
+                <div class="stats">
+                      <img src='http://jcp.aip.org/logger/p.gif?d=/2.330/2.331/2.485' alt='' />                  </div>
+        
+		<div id="darken"></div>
+	<div id="fulltextwrapper">
+	    <div class="exitbutton"><img src="/img/fulltext/closeimg.png" alt="close" style="border:none;cursor:pointer;" onclick="return closeFulltext();"/></div>
+	    <div id="fulltextwrapper_content"></div>
+	</div> 
+   
+   
+	    	    	         
+      
+          
+                                        
+        
+                                
+                                
+        
+        
+                
+        <div id="aqsTemplate" style="display:none;">
+                            <h3>Find articles by <strong>AUTHORNAME</strong></h3>
+                
+                                                       
+        
+        
+                                
+        
+                                
+                                        
+        
+                
+                        
+                                
+                                
+        	        <div class="aqsleft">
+		        <a id='mlsearchUrlDefault' href="/search?sortby=newestdate&q=AUTHORURLTOKEN&searchzone=2&searchtype=searchin&faceted=faceted&key=JCPSA6&possible1=AUTHORURLTOKEN&possible1zone=author&alias=&displayid=AIP">
+		        		        		            <img src="/img/aqs/author_jr.gif" style="height:15px" alt ="This Publication" />This Publication
+		        		        </a>
+	        </div>
+                
+                                               
+        
+        
+                                
+        
+        <div class="aqsleft">
+            <a href="http://scitation.aip.org/vsearch/servlet/VerityServlet?KEY=FREESR&possible1=AUTHORURLTOKEN&possible1zone=author&maxdisp=25&smode=strresults"><img src="/img/aqs/author_sc.gif" style="height:15px" alt ="Scitation" />Scitation</a>
+        </div>
+        
+                                               
+        
+        
+                                
+        
+        <div class="aqsleft">
+            <a href="http://scholar.google.com/scholar?q=AUTHORURLTOKEN"><img src="/img/aqs/author_gs.gif" style="height:15px" alt ="Google Scholar" />Google Scholar</a>
+        </div>  
+
+        
+                                               
+        
+        
+                                
+        
+        <div class="aqsleft">
+            <a href="http://www.ncbi.nlm.nih.gov/sites/entrez?dopt=DocSum&cmd=Search&db=pubmed&term=AUTHORURLTOKEN"><img src="/img/aqs/author_pm.gif" style="height:15px" alt ="PubMed" />PubMed</a>
+        </div>
+
+        
+                                        <br class="clearit" />
+                    </div>
+      
+      	    
+      </body>
+    </html>  
+      
+      		            
+      
+      

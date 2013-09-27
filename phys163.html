@@ -1,0 +1,340 @@
+<base href="http://library.thinkquest.org/16600/">
+<HTML>
+<HEAD>
+  <TITLE>Fizzics Fizzle!</TITLE>
+
+  <META NAME="keywords" CONTENT="Fizzics Fizzle, physics, science, education, school, high school, college, textbook, algebra, calculus, derivative, integral, vectors, mechanics, kinematics, force, equilibrium, center of mass, momentum, energy, elastic collision, inelastic collision, rotational kinematics, torque, moment of inertia, simple harmonic motion, gravity, gravitation, orbits, electricity, magnetism, field lines, flux, electric field, potential, Gaussian surface, circuits, voltage, current, resistance, resistor, capacitance, capacitors, inductance, inductors, waves, reflection, refraction, diffraction, optics, prism, lens, relativity, unification, hyperspace, superstring theory, nuclear physics, Standard Model, quarks, leptons">
+  <META NAME="description" CONTENT="Fizzics Fizzle: Your Interactive Guide to Physics">
+  <META NAME="author" CONTENT="1998 ThinkQuest Internet Contest Team 16600: Clyde Law, Chetan Taralekar, Jim Wang">
+
+  <STYLE TYPE="text/css"><!--
+[an error occurred while processing this directive]
+  --></STYLE>
+
+  <SCRIPT LANGUAGE="JavaScript"><!--
+
+browserName  = "[an error occurred while processing this directive]";
+browserVers  = [an error occurred while processing this directive];
+
+buttonpath   = "";
+
+cookieexp    = "Sat, 31-Dec-05 23:59:59 GMT";
+cookiepath   = "/16600";
+cookiedomain = ".thinkquest.org";
+
+function NS3() {
+  return (browserName.indexOf("Netscape") != -1 && browserVers >= 3);
+}
+
+function NS4() {
+  return (browserName.indexOf("Netscape") != -1 && browserVers >= 4);
+}
+
+function IE3() {
+  return (browserName.indexOf("Microsoft") != -1 && browserVers >= 3);
+}
+
+function IE4() {
+  return (browserName.indexOf("Microsoft") != -1 && browserVers >= 4);
+}
+
+function StartUp() {
+  CacheImages();
+  InitCollapseExpand();
+}
+
+function GetCookie(name) {
+  var search = name + "=";
+  var setStr = null;
+  var offset = 0;
+  var end = 0;
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search);
+    if (offset != -1) {
+      offset += search.length;
+      end = document.cookie.indexOf(";", offset)
+      if (end == -1) {
+        end = document.cookie.length;
+      }
+      setStr = unescape(document.cookie.substring(offset, end));
+    }
+  }
+  return(setStr);
+}
+
+function SetCookie (name, value, expires, path, domain, secure) {
+  document.cookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+}
+
+function CacheImages() {
+  if ((NS3()) || (IE4())) {
+    cache01     = new Image();
+    cache01.src = buttonpath + "fflogo-over.gif";
+
+    cache02     = new Image();
+    cache02.src = buttonpath + "beginner-button-over.gif";
+
+    cache03     = new Image();
+    cache03.src = buttonpath + "intermediate-button-over.gif";
+
+    cache04     = new Image();
+    cache04.src = buttonpath + "advanced-button-over.gif";
+
+    cache05     = new Image();
+    cache05.src = buttonpath + "misc-button-over.gif";
+
+    cache06     = new Image();
+    cache06.src = buttonpath + "reference-button-over.gif";
+
+    cache07     = new Image();
+    cache07.src = buttonpath + "search-button-over.gif";
+
+    if (IE4()) {
+      cache08     = new Image();
+      cache08.src = buttonpath + "ffsmall.gif";
+
+      cache09     = new Image();
+      cache09.src = buttonpath + "ffsmall-over.gif";
+    }
+  }
+}
+
+function ProcOver(giffile) {
+  if ((NS3()) || (IE4())) {
+    document.images[giffile].src = buttonpath + giffile + "-over.gif";
+  }
+}
+
+function ProcOut(giffile) {
+  if ((NS3()) || (IE4())) {
+    document.images[giffile].src = buttonpath + giffile + ".gif";
+  }
+}
+
+function InitCollapseExpand() {
+  if (IE4()) {
+    CollapseExpandButton.innerHTML="&lt;&lt; Collapse Contents &lt;&lt;";
+    CollapseExpandCookie = GetCookie("Collapsed");
+    if (CollapseExpandCookie) {
+      CollapseContents();
+    }
+  }
+}
+
+function CollapseContents() {
+  if (IE4()) {
+    window.status = "Collapsing Contents...";
+    contents.style.display = "none";
+    bottom1.style.display = "none";
+    bottom2.style.display = "none";
+    CollapseExpandButton.innerHTML="&gt;&gt;";
+    LogoStorage = Logo.innerHTML;
+    Logo.innerHTML = "<A HREF=\"" + ((buttonpath)? buttonpath:"./") +"\" onmouseover=\"ProcOver('ffsmall'); window.status = 'The Fizzics Fizzle Main Page'; return true\" onmouseout=\"ProcOut('ffsmall'); window.status = ''; return true\"><IMG SRC=\"" + buttonpath + "ffsmall.gif\" ALT=\"Fizzics Fizzle\" NAME=\"ffsmall\" WIDTH=30 HEIGHT=40 BORDER=0></A>";
+    LogoPlace.style.width = "30";
+    ButtonCollapseExpand.style.width = "30";
+    contents.style.width = "30";
+    CollapseExpandCookie = "1";
+    SetCookie("Collapsed", CollapseExpandCookie, null, cookiepath, cookiedomain);
+    window.status = "";
+  }
+}
+
+function ExpandContents() {
+  if (IE4()) {
+    window.status = "Expanding Contents...";
+    contents.style.width = "175";
+    ButtonCollapseExpand.style.width = "175";
+    LogoPlace.style.width = "175";
+    Logo.innerHTML = LogoStorage;
+    CollapseExpandButton.innerHTML="&lt;&lt; Collapse Contents &lt;&lt;";
+    contents.style.display = "";
+    bottom1.style.display = "";
+    bottom2.style.display = "";
+    CollapseExpandCookie = "";
+    SetCookie("Collapsed", CollapseExpandCookie, null, cookiepath, cookiedomain);
+    window.status = "";
+  }
+}
+
+function CollapseExpand() {
+  if (IE4()) {
+    CollapseExpandCookie = GetCookie("Collapsed");
+    if (!CollapseExpandCookie) {
+      CollapseContents();
+    }
+    else {
+      ExpandContents();
+    }
+  }
+}
+
+function HighlightButton(buttonname) {
+  if (IE4()) {
+    buttonname.style.background = "#0066FF";
+  }
+}
+
+function UnHighlightButton(buttonname) {
+  if (IE4()) {
+    buttonname.style.background = "#999999";
+  }
+}
+
+function HighlightLink(linkname) {
+  if (IE4()) {
+    linkname.style.color = "#BB3333";
+    linkname.style.background = "#DDDDDD";
+  }
+}
+
+function UnHighlightLink(linkname) {
+  if (IE4()) {
+    linkname.style.color = "#FFDD11";
+    linkname.style.background = "";
+  }
+}
+
+  //--></SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000 LINK=#7777BB VLINK=#66AAFF ALINK=#FF6666 LEFTMARGIN=0 TOPMARGIN=0 MARGINHEIGHT=0 MARGINWIDTH=0 onload="StartUp();"><FONT></FONT>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=1 CELLSPACING=0>
+  <TR BGCOLOR=#DDDDDD>
+    <TD ID="LogoPlace" WIDTH=175><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-1><SPAN ID="Logo"><A HREF="./" onmouseover="ProcOver('fflogo'); window.status = 'Return to the Fizzics Fizzle Main Page'; return true" onmouseout="ProcOut('fflogo'); window.status = ''; return true"><IMG SRC="fflogo.gif" ALT="Fizzics Fizzle" NAME="fflogo" WIDTH=175 HEIGHT=40 BORDER=0></A></SPAN></FONT></TD>
+    <TD WIDTH=60><A HREF="beginner/" onmouseover="ProcOver('beginner-button'); window.status = 'A Guide to Physics for Beginners'; return true" onmouseout="ProcOut('beginner-button'); window.status = ''; return true"><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-1><IMG SRC="beginner-button.gif" ALT="Beginner" NAME="beginner-button" WIDTH=60 HEIGHT=40 BORDER=0></A></TD>
+    <TD WIDTH=60><A HREF="intermediate/" onmouseover="ProcOver('intermediate-button'); window.status = 'High School Level Physics Topics'; return true" onmouseout="ProcOut('intermediate-button'); window.status = ''; return true"><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-1><IMG SRC="intermediate-button.gif" ALT="Intermediate" NAME="intermediate-button" WIDTH=60 HEIGHT=40 BORDER=0></A></TD>
+    <TD WIDTH=60><A HREF="advanced/" onmouseover="ProcOver('advanced-button'); window.status = 'Introductory College/Advanced Placement Level Physics Topics'; return true" onmouseout="ProcOut('advanced-button'); window.status = ''; return true"><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-1><IMG SRC="advanced-button.gif" ALT="Advanced" NAME="advanced-button" WIDTH=60 HEIGHT=40 BORDER=0></A><FONT></TD>
+    <TD WIDTH=60><A HREF="misc/" onmouseover="ProcOver('misc-button'); window.status = 'Cool Topics in Modern Physics'; return true" onmouseout="ProcOut('misc-button'); window.status = ''; return true"><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-1><IMG SRC="misc-button.gif" ALT="Cool Topics" NAME="misc-button" WIDTH=60 HEIGHT=40 BORDER=0></A><FONT></TD>
+    <TD WIDTH=60><A HREF="reference/" onmouseover="ProcOver('reference-button'); window.status = 'Complete Physics References'; return true" onmouseout="ProcOut('reference-button'); window.status = ''; return true"><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-1><IMG SRC="reference-button.gif" ALT="Reference" NAME="reference-button" WIDTH=60 HEIGHT=40 BORDER=0></A><FONT></TD>
+    <TD WIDTH=60><A HREF="search.shtml" onmouseover="ProcOver('search-button'); window.status = 'Looking for something?  Search the entire site!'; return true" onmouseout="ProcOut('search-button'); window.status = ''; return true"><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-1><IMG SRC="search-button.gif" ALT="Search" NAME="search-button" WIDTH=60 HEIGHT=40 BORDER=0></A><FONT></TD>
+    <TD WIDTH=100%><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-1><BR><FONT></TD>
+  </TR>
+  <TR BGCOLOR=#999999 VALIGN=top>
+    <TD ID="ButtonCollapseExpand" WIDTH=175 ALIGN=center onmouseover="HighlightButton(ButtonCollapseExpand);" onmouseout="UnHighlightButton(ButtonCollapseExpand);"><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-2>
+      <SPAN ID="CollapseExpandButton" TITLE="Collapse/Expand Contents" STYLE="font-family: Tahoma, Verdana, Arial, Helvetica, Sans-Serif; font-size: 8 pt; cursor: hand" onclick="CollapseExpand();"></SPAN><BR>
+    </FONT></TD>
+    <TD ID="Button1" COLSPAN=2 ALIGN=center onmouseover="HighlightButton(Button1);" onmouseout="UnHighlightButton(Button1);"><A HREF="games/" onmouseover="window.status = 'Have fun while learning physics!'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#000000 FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-2>
+      Games and Fun Stuff
+    </FONT></A></TD>
+    <TD ID="Button4" COLSPAN=2 ALIGN=center onmouseover="HighlightButton(Button4);" onmouseout="UnHighlightButton(Button4);"><A HREF="feedback.shtml" onmouseover="window.status = 'Let us know what you think of our site... Sign our guestbook too!'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#000000 FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-2>
+      Feedback
+    </FONT></A></TD>
+    <TD ID="Button5" COLSPAN=2 ALIGN=center onmouseover="HighlightButton(Button5);" onmouseout="UnHighlightButton(Button5);"><A HREF="gather/forum/" onmouseover="window.status = 'Post Questions in Our Meeting Forum!'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#000000 FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-2>
+      Meeting Forum
+    </FONT></A></TD>
+    <TD ALIGN=center WIDTH=100%><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-2>
+      <BR>
+    </FONT></TD>
+  </TR>
+  <TR VALIGN=top>
+    <TD ID="contents" BGCOLOR=#003399 WIDTH=175><FONT COLOR=#DDDDDD FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-1>
+      <CENTER>
+        Created for the 1998<BR><A HREF="http://www.advanced.org/thinkquest/" TARGET="_blank" onmouseover="window.status = 'The ThinkQuest Internet Contest Home Page'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="tqlink" onmouseover="HighlightLink(tqlink)" onmouseout="UnHighlightLink(tqlink)">ThinkQuest Internet Contest</SPAN></FONT></A><BR>
+        <A HREF="http://www.thinkquest.org/" TARGET="_blank" onmouseover="window.status = 'The ThinkQuest Internet Contest Home Page'; return true" onmouseout="window.status = ''; return true"><SPAN onmouseover="HighlightLink(tqlink)" onmouseout="UnHighlightLink(tqlink)"><IMG SRC="tqlogo.gif" ALT="The ThinkQuest Internet Contest" WIDTH=127 HEIGHT=47 BORDER=0></SPAN></A>
+      </CENTER>
+      <HR>
+      <B><A HREF="./" onmouseover="window.status = 'Return to the Fizzics Fizzle Main Page'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="mainlink" onmouseover="HighlightLink(mainlink)" onmouseout="UnHighlightLink(mainlink)">Main Page</SPAN></FONT></A></B><BR>
+      <IMG SRC="blank.gif" ALT="- " WIDTH=10 HEIGHT=1><A HREF="about.shtml" onmouseover="window.status = 'About This Site'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="aboutlink" onmouseover="HighlightLink(aboutlink)" onmouseout="UnHighlightLink(aboutlink)">About This Site</SPAN></FONT></A><BR>
+      <I><IMG SRC="blank.gif" ALT="- " WIDTH=10 HEIGHT=1><IMG SRC="blank.gif" ALT="- " WIDTH=10 HEIGHT=1><A HREF="features.shtml" onmouseover="window.status = 'Find out what Fizzics Fizzle features (say that 5 times fast)'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="featureslink" onmouseover="HighlightLink(featureslink)" onmouseout="UnHighlightLink(featureslink)">Site Features</SPAN></FONT></A></I><BR>
+      <I><IMG SRC="blank.gif" ALT="- " WIDTH=10 HEIGHT=1><IMG SRC="blank.gif" ALT="- " WIDTH=10 HEIGHT=1><A HREF="workscited.shtml" onmouseover="window.status = 'References Used to Create Fizzics Fizzle'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="workscitedlink" onmouseover="HighlightLink(workscitedlink)" onmouseout="UnHighlightLink(workscitedlink)">Works Cited</SPAN></FONT></A></I><BR>
+      <I><IMG SRC="blank.gif" ALT="- " WIDTH=10 HEIGHT=1><IMG SRC="blank.gif" ALT="- " WIDTH=10 HEIGHT=1><A HREF="disclaimer.shtml" onmouseover="window.status = 'Disclaimer'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="disclaimerlink" onmouseover="HighlightLink(disclaimerlink)" onmouseout="UnHighlightLink(disclaimerlink)">Disclaimer</SPAN></FONT></A></I><BR>
+      <IMG SRC="blank.gif" ALT="- " WIDTH=10 HEIGHT=1><A HREF="feedback.shtml" onmouseover="window.status = 'Let us know what you think of our site... Sign our guestbook too!'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="feedbacklink" onmouseover="HighlightLink(feedbacklink)" onmouseout="UnHighlightLink(feedbacklink)">Feedback</SPAN></FONT></A><BR>
+      <I><IMG SRC="blank.gif" ALT="- " WIDTH=10 HEIGHT=1><IMG SRC="blank.gif" ALT="- " WIDTH=10 HEIGHT=1><A HREF="guestbook.shtml" onmouseover="window.status = 'Sign Our Guestbook!'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="guestbooklink" onmouseover="HighlightLink(guestbooklink)" onmouseout="UnHighlightLink(guestbooklink)">Guestbook</SPAN></FONT></A></I><BR>
+      <HR>
+      <B><A HREF="calc/" TARGET="_blank" onmouseover="window.status = 'Use our pop-up calculator for quick calculations!'; return true" onmouseout="window.status = ''; return true" onclick="window.open('calc/','FizziCalc','width=260,height=225'); return false"><FONT COLOR=#FFDD11><SPAN ID="calclink" onmouseover="HighlightLink(calclink)" onmouseout="UnHighlightLink(calclink)">FizziCalc</SPAN></FONT></A></B><BR>
+      [an error occurred while processing this directive]
+      <HR>
+      <CENTER><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=3><B>Topics</B></FONT></CENTER>
+      <B><A HREF="beginner/" onmouseover="window.status = 'A Guide to Physics for Beginners'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="beginnerlink" onmouseover="HighlightLink(beginnerlink)" onmouseout="UnHighlightLink(beginnerlink)">Beginner</SPAN></FONT></A></B><BR>
+      <B><A HREF="intermediate/" onmouseover="window.status = 'High School Level Physics Topics'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="intermediatelink" onmouseover="HighlightLink(intermediatelink)" onmouseout="UnHighlightLink(intermediatelink)">Intermediate</SPAN></FONT></A></B><BR>
+      <B><A HREF="advanced/" onmouseover="window.status = 'Introductory College/Advanced Placement Level Physics Topics'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="advancedlink" onmouseover="HighlightLink(advancedlink)" onmouseout="UnHighlightLink(advancedlink)">Advanced</SPAN></FONT></A></B><BR>
+      <B><A HREF="misc/" onmouseover="window.status = 'Cool Topics in Modern Physics'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="misclink" onmouseover="HighlightLink(misclink)" onmouseout="UnHighlightLink(misclink)">Cool Topics</SPAN></FONT></A></B><BR>
+      <B><A HREF="reference/" onmouseover="window.status = 'Complete Physics References'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="referencelink" onmouseover="HighlightLink(referencelink)" onmouseout="UnHighlightLink(referencelink)">Reference</SPAN></FONT></A></B><BR>
+      <HR>
+      <CENTER><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=3><B>Features</B></FONT></CENTER>
+      <B><A HREF="customize.shtml" onmouseover="window.status = 'Customize the look of Fizzics Fizzle for readability and viewing pleasure'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="customizelink" onmouseover="HighlightLink(customizelink)" onmouseout="UnHighlightLink(customizelink)">Customize</SPAN></FONT></A></B><BR>
+      <B><A HREF="search.shtml" onmouseover="window.status = 'Looking for something?  Search the entire site!'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="searchlink" onmouseover="HighlightLink(searchlink)" onmouseout="UnHighlightLink(searchlink)">Search</SPAN></FONT></A></B><BR>
+      <B><A HREF="games/" onmouseover="window.status = 'Have fun while learning physics!'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="gameslink" onmouseover="HighlightLink(gameslink)" onmouseout="UnHighlightLink(gameslink)">Games and Fun Stuff</SPAN></FONT></A></B><BR>
+      <B><A HREF="gather/forum/" onmouseover="window.status = 'Post Questions in Our Meeting Forum!'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="forumlink" onmouseover="HighlightLink(forumlink)" onmouseout="UnHighlightLink(forumlink)">Meeting Forum</SPAN></FONT></A></B><BR>
+      <B><A HREF="gather/links.shtml" onmouseover="window.status = 'Check out our links to Physics resources!'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11><SPAN ID="linkslink" onmouseover="HighlightLink(linkslink)" onmouseout="UnHighlightLink(linkslink)">Physics Links</SPAN></FONT></A></B><BR>
+      <HR>
+    </FONT></TD>
+    <TD WIDTH=100% COLSPAN=7><FONT>&nbsp;</FONT>
+
+<H2>Fizzics Fizzle</H2>
+
+<TABLE WIDTH=100%><TR VALIGN=top>
+  <TD><FONT>&nbsp;</FONT>
+[an error occurred while processing this directive]
+  </TD>
+  <TD BGCOLOR="#FFFFBB"><FONT FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=2>
+[an error occurred while processing this directive]
+  </FONT></TD>
+</TR></TABLE>
+<HR>
+<H3>Content Topics</H3>
+<A HREF="beginner/" onmouseover="window.status = 'A Guide to Physics for Beginners'; return true" onmouseout="window.status = ''; return true"><IMG SRC="intermediate/pendulum.gif" ALT="Beginner Illustration" ALIGN=right WIDTH=90 HEIGHT=90 BORDER=0></A>
+<B><A HREF="beginner/" onmouseover="window.status = 'A Guide to Physics for Beginners'; return true" onmouseout="window.status = ''; return true">Beginner</A></B><BR>
+This section is for students who have never been exposed to the world of physics before.
+It is appropriate for elementary or junior high school/middle school students.
+It is a great primer on the basic physical principles that control the way our world works.
+In addition, explanations are presented without the need for mathematics.<BR>
+<BR>
+<A HREF="intermediate/" onmouseover="window.status = 'High School Level Physics Topics'; return true" onmouseout="window.status = ''; return true"><IMG SRC="intermediate/rampsliding.gif" ALT="Intermediate Illustration" ALIGN=left WIDTH=65 HEIGHT=74 BORDER=0></A>
+<B><A HREF="intermediate/" onmouseover="window.status = 'High School Level Physics Topics'; return true" onmouseout="window.status = ''; return true">Intermediate</A></B><BR>
+This section covers the physics curriculum generally taught in high schools across the United States.
+It covers topics such as basic mechanics and electricity and magnetism.
+Algebra and basic trigonometry are required for understanding this section.<BR>
+<BR>
+<A HREF="advanced/" onmouseover="window.status = 'Introductory College/Advanced Placement Level Physics Topics'; return true" onmouseout="window.status = ''; return true"><IMG SRC="advanced/inducedemf.gif" ALT="Advanced Illustration" ALIGN=right WIDTH=120 HEIGHT=90 BORDER=0></A>
+<B><A HREF="advanced/" onmouseover="window.status = 'Introductory College/Advanced Placement Level Physics Topics'; return true" onmouseout="window.status = ''; return true">Advanced</A></B><BR>
+This section covers the physics curriculum generally taught in introductory college physics classes and high school <I>Advanced Placement Physics C</I> classes.
+Mechanics and Electricity and Magnetism concepts are covered in more detail and more topics are introduced.
+In addition, derivations for the equations used in the intermediate section are explained.
+To understand this section, the knowledge of basic calculus is required, but a brief overview of the calculus needed to understand the section is provided.<BR>
+<BR>
+<A HREF="misc/" onmouseover="window.status = 'Cool Topics in Modern Physics'; return true" onmouseout="window.status = ''; return true"><IMG SRC="misc/wormhole-perspective.gif" ALT="Cool Topics Illustration" ALIGN=left WIDTH=120 HEIGHT=90 BORDER=0></A>
+<B><A HREF="misc/" onmouseover="window.status = 'Cool Topics in Modern Physics'; return true" onmouseout="window.status = ''; return true">Cool Topics</A></B><BR>
+This section is for those interested learning about modern physics.
+It covers some very intriguing concepts that seem to come right out of science fiction, such as wormholes and warp drive.
+No previous knowledge is required, just pure interest in how our universe works.<BR>
+<BR>
+<B><A HREF="reference/" onmouseover="window.status = 'Complete Physics References'; return true" onmouseout="window.status = ''; return true">Reference</A></B><BR>
+This section is very handy for quickly looking up formulas and values.
+There are several tables that provide you with the information needed to do most physics problems.
+In addition, this section includes a site map of the entire site.<BR>
+<HR>
+<H3>Features</H3>
+<UL>
+  <LI><B><A HREF="customize.shtml" onmouseover="window.status = 'Customize the look of Fizzics Fizzle for readability and viewing pleasure'; return true" onmouseout="window.status = ''; return true">Customize</A></B> - customize the look of Fizzics Fizzle for your viewing pleasure</LI>
+  <LI><B><A HREF="search.shtml" onmouseover="window.status = 'Looking for something?  Search the entire site!'; return true" onmouseout="window.status = ''; return true">Search</A></B> - If you know what you are looking for, search the entire site</LI>
+  <LI><B><A HREF="games/" onmouseover="window.status = 'Have fun while learning physics!'; return true" onmouseout="window.status = ''; return true">Games and Fun Stuff</A></B> - Have fun while learning physics</LI>
+  <LI><B><A HREF="gather/forum/" onmouseover="window.status = 'Post Questions in Our Meeting Forum!'; return true" onmouseout="window.status = ''; return true">Meeting Forum</A></B> - Ask questions and post answers on our meeting forum; discuss physics problems with people around the world</LI>
+  <LI><B><A HREF="gather/links.shtml" onmouseover="window.status = 'Check out our links to Physics resources!'; return true" onmouseout="window.status = ''; return true">Physics Links</A></B> - Links to other physics resources; add your own link too!</LI>
+</UL>
+
+
+    </TD>
+  </TR>
+  <TR VALIGN=bottom>
+    <TD ID="bottom1" BGCOLOR=#003399 WIDTH=175 ALIGN=right><FONT COLOR=#DDDDDD FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-2>
+      <B>Created by TQ Team 16600:</B>
+    </FONT></TD>
+    <TD COLSPAN=4 BGCOLOR=#003399><FONT COLOR=#DDDDDD FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-2>
+      <IMG SRC="blank.gif" ALT="" WIDTH=5 HEIGHT=1>Clyde, Chetan, Jim<BR>
+    </FONT></TD>
+    <TD COLSPAN=3 ROWSPAN=2 BGCOLOR=#003399 VALIGN=middle><A HREF="feedback.shtml" onmouseover="window.status = 'Let us know what you think of our site... Sign our guestbook too!'; return true" onmouseout="window.status = ''; return true"><FONT COLOR=#FFDD11 FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-1><SPAN ID="emaillink" onmouseover="HighlightLink(emaillink)" onmouseout="UnHighlightLink(emaillink)">
+      E-mail us!<BR>
+    </SPAN></FONT></A></TD>
+  </TR>
+  <TR VALIGN=bottom>
+    <TD ID="bottom2" BGCOLOR=#003399 WIDTH=175 ALIGN=right><FONT COLOR=#DDDDDD FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-2>
+      <B>Team Coaches:</B>
+    </FONT></TD>
+    <TD COLSPAN=4 BGCOLOR=#003399><FONT COLOR=#DDDDDD FACE="Tahoma, Verdana, Arial, Helvetica, Sans-Serif" SIZE=-2>
+      <IMG SRC="blank.gif" ALT="" WIDTH=5 HEIGHT=1>Melanie Krieger, Chhaya Taralekar<BR>
+    </FONT></TD>
+  </TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,400 @@
+<base href="http://www.organicdivision.org/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>American Chemical Society Division of Organic Chemistry</title>
+
+
+
+	<style type="text/css">
+
+		#ie8-overlay{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0.5; filter: alpha(opacity=50); z-index: 9999;}
+
+		#ie8-modal{position:absolute; ; padding:1px; z-index: 10000; background:#fff; padding:40px 60px; border: 1px solid #333; font: 14px/1.4 Helvetica, Arial, sans-serif;}
+
+		#ie8-close{font-size: 16px; text-decoration: none;}
+
+		#ie8-content{width: 500px; color: #333; padding-bottom: 40px;}
+		#ie8-content h1{font: 26px/1.2 Helvetica, Arial, sans-serif; font-weight: bold; margin: 0 0 20px; color: #c11515; border-bottom: 1px solid #ddd; padding: 0 0 20px;}
+		#ie8-content p{margin-bottom: 0;}
+		#ie8-content a{color: #da0000; text-decoration: none;}
+		#ie8-content a:hover{color: #da0000; text-decoration: underline;}
+	</style>
+
+			<script type="text/javascript" src="/editor/mod.vms/jquery-1.7.2.min.js"></script> 
+	<script>
+	$(document).ready(function() {
+		var modal = (function(){
+			var
+			method = {},
+			overlay,
+			modal,
+			content,
+			close;
+
+			// Center the modal in the viewport
+			method.center = function () {
+				var top, left;
+
+				top = Math.max($(window).height() - $(modal).outerHeight(), 0) / 2;
+				left = Math.max($(window).width() - $(modal).outerWidth(), 0) / 2;
+
+				$(modal).css({
+					top:top + $(window).scrollTop(),
+					left:left + $(window).scrollLeft()
+				});
+			};
+
+			// Open the modal
+			method.open = function (settings) {
+				$(content).empty().append(settings.content);
+
+				$(modal).css({
+					width: settings.width || 'auto',
+					height: settings.height || 'auto'
+				});
+
+				method.center();
+				$(window).bind('resize.modal', method.center);
+				$(modal).show();
+				$(overlay).show();
+			};
+
+			// Close the modal
+			method.close = function () {
+				$(modal).hide();
+				$(overlay).hide();
+				$(content).empty();
+				$(window).unbind('resize.modal');
+			};
+
+			// Generate the HTML and add it to the document
+			overlay = $('<div id="ie8-overlay"></div>');
+			modal = $('<div id="ie8-modal"></div>');
+			content = $('<div id="ie8-content"></div>');
+			close = $('<a class="btn" id="ie8-close" href="#">I understand and accept</a>');
+
+			$(modal).hide();
+			$(overlay).hide();
+			$(modal).append(content, close);
+
+			$('body').append(overlay, modal);
+
+			$(close).click(function(e){
+				e.preventDefault();
+				method.close();
+			});
+
+			return method;
+		}());
+
+		//checks for ie8 and displays a message and set a cookie to expire in 14 days
+		if ($.browser.msie && parseInt($.browser.version, 10) === 8) {
+
+			var ie8msg = "<h1>You are using an unsupported version of Internet Explorer</h1><p>Unsupported browsers can put your security at risk, are slow, and will not work with many modern web applications.  As you browse this site, you may be presented with a security error by your browser.  Rest assured, your data is secure.  However, this version of Internet Explorer does not adhere to modern web standards and will behave unexpectedly.</p><p>We recommend updating to a newer version of <a target='_blank' href='http://windows.microsoft.com/en-us/internet-explorer/download-ie'>Internet Explorer</a>, any current version of <a target='_blank' href='http://www.google.com/chrome'>Google Chrome</a> or <a target='_blank' href='http://www.mozilla.org/firefox'>Mozilla Firefox</a> for the best experience.</p>"
+
+			function ieMessage(){
+				$(window).load(function(){
+					if ( !$.cookie('ie_message') ){
+
+						//for testing expiration times smaller than a day
+						//var date = new Date();
+						//date.setTime(date.getTime() + (2 * 60 * 1000));
+
+						modal.open({content: ie8msg});
+
+						$.cookie('ie_message','true', {
+							expires: 14,
+							path: '/'
+						});
+					 } 
+				});
+			}
+
+			if($.fn.cookie){
+				ieMessage();
+			}else{
+				$.getScript('/editor/components/jquery/cookie/jquery.cookie.1.3.1.js', function(){
+					//$.removeCookie('ie_message');
+					ieMessage();
+				});
+			}
+		}
+	});
+	</script>
+
+
+
+	<meta name="description" content="This is the Official home page of the Division of Organic Chemistry of the American Chemical Society. This site provides resources, information and announcements on the divisions activities, awards, nominations, and member benefits." />
+<meta name="keywords" content="acs organic chemistry division, acs organic chemistry, american, american chemical society, announcements, arthur c. cope award, awardees, awards, chemical, conferences, cope, cope award, cope scholar, division, division of organic chemistry, doc, employment, fellowships, gassman, grants, groups, home, homepage, jobs, journals, leete award, links, meetings, members, membership, news, nominations, organic, organic chemistry division, organic chemistry acs, organic division acs, organic links, organic research, organic synthesis, orgsyn, reactions, research , resources, synthesis, synthetic, synthetic organic, total synthesis, travel grants, " />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
+<meta http-equiv="Cache-Control" content="post-check=1, pre-check=2" />
+<meta http-equiv="Expires" content="-1" />
+<meta name="resource-type" content="document" />
+<meta name="classification" content="Professional Scientific Organization" />
+<meta name="robots" content="all" />
+<meta name="distribution" content="Global" />
+<meta name="rating" content="Safe For Kids" />
+<meta name="copyright" content="2010, 2012" />
+<meta name="author" content="2010, 2012" />
+
+	<script src="/ama/orig/jscache/js-342007-1375804016.js" type="text/javascript"></script>
+	<link rel="alternate" type="application/rss+xml" title="rss" href="http://www.organicdivision.org/organicdivision.xml" />
+	<link rel="stylesheet" type="text/css" href="/ama/style.css" />
+	<link rel="stylesheet" type="text/css" href="/ama/print.css" media="print" />
+	<link rel="shortcut icon" href="/favicon.png" type="image/png" />
+<!--[if lt IE 7]>
+<script src="/editor/components/jquery/pngfix/jquery.pngFix.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// Fix all inline PNG images except those in a Google map and anything with class pngfixthis.
+		// Background images set to 'crop' by default. If 'scale' is desired, give the element a class of 'scale'.
+			$("#container, #footer, .pngfixthis, .pngfixme, :not #map").pngFix();
+	});
+</script>
+<![endif]-->
+
+	<script type="text/javascript" src="/editor/components/jquery/cycle/jquery.cycle.all.min.js"></script>
+	<script type="text/javascript" src="/ama/site.js"></script>
+
+</head>
+<body id="nd_home" class=' '>
+
+	<div id="mperror_content" style='border-width: 5px; padding: 5px; border-style:solid; border-color: #CC0000; background-color: #FFFFFF; display: none;'></div>
+
+	
+
+
+
+
+	<div id="container" >
+	
+		<!--LEFT COLUMN-->
+		<div id='left'>
+			<div class='logout'>
+			
+			</div>
+			<a href='?nd=home' id='divisionlogo'><span>American Chemical Society Division of Organic Chemistry</span></a>
+			<ul id='nav'>			
+		 <li class='on'><a href='/?nd=home' >Organic Division Home Page</a></li>
+<li class='off'><a href='/?nd=p_about_us' >About Us</a>
+<ul class='nav2'><li class='off'><a href='/?nd=docfaq' >Frequently Asked Questions</a></li>
+<li class='off'><a href='/?nd=chemluminaryawards' >ChemLuminary Awards</a></li>
+<li class='off'><a href='/?nd=exec_com' >Executive Committee</a></li>
+<li class='off'><a href='/?nd=bylaws' >Bylaws</a></li>
+<li class='off'><a href='/?nd=p_strategic_plan' >Strategic Plan</a></li>
+<li class='off'><a href='/?nd=archives_history' >Archives/History</a></li>
+<li class='off'><a href='http://organicdivision.org/faq#MembershipBenefits' >Membership Benefits</a></li>
+<li class='off'><a href='http://organicdivision.org/faq/#join' >Join the Organic Division</a></li>
+</ul></li><li class='off'><a href='/?nd=p_key_initiatives' >Key Initiatives & Programs</a>
+<ul class='nav2'><li class='off'><a href='/?nd=graduate_fellowship' >Graduate Fellowships</a></li>
+<li class='off'><a href='/?nd=p_surf_program' >SURF Program (Undergraduate)</a></li>
+<li class='off'><a href='/?nd=technical_achievement' >Technical Achievement Awards</a></li>
+<li class='off'><a href='/?nd=travel_awards' >Travel Awards</a></li>
+<li class='off'><a href='' >Graduate Research Symposium</a>
+<ul class='nav3'><li class='off'><a href='/?nd=grsupcoming' >Upcoming GRS</a></li>
+<li class='off'><a href='/?nd=grshistory' >History of the GRS</a></li>
+</ul></li><li class='off'><a href='/?nd=young_academics' >Assistant Professor Symposium</a></li>
+<li class='off'><a href='/?nd=young_industrialists' >Young Investigator's Symposium</a></li>
+<li class='off'><a href='/?nd=undergradaward' >Undergraduate Award</a></li>
+</ul></li><li class='off'><a href='/?nd=awards' >Awards</a>
+<ul class='nav2'><li class='off'><a href='/?nd=p_adams_award' >Adams Award</a></li>
+<li class='off'><a href='/?nd=p_cope_awards' >Cope Awards</a></li>
+<li class='off'><a href='/?nd=p_gassman_award' >Gassman Award</a></li>
+<li class='off'><a href='/?nd=p_leete_award' >Leete Award</a></li>
+<li class='off'><a href='/?nd=undergradaward&und=284' >Undergraduate Award</a></li>
+<li class='off'><a href='http://portal.acs.org:80/portal/acs/corg/content?_nfpb=true&_pageLabel=PP_SUPERARTICLE&node_id=1319&use_sec=false&sec_url_var=region1&__uuid=URL?&und=133'  target=_blank>Other ACS Awards</a></li>
+</ul></li><li class='off'><a href='/?nd=p_meetings' >Meetings</a>
+<ul class='nav2'><li class='off'><a href='' >ACS National Meetings</a>
+<ul class='nav3'><li class='off'><a href='/?nd=p_due_dates' >Due Dates</a></li>
+<li class='off'><a href='/?nd=p_abstract_submission_guidelines' >Abstract Submission Guidelines</a></li>
+<li class='off'><a href='/?nd=p_symposia_submissions' >Symposia Proposals</a></li>
+<li class='off'><a href='/?nd=p_national_meeting_abstracts' >National Meeting Abstracts</a></li>
+</ul></li><li class='off'><a href='' >National Organic Symposium</a>
+<ul class='nav3'><li class='off'><a href='http://www.organicdivision.org/ama/orig/NOS/index.html' >NOS Website</a></li>
+<li class='off'><a href='/?nd=JOC_NOS_History' >History of the NOS in JOC</a></li>
+<li class='off'><a href='/?nd=p_nos_history' >History of the NOS</a></li>
+<li class='off'><a href='/?nd=NOS2013Videos' >NOS 2013 Videos</a></li>
+</ul></li><li class='off'><a href='' >Reaction Mechanisms Conference</a>
+<ul class='nav3'><li class='off'><a href='/?nd=p_reaction_mech_conf' >Upcoming RMC</a></li>
+<li class='off'><a href='/?nd=rmc_history' >History of the RMC</a></li>
+</ul></li><li class='off'><a href='' >Other Division Sponsored Meetings</a>
+<ul class='nav3'><li class='off'><a href='/?nd=acs_regional_meetings' >Regional Meetings</a></li>
+<li class='off'><a href='/?nd=meeting_support' >Other Meetings</a></li>
+</ul></li><li class='off'><a href='/?nd=iyc' >A Celebration of International Organic Chemistry</a></li>
+<li class='off'><a href='/?nd=p_other_meetings' >Other Meetings of Interest</a></li>
+</ul></li><li class='off'><a href='/?nd=p_careers_networking' >Careers & Networking</a>
+<ul class='nav2'><li class='off'><a href='' >Employment</a>
+<ul class='nav3'><li class='off'><a href='/?nd=academic_positions' >Academic Positions</a></li>
+<li class='off'><a href='/?nd=industrial_positions' >Industrial Positions</a></li>
+<li class='off'><a href='/?nd=post_doc_positions' >Post Doc Positions</a></li>
+<li class='off'><a href='/?nd=policies_for_employment_postings' >Policies for Employment Postings</a></li>
+<li class='off'><a href='/?nd=internships' >Internships</a></li>
+<li class='off'><a href='http://portal.acs.org/portal/acs/corg/content?_nfpb=true&_pageLabel=PP_CAREERS&node_id=87&use_sec=false&sec_url_var=region1&__uuid=f071d6eb-bd3d-4095-9159-042e7766bb72&und=83'  target=_blank>ACS Career Resource Center</a></li>
+</ul></li><li class='off'><a href='http://www.linkedin.com/groups?gid=1815056&trk=myg_ugrp_ovr&und=86'  target=_blank>LinkedIn ORGN</a></li>
+<li class='off'><a href='http://www.facebook.com/ACSOrganicDivision' >Facebook ORGN</a></li>
+<li class='off'><a href='https://twitter.com/ACSorganic' >Twitter ORGN</a></li>
+<li class='off'><a href='http://portal.acs.org/portal/acs/corg/networkLanding?_nfpb=true&_pageLabel=PP_MNLANDING&node_id=2127&use_sec=false&__uuid=3eade6a3-bda3-4cf0-857c-bafb7f8f153f&und=85'  target=_blank>ACS Network</a></li>
+</ul></li><li class='off'><a href='/?nd=p_resources' >Resources</a>
+<ul class='nav2'><li class='off'><a href='/?nd=organicchemistvideos' >Organic Chemist-Videos</a></li>
+<li class='off'><a href='/?nd=book_discounts' >Book Discounts</a></li>
+<li class='off'><a href='/?nd=p_national_meeting_abstracts&und=204' >National Meeting Abstracts</a></li>
+<li class='off'><a href='/?nd=p_organic_journals' >Organic Journals</a></li>
+<li class='off'><a href='/?nd=p_organic_reactions' >Organic Reactions</a></li>
+<li class='off'><a href='/?nd=p_organic_syntheses' >Organic Syntheses</a></li>
+<li class='off'><a href='/?nd=p_organic_web_links' >Organic Web Links</a></li>
+<li class='off'><a href='https://portal.acs.org:443/portal/PublicWebSite/membership/td/websites/index.htm'  target=_blank>ACS Tech Divisions</a></li>
+<li class='off'><a href='http://www.chem.wisc.edu/areas/organic/index-chem.htm'  target=_blank>Organic Data Tables</a></li>
+<li class='off'><a href='http://chemsearch.kovsky.net/'  target=_blank>Organic Reference Resolver</a></li>
+<li class='off'><a href='http://www.organiclinks.net/'  target=_blank>Matt McIntosh's List of Organic Research Groups</a></li>
+<li class='off'><a href='http://cbc.arizona.edu/njardarson/group/top-pharmaceuticals-poster' >Top 200 Drugs</a></li>
+</ul></li><li class='off'><a href='/?nd=p_newsroom' >Newsroom</a>
+<ul class='nav2'><li class='off'><a href='/?nd=news_detail' >Latest News</a></li>
+<li class='off'><a href='/?nd=newsletters' >Newsletters</a></li>
+<li class='off'><a href='/?nd=p_rss_information_page' >RSS Feed Information Page</a></li>
+</ul></li><li class='off'><a href='http://organicdivision.org/faq#join' >Join the Division</a></li>
+<li class='off'><a href='/?nd=contact_us' >Contact Us/Feedback</a></li>
+<li class='off'><a href='/?nd=m_home&group_id=2&und=213' >Members Only</a>
+<ul class='nav2'><li class='off'><a href='/?nd=m_home&group_id=2' >Member Login</a></li>
+<li class='off'><a href='/?nd=member_profile' >Member Profile</a></li>
+<li class='off'><a href='/?nd=m_gs_directory_leader_v25&group_id=2' >Member Directory</a></li>
+<li class='off'><a href='/?nd=JOC_NOS_History&und=287' >History of NOS in JOC</a></li>
+<li class='off'><a href='/?nd=NOS2013Videos&und=289' >NOS Videos (2013)</a></li>
+</ul></li>
+
+			</ul></ul>
+<div class="site-search">
+	<h3>Search the Organic Division</h3>
+	<form method="get" action="http://www.google.com/search">
+	<!-- <div style="border:2px dotted black;padding:4px;width:15em;"> -->
+		
+			<input type="text"   name="q" size="25" style="color:#808080;"
+			maxlength="255" value="Google site search"
+			onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; " />
+			<input type="submit" value="Go!" />
+			<input type="hidden" name="sitesearch" value="organicdivision.org" />
+	</form>
+</div>
+			<a href='http://www.acs.org/' id='acslogo'><span>ACS Chemistry for Life</span></a>
+		</div>
+		
+		<!--CONTENT COLUMN-->
+		<div id="content">
+			<div id='banner'></div>
+
+<div id="main_content">
+	<h2>News</h2>
+
+
+
+<div class='sidebox'>
+
+<ul class='rsslist'>
+<li>
+		<h4><a href="/?nd=news_detail#150">Video Interviews of Organic Chemist-Michael Doyle</a></h4>
+
+	<p>For the month of June, we are featuring an interview with <a href="http://layingthegroundwork.com/chemists/link/doyle.html">Michael Doyle (University of Maryland)</a>.
+	<a href="/?nd=news_detail#150">[more]</a></p>
+<li>
+		<h4><a href="/?nd=news_detail#46">Abstract submission for the Spring 2014 ACS Meeting </a></h4>
+
+	<p>Abstract submission for the 247th ACS National Meeting March 16-20, 2014 in Dallas, Texas is now open. Submission is due by October 7th.<br />
+	<a href="/?nd=news_detail#46">[more]</a></p>
+<li>
+		<h4><a href="/?nd=news_detail#47">Organic Division Congratulates the 2013 ACS Fellows</a></h4>
+
+	<p>The Organic Division recognizes 12 of its members who were chosen as ACS Fellows for 2013.
+	<a href="/?nd=news_detail#47">[more]</a></p>
+<li>
+		<h4><a href="/?nd=news_detail#149">C&EN: NOS Celebrates Its Own Rich History and a Quiz</a></h4>
+
+	<p>An article in C&amp;EN by Carmen Drahl summarizes the recent NOS and provides a trivia quiz based on the history of the Symposium (<a href="http://cenm.ag/nos">http://cenm.ag/nos</a>). Share your score&nbsp;on Twitter with the hashtag #NOS2013
+	<a href="/?nd=news_detail#149">[more]</a></p>
+
+</ul>
+
+</div>
+
+	<p><a class="news" href="/?nd=news_detail">[More News]</a></p>
+	
+	<h2>Upcoming Events</h2>
+
+<div class='sidebox'>
+
+<ul class='rsslist'>
+<li>
+	<p>
+		<span class="dates"> Fri Nov 15, 2013</span>
+		Applications for ORGN Travel Awards are Due
+	</p>
+</li>
+<li>
+	<p>
+		<span class="dates"> Sat Feb 15, 2014</span>
+		ACS National Meeting Symposia Proposals are Due
+	</p>
+</li>
+<li>
+	<p>
+		<span class="dates"> Thu May 1, 2014</span>
+		ORGN Travel Award Applications for the Fall ACS National Meeting are Due
+	</p>
+</li>
+<li>
+	<p>
+		<span class="dates"> Tue Jul 15, 2014</span>
+		ACS National Meeting Symposia Proposals are Due
+	</p>
+</li>
+
+</ul>
+</div>
+
+	<ul id="subscribe">
+		<li><a title="iCal Feed" href="http://www.google.com/calendar/ical/0urnhkakjf454ds8vk35da3eu8%40group.calendar.google.com/public/basic.ics"><img src="/ama/images/ical.gif" height="14" width="36" alt="ical feed link" /></a></li>
+		<li><a title="xml calendar" href="http://www.google.com/calendar/feeds/0urnhkakjf454ds8vk35da3eu8%40group.calendar.google.com/public/basic"><img src="/ama/images/xml_cal.gif" height="14" width="36" alt="xml calendar link" /></a></li>
+		<li><a title="html calendar" href="http://www.google.com/calendar/embed?src=0urnhkakjf454ds8vk35da3eu8%40group.calendar.google.com&amp;ctz=America/New_York"><img src="/ama/images/html.gif" height="14" width="36" alt="html calendar link" /></a></li>
+			
+	</ul>
+
+</div>
+	<div id="social"><a href="https://twitter.com/ACSorganic"> <img src="ama/orig/twitter_32.png" width="32" height="32" name="userimage" alt="Twitter icon" hspace="2px" /> </a>&nbsp;<a href="http://www.facebook.com/ACSOrganicDivision" target="_blank"><img src="ama/orig/facebook_32.png" width="32" height="32" name="userimage" alt="Facebook icon" hspace="2px" /> </a><a href="mp?mp=rss&amp;feed=home&amp;title=www.organicdivision.org [American Chemical Society Division of Organic Chemistry]" target="_blank">&nbsp;<img src="ama/orig/rss_32.png" width="32" height="32" name="userimage" alt="RSS icon" hspace="2px" /> </a>&nbsp;<a href="http://www.linkedin.com/groups?gid=1815056&amp;trk=hb_side_g" target="_blank"><img src="ama/orig/linkedin_32.png" width="32" height="32" name="userimage" alt="Linkedin icon" hspace="2px" /> </a></div>
+	<div id="sidebar">
+				<div class="img_wrapper"><a href="http://layingthegroundwork.com/chemists/link/doyle.html"><img src="ama/orig/homepage_slide_images/Doyle.png" /></a></div>
+				<div class="img_wrapper"><a href="http://layingthegroundwork.com/chemists/link/hanessian.html"><img src="ama/orig/homepage_slide_images/Hanessian.png" /></a></div>
+				<div class="img_wrapper"><img src="ama/orig/homepage_slide_images/home_sidebar3.jpg" /></div>
+	</div>
+<div class='clear'></div>
+
+
+
+		</div>
+		<div class='clear'></div>
+	</div>
+<div id="footer">
+  <div class="float_right align_right">
+		Page Last Update: 4/29/2013 10:15AM<br />
+    Copyright &copy; 2010, 2012 American Chemical Society Division of Organic Chemistry &bull; <a href="/?nd=privacy">Privacy statement</a><!-- &bull; <a href="/?nd=returns">Shipping &amp; Return Policy</a>--><br/>
+    Site designed by <a href="http://www.dcheetah.com/?tagent=SITENAME">Digital Cheetah</a>. <a href="/?nd=login" class="login_link">Login</a>
+  </div>
+  <a href="http://www.dcheetah.com/?tagent=SITENAME"><img src="/ama/images/powered-by.png" alt="Powered by Digital Cheetah" width="136" height="20" style="margin-top:2px;" /></a>
+</div>
+
+   <!-- google analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15582185-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+   <script type="text/javascript" src="/editor/jquery.gaq-track-downloads.js"></script>
+</body>
+</html>

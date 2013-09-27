@@ -1,0 +1,535 @@
+<base href="http://www.combichem.net/">
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    
+
+    <script type="text/javascript" src="./scripts/code.js"></script>
+
+    <script type="text/javascript" src="./scripts/scrollernew.js"></script>
+
+    <script type="text/javascript" src="./scripts/flowplayer-3.1.4.min.js"></script>
+
+    <script type="text/javascript" src="./scripts/jquery-1.4.2.min.js"></script>
+
+    <script type="text/javascript" src="./scripts/jquery.tools.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $.ajaxSetup({ cache: false });
+        $('#footerAd_ad').wrap('<div id="footerAd_container"></div>');
+        $('#footerAd_ad').load('ajax.php', function () {
+            $('#footerAd_ad').css('display', 'block');
+            $('#footerAd_container').hide().slideDown('slow');
+            $('#footerAd_ad').append('<a id="footerAd_ad_close"><img src="../images/siteimages/Footer_Ad_Exit_Btn.png" alt="Exit"/></a> ');
+            $('#footerAd_ad_close').click(function () {
+                $('#footerAd_container').slideUp('slow');
+            });
+        });
+    });
+    </script>
+
+    <title>
+        Medicinal Chemistry
+        - The Online Scientific Community</title>
+    <link rel="stylesheet" type="text/css" name="MainCSS" href="./scripts/style.css">
+    <meta name="description" content="The Medicinal Chemistry community provides a rich information resource for those working in and contributing to the design, development and production of Pharmaceutical drugs." />
+    <meta name="keywords" content="Medicinal Chemistry, MedChem, Combinatorial Chemistry, Drug Design, Formulation, Solubility, QSAR, Pharmacodynamics, Pharmacokinetics, Compound Libraries, Flow Chemistry, Crystallography, Pharma Outsourcing, Compound Management, Continuous Processing, Organic Chemistry, Pharmaceuticals, Drug Discovery, Drug Development, Lead Optimization, Lead Optimisation, Structural Chemistry" />
+    <!--
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20027030-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+-->
+</head>
+<body onload="TimeToFade=0.00; fade('topnav'); fade('bottomnav');fade('OMI');fade('LSR'); fade('DD'); fade('DI'); fade('CBB'); fade('AT'); fade('INFOR'); fade('scrollmenu'); fade('scrollmenu2'); fade('scrollmenu3'); fade('scrollmenu4'); fade('scrollmenu5'); TimeToFade=1000.00;">
+    <div class="main" style="font-family: Arial, Geneva, sans-serif; font-size: 10px;
+        border-left: silver 1px solid; border-right: silver 1px solid; border-bottom: silver 1px solid;
+        padding: 5px;">
+        <!-- Website Corporate Banners-->
+        
+<div class="topbanner">
+	
+				<div style="position:absolute; left:5px; top:3px; BORDER-BOTTOM:black 1px solid; BORDER-LEFT:black 1px solid; HEIGHT:90px; BORDER-TOP:black 1px solid; BORDER-RIGHT:black 1px solid; overflow:hidden;">
+					<a href='./redirect.aspx?cid=147653&uid=000000&link=http://www.asynt.com/about.php?ID=1 ' target='_blank'><img src='http://www.technologynetworks.com/media/images/banners/Banner for Asynt - August 2013.jpg' Alt='Corporate Banner' width='728px' height='90px' /></a>
+				</div>
+			
+				<div style="position:absolute; right:5px; top:3px; BORDER-BOTTOM:black 1px solid; BORDER-LEFT:black 1px solid; HEIGHT:90px; BORDER-TOP:black 1px solid; BORDER-RIGHT:black 1px solid; overflow:hidden;">
+					<a href='./redirect.aspx?cid=154466&uid=000000&link=http://selectbiosciences.com/conferences/index.aspx?conf=DCC2014' target='_blank'><img src='http://www.technologynetworks.com/media/images/banners/Discover_Chemistry_264x90.gif' Alt='Satellite Banner' width='264px' height='90px' /></a>
+				</div>
+		
+</div>
+
+        <!-- End Website Corporate Banners-->
+        <!-- Website Header Image-->
+        <div>
+            <img src="images/headers/TNHeader.png" width="1000" height="100" alt="Technology Networks Header" /></div>
+        <div class="datebar">
+            Monday, August 26, 2013<br />
+            <a href="http://www.technologynetworks.com">Technology Networks</a></div>
+        <div style="width: 1000px; height: 75px;">
+        </div>
+        <div style="position: absolute; top: 196px; width: 1000px; border-top: solid 1px silver;">
+        </div>
+        <!-- End Website Header Image-->
+        <!-- Navigation Bar -->
+        <div style="width: 1000px; position: relative;">
+            
+<!-- Top Nav Bar-->
+
+<div id="topnav" style="position:absolute; top:-78px; left:0px; visibility:hidden;">
+<table class="navtable" cellspacing="0px" cellpadding="0px"><tr>
+<td><a id='but-home' href='./index.aspx' title='Home'><span>but-home</span></a></td>
+<td><a id='but-products' href='./products.aspx' title='Products'><span>but-products</span></a></td>
+<td><a id='but-resources' href='./resources.aspx' title='Resources'><span>but-resources</span></a></td>
+<td><a id='but-jobs' href='./jobs.aspx' title='Jobs'><span>but-jobs</span></a></td>
+<td><a id='but-events' href='./events.aspx' title='Events'><span>but-events</span></a></td>
+<td><a id='but-posters' href='./posters.aspx' title='Posters'><span>but-posters</span></a></td>
+<td><a id='but-videos' href='./videos.aspx' title='Videos'><span>but-videos</span></a></td>
+<td><a id='but-webcasts' href='./webcasts.aspx' title='Webcasts'><span>but-webcasts</span></a></td>
+<td><a id='but-forums' href='./blogs.aspx' title='Blog'><span>but-forums</span></a></td>
+<td><a id='but-end'><span>but-end</span></a></td>
+</tr></table>
+</div>
+<!-- END Top Nav Bar-->
+
+<!-- Sub Nav Bar-->
+<div id="bottomnav" style="position:absolute; top:-53px; left:0px; visibility:hidden; border-top:solid silver 1px;">
+<table class="navtable" cellspacing="0px" cellpadding="0px"><tr>
+<td><a id='but-OMI' href="javascript:nav('bottomnav','OMI');"><span>but-OMI</span></a></td>
+<td><a id='but-LSR' href="javascript:nav('bottomnav','LSR');"><span>but-LSR</span></a></td>
+<td><a id='but-DD' href="javascript:nav('bottomnav','DD');"><span>but-DD</span></a></td>
+<td><a id='but-DI' href="javascript:nav('bottomnav','DI');"><span>but-DI</span></a></td>
+<td><a id='but-CBB' href="javascript:nav('bottomnav','CBB');"><span>but-CBB</span></a></td>
+<td><a id='but-AT' href="javascript:nav('bottomnav','AT');"><span>but-AT</span></a></td>
+<td><a id='but-INFOR' href="javascript:nav('bottomnav','INFOR');"><span>but-INFOR</span></a></td>
+<td><a id='but-bend'><span>but-bend</span></a></td>
+</tr></table>
+</div>
+
+<!-- OMI BAR -->
+<div id="OMI" style="position:absolute; top:-53px; left:0px; visibility:visible; opacity:1; border-top:solid silver 1px;">
+<table class="navtable" cellspacing="0px" cellpadding="0px"><tr>
+<td><a id='but-GN' href="http://www.technologynetworks.com/Genomics"><span>but-GN</span></a></td>
+<td><a id='but-PR' href="http://www.technologynetworks.com/Proteomics"><span>but-PR</span></a></td>
+<td><a id='but-MB' href="http://www.technologynetworks.com/Metabolomics"><span>but-MB</span></a></td>
+<td><a id='but-AG' href="http://www.technologynetworks.com/AgriGenomics"><span>but-AG</span></a></td>
+<td><a id='but-GS' href="http://www.technologynetworks.com/RNAi"><span>but-GS</span></a></td>
+<td><a id='but-OMIback' href="javascript:nav('OMI','bottomnav');"><span>but-OMIback</span></a></td>
+<td><a id='but-OMIend'><span>but-OMIend</span></a></td>
+</tr></table>
+</div>
+<!-- End OMI Bar -->
+
+<!-- LSR BAR -->
+<div id="LSR" style="position:absolute; top:-53px; left:0px; visibility:visible; opacity:1; border-top:solid silver 1px;">
+<table class="navtable" cellspacing="0px" cellpadding="0px"><tr>
+
+<td><a id='but-LOAC' href="http://www.technologynetworks.com/LOAC"><span>but-LOAC</span></a></td>
+<td><a id='but-qPCR' href="http://www.technologynetworks.com/qPCR"><span>but-qPCR</span></a></td>
+<td><a id='but-CO' href="http://www.technologynetworks.com/Crystallography"><span>but-CO</span></a></td>
+<td><a id='but-NGS' href="http://www.technologynetworks.com/NGS"><span>but-NGS</span></a></td>
+<td><a id='but-LAE' href="http://www.technologynetworks.com/LIMS"><span>but-LAE</span></a></td>
+<td><a id='but-CELLCULTURE' href="http://www.technologynetworks.com/CC"><span>but-CELLCULTURE</span></a></td>
+<td><a id='but-LSRback' href="javascript:nav('LSR','bottomnav');"><span>but-LSRback</span></a></td>
+<td><a id='but-LSRend'><span>but-LSRend</span></a></td>
+</tr></table>
+</div>
+<!-- End LSR Bar -->
+
+<!-- DD BAR -->
+<div id="DD" style="position:absolute; top:-53px; left:0px; visibility:visible; opacity:1; border-top:solid silver 1px;">
+<table class="navtable" cellspacing="0px" cellpadding="0px"><tr>
+<td><a id='but-BS' href="http://www.technologynetworks.com/HTS"><span>but-BS</span></a></td>
+<td><a id='but-MC' href="http://www.technologynetworks.com/MedChem"><span>but-MC</span></a></td>
+<td><a id='but-ADMET' href="http://www.technologynetworks.com/ADMET"><span>but-ADMET</span></a></td>
+<td><a id='but-PO' href="http://www.technologynetworks.com/PharmaOutsourcing"><span>but-PO</span></a></td>
+<td><a id='but-CPSU' href="http://www.technologynetworks.com/ProcessChem"><span>but-CPSU</span></a></td>
+<td><a id='but-DDback' href="javascript:nav('DD','bottomnav');"><span>but-DDback</span></a></td>
+<td><a id='but-DDend'><span>but-DDend</span></a></td>
+</tr></table>
+</div>
+<!-- End DD Bar -->
+
+<!-- DI BAR -->
+<div id="DI" style="position:absolute; top:-53px; left:0px; visibility:visible; opacity:1; border-top:solid silver 1px;">
+<table class="navtable" cellspacing="0px" cellpadding="0px"><tr>
+<td><a id='but-MACD' href="http://www.technologynetworks.com/Diagnostics"><span>but-MACD</span></a></td>
+<td><a id='but-GGE' href="http://www.technologynetworks.com/Genotyping"><span>but-GGE</span></a></td>
+<td><a id='but-DIback' href="javascript:nav('DI','bottomnav');"><span>but-DIback</span></a></td>
+<td><a id='but-DIend'><span>but-DIend</span></a></td>
+</tr></table>
+</div>
+<!-- End DI Bar -->
+
+<!-- CBB BAR -->
+<div id="CBB" style="position:absolute; top:-53px; left:0px; visibility:visible; opacity:1; border-top:solid silver 1px;">
+<table class="navtable" cellspacing="0px" cellpadding="0px"><tr>
+<td><a id='but-SC' href="http://www.technologynetworks.com/StemCells"><span>but-SC</span></a></td>
+<td><a id='but-BBB' href="http://www.technologynetworks.com/Biologics"><span>but-BBB</span></a></td>
+<td><a id='but-IM' href="http://www.technologynetworks.com/Immunology"><span>but-IM</span></a></td>
+<td><a id='but-CC2' href="http://www.technologynetworks.com/CC"><span>but-CC2</span></a></td>
+<td><a id='but-CBBback' href="javascript:nav('CBB','bottomnav');"><span>but-CBBback</span></a></td>
+<td><a id='but-CBBend'><span>but-CBBend</span></a></td>
+</tr></table>
+</div>
+<!-- End CBB Bar -->
+
+<!-- AT BAR -->
+<div id="AT" style="position:absolute; top:-53px; left:0px; visibility:visible; opacity:1; border-top:solid silver 1px;">
+<table class="navtable" cellspacing="0px" cellpadding="0px"><tr>
+<td><a id='but-MS' href="http://www.technologynetworks.com/MassSpec"><span>but-MS</span></a></td>
+<td><a id='but-SP' href="http://www.technologynetworks.com/Spectroscopy"><span>but-SP</span></a></td>
+<td><a id='but-CH' href="http://www.technologynetworks.com/Chromatography"><span>but-CH</span></a></td>
+<td><a id='but-EC' href="http://www.technologynetworks.com/Environmental"><span>but-EC</span></a></td>
+<td><a id='but-FABA' href="http://www.technologynetworks.com/FAB"><span>but-FABA</span></a></td>
+<td><a id='but-FS' href="http://www.technologynetworks.com/FS"><span>but-FS</span></a></td>
+<td><a id='but-ATback' href="javascript:nav('AT','bottomnav');"><span>but-ATback</span></a></td>
+<td><a id='but-ATend'><span>but-ATend</span></a></td>
+</tr></table>
+</div>
+<!-- End AT Bar -->
+
+<!-- IN BAR -->
+<div id="INFOR" style="position:absolute; top:-53px; left:0px; visibility:visible; opacity:1; border-top:solid silver 1px;">
+<table class="navtable" cellspacing="0px" cellpadding="0px"><tr>
+<td><a id='but-IN' href="http://www.technologynetworks.com/Informatics"><span>but-IN</span></a></td>
+<td><a id='but-LIMS2' href="http://www.technologynetworks.com/LIMS"><span>but-LIMS2</span></a></td>
+<td><a id='but-INFORback' href="javascript:nav('INFOR','bottomnav');"><span>but-INFORback</span></a></td>
+<td><a id='but-INFORend'><span>but-INFORend</span></a></td>
+</tr></table>
+</div>
+<!-- End IN Bar -->
+
+<!-- END Sub Nav Bar-->
+
+<!-- Login/Search Bar -->
+<div id="loginbar" style="position:absolute; width:1000px; height:25px; display: block; top:-27px; left:0px; background-image: url(http://www.technologynetworks.com/MedChem/images/headers/TNnavBOT.png)"></div>
+
+<div style="position:absolute; top:-27px; left: 0px;"><form action="./search.aspx" method="get"><table><tr>
+<td><input type="text" name="search" class="search" onMouseOver="this.style.borderColor='#11A3EA';" onMouseOut="this.style.borderColor='#B4BAC0';" onClick="this.value=''; this.style.background='#F2F3F3';"/>&nbsp;<select name="sol" class="homesearchkeywords"><option>Site</option><option>Literature</option></select></td>
+<td valign="top"><input type="image" src="./images/siteimages/minibutton.png" /></td>
+</tr></table></form></div>
+
+<div style='POSITION:absolute; TOP:-25px; RIGHT:0px; visibility:visible;'><table><tr><td class='UserLoggedIn'><span class='registertext' style='font-size:12px;color:white;'><a href='./register.aspx'>Register</a> | <a href='./login.aspx'>Sign in</a></span></asp:Label></td></tr></table></div>
+
+<!-- END Login/Search Bar -->
+
+<div style="width:1000px; border-top:solid 1px silver; position:absolute;top:-27px"></div>
+<div style="width:1000px; border-top:solid 1px silver; position:absolute;top:-3px"></div>
+<div style="padding:2px;"></div>
+
+        </div>
+        <!-- End Navigation Bar -->
+        <!--Page Content-->
+        <div style="width: 1000px; position: relative;">
+            <div style="position: relative; float: left; width: 300px;">
+                <!-- BEGIN -->
+                <!-- Labtube Video-->
+<!--[if IE]>
+   <style type="text/css">
+   div.buttons {
+	position:absolute;
+	width:240px;
+	height:430px;
+}
+    </style>
+<![endif]-->
+
+
+
+<div style='width:290px; float:left; position:relative; padding-top:10px;'><a href='./videosID.aspx?id=148765'><img src='http://www.technologynetworks.com/media/images/Videos/Cyanobiotech_video.gif' width='290px' height='202px' alt='Cyanobacteria in Natural Product Researc...' /></a></div><div style='width:290px; height:70px; position:relative; float:left;'><table class='homevideo' cellspacing='5'><tr><td class='homeviddesc'><a href='./videosID.aspx?id=150540'><img src='http://www.technologynetworks.com/media/images/Videos/Arablab2013overview.gif' width='88' height='66' Alt='Arablab 2013 Overview...' /></a></td><td class='homeviddesc'><a href='./videosID.aspx?id=145327'><img src='http://www.technologynetworks.com/media/images/Videos/medchem_video_feb2013.gif' width='88' height='66' Alt='Strategic Applications of Flow Chemistry...' /></a></td><td class='homeviddesc'><a href='./videosID.aspx?id=126700'><img src='http://www.technologynetworks.com/media/images/Videos/PO_video_Feb2013.gif' width='88' height='66' Alt='Discovery Chemistry Outsourcing: Optimis...' /></a></td></tr></table></div>
+
+<div style="width:290px; position:relative; float:left; height:10px;">
+<hr/>
+</div>
+<!-- End Labtube Video-->
+<!-- Featured Products-->
+<div style="font-family:Arial, Geneva, sans-serif; float:left; font-size:16px;">
+<a href="./products.aspx"><img src="images/siteimages/FeaturedProducts.png" alt="Featured Products"  width="290px" /></a>
+</div>
+
+<div style='width:290px; position:relative; float:left; padding-top:10px;'><table class='featuredproducthomepage'><tr><td rowspan='2'><img src='http://www.technologynetworks.com/media/images/Products/medchem_fp_oct2012.gif' width='120' height='83' Alt='FP' align='left' /></td><td height='30px'><a href='./productsid.aspx?id=145565'><img src='http://www.technologynetworks.com/MEDIA/images/companies/accelryslogo.gif' width='150px' height='30px' /></a></td></tr><tr><td valign='top'><a href='./productsid.aspx?id=145565'>Synthetic Chemistry Electronic Lab Notebook</a></td></tr></table></div><div style='width:290px; position:relative; float:left; padding-top:10px;'><table class='featuredproducthomepage'><tr><td rowspan='2'><img src='http://www.technologynetworks.com/media/images/Products/UniqsisFlowSyn-Maxifeatprod.gif' width='120' height='83' Alt='FP' align='left' /></td><td height='30px'><a href='./productsid.aspx?id=150277'><img src='http://www.technologynetworks.com/MEDIA/images/companies/unq_logo copy.gif' width='150px' height='30px' /></a></td></tr><tr><td valign='top'><a href='./productsid.aspx?id=150277'>FlowSyn™ Maxi from Uniqsis – Scaling up your flow chemistry experiments has never been easier!</a></td></tr></table></div>
+
+<div style="width:290px; position:relative; float:left; height:10px;">
+<hr/>
+</div>
+<!-- End Featured Products-->
+<!-- Webcasts-->
+<table width="290" border='0' cellspacing="0" cellpadding="0">
+<tr>
+<td colspan="2">
+<div style="float:left; width:290px;">
+<a href="./webcasts.aspx"><img src="images/siteimages/Webcasts.png" alt="Webcasts"  width="290px" /></a>
+</div>
+</td>
+</tr>
+
+<tr><td width='80' style='padding-top:5px;'><img src='http://www.technologynetworks.com/media/images/Webcasts/VolkhardHelms.gif' width='70px' height='70px' align='left' /></td><td width='210' valign='top' style='font-family:Arial, Geneva, sans-serif; font-size:11px; padding-top:5px;'><b><a href='./webcastsid.aspx?id=151397'>Druggability of Dynamic Protein-Protein Interfaces </a></b><br/>Volkhard Helms, Universitat des Saarlandes, speaking at Discovery Chemistry Congress 2013.</td></tr><tr><td width='80' style='padding-top:5px;'><img src='http://www.technologynetworks.com/media/images/Webcasts/PhilippeRoche.gif' width='70px' height='70px' align='left' /></td><td width='210' valign='top' style='font-family:Arial, Geneva, sans-serif; font-size:11px; padding-top:5px;'><b><a href='./webcastsid.aspx?id=151395'>Library Design for Tackling Protein-protein Interactions: The 2P2I Approach</a></b><br/>Dr Philippe Roche, CNRS, speaking at Discovery Chemistry Congress 2013.</td></tr>
+
+</table>
+<div style="width:290px; position:relative; float:left; height:10px;">
+<hr/>
+</div>
+
+
+<!-- End Webcasts-->
+<!-- Market Reports-->
+
+
+<div style="width:290px; float:left; right:0px; position:relative;">
+<div style="font-family:Arial, Geneva, sans-serif; font-size:16px">
+<a href="./resources.aspx"><img src="images/siteimages/MarketReports.png" alt="Market Reports"  width="290px" /></a>
+</div>
+<div class="newsContent" style="height:250px;" onMouseOver="fade('buttons5');" onMouseOut="fade('buttons5');">
+    
+    <div class="newsStories" id="newsStories5" style="height:250px;width:280px;left:5px;">
+    <div id="newsText5" style="position:relative; top:0px;">
+    <b><a href='./reports.aspx?id=148464'>Benchtop Automation Trends 2013</a></b><br/>HTStec<br/><br/>This market report summarizes the results of HTStec's industry-wide global web-based benchmarking survey on small-scale or benchtop automation carried out in January 2013.<hr/><b><a href='./reports.aspx?id=146218'>Lab Instrument Rental Trends 2012</a></b><br/>HTStec<br/><br/>This market report summarizes the results of HTStec’s industry-wide global web-based benchmarking survey on lab instrument rental carried out in September 2012.<hr/><b><a href='./reports.aspx?id=138017'>Glucagon-Like Peptide-1 (GLP-1) Receptor Agonists - A Target Pipeline and Stakeholder Analysis 2012</a></b><br/>La Merie<br/><br/>This report provides a compilation of business, commercial, clinical and scientific information about GLP-1 receptor agonists. A comprehensive analysis of the state of the art and key trends guides the reader through this emerging antidiabetic drug class. Scientific and technological approaches as well as molecules in the target pipeline of GLP-1 receptor agonists are described and assessed.<hr/><b><a href='./reports.aspx?id=136927'>Life Science and Chemical Instrumentation Market (2011 - 2016)</a></b><br/>MarketsandMarkets<br/><br/>Spectroscopy, Chromatography, DNA Sequencer & Amplifier, Lab Automation, Array, Flow Cytometer, Electrophoresis, Immuno Assay & Others<hr/><b><a href='./reports.aspx?id=135887'>Multi-Mode Microplate Reader Trends</a></b><br/>HTStec<br/><br/>This market report summarizes the results of HTStec’s industry-wide global web-based benchmarking survey on multi-mode microplate readers carried out in September 2011.<hr/><b><a href='./reports.aspx?id=126401'>Emerging Pharmaceutical Markets 2012</a></b><br/>Select Biosciences Ltd<br/><br/>The report covers all the key aspects of the various emerging pharmaceutical markets and has broadly outlined the factors that are affecting the industry. The report also provides current and predicted future performance of the pharmaceutical market in different regions of the world.<hr/><b><a href='./reports.aspx?id=121934'>The Future of GPCRs in Drug Discovery</a></b><br/>Business Insights<br/><br/>This report analyzes which classes of GPCR and specific GPCRs have been exploited. It looks at novel approaches to targeting GPCRs and their benefits and explores potential targets that could be of relevance to major, under-treated diseases. The report profiles small companies specializing in specific aspects of GPCR technology and analyzes the commercial outlook drugs targeting GPCRs.<hr/><b><a href='./reports.aspx?id=116690'>Top 10 Drug Discovery Technologies - Strategic Analysis and Global Forecasts </a></b><br/>MarketsandMarkets<br/><br/>The top 10 drug discovery technologies play a vital role in the growth of the entire pharmaceutical industry as they are the key contributors in the swift introduction of blockbusters and innovative drugs. The applications of these technologies in the introduction of drugs have created significant opportunities for market growth. The slow introduction of new blockbuster drugs is a major concern which the drug development companies are catering to by using these top technologies.<hr/>
+    </div> 
+    </div>
+    <div class="buttons" id="buttons5" style="opacity:0; filter:alpha(opacity=0);height:250px;">
+    <div class="upButton"><img src="../images/arrowupNew.gif" onMouseOver="verScroll5('up','newsStories5','newsText5')" onmouseout="stopScroll()" /></div>
+    <div class="downButton"><img src="../images/arrowdownNew.gif" onMouseOver="verScroll5('down','newsStories5','newsText5')" onmouseout="stopScroll()" /></div></div>
+    </div>
+</div>
+<!-- End Market Reports-->
+                <!-- END -->
+            </div>
+            <div style="position: relative; float: left; width: 540px;">
+                <!-- News-->
+<!--[if IE]>
+   <style type="text/css">
+   div.buttons {
+	position:absolute;
+	width:240px;
+	height:430px;
+}
+    </style>
+<![endif]-->
+
+<div style="width:540px; height:470px; float:left; position:relative; padding-top:10px;">
+<div style="width:270px; float:left; position:relative;">
+<div style="font-family:Arial, Geneva, sans-serif; font-size:16px;" align="center">
+<a href="./newsArchive.aspx"><img src="images/siteimages/ScientificNews.png" alt="Scientific News"  width="250px" /></a>
+</div>
+<div class="newsContent" style="" onMouseOver="fade('buttons');" onMouseOut="fade('buttons');">
+    
+    <div class="newsStories" id="newsStories" style="height:430px;">
+    <div id="newsText" style="position:relative; top:0px;">
+    <a href='./news.aspx?id=156616'><b>Turmeric Combined with Thalidomide Effectively Kills Cancer Cells</b></a><br/>Researchers combined structural features from anti-nausea drug thalidomide with common kitchen spice turmeric to create hybrid molecules that effectively kill multiple myeloma cells.<hr/><a href='./news.aspx?id=156360'><b>Chemist to Study ‘Orally Effective Therapy’ to Fight Obesity</b></a><br/>A chemist has received a federal grant to study the oral administration of PYY3-36, a peptide that inhibits food intake by naturally switching off one's appetite.<hr/><a href='./news.aspx?id=156202'><b>Neutron Studies of HIV Inhibitors Reveal New Areas for Improvement in Drug Design</b></a><br/>The findings will provide the basis for the design of a new generation of more effective pharmaceuticals to address issues such as drug resistance.<hr/><a href='./news.aspx?id=156065'><b>New Findings from The Scripps Research Institute Could Help Improve Development of Drugs for Addiction</b></a><br/>Scientists have described findings that could enable the development of more effective drugs for addiction with fewer side effects.<hr/><a href='./news.aspx?id=154723'><b>Pressurized Virus Blasts its Infectious DNA into Human Cells</b></a><br/>The virus that causes those painful lip blisters known as cold sores has an internal pressure eight times higher than a car tire.<hr/><a href='./news.aspx?id=154341'><b> Pittcon Now Accepting Grant Proposals for 2014</b></a><br/>The Pittsburgh Conference and its sponsoring societies are now accepting proposals for the 2014 Pittsburgh Conference Memorial National College Grants (PCMNCG) Award Program.<hr/><a href='./news.aspx?id=154258'><b>UK Moves Towards Safe and Effective Electronic Cigarettes and Other NCPs</b></a><br/>All nicotine-containing products, such as electronic cigarettes, are to be regulated as medicines in a move to make these products safer and more effective to reduce the harms of smoking.<hr/><a href='./news.aspx?id=152836'><b>Adult Stem Cells Could Hold Key to Creating Cure for Type 1 Diabetes</b></a><br/>Combining bone marrow cells with new drug restores insulin production.<hr/><a href='./news.aspx?id=151326'><b>iCell® Neurons Enable Alzheimer’s Disease Modeling</b></a><br/>Research demonstrate potential use of iCell® Neurons in high throughput screening at GlaxoSmithKline.<hr/><a href='./news.aspx?id=151135'><b>Galapagos Discovers Novel Candidate Drug to Treat Breast Cancer</b></a><br/>GLPG1790 has high efficacy against triple-negative breast cancer.<hr/>
+    </div> 
+    </div>
+    <div class="buttons" id="buttons" style="opacity:0; filter:alpha(opacity=0);">
+    <div class="upButton"><img src="../images/arrowupNew.gif" onMouseOver="verScroll('up','newsStories','newsText')" onmouseout="stopScroll()" /></div>
+    <div class="downButton"><img src="../images/arrowdownNew.gif" onMouseOver="verScroll('down','newsStories','newsText')" onmouseout="stopScroll()" /></div></div>
+    </div>
+</div>
+
+
+<div style="width:270px; float:left; right:0px; position:relative;">
+<div style="font-family:Arial, Geneva, sans-serif; font-size:16px" align="center">
+<a href="./newsArchive.aspx"><img src="images/siteimages/BusinessNews.png" alt="Business News"  width="250px" /></a>
+</div>
+<div class="newsContent" style="" onMouseOver="fade('buttons2');" onMouseOut="fade('buttons2');">
+    
+    <div class="newsStories" id="newsStories2" style="height:430px;">
+    <div id="newsText2" style="position:relative; top:0px;">
+    <a href='./news.aspx?id=156648'><b>Cresset Grows Scientific Team</b></a><br/>Company relocates to offices in Cambridge Cluster.<hr/><a href='./news.aspx?id=156600'><b>Galapagos Appoints David Smith as CEO of Service Division</b></a><br/>David Smith was CFO of Galapagos for two years.<hr/><a href='./news.aspx?id=156434'><b>Final Patient Completes Prosonix’ Phase 2 Clinical Study with PSX1002</b></a><br/>PSX1002 is a novel, orally inhaled, drug-only, pMDI suspension formulation of glycopyrronium bromide, a long-acting muscarinic antagonist (LAMA).<hr/><a href='./news.aspx?id=156267'><b>Reference Guide to Microplate Chemical Compatibility</b></a><br/>Porvair’s new version of chemical compatibility chart.<hr/><a href='./news.aspx?id=156145'><b>Lab Innovations 2013 to Almost Double in Size</b></a><br/>The event will be 75% bigger, with over 100 of the UK’s leading suppliers, distributors and manufacturers now booked to attend the show.<hr/><a href='./news.aspx?id=155807'><b>Science Showman to Speak at Lab Innovations 2013</b></a><br/>Professor Andrea Sella, whose theatrical chemistry demonstrations fill theatres up and down the country, will deliver a keynote address at Lab Innovations 2013.<hr/><a href='./news.aspx?id=155728'><b>Celtic Therapeutics Rebrands as Auven Therapeutics</b></a><br/>Company’s name change effective from March 11, 2013.<hr/><a href='./news.aspx?id=154682'><b>Ligand Signs License Agreement with Ethicor for Oral Lasofoxifene</b></a><br/>Distribution of oral lasofoxifene in Europe, Switzerland and India.<hr/><a href='./news.aspx?id=154684'><b>Ensemble and Alexion Initiate Collaboration</b></a><br/>Goal of discovering small molecule drug candidates for worldwide development and commercialization by Alexion.<hr/><a href='./news.aspx?id=154646'><b>SymBio Initiates Japanese Phase I Trial of Oral Rigosertib (SyB C-1101) in Frontline MDS</b></a><br/>U.S. FDA has granted orphan drug designation for the use of rigosertib in MDS.<hr/>
+    </div> 
+    </div>
+    <div class="buttons" id="buttons2" style="opacity:0; filter:alpha(opacity=0);">
+    <div class="upButton"><img src="../images/arrowupNew.gif" onMouseOver="verScroll2('up','newsStories2','newsText2')" onmouseout="stopScroll()" /></div>
+    <div class="downButton"><img src="../images/arrowdownNew.gif" onMouseOver="verScroll2('down','newsStories2','newsText2')" onmouseout="stopScroll()" /></div></div>
+    </div></div>
+</div>
+<!-- End News-->
+<!-- Events-->
+<div style="width:521px; position:relative; float:left; height:5px; bottom:15px; left:9px;">
+<hr/>
+</div>
+<div style="width:521px; height:150px; position:relative; float:left; padding-top:5px; bottom:15px; left:7px;">
+
+<table>
+<tr><td><a href="./events.aspx"><img src="images/events/events.png" alt="Events" /></a></td></tr>
+<tr><td>
+
+<table><tr>
+
+<td class='eventhomepage'><table border='0' cellpadding='0' cellspacing='0' height='120px'><tr><td align='center'><img src='http://www.technologynetworks.com/media/images/events/ELRIG_DD2013.gif' alt='ELRIG: Drug Discovery 2013' width='120px' height='40px' /></td></tr><tr><td class='innerevent'><b>03 Sep 2013</b><br/>ELRIG: Drug Discovery 2013 ...</td></tr><tr><td class='eventbutton'><a href='./eventsid.aspx?id=150637'><img src='images/siteimages/20button.png' /></a></td></tr></table></td><td class='eventhomepage'><table border='0' cellpadding='0' cellspacing='0' height='120px'><tr><td align='center'><img src='http://www.technologynetworks.com/media/images/events/Drug-Delivery-button-150x50.gif' alt='Inhalation Drug Delivery Confe' width='120px' height='40px' /></td></tr><tr><td class='innerevent'><b>11 Sep 2013</b><br/>Inhalation Drug Delivery Confe ...</td></tr><tr><td class='eventbutton'><a href='./eventsid.aspx?id=156284'><img src='images/siteimages/20button.png' /></a></td></tr></table></td><td class='eventhomepage'><table border='0' cellpadding='0' cellspacing='0' height='120px'><tr><td align='center'><img src='http://www.technologynetworks.com/media/images/events/Fleming Europe- Pharma eMarketing.gif' alt='3rd Annual Pharma eMarketing C' width='120px' height='40px' /></td></tr><tr><td class='innerevent'><b>11 Sep 2013</b><br/>3rd Annual Pharma eMarketing C ...</td></tr><tr><td class='eventbutton'><a href='./eventsid.aspx?id=151629'><img src='images/siteimages/20button.png' /></a></td></tr></table></td><td class='eventhomepage'><table border='0' cellpadding='0' cellspacing='0' height='120px'><tr><td align='center'><img src='http://www.technologynetworks.com/media/images/events/ASW_2013_150x50.gif' alt='Academic Screening Workshop' width='120px' height='40px' /></td></tr><tr><td class='innerevent'><b>17 Sep 2013</b><br/>Academic Screening Workshop ...</td></tr><tr><td class='eventbutton'><a href='./eventsid.aspx?id=147002'><img src='images/siteimages/20button.png' /></a></td></tr></table></td>
+
+</tr></table>
+
+</td></tr>
+</table>
+</div>
+<div style="width:521px; position:relative; float:left; height:5px; padding-top:15px; bottom:15px; left:9px;">
+<hr/>
+</div>
+<!-- End Events-->
+<!-- App Notes and Eposters-->
+<div style="width:540px; float:left; position:relative; padding-top:10px; bottom:15px;">
+<div style="width:270px; height:310px; float:left; position:relative;">
+<div style="font-family:Arial, Geneva, sans-serif; font-size:16px" align="center">
+<a href="./posters.aspx"><img src="images/siteimages/eposters.png" alt="ePosters" /></a>
+</div>
+<div class="newsContent" style="height:330px;" onMouseOver="fade('buttons3');" onMouseOut="fade('buttons3');">
+    
+    <div class="newsStories" id="newsStories3" style="height:343px;">
+    <div id="newsText3" style="position:relative; top:0px;">
+    <b><a href='./postersID.aspx?id=155074'>Recycled Gas Flow Control to Optimize Reaction Conversion and the Accomplishment of Heat Integration in Benzene Production through Hydrodealkylation of Toluene</a></b><br/>ETH Zurich<br/><br/>In this work, a benzene production plant through hydrodealkylation process was investigated through a simulation by Aspen Plus V7.2® and run based on the real data obtained from a benzene production plant operating in the United States.<hr/><b><a href='./postersID.aspx?id=151293'>Predictive in silico Screening to Determine Vector-Mediated Transport Properties for the Blood-Brain Barrier Choline Transporter</a></b><br/>University of Wurzburg<br/><br/>An attempt to analyze vector-mediated transport properties for the blood-brain barrier choline transporter (BBBCHT) was made to assess and improve drug delivery to the central nervous system.<hr/><b><a href='./postersID.aspx?id=149280'>Digital Dispensing for Direct Dilution: New Flexibility in Dose-Response Analyses</a></b><br/>Tecan Group<br/><br/>In addition to the economic advantages of improving speed, precision, compound usage and waste, digital dispensing offers scientific advantages. This includes making the execution of complicated experiments easy and fast.<hr/><b><a href='./postersID.aspx?id=149245'>Identification and Characterization of Strain Specific Drug Target by Subtractive Genome Analysis of Methicillin Resistance Staphylococcus aureus</a></b><br/>University of Karachi<br/><br/>This study aimed to identify and characterize strain specific essential protein targets, which will eventually help in the identification of druggable proteins in two strains of MRSA by using different Bioinformatic tools and databases. We adopting a subtractive genome approach within the domain of Computational Biology.<hr/><b><a href='./postersID.aspx?id=146146'>Stable N-phosphorylated triazol-5-ylidenes</a></b><br/>National Academy of Sciences of Ukraine<br/><br/>Considering probable generality of “carbene” mechanism for 1,3-azoles, investigation of intermediates of phosphorylation of 1,2,4-triazoles is of interest.<hr/><b><a href='./postersID.aspx?id=145887'>Reaxys Xcelerate – Less Searching. More Discovery</a></b><br/>Reed Elsevier<br/><br/>Reaxys Xcelerate is a new premium version of Reaxys. Reaxys is a web based workflow tool for synthetic chemists. It is designed to support the optimization of synthetic processes and offers a valuable resource for accurate & validated experimental reaction & substance data.<hr/><b><a href='./postersID.aspx?id=144826'>Improved Ligation Specificity with Chemically Modified Ligation Components</a></b><br/>TriLink BioTechnologies, Inc.<br/><br/>Ligases are gaining utility in molecular biology applications, such as nucleotide sequence detection, single nucleotide polymorphism (SNP) detection, protein detection and “next generation” sequencing by ligation.<hr/><b><a href='./postersID.aspx?id=144470'>Novel Antimalarial Drug Candidates Generated In Silico by Analysis of Public HTS Data</a></b><br/>Simulations Plus<br/><br/>This research aims to provide proof-in-principle that in silico tools could be applied to public data so as to efficiently identify active chemistry with good ADMET properties.<hr/><b><a href='./postersID.aspx?id=144471'> Finally, a User-Friendly Way of Computing and Presenting Individual Group Contributions to Polyprotic Ionization of Drugs</a></b><br/>Simulations Plus<br/><br/>It is tempting to “assign” the macroscopic ionization constants (apparent pKa‘s obtained from titration experiments) of molecules to specific ionizable groups; however, this is strictly appropriate only in the case of monoprotic molecules.<hr/><b><a href='./postersID.aspx?id=138643'>Analyzing Molecular Polar Surface Descriptors to Predict Blood-Brain Barrier Permeation</a></b><br/>University of Würzburg<br/><br/>Permeation of active drugs across the vascular brain endothelium into the central nervous system (CNS) is controlled by the blood-brain barrier (BBB). Some molecular quantities like polar surface (PS) descriptors are of key interest to medicinal chemists to predict the BBB permeation fate for different drug-like chemical compounds.<hr/>
+    </div> 
+    </div>
+    <div class="buttons" id="buttons3" style="opacity:0; filter:alpha(opacity=0);height:343px;">
+    <div class="upButton"><img src="../images/arrowupNew.gif" onMouseOver="verScroll3('up','newsStories3','newsText3')" onmouseout="stopScroll()" /></div>
+    <div class="downButton"><img src="../images/arrowdownNew.gif" onMouseOver="verScroll3('down','newsStories3','newsText3')" onmouseout="stopScroll()" /></div></div>
+    </div>
+</div>
+
+<div style="width:270px; float:left; right:0px; position:relative;">
+<div style="font-family:Arial, Geneva, sans-serif; font-size:16px" align="center">
+<a href="./resources.aspx?type=anotes"><img src="images/siteimages/ApplicationNotes.png" alt="Application Notes"  width="250px" /></a>
+</div>
+<div class="newsContent" style="height:330px;" onMouseOver="fade('buttons4');" onMouseOut="fade('buttons4');">
+    
+    <div class="newsStories" id="newsStories4" style="height:343px;">
+    <div id="newsText4" style="position:relative; top:0px;">
+    <b><a href='./resourcesid.aspx?type=anotes&id=153200'>Improved cell viability assay performance using PrestoBlue® Reagent</a></b><br/>Tecan Trading AG<br/><br/>Cell proliferation and viability assays are widely used in academic and life science laboratories, and are becoming increasingly common in the pharmaceutical industry. Assessment of cellular viability markers in cell-based applications is mandatory for laboratories working with in vitro systems.<hr/><b><a href='./resourcesid.aspx?type=anotes&id=148024'>Next Generation Sequencing Method for Illumina TruSeq DNA Sample Preparation Protocol on the Hamilton STAR</a></b><br/>Hamilton<br/><br/>The purpose of the TruSeq sample preparation protocol is to add adapter sequences onto the ends of DNA fragments to generate multiplexed sequencing libraries. Good liquid handling is crucial for pipetting precise volumes for example for Agilent Bioanalyzer.<hr/><b><a href='./resourcesid.aspx?type=anotes&id=109868'>Cytotoxicity in Cells: Easy Determination Using Lonza ViaLight Plus and ToxiLight BioAssays on the SpectraMax L Microplate Luminometer</a></b><br/>Molecular Devices<br/><br/>Bioluminescent cytotoxicity assays offer the user increased detection limits, speed, and accuracy, and have been well documented (Crouch et al., 1993). Healthy cells maintain a high constant ATP concentration in culture. During proliferation, the total ATP in the culture increases in line with cell number. Conversely, dying cells are unable to maintain their high ATP level, as synthesis becomes compromised, and so levels are seen to reduce. The level of ATP present within a culture is indicative<hr/><b><a href='./resourcesid.aspx?type=anotes&id=109867'>Microplate-Based Endotoxin Testing in GLP/GMP Environments with the VersaMax™ Absorbance Microplate Reader and Pyrochrome® Assay</a></b><br/>Molecular Devices<br/><br/>Monitoring for contaminants is a critical step during the production process in the pharmaceutical and medical device industries. A frequent contaminant, endotoxin, can cause fever, inflammation, headache, nausea, and even death. Found in the cell wall of gram negative bacteria,
+endotoxin has routinely been detected by the sensitive and specific Limulus Amebocyte Lysate (LAL) assay. In the presence of endotoxins, LAL coagulates through an enzyme-mediated cascade, which has then been traditional<hr/><b><a href='./resourcesid.aspx?type=anotes&id=88439'>Heating on an Atlas Hotplate</a></b><br/>Syrris Ltd<br/><br/>In the following experiments, different vessels were heated using the Atlas hotplate, with and without the Atlas Stacking Drybath. In every case, an external thermocouple probe has been used with the system to accurately measure “reaction” temperature.<hr/><b><a href='./resourcesid.aspx?type=anotes&id=88440'>Analysing Endotherms using Atlas</a></b><br/>Syrris Ltd<br/><br/>This application note shows how atlas and reaction monitoring can be used to look at endothermic processes.<hr/><b><a href='./resourcesid.aspx?type=anotes&id=88441'>Tracking Exotherms using Atlas Reaction Monitoring</a></b><br/>Syrris Ltd<br/><br/>This application note shows how atlas and reaction monitoring can be used to look at exothermic processes.<hr/><b><a href='./resourcesid.aspx?type=anotes&id=88442'>Reaction Monitoring with Atlas 1</a></b><br/>Syrris Ltd<br/><br/>This application note reports the use of the atlas system to monitor the hydrolysis of acetic anhydride, a typical test reaction for exothermic processes.<hr/><b><a href='./resourcesid.aspx?type=anotes&id=88443'>Reaction Monitoring with Atlas 2</a></b><br/>Syrris Ltd<br/><br/>This application note details an experiment to show the repeatability and scalability of reaction monitoring signals by using an electrical heater system.<hr/><b><a href='./resourcesid.aspx?type=anotes&id=88444'>Examples of FRX Applications for Demonstration</a></b><br/>Syrris Ltd<br/><br/>FRX as a product offers a wide range of applications in a number of areas. To try and increase the exposure of the product to a wider audience, two standard demonstrations are detailed here. The first is a Wittig reaction showing the operation of an FRX200 system. The second is a separation of water and ethyl acetate demonstrating the operation of the FLLEX (Flow Liquid Liquid EXtraction module), for FRX300 or FRX400.<hr/>
+    </div> 
+    </div>
+    <div class="buttons" id="buttons4" style="opacity:0; filter:alpha(opacity=0);height:343px;">
+    <div class="upButton"><img src="../images/arrowupNew.gif" onMouseOver="verScroll4('up','newsStories4','newsText4')" onmouseout="stopScroll()" /></div>
+    <div class="downButton"><img src="../images/arrowdownNew.gif" onMouseOver="verScroll4('down','newsStories4','newsText4')" onmouseout="stopScroll()" /></div></div>
+    </div>
+</div>
+</div>
+<!-- End App Notes and Eposters-->
+            </div>
+            <div style="position: relative; float: right; width: 160px;">
+                
+<div style="width:160px; float:left; position:relative; padding-top:10px;">
+<a href='./redirect.aspx?cid=114430&uid=000000&link=http://www.selectbiosciences.com' target='_blank'><img src='http://www.technologynetworks.com/images/banners/skyscraper/SBbanner.gif' Alt='Skyscraper Banner' width='160px' height='240px' /></a><hr/>
+<a href='./redirect.aspx?cid=146221&uid=000000&link=http://www.marketreports.com/reports/Drug_Discovery.html#a31677' target='_blank'><img src='http://www.technologynetworks.com/media/images/banners/Lab_Instrument_Rental_Trends_2012.gif' Alt='Skyscraper Banner' width='160px' height='240px' /></a>
+</div>
+<div style="width:160px; float:left; position:relative; padding-top:10px;">
+<a href="http://www.twitter.com/tech_networks" target="_blank"><img src="http://www.technologynetworks.com/images/buttw.png" alt="Follow TechNetcom1 on Twitter" width="160" /></a>
+</div>
+<div style="width:160px; float:left; position:relative; padding-top:10px;">
+<a href="http://www.linkedin.com/company/technology-networks-ltd.?trk=fc_badge" target="_blank"><img src="http://www.technologynetworks.com/images/butli.png" width="160" locale="en" alt="Technology Networks Ltd. on LinkedIn"></a>
+</div>
+<div style="width:160px; float:left; position:relative; padding-top:10px;">
+<a href="http://www.labTube.tv/" target="_blank"><img src="http://www.technologynetworks.com/images/LabTubeAdBtn.png" alt="Go to LabTube.tv"/></a>
+</div>
+<div style="width:160px; float:left; position:relative; padding-top:10px;">
+<a href="http://www.eposters.net/" target="_blank"><img src="http://www.technologynetworks.com/images/eposterAdBtn.png" alt="Go to ePosters.net"/></a>
+</div>
+
+            </div>
+            <!--End Page Content-->
+        </div>
+        <div class="footer">
+            
+<div id="footer" align="center">
+		<br/>
+			<p><a href="./about.aspx">About Us</a> | <a href="mailto:promotions@technologynetworks.com?subject=A question about promotions on Medicinal Chemistry">Advertise On This Site</a> | <a href="./contact.aspx">Contact Us</a> | <a href="./index.aspx">Home</a> | <a href="mailto:webmaster@technologynetworks.net?subject=Support Request From Medicinal Chemistry">Support</a> | <a href="./terms.aspx">Terms & Conditions</a><br/><br/></p>
+</div>
+<div style="float:left;"><a href="./permissions.aspx">©2013 Technology Networks</a>, all rights reserved.</div><div style="float:right;"><a href="./privacy.aspx"> Privacy Policy and Disclaimer </a></div>
+<!--<div id='footerAd_ad'></div>-->
+
+        </div>
+    </div>
+    
+<style>
+	
+
+	#iAdd {
+
+		/* overlay is hidden before loading */
+		display:none;
+
+		/* standard decorations */
+		width:640px;
+		height:640px;
+		border:5px solid #666;
+
+		/* for modern browsers use semi-transparent color on the border. nice! */
+		border:5px solid rgba(82, 82, 82, 0.698);
+
+		/* hot CSS3 features for mozilla and webkit-based browsers (rounded borders) */
+		-moz-border-radius:3px;
+		-webkit-border-radius:3px;
+	}
+
+	</style>
+    
+<!--[if IE]>
+   <style type="text/css">
+   .iAdd {
+       background:transparent;
+       filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#333333,endColorstr=#333333);
+       zoom: 1;
+    }
+    </style>
+<![endif]-->
+
+
+<!-- facebook dialog -->
+<div id="iAdd">
+		
+    <div>
+
+			<div style="position:absolute; top:-15px; right:-15px;"><img src="http://images.technologynetworks.net/cross.png" class="close" /></div>
+		
+	</div>
+
+</div>
+
+<!--
+<script>
+
+$(document).ready(function() {
+
+// select the overlay element - and "make it an overlay"
+$("#iAdd").overlay({
+
+	// custom top position
+	//top: 200,
+
+	// some mask tweaks suitable for facebox-looking dialogs
+	mask: {
+
+		// you might also consider a "transparent" color for the mask
+		color: '#fff',
+
+		// load mask a little faster
+		loadSpeed: 200,
+
+		// very transparent
+		opacity: 0.5
+	},
+
+	// disable this for modal dialog-type of overlays
+	closeOnClick: false,
+
+	// load it immediately after the construction
+	load: true
+
+});
+});
+</script>
+-->
+</body>
+</html>

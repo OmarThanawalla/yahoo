@@ -1,0 +1,338 @@
+<base href="http://cdip.ucsd.edu/elnino_htmls/homepage.shtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <link rel="stylesheet" type="text/css" href="styles/style2.css" />
+  <link rel="shortcut icon" href="favcdip.ico" type="image/vnd.microsoft.icon" /> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="The Coastal Data Information Program (CDIP) specializes in wave measurement, swell modeling and forecasting, and the analysis of coastal environment data." />
+  <meta name="keywords" content="wave, swell, buoy, model, realtime, forecast, data, ocean, marine, environment" />
+
+  <title>CDIP recent forecast</title>
+<!--  <script type="text/javascript">
+    function roll(img,ref) { document.images[img].src=ref; }
+  </script>
+ -->
+</head>
+
+<body  >
+
+<table border="0px" width="800px" cellspacing="0px" cellpadding="0px" ><tr><td bgcolor="white">
+<map name="subnav">
+  <area name="observed" coords="265,0,346,17" shape=rect
+    href="?nav=recent&sub=observed&units=metric&tz=UTC&pub=public" >
+  <area name="nowcast" coords="350,0,480,17" shape=rect
+    href="?nav=recent&sub=nowcast&units=metric&tz=UTC&pub=public" >
+  <area name="forecast" coords="484,0,610,17" shape=rect
+    href="?nav=recent&sub=forecast&units=metric&tz=UTC&pub=public" >
+</map><map name="banner" id="banner" >
+<area coords="122,9,498,35" shape="rect" 
+  href="?" alt="cdip" /> 
+<area coords="719,14,774,74" shape="rect" 
+  href="http://www.usace.army.mil/" alt="usace" /> 
+<area coords="649,6,703,74" shape="rect" 
+  href="http://dbw.ca.gov" alt="dbw" /> 
+<area coords="526,12,625,54" shape="rect" 
+  href="http://sio.ucsd.edu" alt="sio" /> 
+<area coords="272,38,477,53" shape="rect" 
+  href="http://iod.ucsd.edu" alt="iod" />
+</map>
+<map name="buoy_lower" id="buoy_lower">
+<area shape="rect" coords="110,0,191,30" 
+  href="http://cdip.ucsd.edu/themes" /> 
+</map>
+<div>
+<input type="hidden" name="units" value="metric" />
+<input type="hidden" name="tz" value="UTC" />
+<input type="hidden" name="pub" value="public" />
+<input type="hidden" name="map_stati" value="1,2,3" />
+</div>
+<!-- Table containing nav  -->
+
+<table border="0px" cellpadding="0px" cellspacing="0px"> 
+<tr> 
+  <td colspan="5" valign="bottom" bgcolor="darkblue" ><img 
+ src="top/cdip_buoy_banner.png" width="801px" height="80px" alt='CDIP banner' 
+   usemap="#banner" /></td>
+<td valign="bottom" bgcolor="darkblue"><img height="80px" width="100%" src="top/1pixel_buoy_final.png" /></td></tr>
+
+<!-- Second row, recent/historic/docs tabs  -->
+
+<tr> 
+  <td valign=top bgcolor=white><img 
+ src="top/buoy_lower.png" width="191px" height="31px" alt='CDIP banner' usemap="#buoy_lower" border="0" /></td> 
+<td valign=top  bgcolor=white><a href=?nav=recent&sub=observed&units=metric&tz=UTC&pub=public&map_stati=1,2,3
+ onclick="roll('recent','recent/selected.png');" 
+ onMouseOver="roll('recent','recent/selected.png');"
+ onMouseOut="roll('recent','recent/selected.png');" ><img 
+ src=recent/selected.png alt=recent name=recent border=0 /></td >
+<td valign=top   bgcolor=white><a href=?nav=historic&sub=data&units=metric&tz=UTC&pub=public&map_stati=1,2,3 
+ onclick="roll('historic','historic/selected.png');" 
+><img 
+ src=historic/unselected.png name=historic alt=historic border=0 /></td>
+<td valign=top   bgcolor=white><a href=?nav=documents&sub=index&units=metric&tz=UTC&pub=public&map_stati=1,2,3 
+ onclick="roll('documents','documents/selected.png');" 
+><img 
+ src=documents/unselected.png name=documents alt=documents border=0 /></td>
+<td align=right valign=middle  width=311 bgcolor=darkblue >
+
+<!-- Table containing search stuff  -->
+
+<div style="float:left;"><form id="nav_search" action=""> 
+<input type="submit" name="ximg" value="search"
+           style="float:right;margin:2px;position:relative;display:block;
+           background-color:#829ecf;font-weight:bold;font-size:12px;
+           color:white; height:20px;" >
+        <input style="float:right;margin:2px" class=search type=text size=8
+           name=xsearch value="" >
+        <select style="float:right;margin:2px;" class="search" name="xsearch_type" >
+        <option value=Station_ID   >Station ID</option>
+<option value=Stn_Directory   >Stn Directory</option>
+<option value=Full_Site   >Full Site</option>
+</select>
+</form></div>
+</td>
+
+<!-- Extra cell at end of nav row  -->
+
+<td width=100% bgcolor=darkblue></td>
+
+</tr>
+
+<!-- Start of sub nav row -->
+
+<tr>
+<td  align=left bgcolor=white ><div style="height:18px; width: 190px; whitespace:nowrap;overflow:hidden;"><font class=small>&nbsp;<a href=?nav=documents&amp;sub=faq&amp;xitem=latest>news</a> | 
+<a href=?nav=documents&amp;sub=faq&amp;xitem=contact>contact us</a> | 
+<a href=?>home</a></font></div></td>
+<td  colspan=4 align=right bgcolor=white ><img height=18 
+ src=recent/forecast/subnav.png
+ usemap=#subnav border=0 width=610 height=18 alt='sub-menu' /></td>
+<td  bgcolor=#829ecf width=100% ></td> 
+
+</table>
+
+<!-- End of nav table -->
+
+</td></tr><tr><td><table border=1 width=801 cellpadding=8 cellspacing=0><tr><td bgcolor=aliceblue valign=top>  <table width=140 cellpadding=0 cellspacing=0> 
+    <tr> 
+      <th colspan=2 align=center bgcolor=aliceblue> 
+        <font class=large> 
+      <a href=?nav=recent&amp;sub=forecast> 
+          Forecast Models 
+      </a> 
+        </font></th></tr> 
+     <tr> 
+       <th colspan=2 align=left> 
+           <font class=medium>&nbsp</font> 
+         </th></tr> 
+     <tr> 
+       <th colspan=2 align=left> 
+           <font class=medium>Regional Maps</font> 
+         </th></tr> 
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=fm_scb_xxx> 
+           <font class=small>Southern California</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=fm_cca_xxx> 
+           <font class=small>Central Coast</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=fm_mon_xxx> 
+           <font class=small>Monterey Bay</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=fm_san_xxx> 
+           <font class=small>San Francisco</font> 
+         </a></td></tr>
+     <tr> 
+       <th colspan=2 align=left> 
+           <font class=medium>Wave Height Plots</font> 
+         </th></tr> 
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=fp_scb_000> 
+           <font class=small>Southern California</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=fp_sdc_000> 
+           <font class=small>San Diego</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=fp_orc_000> 
+           <font class=small>Orange County</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=fp_lac_000> 
+           <font class=small>Los Angeles</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=fp_ven_000> 
+           <font class=small>Ventura County</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=fp_sbc_000> 
+           <font class=small>Santa Barbara</font> 
+         </a></td></tr>
+     <tr> 
+       <th colspan=2 align=left> 
+           <font class=medium>Tides/Flooding</font> 
+         </th></tr> 
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=tide&xindex=003> 
+           <font class=small>San Diego County</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=tide&xindex=010> 
+           <font class=small>Orange County</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=tide&xindex=016> 
+           <font class=small>Los Angeles County</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=tide&xindex=022> 
+           <font class=small>Ventura County</font> 
+         </a></td></tr>
+     <tr> 
+       <td>&nbsp</td> 
+       <td align=left> 
+         <a href=?nav=recent&amp;sub=forecast&xitem=tide&xindex=027> 
+           <font class=small>Santa Barbara</font> 
+         </a></td></tr>
+     <tr> 
+       <th colspan=2 align=left> 
+           <font class=medium>&nbsp</font> 
+         </th></tr> 
+     <tr> 
+       <th colspan=2 align=left> 
+         <a href=?nav=documents&amp;sub=index&amp;xitem=product&amp;xdoc=rec-forecast> 
+           <font class=medium>Descriptions/Help</font> 
+         </a> 
+         </th></tr> 
+     <tr> 
+       <th colspan=2 align=left> 
+         <a href=?nav=documents&amp;sub=faq&amp;xitem=forecast> 
+           <font class=medium>FAQ/Model info</font> 
+         </a> 
+         </th></tr> 
+  </table> 
+</td><td   bgcolor=white align=left valign=top><img src=pngs/shim_clr.png width=595 height=1>
+
+<center>
+
+  <h1> Wave Forecast Models </h1>
+
+  <hr>
+
+  <font class=blarge>
+    These experimental coastal wave forecasts are a joint research effort by:
+  </font>
+  <font class=bmedium>
+    <br><br>
+    <a href=http://www.ncep.noaa.gov/>NOAA/NCEP</a><br>
+    <a href=http://www.onr.navy.mil/>Office of Naval Research</a><br>
+    <a href=http://dbw.ca.gov/>California Department of Boating and 
+      Waterways</a><br>
+    <a href=http://www.usace.army.mil/>U.S. Army Corps of Engineers</a><br>
+  </font>
+
+  <hr>
+
+  <font class=medium color=red>
+    WARNING: These coastal wave forecasts are HIGHLY
+    experimental and should NOT be relied upon as a primary
+    source of wave forecast information. Significant errors
+    in predicting coastal wave heights and the timing of
+    storm events are known to occur. 
+  </font>
+
+  <p>
+
+  <img src=recent/model_images/fc_summary.png><br>
+
+  <font class=small>
+    Deep water wave forecasts offshore of California are provided by 
+    the NOAA/NCEP Wavewatch III model. The interpretation of this deep 
+    water wave information, its application to coastal models, and the 
+    dissemination of coastal wave forecasts are provided by the Coastal 
+    Data Information Program (CDIP). For more information about these 
+    forecast products, please see our model description page. 
+  </font>
+
+  <p>
+
+  <table border=0 cellpadding=5 cellspacing=15>
+    <tr class=recent_odd>
+      <td><a href=?nav=recent&amp;sub=forecast&xitem=fm_scb_xxx>
+        Regional Maps<br>
+        <img border=0 src=recent/forecast/map_thumb.png></a></td>
+      <td bgcolor=#ccffdd><a href=?nav=recent&amp;sub=forecast&xitem=fp_scb_000>
+        Wave Height<br>Plots<br>
+        <img border=0 src=recent/forecast/plot_thumb.png></a></td>
+      <td><a href=?nav=recent&amp;sub=forecast&xitem=tide&xindex=003>
+        Tides/Flooding<br>Indices<br>
+        <img border=0 src=recent/forecast/tide_thumb.png></a></td>
+        <td bgcolor=#ccffdd><a href=?nav=recent&amp;sub=forecast&xitem=sio_small>
+          SIO/Torrey Pines<br>5-Day forecasts<br>
+          now offline</a></td>
+    </tr>
+  </table>
+
+</center>
+</td></table></td></tr></table><table width=800>
+  <tr>
+    <td align=center>
+      <hr>
+      <font class=bmedsmall>
+      CDIP's major funding contributors are the
+      <a href="http://www.usace.army.mil/">US Army Corps of
+      Engineers</a> and the <a href="http://dbw.ca.gov">California
+      Department of Boating and Waterways</a>.
+      <hr>
+    </td>
+    <td><a href="http://www.ucsd.edu/">
+      <img src="pngs/ucsdlogo.png" alt="Official UCSD Web Page" /></a></td>
+  </tr>
+</table>
+<span style="float:right; vertical-align:text-bottom">
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone></g:plusone>
+</span>
+<!-- Place this tag in your head or just before your close body tag -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3131645-1";
+urchinTracker();
+</script></body></html>

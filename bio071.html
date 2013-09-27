@@ -1,0 +1,333 @@
+<base href="http://bioethics.georgetown.edu/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Bioethics Research Library at Georgetown University</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="msvalidate.01" content="93BDF5059A705BF37B0FC320B6EC7139" />
+<link type="text/css" href="http://bioethics.georgetown.edu/css/reset.css" rel="stylesheet"/>
+<link type="text/css" href="http://bioethics.georgetown.edu/css/base-3.css" rel="stylesheet"/>
+<link type="text/css" href="http://bioethics.georgetown.edu/css/front-2.css" rel="stylesheet"/>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#tabs").tabs();
+    });
+</script>
+<SCRIPT language="JavaScript" type="text/javascript">
+function quickSearch(thisForm)
+{
+	var url;
+	var searchString = thisForm.terms.value;
+
+		if (thisForm.catalog_type[0].checked) {
+		// GEORGE classic brl only
+		url = "http://catalog.library.georgetown.edu/search/X?SEARCH=";
+		url += "(";
+		url += searchString;
+                url += ")&searchscope=4&SORT=D&b=ki&b=ocsk";
+		thisForm.action = url;
+	}
+	
+	if (thisForm.catalog_type[1].checked) {
+		// GEORGE classic
+		url = "http://catalog.library.georgetown.edu/search/X?SEARCH=";
+		url += "(";
+		url += searchString;
+                url += ")&searchscope=4&SORT=D";
+		thisForm.action = url;
+	}
+	else if (thisForm.catalog_type[2].checked) {
+		// GEORGE Discovery
+		url = "http://gt.summon.serialssolutions.com/search?utf8=%E2%9C%93&s.fvf%5B%5D=ContentType%2CNewspaper+Article%2Ct&keep_r=true&s.q=";
+                searchString = searchString.replace(/\s/g,"%20");
+		url += searchString;
+		thisForm.action  = url;
+	}
+		else if (thisForm.catalog_type[3].checked) {
+		// GEORGE Discovery
+		url = "http://repository.library.georgetown.edu/search?query=";
+                searchString = searchString.replace(/\s/g,"%20");
+		url += searchString;
+		thisForm.action  = url;
+	}
+	else if (thisForm.catalog_type[4].checked) {
+		// WorldCat
+		url = "http://www.worldcat.org/search?qt=worldcat_org_all&q=";
+                searchString = searchString.replace(/\s/g, "+");
+		url += searchString;
+		thisForm.action  = url;
+	}
+	else {
+		return;
+	}
+}
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2010554-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<div id="wrap" class="clearfix">
+<div id="wordmark"><a href="http://bioethics.georgetown.edu"><img src="http://bioethics.georgetown.edu/css/brl-logo.png" alt="The Bioethics Research Library"/></a></div>
+<div id="sidebar" class="clearfix">   
+
+<ul id="nav">
+<li>About 102 Healy</li>
+<li><a href="/about/healy102/index.html"><img src="http://bioethics.georgetown.edu/grafix/healy-102-scrolls-thumbnail.png" width="224" height="55" alt="Ceiling Scrolls"/></a></li>
+<li>About the Library
+    <ul>
+    <li><a href="/about/welcome/index.html">Welcome</a></li>
+    <li><a href="/publications/index.html">Publications</a></li>
+    <li><a href="/about/support/index.html">Support the Library</a></li>
+    <li><a href="/about/staff/index.html">Professional Staff</a></li>
+    <li><a href="/about/visitors/index.html">Visitors</a></li>
+    </ul></li>
+<li>Search
+    <ul>
+	<li><a href="/articles/index.html">Articles and Journals</a></li>
+<li><a href="/catalogs/index.html">Library Catalogs</a></li>
+    <li><a href="/databases/index.html">Library Databases</a></li>
+        <li><a href="/databases/other/index.html">Other Databases</a></li>
+    </ul></li>
+<li>Special Collections
+    <ul>
+    <li><a href="/nirehg/index.html">Genetics and Ethics</a></li>
+    <li><a href="/collections/islamic/index.html">Islamic Ethics</a></li>
+    <li><a href="/collections/kampelman/index.html">Jewish Ethics</a></li>
+    <li><a href="/collections/presidential/index.html">U.S. Bioethics Commissions</a></li>
+    <li><a href="/collections/index.html">View all Collections</a></li>
+</ul></li>
+<li>Resources for
+    <ul>
+    <li><a href="/resources/foreducators/index.html">Educators</a></li>
+    <li><a href="/resources/forhealthcare/index.html">Health Care Professionals</a></li>
+    <li><a href="/resources/forlibrarians/index.html">Librarians</a></li>
+    <li><a href="/resources/forstudents/index.html">Students</a></li>
+    </ul></li>
+<li>Reference Help
+	<ul>
+		<li><a href="http://bioethics.georgetown.edu/resources/foreducators/journals.html">Bioethics Journals</a></li>
+		<li><a href="http://bioethics.georgetown.edu/resources/findcasestudy/index.html">Find a Case Study</a></li>
+        <li><a href="http://bioethics.georgetown.edu/resources/findav/index.html" title="Use this familiar, powerful medium in education to create common experiences for viewers, bring diverse and wide-ranging life stories and ethical questions into the classroom, harness additional expertise on topics and issues in bioethics.">Find an Audiovisual</a></li>
+        <li><a href="http://bioethics.georgetown.edu/resources/designcourse/index.html" title="Tools for course design and student research. Identify sample syllabi, textbooks, case studies, audiovisuals, and a broad range of materials in bioethics.">Design a course</a></li>
+        <li><a href="http://bioethics.georgetown.edu/resources/requestitem/index.html" title="Request an item for use in the library">Request an Item</a></li>
+        <li><a href="https://docs.google.com/a/georgetown.edu/spreadsheet/viewform?formkey=dHltSFZNcVFOTnAtWjI2TGVMVER4MUE6MQ#gid=0">Request Search Help</a></li>
+	</ul>
+</li>
+
+</ul>		  	   
+<a href="http://bioethics.georgetown.edu/about/history/index.html"><img src="http://bioethics.georgetown.edu/grafix/promo.png" width="249" height="88" alt="Learn more"/></a>
+</div>
+
+<div id="content">
+
+<div id="main" class="clearfix">
+
+<div id="deck-two" class="clearfix">
+    <div id="intro">
+    <p style="font-size:14px;line-height:22px;">The Bioethics Research Library at Georgetown University is an interdisciplinary and multi-format collection on ethical issues related to health care, biomedical research, biotechnology, and the environment. <a href="http://bioethics.georgetown.edu/about/welcome/index.html">More &raquo;</a></p>
+    <p class="contactalib" style="line-height:50px;text-align:center;font-family:Arial, Helvetica, sans-serif;background:#DCDCDC;font-weight:bold;font-size:14px;"><a class="contactalib" href="http://bioethics.georgetown.edu/about/ask/index.html" style="display: block;color:#225588;">ask a librarian &raquo;</a></p>
+    </div>
+
+    <div id="tabs">
+		<h2 class="boxhead">Welcome to the Bioethics Research Library
+		<ul id="subnav" class="clearfix">
+			<li><a href="#tabs-0">Library catalogs</a></li>
+			<li><a href="#tabs-1">Bioethics resources</a></li>
+			<li><a href="#tabs-2">Articles and journals</a></li>			
+		</ul></h2>
+		
+	<div class="tabcontent" id="tabs-0">
+		<!--<img src="http://bioethics.georgetown.edu/css/orange-arrow-right.png" alt="Updates" class="padwide" style="float:left;"/>Update: We've redesigned our homepage. You will now find EthxWeb in the Bioethics resources tab above.<br /> <br />-->
+				<h3>Find books, audiovisuals, e-resources, and more</h3>
+		<br />
+		<form name="searchform" method="post" action="#"><input maxlength="255" name="terms" size="44" type="text" onKeyPress="return quickSearch(this.form)" />&nbsp;<input value="Search" type="submit" onclick="javascript:quickSearch(this.form);" />
+		<br />
+		<input type="radio" name="catalog_type" value="http://catalog.library.georgetown.edu/search~S4/X?b=ki" />BRL <input type="radio" name="catalog_type" value="http://catalog.library.georgetown.edu/search~S4/X" checked />GU <input type="radio" name="catalog_type" value="http://aquadev.wrlc.org/?skin=gt&branch=wr_gt"/>WRLC <input type="radio" name="catalog_type" value="http://gt.summon.serialssolutions.com/advanced" /> DigitalGeorgetown</form>
+		<br />
+		<a href="http://catalog.library.georgetown.edu/search~S4/X?SEARCH=(*)&searchscope=4&SORT=DX&b=ki&b=ocsk">View new titles at the BRL</a>, <a href="http://catalog.library.georgetown.edu/search~S4/X?SEARCH=(*)&searchscope=4&SORT=D&b=ocsk">all materials at off-campus shelving</a>, or <a href="http://catalog.library.georgetown.edu/search~S4/X?%28*%29&searchscope=4&SORT=AX&m=s&b=ki">all journal/serial holdings</a> of the BRL.<br /><br /> 
+	<h3>Advanced catalog search</h3><br />
+
+		View advanced search forms for <a href="http://catalog.library.georgetown.edu/search~S4/X">GU</a>, <a href="http://gt.summon.serialssolutions.com/advanced">WRLC</a>, or <a href="http://repository.library.georgetown.edu/handle/10822/503786/advanced-search">DigitalGeorgetown</a>.
+	</div>
+    <div class="tabcontent" id="tabs-1">
+<h3>Selected resources</h3><p>
+          <ul>
+            <li><a href="http://bioethics.georgetown.edu/databases/ethxweb/index.html"><img src="http://bioethics.georgetown.edu/css/ethxweb.ico" height="16" width="16" class="pad" alt="EthxWeb"/>EthxWeb</a> &#8212; a richly indexed database that consolidates interdisciplinary bioethics material covering 1974-2009. <a href="http://bioethics.georgetown.edu/databases/index.html">Explore more databases prepared by the BRL</a>.</li>           
+            <li><a href="http://www.pubmed.gov/"><img src="http://bioethics.georgetown.edu/css/pubmed.ico" class="pad" alt="PubMed"/>PubMed</a> &#8212; comprises over 21 million citations for biomedical literature from MEDLINE, life science journals, and online books. View recently added documents in <a href="http://quickbib.ethicslab.org/pubmedbioethics">core bioethics journals</a> or limit to <a href="http://quickbib.ethicslab.org/pubmedbioethicsfree">free full text documents</a>.</li>
+            <li><a href="http://proxy.library.georgetown.edu/login?url=http://www.csa.com/htbin/dbrng.cgi?username=hoya&access=hoya202&db=philosopher-set-c&adv=1"><img src="http://bioethics.georgetown.edu/css/philindex.ico" class="pad" alt="Philosopher's Index"/>Philosopher's Index</a> &#8212; the primary index to the literature of philosophy. Available online if your library has purchased a subscription to the database.<a href="http://proxy.library.georgetown.edu/login?url=http://www.csa.com/htbin/dbrng.cgi?username=hoya&access=hoya202&db=philosopher-set-c&adv=1"><img src="http://bioethics.georgetown.edu/css/icon_key.gif" alt="key" title="Requires login when off-campus"/></a></li>
+			<li><a href="http://philpapers.org/"><img src="http://bioethics.georgetown.edu/css/favicon-pp.gif" class="pad"  alt="PhilPapers"/>PhilPapers</a> &#8212; a comprehensive directory of online philosophical articles and books by academic philosophers.</li>
+	<li><a href="https://www.ethicshare.org/"><img src="http://bioethics.georgetown.edu/css/ethicsshare.ico" class="pad" alt="EthicsShare"/>EthicShare</a> &#8212; a community website to research, share, collaborate, and participate in the field of ethics.</li>
+	<li><a href="http://www.drze.de/belit-1/belit"><img src="http://bioethics.georgetown.edu/css/drze.ico" class="pad" alt="BELIT"/>BELIT (Bioethics Literature Database)</a> &#8212; provides access to approximately 470,000 records from integrated German, American and French databases.</li>
+	<li><a href="http://scholar.google.com"><img src="http://bioethics.georgetown.edu/css/google_favicon_128.png" class="pad" height="16" width="16" alt="Google Scholar"/>Google Scholar</a> &#8212; provides a search of scholarly literature across many disciplines and sources.</li>			  
+          </ul>
+For a list of all academic databases available at Georgetown University view the <a href="http://guides.library.georgetown.edu/a2z">A to Z Database List</a>.</p>
+
+
+    </div>
+        <div class="tabcontent" id="tabs-2">
+		<h3>Online Access at Georgetown University</h3>
+		<a href="http://www.library.georgetown.edu/off-campus-access"><img src="http://bioethics.georgetown.edu/css/50X25keythree.png" alt="Off campus access" style="padding:1px;float:right;"/></a><p>Many <a href="http://bioethics.georgetown.edu/databases/other/index.html">databases</a> provide links to full text. If you need access to a specific article or journal try the following:</p>
+		
+<h3>Google Scholar</h3>
+<p>Look for "Find full-text @ GU" (or a <a href="http://scholar.google.com/intl/en/scholar/librarylinks.html">library link</a>) for article access.<form method="get" action="http://scholar.google.com/scholar">
+<table>
+  <tr>
+    <td>
+      <a href="http://scholar.google.com/"><img src="http://lgimages.s3.amazonaws.com/google_scholar.jpg" alt="Google Scholar" width="100" height="43" border="0" /></a>
+      <input type="hidden" name="hl" value="en">
+      <input type="text" name="q" size="25" maxlength="255" />
+      <input type="submit" name="btnG" value="Search" />
+    </td>
+  </tr>
+</table>
+</form></p>
+<h3>Find journals by title or ISSN</h3>
+		<p><form method="get" action="http://xr8el9yb8v.search.serialssolutions.com/" name="SS_EJPSearchForm">
+					<input value="1.0" name="V" type="hidden" />
+					<input value="250" name="N" type="hidden" />
+					<input type="hidden" name="L" value="XR8EL9YB8V" />
+					<select name="S">
+					  <option value="T_B" selected="selected">Title begins with</option>
+					  <option value="T_M">Title equals</option>
+					  <option value="T_W_A">Title contains all words</option>
+					  <option value="I_M">ISSN equals</option>
+					</select>
+					<input id="SS_CFocusTag" name="C" />
+					<input value="Search" type="Submit" />
+				  </form>	
+				  <br /><a href="http://bioethics.georgetown.edu/resources/foreducators/journals.html">Browse Bioethics Journals</a>
+		</p>
+<h3>View full text options for an article</h3>
+<p>If you have the citation already, you may use the <a href="http://xr8el9yb8v.search.serialssolutions.com/?SS_Page=refiner">citation linker tool</a> to look up full text options at Georgetown University.</p>
+<h3>Request an article or journal</h3>
+<p>Georgetown-affiliated users can request materials through <a href="http://arlir.iii.com/">Article Reach</a>, <a href="http://discovery.wrlc.org/">Consortium Loan Service</a>, or <a href="https://illiad.library.georgetown.edu/illiad/logon.html">InterLibrary Loan</a>. <a href="http://www.library.georgetown.edu/loans/request-article">Learn how to request</a> an article or journal title.</p>
+<p><a href="http://www.library.georgetown.edu/loans/request-article"><img src="http://www.library.georgetown.edu/sites/default/files/images/cant-find-it-narrow.png" alt="Guide to finding articles" style="padding:3px;"/></a></p>
+<h3>Not affiliated with Georgetown University?</h3>
+<p>The Bioethics Research Library <a href="about/documentdelivery/index.html">participates in InterLibrary Loan</a>, including DOCLINE, and you may request articles via your local library's Interlibrary Loan program.</p>
+    </div>
+	</div>
+	</div>
+
+<div id="deck-three" class="clearfix">
+    <div id="explore">
+    <h2 class="boxhead">Explore by topic</h2>
+<div id="topics" class="clearfix">
+<ul>
+<li><a href="/resources/topics/deathdying/index.html">Death and dying</a></li>
+<li><a href="/resources/topics/environmental/index.html">Environmental ethics</a></li>
+<li><a href="/resources/topics/genetics/index.html">Genetics</a></li>
+<li><a href="/resources/topics/mentalhealth/index.html">Mental health</a></li>
+</ul>
+
+          <ul>
+            <li><a href="/resources/topics/neuroethics/index.html">Neuroethics</a></li>
+            <li><a href="/resources/topics/organ/index.html">Organ donation and 
+              transplantation</a></li>
+            <li><a href="/resources/topics/animals/index.html">Research &ndash; 
+              Animals</a></li>
+            <li><a href="/resources/topics/humans/index.html">Research &ndash; 
+              Human beings</a></li>
+            <li><a href="/resources/topics/index.html">More Topics &raquo;</a></li>
+          </ul>
+		  
+		  <div id="explore">
+  <div id="topics" class="clearfix">
+    <h2 class="boxhead">Featured projects &amp; collections</h2>
+		<p>
+		<img src="http://bioethics.georgetown.edu/grafix/OB-feature.png" style="float:right;padding:5px;"/><a href="http://repository.library.georgetown.edu/handle/10822/557010">Acadia Institute Interview Collection</a><br />Ren&eacute;e C. Fox, a sociologist, and Judith P. Swazey, a historian, became a 'team of two' in this ethnological study of the new field of bioethics, that began with the foundation of the Hastings Center in 1969, and two years later, the Kennedy Institute of Ethics. Their book, 'Observing Bioethics', was based on a series of interviews Fox and Swazey did with a number of well-known bioethicists.<br /><br /> By arrangement with LeRoy Walters, then Director of the Kennedy Institute of Ethics, transcripts of the interviews were archived at the Bioethics Research Library. We are grateful to the participants, who authorized the BRL to make the interviews accessible through this DigitalCollectoin to those interested in the history of bioethics.
+		
+		</p>
+    </div>
+	</div>                          
+ </div>
+
+ </div>
+    <div id="news">
+        <h2 class="boxhead">News &amp; events</h2>
+       <!-- <p><img src="grafix/calendar-icon.png" style="margin-right:3px"/><a href="/news/events.html">Upcoming events</a></p>	-->
+<p><a href="http://kennedyinstitute.georgetown.edu/about/news/critical-role-of-trauma-informed-care.cfm">The Critical Role of Trauma-Informed Care</a></p>
+    
+<p><a href="http://kennedyinstitute.georgetown.edu/ourpeople/carter.cfm">Featured Student: Ali Carter '15</a></p>      
+    <p><a href="http://kennedyinstitute.georgetown.edu/about/news/undergraduate-researchers-take-on-womens-health-issues.cfm">Undergraduate Researchers Take on Women's Health Issues</a></p> 
+
+<p><a href="http://kennedyinstitute.georgetown.edu/about/news/olgchs.cfm">Students Delve into the Bioethics of Frankenstein at the BRL</a></p>
+		<p><a href="http://bioethics.georgetown.edu/news/events.html">Past News and Events</a></p>
+        <p><a href="about/support/index.html"><img src="grafix/support.gif" width="199" height="41" /></a></p>
+    </div>
+</div>
+
+<div id="footer" class="clearfix">
+<div id="footerinfo">
+<ul id="footeraddress">
+<li>&copy;2013 Bioethics Research Library<br />
+Kennedy Institute of Ethics<br />
+Georgetown University<br />
+102 Healy Hall<br />
+Washington, DC 20057<br />
+(202) 687-3885
+</li>
+</ul>
+<ul id="footerlinks">
+<li><a href="/about/ask/index.html">Contact Us</a></li>
+<li><a href="/about/documentdelivery/index.html">Document Delivery</a></li>
+<li><a href="/about/ask/index.html#hours">Library Hours</a></li>
+<li><a href="http://www.georgetown.edu/privacy-policy/index.html">Privacy Policy</a></li>
+<li><a href="http://search.uis.georgetown.edu/search?q=&amp;client=default_frontend&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;sitesearch=bioethics.georgetown.edu">Search Website</a></li>
+<li><a href="/about/supporters/index.html">Supporters</a></li>
+</ul>
+</div>
+<div id="footerlogos">
+<a href="http://kennedyinstitute.georgetown.edu/"><img src="http://bioethics.georgetown.edu/css/kie_square_wordmark.png" alt="Kennedy Institute of Ethics" /></a>
+<a href="http://www.georgetown.edu/"><img src="http://kennedyinstitute.georgetown.edu/images/GU-logo-50.png" alt="Georgetown University" /></a>
+</div>
+</div>
+</div>
+</body>
+</html>

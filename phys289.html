@@ -1,0 +1,333 @@
+<base href="http://www.geom.uiuc.edu/apps/quasitiler/">
+<HEAD>
+<TITLE>About QuasiTiler version 3.0</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<HR>
+
+<H1>QuasiTiler 3.0</H1><P>
+<img src="blue_green.gif" alt="A cool picture goes here">
+<P>
+
+<H2>by
+<A HREF="/people/durand.html">Eugenio Durand</A>
+</H2>
+<I>World Wide Web front end by
+<A HREF="/people/burchard.html">Paul Burchard</A>,
+<A HREF="/people/daeron.html">Daeron Meyer</A> and
+Eugenio Durand
+at the <A HREF="http://www.geom.uiuc.edu/">Geometry Center</A>,
+University of Minnesota, March 1994.</I>
+<P>
+
+<!-- <A HREF="http://www.geom.uiuc.edu/apps/quasitiler/start.html">
+<STRONG>CLICK HERE TO START INTERACTIVE APPLICATION.</STRONG></A>
+-->  <STRONG>Unfortunately, the interactive application no longer works.</STRONG>
+
+<H4>For more about tilings, go to 
+ <A HREF="http://www.ScienceU.com/geometry/">ScienceU</A>
+</H4>
+
+<HR WIDTH="40%">
+
+<H1>Contents</H1>
+<UL>
+<LI><A href="#introduction">
+Introduction</A>
+
+<LI><A HREF="#geometry">
+Geometry of Quasicrystals</A>
+<ul>
+<li><A href="#dimensions">
+One dimension, 2 dimensions, <I>n</I> dimensions</A>
+<li><A href="#numbers">
+Doing it by numbers</A>
+<li><A href="#picture_above">
+What is the picture at the top of the document?</A>
+<li><A href="#quasicrystals">
+Quasicrystals</A>
+</ul>
+
+<LI><A href="#use">
+Using QuasiTiler</A>
+<ul>
+<li><A href="#tile">
+Tile display</A>
+<li><A href="#plane">
+Generating plane</A>
+<li><A href="#to_do">
+Things to do with QuasiTiler</A>
+<li><A href="#warnings">
+Things that can go wrong</A>
+</ul>
+
+<LI><A href="#conclusion">
+Conclusion</A>
+<LI><A href="#acknowledgements">
+Acknowledgements.</A>
+<LI><A href="#references">
+References</A>
+</UL>
+
+
+<H1><A NAME=introduction>
+Introduction
+</A></H1>
+
+QuasiTiler draws Penrose tilings and their generalizations.  This document explains the interesting geometry involved in the processes.  The concepts involved are surprisingly simple.  The only apparent hurdle that we have to overcome is working in spaces with more than 3 dimensions.  However in the next section we start with examples in 2 and 3 dimensions where our intuition is useful.  Then we extend the same concepts to more dimensions.  I hope that you get some insight on the geometry of higher-dimensional spaces by reading this document and by experimenting with QuasiTiler.
+<P>
+Penrose tilings are well known because of their interesting and sometimes intriguing properties; for example, they are locally but not globally symmetric under 5-fold rotations, quasi-periodic with respect to translations, self-similar, and more.  See the <A href="#references">references</A> at the end of this document if you want to find more about Penrose tilings.  If you  do not know what a Penrose tiling is, there is one in the background of the image at the top of this document.
+<P>
+N.G.deBruijn in 1981 showed that Penrose tilings can be seen as the projection of a relatively simple object in 5-dimensional space.  QuasiTiler uses deBruijn's approach to generate tilings.
+<P>
+The original version of QuasiTiler is a NeXTSTEP application, with more features than the ones possible to implement over the web. It is available by anonymous ftp from this server.  See the
+<A href="#QTapp_reference">reference</A> at the end of this document.
+
+<H1><A NAME=geometry>
+Geometry of Quasicrystals
+</A></H1>
+
+<H2><A NAME=dimensions>
+One dimension, 2 dimensions, n dimensions
+</A></H2>
+
+Before we jump into 5 dimensions, let's start with 2.  We look first at the coordinate plane, which is a 2-dimensional space.  In this plane we consider the points with integer coordinates.  We call these points an <EM>integer lattice</EM>.  The lattice together with the corresponding edges fills the plane with a grid of squares. We pick any line in the plane and we call it line E for convenience. 
+<P>
+<img src="grid_diagram.gif" alt="Diagram">
+<P>
+We look now to a region of the plane around the line E.  This region is just wide enough to contain  any square with side length 1 centered at any point on the line E.  We call this region C.  Now we select all the points in the lattice that happen to be inside the region C.  We also select all the edges that join these selected points.  We obtain a funny looking staircase curve as result.  Now we project the staircase perpendicularly onto E.  Adjacent edges of the staircase collapse to adjacent line segments in E. We have as result a tiling of this one-dimensional space.
+<P>
+Observe that we can choose the line E anyway we want, obtaining a different staircase each time.  An important property depends on the slope of E:  if we choose the <EM>slope</EM> of E to be a <EM>rational number</EM>  then the pattern of the staircase and the projected tiling repeats itself periodically; but if the slope is an <EM>irrational number</EM> the pattern is not periodic.  However in this last case, if we choose any piece of the staircase (of finite size) the chosen piece will be repeated an infinite number of times at different places all over the region C:  we get a <EM>quasiperiodic</EM> staircase.
+<P>
+QuasiTiler does exactly the same thing.  But instead of using the line E and a square grid on the plane, it uses a plane and an integer lattice in spaces of dimension 3, 4, 5 or more.  By passing a higher-dimensional cube along E, we get a 2-dimensional staircase siting in a higher-dimensional space.  QuasiTiler then projects the staircase surface onto the plane E.   The result is the tiling that you see.
+<P>
+Let's work with the idea in 3 dimensions first: instead of a grid of squares in the plane we consider a 3-dimensional grid of cubes, and a 2-dimensional plane crossing them instead of a line.   The vertices of the cubes are the points on the integer lattice.  We take a plane E, and as before slice the space with it and look at the region C around the plane E. This region is just wide enough to contain all the cubes of side-length 1 centered at any point in the plane E.  We select then all the lattice points inside this region C, together with the corresponding edges and faces.   The result is an arrangement of steps, which we project into the plane E.  You can see in the next image two different results obtained with QuasiTiler by choosing two different planes.
+<P>
+<img src="3d_symmetric.gif" alt="An example in 3-d">
+<img src="3d_tilted.gif" alt="An example in 3-d">
+<P>
+With QuasiTiler we can browse in 4, 5 or more dimensions by taking 2-dimensional "slices" of the corresponding lattice.  The results will get more interesting.  The more dimensions we have the more things can happen.  For example, Penrose tilings are just a particular class of these slices in 5-dimensional space.
+<P>
+QuasiTiler shows also a different view of the same staircase surface sitting in <I>n</I>-dimensional space by projecting it into the space orthogonal (= perpendicular) to the plane E. The lattice points in C all project into the interior of the projection of the <I>n</I>-dimensional cube.  The image below corresponds to a Penrose tiling.
+<P>
+<img src="orthogonal_view.gif">
+<P>
+The gray points correspond to the lattice points near the plane E.  The region C is represented by the light gray lines, which are the edges of an <I>n</I>-dimensional cube of side-length 1, with <I>n</I> equal to 5 in this particular case.  Finally the large red dot represents the origin of the coordinate system,  and indicates the position of the plane E and the region C relative to the integer lattice and the ambient space.  <A HREF="#plane">You are in control</A> of this red dot in the program.
+<P>
+Notice that the orthogonal space to E has dimension <I>n</I>-2, but QuasiTiler shows you only a 2-dimensional view since a computer screen is flat.  This is good enough in most cases anyway.  However there is room to improve this flat view.  For example, the image at the top of this document shows a 3-dimensional view in perspective of the same object represented in the image above.
+<P>
+
+<H2><A NAME=numbers>
+Doing it by numbers
+</A></H2>
+
+So far we have talked about an arbitrary plane in  <EM>n</EM>-dimensional space, but we haven't said how we are going to manipulate such an object.  We will use some linear algebra from here to the end of this section (do not worry if you do not understand all the details -- the geometry explained up to this point is the important part).  We are just going to attach some numbers to the geometry so we can conveniently deal with it.  QuasiTiler keeps track of the numbers, but also allows you to deal directly with the numbers if you want.
+<P>
+The plane E is specified by one position vector and two direction vectors.  In QuasiTiler, we call the position vector the <EM>offset</EM>, and the two direction vectors the <EM>generators</EM>.  There are some conditions that we are going to impose on these vectors.  The first condition is that the two generators need to be <EM>linearly independent</EM>; this is a necessary condition, otherwise we would get a line instead of a plane.  The next condition is that that the generators are orthogonal to each other and of length 1; this is not necessary, but it will be helpful, as we will see later.  The final condition is that offset has to be orthogonal to the plane E; this condition is just to simplify the computations.  QuasiTiler allows you to enter the numbers directly, and makes sure that all the conditions are satisfied.
+<P>
+To ensure that the offset is orthogonal to the plane E, the offset vector is always represented as a vector in the <EM>orthogonal complement</EM> of the plane E, which is an (<I>n</I>-2)-dimensional space.  The position of the large red dot in QuasiTiler's <A HREF="#plane">offset control</A> is determined by the first two coordinates of the offset.
+<P>
+Let's see now the advantages of having the generators orthogonal to each other and of length 1. We consider the <EM>canonical basis</EM> of the ambient space.  The canonical basis is just the vectors of the form
+<PRE WIDTH=80>
+     ( 1, 0, 0, . . . ),
+     ( 0, 1, 0, . . . ),
+     ( 0, 0, 1, . . . ), . . .
+</PRE>
+When the condition on the generators is satisfied, we can tell right away the coordinates of the projection onto the plane E of the <I>k</I>-th canonical basis vector; these coordinates are the same as the <I>k</I>-th coordinates of the two generators.  And these projections of the canonical basis are important for us, since they are precisely the edges of our tiles, as we explain next.
+<P>
+Remember that the edges of the surface in the higher dimensional space are just the edge of some <I>n</I>-dimensional cube with integer coordinates vertices.  And the edges of any of these <I>n</I>-dimensional cubes are a translation of one of the vectors in the canonical basis, which are then projected onto the plane E.  Thus all the edges in the tiling are just the projection of one of the vectors from the canonical basis translated to the corresponding vertex.  Furthermore any tile is just a parallelogram determined by a pair of these edges.  In other words, the projections of the canonical basis give the coordinates to build the tiles.  
+<P>
+
+<H2><A NAME=picture_above>
+What is the picture at the top of the document?
+</A></H2>
+
+The picture illustrates the geometry behind QuasiTiler.  A tiling obtained by QuasiTiler comes from the projection of a particular surface in <I>n</I>-dimensional space determined by a set of points with integer coordinates in <I>n</I>-dimensional space.   You can see on the picture two different projections of the same surface.
+<UL>
+<LI>In the background is a Penrose tiling, which is the projection of the surface onto the generating plane E (see the <A href="#dimensions">previous section</A>).
+<LI>In the foreground is the projection of the vertices of the surface onto the space orthogonal to the generating plane.  The vertices of the surface are shown as blue dots.  Also shown in green are the edges and vertices of the projection of a 5-dimensional unit  "cube." 
+</UL>
+Notice the vertices of the surface also have structure when projected in the orthogonal space to the plane.  For example in this particular case the points are confined to 4 planes.  In fact the properties of the Penrose tiling are encoded in the orthogonal view.  The position of each projected vertex inside the projected 5-dimensional cube determines the configuration of tiles at the corresponding point in the tiling.
+<P>
+
+
+<H2><A NAME=quasicrystals>
+Quasicrystals
+</A></H2>
+
+Perhaps you are wondering what might be the results of taking a 3-dimensional slice instead of a 2-dimensional one.  It would be a structure similar to the Penrose tilings, whose building units fill space quasiperiodically.  Although for nearly 200 years this was assumed to be impossible, such crystals really exist!  See the <A href="#references">references</A> at the end of this document.
+<P>
+
+
+<H1><A NAME=use>
+Using QuasiTiler</A>
+</A></H1>
+QuasiTiler is implemented as a HTML fill-out form.  It is divided in two areas: the first is the tile display together with the input widgets to control how the tiling is displayed.  The second area has the widgets to control the generating plane.
+
+<H2><A NAME=tile>Tile Display</A></H2>
+The tiling computed by QuasiTiler is the top-most image.  You can control this display in several ways.  You can choose which rectangular region of the tiling is displayed, and adjust some aspects of how the tiles are drawn.  You have the following options:
+<UL>
+<LI>To display a different region of the tiling, <B>select any point</B> in the image.  A new image will be computed with the selected point at the the center.
+<LI>To change the size of the displayed region you can choose one of the following <B>zoom options</B>:
+<ul>
+<li>None. The new region of the tiling has the same size as the last one; this is the default.
+<li>Out. The new region will be larger, with more and smaller tiles.
+<li>In. The new region will be smaller, with fewer and bigger tiles.
+</ul>
+<LI>To change how the tiles are drawn, you can choose any of the following<B>display options</B>:
+<ul>
+<li>Edges. If selected, the edges will be displayed as black lines; no edges are displayed otherwise.
+<li>Tiles. If selected the tiles are shaded with a color depending the shape of the tile; the tiles are not displayed otherwise.
+<li>Color. Determines whether the tiles are painted with different colors or with shades of gray.  Keep in mind that the colors have no particular
+meaning, they are chosen just to underline the symmetry of the tiling.
+<li>GIF Only / PostScript Only.  Select one of these if you would like to have the next computed image of the tiling returned to you as a stand alone image document.  Otherwise QuasiTiler will return a new HTML form with the new tiling included as an inlined image to use interactively.
+</ul>
+</UL>
+
+
+<H2><A NAME=plane>Generating Plane</A></H2>
+In the the two dimensional example <A href="#dimensions">above</A>, we can determine the line E by choosing a point and a direction.  A convenient way to describe these point and direction is with two vectors.  In the same way a plane can be determined by three vectors.  One vector determines a point through which the plane goes; we call this the <STRONG>offset</STRONG>.  The other two determine the direction of the plane; we call these the <STRONG>generators</STRONG>.
+
+<H3>Changing the Offset</H3>
+The program allows you to modify this parameter in two different ways.  One is to select a point in the image that looks similar to the following one.
+<P>
+<img src="orthogonal_view.gif">
+<P>
+In this image you can see the relative positions of the lattice points inside the region R. The view is a projection into two of the orthogonal directions to the generating plane.   You are in control of the red dot, which represents the center of the coordinate system, <EM>the origin</EM>.  Whenever you select a point in this image the origin will move there; the offset of the plane E will change correspondingly.  Keep in mind that this method you can only change two coordinates of the offset vector, however this gives more than enough room to explore.
+<P>
+If you insist on changing the offset in all its coordinates you can use the second method.  At the bottom of the form there are three columns of numbers.  The coordinates of the offset vector are on the first column.  Type any values you want and submit the form when you are done.  On the technical side, this vector is expressed in the coordinates of the space orthogonal to the generating plane.
+
+
+<H3>Changing the Generators</H3>
+QuasiTiler presents you with a sample of the current tiles in an image similar to the one below.  The "direction" of the plane, which is given by the generators, determines the shape of the tiles.  You can change the generators by selecting a point in the image.  
+<P>
+<img src="generators.gif">
+<P>
+The fat points in the image represent the projection of the <EM>canonical basis</EM> of the ambient space into the generating plane. When you select a point in this image, the program will move the generating plane so that the nearest fat point will move as close as possible to your selection, dragging with it the shape of the tiles.  Some directions and shapes will give more pleasing tilings than others.  The default values produce tiles symmetric under rotations.
+<P>
+As with the offset, it is possible for you to change the coordinates of generators directly.  The coordinates of each generator are on the two columns at the end of the form.  Type any values you want and submit the form when you are done.  Notice that there are some conditions that must be satisfied by these numbers; QuasiTiler modifies your input to enforce those conditions.  This is explained in a <A href="#dimensions">previous section</A>.
+<P>
+
+<H2><A NAME=to_do>
+Things to do with QuasiTiler
+</A></H2>
+
+<DL>
+<DT>Try any of the <A href="#tile">display options</A>.<DD>  You will always get an interesting result.
+
+<DT>Select a point in the offset image.<DD>  You will get a different tiling using the same tiles.  Notice how the tiling changes with as you change the relative positions of the plane and the lattice.  This is the favorite control of the author.  You will always get an interesting result.
+
+<DT>Change the dimension of the ambient space.<DD>  Start with 3 dimensions; the image are not as interesting but you will recognize the cubes that project as the tiling.  As you increase the dimension to 4 or 5, try to keep the same image of "stacks of cubes."
+
+<DT>Redecorate the bathroom  :-)<DD>  The tiles are always parallelograms.  You can read the shape of each from the numbers in the bottom of the form.  Check the <A href="#dimensions">section</A> explains these numbers.  But in the default symmetrical case is easier: all the edges have the same length, and the angles are multiples of 
+(180 degrees) / (dimension of ambient space).
+You have to <A HREF="comments.html">let me know</A> if you actually get involved in a project like this!
+</DL>
+<P>
+
+
+<H2><A NAME=warnings>
+Things that can go wrong
+</A></H2>
+
+<DL>
+<DT>Time out error <DD>The server has limit on the time it can spend to satisfy your request.  Possible reasons for going over the limit are: you zoom out too much, you selected a large dimension, the server is working on other requests simultaneously to yours, or a combination of any of the previous.  Try to zoom in or select a smaller dimension.
+
+<DT>Tiles with strange shapes <DD>Some choices of generators produce very asymmetrical tiling.  Start over or change dimension to get the default symmetrical settings.
+
+<DT>Missing tiles <DD>In some rare occasions a point in the integer lattice is to close to the border of the region determining the tiling.  QuasiTiler can not tell if the point is inside or outside in such case.  To be on the safe side, QuasiTiler guess is that the point is outside.  But sometimes the guess is wrong and there is a hole in the tiling.  A solution is to change some of the less significant digits in the offset.
+
+<DT>The demo is not working <DD>Chances are that your WWW browser does not support forms and/or inlined images.  Try to get a newer version that supports this features.
+</DL>
+
+<H1><A NAME=conclusion>
+Conclusion
+</A></H1>
+
+I hope that you have fun and learn with QuasiTiler, as I did writing it.  I just would like to make the following point.  There is somehow a general idea that 4, 5 or more dimensions have some sort of mystical properties.  I find this idea surprising, maybe even disturbing: as you can see in this program, <I>n</I>-dimensional spaces are just mathematical concepts, interesting to study on their own, and also useful as tools to find solutions to other problems.  For example QuasiTiler uses them to produce interesting and nice looking patterns.
+<P>
+Please send me your <A HREF="comments.html">comments</A>, I am looking forward to them.
+<P>
+
+
+
+<H2><A NAME=acknowledgements>
+Acknowledgements
+</A></H2>
+
+The original motivator to write QuasiTiler was Prof. Marjorie Senechal, Dept. of Mathematics, Smith College, Northampton, MA.  During her visit to the Geometry Center she required a convenient way to generate Penrose tilings and so the project started.  She has provided the expertise on the subject essential to write QuasiTiler and this document.
+
+
+<H1><A NAME=references>
+References
+</A></H1>
+
+<H2>Penrose tilings</H2>
+
+Martin Gardner, Mathematical Recreations, <EM>Scientific American</EM>, <STRONG>236</STRONG> (January 1977) 110-121 .  This is a very enjoyable article.
+<P>
+Martin Gardner, <EM>Penrose Tiles to Trapdoor Ciphers</EM>, W.H.Freeman, New York, 1989.
+<P>
+Roger Penrose, <EM>The Emperor's New Mind</EM>, Oxford University Press, New York, 1989.  Yes, he is the same Penrose as in "Penrose tiles."  The tiles are mention only briefly though.
+<P>
+N.G.deBruijn, <EM>Algebraic theory of Penrose's nonperiodic tilings
+of the plane, I, II</EM>, Nederl. Akad. Wetensch. Indag. Math. <STRONG>43</STRONG> (1981) 39-52, 53-66.  This is deBruijn original paper, hard to read.
+<P>
+Stan Wagon, <EM>Mathematica in Action</EM>, W.H.Freeman, New York, 1991, chapter 4.  Here you can find how to generate Penrose tilings using the Mathematica software, together with a nice explanation of some of their properties.  The approach used here is different from QuasiTiler.  It has further references too.
+<P>
+Ivars Peterson, <EM>The Mathematical Tourist: Snapshots of Modern Mathematics</EM>, chapter 7, W.H.Freeman, New York, 1988.  Here the book's author stops short of exploring the same ideas as in this document.
+<P>
+
+<H2>Quasicrystals</H2>
+
+Marjorie Senechal,
+<!-- A HREF="gopher://cameron.geom.umn.edu/0R210636-216695-/geomnews/ev_contrib" -->
+<A HREF="ev_senechal.html">
+online article</A> on this server.
+<P>
+Marjorie Senechal, <EM>Quasicrystals and Geometry</EM>, Cambridge University Press, 1995.  To appear.
+<P>
+D. R. Nelson, Quasicrystals, <EM>Scientific American</EM>, <STRONG>255</STRONG> (August 1986) 42-51.
+<P>
+D. R. Nelson and B. I. Halperin, Pentagonal and icosahedral order in rapidly cooled metals, <EM>Science</EM>, <STRONG>229</STRONG> (19 July 1985) 233-238.
+<P>
+
+<H2>QuasiTiler</H2>
+On the
+<A HREF="/docs/forum/forum.html">Geometry Forum</A> on this server, there is an
+<A HREF="/docs/forum/quasitiler/quasitiler.html"> article regarding QuasiTiler</A> with a brief explanation.
+<P>
+Check also a <A HREF="http://www.geom.uiuc.edu/apps/quasitiler/MS_about.html">another explanation</A> to the mathematics behind QuasiTiler, by Prof. Marjorie Senechal, an expert on the subject.
+<P>
+<A NAME=QTapp_reference>QuasiTiler</A> is also available as a NeXTSTEP application by anonymous ftp from the <A HREF="ftp://geom.math.uiuc.edu/pub">Geometry Center FTP</A>.  To download the Multi-Architecture Binary (Motorola, Intel, HP PA-RISC)
+<A HREF="ftp://geom.math.uiuc.edu/pub/software/QuasiTiler-3.0.tar.Z">
+/pub/software/QuasiTiler-3.0.tar.Z</A> click here.
+<P>
+
+<H2>Other Resources</H2>
+
+Many other references and software packages related to tilings
+are detailed in Doris Schattschneider's list of <A
+HREF="/software/tilings">tesselation resources</A>.
+<P>
+
+Any comments and suggestions concerning this web server are welcome and
+should be e-mailed to <A HREF = "http://www.geom.uiuc.edu/people/webmaster.html">
+<I>webmaster@www.geom.uiuc.edu</I></A>.
+<P>
+<HR>
+<A HREF="/welcome.html"><IMG SRC="/icons/home.gif" ALT="Geometry Center Home"></A>
+<A REV="Subdocument" HREF="/apps/gallery.html"><IMG SRC="/icons/prev.gif" ALT=" ... Up to Previous"></A>
+
+<P>
+<PRE>
+<I>The Geometry Center
+University of Minnesota
+400 Lind Hall 
+207 Church Street S.E.
+Minneapolis, MN  55455
+</I>
+</PRE>
+</BODY>
+

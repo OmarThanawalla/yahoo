@@ -1,0 +1,150 @@
+<base href="http://www.ubio.org/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>uBio Home</title>
+	<link rel="stylesheet" href="stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="stylesheets/blueprint/print.css" type="text/css" media="print">    
+  <!--[if IE]><link rel="stylesheet" href="stylesheets/blueprint/lib/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  <link rel="stylesheet" href="stylesheets/blueprint/lib/frontpage-grid.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  
+  <link rel="stylesheet" href="stylesheets/index_new.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="stylesheets/dropdown_menu.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <!--[if lte IE 6]><link rel="stylesheet" media="all" type="text/css" href="stylesheets/dropdown_menu_ie.css" /><![endif]-->
+  
+  <script type="text/javascript" charset="utf-8">
+  // <![CDATA[ 
+    function GetXmlHttpObject()
+    {
+        var xmlHttp = null;
+        try
+        {
+            // Firefox, Opera 8.0+, Safari
+            xmlHttp = new XMLHttpRequest();
+        }
+        catch (e)
+        {
+            // Internet Explorer
+            try
+            {
+                xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e)
+            {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+        return xmlHttp;
+    }
+
+
+
+    function stateChanged() 
+    { 
+        if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete")
+        {
+            if (xmlHttp.responseText!="")
+            {
+                document.getElementById("searchHelp").style.display = "block";
+                document.getElementById("searchHelp").innerHTML = xmlHttp.responseText;
+            }
+            else
+            {
+                document.getElementById("searchHelp").style.display = "none";
+            }
+        } 
+    }
+
+
+
+    function showHint(str)
+    {
+        if (str.length == 0)
+        { 
+            document.getElementById("txtHint").innerHTML = "";
+            return
+        }
+
+        xmlHttp = GetXmlHttpObject();
+
+        if (xmlHttp == null)
+        {
+            alert ("Browser does not support HTTP Request");
+            return;
+        } 
+
+	var theUrl = "/searchHelp.php";
+        theUrl = theUrl + "?q=" + str
+        theUrl = theUrl + "&sid=" + Math.random();
+        xmlHttp.onreadystatechange = stateChanged;
+        xmlHttp.open("GET",theUrl,true);
+        xmlHttp.send(null);
+    }
+  // ]]>
+  </script>
+  
+</head>
+
+<body>
+  <div id="global_navigation">
+    <div class="tools">
+      <ul class="tool_menu">
+        <li><a href="http://www.ubio.org/rss/">uBioRSS</a></li>
+        <li><a href="http://taxatoy.ubio.org/">TaxaToy</a></li>
+	<li><a href="http://ontospecies.ubio.org/">OntoSpecies</a></li>
+	<li><a href="http://ligercat.ubio.org/">LigerCat</a></li>
+	<li><a href="http://aging.ubio.org/">Aging Portal</a></li>
+        <li class="has_submenu"><a href="#more_tools">More Tools <span class="down_arrow">&#9660;</span><!--[if IE 7]><!--></a><!--<![endif]-->
+          <!--[if lte IE 6]><table><tr><td><![endif]-->
+          	<ul id="more_tools">
+              <li><a href="http://www.ubio.org/tools/linkit.php" title="automatically link names in your site to authoritative databases.">LinkIT</a></li>
+              <li><a href="http://www.ubio.org/tools/recognize.php" title="findIT identifies scientific names in any text.">FindIT</a></li>
+              <li><a href="http://www.ubio.org/tools/explode.php">ParseIT</a></li>
+              <li><a href="http://www.ubio.org/services/mapper/index2.php">MapIT</a></li>
+              <li><a href="http://www.ubio.org/tools/crawler.php">CrawLIT</a></li>
+              <li><a href="http://www.ubio.org/index.php?pagename=XID/key">X:ID</a></li>
+          	</ul>
+          <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+        </li>
+      </ul>
+    </div>
+    <div class="login">
+      <ul class="login_menu">
+        <li><a href="http://www.ubio.org/browser/login.php">Editor Login</a></li>
+      </ul>
+  </div>
+</div>
+ 
+  <div class="container">
+    <h1 class="logo column span-4"><span>uBio</span></h1>
+    <p id="tagline" class="column span-8 last">Indexing <span class="amp">&amp;</span> Organizing <span class="totalNames">11,106,374</span><br/>Biological Names</p>
+  
+  
+
+    <div id="search" class="column span-12 last">
+      <form action="http://www.ubio.org/browser/search.php" method="get">
+        <fieldset>
+          <legend>Search</legend>
+          <input type="text" id="search_all" class="text" autocomplete="off" name="search_all" onkeyup="showHint(this.value);" />
+          <input type="submit" id="search_submit" class="submit" value="Search" />
+          <div id="searchHelp" style="display:none;"></div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  
+  <div id="informational_links">
+    <ul>
+      <li><a href="http://www.ubio.org/index.php?pagename=collaborations">Collaborations</a></li><li class="last"><a href="http://www.ubio.org/index.php?pagename=general">About uBio</a></li>
+    </ul>
+  </div>
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+      </script>
+      <script type="text/javascript">
+      _uacct = "UA-634822-1";
+      urchinTracker();
+      </script>
+</body>
+</html>

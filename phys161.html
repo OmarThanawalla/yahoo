@@ -1,0 +1,416 @@
+<base href="http://www.pbs.org/wgbh/aso/tryit/atom/">
+<HTML>
+<HEAD>
+<TITLE>A Science Odyssey: You Try It: Atom Builder</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--version()
+	// returns a float with the version number of the browser
+	// (accounting for Internet Explorer masquerading as Navigator
+	function version() {
+		var versionNum;
+		var indexVer;
+		// accounting for MSIE masquerading as Navigator
+		indexVer = navigator.appVersion.indexOf("MSIE")
+		if (indexVer < 0) {
+			indexVer = 0;
+		} else {
+			indexVer = indexVer + 5;
+		}		
+		versionNum = parseFloat(navigator.appVersion.substring(indexVer,indexVer + 4));
+		return versionNum;
+	}
+// -->
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--shockwavePossible()
+	// returns true if browser is NN 2 or higher, IE 3 or higher or AOL 3 or higher
+	// _and_ if platform is Mac or Windows 3.1, 95, or NT 4.0 (not NT 3.5, not UNIX)
+	function shockwavePossible() {
+		if (navigator.appName == "Netscape" && version() >= 2.0 && !(X11browser()) ) {
+			return true;
+		}
+		if (navigator.appName == "Microsoft Internet Explorer" && version() >= 3.0 && !(X11browser()) ) {
+			return true;
+		}
+		
+		return false;
+	}
+// -->
+</SCRIPT>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--shockwaveInstalled()
+	// returns true if browser if Netscape plug-in is installed
+	// returns false if not installed
+	// returns null if the state of the plug-in cannot be determined
+	
+	function shockwaveInstalled() {
+		// alert('checking installed');
+		if ( !(shockwavePossible()) ) { 
+			return false;
+		} else {
+			if ( navigator.appName == "Netscape" && version() >= 3.0) {
+				if (navigator.mimeTypes["application/x-director"] && navigator.mimeTypes["application/x-director"].enabledPlugin) {
+					return true;
+				} else {
+					return false;
+				} 
+			} else {
+				return null;
+			}
+		}
+	}
+// -->
+</SCRIPT>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--X11browser()
+	// returns true if browser is running in X11
+	// otherwise returns false
+	function X11browser() {
+		var platform = parseInt(navigator.appVersion.substring(0,1));
+		if (navigator.appVersion.indexOf("X11") >= 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+// -->
+</SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--launch()
+	// Copyright (c) 1996-1997 Athenia Associates.
+	// http://www.webreference.com/js/
+	// License is granted if and only if this entire
+	// copyright notice is included. By Tomer Shiran.
+	// modified by Peter Pinch to support Netscape 2.0
+	
+	function launch(newURL, newName, newFeatures, orgName) {
+		var remote = open(newURL, newName, newFeatures);
+		// Navigator 2 needs to prodded to load the location
+		if (navigator.appName == "Netscape" && version() < 3) {
+			open(newURL, newName, newFeatures);			
+		}
+		if (remote.opener == null) {
+			remote.opener = window;
+		}
+		remote.opener.name = orgName;
+		return remote;
+	}
+// -->
+</SCRIPT>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--page-specific functions
+	function launchShockwave() {
+    	// Shockwave will not address an IE 3 window properly
+    	// this hack avoids odd behaviors, but does spawn a third window
+    	if ( (navigator.appName == "Microsoft Internet Explorer") && (version() < 4) ) {
+    		var textWindowName = "IE3atomText"; // not the TARGET used in Shockwave
+    	} else {
+    		var textWindowName = "atomText";	// TARGET used in Shockwave
+    	}
+     	// spawn new window
+    	myRemote = launch("builder.html", 
+    					  "atomShockwave", 
+"height=400,width=500,alwaysLowered=0,alwaysRaised=0,channelmode=0,dependent=0,directories=0,fullscreen=0,hotkeys=1,location=0,menubar=0,resizable=1,scrollbars=1,status=1,titlebar=1,toolbar=0,z-lock=0", 
+						  textWindowName);
+	}
+
+// -->
+</SCRIPT>
+
+</HEAD>
+
+<body bgcolor="#006699" text="#00FFFF" link="#FFFFFF" vlink="#000066">
+
+    <!-- Calling auto localization code because we haven't yet. -->
+    <script type="application/javascript" src="http://www.pbs.org/cgi-registry/preferences/localize/ip2station-js.cgir?auto_local_unset"></script>
+
+
+
+        
+
+
+
+<!-- No Ad Zone defined for this page. -->
+
+
+<script type="text/javascript">
+var GA_env = { ua_list: "UA-4005067-1,UA-1996666-1,UA-3966576-1,UA-12253789-1,ET-12253789-2" };
+
+GA_env.vars = { localized: 0 };
+
+var GA_jshost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + GA_jshost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script src="/js/ga-current.js" type="text/javascript"></script>
+
+<!-- Begin Universal Google Analytics -->
+<script> 
+  (function() {
+	window['GoogleAnalyticsObject'] = '_uga';
+	window['_uga'] = window['_uga'] || function() {
+		(window['_uga'].q = window['_uga'].q || []).push(arguments)
+	},
+	window['_uga'].l = 1*new Date();
+	var ga = document.createElement('script');
+	ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/analytics.js';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ga, s);
+   })();
+
+	window._uga('create', 'UA-1996666-7',  {name: 'uga_0'});
+	window._uga('uga_0' + '.send', 'pageview');
+	window._uga('create', 'UA-4005067-2',  {name: 'uga_1'});
+	window._uga('uga_1' + '.send', 'pageview');
+   
+</script> 
+<!-- End Universal Google Analytics -->
+
+<!-- Begin comScore Tag --> 
+<script> 
+  var _comscore = _comscore || []; 
+  _comscore.push({ c1: "2", c2: "3005420" }); 
+  (function() { 
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; 
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; 
+    el.parentNode.insertBefore(s, el); 
+  })(); 
+</script> 
+<noscript> 
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=3005420&cv=2.0&cj=1" /> 
+</noscript> 
+<!-- End comScore Tag --> 
+
+    <style>layer { position: absolute; }</style>
+<script type='text/javascript' language='JavaScript' src='/includes/javascript/elqNow/elqCfg.js'></script>
+<script type='text/javascript' language='JavaScript' src='/includes/javascript/elqNow/elqImg.js'></script> 
+
+    <script type="text/javascript" src="/foresee/foresee-trigger.js"></script>
+
+
+<script type="text/javascript">function keystrokes(f){};</script>
+
+<table id="pbs_gnav_t" border="0" width="100%" cellpadding="1" cellspacing="0" bgcolor="#cccccc">
+<tr><td>
+
+<table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#333333">
+<tr><td bgcolor="#ffffff" width="78" height="28" align="left"><a href="http://www.pbs.org/cgi-registry/stationlink.cgir" target="_top"><img src="/images/stations/smallbw/PBS.gif" width="78" height="28" border="0" alt="Visit Your Local PBS Station" /></a></td>
+<td bgcolor="#333333" width="30" height="28" align="left"><a href="/" target="_top"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_pbslogo.gif" width="30" height="28" border="0" alt="PBS Home" /></a></td>
+<td bgcolor="#333333" width="3" height="28"><img src="http://www-tc.pbs.org/images/common/blank.gif" width="3" height="28" border="0" alt="" /></td>
+
+<td bgcolor="#333333" align="center" valign="middle" width="11%"><a href="http://www.pbs.org/" target="_top"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_pbshome.gif" width="62" height="9" border="0" alt="PBS Home" /></a></td>
+<td bgcolor="#333333" width="2" align="center" valign="middle"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_divider.gif" width="2" height="28" border="0" alt="" /></td>
+<td bgcolor="#333333" align="center" valign="middle" width="15%"><a href="http://www.pbs.org/programs/" target="_top"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_programs.gif" width="87" height="9" border="0" alt="Programs A-Z" /></a></td>
+<td bgcolor="#333333" width="2" align="center" valign="middle"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_divider.gif" width="2" height="28" border="0" alt="" /></td>
+<td bgcolor="#333333" align="center" valign="middle" width="16%"><a class="footernav" href="http://www.pbs.org/hplink/redir/tvschedules/" target="_top">
+                                                <img src="http://www-tc.pbs.org/images/nav/global/globalnav_schedules.gif" width="81" height="9" border="0" alt="TV Schedules" /></a></td>
+<td bgcolor="#333333" width="2" align="center" valign="middle"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_divider.gif" width="2" height="28" border="0" alt="" /></td>
+<td bgcolor="#333333" align="center" valign="middle" width="16%"><a href="http://video.pbs.org/" target="_top"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_watchvideo.gif" width="67" height="9" border="0" alt="Watch Video"></a></td>
+<td bgcolor="#333333" width="2" align="center" valign="middle"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_divider.gif" width="2" height="28" border="0" alt="" /></td>
+<td bgcolor="#333333" align="center" valign="middle" width="15%"><a class="footernav" href="http://www.pbs.org/cgi-registry/sitemembershiplink.cgir" target="_top">
+<img src="http://www-tc.pbs.org/images/nav/global/globalnav_support.gif" width="76" height="9" border="0" alt="Donate" /></a></td>
+<td bgcolor="#333333" width="2" align="center" valign="middle"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_divider.gif" width="2" height="28" border="0" alt="" /></td>
+<td bgcolor="#333333" align="center" valign="middle" width="13%"><a href="http://www.shoppbs.org/entry.point?target=z&source=PBSCS_CONTENT_TOPNAV:N:DGR:N:N:707:QPBS" target="_top"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_shop.gif" width="55" height="9" border="0" alt="Shop PBS" /></a></td>
+<td bgcolor="#333333" width="2" align="center" valign="middle"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_divider.gif" width="2" height="28" border="0" alt="" /></td>
+<td bgcolor="#333333" align="center" valign="middle" width="14%"><a href="http://www.pbs.org/search/" target="_top"><img src="http://www-tc.pbs.org/images/nav/global/globalnav_searchpbs.gif" width="69" height="9" border="0" alt="Search PBS" /></a></td>
+</tr>
+</table>
+
+
+</td></tr>
+</table>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--javascript version for javascript-aware browsers
+	
+if ( !(navigator.appName == "Netscape" && version() < 3) ) {
+
+	document.writeln('<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">');
+	document.writeln('	<TR>');
+	document.writeln('		<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/sciodtitle.jpeg" ALT="A Science Odyssey" ALIGN=LEFT WIDTH="39" HEIGHT="251" BORDER="0"></TD>');
+	document.writeln('		<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/atombuilderheader.gif" ALT="Atom Builder" WIDTH="320" HEIGHT="57" BORDER="0">');
+	document.writeln('		<P>');
+	document.writeln('		<IMG SRC="images/atom.gif" ALT="Stylized depiction of an atom" ALIGN=LEFT WIDTH="159" HEIGHT="171" BORDER="0">');
+	
+	// if shockwave is a possibility, we should offer them a direct link to the shockwave
+	if (shockwavePossible()) {
+		document.writeln('		<P>Go directly to <A HREF="#" onClick="launchShockwave()"><B>Atom Builder activity</B></A><BR> ');
+		document.writeln('		(84K - requires <A HREF="../../help.html#shockwave">Shockwave</A>)');
+		document.writeln('		<P>');
+		document.writeln('		<HR>');
+	}
+	
+	document.writeln('		<P>How small can we go? </P>');
+	document.writeln('		<P>The stuff you scrape off burnt toast is made primarily of atoms of carbon.');
+	document.writeln('		   But what makes up a carbon atom -- or any other atom?');
+	document.writeln('		</P>');
+	document.writeln('		<P>The first subatomic particle to be identified was the electron, in 1898. ');
+	document.writeln('			Ten years later, Ernest Rutherford discovered that atoms have a very dense nucleus, which contains protons. ');
+	document.writeln('			In 1932, James Chadwick discovered the neutron, another particle located within the nucleus. ');
+	document.writeln('		</P>');
+	document.writeln('		<P>And so scientists thought they had found the smallest atomic building blocks. ');
+	document.writeln('			This changed in 1963 when Murray Gell-Mann proposed his quark theory. ');
+	document.writeln('			Gell-Mann believed that each proton and each neutron is made up of three even smaller particles -- particles he named quarks.');
+	document.writeln('		</P>');
+	document.writeln('		<P>Physicists have learned a great deal over the past 100 years. For instance, it is now known that in each atom of carbon<SUP>12</SUP>, ');
+	document.writeln('			there are a set	number of subatomic particles: six electrons, six protons, and six neutrons. ');
+	document.writeln("			The atom's nucleus and electrons are held together by the electromagnetic force -- ");
+	document.writeln('			the positive charges of the protons balances the negative charges of the electrons. ');
+	document.writeln('			Neutrons have no charge.');
+	document.writeln('		</P>');
+	document.writeln("		<P>Here's a chance for you to construct a carbon atom. You'll start with a hydrogen atom, ");
+	document.writeln('			which contains one proton and one electron. Just add protons, neutrons, and electrons. ');
+	document.writeln('			By the way, you must also build each proton and neutron from two types of quarks -- up quarks and down quarks. 	');
+	document.writeln("			Finally, some advice: try to keep the particles' charges balanced. You'll have a difficult time if you don't. "),
+	document.writeln('		</P>');
+	document.writeln('		<BR><BR>');
+	document.writeln('		<P>Before starting, you may want to refer to these guides:');
+	document.writeln('		<UL TYPE=DISC>');
+	document.writeln('			<LI><A HREF="elempartp.html">The Atom Builder Guide to Elementary Particles</A>');
+	document.writeln('			<LI><A HREF="buildatomp.html">The Atom Builder Guide to Building a Stable Atom</A> <LI><A HREF="glossary.html">Glossary</A>');
+	document.writeln('		</UL>');
+	document.writeln('		<BR><BR>');
+	document.writeln('		<P>Are you ready? Then get to work!');
+	document.writeln('		<UL TYPE=DISC>');
+	document.writeln('		<LI> <A HREF="#" onClick="launchShockwave()"><B>Atom Builder activity</B></A> ');
+	document.writeln('				<IMG SRC="../images/arrow.gif" ALT="arrow" ALIGN="ABSMIDDLE" WIDTH="39" HEIGHT="29" BORDER="0" HSPACE="10"> ');
+	document.writeln('				(84K - requires <A HREF="../../help.html#shockwave">Shockwave</A>)');
+	document.writeln('			<BR> ');
+	document.writeln('			<LI><A HREF="indext.html">description of Atom Builder</A><P>');
+	document.writeln('		</UL>');
+	document.writeln('		<P><BR>');
+	document.writeln('		<P>');
+	document.writeln('		<P><BR>');
+	document.writeln('		<P>Related <B>People and Discoveries </B>entries<BR> ');
+	document.writeln('		<UL TYPE=DISC>');
+	document.writeln('			<LI><A HREF="../../databank/entries/bpbohr.html">Neils Bohr</A> ');
+	document.writeln('		<LI><A HREF="../../databank/entries/bpgell.html">Murray Gell-Mann</A> ');
+	document.writeln('		<LI><A HREF="../../databank/entries/bpheis.html">Werner Heisenberg</A> ');
+	document.writeln('		<LI><A HREF="../../databank/entries/bpplan.html">Max Planck</A> ');
+	document.writeln('		<LI><A HREF="../../databank/entries/bpruth.html">Ernest Rutherford</A> ');
+	document.writeln('		<LI><A HREF="../../databank/entries/bpschr.html"> Erwin Schr&#246;dinger</A> ');
+	document.writeln('		<LI><A HREF="../../databank/entries/bpwein.html">Steven Weinberg</A> <P> ');
+	document.writeln('		<LI><A HREF="../../databank/entries/dp00qu.html">Planck discovers the quantum nature of energy</A> ');
+	document.writeln('		<LI><A HREF="../../databank/entries/dp13at.html">Rutherford and Bohr describe atomic structure</A> ');
+	document.writeln('		<LI><A HREF="../../databank/entries/dp27un.html">Heisenberg states the uncertainty principle</A> ');
+	document.writeln('		<LI><A HREF="../../databank/entries/dp32ne.html">Chadwick discovers the neutron</A>');
+	document.writeln('		</UL>');
+	document.writeln('		<P><BR>');
+	document.writeln('		<A HREF="disclaimer.html">A Disclaimer</A>');
+	document.writeln('	</TD>');
+	document.writeln('</TR>');
+	document.writeln('</TABLE>');
+
+	
+
+}
+
+// -->
+</SCRIPT>
+
+
+<NOSCRIPT>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+	<TR>
+		<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/sciodtitle.jpeg" ALT="A Science Odyssey" ALIGN=LEFT WIDTH="39" HEIGHT="251" BORDER="0"></TD>
+		<TD VALIGN="TOP" ALIGN="LEFT"><IMG SRC="images/atombuilderheader.gif" ALT="Atom Builder" WIDTH="320" HEIGHT="57" BORDER="0">
+		<P>
+		<IMG SRC="images/atom.gif" ALT="Stylized depiction of an atom" ALIGN=LEFT WIDTH="159" HEIGHT="171" BORDER="0">
+		<P>Go directly to <A HREF="builder-nojs.html"><B>Atom Builder activity</B></A><BR> 
+		(84K - requires <A HREF="../../help.html#shockwave">Shockwave</A>)
+		<P>
+		<HR>
+		<P>How small can we go? </P>
+		<P>The stuff you scrape off burnt toast is made primarily of atoms of carbon.
+		   But what makes up a carbon atom -- or any other atom?
+		</P>
+		<P>The first subatomic particle to be identified was the electron, in 1898. 
+			Ten years later, Ernest Rutherford discovered that atoms have a very dense nucleus, which contains protons. 
+			In 1932, James Chadwick discovered the neutron, another particle located within the nucleus. 
+		</P>
+		<P>And so scientists thought they had found the smallest atomic building blocks. 
+			This changed in 1963 when Murray Gell-Mann proposed his quark theory. 
+			Gell-Mann believed that each proton and each neutron is made up of three even smaller particles -- particles he named quarks.
+		</P>
+		<P>Physicists have learned a great deal over the past 100 years. For instance, it is now known that in each atom of carbon<SUP>12</SUP>, 
+			there are a set	number of subatomic particles: six electrons, six protons, and six neutrons. 
+			The atom's nucleus and electrons are held together by the electromagnetic force -- 
+			the postitive charges of the protons balances the negative charges of the electrons. 
+			Neutrons have no charge.
+		</P>
+		<P>Here's a chance for you to construct a carbon atom. You'll start with a hydrogen atom, 
+			which contains one proton and one electron. Just add protons, neutrons, and electrons. 
+			By the way, you must also build each proton and neutron from two types of quarks -- up quarks and down quarks. 	
+			Finally, some advice: try to keep the particles' charges balanced. You'll never succeed if you don't. 
+		</P>
+		<BR><BR>
+		<P>Before starting, you may want to refer to these guides:
+		<UL TYPE=DISC>
+			<LI><A HREF="elempartp.html">The Atom Builder Guide to Elementary Particles</A>
+			<LI><A HREF="buildatomp.html">The Atom Builder Guide to Building a Stable Atom</A>
+			<LI><A HREF="glossary.html">Glossary</A>
+		</UL>
+		<BR><BR>
+		<P>Are you ready? Then get to work!
+		<UL TYPE=DISC>
+			<LI> <A HREF="builder-nojs.html"><B>Atom Builder activity</B></A> 
+				<IMG SRC="../images/arrow.gif" ALT="arrow" ALIGN="ABSMIDDLE" WIDTH="39" HEIGHT="29" BORDER="0" HSPACE="10"> 
+				(84K - requires <A HREF="../../help.html#shockwave">Shockwave</A>)
+			<BR> 
+			<LI><A HREF="indext.html">description of Atom Builder</A><P>
+		</UL>
+		<P><BR>
+		<P>
+		<P><BR>
+		<P>Related <B>People and Discoveries </B>entries<BR> 
+		<UL TYPE=DISC>
+			<LI><A HREF="../../databank/entries/bpbohr.html">Niels Bohr</A> 
+			<LI><A HREF="../../databank/entries/bpgell.html">Murray Gell-Mann</A> 
+			<LI><A HREF="../../databank/entries/bpheis.html">Werner Heisenberg</A> 
+			<LI><A HREF="../../databank/entries/bpplan.html">Max Planck</A> 
+			<LI><A HREF="../../databank/entries/bpruth.html">Ernest Rutherford</A> 
+			<LI><A HREF="../../databank/entries/bpschr.html"> Erwin Schr&#246;dinger</A> 
+			<LI><A HREF="../../databank/entries/bpwein.html">Steven Weinberg</A> <P>
+			<LI><A HREF="../../databank/entries/dp00qu.html">Planck discovers the quantum nature of energy</A> 
+			<LI><A HREF="../../databank/entries/dp13at.html">Rutherford and Bohr describe atomic structure</A> 
+			<LI><A HREF="../../databank/entries/dp27un.html">Heisenberg states the uncertainty principle</A> 
+			<LI><A HREF="../../databank/entries/dp32ne.html">Chadwick discovers the neutron</A> 
+		</UL>
+		<P><BR>
+		<A HREF="disclaimer.html">A Disclaimer</A>
+	</TD>
+</TR>
+</TABLE>
+</NOSCRIPT>
+
+<P><B>If you are having trouble accessing the Atom Builder activity, 
+try the <A HREF="index-nojs.html">non-Javascript version</A></B>.</P>
+
+</BLOCKQUOTE>
+
+		
+
+<!--********************************* Footer *************************** -->
+
+
+<blockquote>
+<HR>
+<BR>
+<FONT SIZE="3">
+<CENTER><A HREF="/wgbh/aso/">Home</A> | <A HREF="../">You Try It Menu </A>  | <A HREF="/wgbh/aso/databank/">People and Discoveries</A> |  <A HREF="/cgi-bin/wgbh/printable.pl">Printable Version</A> | <A HREF="/wgbh/aso/help.html">Help</A><P>
+<A HREF="http://main.wgbh.org">WGBH</A> | <A HREF="http://www.pbs.org">PBS Online</A>  | <A HREF="/wgbh/aso/search.html">Search</A> | <A HREF="/wgbh/aso/feedback.html">Feedback</A> | <A HREF="/wgbh/aso/shop.html">Shop</A><BR>
+<A HREF="/wgbh/aso/copyright.html">&copy; 1998 WGBH</A></FONT></CENTER>
+</blockquote>
+</BODY>
+</HTML> 

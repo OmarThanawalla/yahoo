@@ -1,0 +1,600 @@
+<base href="http://www.physicsfinder.org/">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="utf-8" ?> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="robots" content="index" />
+	<meta name="robots" content="ACAP allow-index" />   
+	<link rel="icon" href="/jhtml/css/css_images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/jhtml/css/css_images/favicon.ico" type="image/x-icon" />	                    
+
+	<title>Cookies Required</title>
+	<link type="text/css" rel="stylesheet" href="/css/commons/reset.css" /> 
+	<link type="text/css" rel="stylesheet" href="/css/commons/jquery.css" />
+	<link type="text/css" rel="stylesheet" href="/css/commons/mathstyle.css" />
+	<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui-1.7.2.custom.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.tooltip.js"></script>
+	<script type="text/javascript" src="/js/jquery.extensions.js"></script>
+	<script type="text/javascript" src="/js/yui/utilities.js"></script>           
+	<script type="text/javascript" src="/js/scitation.utilities.js"></script>                  
+	<link type="text/css" rel="stylesheet" href="/cmlink/7.1344" />
+	<link type="text/css" rel="stylesheet" href="/jhtml/css/SCI_default_Polopoly.css" />
+	<script type="text/javascript" src="/js/scitation.search.js"></script>
+	<script type="text/javascript" src="/js/date.js"></script>
+	<script type="text/javascript" src="/js/datepicker.js"></script>
+	<script type="text/javascript">
+	$(function() {
+	  $('.boxy').boxy();
+	});
+	$(document).ready(function(){ 
+	
+	     /* AQS Listener ************ */
+	     $(".aqslistener").click(function (e) {
+	         var searchcoden = '';
+	         if (searchcoden == '') searchcoden = searchkey;
+	         AQSlistener($(this).html(),'/scitation', searchcoden, e.pageX, e.pageY);
+	     });
+	     
+	     $(".popuplink").click(function() {
+	        javascript:window.open($(this).attr('href'));
+	        return false;
+	     });
+	
+	$(".link_shownextprevious").hover(
+	   function (e) { 
+	       var prevnextdom = $(this).attr("alt");
+	       $("#prevnext_floater").show();
+	       LaunchArticlePrevNext(prevnextdom, e.pageX, e.pageY);
+	   },
+	   function() {
+	             $("#prevnext_floater").animate({"opacity":"0.0"},50, function() {
+	                 $("#prevnext_floater").hide(); 
+	             });
+	             /*
+	       $("#prevnext_floater").animate({"opacity":"0.0","top":"350px"},125, function() {
+	           $("#prevnext_floater").hide(); 
+	       });
+	       */
+	   }
+	);
+	
+	$(".launchMedia").click(
+	   function () { 
+	       return launchMedia(this);
+	   }
+	);
+	
+	     $(".articlereferenceslist li a, .edItem_block li a").click(function (e) {
+	         var cvips = $(this).find("span").html();
+	         if (cvips == null) return true; 
+	      var previewurl = "/cmlink/15.470?cvips=" + cvips + "&amp;absurl=" + escape($(this).attr("href"));
+	      LaunchAJAXContentPreview(previewurl, e.pageX, e.pageY);
+	      return false; 
+	     });
+	     
+	     $(".ft_firstpara .citeref_collection").remove();
+	     
+	     $("#singlePreview").draggable();
+	 });
+	
+	var feedbackresolver = "/cmlink/15.498";
+	//return AQS('$authorFullName','$aqsDivId','/scitation');"
+	</script>
+</head>
+
+<body>
+          
+<div id="pageWrapper">
+	<div class="topBorderLayout header">
+		<script type="text/javascript">
+		$(document).ready(function(){ 
+		     $(".loadSuper").click(function() {
+		         loadSuperMenu(this, 'supermenu')                       
+		        return false;
+		     });
+		  });
+		</script>
+	
+		<div class="topNavLinks">
+			<img src="/img/fulltext/text_increase.gif" alt="Text Increase" class="access-text looklikelink" onclick="return textsize('+');" />
+			<img src="/img/fulltext/text_decrease.gif" alt="Text Decrease" class="access-text looklikelink" onclick="return textsize('-');" />
+			<img src="/img/fulltext/text_normal.gif" alt="Text Reset" class="access-text looklikelink" onclick="return textsize('12');" />
+			&nbsp;&nbsp;
+			<a href="/cmlink/15.499?feedback_type=scitation_contact" class="loadSuper entitlelink"><img src="/img/scitation/contact-icon.png" alt="mySci icon"/> Contact</a>
+			<a href="http://commerce.aip.org/cart.do" class="entitlelink"><img src="/img/dbt/cartview.gif" alt="View Cart"/> View Cart</a>
+			<a href="/modules/scitation/myscitation.jsp" class="loadSuper entitlelink"><img src="/img/scitation/mysci-icon.png" alt="mySci icon"/> MyScitation</a>
+			<a href="/modules/scitation/registration.jsp" class="loadSuper entitlelink"><img src="/img/scitation/register-icon.png" alt="Register icon"/> Register</a>
+		</div>
+	</div><!-- end class="topBorderLayout header" -->
+
+    <div class="borderLayout canbestyled">
+          <div class="borderLayoutMastHead">
+		        <script type="text/javascript">
+		        //<![CDATA[
+		        var searchkey = "";
+		        var searchtype = "searchin";
+		        var map;
+		        $(document).ready(function(){ 
+					if($('#searchfield').val() != "enter search here...")
+						$('#searchfield').css("color","#000000");
+		    
+		        	//$("#SearchPullDown_SelectedOption img").attr("src", "searchicon-" + $('#searchzone').val() + ".png");
+			        $("#SearchPullDown_SelectedOption").click(
+			            function () 
+			            { 
+			            	$("#SearchPullDown_Wrapper").toggle('fast'); 
+			            }
+			        );
+			        $("ul.SearchPullDown li").click(
+			            function () { 
+			            	updateSearchPullDown(this,'#SearchPullDown_SelectedOption'); 
+			            	$("#SearchPullDown_Wrapper").toggle('fast');
+			            }
+			        );		
+				});
+		        //]]>    
+		        </script>
+		        
+		        
+				<form id="searchpanelform" onsubmit="return false;" action="/sci_search" method="get">
+					<div id="AIP_SearchPanel">
+					
+						<fieldset style="display:none;">
+						<input type="hidden" value="" name="q" id="q" />
+						<input type="hidden" value="" name="searchtype" id="searchtype" />
+						<input type="hidden" value="faceted" name="faceted" id="faceted" />
+						<input type="hidden" value="newestdate" name="sortby" id="sortby" />
+						<input type="hidden" value="false" name="CP_Style" id="CP_Style" />
+						<input type="hidden" value="" name="alias" id="alias" />
+						</fieldset>  
+						<div id="tab_listing_wrapper">
+							<ul id="tab_listing">
+								<li class="searchtab selectedtab" id="keywordtab" onclick="return switchsearchtab(this, 'searchin');">Keyword</li>
+								<li class="searchtab" onclick="return switchsearchtab(this, 'doi');">DOI</li>
+								<li class="searchtab"><a href="/search_scitation">Advanced</a></li>
+							</ul>
+						</div>
+						<div id="searchpanel_wrapper">
+							<div id="submitbuttonbox"><input value="" class="searchsubmit" onclick="launchsearch('verity')" type="submit" /></div>
+							<div id="searchpanel">
+								<div id="search_searchin" class="search_content_pane">
+									<label for="searchzone" class="hidelabel">Search Content Type</label>
+									<span id="searchfield_wrap"><input value="enter search here..." class="smallsearchfield" style="color:#ccc;" id="searchfield" onfocus="closeSearchError(); checkThisInput(this,'enter search here...');" onblur="checkThisInput(this,'enter search here...');" />&nbsp;</span>
+									<div id="searchzone_container">
+										<div id="SearchPullDown_SelectedOption"><img src="/img/aqs/searchicon-4.png" alt="Selected Search Field" /><img src="/img/aqs/searchselect_arrow.png" class="morearrow" align="right" alt="searchdrop" /></div>	
+										<div id="SearchPullDown_Wrapper">
+											<input type="hidden" name="searchzone" id="searchzone" value="4" />
+											<ul class="SearchPullDown">
+												<li rel="4"><img src="/img/aqs/searchicon-4.png" alt="peer reviewed" />Peer-reviewed articles</li>
+												<li rel="3"><img src="/img/aqs/searchicon-3.png" alt="all site" />Website content</li>
+												<li rel="5"><img src="/img/aqs/searchicon-5.png" alt="SPIN" />SPIN</li>                                          
+
+                                                <li rel="7"><img src="/img/aqs/searchicon-7.png" alt="PubMed" />PubMed</li>
+												<li rel="8"><img src="/img/aqs/searchicon-8.png" alt="Google Scholar" />Google Scholar</li>
+											</ul>   
+										</div>                                 	
+									</div>
+								</div>
+								<div id="search_doi" class="search_content_pane">
+									<label for="doi">article doi:</label>&nbsp;
+									<input id="doi" class="smallsearchfield" value="enter doi... (ie:10.1063/1.3441405)" style="width:180px; color:#ccc;" onfocus="closeSearchError(); checkThisInput(this,'enter doi... (ie:10.1063/1.3441405)');" onblur="checkThisInput(this,'enter doi... (ie:10.1063/1.3441405)');" />
+								</div>
+							</div>  
+						</div>
+						<div id="AIP_SearchPanel_Error" onclick="closeSearchError()"></div>  
+					</div>
+				</form> 
+
+        <a name="top"></a>
+        
+        
+        <div id="supermenu"><div id="supermenu_body"></div></div>
+
+        <div class="elementGroup">
+	         <div class="groupContent">
+		        <div class="image">
+	        		<a href="/"><img src="/polopoly_fs/7.1343!image/2139645632.png_gen/derivatives/default/2139645632.png" alt="Scitation Logo" /></a>
+	        		
+	            </div>
+	         </div>
+        </div>
+
+                        
+            <script type="text/javascript">
+            // <![CDATA[
+            $(document).ready(function(){$("ul.fancyNav").superfish({ speed:'fast'});}); 
+            //]]>
+            </script>
+            
+            <div id="fancyNavMenu">
+            <ul class="fancyNav">
+
+						<li><a href="/browse">Browse</a>
+						<ul>
+							<li><a href="/browse/alphabetical">Alphabetical</a></li>                                                                                                                                
+							<li><a href="/browse/by_publisher">By Publisher</a></li>                                                                                                                                
+							<li><a href="/browse/by_subject_category">By Subject Category</a></li>                                                                                                                                                                
+						</ul>                                            
+						</li>                                 
+						<li><a href="/search_scitation">Search</a>
+						<ul>
+							<li><a class="link externalLink" href="/search_scitation?key=FREESR" >Scitation</a></li>                         
+							<li><a class="link externalLink" href="/search_scitation?key=SPIN" >SPIN</a></li>                         
+						</ul>                                            
+						</li>                                 
+						<li><a href="/for_users">For Users</a>
+						<ul>
+							<li><a href="/for_users/accessibilty">Accessibilty</a></li>                                                                                                                                
+							<li><a href="/for_users/faq">FAQ</a></li>                                                                                                                                
+							<li><a href="/news" >Scitation News</a></li>                         
+							<li><a href="/for_users/what_is_scitation">What is Scitation?</a></li>                                                                                                                                                                
+						</ul>                                            
+						</li>                                 
+						<li><a href="/for_librarians">For Librarians</a>
+						<ul>
+							<li><a class="link externalLink" href="http://librarians.aip.org/"  title="Information for Librarians">Information</a></li>                         
+							<li><a class="link externalLink" href="http://librarians.scitation.org/librarians/surs/surs_overview.jsp"  title="Usage Reports via the Library Service Center">Usage Reports</a></li>                         
+							<li><a class="link externalLink" href="http://librarians.scitation.org/librarians/account/account_overview.jsp"  title="Account Information vis the Library Service Center">Account Information</a></li>                         
+							<li><a class="link externalLink" href="http://librarians.scitation.org/librarians/ipadmin/ipadmin_overview.jsp"  title="IP Administration via the Library Service center">IP Administration</a></li>                         
+							<li><a class="link externalLink" href="http://librarians.scitation.org/librarians/account/openurl_form.jsp"  title="OpenURL via the Library Service Center">OpenURL</a></li>                         
+						</ul>                                            
+						</li>                                 
+						<li><a href="http://www.scitationreports.org/">For Partners</a>
+						<!-- <ul>
+							<li><a class="link externalLink" href="http://scitation.aip.org/partners"  title="Partners Portal">Partners Portal</a></li>                         
+							<li><a class="link externalLink" href="http://www.scitationreports.org/"  title="Usage Reports">Usage Reports</a></li>                         
+							<li><a class="link externalLink" href="http://www.aip.org/publishingservices/scitation/"  title="Scitation Online Hosting">Scitation Online Hosting</a></li>                         
+							<li><a class="link externalLink" href="http://www.aip.org/publishingservices/prod_servs/"  title="Production Services">Production Services</a></li>                         
+							<li><a class="link externalLink" href="http://www.aip.org/publishingservices/bpop/"  title="Books, Proceedings, and Other Publications">Books, Proceedings, and Other Publications</a></li>                         
+							<li><a class="link externalLink" href="http://www.aip.org/publishingservices/peerxpress/"  title="Peer X-Press Web Submission & Review">Peer X-Press Web Submission & Review</a></li>                         
+							<li><a class="link externalLink" href="http://www.aip.org/publishingservices/memsub/"  title="Membership and Subscription Services">Membership and Subscription Services</a></li>                         
+							<li><a class="link externalLink" href="http://www.aip.org/publishingservices/markad/"  title="Marketing and Consortia Sales">Marketing and Consortia Sales</a></li>                         
+							<li><a class="link externalLink" href="http://www.aip.org/publishingservices/exhibitad/"  title="Advertising, Exhibit, and Meeting Services">Advertising, Exhibit, and Meeting Services</a></li>                    
+						</ul>  -->                                            
+						</li>                                 
+						<!--<li><a href="/labs">Labs</a></li>  -->                                
+						<li><a href="/news">News</a></li>                                 
+					</ul>
+				</div>
+			</div><!-- end class="borderLayoutMastHead" -->
+
+			<div id="mainContentWrapper">
+				<div class="borderLayoutColumn" id="mainWithRight">
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<!-- END \help_system\SCI_head.jsp -->
+  
+
+<!-- ########## BEGIN center content ########### -->
+<h1>Cookies Required</h1>
+
+
+<!-- <div align="center" style="margin-top:5px;margin-bottom:5px; background-color:#F0F0F0; font-weight:bold;">
+ 
+<p><span style="color:#ED1C24;">Attention:</span> Some Scitation services are experiencing intermittent technical difficulties. We hope to have the situation resolved shortly.</p>
+
+</div> -->
+ 
+ 
+					
+
+					<div align="center">
+					<table width="95%" border=0 cellpadding=2 cellspacing=2>
+					<tr>
+					<td>
+					
+					
+
+
+
+
+
+
+
+<!--p style="text-align:center;"><img src="images/cookies.gif" alt="." width="200" height="54" border="0"></p-->
+
+<p style="color:red;font-size:12px;font-weight:bold;">ALERT!&nbsp;&nbsp;This service requires a web browser and/or firewall/network configuration that supports and accepts cookies. You may have been redirected to this page for one or more of the following reasons:</p>
+
+<ol>
+<li>You are using a browser that supports cookies, but cookie acceptance is disabled.</li>
+<li>You are using an older browser that does not support cookies.</li>
+<li>You are utilizing a personal firewall that is configured to override your browser settings and reject cookies.</li>
+<li>You are accessing Scitation from a network or proxy that is configured to reject cookies.</li>
+</ol>
+ 
+<p>
+<strong>(1) Browsers that support cookies:</strong>
+You may be using a browser that <strong>does</strong> support cookies, but you have cookies disabled.  Setting up your browser to accept cookies is straightforward in most current versions of <a href="http://scitation.aip.org/servlet/HelpSystem?KEY=SCI&TYPE=HELP/SOFTWARE" target="_new">Scitation's recommended browsers</a>. Once you have enabled cookies, you may <a href="http://scitation.aip.org/jhtml/pf_announce.jsp">continue to the URL you requested</a> or 
+<a href = "JavaScript:  onClick=history.go(-1)">return to the previous page</a>.
+</p>
+
+<p>
+<strong>(2) Browsers that do not support cookies:</strong>
+If you are using a browser that <strong>does not</strong> support cookies, you
+must upgrade to a cookie-capable browser. Consult the Scitation <a href="http://scitation.aip.org/servlet/HelpSystem?KEY=SCI&TYPE=HELP/SOFTWARE" target="_new">software recommendations page</a> for more information.
+</p>
+
+<p>
+<strong>(3) Personal firewall users:</strong> consult the software documentation provided with your firewall; you must configure your firewall to accept cookies from the *.aip.org domain.
+</p>
+
+<p>
+<strong>(4) Network and proxy server users:</strong> contact your network administrator; proxy servers and other network appliances must be configured to accept cookies from the *.aip.org domain in order for you to use Scitation.
+</p>
+
+<p>
+If you require additional assistance setting up your browser to access Scitation, 
+please contact us via e-mail at <a href="mailto:help@scitation.org">help@scitation.org</a>, 
+or by phone (toll-free in the U.S. and Canada) at 1-800-874-6383.
+</p>
+
+<!--
+<p>
+<strong>How does this system use cookies?</strong><br>
+Scitation uses a session cookie to
+to enforce the time-out mechanism (no activity for 15 minutes and
+a session is automatically terminated).
+</p>
+
+-->
+
+<!--
+<p>
+<strong>What are cookies exactly?</strong>
+</p>
+
+<p>
+Cookies are a general mechanism which server-side
+connections (such as CGI
+scripts) can use to both store and retrieve information
+on the client side of the
+connection. The addition of a simple, persistent,
+client-side state significantly
+extends the capabilities of Web-based client/server applications.
+Cookies can be viewed as a mechanism by which each browser
+keeps their own preferences.
+Web browsers set aside a small amount of space on your hard drive to keep
+these preferences; then, every time you visit a web site your browser checks to
+see if you have any predefined preferences (cookies) for that
+server. If you do, it
+sends the cookie to the server along with the request for a web page.
+The server, in turn, may transmit more cookie information back to
+the client.
+A browser will not give up its cookie data to any server except the one
+that set it. The data stored in a cookie is
+typically something like
+a record of pages traversed or specific keys
+created by client-server interaction that indicate a user
+has a subscription to a particular online resource (URL).
+</p>
+
+<p>
+<strong>Additional Cookie Information:</strong>
+</p>
+
+<ul>
+<li> <a href="http://www.cookiecentral.com/test_cookie.htm">Cookie Central</a></li>
+<li> <a href="http://www.ciac.org/ciac/bulletins/i-034.shtml">CIAC Information Bulletin</a></li>
+</ul>
+-->
+	
+					</td>
+					</tr>
+					</table>
+					</div>
+				<!-- ######### END center content ############ -->
+			
+
+
+				</div><!-- end class="borderLayoutColumn mainColumn" -->    
+				<div class="borderLayoutColumn bannerColumn" id="rightCol">
+					<div class="twitter">
+						<a href="http://twitter.com/aip_publishing"><strong><em>Follow on Twitter</em></strong> <img src="/polopoly_fs/7.328!twitter_logo.jpg" alt="Go To Twitter" align="absmiddle"/></a>
+					</div>
+					<!-- <div class="adnote"><a href="/for_partners/online_advertising_rates">Advertising Info</a></div>-->
+					<div class="sideAdSpace">
+
+
+<!------ OAS AD 'Right1' start ------>
+		<div id="OAS_Right1">
+		<noscript>
+
+            		<a target="_blank" href="http://oasc12039.247realmedia.com/RealMedia/ads/click_nx.ads/scitation.aip.org/@Right1,Right2!Right1">
+            		<img border="0" alt="OAS Ad" title="OAS Ad" src="http://oasc12039.247realmedia.com/RealMedia/ads/click_nx.ads/scitation.aip.org/@Right1,Right2!Right1" />
+            		</a></noscript>
+</div>
+<!------ OAS AD 'Right1' end ------>
+<div style="padding: 2px; font-size: 10px;"></div>
+<!------ OAS AD 'Top' begin ------>
+                <div id="OAS_Top" align="center">
+                  <noscript>
+
+                    <a target="_blank"
+ href="http://oasc12039.247realmedia.com/RealMedia/ads/click_nx.ads/scitation.aip.org/@Top!Top">
+
+                    <img border="0" alt="OAS Ad" 
+title="OAS Ad" src="http://oasc12039.247realmedia.com/RealMedia/ads/click_nx.ads/scitation.aip.org/@Top!Top"
+ />
+                    </a></noscript>
+</div>
+<!------ OAS AD 'Top' end ------>
+
+<!------ OAS AD 'Right2' start ------>
+   <div id="OAS_Right2">
+   <noscript>
+
+            		<a target="_blank" href="http://oasc12039.247realmedia.com/RealMedia/ads/click_nx.ads/scitation.aip.org/@Right1,Right2!Right2">
+            		<img border="0" alt="OAS Ad" title="OAS Ad" src="http://oasc12039.247realmedia.com/RealMedia/ads/click_nx.ads/scitation.aip.org/@Right1,Right2!Right2" />
+            		</a>
+            		</noscript>
+
+	</div>
+<!------ OAS AD 'Right2' end ------>
+
+
+
+
+
+					</div><!-- end class="borderLayoutColumn bannerColumn" id="rightCol" -->
+					<br class="clearit" />
+				</div><!-- end class="borderLayout" -->
+			</div><!-- end mainContentWrapper -->
+			<div class="topBorderLayout">
+				<div class="footer">
+					<div class="elementGroup footerlinks">
+						<div class="groupContent" style="height: 30px;">
+							<a href="http://www.aip.org"><img src="/img/scitation/logo_aip_long.png" style="border:none; float:left;" alt="AIP Logo"/></a>
+							<div style="padding-top:7px; float:right; width:65%; text-align:right;">&copy; 2013 <a href="http://www.aip.org">AIP Publishing LLC</a> All rights reserved |<a href="http://www.aip.org/privacy.html">Privacy Policy</a> | <a href="/terms_of_use">Terms of Use</a></div>
+						</div>
+					</div>
+					<div id="bottom-shadow">&nbsp;</div>
+				</div>
+			</div>
+	</div><!-- close pageWapper -->
+
+	<!-- js -->
+	<script type="text/javascript" src="/js/site-min.js"></script>
+	<!-- /js -->
+
+	<div class="stats">
+		<img src='/logger/p.gif?d=/2.4967/2.7144' alt='' />                  
+	</div>
+	<div id="darken"></div>
+	<div id="fulltextwrapper">
+		<div class="exitbutton"><a href="#" onclick="return closeFulltext();"><img src="/img/fulltext/closeimg.png" alt="close" style="border:none;" /></a></div>
+		<div id="fulltextwrapper_content"></div>
+	</div> 
+
+                        <!------ OAS MJX Config Begins ------>
+
+<script type="text/javascript">
+
+// Define OAS Variables
+OAS_url = 'http://oasc12039.247realmedia.com/RealMedia/ads/'; 
+OAS_sitepage = 'scitation.aip.org';
+OAS_listpos = 'Top,Right1,Right2'; 
+OAS_query = '';
+OAS_target = '_blank'; // Window parameter for clicks : (_top or _blank)
+</script>
+<script type="text/javascript">
+// Generate random number for cache busting
+OAS_rn = new String(Math.random());
+OAS_rns = OAS_rn.substring(2, 11);
+// Function to find the object in the DOM model
+function getObj(name) {
+if (document.getElementById) this.obj = document.getElementById(name);
+else if (document.all) this.obj = document.all[name];
+else if (document.layers) this.obj = document.layers[name];
+if (this.obj) this.style = this.obj.style;
+}
+// Add a body load function, not overridding existing ones
+function addLoad(func) {
+if (window.addEventListener) window.addEventListener('load', func, false);
+else if (document.addEventListener) document.addEventListener('load', func, false);
+else if (window.attachEvent) window.attachEvent('onload', func);
+else if (typeof window.onload != 'function') window.onload = func;
+else {
+var oldonload = window.onload;
+window.onload = function() {
+oldonload();
+func();
+};
+}
+}
+// onLoad function that move objects in the DOM and make them visible
+function OAS_AMJX_init() {
+var apos = OAS_listpos.split(',');
+var olddocwrite = document.write;
+for (var i = 0; i < apos.length; i++) {
+var object_togo = new getObj('OAS_' + apos[i]);
+var object_tomove = new getObj('Hidden_OAS_' + apos[i]);
+html = "";
+if (typeof (object_togo.obj) != 'undefined' && typeof (object_tomove.obj) !=
+'undefined') {
+object_togo.obj.appendChild(object_tomove.obj);
+object_tomove.style.display = 'inline';
+}
+}
+}
+// write the MJX call
+document.write('<script type="text/javascript" src="' + OAS_url + 'adstream_mjx.ads/'
++ OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '?' + OAS_query + '"></scr' +
+'ipt>');
+// Check for DOM Support
+if (document.getElementById && document.createTextNode) addLoad(OAS_AMJX_init);
+// Function to deliver if OAS is unreachable
+function OAS_NORMAL(pos) {
+document.write('<a href="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' +
+OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" target=' + OAS_target +
+'>');
+document.write('<img src="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1'
++ OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" border="0" /></a>');
+}
+// Function to Select Ad Function
+function OAS_AD(pos) {
+typeof OAS_RICH != 'undefined' ? OAS_RICH(pos) : OAS_NORMAL(pos);
+//OAS_version >= 11 ? OAS_RICH(pos) : OAS_NORMAL(pos);
+}
+</script>
+<!------ OAS MJX Footer Config Ends ------>
+<!------ OAS MJX Footer Ad Calls Begin ------>
+<div id="Hidden_OAS_Top" style="display: none;">
+<script language="javascript" type="text/javascript">
+<!--
+OAS_AD('Top');
+//-->
+
+</script>
+</div>
+<div id="Hidden_OAS_Right1" style="display: none;">
+<script language="javascript" type="text/javascript">
+<!--
+OAS_AD('Right1');
+//-->
+</script>
+</div>
+<div id="Hidden_OAS_Right2" style="display: none;">
+<script language="javascript" type="text/javascript">
+<!--
+OAS_AD('Right2');
+//-->
+</script>
+</div>
+<!------ OAS MJX Footer Ad Calls End ------>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8315090-35']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- crazy egg -->
+<script type="text/javascript">document.write(unescape('%3Cscript type="text/javascript" src="'+document.location.protocol+'//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/5927.js"%3E%3C%2Fscript%3E'))</script>
+
+
+</body>
+</html>  
+ 
+ 

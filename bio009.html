@@ -1,0 +1,1419 @@
+<base href="http://www.rsna.org/">
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_head1"><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="google-translate-customization" content="f912cc1d47477ddf-6dd914fc3f530992-g56efbcc1a4e52f52-8" /><script id="EktronJS" type="text/javascript" src="/WorkArea/java/ektron.js"></script><script id="EktronSiteDataJS" type="text/javascript" src="/WorkArea/java/ektron.site-data.js.ashx"></script><script id="EktronRegisteredJs" type="text/javascript" src="/workarea/java/ektronJs.ashx?id=EktronFlexMenuJS+EktronWebToolBarJS"></script><script id="AjaxScript" type="text/javascript" src="/WebResource.axd?d=DE5rU2EfFtLhqNw0UEUlH1Mgrnrhuom3Eam_5NOOxkhtQuGLyXmqLGqClcNEhPH_hKqKI0XIj7QbIzwgp44TO5lOULfO9Pz8hALWgIKZWUrFJzYfj8X3N9DqPx8OWBIcjrVM0w2&amp;t=634546130171351615"></script><script id="EktronFormBlockJS" type="text/javascript" src="/WorkArea/java/ektron.formblock.js"></script><script id="EktronXmlJS" type="text/javascript" src="/WorkArea/java/ektron.xml.js"></script><script id="EktronStringJS" type="text/javascript" src="/WorkArea/java/plugins/string/ektron.string.js"></script><script id="EkXBrowser" type="text/javascript" src="/WorkArea/ContentDesigner/ekxbrowser.js"></script><script id="EktronSmartFormJS" type="text/javascript" src="/WorkArea/ContentDesigner/ektron.smartform.js"></script><link id="EktronRegisteredCss" rel="stylesheet" type="text/css" href="/workarea/csslib/ektronCss.ashx?id=EktronModalCss+EktronPageHostCss+EktronBubbleCss+EktronSmartFormCss" />
+    
+    <!-- Ektron CSS-->
+    <link rel="stylesheet" href="/css/rsnaMain.css" type="text/css" media="screen, projection" /><link rel="stylesheet" href="/css/print.css" type="text/css" media="print" />
+
+    <!--stylesheet for IE6 below-->
+    <!--[if lte IE 6]><link rel="stylesheet" href="css/rsna_ie6.css" type="text/css" media="screen, projection" /><![endif]-->
+
+    <!--for feedback button-->
+    <link type="text/css" href="/css/jquery-ui-1.7.3.custom.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="js/GoogleAnalytics.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="js/trackdownloads.js"></script>
+    <script type="text/javascript" src="js/RadCaresDownloads.js"></script>
+
+    <!--banner slideshow-->
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <!--<script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>-->
+    <script src="/js/slides.min.jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.7.3.custom.min.js"></script>
+
+    <!--required for Feedback button. But need to be placed here to avoid disputes with banner slidshow-->
+    <script type="text/javascript">
+        $(function() {
+
+            // Dialog Link
+            $('#dialog_link').click(function() {
+                showoverlay();
+                $('#dialog').dialog('open');
+                return false;
+              }); 
+            //hover states on the static widgets
+            $('#dialog_link, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); },
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+
+            // Open window with fullsize rightRail image
+            $(".rightRail > img").click(function() {
+                window.showModalDialog($(this).attr('src'))
+            });
+
+             //Dialog box for NorthAmerica country list
+            $('#NorthAmericacountryList').dialog({
+                autoOpen: false,
+                width: 320,
+                close: function(event, ui) {hideoverylay(); }
+            });
+            //Dialog box for Tier Definition
+            $('#TierDefinition').dialog({
+                autoOpen: false,
+                height: 380,
+                width: 640,
+                title: "Legacy Tier Definitions",
+                close: function(event, ui) {hideoverylay(); }
+            });
+             //Dialog box for International country list
+            $('#InternationalcountryList').dialog({
+                autoOpen: false,
+                width: 360,
+                //set height w/scrollbar rather than moving modal up
+                height: 600,
+                //open: function(){ $('#InternationalcountryList').parent().css('top', '900px');  },
+                close: function(event, ui) {hideoverylay(); }
+            });
+
+
+            $(function() {
+                var dlg =$('#dialog3').dialog({
+                autoOpen: false,
+                width: 650,
+                close: function(event, ui) {hideoverylay(); }
+              });
+              dlg.parent().appendTo("form:first");
+              return false;
+            });
+
+            $('#dialog3_link').click(function() {
+                $('#dialog2').dialog('close');
+                $('#dialog3').dialog('open');
+                showoverlay();
+                return false;
+            });
+
+            //hover states on the static widgets
+            $('#dialog_link2, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); },
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+        });
+        function showoverlay() {
+        //Get the screen height and width
+		  var maskHeight = $(document).height();
+		  var maskWidth = $(window).width();
+	
+		//Set height and width to mask to fill up the whole screen
+		  $('#mask').css({'width':maskWidth,'height':maskHeight});
+          $('#mask').show();
+        }
+        function hideoverylay() {
+          $('#mask').hide();
+        }
+        function showcountrylist(id) {
+           showoverlay();
+           if(id === "1")
+           {
+           $('#NorthAmericacountryList').dialog('open');
+           }
+           else
+           {
+           $('#InternationalcountryList').dialog('open');
+           }
+        }
+        function showtierlist() {
+           showoverlay();
+           $('#TierDefinition').dialog('open');
+        }
+        //Code to pull in current URL for feedback form        
+        $(document).ready(function() {
+           // MOve feedback into document ready			
+            $(function() {
+                var dlg = $('#dialog').dialog({
+                autoOpen: false,
+                width: 350,
+                close: function(event, ui) {hideoverylay(); }
+
+               });
+              dlg.parent().appendTo("form:first");
+              return false;
+            });
+            $("#hdnurl").attr("value", document.location);
+        });
+    </script>
+
+<script type="text/javascript">
+	function showmenu(id) {
+        var state = document.getElementById(id).style.display;
+            if (state == 'block') {
+                var sm= "'navigation'";
+				var showmenu = "menubutton";
+				document.getElementById(id).style.display = 'none';
+				document.getElementById(showmenu).innerHTML = '<a href="#" onClick="showmenu('+sm+');"><img src="/images/rsnaorgmobilebuttonshow.png"></a>';
+            } else {
+				var sm= "'navigation'";
+				var showmenu = "menubutton";
+                document.getElementById(id).style.display = 'block';
+				document.getElementById(showmenu).innerHTML = '<a href="#" onClick="showmenu('+sm+');"><img src="/images/rsnaorgmobilebuttonhide.png"></a>';				
+            }
+        }
+		
+	function showleftmenu(id) {
+	var state = document.getElementById(id).style.display;
+		if (state == 'block') {
+			var sm= "'channel'";
+			var showleftmenu = "showleftmenu";
+			var plus = "+"
+			document.getElementById(id).style.display = 'none';
+			document.getElementById(showleftmenu).innerHTML = '<div align="left" class="sectionlink">&nbsp;&nbsp;'+plus+'SECTION LINKS</div>';
+			/*document.getElementById(showleftmenu).innerHTML = '<div align="left"><img src="/images/rsnaorgmobilelinksbuttonshow.png" onClick="showleftmenu('+sm+');" class="submenubutton" /></div>';*/
+		} else {
+			var sm= "'channel'";
+			var showleftmenu = "showleftmenu";
+			var minus = "-"
+			document.getElementById(id).style.display = 'block';
+			document.getElementById(showleftmenu).innerHTML = '<div align="left" class="sectionlink">&nbsp;&nbsp;'+minus+'SECTION LINKS</div>';
+			/*document.getElementById(showleftmenu).innerHTML = '<div align="left"><img src="/images/rsnaorgmobilelinksbuttonhide.png" onClick="showleftmenu('+sm+');" class="submenubutton" /></div>';*/				
+		}
+	}
+	
+	function showsearch(id) {
+        var state = document.getElementById(id).style.display;
+            if (state == 'block') {
+                var sm= "'search'";
+				var showmenu = "searchbutton";
+				document.getElementById(id).style.display = 'none';
+				document.getElementById(showmenu).innerHTML = '<a href="#" onClick="showsearch('+sm+');"><img src="/images/rsnaorgmobilesearchshow.png"></a>';
+            } else {
+				var sm= "'search'";
+				var showmenu = "searchbutton";
+                document.getElementById(id).style.display = 'block';
+				document.getElementById(showmenu).innerHTML = '<a href="#" onClick="showsearch('+sm+');"><img src="/images/rsnaorgmobilesearchhide.png"></a>';				
+            }
+        }
+		
+		
+</script>
+
+<title>
+
+</title></head>
+<body>
+    <form name="aspnetForm" method="post" action="/" id="aspnetForm" onsubmit="return ('undefined' == typeof Ektron || !Ektron.FormBlock || !typeof Ektron.FormBlock.validate  || Ektron.FormBlock.validate(this));">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTc2MTEyNjQ1Ng9kFgJmD2QWAgIDEBYCHghvbnN1Ym1pdAWEAXJldHVybiAoJ3VuZGVmaW5lZCcgPT0gdHlwZW9mIEVrdHJvbiB8fCAhRWt0cm9uLkZvcm1CbG9jayB8fCAhdHlwZW9mIEVrdHJvbi5Gb3JtQmxvY2sudmFsaWRhdGUgIHx8IEVrdHJvbi5Gb3JtQmxvY2sudmFsaWRhdGUodGhpcykpO2QWBAILD2QWAgIBDxYCHgRUZXh0BU08YSBocmVmPSJodHRwczovL3d3dzIucnNuYS5vcmcvdGltc3NuZXQvbG9naW4vY2FzbG9naW4uY2ZtIj5Mb2cgaW4gJiMxODc7PC9hPmQCDw9kFgoCAQ9kFgICAg9kFgJmD2QWAgIBDxYCHgVjbGFzcwUQZHJvcHpvbmUgUEJDbGVhchYCAgMPFgIeC18hSXRlbUNvdW50AgEWAmYPZBYCAgEPFgIfAgUJUEJWaWV3aW5nFgICAQ8WBB4IY29sdW1uaWQFATAeCmNvbHVtbmd1aWQFJDAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMBYCAgMPFgIfAwIBZAIDD2QWAgIBD2QWAgICD2QWAmYPZBYCAgEPFgIfAgUQZHJvcHpvbmUgUEJDbGVhchYCAgMPFgIfAwIBFgJmD2QWAgIBDxYCHwIFCVBCVmlld2luZxYCAgEPFgQfBAUBMB8FBSQwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAWAgIDDxYCHwMCBBYGZg9kFgICAQ9kFgICAw9kFgJmD2QWAgIDD2QWAmYPZBYCZg9kFgRmD2QWBAIBD2QWBAICDxYCHwEFDUFubm91bmNlbWVudHNkAgQPFgIfAQUyPGEgaHJlZj0iQ2FsZW5kYXIuYXNweCI+RXZlbnQgQ2FsZW5kYXIgICYjMTg3OzwvYT5kAgMPFgIeB1Zpc2libGVoFgJmDxYCHwZoZAIBD2QWCgIHDxBkZBYAZAINDxBkZBYAZAITDxBkZBYAZAIZDxBkZBYAZAIfDxBkZBYAZAICD2QWAgIBD2QWAgIDD2QWAmYPZBYCAgMPZBYCZg9kFgJmD2QWBGYPZBYEAgEPZBYEAgIPFgIfAQUJUlNOQSBOZXdzZAIEDxYCHwEFNTxhIGhyZWY9Ii9OZXdzTGFuZGluZ1BhZ2UuYXNweCI+UlNOQSBOZXdzICAmIzE4Nzs8L2E+ZAIDDxYCHwZoFgJmDxYCHwZoZAIBD2QWCgIHDxBkZBYAZAINDxBkZBYAZAITDxBkZBYAZAIZDxBkZBYAZAIfDxBkZBYAZAIDD2QWAgIBD2QWAgIDD2QWAmYPZBYCAgMPZBYCZg9kFgJmD2QWAgIBD2QWBmYPEGRkFgBkAgIPEGRkFgBkAgMPEGRkFgBkAgUPZBYCAgEPZBYCAgIPZBYCZg9kFgICAQ8WAh8CBRBkcm9wem9uZSBQQkNsZWFyFgICAw8WAh8DAgEWAmYPZBYCAgEPFgIfAgUJUEJWaWV3aW5nFgICAQ8WBB8EBQEwHwUFJDAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMBYCAgMPFgIfAwIDFgJmD2QWAgIBD2QWAgIDD2QWAmYPZBYCAgMPZBYCZg9kFgJmD2QWBGYPZBYEAgEPZBYEAgIPFgIfAQUQSm91cm5hbCBGZWF0dXJlc2QCBA8WAh8BBTI8YSBocmVmPSIvSm91cm5hbHMuYXNweCI+UlNOQSBKb3VybmFscyAgJiMxODc7PC9hPmQCAw8WAh8GaBYCZg8WAh8GaGQCAQ9kFgoCBw8QZGQWAGQCDQ8QZGQWAGQCEw8QZGQWAGQCGQ8QZGQWAGQCHw8QZGQWAGQCBw9kFgICAQ9kFgICAg9kFgJmD2QWAgIBDxYCHwIFEGRyb3B6b25lIFBCQ2xlYXIWAgIDDxYCHwMCARYCZg9kFgICAQ8WAh8CBQlQQlZpZXdpbmcWAgIBDxYEHwQFATAfBQUkMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDAwMDAwMDAwFgICAw8WAh8DZmQCCQ9kFgICAQ9kFgICAg9kFgJmD2QWAgIBDxYCHwIFEGRyb3B6b25lIFBCQ2xlYXIWAgIDDxYCHwMCARYCZg9kFgICAQ8WAh8CBQlQQlZpZXdpbmcWAgIBDxYEHwQFATAfBQUkMDAwMDAwMDAtMDAwMC0wMDAwLTAwMDAtMDAwMDAwMDAwMDAwFgICAw8WAh8DAgJkGAoFamN0bDAwJGNwTWFpbkNvbnRlbnQkRHJvcFpvbmUxJGNvbHVtbkRpc3BsYXkkY3RsMDAkY29udHJvbGNvbHVtbiRjdGwwMCRXaWRnZXRIb3N0JFdpZGdldEhvc3Rfd2lkZ2V0JFZpZXdTZXQPD2RmZAVqY3RsMDAkY3BNYWluQ29udGVudCREcm9wWm9uZTIkY29sdW1uRGlzcGxheSRjdGwwMCRjb250cm9sY29sdW1uJGN0bDAxJFdpZGdldEhvc3QkV2lkZ2V0SG9zdF93aWRnZXQkVmlld1NldA8PZGZkBWpjdGwwMCRjcE1haW5Db250ZW50JERyb3Bab25lMiRjb2x1bW5EaXNwbGF5JGN0bDAwJGNvbnRyb2xjb2x1bW4kY3RsMDAkV2lkZ2V0SG9zdCRXaWRnZXRIb3N0X3dpZGdldCRWaWV3U2V0Dw9kZmQFamN0bDAwJGNwTWFpbkNvbnRlbnQkRHJvcFpvbmUyJGNvbHVtbkRpc3BsYXkkY3RsMDAkY29udHJvbGNvbHVtbiRjdGwwMyRXaWRnZXRIb3N0JFdpZGdldEhvc3Rfd2lkZ2V0JFZpZXdTZXQPD2RmZAVqY3RsMDAkY3BNYWluQ29udGVudCREcm9wWm9uZTUkY29sdW1uRGlzcGxheSRjdGwwMCRjb250cm9sY29sdW1uJGN0bDAxJFdpZGdldEhvc3QkV2lkZ2V0SG9zdF93aWRnZXQkVmlld1NldA8PZGZkBWpjdGwwMCRjcE1haW5Db250ZW50JERyb3Bab25lMyRjb2x1bW5EaXNwbGF5JGN0bDAwJGNvbnRyb2xjb2x1bW4kY3RsMDAkV2lkZ2V0SG9zdCRXaWRnZXRIb3N0X3dpZGdldCRWaWV3U2V0Dw9kZmQFamN0bDAwJGNwTWFpbkNvbnRlbnQkRHJvcFpvbmUzJGNvbHVtbkRpc3BsYXkkY3RsMDAkY29udHJvbGNvbHVtbiRjdGwwMSRXaWRnZXRIb3N0JFdpZGdldEhvc3Rfd2lkZ2V0JFZpZXdTZXQPD2RmZAVqY3RsMDAkY3BNYWluQ29udGVudCREcm9wWm9uZTMkY29sdW1uRGlzcGxheSRjdGwwMCRjb250cm9sY29sdW1uJGN0bDAyJFdpZGdldEhvc3QkV2lkZ2V0SG9zdF93aWRnZXQkVmlld1NldA8PZGZkBWpjdGwwMCRjcE1haW5Db250ZW50JERyb3Bab25lMiRjb2x1bW5EaXNwbGF5JGN0bDAwJGNvbnRyb2xjb2x1bW4kY3RsMDIkV2lkZ2V0SG9zdCRXaWRnZXRIb3N0X3dpZGdldCRWaWV3U2V0Dw9kZmQFamN0bDAwJGNwTWFpbkNvbnRlbnQkRHJvcFpvbmU1JGNvbHVtbkRpc3BsYXkkY3RsMDAkY29udHJvbGNvbHVtbiRjdGwwMCRXaWRnZXRIb3N0JFdpZGdldEhvc3Rfd2lkZ2V0JFZpZXdTZXQPD2RmZNWxkNyolWp5Lex1RSXmWUeKYt7c" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+__$BubbleCloseIconPath='/WorkArea/';//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=DV5hmYAbcuE6k7ixgYi7_ERGfAITLPbUekL2EgSamfsdN_brbzzMLoSyxWvEg3lRhGnbGKsPBQ6ZVortLuJrrjfiiUQ8kZfGyicY4QrRIHjtDdONSaendvW6O3Ct0R6Wsfhf5CHN3Qq2DVGn_28CfDt1aM01&amp;t=ffffffffe76c0672" type="text/javascript"></script>
+<script src="/WorkArea/java/webkitFix.js" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgKwkIP+DQKbntXsAQK+j8uPBQL5xZihCAK9xqzoAQKO1qyCA1w7zXL13JFE/bM+2ueUbN7iFqo+" />
+</div>
+    
+
+    <script type="text/javascript" language="JavaScript">
+        Ektron.PBMasterSettings = { 'isMasterLayout': false, 'pathToLock': '/WorkArea/PageBuilder/PageControls/Themes/TrueBlue/images/lock.png', 'hasMasterLayout': false }
+    </script>
+
+
+    <script type="text/javascript" language="JavaScript">
+        Ektron.PBSettings = { 'dontClose': true }
+    </script>
+
+
+
+
+
+    <!--PLEASE PLACE THE "WORKAREA TOOLBAR" HERE OUTSIDE THE CONTAINER DIV-->
+    <div id="mask">
+    </div>
+    
+
+    <div class="container">
+        <div class="ektron-ui-header">
+            <div class="logo">
+                <a href="/"></a>
+            </div>
+            <div id="showmenu" class="showmenu" align="right">
+				<div id="searchbutton"><a href="#" onClick="showsearch('search');"><img src="/images/rsnaorgmobilesearchshow.png"></a></div> <div id="menubutton"><a href="#" onClick="showmenu('navigation');"><img src="/images/rsnaorgmobilebuttonshow.png"></a></div>
+			</div>
+			<div class="utilityLinks">
+                <span id="ctl00_flxMnuTop"><ul><li class=""><a href="/Members.aspx">Members</a></li><li class="notFirst"><a href="/Trainees.aspx">Trainees</a></li><li class="notFirst"><a href="/International.aspx">International</a></li><li class="notFirst"><a href="/Exhibitors.aspx">Exhibitors</a></li><li class="notFirst"><a href="/Media.aspx">Media</a></li><li class="notFirst"><a href="/Patients.aspx">Patients</a></li></ul></span>
+            </div>
+            <div id="search">
+			
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".searchTextbox").focus(function () {
+            if ($(".searchTextbox").val() == "Search...") {
+                $(".searchTextbox").val("");
+            }
+        });
+
+        $(".searchTextbox").blur(function () {
+            if ($.trim($(".searchTextbox").val()) == "") {
+                $(".searchTextbox").val("Search...");
+            }
+        });
+
+     
+
+    });
+</script>
+<div class="searchSection">
+    <input type="submit" name="ctl00$search1$btnSearch" value="Go »" id="ctl00_search1_btnSearch" class="goBtn" />
+    <input name="ctl00$search1$srchText" type="text" value="Search..." id="ctl00_search1_srchText" class="searchTextbox" /> 
+</div>
+			</div>
+            <!--logged in message-->
+            <div id="loggedIn" class="loggedIn">
+                <span class="italics">
+                    
+                </span>
+                
+                <span id="ctl00_loginLink" class="loginLink">
+                    <a href="https://www2.rsna.org/timssnet/login/caslogin.cfm">Log in &#187;</a>
+                </span>
+            </div>
+            <!--logged in message ends-->
+        </div>
+        <!--header ends-->
+    </div>
+    <!--container end (header)-->
+	
+    <div class="navigation" id="navigation">
+        <div class="container">
+            <ul id="nav"><li class=""><a href="/Annual_Meeting.aspx">Annual Meeting</a></li><li class="notFirst"><a href="/Membership.aspx">Membership</a></li><li class="notFirst"><a href="/Science_and_Education.aspx">Science &amp; Education</a></li><li class="notFirst"><a href="/Journals.aspx">Journals</a></li><li class="notFirst"><a href="/Informatics.aspx">Informatics</a></li><li class="notFirst"><a href="/Foundation.aspx">R&amp;E Foundation</a></li><li class="notFirst"><a href="/AboutRSNA.aspx">About RSNA</a></li><li class="myRSNA notFirst"><a href="http://myrsna.rsna.org/" target="_blank">myRSNA<sup>®</sup></a></li></ul>
+        </div>
+        <!--container end (navigation)-->
+    </div>
+    <!--navigation ends-->
+    <div class="container">
+        <div class="ektron-ui-content">
+            
+    <div class="pageBanner">
+        
+
+<div id="ctl00_cpMainContent_DropZone1_updatepanel">
+	
+        <div id="ctl00_cpMainContent_DropZone1_dzcontainer" class="dropzone PBClear">
+            
+            
+                    <div id="ctl00_cpMainContent_DropZone1_columnDisplay_ctl00_zone" class="PBViewing">
+                        <ul id="ctl00_cpMainContent_DropZone1_columnDisplay_ctl00_column" class="columnwidgetlist" columnid="0" columnguid="00000000-0000-0000-0000-000000000000">
+                            
+                            
+                                    <li class="PBItem">
+                                        
+
+<div class="widget" id="dropcontainer">
+    <span id="ctl00_cpMainContent_DropZone1_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_cpMainContent_DropZone1_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+<link type="text/css" href="/css/jquery-ui-1.7.3.custom.css" rel="stylesheet" />
+
+<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+
+<link href="/css/bannerSlideshow.css" rel="stylesheet" type="text/css" />
+
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+<script src="/js/slides.min.jquery.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/js/jquery-ui-1.7.3.custom.min.js"></script>
+
+
+        <script type="text/javascript">$(function () {$('#slides').slides({preload: true, preloadImage: 'img/loading.gif', play: 8000, slideSpeed: 100,  pause: 5000, effect: 'fade', crossfade: true, hoverPause: true  });  }); </script>
+        <div id="ctl00_cpMainContent_DropZone1_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_CB">
+			<div id="slides" xmlns:cms="urn:Ektron.Cms.Controls"><div class="slides_container"><a title="test" href="/Annual_Meeting.aspx" target=""><img border="0" style="border-width: 0px; border-style: solid;" title="RSNA 2013" alt="RSNA 2013" src="/uploadedImages/RSNA/Content/Home/RSNA-2013.jpg" /></a><a title="Membership" href="/Membership.aspx" target=""><img height="275" border="0" width="950" style="border-width: 0px; border-style: solid; width: 950px; height: 275px;" title=" " alt=" " src="/uploadedImages/RSNA/Content/Home/Join.jpg" /></a><a title="test" href="/Science_and_Education.aspx" target=""><img height="275" border="0" width="950" style="border-width: 0px; border-style: solid; width: 950px; height: 275px;" title=" " alt=" " src="/uploadedImages/RSNA/Content/Home/Education.jpg" /></a><a title="Journals" href="/Journals.aspx" target=""><img height="275" border="0" width="950" style="border-width: 0px; border-style: solid; width: 950px; height: 275px;" title=" " alt=" " src="/uploadedImages/RSNA/Content/Home/Journals.jpg" /></a><a title="" href="http://myrsna.rsna.org/" target=""><img height="275" border="0" width="950" alt=" " src="/uploadedImages/RSNA/Content/Home/myRSNA.jpg" title=" " style="border-width: 0px; border-style: solid; width: 950px; height: 275px;" /></a></div></div>
+		</div>
+        <span id="ctl00_cpMainContent_DropZone1_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_errorLb"></span>
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                        </ul>
+                    </div>
+                
+        </div>
+    
+</div>
+
+
+    </div>
+    <div id="ctl00_cpMainContent_wrapper" class="row">
+        
+
+<div id="ctl00_cpMainContent_DropZone2_updatepanel">
+	
+        <div id="ctl00_cpMainContent_DropZone2_dzcontainer" class="dropzone PBClear">
+            
+            
+                    <div id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_zone" class="PBViewing">
+                        <ul id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_column" class="columnwidgetlist" columnid="0" columnguid="00000000-0000-0000-0000-000000000000">
+                            
+                            
+                                    <li class="PBItem">
+                                        
+
+<div class="widget" id="dropcontainer">
+    <span id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+        <span id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_errorLb"></span>
+            <div>
+                <div class="titleSection">
+                    <div class="title">
+                        <h1>
+                            Announcements</h1>
+                    </div>
+                    <div class="readMore">
+                        <a href="Calendar.aspx">Event Calendar  &#187;</a>
+                    </div>
+                </div>
+            </div>
+        
+        
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                                    <li class="PBItem">
+                                        
+
+<div class="widget" id="dropcontainer">
+    <span id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+        
+        <div id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_WidgetHost_widget_CB">
+			<div class="threeColumn columnsSection"><div class="column padBtm"><h2><a href="http://www2.rsna.org/timssnet/radiologyselect/breastcancerscreening.cfm">Radiology Select, Vol. 4 Breast Cancer Screening is now available.</a></h2><p>Stay on the forefront with the most valuable and relevant research at your fingertips in online, tablet and print formats.</p></div><div class="column padBtm"><h2><a href="http://rsna.org/register.aspx">RSNA 2013: Register for courses and book your preferred hotel room.</a></h2><p>Log in now to register for courses and book your hotel. Hurry—popular courses and hotels fill up quickly. </p></div><div class="column last padBtm"><h2><a href="/Radiology_Cares/">Join Radiology Cares – the patient-centered radiology initiative.</a></h2><p>Pledging your support means putting your patients’ needs first.  Make the commitment to be more patient-centered in your practice.</p></div></div>
+		</div>
+        
+        
+        <span id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_WidgetHost_widget_errorLb"></span>
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                                    <li class="PBItem">
+                                        
+
+<div class="widget" id="dropcontainer">
+    <span id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl02_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl02_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+        <span id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl02_WidgetHost_WidgetHost_widget_errorLb"></span>
+            <div>
+                <div class="titleSection">
+                    <div class="title">
+                        <h1>
+                            RSNA News</h1>
+                    </div>
+                    <div class="readMore">
+                        <a href="/NewsLandingPage.aspx">RSNA News  &#187;</a>
+                    </div>
+                </div>
+            </div>
+        
+        
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                                    <li class="PBItem">
+                                        
+
+<div class="widget" id="dropcontainer">
+    <span id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl03_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl03_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+        
+    <span><div class="threeColumn columnsSection"><div class="column padBtm"><a href="/NewsDetail.aspx?id=9761"><img src="/uploadedImages/RSNA/Content/News/NewsArticle/2013/08Aug/Mental_Illness_Feature_345x99px.jpg" alt="Seeking MR Imaging Biomarkers for Mental Illness (small)" /></a><h2><a href="/NewsDetail.aspx?id=9761">Seeking MR Imaging Biomarkers for Mental Illness</a></h2><div class="date">August 01, 2013</div><p>Researchers are using functional MR imaging (fMRI) to examine brain activity and investigate potential biologic markers for diagnosis and treatment of complicated psychiatric disorders. </p></div><div class="column padBtm"><a href="/NewsDetail.aspx?id=9762"><img src="/uploadedImages/RSNA/Content/News/NewsArticle/2013/08Aug/Journals_ReDesign_Feature_345x99px.jpg" alt="RSNA Launches Image-rich Redesign of Radiology, RadioGraphics Websites" /></a><h2><a href="/NewsDetail.aspx?id=9762">RSNA Launches Image-rich Redesign of Radiology, RadioGraphics Websites</a></h2><div class="date">August 01, 2013</div><p>Colorful images that offer maximum functionality are among the eye-catching highlights of the redesigned Radiology and RadioGraphics websites set to debut in October.</p></div><div class="column padBtm last"><a href="/NewsDetail.aspx?id=9764"><img src="/uploadedImages/RSNA/Content/News/NewsArticle/2013/08Aug/IVP_Russia_Feature_345x99px.jpg" alt="Russian Radiologists Make the Most of Limited Medical Resources" /></a><h2><a href="/NewsDetail.aspx?id=9764">Russian Radiologists Make the Most of Limited Medical Resources</a></h2><div class="date">August 01, 2013</div><p>U.S. radiologists who visited St. Petersburg, Russia, came away with valuable lessons from physicians adept at reaping maximum benefits from an often limited pool of resources.</p></div></div><input name="ctl00$cpMainContent$DropZone2$columnDisplay$ctl00$controlcolumn$ctl03$WidgetHost$WidgetHost_widget$ctl00$ctl00$cpMainContent$DropZone2$columnDisplay$ctl00$controlcolumn$ctl03$WidgetHost$WidgetHost_widget$ctl00EktronClientManager" type="hidden" id="ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl03_WidgetHost_WidgetHost_widget_ctl00_ctl00_cpMainContent_DropZone2_columnDisplay_ctl00_controlcolumn_ctl03_WidgetHost_WidgetHost_widget_ctl00EktronClientManager" value="EktronJS,AjaxScript" /></span>
+
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                        </ul>
+                    </div>
+                
+        </div>
+    
+</div>
+
+
+    </div>
+    <div id="ctl00_cpMainContent_wrapper2" class="row">
+        
+
+<div id="ctl00_cpMainContent_DropZone3_updatepanel">
+	
+        <div id="ctl00_cpMainContent_DropZone3_dzcontainer" class="dropzone PBClear">
+            
+            
+                    <div id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_zone" class="PBViewing">
+                        <ul id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_column" class="columnwidgetlist" columnid="0" columnguid="00000000-0000-0000-0000-000000000000">
+                            
+                            
+                                    <li class="PBItem">
+                                        
+
+<div class="widget" id="dropcontainer">
+    <span id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+        <span id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_errorLb"></span>
+            <div>
+                <div class="titleSection">
+                    <div class="title">
+                        <h1>
+                            Journal Features</h1>
+                    </div>
+                    <div class="readMore">
+                        <a href="/Journals.aspx">RSNA Journals  &#187;</a>
+                    </div>
+                </div>
+            </div>
+        
+        
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                                    <li class="PBItem">
+                                        
+
+<div class="widget" id="dropcontainer">
+    <span id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+        
+        <div id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_WidgetHost_widget_CB">
+			<div class="threeColumn columnsSection"><div class="column padBtm"><a href="http://radiographics.rsna.org/content/33/3/869.full" target="_blank"><img src="/uploadedImages/RSNA/Content/Home/RG1.jpg" alt="RadioGraphics Highlight for July 2013" title="RadioGraphics Highlight for July 2013" style="border-width: 0px; border-style: solid;" border="0" /></a><h2><a href="http://radiographics.rsna.org/content/33/3/869.full" target="_blank">Traumatic Elbow Injuries: What the Orthopedic Surgeon Wants to Know</a></h2><p>Initial imaging should not only help identify major injuries that require immediate intervention but also more subtle injuries that may lead to poor outcomes if treatment is delayed.</p></div><div class="column padBtm"><a href="http://radiology.rsna.org/content/268/1/170.full" target="_blank"><img src="/uploadedImages/RSNA/Content/Home/RY1(1).jpg" alt="Radiology Highlight for July 2013" title="Radiology Highlight for July 2013" style="border-width: 0px; border-style: solid;" border="0" /></a><h2><a href="http://radiology.rsna.org/content/268/1/170.full" target="_blank">MR Cortical Gray Matter Differences Help Characterize Patients with Migraine</a></h2><p>Migraineurs show less cortical thickness and surface area (CSA) in pain processing regions, and more cortical thickness and CSA in executive function and visual motion processing regions. </p></div><div class="column last padBtm"><a href="http://radiographics.rsna.org/content/33/3/797.full" target="_blank"><img src="/uploadedImages/RSNA/Content/Home/RG2.jpg" alt="Second RadioGraphics Highlight for July 2013" title="Second RadioGraphics Highlight for July 2013" style="border-width: 0px; border-style: solid;" border="0" /></a><h2><a href="http://radiographics.rsna.org/content/33/3/797.full" target="_blank">AIRP Best Cases: Mediastinal Mature Cystic Teratoma </a></h2><p>A 26-year-old white woman came to the emergency department after being involved in a motor vehicle accident. A frontal chest radiograph showed a large mass lesion silhouetting the right cardiac border.</p></div></div>
+		</div>
+        
+        
+        <span id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_WidgetHost_widget_errorLb"></span>
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                                    <li class="PBItem">
+                                        
+
+<div class="widget" id="dropcontainer">
+    <span id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl02_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl02_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+        
+        <div id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl02_WidgetHost_WidgetHost_widget_CB">
+			<!-- Adbuyer.com Landing Pixel for RadioSocNA ,Virtual Meeting-->
+<script type="text/javascript">
+   var SWJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+   document.write(unescape("%3Cscript src='" + SWJsHost + "pixel.adbuyer.com/landing?id=10682' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<noscript>
+   <img height='1' width='1' alt='' src='http://pixel.adbuyer.com/landing?id=10682&amp;noscript=1'/>
+</noscript>
+		</div>
+        
+        
+        <span id="ctl00_cpMainContent_DropZone3_columnDisplay_ctl00_controlcolumn_ctl02_WidgetHost_WidgetHost_widget_errorLb"></span>
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                        </ul>
+                    </div>
+                
+        </div>
+    
+</div>
+
+
+    </div>
+    <div id="ctl00_cpMainContent_wrapper3" class="row">
+        
+
+<div id="ctl00_cpMainContent_DropZone4_updatepanel">
+	
+        <div id="ctl00_cpMainContent_DropZone4_dzcontainer" class="dropzone PBClear">
+            
+            
+                    <div id="ctl00_cpMainContent_DropZone4_columnDisplay_ctl00_zone" class="PBViewing">
+                        <ul id="ctl00_cpMainContent_DropZone4_columnDisplay_ctl00_column" class="columnwidgetlist" columnid="0" columnguid="00000000-0000-0000-0000-000000000000">
+                            
+                            
+                        </ul>
+                    </div>
+                
+        </div>
+    
+</div>
+
+
+    </div>
+    <div class="rsnaProgram">
+        <div id="ctl00_cpMainContent_wrapper4" class="row">
+            
+
+<div id="ctl00_cpMainContent_DropZone5_updatepanel">
+	
+        <div id="ctl00_cpMainContent_DropZone5_dzcontainer" class="dropzone PBClear">
+            
+            
+                    <div id="ctl00_cpMainContent_DropZone5_columnDisplay_ctl00_zone" class="PBViewing">
+                        <ul id="ctl00_cpMainContent_DropZone5_columnDisplay_ctl00_column" class="columnwidgetlist" columnid="0" columnguid="00000000-0000-0000-0000-000000000000">
+                            
+                            
+                                    <li class="PBItem">
+                                        
+
+<div class="widget" id="dropcontainer">
+    <span id="ctl00_cpMainContent_DropZone5_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_cpMainContent_DropZone5_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+        
+        <div id="ctl00_cpMainContent_DropZone5_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_CB">
+			<div class="threeColumn columnsSection"><div class="column"><a href="Become_A_Member.aspx"><img src="/uploadedImages/RSNA/Content/Globals/images/Membership.png" class="chikletImg" alt="Membership" /></a><h3><a href="Become_A_Member.aspx">It's Better When You Belong </a></h3><div class="desc"><p>Join a global community of leaders in the radiologic sciences.</p><div class="readMore"><a href="Become_A_Member.aspx">Join now »</a></div></div></div><div class="column"><a href="/Education_Offerings.aspx"><img src="/uploadedImages/RSNA/Content/Globals/images/Education.png" class="chikletImg" alt="Education" /></a><h3><a href="/Education_Offerings.aspx">Maximize Your Learning</a></h3><div class="desc"><p>Continue your education with top-quality learning resources.</p><div class="readMore"><a href="/Education_Offerings.aspx">Learn more »</a></div></div></div><div class="column last"><a href="/Annual_Meeting.aspx" target="_blank"><img src="/uploadedImages/RSNA/Content/Globals/images/RSNA-2013.png" class="chikletImg" alt="RSNA 2013" /></a><h3><a href="/Annual_Meeting.aspx" target="_blank">RSNA 2013 Annual Meeting</a></h3><div class="desc"><p>Witness the world's premier event in medical imaging, Dec 1–6.</p><div class="readMore"><a href="/Annual_Meeting.aspx" target="_blank">Experience it »</a></div></div></div></div>
+		</div>
+        
+        
+        <span id="ctl00_cpMainContent_DropZone5_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_errorLb"></span>
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                                    <li class="PBItem">
+                                        
+
+<div class="widget" id="dropcontainer">
+    <span id="ctl00_cpMainContent_DropZone5_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_cpMainContent_DropZone5_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+        
+        <div id="ctl00_cpMainContent_DropZone5_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_WidgetHost_widget_CB">
+			<div class="threeColumn columnsSection"><div class="column"><a href="/Journals.aspx"><img src="/uploadedImages/RSNA/Content/Globals/images/Journals.png" class="chikletImg" alt="Journals" /></a><h3><a href="/Journals.aspx">The Most Essential Journals </a></h3><div class="desc"><p>Discover the most read and most cited journals in the field.</p><div class="readMore"><a href="/Journals.aspx">Subscribe now »</a></div></div></div><div class="column"><a href="http://myrsna.rsna.org"><img src="/uploadedImages/RSNA/Content/Globals/images/myRSNA.png" class="chikletImg" alt="myRSNA" /></a><h3><a href="http://myrsna.rsna.org">myRSNA: Store, Access and Share</a></h3><div class="desc"><p>Bookmark articles, access files, articles and CME from anywhere.</p><div class="readMore"><a href="http://myrsna.rsna.org">Log in »</a></div></div></div><div class="column last"><a href="http://rsnabuyersguide.com/index.php"><img src="/uploadedImages/RSNA/Content/Globals/images/Buyers-Guide.png" class="chikletImg" alt="BuyersGuide" /></a><h3><a href="http://rsnabuyersguide.com/index.php">RSNA Buyers Guide</a></h3><div class="desc"><p>Shop radiology-related equipment, services, devices and software.</p><div class="readMore"><a href="http://rsnabuyersguide.com/index.php">Browse now »</a></div></div></div></div>
+		</div>
+        
+        
+        <span id="ctl00_cpMainContent_DropZone5_columnDisplay_ctl00_controlcolumn_ctl01_WidgetHost_WidgetHost_widget_errorLb"></span>
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                        </ul>
+                    </div>
+                
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+
+        </div>
+        <!--center content ends-->
+        
+
+<!--footer begins-->
+        <div class="ektron-ui-footer">
+            <div class="footerBack">
+                <div class="footerNav">
+                    <span id="ctl00_footer1_flxMnuFooter"><ul><li class=""><a href="/NewsLandingPage.aspx">RSNA News™</a></li><li class="notFirst"><a href="https://careers.rsna.org/">Career Connect™</a></li><li class="notFirst"><a href="/Advertising.aspx">Advertising</a></li><li class="notFirst"><a href="/Calendar.aspx">Event Calendar</a></li><li class="notFirst"><a href="/Employment.aspx">Employment</a></li><li class="notFirst"><a href="/RSNA_Terms_of_Use.aspx">Terms of Use</a></li><li class="notFirst"><a href="/ContactUs.aspx">Contact Us</a></li></ul></span>
+                    <div class="socialLinks">
+                        <div class="iconFacebook">
+                            <a href="http://www.facebook.com/RSNAfans?sk=wall" target="_blank"></a>
+                        </div>
+                        <div class="iconTwitter">
+                            <a href="http://www.twitter.com/rsna" target="_blank"></a>
+                        </div>
+                        <div class="iconLinkedIn">
+                            <a href="http://www.linkedin.com/company/rsna" target="_blank"></a>
+                        </div>
+                        <div class="iconFlickr">
+                            <a href="http://www.flickr.com/photos/rsna" target="_blank"></a>
+                        </div>
+                        <div class="iconVimeo">
+                            <a href="http://www.vimeo.com/rsna/videos" target="_blank"></a>
+                        </div>
+                        <div class="iconYoutube">
+                            <a href="http://www.youtube.com/user/RSNAweb" target="_blank"></a>
+                        </div>
+                    </div>
+                    <!--social links end-->
+                </div>
+                <!--footer nav ends-->
+            </div>
+            <!--footer back ends-->
+            <div class="copyrightInfo">
+                <div>
+	Copyright © 2013 Radiological Society of North America
+<span class="divider">|</span>
+TEL 1-630-571-2670
+<span class="divider">|</span>
+TOLL FREE U.S. and Canada: 1-800-381-6660
+<span class="divider">|</span>
+Membership 1-877-RSNA-MEM (776-2636)
+<br />
+Main Fax 1-630-571-7837
+<span class="divider">|</span>
+Membership Fax 1-630-590-7712
+</div>                
+            </div>
+        </div>
+        <!--footer ends-->
+    </div>
+    <!--container end-->
+    <!--feedback button and form begins-->
+    <div id="feedback">
+        <a href="#" id="dialog_link" class="ui-state-default ui-corner-all"></a>
+    </div>
+    <!-- ui-dialog -->
+    
+        <div id="dialog" title="Feedback" class="feedbackForm">
+        <fieldset>
+            <div id="ctl00_feedback1_frmBlock">
+	<div id="ctl00_feedback1_frmBlock_content" class="design_content design_mode_entry" contentEditable="false" onmouseover="try{ Ektron.FormBlock.setState('__ekFormState_ctl00_feedback1_frmBlock', 'in') }catch(ex){}" onmouseout="try{ Ektron.FormBlock.setState('__ekFormState_ctl00_feedback1_frmBlock', 'out') }catch(ex){}">
+<input type="hidden" id="__ekFormId_ctl00_feedback1_frmBlock" name="__ekFormId_ctl00_feedback1_frmBlock" value="43" />
+<input type="hidden" id="__ekFormState_ctl00_feedback1_frmBlock" name="__ekFormState_ctl00_feedback1_frmBlock" value="out" />
+<input type="hidden" id="ApplicationAPI43" name="ApplicationAPI43" value="postback" />
+<input type="hidden" name="EktFormId" value="43" />
+<input type="hidden" name="EktFormTitle" value="Feedback Form" />
+<input type="hidden" name="EktFormDescription" value="Design a new form." />
+<input type="hidden" name="EktFormLang" value="1033" />
+<input type="hidden" name="EktFormPublishDate" value="1/13/2012 2:20:23 PM" />
+<p>We appreciate your comments and suggestions in our effort to improve your RSNA web experience.</p>
+<p>Name (required)</p>
+<p><input type="text" ektdesignns_invalidmsg="Cannot be blank" ektdesignns_validate="re:/\S+/" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_basetype="text" ektdesignns_datatype="string" ektdesignns_validation="string-req" ektdesignns_nodetype="element" ektdesignns_caption="Name" ektdesignns_name="Name" size="24" name="Name" title="Name" class="design_textfield" id="Name" onblur="design_validate_re(/\S+/,this,'Cannot be blank');" /> </p>
+<p>Email Address (required)</p>
+<p><input type="text" ektdesignns_invalidmsg="Cannot be blank" ektdesignns_validate="re:/\S+/" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_basetype="text" ektdesignns_datatype="string" ektdesignns_validation="string-req" ektdesignns_nodetype="element" ektdesignns_caption="Email" ektdesignns_name="Email" size="24" name="Email" title="Email" class="design_textfield" id="Email" onblur="design_validate_re(/\S+/,this,'Cannot be blank');" /> </p>
+<p>Comments (required)</p>
+<p><textarea ektdesignns_invalidmsg="Cannot be blank" ektdesignns_validate="re:/\S+/" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_basetype="text" ektdesignns_datatype="string" ektdesignns_validation="string-req" ektdesignns_nodetype="element" ektdesignns_caption="Comments" ektdesignns_name="Comments" name="Comments" rows="3" cols="24" title="Comments" class="design_textfield" id="Comments" onblur="design_validate_re(/\S+/,this,'Cannot be blank');"></textarea>
+
+
+
+
+
+  </p>
+<p> </p>
+<div style="display: none;"><input type="text" ektdesignns_basetype="text" ektdesignns_datatype="string" ektdesignns_nodetype="element" ektdesignns_caption="Name" ektdesignns_name="hdnurl" size="24" name="hdnurl" title="hdnurl" class="design_textfield" id="hdnurl" /> </div>
+<p align="center"><input type="submit" value="Submit Comment" /> </p><script type="text/javascript" language="javascript">
+<!-- 
+function EkFmValidate(formObj) {
+	var strError=''; var e=null;
+if ("object" == typeof Ektron && Ektron && Ektron.SmartForm && "function" == typeof Ektron.SmartForm.onsubmitForm) {
+    return Ektron.SmartForm.onsubmitForm(formObj);
+}
+if (strError=='' && 'function' == typeof design_validateHtmlForm) {
+ e = design_validateHtmlForm(formObj);
+ if (e) { strError = e.title; }
+}
+	if (strError==''){return true;}
+	else {
+		alert(strError);
+		if ('function' == typeof e.scrollIntoView || 'object' == typeof e.scrollIntoView) e.scrollIntoView();
+		if ('function' == typeof design_canElementReceiveFocus) {
+         if (design_canElementReceiveFocus(e)) e.focus();
+     } else { e.focus(); }
+		return false;
+	}
+}
+// --> 
+</script>
+</div>
+<input name="ctl00$feedback1$frmBlock$ctl00$feedback1$frmBlockEktronClientManager" type="hidden" id="ctl00_feedback1_frmBlock_ctl00_feedback1_frmBlockEktronClientManager" value="EktronJS,EktronFormBlockJS,EktronXmlJS,EktronStringJS,EkXBrowser,EktronSmartFormJS" /><script id="ctl00_feedback1_frmBlockEktronScriptBlock" type="text/javascript"><!--//--><![CDATA[//><!--
+	
+                            Ektron.ready(function(event, eventName)
+                            {
+	var settings = 
+{   srcPath: "/WorkArea/ContentDesigner/"
+,   skinPath: "/WorkArea/csslib/ContentDesigner/"
+,   editorSkinPath: "/WorkArea/csslib/Editor/"
+,   langType: 1033
+,   localizedStrings: 
+    { stdOK: "OK"
+    , stdCancel: "Cancel"
+    , mnuInsAbv: "Insert Above"
+    , mnuInsBel: "Insert Below"
+    , mnuDupl: "Duplicate"
+    , mnuMvUp: "Move Up"
+    , mnuMvDn: "Move Down"
+    , mnuRem: "Remove"
+    , sFld: "Field"
+    , sInvFld: "At least one field is not valid. Please correct it and try again."
+    , sShow: "Show"
+    , sHide: "Hide"
+    }
+};
+try {
+    var sf = Ektron.SmartForm.create("ctl00_feedback1_frmBlock_content", settings);
+    Ektron.SmartForm.instances["ctl00$feedback1$frmBlock"] = sf;
+    if (sf) sf.onload();
+} catch (ex) {
+    alert('Error initializing smart form: ' + ex.message);
+}
+
+Ektron.FormBlock.create(
+{
+    id: "ctl00_feedback1_frmBlock",
+    formId: "43",
+    isPoll: false,
+    isSmartForm: false,
+    legacyValidationRules: 0,
+    smartFormContainingElementName: "ctl00_feedback1_frmBlock_content",
+    formStateElementName: "__ekFormState_ctl00_feedback1_frmBlock"
+});
+
+
+	
+                                setTimeout("$ektron('#ctl00_feedback1_frmBlockEktronScriptBlock').remove()", 1);
+                            });
+                            
+	//--><!]]>
+	</script>
+</div>
+        </fieldset>
+    </div>
+
+    
+<div id="NorthAmericacountryList">
+    <div>
+        <div id="ctl00_CountryList1_cbCountryList">
+	<table>
+<tbody>
+<tr>
+<td><strong>Discounted Dues: Eligible North American Countries</strong>&#160;</td>
+</tr>
+<tr>
+<td class="altRowsOdd" colspan="1">Belize</td>
+</tr>
+<tr>
+<td colspan="1">Costa Rica</td>
+</tr>
+<tr>
+<td class="altRowsOdd" colspan="1">Dominican Republic</td>
+</tr>
+<tr>
+<td colspan="1">El Salvador</td>
+</tr>
+<tr>
+<td class="altRowsOdd" colspan="1">Grenada</td>
+</tr>
+<tr>
+<td colspan="1">Guatamala</td>
+</tr>
+<tr>
+<td class="altRowsOdd" colspan="1">Haiti</td>
+</tr>
+<tr>
+<td colspan="1">Honduras</td>
+</tr>
+<tr>
+<td class="altRowsOdd" colspan="1">Jamaica</td>
+</tr>
+<tr>
+<td colspan="1">Netherlands Antilles</td>
+</tr>
+<tr>
+<td class="altRowsOdd" colspan="1">Nicaragua</td>
+</tr>
+<tr>
+<td colspan="1">Panama</td>
+</tr>
+<tr>
+<td class="altRowsOdd" colspan="1">St.Lucia</td>
+</tr>
+<tr>
+<td colspan="1">St. Vincent &amp; Grenadines</td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</div>
+<div id="InternationalcountryList">
+    <div>
+        <div id="ctl00_CountryList1_ContentBlock1">
+	<table border="0" width="400">
+<tbody>
+<tr>
+<td valign="top"><table cellspacing="0" cellpadding="0">
+<colgroup><col width="159" />
+</colgroup><tbody>
+<tr>
+<td width="159">Afghanistan</td>
+</tr>
+<tr>
+<td>Albania</td>
+</tr>
+<tr>
+<td>Algeria</td>
+</tr>
+<tr>
+<td>Angola</td>
+</tr>
+<tr>
+<td>Armenia</td>
+</tr>
+<tr>
+<td>Azerbaijan</td>
+</tr>
+<tr>
+<td>Bangladesh</td>
+</tr>
+<tr>
+<td>Belarus</td>
+</tr>
+<tr>
+<td>Belize</td>
+</tr>
+<tr>
+<td>Benin</td>
+</tr>
+<tr>
+<td>Bhutan</td>
+</tr>
+<tr>
+<td>Bolivia</td>
+</tr>
+<tr>
+<td>Bosnia &amp; Herzegovina</td>
+</tr>
+<tr>
+<td>Botswana</td>
+</tr>
+<tr>
+<td>Bulgaria</td>
+</tr>
+<tr>
+<td>Burkina    Faso</td>
+</tr>
+<tr>
+<td>Burundi</td>
+</tr>
+<tr>
+<td>Cambodia</td>
+</tr>
+<tr>
+<td>Cameroon</td>
+</tr>
+<tr>
+<td>Cape    Verde</td>
+</tr>
+<tr>
+<td>Central African Republic</td>
+</tr>
+<tr>
+<td>Chad</td>
+</tr>
+<tr>
+<td>China</td>
+</tr>
+<tr>
+<td>Colombia</td>
+</tr>
+<tr>
+<td>Comoros</td>
+</tr>
+<tr>
+<td>Congo,    Dem. Rep.</td>
+</tr>
+<tr>
+<td>Congo, Republic of</td>
+</tr>
+<tr>
+<td>Costa    Rica</td>
+</tr>
+<tr>
+<td>Cote d'Ivoire</td>
+</tr>
+<tr>
+<td>Djibouti</td>
+</tr>
+<tr>
+<td>Dominica</td>
+</tr>
+<tr>
+<td>Domicican    Republic</td>
+</tr>
+<tr>
+<td>Ecuador</td>
+</tr>
+<tr>
+<td>Egypt</td>
+</tr>
+<tr>
+<td>El Salvador</td>
+</tr>
+<tr>
+<td>Eritrea</td>
+</tr>
+<tr>
+<td>Ethiopia</td>
+</tr>
+<tr>
+<td>Fiji</td>
+</tr>
+<tr>
+<td>Gambia, The</td>
+</tr>
+<tr>
+<td>Georgia</td>
+</tr>
+<tr>
+<td>Ghana</td>
+</tr>
+<tr>
+<td>Grenada</td>
+</tr>
+<tr>
+<td>Guinea</td>
+</tr>
+<tr>
+<td>Guinea-Bissau</td>
+</tr>
+<tr>
+<td>Guatemala</td>
+</tr>
+<tr>
+<td>Guyana</td>
+</tr>
+<tr>
+<td>Haiti</td>
+</tr>
+<tr>
+<td>Honduras</td>
+</tr>
+<tr>
+<td width="137">India</td>
+</tr>
+<tr>
+<td>Indonesia</td>
+</tr>
+<tr>
+<td>Iran</td>
+</tr>
+<tr>
+<td>Iraq</td>
+</tr>
+<tr>
+<td>Jordan</td>
+</tr>
+<tr>
+<td>Jamaica</td>
+</tr>
+<tr>
+<td>Kazakhstan</td>
+</tr>
+<tr>
+<td>Kenya</td>
+</tr>
+<tr>
+<td>Kiribati</td>
+</tr>
+<tr>
+<td>Kosovo*</td>
+</tr>
+<tr>
+<td width="137">Kyrgyzstan</td>
+</tr>
+<tr>
+<td>Lao PDR</td>
+</tr>
+<tr>
+<td>Laos</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</td>
+<td valign="top"><table cellspacing="0" cellpadding="0">
+<colgroup><col width="137" />
+</colgroup><tbody>
+<tr>
+<td>Latvia</td>
+</tr>
+<tr>
+<td>Lebanon</td>
+</tr>
+<tr>
+<td>Lesotho</td>
+</tr>
+<tr>
+<td>Liberia</td>
+</tr>
+<tr>
+<td>Macedonia</td>
+</tr>
+<tr>
+<td>Madagascar</td>
+</tr>
+<tr>
+<td>Malawi</td>
+</tr>
+<tr>
+<td>Maldives</td>
+</tr>
+<tr>
+<td>Mali</td>
+</tr>
+<tr>
+<td>Marshall Islands</td>
+</tr>
+<tr>
+<td>Mauritania</td>
+</tr>
+<tr>
+<td>Mauritius</td>
+</tr>
+<tr>
+<td>Micronesia,    Fed. Sts.</td>
+</tr>
+<tr>
+<td>Moldova</td>
+</tr>
+<tr>
+<td>Mongolia</td>
+</tr>
+<tr>
+<td>Montenegro</td>
+</tr>
+<tr>
+<td>Morocco</td>
+</tr>
+<tr>
+<td>Mozambique</td>
+</tr>
+<tr>
+<td>Myanmar</td>
+</tr>
+<tr>
+<td>Namibia</td>
+</tr>
+<tr>
+<td>Nepal</td>
+</tr>
+<tr>
+<td>Netherlands Antilles</td>
+</tr>
+<tr>
+<td>Nicaragua</td>
+</tr>
+<tr>
+<td>Niger</td>
+</tr>
+<tr>
+<td>Nigeria</td>
+</tr>
+<tr>
+<td>Pakistan</td>
+</tr>
+<tr>
+<td>Panama</td>
+</tr>
+<tr>
+<td>Papua New Guinea</td>
+</tr>
+<tr>
+<td>Paraguay</td>
+</tr>
+<tr>
+<td>Peru</td>
+</tr>
+<tr>
+<td>Phillippines</td>
+</tr>
+<tr>
+<td>Rwanda</td>
+</tr>
+<tr>
+<td>Samoa</td>
+</tr>
+<tr>
+<td>Sao Tome &amp; Principe</td>
+</tr>
+<tr>
+<td>Senegal</td>
+</tr>
+<tr>
+<td width="160">Somalia</td>
+</tr>
+<tr>
+<td>South Africa</td>
+</tr>
+<tr>
+<td>Sri Lanka</td>
+</tr>
+<tr>
+<td>St Lucia</td>
+</tr>
+<tr>
+<td>St    Vincent &amp; Grenadines</td>
+</tr>
+<tr>
+<td>Sudan</td>
+</tr>
+<tr>
+<td>Suriname</td>
+</tr>
+<tr>
+<td>Swaziland</td>
+</tr>
+<tr>
+<td>Syria</td>
+</tr>
+<tr>
+<td>Tajikistan</td>
+</tr>
+<tr>
+<td>Tanzania</td>
+</tr>
+<tr>
+<td>Thailand</td>
+</tr>
+<tr>
+<td>Timor-Leste</td>
+</tr>
+<tr>
+<td>Togo</td>
+</tr>
+<tr>
+<td>Tonga</td>
+</tr>
+<tr>
+<td>Tunisia</td>
+</tr>
+<tr>
+<td>Turkmenistan</td>
+</tr>
+<tr>
+<td>Uganda</td>
+</tr>
+<tr>
+<td>Ukraine</td>
+</tr>
+<tr>
+<td>Uzbekistan</td>
+</tr>
+<tr>
+<td>Vanuatu</td>
+</tr>
+<tr>
+<td>Vietnam</td>
+</tr>
+<tr>
+<td>West Bank    &amp; Gaza</td>
+</tr>
+<tr>
+<td>Yemen</td>
+</tr>
+<tr>
+<td>Zambia</td>
+</tr>
+<tr>
+<td>Zimbabwe</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
+</div>
+    
+<style type="text/css">
+a:link, a:visited {
+    color: #0039A6;
+    text-decoration: none;
+}
+p {
+    font-size: 	13.2px;
+    line-height: 17.1667px;
+}
+</style>
+<div id="TierDefinition">
+    <div>
+        <div id="ctl00_TierDefinition1_cbTierDefinition">
+	<p>Tier 1</p>
+<ul>
+<li>Bed count: 1-400</li>
+<li>Associate College: Community, Technical, Further Education (UK), Tribal College</li>
+<li>Community Public Library (small scale): general reference public library, museum, non-profit administration office</li>
+</ul>
+<p>Tier 2</p>
+<ul>
+<li>Bed count: 401-750</li>
+<li>Baccalaureate College or University: Bachelor's is the highest degree offered</li>
+<li>Master's College or University: Master's is the highest degree offered</li>
+<li>Special Focus Institution: theological seminaries, Bible colleges, engineering,
+technological, business, management, art, music, design, law</li>
+</ul>
+<p>Tier 3</p>
+<ul>
+<li>Bedcount: 751-1 000</li>
+<li>Research University: high or very high research activity without affiliated medical school</li>
+<li>Health Profession School: non-medical, but health focused</li>
+</ul>
+<p>Tier 4</p>
+<ul>
+<li>Bed count: 1,001 +</li>
+<li>Medical School: research universities with medical school, including medical centers</li>
+</ul>
+<p>Tier 5</p>
+<ul>
+<li>Consortia: academic, medical libraries, affiliated hospitals, regional libraries and other networks</li>
+<li>Corporate</li>
+<li>Government Agency and Ministry</li>
+<li>Hospital System</li>
+<li>Private Practice</li>
+<li>Research Institute: government and non-government health research</li>
+<li>State or National Public Library</li>
+<li>Professional Society: trade unions, industry trade association, lobbying organization</li>
+</ul>
+</div>
+    </div>
+</div>
+
+    
+    
+
+<div id="dialog3" title='Retrieve Account Login Information'>
+
+    <div id="ctl00_forgotpassword1_FormBlock1">
+	<input type="hidden" id="ApplicationAPI340" name="ApplicationAPI340" value="postback" />
+<input type="hidden" name="EktFormId" value="0" />
+<input type="hidden" name="EktFormTitle" value="" />
+<input type="hidden" name="EktFormDescription" value="" />
+<input type="hidden" name="EktFormLang" value="0" />
+<input type="hidden" name="EktFormPublishDate" value="1/1/0001 12:00:00 AM" />
+<script type="text/javascript" language="javascript">
+<!-- 
+function EkFmValidate(formObj) {
+	var strError=''; var e=null;
+if ("object" == typeof Ektron && Ektron && Ektron.SmartForm && "function" == typeof Ektron.SmartForm.onsubmitForm) {
+    return Ektron.SmartForm.onsubmitForm(formObj);
+}
+if (strError=='' && 'function' == typeof design_validateHtmlForm) {
+ e = design_validateHtmlForm(formObj);
+ if (e) { strError = e.title; }
+}
+	if (strError==''){return true;}
+	else {
+		alert(strError);
+		if ('function' == typeof e.scrollIntoView || 'object' == typeof e.scrollIntoView) e.scrollIntoView();
+		if ('function' == typeof design_canElementReceiveFocus) {
+         if (design_canElementReceiveFocus(e)) e.focus();
+     } else { e.focus(); }
+		return false;
+	}
+}
+// --> 
+</script>
+<input name="ctl00$forgotpassword1$FormBlock1$ctl00$forgotpassword1$FormBlock1EktronClientManager" type="hidden" id="ctl00_forgotpassword1_FormBlock1_ctl00_forgotpassword1_FormBlock1EktronClientManager" value="EktronFormBlockJS,EktronJS,EktronXmlJS,EktronStringJS,EkXBrowser,EktronSmartFormJS" /><script id="ctl00_forgotpassword1_FormBlock1EktronScriptBlock" type="text/javascript"><!--//--><![CDATA[//><!--
+	
+                            Ektron.ready(function(event, eventName)
+                            {
+	Ektron.FormBlock.create(
+{
+    id: "ctl00_forgotpassword1_FormBlock1",
+    formId: "340",
+    isPoll: false,
+    isSmartForm: true,
+    smartFormDesignId: "0",
+    smartFormSchemaUrl: "/WorkArea/webservices/rest.svc/xmlconfigs/0.xsd",
+    legacyValidationRules: 0,
+    smartFormContainingElementName: "ctl00_forgotpassword1_FormBlock1_content",
+    formStateElementName: "__ekFormState_ctl00_forgotpassword1_FormBlock1"
+});
+
+
+	
+                                setTimeout("$ektron('#ctl00_forgotpassword1_FormBlock1EktronScriptBlock').remove()", 1);
+                            });
+                            
+	//--><!]]>
+	</script>
+</div>
+
+   
+
+</div>
+    <!--feedback button and form ends-->
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

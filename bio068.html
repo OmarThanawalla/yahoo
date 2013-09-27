@@ -1,0 +1,921 @@
+<base href="http://www.mobot.org/mobot/molib/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><meta content="text/javascript" http-equiv="Content-Script-Type" /><meta content="text/css" http-equiv="Content-Style-Type" /><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright 2013 by Missouri Botanical Garden" /><meta id="MetaAuthor" name="AUTHOR" content="Missouri Botanical Garden" /><meta name="RESOURCE-TYPE" content="DOCUMENT" /><meta name="DISTRIBUTION" content="GLOBAL" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" /><meta name="REVISIT-AFTER" content="1 DAYS" /><meta name="RATING" content="GENERAL" /><meta http-equiv="PAGE-ENTER" content="RevealTrans(Duration=0,Transition=1)" /><style id="StylePlaceholder" type="text/css"></style><link href="/Portals/_default/default.css?cdv=107" type="text/css" rel="stylesheet"/><link href="/DesktopModules/HTML/module.css?cdv=107" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/plantscience/skin.css?cdv=107" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Containers/mbg/container.css?cdv=107" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Containers/mbg/Main.css?cdv=107" type="text/css" rel="stylesheet"/><link href="/Portals/0/portal.css?cdv=107" type="text/css" rel="stylesheet"/><link href="/admin/ControlPanel/module.css?cdv=107" type="text/css" rel="stylesheet"/><link href="/DesktopModules/AZ.DNNMenu/Templates/MobotMegaMenu/MobotMegaMenu.css?cdv=107" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/_default/WebControlSkin/Default/ComboBox.Default.css?cdv=107" type="text/css" rel="stylesheet"/><script src="/Resources/Shared/Scripts/jquery/jquery.min.js?cdv=107" type="text/javascript"></script><script src="/Resources/Shared/Scripts/jquery/jquery-ui.min.js?cdv=107" type="text/javascript"></script><!--[if LT IE 8]><link id="IE6Minus" rel="stylesheet" type="text/css" href="/Portals/_default/Skins/mbg/css/ie6skin.css" /><![endif]-->
+            
+			    <script type="text/javascript">
+			      var _gaq = _gaq || [];
+			      _gaq.push(['_setAccount', 'UA-3783322-21']);
+			      _gaq.push(['_setDomainName', 'none']);
+            _gaq.push(['_setAllowHash', true]); 
+			      
+
+			      _gaq.push(['_trackPageview']);
+			 
+			      (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			      })();
+			    </script>
+            
+		    <link href="/Telerik.Web.UI.WebResource.axd?compress=1&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Web.UI%2c+Version%3d2011.3.1115.35%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3af0ea1c34-9d2c-42a1-84c3-49717427a593%3aed2942d4" type="text/css" rel="stylesheet" /><title>
+	Peter H. Raven Library
+</title></head>
+<body id="Body">
+    
+    <form name="Form" method="post" action="/plant-science/plant-science/resources/raven-library.aspx" id="Form" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="" />
+<input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwOTkyMDQ2OTQPZBYIZg8WAh4EVGV4dAVtPCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBYSFRNTCAxLjAgU3RyaWN0Ly9FTiIgImh0dHA6Ly93d3cudzMub3JnL1RSL3hodG1sMS9EVEQveGh0bWwxLXN0cmljdC5kdGQiPmQCAg8WAh8ABUMgeG1sOmxhbmc9ImVuLVVTIiBsYW5nPSJlbi1VUyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiZAIED2QWDgIEDxYCHgdWaXNpYmxlaGQCBQ8WBB4HY29udGVudGQfAWhkAgYPFgQfAmQfAWhkAgcPFgIfAgUrQ29weXJpZ2h0IDIwMTMgYnkgTWlzc291cmkgQm90YW5pY2FsIEdhcmRlbmQCCA8WBB8CZB8BaGQCCQ8WAh8CBRlNaXNzb3VyaSBCb3RhbmljYWwgR2FyZGVuZAIMDxYCHwIFDUlOREVYLCBGT0xMT1dkAgYPZBYCAgEPZBYCAgcPZBYCZg9kFh4CAQ9kFgJmD2QWAmYPDxYCHwFoZBYGAgIPEGRkFgFmZAIDDw8WAh8BaGRkAgUPZBYGAgEPZBYCAgEPZBYCZg9kFgJmD2QWDgILD2QWAgIDDxBkZBYAZAIND2QWAgIDDxBkZBYAZAIRD2QWAmYPFCsAAmRkFgRmDw8WBB4IQ3NzQ2xhc3MFCXJjYkhlYWRlch4EXyFTQgICZGQCAQ8PFgQfAwUJcmNiRm9vdGVyHwQCAmRkAhcPEGRkFgBkAh0PEGRkFgBkAiEPEGRkFgBkAiUPEGRkFgBkAgMPZBYEAhcPZBYGAgcPEGRkFgBkAgsPEGRkFgBkAg0PEGRkFgBkAhsPZBYGAgcPEGRkFgBkAgkPEGRkFgBkAg0PFCsAAmRkFgRmDw8WBB8DBQlyY2JIZWFkZXIfBAICZGQCAQ8PFgQfAwUJcmNiRm9vdGVyHwQCAmRkAgUPDxYCHwFoZBYEAg0PDxYCHwFoZGQCEQ9kFgJmDxBkZBYAZAICD2QWBAIBD2QWAmYPDxYCHwFoZGQCAg9kFgJmDw8WBB8ABQEgHgtOYXZpZ2F0ZVVybAV9aHR0cDovL3d3dy5taXNzb3VyaWJvdGFuaWNhbGdhcmRlbi5vcmcvbG9naW4uYXNweD9yZXR1cm51cmw9JTJmcGxhbnQtc2NpZW5jZSUyZnBsYW50LXNjaWVuY2UlMmZyZXNvdXJjZXMlMmZyYXZlbi1saWJyYXJ5LmFzcHhkZAIDD2QWAmYPDxYEHgdUb29sVGlwBRlNaXNzb3VyaSBCb3RhbmljYWwgR2FyZGVuHwUFJ2h0dHA6Ly93d3cubWlzc291cmlib3RhbmljYWxnYXJkZW4ub3JnL2RkAgQPFgIeBWNsYXNzBQxETk5FbXB0eVBhbmVkAgUPZBYCAgEPD2QWAh4Fc3R5bGVlFgYCAw8PFgQfAAUGU2VhcmNoHwFnZGQCBQ8QDxYCHwFoZGQWAGQCBw8PFgIfAAUGU2VhcmNoZGQCCQ9kFgICAQ8PZBYCHwhlFgYCAw8PFgQfAAUGU2VhcmNoHwFnZGQCBQ8QDxYCHwFoZGQWAGQCBw8PFgIfAAUGU2VhcmNoZGQCCg8WAh8HBQxETk5FbXB0eVBhbmVkAgsPFgIfBwUaU2xpZGVTaG93UGFuZSBETk5FbXB0eVBhbmVkAgwPDxYCHglwYXJhbXR5cGUFFlBldGVyIEguIFJhdmVuIExpYnJhcnlkFgJmDw8WAh8ABRZQZXRlciBILiBSYXZlbiBMaWJyYXJ5ZGQCDQ9kFgJmDxYCHwcFK0Rubk1vZHVsZSBEbm5Nb2R1bGUtRE5OX0hUTUwgRG5uTW9kdWxlLTY0NTYWAgIBD2QWAmYPZBYCAgEPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAIOD2QWAmYPFgIfBwUrRG5uTW9kdWxlIERubk1vZHVsZS1ETk5fSFRNTCBEbm5Nb2R1bGUtNjQ2MxYCAgEPZBYIAgMPZBYCAgIPFgIfAWhkAgUPZBYCAgEPD2QWAh8HBRxETk5Nb2R1bGVDb250ZW50IE1vZEROTkhUTUxDZAIHD2QWAmYPDxYCHwFoZGQCCQ9kFgJmDw8WAh8BaGRkAg8PZBYCZg8WAh8HBStEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS02NDY0FgICAQ9kFggCAw9kFgICAg8WAh8BaGQCBQ9kFgICAQ8PZBYCHwcFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTENkAgcPZBYCZg8PFgIfAWhkZAIJD2QWAmYPDxYCHwFoZGQCEA9kFgJmDxYCHwcFK0Rubk1vZHVsZSBEbm5Nb2R1bGUtRE5OX0hUTUwgRG5uTW9kdWxlLTY2MDgWAgIBDw8WAh8BaGQWBgIFD2QWAgIBD2QWAgIBD2QWAgIEDxYCHwFoZAIHD2QWAmYPDxYCHwFoZGQCCQ9kFgJmDw8WAh8BaGRkAhEPZBYCZg8WAh8HBStEbm5Nb2R1bGUgRG5uTW9kdWxlLUROTl9IVE1MIERubk1vZHVsZS02MzkwFgICAQ9kFggCAw9kFgICAg8WAh8BaGQCBQ9kFgICAQ8PZBYCHwcFHEROTk1vZHVsZUNvbnRlbnQgTW9kRE5OSFRNTENkAgcPZBYCZg8PFgIfAWhkZAIJD2QWAmYPDxYCHwFoZGQCEg9kFgICAw9kFgJmDw8WAh4ISW1hZ2VVcmwFQS9Qb3J0YWxzL19kZWZhdWx0L1NraW5zL01CRy9pbWFnZXMvZS1uZXdzbGV0dGVyLXN1Ym1pdC1idXR0b24uZ2lmZGQYAwUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFGmRubiRkbm5ETk5SQURNRU5VJFJhZE1lbnUxBSxkbm4kTU9CT1RGT09URVIkc3JOZXdzbGV0dGVyU2lnbnVwJGJ0blN1Ym1pdAUeZG5uJFJpYmJvbkJhciRFZGl0UGFnZSRTa2luTHN0DxQrAAJlZWQFGmRubiRSaWJib25CYXIkQWRkTW9kJGN0bDAyDxQrAAJlZWReqgxrl/A/vrhAtbS5NIqNSZvwdA==" />
+</div>
+
+
+<script src="/DesktopModules/AZ.DNNMenu/Templates/MobotMegaMenu/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+<script src="/DesktopModules/AZ.DNNMenu/Templates/MobotMegaMenu/MobotMegaMenu.js" type="text/javascript"></script>
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d3.5.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3ab4491a8b-c094-46c4-848c-d2a016749dfa%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%2c+Version%3d2011.3.1115.35%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3af0ea1c34-9d2c-42a1-84c3-49717427a593%3a16e4e7cd%3af7645509%3a24ee1bba%3a5f39f986%3ae330518b%3a1e771326%3ac8618e41" type="text/javascript"></script>
+<script src="/js/dnn.js" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCQLPyfO+AQLn3urMDgK7+4KrCgLY5pX7BAKMu9m2BAL/89a7AwKLm4GNDAL+5PGyAgLR9YnYDiOZ9FqZu2cG9tPwLDzrW6yAKYzC" />
+</div><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', document.getElementById('Form'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+        <script src="/Resources/Shared/Scripts/jquery/jquery.hoverIntent.min.js?cdv=107" type="text/javascript"></script><script src="/js/dnn.jquery.js?cdv=107" type="text/javascript"></script><script src="/js/dnncore.js?cdv=107" type="text/javascript"></script><script src="/Resources/ControlPanel/ControlPanel.debug.js?cdv=107" type="text/javascript"></script>
+        
+        
+
+<div id="Page">
+	<div id="dnn_ControlPanel"></div>
+	<div id="PageHeader">
+		
+
+<script language="javascript" type="text/javascript">
+jQuery(document).ready(function()
+{
+	//--- Sets a class to the last (active) element in the breadcrumb link structure
+	jQuery(".MoBotBreadCrumb:last-child").addClass("breadcrumbActive");
+	//--- Remove any <br/> tags that might be in titles
+	jQuery(".MoBotBreadCrumb").find('br').remove();
+});
+</script>
+<div id="PageHeaderSubNavigationBar">			
+			<div class="Widgets">					
+				<object id="TextSizeWidget" codetype="dotnetnuke/client" codebase="StyleSheetWidget" declare="declare">
+					<param name="baseUrl" value="/Portals/_default/Skins/MBG/css/variations/" />
+					<param name="template" value="&lt;div title='{TEXT}' {ID} {CLASS}&gt;&lt;/div&gt;" />
+					<param name="default" value="SmallText" />
+					<param name="Small Text" value="SmallText" />
+					<param name="Medium Text" value="MediumText" />
+					<param name="Large Text" value="LargeText" />
+				</object>
+			</div>
+			<div id="SocialMedia"><a href="http://www.facebook.com/missouribotanicalgarden" target="_blank"><img src="/Portals/_default/Skins/MBG/images/social-facebook-icon.png" width="21" height="21" hspace="2" border="0" /></a><a href="http://twitter.com/mobotnews" target="_blank"><img src="/Portals/_default/Skins/MBG/images/social-twitter-icon.png" width="21" height="21" hspace="2" border="0" /></a><a href="http://www.flickr.com/people/mbgarchives/" target="_blank"><img src="/Portals/_default/Skins/MBG/images/social-flickr-icon.png" width="21" height="21" hspace="2" border="0" /></a><a href="http://www.youtube.com/mobotvideo" target="_blank"><img src="/Portals/_default/Skins/MBG/images/social-youtube-icon.png" width="21" height="21" hspace="2" border="0" /></a><a href="http://www.missouribotanicalgarden.org/DesktopModules/DigArticle/RSS.ashx?portalid=0&moduleid=1465"><img src="/Portals/_default/Skins/MBG/images/social-rss-icon.png" width="21" height="21" hspace="2" border="0" /></a></div>
+			<div id="PageHeaderSubNavigation"><a href="/" class="homeIcon"><img src="/Portals/_default/Skins/mbg/images/home-icon-simple.png" width="17" height="16" border="0" align="top" /> Home</a> <a href="/donate.aspx">Support the Garden</a> <a href="/members.aspx">Members</a> <a href="/shopping-and-dining.aspx">Shop</a> <a href="/about/additional-information/volunteer.aspx">Volunteer</a> <a href="/about/additional-information/jobs.aspx">Jobs</a> <a href="/media.aspx">Media</a> <a href="/about/additional-information/contact-us.aspx">Contact</a></div><div id="LoginNavigation"><a id="dnn_MOBOTHEADERSUBNAV_dnnLogin_loginLink" class="SkinObject" href="http://www.missouribotanicalgarden.org/login.aspx?returnurl=%2fplant-science%2fplant-science%2fresources%2fraven-library.aspx"> </a></div>
+			</div>		
+		<div id="PageHeaderContent">
+			<div id="PageHeaderLogo">
+				<a id="dnn_dnnLOGO_hypLogo" title="Missouri Botanical Garden" href="http://www.missouribotanicalgarden.org/"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/0/Images/logo.gif" alt="Missouri Botanical Garden" style="border-width:0px;" /></a>
+			</div>
+			<div id="PageHeaderAlert">
+				<div id="dnn_AlertPane" class="DNNEmptyPane"></div>
+			</div>
+			<div id="PageHeaderSearch">
+				<div id="PageHeaderSearchBox">
+					
+<link rel="stylesheet" type="text/css" href="http://www.google.com/cse/api/branding.css" />
+<div id="dnn_CustomSearch_divSearch" style="">
+	
+    <div class="cse-branding-form">
+        <input name="dnn$CustomSearch$txtQuery" type="text" id="dnn_CustomSearch_txtQuery" Size="20" />
+        <input type="submit" name="dnn$CustomSearch$btnSearch" value="Search" id="dnn_CustomSearch_btnSearch" Size="5" />
+        
+        
+    </div>
+
+
+</div>
+
+				</div>
+			</div>
+			<div id="PageHeaderNavigationBar">
+				<div id="PageHeaderNavigation">
+					<!-- LEVEL 0  -->
+
+<ul class="lvl0 clearfix">
+    
+    <li class="tab_88 top_1 0 first">
+        <a href="http://www.missouribotanicalgarden.org/visit.aspx">Visit</a>
+        
+        <!-- LEVEL 1  -->
+        <div class="sub-outer" style="display: none;">
+            <div class="sub-inner-top"></div>
+            <div class="sub-inner-middle">
+                <table class="lvl1">
+                    <tr>
+                        
+                        <td class="1 first">
+                            <span class="disabled">The Garden</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 first"><a href="http://www.missouribotanicalgarden.org/visit/the-garden/hours-admission.aspx">Hours & Admission</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/visit/the-garden/getting-here.aspx">Getting Here</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/visit/the-garden/tickets.aspx">Tickets</a></li>
+                                
+                                <li class="2 subind last"><a href="http://www.missouribotanicalgarden.org/visit/the-garden/tours.aspx">Tours</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                        <td class="1">
+                            <span class="disabled">Things To Know</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 first"><a href="http://www.missouribotanicalgarden.org/visit/things-to-know/garden-rules.aspx">Garden Rules</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/visit/things-to-know/accessibility.aspx">Accessibility</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/visit/things-to-know/photography.aspx">Photography</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/visit/things-to-know/sustainability.aspx">Sustainability</a></li>
+                                
+                                <li class="2"><a href="/visit/things-to-know/garden-rules.aspx#picnicking">Picnicking</a></li>
+                                
+                                <li class="2 last"><a href="/visit/things-to-know/garden-rules.aspx#smoking">Smoking</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                        <td class="1 last">
+                            <span class="disabled">Family Of Attractions</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 subind first"><a href="http://www.missouribotanicalgarden.org/visit/family-of-attractions/butterfly-house.aspx">Butterfly House</a></li>
+                                
+                                <li class="2 subind last"><a href="http://www.missouribotanicalgarden.org/visit/family-of-attractions/shaw-nature-reserve.aspx">Shaw Nature Reserve</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="sub-inner-bottom"></div>
+        </div>
+        <!-- LEVEL 1 END  -->
+        
+    </li>
+    
+    <li class="tab_89 top_2 0">
+        <a href="http://www.missouribotanicalgarden.org/things-to-do.aspx">Things To Do</a>
+        
+        <!-- LEVEL 1  -->
+        <div class="sub-outer" style="display: none;">
+            <div class="sub-inner-top"></div>
+            <div class="sub-inner-middle">
+                <table class="lvl1">
+                    <tr>
+                        
+                        <td class="1 first">
+                            <span class="disabled">Events</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 first"><a href="http://www.missouribotanicalgarden.org/things-to-do/events/calendar.aspx">Calendar</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/things-to-do/events/signature-events.aspx">Signature Events</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/things-to-do/events/members-events.aspx">Members' Events</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/things-to-do/events/private-events-rentals.aspx">Private Events & Rentals</a></li>
+                                
+                                <li class="2 subind last"><a href="http://www.missouribotanicalgarden.org/things-to-do/events/special-exhibitions.aspx">Special Exhibitions</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                        <td class="1">
+                            <span class="disabled">Shop & Dine</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 first"><a href="http://www.missouribotanicalgarden.org/things-to-do/shop-dine/garden-gate-shop.aspx">Garden Gate Shop</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/things-to-do/shop-dine/little-shop-around-the-corner.aspx">Little Shop Around the Corner</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/things-to-do/shop-dine/mbg-press.aspx">MBG Press</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/things-to-do/shop-dine/sassafras-cafe.aspx">Sassafras Cafe</a></li>
+                                
+                                <li class="2 last"><a href="http://www.missouribotanicalgarden.org/things-to-do/shop-dine/terrace-cafe.aspx">Terrace Cafe</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                        <td class="1 last">
+                            <span class="disabled">Top Attractions</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 subind first"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/our-garden/gardens-conservatories/conservatories/climatron.aspx">Climatron</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/our-garden/gardens-conservatories/international-gardens/japanese-garden.aspx">Japanese Garden</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/our-garden/gardens-conservatories/victorian-district-tower-grove-house.aspx">Victorian District & Tower Grove House</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/learn-discover/youth-families/just-for-kids/doris-i.-schnuck-childrens-garden.aspx">Children's Garden</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/our-garden/gardens-conservatories/conservatories/linnean-house.aspx">Linnean House</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/things-to-do/top-attractions/tram-tours.aspx">Tram Tours</a></li>
+                                
+                                <li class="2 last"><a href="http://www.missouribotanicalgarden.org/learn-discover/youth-families/just-for-kids.aspx">Just for Kids</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="sub-inner-bottom"></div>
+        </div>
+        <!-- LEVEL 1 END  -->
+        
+    </li>
+    
+    <li class="tab_90 top_3 0">
+        <a href="http://www.missouribotanicalgarden.org/gardens-gardening.aspx">Gardens & Gardening</a>
+        
+        <!-- LEVEL 1  -->
+        <div class="sub-outer" style="display: none;">
+            <div class="sub-inner-top"></div>
+            <div class="sub-inner-middle">
+                <table class="lvl1">
+                    <tr>
+                        
+                        <td class="1 first">
+                            <span class="disabled">Our Garden</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 first"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/our-garden/gardens-conservatories.aspx">Gardens & Conservatories</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/our-garden/notable-plant-collections.aspx">Notable Plant Collections</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/our-garden/plant-records.aspx">Plant Records</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/our-garden/whats-in-bloom.aspx">What's in bloom</a></li>
+                                
+                                <li class="2 subind last"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/our-garden/behind-the-scenes.aspx">Behind the Scenes</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                        <td class="1">
+                            <span class="disabled">Your Garden</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 subind first"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener.aspx">Help for the Home Gardener</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/your-garden/plant-finder.aspx">Plant Finder</a></li>
+                                
+                                <li class="2 last"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/sustainable-gardening.aspx">Sustainable Gardening</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                        <td class="1 last">
+                            <span class="disabled">Gardening in<br>St. Louis</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 first"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/gardening-in-br-st.-louis/master-gardeners.aspx">Master Gardeners</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/gardening-in-br-st.-louis/community-gardening.aspx">Community Gardening</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/learn-discover/adults/classes-tours-workshops.aspx">Classes</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/gardening-in-br-st.-louis/plant-societies.aspx">Plant Societies</a></li>
+                                
+                                <li class="2 last"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/gardening-in-br-st.-louis/plastic-pot-recycling.aspx">Plastic Pot Recycling</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="sub-inner-bottom"></div>
+        </div>
+        <!-- LEVEL 1 END  -->
+        
+    </li>
+    
+    <li class="tab_105 top_4 0">
+        <a href="http://www.missouribotanicalgarden.org/learn-discover.aspx">Learn & Discover</a>
+        
+        <!-- LEVEL 1  -->
+        <div class="sub-outer" style="display: none;">
+            <div class="sub-inner-top"></div>
+            <div class="sub-inner-middle">
+                <table class="lvl1">
+                    <tr>
+                        
+                        <td class="1 first">
+                            <span class="disabled">Youth & Families</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 subind first"><a href="http://www.missouribotanicalgarden.org/learn-discover/youth-families/parent-child-programs.aspx">Parent & Child Programs</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/learn-discover/youth-families/scout-programs.aspx">Scout Programs</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/learn-discover/youth-families/special-events.aspx">Special Events</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/learn-discover/youth-families/summer-programs.aspx">Summer Programs</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/learn-discover/students-teachers/teen-programs.aspx">Youth & Teen Programs</a></li>
+                                
+                                <li class="2 subind last"><a href="http://www.missouribotanicalgarden.org/learn-discover/youth-families/just-for-kids.aspx">Just for Kids</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                        <td class="1">
+                            <span class="disabled">Adults</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 first"><a href="http://www.missouribotanicalgarden.org/learn-discover/adults/classes-tours-workshops.aspx">Classes, Tours & Workshops</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/gardens-gardening/gardening-in-br-st.-louis/master-gardeners.aspx">St. Louis Master Gardener Program</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/learn-discover/adults/therapeutic-horticulture.aspx">Therapeutic Horticulture</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/learn-discover/adults/travel-with-the-garden.aspx">Travel with the Garden</a></li>
+                                
+                                <li class="2 last"><a href="http://www.missouribotanicalgarden.org/about/additional-information/volunteer.aspx">Volunteer Opportunities</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                        <td class="1 last">
+                            <span class="disabled">Students & Teachers</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 subind first"><a href="http://www.missouribotanicalgarden.org/learn-discover/students-teachers/school-programs-and-field-trips.aspx">School Programs and Field Trips</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/learn-discover/students-teachers/teen-programs.aspx">Teen Programs</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/learn-discover/students-teachers/teacher-professional-development.aspx">Teacher Professional Development</a></li>
+                                
+                                <li class="2 last"><a href="http://www.missouribotanicalgarden.org/learn-discover/students-teachers/educational-resources.aspx">Educational Resources</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="sub-inner-bottom"></div>
+        </div>
+        <!-- LEVEL 1 END  -->
+        
+    </li>
+    
+    <li class="tab_106 top_5 0">
+        <a href="http://www.missouribotanicalgarden.org/sustainability-conservation.aspx">Sustainability & Conservation</a>
+        
+        <!-- LEVEL 1  -->
+        <div class="sub-outer" style="display: none;">
+            <div class="sub-inner-top"></div>
+            <div class="sub-inner-middle">
+                <table class="lvl1">
+                    <tr>
+                        
+                        <td class="1 first">
+                            <span class="disabled">Sustainable Learning</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 first"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/sustainable-learning/whats-new.aspx">What's New</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/sustainable-learning/classes-and-tours.aspx">Classes and Tours</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/sustainable-learning/in-schools-and-universities.aspx">In Schools and Universities</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/sustainable-learning/special-events.aspx">Special Events</a></li>
+                                
+                                <li class="2 last"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/sustainable-learning/green-resources-answer-service.aspx">Green Resources Answer Service</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                        <td class="1">
+                            <span class="disabled">Sustainable Living</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 subind first"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/sustainable-living/at-home.aspx">At Home</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/sustainable-living/at-work.aspx">At Work</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/sustainable-living/in-the-community.aspx">In the Community</a></li>
+                                
+                                <li class="2 last"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/sustainable-living/green-building.aspx">Green Building</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                        <td class="1 last">
+                            <span class="disabled">Conservation in Action</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 subind first"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/conservation-in-action/at-the-missouri-botanical-garden.aspx">At the Missouri Botanical Garden</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/conservation-in-action/at-the-earthways-center.aspx">At the EarthWays Center</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/conservation-in-action/at-the-shaw-nature-reserve.aspx">At the Shaw Nature Reserve</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/conservation-in-action/at-the-butterfly-house.aspx">At the Butterfly House</a></li>
+                                
+                                <li class="2 last"><a href="http://www.missouribotanicalgarden.org/sustainability-conservation/conservation-in-action/around-the-world.aspx">Around the World</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="sub-inner-bottom"></div>
+        </div>
+        <!-- LEVEL 1 END  -->
+        
+    </li>
+    
+    <li class="tab_107 top_6 0">
+        <a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/about-science-conservation.aspx">Plant Science</a>
+        
+        <!-- LEVEL 1  -->
+        <div class="sub-outer" style="display: none;">
+            <div class="sub-inner-top"></div>
+            <div class="sub-inner-middle">
+                <table class="lvl1">
+                    <tr>
+                        
+                        <td class="1 first last">
+                            <span class="disabled">Plant Science</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 first"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/about-science-conservation.aspx">About Science & Conservation</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/research.aspx">Research</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation.aspx">Conservation</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/resources.aspx">Resources</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation/conservation-in-action.aspx">Centers of Excellence</a></li>
+                                
+                                <li class="2 last"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/research-staff.aspx">Research Staff</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="sub-inner-bottom"></div>
+        </div>
+        <!-- LEVEL 1 END  -->
+        
+    </li>
+    
+    <li class="tab_108 top_7 0 last">
+        <a href="http://www.missouribotanicalgarden.org/about.aspx">About</a>
+        
+        <!-- LEVEL 1  -->
+        <div class="sub-outer" style="display: none;">
+            <div class="sub-inner-top"></div>
+            <div class="sub-inner-middle">
+                <table class="lvl1">
+                    <tr>
+                        
+                        <td class="1 first last">
+                            <span class="disabled">Additional Information</span class="disabled">
+                            
+                            <!-- LEVEL 2 -->
+                            <ul class="lvl2 clearfix">
+                                
+                                <li class="2 first"><a href="http://www.missouribotanicalgarden.org/about/additional-information/our-mission-history.aspx">Our Mission & History</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/about/additional-information/presidents-welcome.aspx">President's Welcome</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/about/additional-information/president-emeritus.aspx">President Emeritus</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/about/additional-information/board-of-trustees.aspx">Board of Trustees</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/about/additional-information/annual-strategic-reports.aspx">Annual & Strategic Reports</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/about/additional-information/zoo-museum-district.aspx">Zoo-Museum District</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/about/additional-information/jobs.aspx">Jobs</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/about/additional-information/internships.aspx">Internships</a></li>
+                                
+                                <li class="2 subind"><a href="http://www.missouribotanicalgarden.org/about/additional-information/volunteer.aspx">Volunteer</a></li>
+                                
+                                <li class="2"><a href="http://www.missouribotanicalgarden.org/about/additional-information/donation-requests.aspx">Donation Requests</a></li>
+                                
+                                <li class="2 subind last"><a href="http://www.missouribotanicalgarden.org/about/additional-information/contact-us.aspx">Contact Us</a></li>
+                                
+                            </ul>
+                            
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="sub-inner-bottom"></div>
+        </div>
+        <!-- LEVEL 1 END  -->
+        
+    </li>
+    
+</ul>
+
+<!-- LEVEL 0 END  -->
+ 					
+				</div>
+				<div id="PageHeaderNavigationTail"><img src="/Portals/_default/Skins/plantscience/images/PageHeaderNavigation-Right-Tail.png" /></div>				
+			</div>
+			<div id="PageHeaderBreadCrumb">
+				<span id="dnn_dnnBreadcrumb_lblBreadCrumb"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/about-science-conservation.aspx" class="MoBotBreadCrumb">Plant Science</a> > <span class="MoBotBreadCrumb">Plant Science</span> > <a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/resources.aspx" class="MoBotBreadCrumb">Resources</a> > <a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/resources/raven-library.aspx" class="MoBotBreadCrumb">Raven Library</a></span>
+
+			</div>
+			<div class="clear_float"></div>
+		</div>
+	</div>
+	<div id="PageBody">		
+		<div id="PageBodyContent" class="PS SubPage">
+			<div id="PSPageBodyContentLeft">
+				<div id="PSPageBodyNavigation" class="SubPageNav">
+					<div id="PageBodyNavigation">
+						<a href="/plant-science/plant-science/about-science-conservation.aspx"><img src="/Portals/_default/Skins/plantscience/Images/plant-science-logo.gif" border="0" width="183" height="90" /></a>						
+						<div id="dnn_dnnDNNRADMENU_RadMenu1" class="RadMenu RadMenu_PSMenu">
+	<!-- 2011.3.1115.35 --><ul class="rmRootGroup rmVertical">
+		<li class="rmItem rmFirst"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/about-science-conservation.aspx" class="rmLink rmRootLink"><span class="rmText">About Science & Conservation</span></a></li><li class="rmItem "><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/research.aspx" class="rmLink rmRootLink"><span class="rmText">Research</span></a><div class="rmSlide">
+			<ul class="rmVertical rmGroup rmLevel1">
+				<li class="rmItem rmFirst"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/research/exploration-and-discovery.aspx" class="rmLink"><span class="rmText">Exploration and Discovery</span></a></li><li class="rmItem "><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/research/plant-identification.aspx" class="rmLink"><span class="rmText">Plant Classification and Systematics</span></a></li><li class="rmItem "><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/research/collaboration.aspx" class="rmLink"><span class="rmText">Collaboration</span></a></li><li class="rmItem rmLast"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/research/applied-botany.aspx" class="rmLink"><span class="rmText">Applied Botany</span></a></li>
+			</ul>
+		</div></li><li class="rmItem "><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation.aspx" class="rmLink rmRootLink"><span class="rmText">Conservation</span></a><div class="rmSlide">
+			<ul class="rmVertical rmGroup rmLevel1">
+				<li class="rmItem rmFirst"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation/biodiversity.aspx" class="rmLink"><span class="rmText">Biodiversity</span></a></li><li class="rmItem "><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation/climate-change.aspx" class="rmLink"><span class="rmText">Climate Change</span></a></li><li class="rmItem rmLast"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation/conservation-in-action.aspx" class="rmLink"><span class="rmText">Conservation in Action</span></a></li>
+			</ul>
+		</div></li><li class="rmItem "><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/resources.aspx" class="rmLink rmRootLink"><span class="rmText">Resources</span></a><div class="rmSlide">
+			<ul class="rmVertical rmGroup rmLevel1">
+				<li class="rmItem rmFirst"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/resources/raven-library.aspx" class="rmLink"><span class="rmText">Library</span></a></li><li class="rmItem "><a href="javascript:void(window.open('http://www.mbgpress.info/'))" class="rmLink"><span class="rmText">MBG Press</span></a></li><li class="rmItem rmLast"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/resources/opportunities.aspx" class="rmLink"><span class="rmText">Opportunities</span></a><div class="rmSlide">
+					<ul class="rmVertical rmGroup rmLevel2">
+						<li class="rmItem rmFirst"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/resources/opportunities/fellowships.aspx" class="rmLink"><span class="rmText">Fellowships</span></a></li><li class="rmItem rmLast"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/resources/opportunities/undergraduate-studies.aspx" class="rmLink"><span class="rmText">Research Experiences for Undergraduates</span></a></li>
+					</ul>
+				</div></li>
+			</ul>
+		</div></li><li class="rmItem "><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation/conservation-in-action.aspx" class="rmLink rmRootLink"><span class="rmText">Centers of Excellence</span></a><div class="rmSlide">
+			<ul class="rmVertical rmGroup rmLevel1">
+				<li class="rmItem rmFirst"><a href="http://www.mobot.org/plantscience/ccsd/" class="rmLink" target="_blank"><span class="rmText">Center for Conservation & Sustainable Development</span></a></li><li class="rmItem "><a href="http://www.centerforplantconservation.org/" class="rmLink" target="_blank"><span class="rmText">Center for Plant Conservation</span></a></li><li class="rmItem "><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/william-l-brown-center.aspx" class="rmLink"><span class="rmText">William L. Brown Center</span></a></li><li class="rmItem rmLast"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/center-for-biodiversity-informatics.aspx" class="rmLink"><span class="rmText">Center for Biodiversity Informatics</span></a></li>
+			</ul>
+		</div></li><li class="rmItem rmLast"><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/research-staff.aspx" class="rmLink rmRootLink"><span class="rmText">Research Staff</span></a></li>
+	</ul><script type="text/javascript">
+		Telerik.Web.UI.RadMenu._adjustRootItemWidth("dnn_dnnDNNRADMENU_RadMenu1");
+	</script><input id="dnn_dnnDNNRADMENU_RadMenu1_ClientState" name="dnn_dnnDNNRADMENU_RadMenu1_ClientState" type="hidden" />
+</div>
+						<div class="clear_float"></div>
+					</div>
+				</div>
+				<div id="ContactInformation">
+					<p><center>Plant Science Search<br /><br />
+<link rel="stylesheet" type="text/css" href="http://www.google.com/cse/api/branding.css" />
+<div id="dnn_PlantScienceGS_divSearch" style="">
+	
+    <div class="cse-branding-form">
+        <input name="dnn$PlantScienceGS$txtQuery" type="text" id="dnn_PlantScienceGS_txtQuery" Size="20" />
+        <input type="submit" name="dnn$PlantScienceGS$btnSearch" value="Search" id="dnn_PlantScienceGS_btnSearch" Size="5" />
+        
+        
+    </div>
+
+
+</div>
+</center></p>
+					<p><a href="http://www.missouribotanicalgarden.org/plant-science/plant-science/world-flora-online.aspx" title="An online flora of all known plants by 2020" target="_self" onmouseover="worldflora.src='/Portals/_default/Skins/plantscience/images/3d-world-flora-on.png';" onmouseout="worldflora.src='/Portals/_default/Skins/plantscience/images/3d-world-flora-off.png';"><img name="worldflora" src="/Portals/_default/Skins/plantscience/Images/3d-world-flora-off.png" width="170" height="49" border="0" /></a></p>
+					<p><a href="http://www.tropicos.org/" title="World's largest database of plant information" target="_blank" onmouseover="tropicos.src='/Portals/_default/Skins/plantscience/images/3d-tropicos-on.png';" onmouseout="tropicos.src='/Portals/_default/Skins/plantscience/images/3d-tropicos-off.png';"><img name="tropicos" src="/Portals/_default/Skins/plantscience/Images/3d-tropicos-off.png" width="170" height="49" border="0" /></a></p>
+					<p><a href="http://www.botanicus.org/" title="Historic botanical literature database" target="_blank" onmouseover="botanicus.src='/Portals/_default/Skins/plantscience/images/3d-botanicus-on.png';" onmouseout="botanicus.src='/Portals/_default/Skins/plantscience/images/3d-botanicus-off.png';"><img name="botanicus" src="/Portals/_default/Skins/plantscience/Images/3d-botanicus-off.png" width="170" height="49" border="0" /></a></p>
+				</div>
+				<div id="dnn_LeftCalloutPane" class="DNNEmptyPane"></div>
+			</div>
+			<div id="dnn_SlideShowPane" class="SlideShowPane DNNEmptyPane"></div>
+			<div id="PSPageBodyContentMiddle">
+				<div id="SubPageBodyContentMiddleTitle">
+					<div id="SubPageBodyContentMiddleTitleHeader"></div>
+					<div id="SubPageBodyContentMiddleTitleContent" class="SubPageTitle"><span id="dnn_srTitle_lblTitle">Peter H. Raven Library</span></div>
+					<div id="SubPageBodyContentMiddleTitleFooter"></div>
+				</div>
+				<div id="dnn_ContentPane" class="ContentPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-6456"><a name="6456"></a><div id="dnn_ctr6456_ContentPane"><!-- Start_Module_6456 --><div id="dnn_ctr6456_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	
+<div id="dnn_ctr6456_HtmlModule_lblContent" class="Normal">
+	<p><strong><img width="285" height="207" class="LeftAlign" alt="Monsanto Center" src="http://www.missouribotanicalgarden.org/Portals/0/Science%20and%20Conservation/images/Resources_MCFront.jpg" />Peter H. Raven Library</strong><br />
+Fourth floor of the Monsanto Center<br />
+4500 Shaw Blvd. <br />
+St. Louis, MO 63110 </p>
+<p>Phone: (314) 577-5155 <br />
+Fax: (314) 577-0840 <a href="mailto:library@mobot.org"><br />
+library@mobot.org</a></p>
+<p>8:30 a.m. to 5:00 p.m.<br />
+Monday through Friday</p>
+<p><a href="http://www.slrlc.org/search~S1/" target="_blank" class="CalloutLink">Search the catalog</a></p>
+<p>The Library began as a small collection of horticultural books owned by the Garden&rsquo;s founder, Henry Shaw. Shaw augmented the collection through his friendships with leading 19th&nbsp;century naturalists, botanists and other scientists. Today, the Library is globally recognized as one of the most comprehensive libraries of botanical literature in the world.
+</p>
+<p>In 2011, it was formally dedicated in honor of Dr. Peter Raven&rsquo;s legacy in science, conservation and botany by the Missouri Botanical Garden&rsquo;s Board of Trustees. The dedication memorializes the tenure of Raven who transformed the Missouri Botanical Garden in his nearly four decades as president and director.</p>
+<p>The Library is a research facility, and its holdings do not circulate. Those interested in using the collection are encouraged to make an appointment. Also, the Library's <a target="_blank" href="http://www.mobot.org/MOBOT/Research/imaginglab/welcome.shtml">Imaging Lab</a> has digitized more than 3,300 volumes&ndash;approximately 1.5 million pages&ndash;and made them available to researchers around the world at the <a target="_blank" href="http://www.biodiversitylibrary.org/">Biodiversity Heritage Library</a>.</p>
+<p>The collections are divided into two major components: the general collection and special collection. The special collection includes rare books and the Garden&rsquo;s <a target="_blank" href="http://www.mobot.org/MOBOT/molib/archives.shtml">Archives</a>, while the general collection includes 200,000 volumes of monographs and periodicals and more than 3,000 volumes of reference works.</p>
+</div>
+
+</div><!-- End_Module_6456 --></div>
+</div></div>
+				<div id="dnn_LeftPane" class="LeftPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-6463"><a name="6463"></a>
+
+<div class="C_Container C_Main">
+	
+	<div class="C_Header">
+		<div class="C_Header_Graphic"><span id="dnn_ctr6463_dnnTITLE_titleLabel" class="TitleText">Rare Books</span>
+
+
+</div>
+		<hr />
+	</div>
+	<div class="C_Content">
+		<div id="dnn_ctr6463_ContentPane"><!-- Start_Module_6463 --><div id="dnn_ctr6463_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	
+<div id="dnn_ctr6463_HtmlModule_lblContent" class="Normal">
+	<p><img width="240" height="160" src="http://www.missouribotanicalgarden.org/Portals/0/Science%20and%20Conservation/images/Resources_RareBooks.jpg" alt="Rare Books" />&nbsp;</p>
+<p>Rare books, such as the first edition, first printing of Charles Darwin&rsquo;s <em>On the Origin of Species</em>, are housed in the Rare Book Room, which offers environmental controls and stricter security. <a class="CalloutLink" target="_blank" href="http://www.illustratedgarden.org/mobot/rarebooks/">Learn more</a></p>
+</div>
+
+</div><!-- End_Module_6463 --></div>
+	</div>
+	<div class="C_Footer"></div>
+	<div class="C_ContentTools">
+		
+		
+	</div>
+</div>
+</div></div>
+				<div id="dnn_RightPane" class="RightPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-6464"><a name="6464"></a>
+
+<div class="C_Container C_Main">
+	
+	<div class="C_Header">
+		<div class="C_Header_Graphic"><span id="dnn_ctr6464_dnnTITLE_titleLabel" class="TitleText">Imaging Lab</span>
+
+
+</div>
+		<hr />
+	</div>
+	<div class="C_Content">
+		<div id="dnn_ctr6464_ContentPane"><!-- Start_Module_6464 --><div id="dnn_ctr6464_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	
+<div id="dnn_ctr6464_HtmlModule_lblContent" class="Normal">
+	<p><img width="240" height="160" src="http://www.missouribotanicalgarden.org/Portals/0/Science%20and%20Conservation/images/Resources_ImagingLab.jpg" alt="Imaging Lab" />&nbsp;</p>
+<p>In an effort to protect the collection from wear-and-tear while increasing accessibility, expert technicians use specialized scanning stations to digitized herbarium specimens, books and more. <a class="CalloutLink" target="_blank" href="http://www.mobot.org/MOBOT/Research/imaginglab/welcome.shtml">Learn more</a></p>
+</div>
+
+</div><!-- End_Module_6464 --></div>
+	</div>
+	<div class="C_Footer"></div>
+	<div class="C_ContentTools">
+		
+		
+	</div>
+</div>
+</div></div>
+				<div id="dnn_FooterPane" class="FooterPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-6608"><a name="6608"></a></div></div>
+			</div>
+			<div id="PSPageBodyContentRight">		
+				<div id="dnn_RightCalloutPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-6390"><a name="6390"></a>
+
+<div class="C_Container C_Main">
+	
+	<div class="C_Header">
+		<div class="C_Header_Graphic"><span id="dnn_ctr6390_dnnTITLE_titleLabel" class="TitleText">Quick Links</span>
+
+
+</div>
+		<hr />
+	</div>
+	<div class="C_Content">
+		<div id="dnn_ctr6390_ContentPane"><!-- Start_Module_6390 --><div id="dnn_ctr6390_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	
+<div id="dnn_ctr6390_HtmlModule_lblContent" class="Normal">
+	<p><span class="TitleText">More Plant Science</span></p>
+<hr />
+<a href="http://www.mobot.org/MOBOT/Research/APweb/welcome.html" class="CalloutLink" target="_blank">Angiosperm Phylogeny</a><br />
+<a href="http://www.mobot.org/MOBOT/tropicos/most/welcome.shtml" class="CalloutLink" target="_blank">Bryology</a><br />
+<a href="http://www.mobot.org/MOBOT/Research/alldb.shtml" class="CalloutLink" target="_blank">Databases</a><br />
+<a href="http://www.tropicos.org/ProjectList.aspx" class="CalloutLink" target="_blank">Floras</a><br />
+<a href="http://www.mobot.org/MOBOT/Research/generalprojects.shtml" class="CalloutLink" target="_blank">General Taxonomy</a><br />
+<a href="http://www.mobot.org/MOBOT/Research/gis/welcome.shtml" class="CalloutLink" target="_blank">GIS</a><br />
+<a href="http://www.tropicos.org/ImageSearch.aspx" class="CalloutLink" target="_blank">Image Index</a><br />
+<a href="http://www.mobot.org/mobot/photoessays/default.asp" class="CalloutLink" target="_blank">Photo Essays</a><br />
+<a href="http://www.mobot.org/MOBOT/Research/publications.shtml" class="CalloutLink" target="_blank">Publications</a><br />
+<a href="https://www.missouribotanicalgarden.org/plant-science/plant-science/resources/conferences-and-seminars/annual-systematics-symposium.aspx" class="CalloutLink">Symposium</a>
+<p><span class="TitleText">Explore Regions</span></p>
+<hr />
+<a href="https://www.missouribotanicalgarden.org/plant-science/plant-science/africa.aspx" class="CalloutLink">Africa</a><br />
+<a href="https://www.missouribotanicalgarden.org/plant-science/plant-science/asia-and-pacific.aspx" class="CalloutLink">Asia/Pacific</a><br />
+<a href="https://www.missouribotanicalgarden.org/plant-science/plant-science/mesoamerica.aspx" class="CalloutLink">Mesoamerica</a><br />
+<a href="https://www.missouribotanicalgarden.org/plant-science/plant-science/north-america.aspx" class="CalloutLink">North America</a><br />
+<a href="https://www.missouribotanicalgarden.org/plant-science/plant-science/south-america.aspx" class="CalloutLink">South America</a>
+<p><span class="TitleText">Centers of Excellence</span></p>
+<hr />
+<a href="http://www.mobot.org/plantscience/ccsd/frontpage.asp" class="CalloutLink" target="_blank">Center for Conservation &amp; Sustainable Development</a><br />
+<a href="https://www.missouribotanicalgarden.org/plant-science/plant-science/william-l-brown-center.aspx" class="CalloutLink">William L. Brown Center</a><br />
+<a href="https://www.missouribotanicalgarden.org/plant-science/plant-science/center-for-biodiversity-informatics.aspx" class="CalloutLink" target="_blank">Center for Biodiversity Informatics</a><br />
+<a href="http://www.centerforplantconservation.org/welcome.asp" class="CalloutLink" target="_blank">Center for Plant Conservation</a>
+</div>
+
+</div><!-- End_Module_6390 --></div>
+	</div>
+	<div class="C_Footer"></div>
+	<div class="C_ContentTools">
+		
+		
+	</div>
+</div>
+</div></div>
+			</div>
+			<div class="clear_float"></div>
+		</div>
+	</div>
+	
+
+<div id="PageFooter">
+	<img src="/Portals/_default/Skins/mbg/images/PageFooter-Top.png" width="1000" height="32" style="display:block;" />
+	<div id="PageFooterContent">
+		<div id="PageFooterSupport">
+			<div id="PageFooterSupportContent">
+				<p class="FooterTitleText">Thank You!</p>
+				<p>The Garden wouldn't be the Garden without our Members, Donors and Volunteers.</p>
+				<p><a href="/donate.aspx"><img src="/Portals/_default/Skins/mbg/images/Support-The-Garden-Button.png" width="150" height="20" /></a></p>
+			</div>
+			<p><a href="/members/become-a-member.aspx"><img src="/Portals/_default/Skins/mbg/images/Become-A-Member-Button.png" width="192" height="51" style="margin:10px 0px 0px 2px;" /></a></p>
+		</div>
+		<div id="PageFooterInfo">
+			<p class="FooterSubTitleText">Info for</p>
+			<hr />
+			<ul>
+				<li><a href="/members.aspx">Members</a></li>
+				<li><a href="/visit.aspx">Visitors</a></li>
+				<li><a href="/gardens-gardening/your-garden/help-for-the-home-gardener.aspx">Gardeners</a></li>
+				<li><a href="/gardens-gardening/for-horticulturists-gardening-professionals.aspx">Horticulturists</a></li>
+				<li><a href="/learn-discover.aspx">Educators</a></li>
+				<li><a href="/plant-science/plant-science/info-for-researchers.aspx">Researchers</a></li>
+			</ul>
+		</div>
+		<div id="PageFooterNavigation">
+			<p class="FooterSubTitleText">Main Navigation</p>
+			<hr />
+			<span id="dnn_MOBOTFOOTER_dnnLINKS_lblLinks"><div> <a class="links" href="http://www.missouribotanicalgarden.org/visit.aspx">Visit</a></div><div> <a class="links" href="http://www.missouribotanicalgarden.org/things-to-do.aspx">Things To Do</a></div><div> <a class="links" href="http://www.missouribotanicalgarden.org/gardens-gardening.aspx">Gardens & Gardening</a></div><div> <a class="links" href="http://www.missouribotanicalgarden.org/learn-discover.aspx">Learn & Discover</a></div><div> <a class="links" href="http://www.missouribotanicalgarden.org/sustainability-conservation.aspx">Sustainability & Conservation</a></div><div> <a class="links" href="http://www.missouribotanicalgarden.org/plant-science/plant-science/about-science-conservation.aspx">Plant Science</a></div><div> <a class="links" href="http://www.missouribotanicalgarden.org/about.aspx">About</a></div></span>
+
+		</div>
+		<div id="PageFooterQuickLinks">
+			<p class="FooterSubTitleText">Quick Links</p>
+			<hr />
+			<ul>
+				<li><a href="/donate.aspx">Support the Garden</a></li>
+				<li><a href="/members.aspx">Members</a></li>
+				<li><a href="/shopping-and-dining.aspx">Shop</a></li>
+				<li><a href="/about/additional-information/volunteer.aspx">Volunteer</a></li>
+				<li><a href="/about/additional-information/jobs.aspx">Jobs</a></li>
+				<li><a href="/media.aspx">Media</a></li>
+				<li><a href="/about/additional-information/contact-us.aspx">Contact</a></li>
+			</ul>
+		</div>
+		<div id="PageFooterLocations">
+			<p class="FooterTitleText"><img src="/Portals/_default/Skins/mbg/images/mbg-logo-micro.gif" width="26" height="23" align="absmiddle" style="padding-right:4px;" /><a href="/">Missouri Botanical Garden</a></p>
+			<blockquote>4344 Shaw Blvd., St. Louis, MO 63110<br />(314) 577-5100 <a href="/visit/the-garden/hours-admission.aspx" class="CalloutLink">hours and admission</a></blockquote>
+			<p class="FooterTitleText"><a href="/visit/family-of-attractions/butterfly-house.aspx">Butterfly House</a></p>
+			<blockquote>Faust Park, 15193 Olive Blvd. <br />Chesterfield, MO 63017<br />(636) 530-0076 <a href="/visit/family-of-attractions/butterfly-house/visit-the-butterfly-house/hours-admissions.aspx" class="CalloutLink">hours and admission</a></blockquote>
+			<p class="FooterTitleText"><a href="/visit/family-of-attractions/shaw-nature-reserve.aspx">Shaw Nature Reserve</a></p>
+			<blockquote>Hwy. 100 & I-44 Gray Summit, MO 63039<br />(636) 451-3512 <a href="/visit/family-of-attractions/shaw-nature-reserve/visit-shaw-nature-reserve/hours-admission.aspx" class="CalloutLink">hours and admission</a></blockquote>
+		</div>
+		<div id="PageFooterFooter">
+			<div id="PageFooterNewsletter">
+				
+
+<div class='newsletter-signup'>
+    <div class="message">
+        Sign up for our e-newsletter
+    </div>
+    <div class="input">
+        <input type="image" name="dnn$MOBOTFOOTER$srNewsletterSignup$btnSubmit" id="dnn_MOBOTFOOTER_srNewsletterSignup_btnSubmit" class="submit-button" src="/Portals/_default/Skins/MBG/images/e-newsletter-submit-button.gif" style="border-width:0px;" />
+        <input name="dnn$MOBOTFOOTER$srNewsletterSignup$txtEmail" type="text" id="dnn_MOBOTFOOTER_srNewsletterSignup_txtEmail" class="text-input" />
+    </div>
+</div>
+			</div>
+			<div id="PageFooterLegal">
+				<a href="/privacy-policy.aspx">Privacy Policy</a> | <a href="/conditions.aspx">Conditions</a> | <a href="/conditions.aspx">Copyright</a> | <a href="/affiliations.aspx">Affiliations</a> | <a href="/site-map.aspx">Site Map</a><br />
+				<!--<div id="Steadyrain"><a href="http://www.steadyrain.com" target="_blank">Web Development</a> by <a href="http://www.steadyrain.com" target="_blank">SteadyRain</a></div>-->
+			</div>
+		</div>
+		<div class="clear_float"></div>
+	</div>
+	<img src="/Portals/_default/Skins/mbg/images/PageFooter-Bottom.png" width="1000" height="51" style="display:block;" />
+</div>
+</div>
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" value="`{`__scdoff`:`1`}" />
+        
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+;(function() {
+                        function loadHandler() {
+                            var hf = $get('StylesheetManager_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Web.UI, Version=2011.3.1115.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4:en-US:f0ea1c34-9d2c-42a1-84c3-49717427a593:ed2942d4';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMenu, {"_childListElementCssClass":null,"_flow":0,"_skin":"PSMenu","clientStateFieldID":"dnn_dnnDNNRADMENU_RadMenu1_ClientState","collapseAnimation":"{\"duration\":450}","expandAnimation":"{\"duration\":450}","itemData":[{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/about-science-conservation.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"items":[{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/research/exploration-and-discovery.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/research/plant-identification.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/research/collaboration.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/research/applied-botany.aspx"}],"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/research.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"items":[{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation/biodiversity.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation/climate-change.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation/conservation-in-action.aspx"}],"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"items":[{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/resources/raven-library.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"javascript:void(window.open(\u0027http://www.mbgpress.info/\u0027))"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"items":[{"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/resources/opportunities/fellowships.aspx"},{"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/resources/opportunities/undergraduate-studies.aspx"}],"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/resources/opportunities.aspx"}],"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/resources.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"items":[{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.mobot.org/plantscience/ccsd/","target":"_blank"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.centerforplantconservation.org/","target":"_blank"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/william-l-brown-center.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/center-for-biodiversity-informatics.aspx"}],"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/conservation/conservation-in-action.aspx"},{"groupSettings":{"flow":0,"expandDirection":0,"offsetX":10,"offsetY":0},"navigateUrl":"http://www.missouribotanicalgarden.org/plant-science/plant-science/research-staff.aspx"}]}, null, null, $get("dnn_dnnDNNRADMENU_RadMenu1"));
+});
+//]]>
+</script>
+</form>
+    
+    
+    <script type="text/javascript">
+        //<![CDATA[
+        
+        //This code is to force a refresh of browser cache
+        //in case an old version of dnn.js is loaded
+        //It should be removed as soon as .js versioning is added
+        jQuery(document).ready(function () {
+            if (navigator.userAgent.indexOf(" Chrome/") == -1) {
+                if ((typeof dnnJscriptVersion === 'undefined' || dnnJscriptVersion !== "6.0.0") && typeof dnn !== 'undefined') {
+                    window.location.reload(true);
+                }
+            }
+        });
+         //]]>
+    </script>
+</body>
+</html>

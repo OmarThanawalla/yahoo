@@ -1,0 +1,625 @@
+<base href="http://learn.genetics.utah.edu/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Learn.Genetics&trade;</title>
+<link rel="stylesheet" type="text/css" href="/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/css/lightview.css" />
+<!--<script src="http://www.google.com/jsapi" type="text/javascript"></script>-->
+
+<script type="text/javascript">
+var d = new Date();
+var curr_year = d.getFullYear();
+</script>
+<script type='text/javascript' src='/code/js/prototype.js'></script>
+<script type='text/javascript' src='/code/js/scriptaculous.js'></script>
+<script type='text/javascript' src='/code/js/lightview.js'></script>
+<script type="text/javascript" src="/code/js/learn.js" ></script>
+<style type="text/css">
+	a.homelink:active,a.homelink:visited,a.homelink:link { color: #494949; }
+	a.homelink:hover {text-decoration:none; }
+	
+	a.miscBox:active,a.miscBox:visited,a.miscBox:link { color:#377BAE; letter-spacing:0px; font-size:12px; }
+	a.miscBox:hover {text-decoration:underline; color:#377BAE; letter-spacing:0px; }
+	
+	body { font: 12px/18px "Helvetica", Verdana, Arial, sans-serif;  background: url("/images/page/bg_solid.png") repeat; color:#333; }
+	
+	a.basicsBox:active,a.basicsBox:visited,a.basicsBox:link { background-image:url(images/home/test/beginBoxBG.gif); background-repeat:repeat-x; float:left; width:369px; height:81px; color:#555; letter-spacing:0px; }
+	a.basicsBox:hover { text-decoration:none; color:#377BAE; background-image:url(images/home/test/beginBoxBG2.gif); }
+	img.basicsImage { margin-top:7px; margin-left:1px; margin-bottom:0px; float:left; }
+	img.basicsBoxL { float:left; margin-bottom:0px; }
+	img.basicsBoxR { float:right; margin-bottom:0px; }
+	span.basicsTitle { font: 14px "Helvetica", Verdana, Arial, sans-serif; line-height:18px; float:left; margin-top:10px; margin-left:15px; margin-bottom:0px; width:240px; }
+	span.basicsBlurb { font: 11px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; line-height:14px; color:#444; float:left; margin-top:8px; margin-left:15px; margin-bottom:0px; width:240px; }
+	
+	a.popBox:active,a.popBox:visited,a.popBox:link { background-image:url(images/home/test/highBoxBG.gif); background-repeat:repeat-x; float:left; width:171px; height:289px; color:#555; letter-spacing:0px; }
+	a.popBox:hover { text-decoration:none; color:#377BAE; background-image:url(images/home/test/highBoxBG2.gif); }
+	img.popImage { height:93px; width:165px; margin-top:25px; margin-left:6px; margin-bottom:0px; float:left; }
+	div.popDivide { background-image:url(images/home/test/highBoxBG.gif); background-repeat:repeat-x; float:left; width:1px; height:289px; }
+	div.popDivide2 { background-color:#B2B2B2; width:1px; height:255px; margin-top:15px; }
+	div.popBoxL { width:6px; float:left; height:289px; background-image:url(images/home/test/highBoxLeft.gif); }
+	div.popBoxR { width:6px; float:left; height:289px; background-image:url(images/home/test/highBoxRight.gif); }
+	span.popTitle { font: 14px "Helvetica", Verdana, Arial, sans-serif; line-height:18px; width:140px; margin-left:16px; margin-top:40px; margin-bottom:0px; float:left; }
+	span.popBlurb { font: 11px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; line-height:14px; color:#333; width:140px; margin-left:16px; margin-top:10px; margin-bottom:0px; float:left; }
+	
+	div.miscTitle { font: 12px "Helvetica", Verdana, Arial, sans-serif; line-height:18px; color:#666; background-image:url(images/home/test/longTopBG.gif); height:65px; width:170px; float:left; }
+	div.miscView { font: 14px "Helvetica", Verdana, Arial, sans-serif; line-height:18px; position:absolute; top:500px; left:70px; z-index:10; height:230px; width:840px; }
+	div.miscBox { width:169px; height:35px; margin-top:8px; border-right:1px solid #B2B2B2; float:left; }
+	div.miscBoxItem { float:left; width:312px; height:68px; margin-left:20px; }
+	div.miscBlurb { font: 11px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; line-height:14px; color:#555; margin-top:3px; }
+	a.miscModule { margin-left:20px; float:left; margin-top:20px; }
+	div.miscModule2 { width:500px; height:180px; margin-left:90px; margin-top:10px; padding:30px 0px 0px 10px; float:left; }
+	
+	ul { font: 11px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; line-height:14px; color:#555; list-style-type:disc; list-style:inside; margin-top:10px; }
+</style>
+<script type="text/javascript">//<![CDATA[
+
+var numHighlight = 3;
+var numMisc = 2;
+
+
+
+
+var highMax = numHighlight - 2;
+var highView = 0;
+var currMisc;
+var currMiscView;
+var miscMax = 0;
+var miscView = 0;
+
+function initial () {
+	currMisc = document.getElementById('startMisc');
+	currMiscView = document.getElementById('miscView1');
+}
+function slideHighDown() {
+	if (highView <= highMax) {
+		highView += 1;
+		new Effect.Move('highlights', {duration: 0.7, y: highView*-324, mode: 'absolute', transition: Effect.Transitions.spring});
+	}
+};
+function slideHighUp() {
+	if (highView > 0) {
+		highView -= 1;
+		new Effect.Move('highlights', {duration: 0.7, y: highView * -324, mode: 'absolute', transition: Effect.Transitions.spring});
+	}
+};
+function upOver(part) {
+	$(part).style.backgroundImage = 'url(images/home/test/arrowUp2.gif)';
+	part.style.cursor='pointer';
+}
+function upOut(part) {
+	$(part).style.backgroundImage = 'url(images/home/test/arrowUp.gif)';
+}
+function downOver(part) {
+	$(part).style.backgroundImage = 'url(images/home/test/arrowDown2.gif)';
+	part.style.cursor='pointer';
+}
+function downOut(part) {
+	$(part).style.backgroundImage = 'url(images/home/test/arrowDown.gif)';
+}
+
+
+function miscOver(part) {
+	if (part != currMisc) {
+		$(part).style.backgroundImage = 'url(images/home/test/longTopBG2.gif)';
+		$(part).style.color = '#444';
+		part.style.cursor='pointer';
+	}else{
+		part.style.cursor='default';
+	}
+};
+function miscOut(part) {
+	if (part != currMisc) {
+		$(part).style.backgroundImage = 'url(images/home/test/longTopBG.gif)';
+		$(part).style.color = '#666';
+	}
+};
+function miscClick(part, view) {
+	if (part != currMisc) {
+		$(part).style.backgroundImage = 'url(images/home/test/longTopBG3.gif)';
+		$(currMisc).style.backgroundImage = 'url(images/home/test/longTopBG.gif)';
+		$(currMisc).style.color = '#666';
+		currMisc = part;
+		
+		Effect.Fade(currMiscView, { duration: 0.2 });
+		Effect.Appear(view, { duration: 0.5 });
+		currMiscView = view;
+	}
+};
+
+function longLeftOver() {
+	$('longLeft').style.backgroundImage = 'url(images/home/test/longTopLeft2.gif)';
+	$('longLeft').style.cursor='pointer';
+};
+function longLeftOut() {
+	$('longLeft').style.backgroundImage = 'url(images/home/test/longTopLeft.gif)';
+};
+function longLeftClick() {
+	if (miscView > 0) {
+		miscView -= 1;
+		new Effect.Move('miscViews', {duration: 0.7, x: miscView * -850, mode: 'absolute', transition: Effect.Transitions.spring});
+		//-170 for single shift
+	}
+	
+};
+
+function longRightOver() {
+	$('longRight').style.backgroundImage = 'url(images/home/test/longTopRight2.gif)';
+	$('longRight').style.cursor='pointer';
+};
+function longRightOut() {
+	$('longRight').style.backgroundImage = 'url(images/home/test/longTopRight.gif)';
+};
+function longRightClick() {
+	if (miscView <= miscMax) {
+		miscView += 1;
+		new Effect.Move('miscViews', {duration: 0.7, x: miscView * -850, mode: 'absolute', transition: Effect.Transitions.spring});
+		//-170 for single shift
+	}
+};
+
+
+roll1= new Image(5,289);
+roll1.src="images/home/test/highBoxBG2.gif"
+roll2= new Image(5,81);
+roll2.src="images/home/test/beginBoxBG2.gif"
+roll3= new Image(5,65);
+roll3.src="images/home/test/longTopBG2.gif"
+roll4= new Image(35,65);
+roll4.src="images/home/test/longTopLeft2.gif"
+roll5= new Image(35,65);
+roll5.src="images/home/test/longTopRight2.gif"
+roll6= new Image(30,115);
+roll6.src="images/home/test/arrowUp2.gif"
+roll7= new Image(30,115);
+roll7.src="images/home/test/arrowDown2.gif"
+//]]></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-126620-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body onload="initial()">
+<div id="extcontainer">
+
+<div id="main">
+	
+<div id="header">
+	<img src="/images/page/spacer.gif" alt="" width="974" height="130" usemap="#Map" style="float:left;" />
+	<map name="Map" id="Map"><area shape="rect" coords="109,82,252,127" href="http://www.utah.edu" alt="University of Utah" />
+		<area shape="rect" coords="107,23,381,78" href="/" alt="Learn.Genetics" />
+		<area shape="rect" coords="786,25,962,77" href="http://teach.genetics.utah.edu/" alt="Teach.Genetics" />
+		<area shape="rect" coords="821,81,965,124" href="http://learn.genetics.utah.edu/search/" alt="search" />
+	</map>
+	<div style="position:absolute; top :96px; right:180px; height: 20px; width: 215px;">
+		<span style="float:right;"><a href="/es/">En Espa&ntilde;ol</a> | <a href="/gslc/">About Us</a> | <a href="http://teach.genetics.utah.edu/gslc/feedback.cfm">Feedback</a></span>
+	</div>
+</div> 
+<!--header-->
+<div id="content">
+<!--<div style='border:1px solid #b2b2b2; width: 280px; height: 228px;'>
+<div style="background:#fff url(/images/home/2_b.png) repeat-x; border:1px solid #fff;">
+
+
+</div>
+</div>-->
+<div style="height:750px;">
+  <div style="float:left; width:369px;">
+    <div style="background-image:url(images/home/test/beginTop.gif); width:369px; height:52px; float:left;">
+      </div>
+    <a class="basicsBox" href="/content/begin/tour/">
+      <img class="basicsBoxL" src="images/home/test/beginBoxLeft.gif" width="6" height="81" alt="" />
+      <img class="basicsBoxR" src="images/home/test/beginBoxRight.gif" width="6" height="81" alt="" />
+        <img class="basicsImage" src="images/home/test/tour.jpg" height="68" width="68" alt="" />
+        <span class="basicsTitle">TOUR THE BASICS
+          </span>
+        <span class="basicsBlurb">Are you a little confused by all the talk about DNA and genes? Try our animated tour!
+          </span>
+      </a>
+    <a class="basicsBox" href="/content/begin/dna/">
+      <img class="basicsBoxL" src="images/home/test/beginBoxLeft.gif" width="6" height="81" alt="" />
+      <img class="basicsBoxR" src="images/home/test/beginBoxRight.gif" width="6" height="81" alt="" />
+        <img class="basicsImage" src="images/home/test/dna.jpg" width="68" height="68" alt="" />
+        <span class="basicsTitle">DNA TO PROTEIN
+          </span>
+        <span class="basicsBlurb">Learn about DNA, protein synthesis, and examples of protein functions.
+          </span>
+      </a>
+    <a class="basicsBox" href="/content/begin/traits/">
+      <img class="basicsBoxL" src="images/home/test/beginBoxLeft.gif" width="6" height="81" alt="" />
+      <img class="basicsBoxR" src="images/home/test/beginBoxRight.gif" width="6" height="81" alt="" />
+        <img class="basicsImage" src="images/home/test/heredity.jpg" width="68" height="68" alt="" />
+        <span class="basicsTitle">HEREDITY &amp; TRAITS
+          </span>
+        <span class="basicsBlurb">Take a tour of genetic traits and see how they pass from one generation to the next.
+          </span>
+      </a>
+    <a class="basicsBox" href="/content/begin/cells/" style="height:76px;">
+      <img class="basicsBoxL" src="images/home/test/beginBoxLeft.gif" width="6" height="76" alt="" />
+      <img class="basicsBoxR" src="images/home/test/beginBoxRight.gif" width="6" height="76" alt=""/>
+        <img class="basicsImage" src="images/home/test/cells.jpg" width="68" height="68" alt="" />
+        <span class="basicsTitle">AMAZING CELLS
+          </span>
+        <span class="basicsBlurb">Take a look inside the dynamic world of the cell.
+          </span>
+      </a>
+      <img class="basicsBoxL" src="images/home/test/beginBottom.gif" width="369" height="5" alt="" />
+    </div>
+  <div style=" float:left; margin-left:18px;">
+    <div style="width:534px; height:343px; background-image:url(images/home/test/highlightBG.gif); background-repeat:repeat-y; margin-bottom:0px; position:relative;">
+      <div style="width:534; height:45px; background-image:url(images/home/test/highlights.gif); margin:0px;"></div>
+      <div style="height:298px; width:534px; clip:rect(auto, auto, auto, auto); overflow:hidden; position: relative;">
+        <div id="highlights" style="">
+          <div style="width:534px; height:289px; margin-top:5px;">
+            <div class="popBoxL">
+              </div>
+            <a class="popBox" href="/content/variation/">
+                  <img class="popImage" src="images/home/test/variation.jpg" width="165" height="93" alt="" style="margin-left:0px;" />
+                  <span class="popTitle">VARIATION, SELECTION &amp; TIME
+                    </span>
+                  <span class="popBlurb">Learn how molecular genetics is shedding light on the process of natural selection.
+                    </span>
+              </a>
+              <div class="popDivide">
+              	<div class="popDivide2"></div>
+              </div>
+            <a class="popBox" href="/content/begin/dna/builddna/" style="width:178px;">
+                  <img class="popImage" src="images/home/test/builddna.jpg" width="165" height="93" alt="" />
+                  <span class="popTitle">BUILD A DNA MOLECULE
+                    </span>
+                  <span class="popBlurb">Find out how the letters A, G, C, and T form a DNA molecule by building one yourself.
+                    </span>
+              </a>
+              <div class="popDivide">
+              	<div class="popDivide2"></div>
+              </div>
+            <a class="popBox" href="/content/begin/cells/scale/">
+                  <img class="popImage" src="images/home/test/scale.jpg" width="165" height="93" alt="" />
+                  <span class="popTitle">CELL SIZE &amp; SCALE
+                    </span>
+                  <span class="popBlurb">See how cells compare in size to molecules, atoms, and other objects.
+                    </span>
+              </a>
+            <div class="popBoxR">
+              </div>
+            </div>
+          <div style="width:534px; height:289px; margin-top:35px;">
+            <div class="popBoxL">
+              </div>
+            <a class="popBox" href="/content/epigenetics/rats/">
+                  <img class="popImage" src="images/home/test/lickrats.jpg" width="165" height="93" alt="" style="margin-left:0px;"/>
+                  <span class="popTitle">LICK YOUR RATS
+                    </span>
+                  <span class="popBlurb">Find out what kind of mother you are. Care for a rat pup and shape its epigenome.
+                    </span>
+              </a>
+            <div class="popDivide">
+              	<div class="popDivide2"></div>
+              </div>
+            <a class="popBox" href="/content/addiction/drugs/mouse.html" style="width:178px;">
+                  <img class="popImage" src="images/home/test/mouseparty.jpg" width="165" height="93" alt=""  />
+                  <span class="popTitle">MOUSE PARTY
+                    </span>
+                  <span class="popBlurb">Peer inside the brains of mice on drugs, and learn what is happening at the synapse to make users feel "high."
+                    </span>
+              </a>
+            <div class="popDivide">
+              	<div class="popDivide2"></div>
+              </div>
+            <a class="popBox" href="/content/tech/cloning/clickandclone/">
+                  <img class="popImage" src="images/home/test/clickclone.jpg" width="165" height="93" alt="" />
+                  <span class="popTitle">CLICK &amp; CLONE
+                    </span>
+                  <span class="popBlurb">Enter the cloning laboratory, where you can clone your own mouse.
+                    </span>
+              </a>
+            <div class="popBoxR">
+              </div>
+          </div>
+          <div style="width:534px; height:289px; margin-top:35px;">
+            <div class="popBoxL">
+              </div>
+            <a class="popBox" href="/content/labs/pcr/">
+                  <img class="popImage" src="images/home/test/pcr.jpg" width="165" height="93" alt="" style="margin-left:0px;" />
+                  <span class="popTitle">PCR VIRTUAL LAB
+                    </span>
+                  <span class="popBlurb">Step up the virtual lab bench and see how PCR works.
+                    </span>
+              </a>
+            <div class="popDivide">
+              	<div class="popDivide2"></div>
+              </div>
+            <a class="popBox" href="/content/labs/extraction/howto/" style="width:178px;">
+                  <img class="popImage" src="images/home/test/extractdna.jpg" width="165" height="93" alt="" />
+                  <span class="popTitle">HOW TO EXTRACT DNA FROM ANYTHING LIVING
+                    </span>
+                  <span class="popBlurb">Perform DNA extraction in your kitchen using regular household items.
+                    </span>
+              </a>
+            <div class="popDivide">
+              	<div class="popDivide2"></div>
+              </div>
+            <a class="popBox" href="/content/begin/cells/cellcom/">
+                  <img class="popImage" src="images/home/test/cellscom.jpg" width="165" height="93" alt="" />
+                  <span class="popTitle">THE FIGHT OR FLIGHT RESPONSE
+                    </span>
+                  <span class="popBlurb">Watch the cell signaling machinery spring into action when the brain detects danger.
+                    </span>
+              </a>
+            <div class="popBoxR">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div style="margin-top:0px; height:33px; width:534px;">
+    	<div style="background-image:url(images/home/test/highBottomLeft.gif); height:33px; width:148px; float:left">
+        </div>
+        <div onmouseover="downOver(this)" onmouseout="downOut(this)" onclick="slideHighDown();" style="background-image:url(images/home/test/arrowDown.gif); height:33px; width:119px; float:left">
+        </div>
+        <div onmouseover="upOver(this)" onmouseout="upOut(this)" onclick="slideHighUp();" style="background-image:url(images/home/test/arrowUp.gif); height:33px; width:119px; float:left">
+        </div>
+        <div style="background-image:url(images/home/test/highBottomRight.gif); height:33px; width:148px; float:left">
+        </div>
+      </div>
+    </div>
+  <div style="margin-top:17px; float:left;">
+    <div style="">
+      <div id="longLeft" onmouseover="longLeftOver()" onmouseout="longLeftOut()" onclick="longLeftClick()" style=" background-image:url(images/home/test/longTopLeft.gif); height:65px; width:36px; float:left;">
+        </div>
+        <div style=" height:65px; width:849px; float:left; clip:rect(auto, auto, auto, auto); overflow:hidden; position:relative; background-image:url(images/home/test/longTopBG.gif);">
+        	<div id="miscViews" style=" height:65px; width:1360px;">
+              <div id="startMisc" onmouseover="miscOver(this)" onmouseout="miscOut(this)" onclick="miscClick(this, 'miscView1')" class="miscTitle" style="background-image:url(images/home/test/longTopBG3.gif);">
+                <div class="miscBox">
+                	<div style="margin-top:10px; text-align:center;">GENETIC TECHNOLOGY
+                    </div>
+                  </div>
+                </div>
+              <div onmouseover="miscOver(this)" onmouseout="miscOut(this)" onclick="miscClick(this, 'miscView2')" class="miscTitle">
+                <div class="miscBox">
+                	<div style="margin-top:10px; text-align:center;">VIRTUAL LABS
+                    </div>
+                  </div>
+                </div>
+              <div onmouseover="miscOver(this)" onmouseout="miscOut(this)" onclick="miscClick(this, 'miscView3')" class="miscTitle">
+                <div class="miscBox">
+                	<div style="margin-top:10px; text-align:center;">EPIGENETICS
+                    </div>
+                  </div>
+                </div>
+              <div onmouseover="miscOver(this)" onmouseout="miscOut(this)" onclick="miscClick(this, 'miscView4')" class="miscTitle">
+                <div class="miscBox">
+                	<div style="margin-top:0px; text-align:center;">THE NEW SCIENCE<br />OF ADDICTION
+                    </div>
+                  </div>
+                </div>
+				<div onmouseover="miscOver(this)" onmouseout="miscOut(this)" onclick="miscClick(this, 'miscView5')" class="miscTitle">
+              		<div class="miscBox">
+                    <div style="margin-top:0px; text-align:center;">VARIATION,<br />SELECTION &amp; TIME
+                    </div>
+                  </div>
+                </div>
+              <div onmouseover="miscOver(this)" onmouseout="miscOut(this)" onclick="miscClick(this, 'miscView6')" class="miscTitle">
+              		<div class="miscBox">
+                    <div style="margin-top:10px; text-align:center;">GENETICS&nbsp; &amp; &nbsp;HEALTH
+                    </div>
+                  </div>
+                </div>
+              <div onmouseover="miscOver(this)" onmouseout="miscOut(this)" onclick="miscClick(this, 'miscView7')" class="miscTitle">
+                <div class="miscBox">
+                	<div style="margin-top:0px; text-align:center;">GREAT SALT LAKE<br />ECOLOGY
+                    </div>
+                  </div>
+                </div>
+               <div onmouseover="miscOver(this)" onmouseout="miscOut(this)" onclick="miscClick(this, 'miscView8')" class="miscTitle">
+                <div class="miscBox">
+                	<div style="margin-top:10px; text-align:center;">ARCHIVE
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      <div id="longRight" onmouseover="longRightOver()" onmouseout="longRightOut()" onclick="longRightClick()" style=" background-image:url(images/home/test/longTopRight.gif); height:65px; width:36px; float:left;">
+        </div>
+      </div>
+    <div style=" background-image:url(images/home/test/longBoxBG.gif); width:921px; height:340px;">
+      </div>
+    <div style=" background-image:url(images/home/test/longBoxBottom.gif); width:921px; height:5px;">
+      </div>
+    </div>
+  
+  
+</div>
+    <div class="miscView" id="miscView1" style="">
+        <div style="width:400px; float:left;">
+        	<div style="height:100px; width:400px;">
+                <a href="content/tech/stemcells" style="float:left"><img src="images/home/test/stemcells.jpg" alt="" height="68" width="68" /></a>
+                <div class="miscBoxItem">
+                    <a class="miscBox" href="content/tech/stemcells" style="">STEM CELLS</a>
+                    <div class="miscBlurb">See the potential these undifferentiated cells bring to disease treatment and research.</div>
+                </div>
+            </div>
+            <div style="margin-top:30px; height:100px; width:400px;">
+                <a href="content/tech/cloning" style="float:left"><img src="images/home/test/cloning.jpg" alt="" height="68" width="68" /></a>
+                <div class="miscBoxItem">
+                    <a class="miscBox" href="content/tech/cloning" style="">CLONING</a>
+            		<div class="miscBlurb">Clone a mouse online! Learn about the facts, myths, and risks behind creating genetic carbon copies.</div>
+                </div>
+            </div>
+        </div>
+        <div style="width:400px; float:left; margin-left:40px;">
+        	<div style="height:100px; width:400px;">
+                <a href="/content/tech/genetherapy/" style="float:left"><img src="images/home/test/genetherapy.jpg" alt="" height="68" width="68" /></a>
+                <div class="miscBoxItem">
+                    <a class="miscBox" href="content/tech/genetherapy" style="">GENE THERAPY</a>
+            		<div class="miscBlurb">See how this technology delivers functional copies of genes into diseased cells.</div>
+                </div>
+            </div>
+            <div style="margin-top:30px; height:100px; width:400px;">
+                <a href="content/tech/transgenic" style="float:left"><img src="images/home/test/transgenic.jpg" alt="" height="68" width="68" /></a>
+                <div class="miscBoxItem">
+                    <a class="miscBox" href="content/tech/transgenic" style="">TRANSGENIC MICE</a>
+            		<div class="miscBlurb" >Learn how "Knockout" gene-targeting technology has revolutionized biomedical research.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="miscView" id="miscView2" style="display:none;">
+    	<div style="width:400px; float:left;">
+        	<a class="miscBox" href="content/labs/extraction" style="">DNA EXTRACTION</a>
+            <div class="miscBlurb">DNA is extracted from human cells for a variety of reasons. With a pure sample of DNA you can test a newborn for a genetic disease, analyze forensic evidence, or study a gene involved in cancer. Try this virtual laboratory to perform a cheek swab and extract DNA from human cells.</div>
+            <br /><br />
+            <a class="miscBox" href="content/labs/pcr" style="">PCR</a>
+            <div class="miscBlurb">PCR is a relatively simple and inexpensive tool that you can use to focus in on a segment of DNA and copy it billions of times over. PCR is used every day to diagnose diseases, identify bacteria and viruses, match criminals to crime scenes, and in many other ways. Step up to the virtual lab bench and see how it works!</div>
+        </div>
+        <div style="width:400px; float:left; margin-left:40px;">
+        	<a class="miscBox" href="content/labs/gel" style="">GEL ELECTROPHORESIS</a>
+            <div class="miscBlurb">Have you ever wondered how scientists work with tiny molecules that they can't see? Here's your chance to try it yourself! Sort and measure DNA strands by running your own gel electrophoresis experiment.</div>
+            <br /><br />
+            <a class="miscBox" href="content/labs/microarray" style="">DNA MICROARRAY</a>
+            <div class="miscBlurb">DNA microarray analysis is one of the fastest-growing new technologies in the field of genetic research. Scientists are using DNA microarrays to investigate everything from cancer to pest control. Now you can do your own DNA microarray experiment! Here you will use a DNA microarray to investigate the differences between a healthy cell and a cancer cell.</div>
+        </div>
+    </div>
+    <div class="miscView" id="miscView3" style="display:none;">
+    	<a href="content/epigenetics" class="miscModule"><img src="images/home/test/epigenetics.jpg" alt="" height="180" width="180" /></a>
+    	<div class="miscModule2">
+        	<a class="miscBox" href="content/epigenetics" style="font-size:14px">EPIGENETICS</a>
+            <div class="miscBlurb" style="margin-top:10px;">Learn how genes and the environment converge at the epigenome, altering gene expression and confounding classic ideas of inheritance. Topics include</div>
+            <ul>
+            	<li>how factors from the environment alter gene expression</li>
+                <li>how molecules record a cell's experiences</li>
+                <li>how behavior affects gene expression</li>
+            </ul>
+        </div>
+    </div>
+    <div class="miscView" id="miscView4" style="display:none;">
+    	<a href="content/addiction" class="miscModule"><img src="images/home/test/addiction.jpg" alt="" height="180" width="180" /></a>
+    	<div class="miscModule2">
+        	<a class="miscBox" href="content/addiction" style="font-size:14px">THE NEW SCIENCE OF ADDICTION</a>
+            <div class="miscBlurb" style="margin-top:10px;">A physiologic and molecular look at a chronic disease involving many factors. Including:</div>
+            <ul>
+            	<li>basic neurobiology</li>
+                <li>a scientific examination of drug action in the brain</li>
+                <li>the role of genetics in addiction</li>
+                <li>ethical considerations</li>
+            </ul>
+        </div>
+    </div>
+	<div class="miscView" id="miscView5" style="display:none;">
+    	<a href="content/variation/" class="miscModule"><img src="images/home/test/variation2.jpg" alt="" height="180" width="180" /></a>
+    	<div class="miscModule2">
+        	<a class="miscBox" href="content/variation/" style="font-size:14px">VARIATION, SELECTION &amp; TIME</a>
+            <div class="miscBlurb" style="margin-top:10px;">Learn how molecular genetics is shedding light on the process of natural selection including:</div>
+            <ul>
+            	<li>sources of variation</li>
+                <li>the scale of geologic time</li>
+                <li>artificial and contemporary examples of natural selection in action</li>
+            </ul>
+        </div>
+    </div>
+    <div class="miscView" id="miscView6" style="display:none;">
+        <div style="width:400px; float:left;">
+        	<div style="height:100px; width:400px;">
+                <a href="/content/health/pharma/" style="float:left"><img src="images/home/test/pharma.jpg" alt="" height="68" width="68" /></a>
+                <div class="miscBoxItem">
+                    <a class="miscBox" href="content/health/pharma" style="">PERSONALIZED MEDICINE</a>
+            		<div class="miscBlurb">Medical treatment tailor-made for your genome.</div>
+                </div>
+            </div>
+            <div style="margin-top:30px; height:100px; width:400px;">
+                <a href="content/health/history" style="float:left"><img src="images/home/test/healthhistory.jpg" alt="" height="68" width="68" /></a>
+                <div class="miscBoxItem">
+                    <a class="miscBox" href="content/health/history" style="">FAMILY HEALTH HISTORY</a>
+            		<div class="miscBlurb">What runs in your family? What you need to know about common diseases and your risk.</div>
+                </div>
+            </div>
+        </div>
+        <div style="width:400px; float:left; margin-left:40px;">
+        	<div style="height:100px; width:400px;">
+                <a href="content/disorders/whataregd" style="float:left"><img src="images/home/test/gdl.jpg" alt="" height="68" width="68" /></a>
+                <div class="miscBoxItem">
+                    <a class="miscBox" href="content/disorders/whataregd" style="">GENETIC DISORDERS LIBRARY</a>
+            		<div class="miscBlurb">Learn more about specific disorders in the Genetic Disorders Library.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="miscView" id="miscView7" style="display:none;">
+    	<a href="content/gsl" class="miscModule"><img src="images/home/test/gsl.jpg" alt="" height="180" width="180" /></a>
+    	<div class="miscModule2">
+        	<a class="miscBox" href="content/gsl" style="font-size:14px">GREAT SALT LAKE ECOLOGY</a>
+            <div class="miscBlurb" style="margin-top:10px;">Get to know our salty neighbor and the organisms that thrive there. Topics include</div>
+            <ul>
+            	<li>biotic and abiotic factors</li>
+                <li>simple food chains found at the lake</li>
+                <li>an interactive aerial view of the lake</li>
+            </ul>
+        </div>
+    </div>
+    <div class="miscView" id="miscView8" style="display:none;">
+    	<div class="miscBlurb" style="width:800px; margin-bottom:20px;"></div>
+    	<div style="float:left; width:400px;">
+        	<a class="miscBox" href="/archive/rna/index.html">BRINGING RNA INTO VIEW</a><br />
+            <a class="miscBox" href="/archive/conservation/index.html">CONSERVATION GENETICS</a><br />
+            <a class="miscBox" href="/archive/protein/index.html">DISCOVER HOW PROTEINS FUNCTION</a><br />
+            <a class="miscBox" href="/archive/wheatgerm/index.html">DNA EXTRACTION FROM WHEAT GERM</a><br />
+            <a class="miscBox" href="/archive/pedigree/index.html">FINDING A GENE ON THE CHROMOSOME MAP</a><br />
+            <a class="miscBox" href="/archive/bodypatterns/index.html">GENES DETERMINE BODY PATTERNS</a><br />
+            <a class="miscBox" href="/archive/biowarfare/index.html">GOT DUCT TAPE? THE TRUTHS AND TALES OF BIOLOGICAL WARFARE</a><br />
+        </div>
+        <div style="float:left; width:400px; margin-left:20px;">
+            <a class="miscBox" href="/archive/proteinrole/index.html">HOW DO MUTATIONS CAUSE GENETIC DISORDERS?</a><br />
+            <a class="miscBox" href="/archive/sloozeworm/index.html">HOW DO MUTATIONS OCCUR?</a><br />
+            <a class="miscBox" href="/archive/mystery/index.html">MYSTERY OF THE STOLEN ARTIFACTS</a><br />
+            <a class="miscBox" href="/archive/gmfoods/index.html">THE NEW IMPROVED GARDEN?</a><br />
+            <a class="miscBox" href="/archive/pharming/index.html">PHARMING FOR FARMACEUTICALS</a><br />
+            <a class="miscBox" href="/archive/sars/index.html">SARS: THE FIRST NEW VIRUS OF THE 21ST CENTURY</a><br />
+            <a class="miscBox" href="/archive/mutations/index.html">WHAT IS A MUTATION</a><br />
+        </div>
+    </div>
+</div> <!--content-->
+<div id="footer">
+	<div style=" padding-left:38px; padding-top:5px; float:left;color:#999999; font-size:10px;">
+  <a href="http://www.utah.edu/disclaimer/">Disclaimer</a> &nbsp;&nbsp;
+   <a href="/gslc/privacy.html">Privacy Policy</a> &nbsp;&nbsp;
+   <a href="/gslc/permissions.html">Permissions</a> &nbsp;&nbsp;
+  <br /> 
+   &copy;<script type="text/javascript">document.write(curr_year);</script>&nbsp;&nbsp; | &nbsp;&nbsp;
+   
+    &nbsp;&nbsp;
+   
+   383 Colorow Dr, Salt Lake City, Utah 84108, (801) 585-3470 &nbsp;&nbsp;
+   
+   </div>
+   
+   	<div style=" padding-right:33px; padding-top:7px; float:right;">
+        <span style=" color:#999999; font-size:10px; ">
+        <script type="text/javascript">
+        		lgcite(document.title);
+        </script>
+        <br />
+         
+         </span>
+    </div>
+</div> <!--footer-->
+</div> 
+<!--main-->
+ 
+</div> <!--extcontainer-->
+
+<!-- footer comment -->
+</body>
+
+</html>

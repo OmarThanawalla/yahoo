@@ -1,0 +1,250 @@
+<base href="http://prowl.rockefeller.edu/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="description" value="The Rockefeller University is a world-renowned center for research and graduate education in the biomedical sciences, chemistry, bioinformatics and physics. Scientists in the university's 70 laboratories conduct both clinical and basic biomedical research with the mission of improving the understanding of life for the benefit of humanity." />
+        <meta name="keywords" value="Nobel, Lasker, Biomedical, Research, Neuroscience, Genetics, DNA, Immunology, Cell, Developmental, Biology, Biochemistry, Clinical" />
+	<title>The Rockefeller University &raquo; Laboratory of Mass Spectrometry and Gaseous Ion Chemistry</title>
+	<link type="text/css" rel="stylesheet" href="http://lab.rockefeller.edu/css/nav.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="http://lab.rockefeller.edu/css/templateStyle2010.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="http://lab.rockefeller.edu/chait/css/department.css" media="all" />
+<!--
+	<link type="text/css" rel="stylesheet" href="css/chaitStyle.css" media="all" />
+-->
+	<!--[if IE]>
+		<link type="text/css" rel="stylesheet" href="http://lab.rockefeller.edu/css/ie.css" media="all" />
+	<![endif]-->
+	
+	<!--[if IE 6]>
+		<link type="text/css" rel="stylesheet" href="http://lab.rockefeller.edu/css/ie6.css" media="all" />
+	<![endif]-->	
+
+	<!--[if IE 7]>
+		<link type="text/css" rel="stylesheet" href="http://lab.rockefeller.edu/css/ie7.css" media="all" />
+	<![endif]-->	
+	
+	<link type="text/css" rel="stylesheet" href="http://lab.rockefeller.edu/css/print.css" media="print" />	
+
+	<script type="text/javascript" src="http://lab.rockefeller.edu/js/jquery/jquery_core.js"></script>	
+<!--
+	<script type="text/javascript" src="http://lab.rockefeller.edu/js/jquery/jquery-ui-1.7.2.custom.min.js"></script>	
+-->
+	<script type="text/javascript" src="http://lab.rockefeller.edu/js/jquery/plugins/jquery.niftycube.js"></script>
+	<script type="text/javascript" src="http://lab.rockefeller.edu/js/ru.js"></script>		
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+            
+    <script language=javascript>
+		function dispDate(dateVal)
+		{
+			DaystoAdd=dateVal
+			TodaysDate = new Date();
+			TodaysDay = new Array('Sunday', 'Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday', 'Saturday');
+			TodaysMonth = new Array('January', 'February', 'March','April', 'May','June', 'July', 'August', 'September','October', 'November', 'December');
+			DaysinMonth = new Array('31', '28', '31', '30', '31', '30', '31', '31', '30', '31', '30', '31');
+			function LeapYearTest (Year)
+			{
+				if (((Year % 400)==0) || (((Year % 100)!=0) && (Year % 4)==0))
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+			CurrentYear = TodaysDate.getYear();
+			if (CurrentYear < 2000)
+			CurrentYear = CurrentYear + 1900;
+			currentMonth = TodaysDate.getMonth();
+			DayOffset = TodaysDate.getDay();
+			currentDay = TodaysDate.getDate();
+			month = TodaysMonth[currentMonth];
+			if (month == 'February')
+			{
+				if (((CurrentYear % 4)==0) && ((CurrentYear % 100)!=0) || ((CurrentYear % 400)==0))
+				{
+					DaysinMonth[1] = 29;
+				}
+				else
+				{
+					DaysinMonth[1] = 28;
+				}
+			}
+			days = DaysinMonth[currentMonth];
+			currentDay += DaystoAdd;
+			if (currentDay > days)
+			{
+				if (currentMonth == 11)
+				{
+					currentMonth = 0;
+					month = TodaysMonth[currentMonth];
+					CurrentYear = CurrentYear + 1
+				}
+				else
+				{
+					month =
+					TodaysMonth[currentMonth+1];
+				}
+				currentDay = currentDay - days;
+			}
+			DayOffset += DaystoAdd;
+			function offsettheDate (offsetCurrentDay)
+			{
+				if (offsetCurrentDay > 6)
+				{
+					offsetCurrentDay -= 6;
+					DayOffset = TodaysDay[offsetCurrentDay-1];
+					offsettheDate(offsetCurrentDay-1);
+				}
+				else
+				{
+					DayOffset = TodaysDay[offsetCurrentDay];
+					return true;
+				}
+			}
+			offsettheDate(DayOffset);TheDate  = DayOffset + ', ';
+			TheDate += month + ' ';
+			TheDate += currentDay + ', ';
+			if (CurrentYear<100) CurrentYear="19" + CurrentYear;
+			TheDate += CurrentYear;
+			document.write(' '+TheDate);
+		}
+	</script>
+</head>
+
+<body>
+	<!-- wrapper start -->
+	<div id="wrapper">	
+
+		<div id="header">
+			<ul id="quickLinks">
+				<li><a href="https://appext.rockefeller.edu/calendar/events/main">Calendar</a></li><li><a href="http://www.rockefeller.edu/cgi-bin/ph2.pl">Directory</a></li><li class="lastQL"><a href="http://www.rockefeller.edu/hr/career.php">Employment</a></li>
+			</ul>
+       	
+			<form action="http://hubble.rockefeller.edu/search" method="get" name="gs" id="mainSearch">
+				<input type="text" name="q" value="Search" class="search defaultValue" />
+				<input type="image" src="http://lab.rockefeller.edu/images/static/go.gif" width="32" height="18" alt="Search" style="vertical-align: bottom;" />
+
+				<input type="hidden" name="btnG" value="Google Search" />
+				<input type="hidden" name="sort" value="date:D:L:d1" />
+				<input type="hidden" name="output" value="xml_no_dtd" />
+				<input type="hidden" name="oe" value="UTF-8">
+
+				<input type="hidden" name="ie" value="UTF-8" />
+				<input type="hidden" name="client" value="default_frontend_ruonly" />
+				<input type="hidden" name="proxystylesheet" value="default_frontend_ruonly" />
+				
+				<input type="hidden" name="site" value="default_collection" />
+			</form>
+		
+			<a href="http://www.facebook.com/rockefelleruniversity" target="_blank" id="facebook"><img src="http://lab.rockefeller.edu/images/static/btn-facebook.gif" width="22" height="22" alt="facebook icon" /></a>
+			<a href="http://www.twitter.com/rockefelleruniv" target="_blank" id="twitter"><img src="http://lab.rockefeller.edu/images/static/btn-twitter.gif" width="22" height="22" alt="twitter icon" /></a>
+
+			<p>
+				<script language=javascript>
+					dispDate(0)
+				</script>
+			</p>		
+			<a href="http://www.rockefeller.edu/"><img src="http://www.rockefeller.edu/images/static/headerRU.gif" width="445" height="45" alt="The Rockefeller University" /></a>
+
+			<h1>
+				<a href="http://lab.rockefeller.edu/chait">Laboratory of Mass Spectrometry and Gaseous Ion Chemistry</a>
+				<a href="" id="printerFriendly"><img src="http://www.rockefeller.edu/images/static/print.gif" width="18" height="18" alt="printer icon" /></a>
+			</h1>		
+		</div>
+
+		<div id="nav" class="">
+<!--
+		<ul class="menu">
+			<li id="firstNavCol"><a href="/prowl-cgi/profound.exe"><img src="images/menuList.gif" alt="" width="9" height="7" border="0">   ProFound</a></li>
+			<li><a href="/prowl/proteininfo.html"><img src="images/menuList.gif" alt="" width="9" height="7" border="0">   ProteinInfo</a></li>
+			<li><a href="/prowl/peptidemap.html"><img src="images/menuList.gif" alt="" width="9" height="7" border="0">   PeptideMap</a></li>
+			<li><a href="/prowl/pepfrag.html"><img src="images/menuList.gif" alt="" width="9" height="7" border="0">   PepFrag</a></li>
+			<li><a href="http://prowl.rockefeller.edu/tandem/thegpm_tandem.html"><img src="images/menuList.gif" alt="" width="9" height="7" border="0">   X! Tandem</a></li>
+			<li><a href="http://gpm.rockefeller.edu/tandem/thegpm_hunter.html"><img src="images/menuList.gif" alt="" width="9" height="7" border="0">   X! Hunter</a></li>
+			<li><a href="http://gpmdb.rockefeller.edu/"><img src="images/menuList.gif" alt="" width="9" height="7" border="0">   GPMDB</a></li>
+			<li><a></a></li>
+			<li><a href="/prowl/prowl.html"><img src="images/menuList.gif" alt="" width="9" height="7" border="0">   PROWL</a></li>
+			<li><a href="http://lab.rockefeller.edu/chait"><img src="images/menuList.gif" alt="" width="9" height="7" border="0">   Chait Lab</a></li>
+		</ul>
+-->
+		<ul class="menu">
+			<li id="firstNavCol"><a class="menu" href="http://prowl.rockefeller.edu/prowl-cgi/profound.exe">   ProFound</a></li>
+			<li><a class="menu" href="http://prowl.rockefeller.edu/prowl/proteininfo.html">   ProteinInfo</a></li>
+			<li><a href="http://prowl.rockefeller.edu/prowl/peptidemap.html">   PeptideMap</a></li>
+			<li><a href="http://prowl.rockefeller.edu/prowl/pepfrag.html">   PepFrag</a></li>
+			<li><a href="http://prowl.rockefeller.edu/tandem/thegpm_tandem.html">   X! Tandem</a></li>
+<!--
+			<li><a href="http://gpm.rockefeller.edu/tandem/thegpm_hunter.html">   X! Hunter</a></li>
+-->
+			<li><a href="http://gpmdb.rockefeller.edu/">   GPMDB</a></li>
+			<li><a>&nbsp;</a></li>
+			<li><a href="http://prowl.rockefeller.edu/prowl/prowl.html">   PROWL</a></li>
+			<li><a href="http://lab.rockefeller.edu/chait">   Chait Lab</a></li>
+		</ul>
+	</div>
+	<!-- wrapper end -->
+
+	<!-- content start -->	
+	<div id="content" class="aboutIndex">	
+
+		<p><a class="aboutIndex" href="http://prowl.rockefeller.edu/prowl-cgi/profound.exe">ProFound</a>
+		<br>
+		ProFound is a tool for searching a protein sequence collections with peptide mass maps. A Bayesian algorithm is used to rank the protein sequences in the database according to their probability of producing the peptide map.
+		</p>
+
+		<p>
+		<p><a class="aboutIndex" href="http://prowl.rockefeller.edu/prowl/proteininfo.html">ProteinInfo</a>
+		<br>
+		ProteinInfo is a collection of tools for retrieval and analysis of protein sequences. The capabilities of the analysis tools include peptide mapping, mass spectrometric fragmentation analysis, disulfide mapping, etc.
+
+		<p>
+		<p><a class="aboutIndex" href="http://prowl.rockefeller.edu/prowl/peptidemap.html">PeptideMap</a>
+		<br>
+		PeptideMap is a tool for finding modifications on polypeptide sequences. The modifications can be affecting single amino acids (e.g. phoshorylation or oxidation) or cross-linking two amino acids (e.g. disulfide bonds or chemical cross-linking reagents).
+
+		<p>
+		<p><a class="aboutIndex" href="http://prowl.rockefeller.edu/prowl/pepfrag.html">PepFrag</a>
+		<br>
+		PepFrag is a tool for identifying proteins from a collection of sequences that matches <i>a single</i> tandem mass spectrum.
+
+		<p>
+		<p><a class="aboutIndex" href="http://prowl.rockefeller.edu/tandem/thegpm_tandem.html" target="_blank">X! Tandem</a>
+		<br>
+		X! Tandem is a tool for identifying proteins from a collection of peptide sequences that matches tandem mass spectra.
+
+<!--		<p>
+		<p><a class="contentTitle" href="http://gpm.rockefeller.edu/tandem/thegpm_hunter.html" target="_blank">X! Hunter</a>
+		<br>
+		X! Hunter is a tool for identifying proteins that matches tandem mass spectra to a library of spectra that have been confidently assigned to a particular peptide sequence.
+-->
+		<p>
+		<p><a class="aboutIndex" href="http://gpmdb.rockefeller.edu/" target="_blank">GPMDB</a>
+		<br>
+		GPMDB is a database of tandem mass spectra and their assigned peptide sequences. It is designed to aid in the difficult process of validating peptide MS/MS spectra.
+
+		<p id="contentBottom"><!-- don't remove this line --></p>
+	</div>
+	<!-- content end -->
+
+	<!-- footer start -->
+	<div id="footer">
+		<p>
+			<div id="insideLogo"><a href="https://inside.rockefeller.edu"><img src="http://lab.rockefeller.edu/images/static/inside.gif" /></a></div>
+            The Rockefeller University  |  1230 York Avenue, New York, NY 10065  |  (212) 327-8000<br />
+			Copyright &copy; 2004&ndash;2012 
+			The Rockefeller University. All rights reserved. 
+			<a href="http://www.rockefeller.edu/about/contact">Contact</a> |
+			<a href="http://www.rockefeller.edu/about/comments">Comments</a> | 
+			<a href="http://www.rockefeller.edu/about/sitemap">Site Map</a> | 
+			<a href="http://www.rockefeller.edu/about/dmca">Copyright Complaints</a>
+		</p>
+	</div>
+	<!-- footer end -->
+</body>
+</html>
+

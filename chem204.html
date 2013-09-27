@@ -1,0 +1,26 @@
+<base href="http://www.profmokeur.ca/chemistry/">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/tr/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="content-language" content="en">
+<title>Chemistry and interactive periodic table, 2012</title>
+<script type="text/javascript">
+var text = window.location.href;
+function delineate(str) {
+theleft = str.indexOf("=") + 1;
+theright = str.indexOf("&");
+return(str.substring(theleft, str.length));
+}
+url=delineate(text)
+function refreshFrame() {
+if(window.location!=url)
+frames['Frame3'].window.location.replace(url);
+}
+</script>
+</head>
+<frameset onload="refreshFrame();" cols="16%,*" frameborder=no border=0>
+<frame src="ban_chemistry.htm" name="Frame1" scrolling=yes noresize>
+<frame src="periodic3.htm" name="Frame3" scrolling=auto>
+</frameset>
+</html>

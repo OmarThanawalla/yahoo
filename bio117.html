@@ -1,0 +1,82 @@
+<base href="http://www.explorebiodiversity.com/">
+<html>
+<head>
+<title>Explore Biodiversity: Tree of Life Science Media Project</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script type="text/javascript">
+function MM_CheckFlashVersion(reqVerStr,msg){
+  with(navigator){
+    var isIE  = (appVersion.indexOf("MSIE") != -1 && userAgent.indexOf("Opera") == -1);
+    var isWin = (appVersion.toLowerCase().indexOf("win") != -1);
+    if (!isIE || !isWin){  
+      var flashVer = -1;
+      if (plugins && plugins.length > 0){
+        var desc = plugins["Shockwave Flash"] ? plugins["Shockwave Flash"].description : "";
+        desc = plugins["Shockwave Flash 2.0"] ? plugins["Shockwave Flash 2.0"].description : desc;
+        if (desc == "") flashVer = -1;
+        else{
+          var descArr = desc.split(" ");
+          var tempArrMajor = descArr[2].split(".");
+          var verMajor = tempArrMajor[0];
+          var tempArrMinor = (descArr[3] != "") ? descArr[3].split("r") : descArr[4].split("r");
+          var verMinor = (tempArrMinor[1] > 0) ? tempArrMinor[1] : 0;
+          flashVer =  parseFloat(verMajor + "." + verMinor);
+        }
+      }
+      // WebTV has Flash Player 4 or lower -- too low for video
+      else if (userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 4.0;
+
+      var verArr = reqVerStr.split(",");
+      var reqVer = parseFloat(verArr[0] + "." + verArr[2]);
+  
+      if (flashVer < reqVer){
+        if (confirm(msg))
+          window.location = "http://www.macromedia.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash";
+      }
+    }
+  } 
+}
+</script>
+<link href="stylesheets/explorebiodiversity.css" rel="stylesheet" type="text/css">
+<meta name="Biodiversity" content="Do you know what Biodiversity is? Explore Biodiversity is an entire web-project dedicated to explaining the key concepts of biodiversity, and illustrating taxonomic complexity through video and media filled pages.">
+<meta name="keywords" content="biodiversity, biology videos, science videos, tree of life, wildlife filmmaking
+">
+<meta name="description" content="Explore Biodiversity is a web-project dedicated to explaining the key concepts of biodiversity, and illustrating taxonomic complexity through video, multimedia, and text-based pages.  It also includes a tree of life project whereby we document the major groups of species on earth.">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_CheckFlashVersion('8,0,0,0','Content on this page requires a newer version of Macromedia Flash Player. Do you want to download it now?');">
+<!-- ImageReady Slices (Homepage 800px blueprint 2.psd) -->
+<table id="Table_01" width="800" height="573" border="0" cellpadding="0" cellspacing="0" background="" align="center">
+	<tr>
+		<td>
+			<img src="navigation/eb-aboutus.jpg" alt="" width="800" height="45" border="0" usemap="#eb"></td>
+	</tr>
+	<tr>
+		<td><p align="center">
+		  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="800" height="527" title="Explore Biodiversity">
+            <param name="movie" value="ebhome.swf">
+            <param name="quality" value="high"><param name="BGCOLOR" value="#24691D">
+            <embed src="ebhome.swf" width="800" height="527" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" bgcolor="#24691D"></embed>
+	      </object>
+		  <a href="http://www.thewildclassroom.com/home/nav/podastingscience.html">science podcasts</a> | <a href="http://www.explorebiodiversity.com/biodiversity/index.html">biodiveristy</a> | <a href="http://www.explorebiodiversity.com/videos/index.html">videos</a> | <a href="http://www.explorebiodiversity.com/store/index.html">store</a> | <a href="http://www.explorebiodiversity.com/main/Contactus.html">contact us</a>
+		    
+		  </p>
+		  <p align="center">
+	      
+	    </p></td>
+	</tr>
+</table>
+<!-- End ImageReady Slices -->
+
+<map name="eb">
+<area shape="rect" coords="8,7,53,31" href="http://www.explorebiodiversity.com/">
+<area shape="rect" coords="56,8,105,32" href="http://www.thewildclassroom.com" alt="The Wild Classroom">
+<area shape="rect" coords="127,6,270,31" href="http://www.explorebiodiversity.com/biologyconcepts/index.html" alt="Biology Concepts">
+<area shape="rect" coords="285,8,405,31" href="http://www.explorebiodiversity.com/biodiversity/index.html" alt="Biodiversity Home"><area shape="rect" coords="419,9,537,30" href="http://www.explorebiodiversity.com/educators/index.html">
+<area shape="rect" coords="546,6,669,30" href="http://www.explorebiodiversity.com/videos/index.html">
+<area shape="rect" coords="675,8,793,29" href="http://www.explorebiodiversity.com/store/index.html">
+<area shape="rect" coords="6,32,170,44" href="http://www.explorebiodiversity.com/main/crew.html">
+<area shape="rect" coords="238,32,332,44" href="http://www.explorebiodiversity.com/eb/expeditions/index.html">
+<area shape="rect" coords="412,30,554,62" href="http://www.explorebiodiversity.com/eb/wildlifefilmmaking/index.html">
+<area shape="rect" coords="663,32,774,49" href="http://www.explorebiodiversity.com/eb/survival/index.html">
+</map></body>
+</html>

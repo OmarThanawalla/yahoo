@@ -1,0 +1,265 @@
+<base href="http://sofia.usgs.gov/projects/wetland_seds/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>SOFIA - Geochemistry of Wetland Sediments from South Florida</title>
+		<meta name="author" content="Bryan McCloskey">
+		<meta name="description" content="The goal of this project is to examine the biogeochemical cycling of nutrients, carbon, and sulfur in sediments.">
+			<style type="text/css">
+/*<![CDATA[*/
+#map {
+  width: 700px;
+  height: 500px;
+  border: 1px solid #7F7F7F;
+  background: #F6F6F6;
+}
+/*//]]>*/
+	</style>
+		<script src="http://maps.google.com/maps?file=api&amp;v=3&amp;client=gme-usgovernmentdepartment&amp;sensor=false&amp;channel=USGS" type="text/javascript"></script>
+			<script type="text/javascript">
+			//<![CDATA[
+function load() {
+				if (GBrowserIsCompatible()) {
+					var map = new GMap2(document.getElementById("map"));
+					map.setCenter(new GLatLng(26, -81));
+					map.addControl(new GLargeMapControl());
+					map.addControl(new GScaleControl());
+					map.addControl(new GOverviewMapControl());
+					map.addControl(new GMapTypeControl());
+					map.setMapType(G_HYBRID_MAP);
+var polygon = new GPolygon([new GLatLng(26.12869344191766,-81.44399791520964),
+new GLatLng(25.21852172530897,-80.79562137632351),
+new GLatLng(25.21746873538858,-80.52336024765152),
+new GLatLng(26.54120487110797,-80.30583554630219),
+new GLatLng(26.12869344191766,-81.44399791520964),
+new GLatLng(26.12869344191766,-81.44399791520964)], '#3f00f3', 3, 1, '#0000ff', 0.1);
+	map.addOverlay(polygon);
+	var box = polygon.getBounds();
+	var zoom = map.getBoundsZoomLevel(box);
+	var center = box.getCenter();
+	map.setCenter(center, zoom);
+				}
+}
+			//]]>
+		</script>
+		<script type="application/javascript" src="http://www.usgs.gov/scripts/analytics/usgs-analytics.js"></script></head>
+
+	<body bgcolor=ffffff link="#003366" alink="#0fd9e6" vlink="#336699" onload="load();" onunload="GUnload()">
+		<!-- BEGIN USGS Header Template -->
+
+<div id="usgscolorband">
+	<div id="usgsbanner">
+		<div id="usgsidentifier"><a href="http://www.usgs.gov/"><img src="/images/header_graphic_usgsIdentifier_white.jpg" alt="USGS - science for a changing world" title="U.S. Geological Survey Home Page" width="178" height="72" /></a></div>
+		<div id="usgsccsabox">
+			<div id="usgsccsa">
+			  <br /><a href="http://www.usgs.gov/">USGS Home</a>
+			  <br /><a href="http://www.usgs.gov/ask/">Contact USGS</a>
+			  <br /><a href="http://www.usgs.gov/search/">Search USGS</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="usgstitle">
+
+	<p><a href="/">South Florida Information Access (SOFIA)</a></p>
+
+</div>
+
+<!-- END USGS Header Template -->
+
+<br />
+<!--Skip Navigation Links-->
+<a href="#skip" title="Skip Navigational Links"></a>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr align="left" valign="top">
+<td width="136">
+
+<!--Start Navigation -->
+
+<div id="navcolumn">
+
+	<div class="navhome"><a href="/"><img src="/images/buttons/sofiahomethin.gif" width="105" height="17" border="0" alt="SOFIA Home"></a></div>
+
+	<form name="seek1" method="GET" action="http://sofia.usgs.gov:8765/query.html">
+
+	<div class="navheadsearch"><label for="search">Search SOFIA:</label></div>
+			<div class="navsearch"><!--Search box --><input style="width: 126px;" type="text" name="qt" value="" maxlength="550" id="search">
+				<input type=submit value="Search" class="submit">
+				<input type=hidden name=qp value="">
+				<input type=hidden name=ht value="0">
+				<input type=hidden name=qs value="">
+				<input type=hidden name=col value="sofia">
+				<input type=hidden name=qc value="sofia">
+				<input type=hidden name=pw value="100%">
+				<input type=hidden name=ws value="0">
+				<input type=hidden name=la value="">
+				<input type=hidden name=qm value="0">
+				<input type=hidden name=st value="1">
+				<input type=hidden name=nh value="10">
+				<input type=hidden name=lk value="1">
+				<input type=hidden name=rf value="0">
+				<input type=hidden name=oq value="">
+				<input type=hidden name=rq value="0">
+				<input type=hidden name=si value="1"></div>
+			<div class="navbottomsearch"><a href="/help.html">SOFIA Help</a></div>
+
+	<div class="navhead"><b>Projects</b></div>
+			<div class="nav"><a href="/title.php">by Title</a></div>
+			<div class="nav"><a href="/author.php">by Investigator</a></div>
+			<div class="nav"><a href="/region.php">by Region</a></div>
+			<div class="nav"><a href="/topic.php">by Topic</a></div>
+			<div class="navbottom"><a href="/program.php">by Program</a></div>
+									
+	<div class="navhead"><b>Results</b></div>
+			<div class="nav"><a href="/publications.html">Publications</a></div>
+			<div class="nav"><a href="/results.html">Meetings</a></div>
+			<div class="nav"><a href="/sfrsf/">South Florida Restoration Science Forum</a></div>
+			<div class="navbottom"><a href="/synthesis.html">Synthesis</a></div>
+									
+	<div class="navhead"><b>Information</b></div>
+			<div class="nav"><a href="/people.php">Personnel</a></div>
+			<div class="nav"><a href="/aboutsofia.html">About SOFIA</a></div>
+			<div class="nav"><a href="/publications/circular/1309/"><abbr title="U.S. Geological Survey">USGS</abbr> Science Strategy</a></div>
+			<div class="nav"><a href="/publications/reports/doi-science-plan/">DOI Greater Everglades Science Plan</a></div>
+			<div class="nav"><a href="/education.html">Education</a></div>
+			<div class="nav"><a href="/upcoming.html">Upcoming Events</a></div>
+			<div class="navbottom"><a href="/links.html">Related Links</a></div>
+									
+	<div class="navhead"><b>Data</b></div>
+			<div class="nav"><a href="/exchange/index.php">Data Exchange</a></div>
+			<div class="navbottom"><a href="/metadata/index.php">Metadata</a></div>
+</div>
+									
+</form>
+
+<img src="/images/borders/space.gif" alt="" width="136" height="1">
+		<!--- End left side --->
+		</td>
+		<td><!--- Enter Textual Navigation Below --->
+			<font face="verdana, arial, helvetica" size=2><a href="../title.php">projects</a> &gt; <font color="#5b975d">geochemistry of wetland sediments from south florida</font></font>
+			<p><!--- Start Main text --->
+
+			<!--- Start Project Links and Info--->
+			<h2><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular" color="#996600">Geochemistry of Wetland Sediments from South Florida</font></h2>
+			<p>
+			<table border="0" cellpadding="3" cellspacing="3">
+				<tr valign="top">
+					<td><table width="100" border="0" cellpadding="0" cellspacing="0"><tr><td>
+<img src='/projects/wetland_seds/wetland.jpg' alt='photo of helicopter and scientist' border='0'></td></tr>
+</table></td>
+<td valign='top' align='left'><font face='arial,helvetica'><strong>Project Investigator:</strong>
+<a href='../people/orem.html'>William H. Orem</a></font>
+<p><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><strong>Project Start Date:</strong> 1994 <strong>End Date:</strong> 1999</font>
+</font></p>
+<p><ul>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='#proposals'>Proposals</a></font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='#data'>Data</a></font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='#metadata'>Metadata</a></font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='#publications'>Publications</a></font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='#map'>Project Location Map</a></font></li>
+			</ul>
+			</td>
+				</tr>
+			</table>
+			<!--- Start Project Paragraph --->
+			<br clear="all">				
+			<P>
+			<!--- Enter Project Summary Below --->
+
+			<table width="25%" border="0" cellpadding="5" cellspacing="0" align="right">
+				<tr>
+					<td width="250" align="center"><font face="arial,hevetica"><strong>Summary</strong></font><br>
+					<hr width="70%">
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="250"><font face="arial,helvetica" color="#006699"><strong>The goal of this project is to examine the biogeochemical cycling of nutrients, carbon, and sulfur in sediments.</strong></font></td>
+				</tr>
+			</table>
+
+			<p><font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">This project is examining (1) sources of nutrients, sulfur, and carbon to wetlands of south Florida, (2) the important role of chemical and biological processes to the wetland sediments (biogeochemical processes) in the cycling of these elements, and (3) the ultimate fate (<em>i.e.</em>, sinks) of these elements in the ecosystem. The focus on nutrients and carbon reflects the problem of eutrophication in the northern Everglades, where excess phosphorus from agricultural runoff has dramatically altered the biology of the ecosystem. Results will be used by land and water managers to predict the fate of nutrients (especially phosphorus) in contaminated areas of the Everglades, and to evaluate the long-term effectiveness of buffer wetlands being constructed as nutrient removal areas. Studies of sulfur in the ecosystem are important for understanding the processes involved in mercury methylation in the Everglades. Methyl mercury (a potent neurotoxin) poses a severe health risk to organisms in the south Florida ecosystem and to humans. Sediment studies being conducted by this project will also be used to construct a geochemical history of the ecosystem. An understanding of past changes in the geochemical environment of south Florida will provide land and water managers with baseline information on what water quality goals for the ecosystem should be, and on how the ecosystem has responded to past environmental change and will likely respond to the changes that will accompany restoration.</font></p>
+<p><a name='proposals'></a></p>
+			<h3><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'>Proposals</font></h3>
+			<ul>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='../proposals/1998/wetlandp98.html'>1998</a></font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='../proposals/1999/wetlandp99.html'>1999</a></font></li>
+</ul>
+<p><a name='data'></a></p>
+<h3><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'>Data</font></h3>
+		<ul>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/exchange/orem/oremsed.html'>Florida Bay Sediment Geochemical Data</a> (from the data exchange pages)</font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/publications/ofr/00-327/lists.html#tables'>Regional Geochemistry of Metals in Organic-Rich Sediments, Sawgrass and Surface Water, from Taylor Slough, Florida</a> (tables 1-12: from <a href='../publications/ofr/00-327/'><abbr title='Open File Report'>OFR</abbr> 00-327</a>)</font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/publications/ofr/97-454/results2.html'>Surface/Pore Water Chemistry</a> (see tables 3 and 4 in <a href='../publications/ofr/97-454/'>OFR 97-454</a>)</font></li>
+</ul>
+<p><a name='metadata'></a></p>
+<h3><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'>Metadata</font></h3>
+		<ul>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/metadata/sflwww/metorem.html'>Geochemistry of Wetland Sediments from South Florida</a> (project metadata)</font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/metadata/sflwww/orem_fb_sed_geochem.html'>Florida Bay sediment geochemical data</a> (data set metadata)</font></li>
+</ul>
+</ul>
+<p><a name='publications'></a></p>
+<h3><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'>Publications</font></h3>
+<h4><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'>Abstracts</font></h4>
+				<ul>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/projects/wetland_seds/wetlandab2.html'>Biogeochemical Cycling of P, S, C, and N in Sediments from Wetlands of South Florida</a></font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/projects/wetland_seds/wetlandab3.html'>Geochemical Processes in Peats of South Florida</a></font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/projects/wetland_seds/wetlandsedabfb98.html'>Geochemistry of Florida Bay Sediments: Investigation of Nutrient and Seagrass History</a> (from the <a href='http://www.floridabay.org/pub/conf_proceedings/index.shtml'>Florida Bay Conference Proceedings</a>, 1998)</font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/projects/wetland_seds/wetlandab1.html'>Geochemistry of Wetland Sediments from South Florida</a></font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/projects/wetland_seds/wetlandsedsabfb1999.html'>Lignin Phenols in Sediments from Florida Bay as Indicators of Seagrass History</a> (from the Florida Bay and Adjacent Marine Systems Science Conference, November 1999)</font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/workshops/waterquality/abstracts/orem_final.pdf'>Nutrient and Sulfur Contamination in the South Florida Ecosystem: Synopsis of Phase I Studies and Plans for Phase II Studies</a> (PDF from the <a href='../workshops/waterquality/'>USGS Water Quality Workshop</a>, October 2000)</font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/projects/wetland_seds/wetlandabsfrsf.html'>Nutrient Geochemistry of the South Florida Wetlands Ecosystem: Sources, Accumulation and Biogeochemical Cycling</a> (from the <a href='../sfrsf/'>South Florida Restoration Science Forum</a>, May 1999)</font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/projects/wetland_seds/wetlandab4.html'>Sulfur and Mercury in the South Florida Ecosystem</a></font></li>
+</ul>
+<h4><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'>Fact Sheets</font></h4>
+				<ul>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://pubs.usgs.gov/fs/fs109-03/'>Impacts of Sulfate Contamination on the Florida Everglades Ecosystem</a> (FS-109-03, available from the U.S. Geological Survey website)</font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/publications/fs/wetland_seds/'>South Florida Wetlands Ecosystem: Biogeochemical Processes in Peat</a></font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/publications/fs/taylor_slough/'>Taylor Slough and Eastern Florida Bay: Geochemical Studies in Support of Ecosystem Restoration in South Florida</a></font></li>
+</ul>
+<h4><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'>Journal Articles</font></h4>
+				<ul>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/publications/papers/geochem_flbaysed/'>Geochemistry of Florida Bay sediments: I. Nutrient history at five sites in eastern and central Florida Bay</a></font></li>
+</ul>
+<h4><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'>Open File Reports</font></h4>
+				<ul>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/publications/ofr/97-454/'>Geochemistry of Surface and Pore Water at USGS Coring Sites in Wetlands of South Florida: 1994 and 1995</a> (OFR-97-454)</font></li>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/publications/ofr/00-327/'>Regional Geochemistry of Metals in Organic-Rich Sediments, Sawgrass and Surface Water, from Taylor Slough, Florida</a> (OFR-00-327)</font></li>
+</ul>
+<h4><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'>Posters</font></h4>
+				<ul>
+<li><font face='Arial,Helvetica,Geneva,Swiss,SunSans-Regular'><a href='http://sofia.usgs.gov/workshops/waterquality/ligninphenol/'>Lignin Phenols from Sediments of Florida Bay as Indicators of Seagrass History</a> (from the <a href='../workshops/waterquality/'>USGS Water Quality Workshop</a>, October 2000)</font></li>
+</ul>
+</td></tr></table>
+<p>&nbsp;</p>
+<div align='center'> 
+                        <table width='710' border='0' cellspacing='2' cellpadding='2' bgcolor='#550000'>
+                                <tr>
+                                        <td>
+                                                <table width='100%' border='0' cellspacing='1' cellpadding='1'>
+                                                        <tr>
+                                                                <th bgcolor='#976e5c'><font color='white' face='Verdana, Arial, Helvetica, sans-serif'>Project Location Map</font></th>
+                                                        </tr>
+                                                        <tr>
+                                                                <td bgcolor='white'><div id='map'><a name='map'></a></div></td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td bgcolor='#f8f1bc'><font size='2' face='Verdana, Arial, Helvetica, sans-serif'><p>Google Map showing project area. This map requires enabled JavaScript to view; if you cannot fully access the information on this page, please contact <a href='mailto:hhenkel@usgs.gov'>Heather Henkel</a>.</p></font>
+								<font size='1' face='Verdana, Arial, Helvetica, sans-serif'><p>References to non-<abbr title='United States'>U.S.</abbr> Department of the Interior (<abbr title='Department of the Interior'>DOI</abbr>) products do not constitute an endorsement by the <abbr title='Department of the Interior'>DOI</abbr>. By viewing the Google Maps <abbr title='application programming interface'>API</abbr> on this web site the user agrees to these <a href='http://code.google.com/apis/maps/terms.html'>TERMS</a> of Service set forth by Google.</p></font></td>
+                                                        </tr>
+                                                </table>
+                                        </td>
+                                </tr>
+                        </table>
+                        <p></p>
+                        <br>
+                </div>                <!---USGS Footer Stuff --->
+		<p><br>
+		<hr>
+		<font size="2" face="verdana,arial,helvetica">| <a href="/disclaimer.html">Disclaimer</a> | <a href="http://www.usgs.gov/privacy.html">Privacy Statement</a> | <a href="http://www.usgs.gov/accessibility.html">Accessibility</a> |</font>
+					<p><font size="1" face="verdana,arial,helvetica">U.S. Department of the Interior, U.S. Geological Survey<br>
+							This page is: http://sofia.usgs.gov/projects/index.php?project_url=wetland_seds<br>
+							Comments and suggestions? Contact: <a href="/comments.html">Heather Henkel - Webmaster</a><br>
+							Script last updated: 15 January 2013 @ 01:46 PM by BJM. Record creator: BJM. Record last updated by: BJM.</font></p>
+	</body>
+</html>

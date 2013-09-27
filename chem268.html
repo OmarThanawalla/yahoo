@@ -1,0 +1,60 @@
+<base href="http://www.iol.ie/~deskenny/acbi.html">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>ACBI -- redirection to new location</title>
+<style type="text/css">
+<!--
+BODY { font-family: verdana, arial, helvetica, Geneva, SunSans-Regular, sans-serif; font-size: 11pt; color: #000000; background-color: #ffffff }
+H1.greenserif { font-family: times, serif; font-size: 24pt; margin-top: 1pt; margin-bottom: 1pt; color: #008000; background: #ffffcc }
+.navy14 { font-size: 14pt; color: #000080 }
+.lyellow { background: #ffffcc }
+-->
+</style>
+<noscript>
+<meta http-equiv="refresh" content="10; URL=http://www.acbi.ie">
+</noscript>
+<script language="JavaScript" type="text/javascript">
+<!--
+
+var sTargetURL = "http://www.acbi.ie";
+
+function doRedirect()
+{
+    setTimeout( "timedRedirect()", 10*1000 );
+}
+
+//  There are two definitions of 'timedRedirect', this
+//  one adds to the visitors page history.
+function timedRedirect()
+{
+    window.location.href = sTargetURL;
+}
+
+//-->
+</script>
+
+<script language="JavaScript1.1" type="text/javascript">
+<!--
+
+function timedRedirect()
+{
+    window.location.replace( sTargetURL );
+}
+
+//-->
+</script>
+
+</head>
+
+<body onload="doRedirect()">
+<div class="lyellow">
+<h1 class="greenserif" align="center">Association&nbsp;of&nbsp;Clinical&nbsp;Biochemists in&nbsp;Ireland</h1>
+<hr>
+<p class="navy14" align="center">The address of the ACBI website is now <br><a href="http://www.acbi.ie"><strong>http://www.acbi.ie</strong></a></p>
+<p class="navy14" align="center">Please modify your links/bookmarks/favorites list accordingly
+</p>
+<p class="navy14" align="center">If you are not automatically redirected within 10 seconds, please click the above link.</p>
+<hr>
+</div></body>
+</html>

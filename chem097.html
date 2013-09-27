@@ -1,0 +1,841 @@
+<base href="http://ptri1.tripod.com/">
+<html>
+<head><title>All You Ever Wanted to Know About Pascal's Triangle and more</title>
+<meta name="description" content="All you ever want to and need to know about Pascal's Triangle.">
+<noframes>
+
+<body><!--'"</title></head>-->
+<script type="text/javascript">
+////// Compete /////////////////////
+__compete_code = '667f89f26d96c30e99728fe6a608804d';
+(function () {
+    var s = document.createElement('script'),
+        d = document.getElementsByTagName('head')[0] ||
+            document.getElementsByTagName('body')[0],
+        t = 'https:' == document.location.protocol ? 
+            'https://c.compete.com/bootstrap/' : 
+            'http://c.compete.com/bootstrap/';
+    s.src = t + __compete_code + '/bootstrap.js';
+    s.type = 'text/javascript';
+    s.async = 'async'; 
+    if (d) { d.appendChild(s); }
+})();
+
+
+////// Quantcast  /////////////////////
+function channValidator(chann) {
+    return (typeof(chann) == 'string' && chann != '');
+}
+
+function lycosQuantcast(){
+    var lb = "";
+    if(typeof(cm_host) !== 'undefined' && channValidator(cm_host)){
+        lb += cm_host.split('.')[0] + '.';
+    }
+
+    if(typeof(cm_taxid) !== 'undefined' && channValidator(cm_taxid)){
+        lb += cm_taxid;
+        lb = lb.replace('/','');
+    } else {
+        lb = lb.replace('.','');
+    }
+    return lb;
+}
+
+var _qevents = _qevents || [];
+
+(function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" :"http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+    qacct:"p-6eQegedn62bSo",
+    labels:lycosQuantcast()
+});
+
+////// OwnerIQ  /////////////////////
+var __oiq_pct = 50;
+if( __oiq_pct>=100 || Math.floor(Math.random()*100/(100-__oiq_pct)) > 0 ) {
+    var _oiqq = _oiqq || [];
+    _oiqq.push(['oiq_addPageBrand', 'Lycos']);
+    _oiqq.push(['oiq_addPageCat', 'Internet > Websites']);
+    _oiqq.push(['oiq_addPageLifecycle', 'Intend']);
+    _oiqq.push(['oiq_doTag']);
+
+    (function() {
+        var oiq = document.createElement('script'); oiq.type = 'text/javascript'; oiq.async = true;
+        oiq.src = document.location.protocol + '//px.owneriq.net/stas/s/lycosn.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(oiq, s);
+    })();
+}
+
+
+
+/////// Google Analytics ////////////
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-21402695-19']);
+_gaq.push(['_setDomainName', 'tripod.com']);
+_gaq.push(['_setCustomVar', 1, 'member_name', 'ptri1', 3]);
+_gaq.push(['_trackPageview']);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+
+/////// Lycos Initialization ////////////
+function getReferrer() {
+    // Reads the referrer out of the cookie, if available.
+    var all= this.document.cookie;
+    if (all== '') return false;
+    var cookie_name = 'REFERRER=';
+    var start = all.lastIndexOf(cookie_name);
+    if (start == -1) return false;  // referrer URL not found.
+    start += cookie_name.length;
+    var end = all.indexOf(';', start);
+    if (end == -1) end = all.length;
+    return all.substring(start, end);
+}
+function getQuery() {
+    // Get the referrer search query from cookie, if available.
+    var rfr = getReferrer();
+    if (rfr == '') return false;
+    var q = extractQuery(rfr, 'yahoo.com', 'p=');
+    if (q) return q;
+    q = extractQuery(rfr, '', 'q=');
+    return q ? q : "";
+}
+function extractQuery(full, site, q_param) {
+    var start = full.lastIndexOf(site);
+    if (start == -1) return false;
+    start = full.lastIndexOf(q_param);
+    if (start == -1) return false;
+    start += q_param.length;
+    var end = full.indexOf('&', start);
+    if (end == -1) end = full.length;
+    return unescape(full.substring(start, end)).split(" ").join("+");
+}
+
+function generateHref(atag, template){
+    atag.href=template.replace('_MYURL_', window.location.href.replace('http://', '')).replace('_MYTITLE_', 'Check%20out%20this%20Tripod%20Member%20site!'); 
+}
+
+
+var lycos_ad = Array();
+var lycos_onload_timer;
+
+var cm_role = "live";
+var cm_host = "tripod.lycos.com";
+var cm_taxid = "/memberembedded";
+var tripod_member_name = "ptri1";
+var tripod_member_page = "ptri1/index.html";
+var tripod_ratings_hash = "1377550144:c3763e6a30ecdf410c17344837a1a889";
+
+var lycos_ad_category = {"dmoz":"sports\/skating","ontarget":"&CAT=sports%20and%20recreation&L2CAT=skating%20and%20skateboarding","find_what":"web AND page AND design"};
+
+var lycos_ad_remote_addr = "128.83.120.39";
+var lycos_ad_www_server = "www.tripod.lycos.com";
+var lycos_ad_track_small = "http://members.tripod.com/adm/img/common/ot_smallframe.gif?rand=778803";
+var lycos_ad_track_served = "http://members.tripod.com/adm/img/common/ot_adserved.gif?rand=778803";
+var lycos_search_query = getQuery();
+
+
+////// Criteo /////////////////////
+var cto_conf = { a:true, i: "294", c:"img", kw: "" } ;
+(function (){
+    var c = document.createElement("script"); c.type = "text/javascript"; c.async = true;
+    c.src = "http://members.tripod.com/adm/partner/criteo_ld_kw.js";
+    var s = document.getElementsByTagName("body")[0]; s.appendChild(c);
+})(); 
+
+</script>
+
+<script type="text/javascript" src="http://scripts.lycos.com/catman/init.js"></script>
+<script type="text/javascript"> 
+
+(function(isV) {
+    if (!isV) {
+        return;
+    }
+
+    //this.lycos_search_query = lycos_get_search_referrer();
+    var adMgr = new AdManager();
+    var lycos_prod_set = adMgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2", "toolbar_image", "toolbar_text", "smallbox", "top_promo", "footer2"];
+    var adCat = this.lycos_ad_category;
+    adMgr.setForcedParam('page', (adCat && adCat.dmoz) ? adCat.dmoz : 'member');
+
+    if (this.lycos_search_query) {
+        adMgr.setForcedParam("keyword", this.lycos_search_query);
+    } 
+    else if (adCat && adCat.find_what) {
+        adMgr.setForcedParam('keyword', adCat.find_what);
+    }
+
+    for (var s in slots) {
+        var slot = slots[s];
+        if (adMgr.isSlotAvailable(slot)) {
+            this.lycos_ad[slot] = adMgr.getSlot(slot);
+        }
+    }
+
+    adMgr.renderHeader();
+    adMgr.renderFooter();
+}((function() {
+    var w = 0, h = 0, minimumThreshold = 300;
+    if (top == self) {
+        return true;
+    }
+
+    if (typeof(window.innerWidth) == 'number' ) {
+        w = window.innerWidth;
+        h = window.innerHeight;
+    }
+    else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+        w = document.documentElement.clientWidth;
+        h = document.documentElement.clientHeight;
+    }
+    else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+        w = document.body.clientWidth;
+        h = document.body.clientHeight;
+    }
+
+    return ((w > minimumThreshold) && (h > minimumThreshold));
+}())));
+    
+window.onload = function() {
+    var f = document.getElementById("FooterAd");
+    var b = document.getElementsByTagName("body")[0];
+    b.appendChild(f);
+    f.style.display = "block";
+    document.getElementById('lycosFooterAdiFrame').src = '/adm/ad/footerAd.iframe.html';
+
+
+    // DOM Injection Ad
+    (function(isTrellix) {
+        var e = document.createElement('iframe');
+        e.style.border = '0';
+        e.style.margin = 0;
+        e.style.display = 'block';
+        e.style.cssFloat = 'right';
+        e.style.height = '254px';
+        e.style.overflow = 'hidden';
+        e.style.padding = 0;
+        e.style.width = '300px';
+
+        var getCommentNodes = function(regexPattern) {
+            var nodes = {};
+            var nodesA = [];
+            var preferredNodesList = ['a', 'c', 'b'];
+
+            (function getNodesThatHaveComments(n, pattern) {
+                if (n.hasChildNodes()) {
+                    if (n.tagName === 'IFRAME') {
+                        return false;
+                    }
+                    for (var i = 0; i < n.childNodes.length; i++) {
+                        if ((n.childNodes[i].nodeType === 8) && (pattern.test(n.childNodes[i].nodeValue))) {
+                            var areaName = pattern.exec(n.childNodes[i].nodeValue)[1];
+                            nodes[areaName] = n;
+                        }
+                        else if (n.childNodes[i].nodeType === 1) {
+                            getNodesThatHaveComments(n.childNodes[i], pattern);
+                        }
+                    }
+                }
+            }(document.body, regexPattern));
+
+            for (var i in preferredNodesList) {
+                if (nodes[preferredNodesList[i]]) {
+                    if (nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode) {
+                        nodesA.push(nodes[preferredNodesList[i]].parentNode.parentNode.parentNode.parentNode);
+                    }
+                }
+            }
+
+            return nodesA;
+        }
+
+        var properNode = null;
+        var areaNodes = getCommentNodes(new RegExp('^area Type="area_(\\w+)"'));
+        for (var i = 0; i < areaNodes.length; i++) {
+            var a = parseInt(getComputedStyle(areaNodes[i]).width);
+            if ((a >= 300) && (a <= 400)) {
+                properNode = areaNodes[i];
+                break;
+            }
+        }
+
+        if ((isTrellix) && (properNode)) {
+            e.src = '/adm/ad/injectAd.iframe.html';
+            properNode.insertBefore(e, properNode.firstChild);
+        }
+        else {
+            e.src = '/adm/ad/sliderAd.iframe.html';
+            var sliderBlock = document.getElementById('lyslider-adblock-wrapper');
+            var sliderHolder = document.getElementById('lyslider-adblock-holder');
+            var sliderClose = document.getElementById('lyslider-adblock-close');
+            sliderBlock.style.display = 'block';
+
+            sliderClose.onclick = function() {
+                sliderBlock.parentNode.removeChild(sliderBlock);
+                return false;
+            }
+
+            var iframeOnload = function() {
+                setTimeout((function sliiide() {
+                    var s = (window.getComputedStyle) ? parseInt(getComputedStyle(sliderHolder).right) : parseInt(sliderHolder.currentStyle.right);
+                    if (s <= 0) {
+                        sliderHolder.style.right = (s + 6) + 'px';
+                        setTimeout(sliiide, 10);
+                    }
+                    else {
+                        sliderHolder.style.right = '0px';
+                        sliderClose.style.display = 'block';
+                    }
+                }), 1000);
+            }
+
+            if (e.attachEvent) {
+                e.attachEvent('onload', iframeOnload);
+            }
+            else {
+                e.addEventListener('load', iframeOnload, false);
+            }
+
+            sliderHolder.insertBefore(e, sliderHolder.firstChild);
+        }
+    }(document.isTrellix));
+
+}
+
+
+
+</script>
+<style>
+	#body .adCenterClass{margin:0 auto}
+</style>
+
+<div id="tb_container" style="background:#DFDCCF; border-bottom:1px solid #393939; position:relative; z-index:999999999!important">
+    <div id="tb_ad" class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+    <a href="http://adtrack.ministerial5.com/clicknew/?a=637394" title="build your own website at Tripod.com" style="float:left; width:186px; border:0">
+    	<img src="http://ly.lygo.com/ly/tpSite/images/freeAd2.jpg" alt="Make your own free website on Tripod.com" style="border:0; display:block" />
+    </a> 
+        <div id="ad_container" style="display:block!important; float:left; width:728px ">
+        <script type="text/javascript">document.write(lycos_ad['leaderboard']);</script>
+        </div>
+    </div>
+</div>
+
+<!-- ///////////////////////////////////// -->
+<div id="lyslider-adblock-wrapper" style="display:none; height:300px; overflow:hidden; position:absolute; right:0; top:150px; width:320px; z-index:99999999; ">
+<div id="lyslider-adblock-holder" style="background-color:#888; height:250px; margin-bottom:25px; padding:4px; position:absolute; right:-320px; top:10px; width:300px; ">
+<a id="lyslider-adblock-close" href="#" style="background-color:#222; bottom:-19px; color:#fff; display:block; font:10px Arial, Helvetica, Sans-serif; padding:4px; position:absolute; right:0; text-decoration:none; z-index:9999999999">Close Ad</a>
+</div>
+</div>
+
+
+<div id="FooterAd" style="background:#DFDCCF; border-top:1px solid #393939; clear:both; display:none; width:100%!important; position:relative; z-index:999999!important; height:90px!important"> 
+	<div class="adCenterClass" style="display:block!important; overflow:hidden; width:916px;">
+	<a href="http://adtrack.ministerial5.com/clicknew/?a=637394" title="build your own website at Tripod.com" style="float:left; display:block; width:186px; border:0">
+    	<img src="http://ly.lygo.com/ly/tpSite/images/freeAd2.jpg" alt="Make your own free website on Tripod.com" style="border:0; display:block; " />
+    </a> 
+        <div id="footerAd_container" style="display:block!important; float:left; width:728px">
+        <iframe id="lycosFooterAdiFrame" style="border:0; display:block; float:left; height:96px; overflow:hidden; padding:0; width:750px"></iframe>
+        <!-- <script type="text/javascript">document.write(lycos_ad['leaderboard2']);</script> -->
+        </div>
+	</div>
+</div>
+<noscript>
+ <img src="http://members.tripod.com/adm/img/common/ot_noscript.gif?rand=778803" alt="" width="1" height="1" />
+ <!-- BEGIN STANDARD TAG - 728 x 90 - Lycos - Tripod Fallthrough - DO NOT MODIFY -->
+ <iframe frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="728" height="90" src="http://ad.yieldmanager.com/st?ad_type=iframe&amp;ad_size=728x90&amp;section=209094"></iframe>
+ <!-- END TAG -->
+</noscript>
+
+<!-- Start Ybrant -->
+<img src="http://ad.yieldmanager.com/pixel?id=1901600&t=2" width="1" height="1" />
+<!--   End Ybrant -->
+
+<!-- Start Datonics -->
+<script type="text/javascript" src="http://ads.pro-market.net/ads/scripts/site-132783.js"></script>
+<!--   End Datonics -->
+
+<!-- Start Chango -->
+<script type="text/javascript">
+    var __cho__ = {"pid":1694};
+    (function() {
+        var c = document.createElement('script');
+        c.type = 'text/javascript';
+        c.async = true;
+        c.src = document.location.protocol + '//cc.chango.com/static/o.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(c, s);
+    })();
+</script>
+<!--   End Chango -->
+
+</body>
+
+</noframes>
+
+</head>
+<center><!-- Begin PayPal Logo --><A HREF="https://www.paypal.com/row/mrb/pal=FFFDPFF6RPB8G" target="_blank"><IMG  SRC="http://images.paypal.com/en_US/i/bnr/paypal_mrb_banner.gif" BORDER="0" ALT="Sign up for PayPal and start accepting credit card payments instantly."></A><!-- End PayPal Logo -->
+<body bgcolor=#ffffff link=slateblue vlink=darkslateblue alink=green>
+
+
+<basefont size=3>
+
+<center><table>
+<tr>
+<td align=left valign=middle><img src="pastri1.gif" border=0></td>
+<td><h1 align=center><h1>Pascal's Triangle</h1></h1>
+<h3 align=center>And Its Patterns</h3><hr noshade size=5 width=75%></td>
+<td align=right valign=middle><img src="pastri1.gif" border=0></td>
+</tr>
+</table>
+</center>
+<font face="Arial, Helvetica" color=darkgreen>
+<center>Pascal's Triangle was originally developed by the ancient Chinese, but Blaise Pascal was 
+the first person to discover the importance of all of the patterns it contained. On this page, I explain
+how the Triangle is formed, and more importantly, many of its patterns.</center></font>
+<hr noshade size=5 width=75%>
+<center><table bgcolor=tan border=2 width=70%>
+<tr>
+ <td colspan=3><center><a href="#made">How to Construct Pascal's Triangle</a></center>
+ </td>
+</tr>
+<tr align=center>
+ <td><a href="#sums">Sums of Rows</a></td>
+ <td><a href="#prime">Prime Numbers</a></td>
+ <td><a href="#hockey">Hockey Stick</a></td>
+</tr>
+<tr align=center>
+ <td><a href="#magic">Magic 11's</a></td>
+ <td><a href="#fib">Fibonacci Sequence</a></td>
+ <td><a href="#tri">Triangular Numbers</a></td>
+</tr>
+<tr align=center>
+ <td><a href="#square">Square Numbers</a></td>
+ <td><a href="#points">Points on a Circle</a></td>
+ <td><a href="#sierpinski">Connection to Sierpinski Fractal</a></td>
+</tr>
+<tr align=center>
+ <td><font color=tan>hi</font></td>
+ <td><a href="#polygonal">Polygonal Numbers</a></td>
+ <td><font color=tan>hi</font></td>
+</tr>
+</table></center>
+<hr noshade size=5 width=75%>
+
+<center><a name="made"><br><font size=6>How Pascal's Triangle is Constructed</font></a></center>
+
+<table border=0>
+<tr>
+<td>
+At the tip 
+of Pascal's Triangle is the number 1, which makes up the zeroth row. The first row (1 & 1) contains two 
+1's, both formed by adding the two numbers above them to the left and the right, in this case 
+1 and 0 (all numbers outside the Triangle are 0's). 
+Do the same to create the 2nd row: 0+1=<b>1</b>; 1+1=<b>2</b>; 1+0=<b>1</b>. 
+And the third: 0+1=<b>1</b>; 1+2=<b>3</b>; 2+1=<b>3</b>; 1+0=<b>1</b>. In this way, the 
+rows of the triangle go on infinitly. A number in the triangle can also be found by nCr (n Choose r) 
+where n is the number of the row and r is the element in that row. For example, in row 
+3, 1 is the zeroth element, 3 is element number 1, the next three is the 2nd element, and 
+the last 1 is the 3rd element. The formula for nCr is:<br><br>
+<center>
+   n!<br>
+--------<br>
+r!(n-r)!<br><br></center>
+</td>
+<td align=center valign=middle><img src="ptreal1r.gif" border=0 alt="Pascal's Triangle"></td>
+</tr>
+<tr align=left>
+<td colspan=2>
+! means factorial, or the preceeding number multiplied by all the positive integers 
+that are smaller than the number. 5! = 5 &times 4 &times 3 &times 2 &times 1 = 120.
+</td></TD></tr>
+</table>
+<br><center><img src="tsbar33d.jpg" border=0 width=610></center><br><br>
+
+<center><a name="sums"><font size=6>The Sums of the Rows</font></a></center> 
+The sum of the numbers in any row is equal to 2 to the n<i><sup>th</sup></i> power 
+or 2<sup>n</sup>, when n is the number of the row. For example:<br><br>
+<center>
+<table border=0><tr><td>
+2<sup>0</sup> = 1<br>
+2<sup>1</sup> = 1+1 = 2<br>
+2<sup>2</sup> = 1+2+1 = 4<br>
+2<sup>3</sup> = 1+3+3+1 = 8<br>
+2<sup>4</sup> = 1+4+6+4+1 = 16
+</td></tr></table></center>
+
+<br><center><img src="tsbar33d.jpg" border=0 width=610></center><br><br>
+
+<center><a name="prime"><font size=6>Prime Numbers</font></a></center> 
+If the 1<sup>st</sup> element in a row is a prime number (remember, the 0th element of every row is 1), all the numbers in that
+row (excluding the 1's) are divisible by it. For example, in row 7 (1 7 21 35 35 21 7 1) 
+7, 21, and 35 are all divisible by 7.
+
+<br><center><img src="tsbar33d.jpg" border=0 width=610></center><br><br>
+
+<center><a name="hockey"><font size=6>Hockey Stick Pattern</font></a></center> 
+
+<table border=0>
+<tr>
+<td>
+If a diagonal of numbers of any length is selected starting at any of the 1's bordering 
+the sides of the triangle and ending on any number inside the triangle on that diagonal, the 
+sum of the numbers inside the selection is equal to the number below the end of the selection 
+that is not on the same diagonal itself. If you don't understand that, look at the drawing.<br>
+<font color="#ff0000">1+6+21+56 = 84</font><br>
+<font color="#00ff00">1+7+28+84+210+462+924 = 1716</font><br>
+<font color="#0000ff">1+12 = 13</font><br>
+</td>
+<td align=center valign=middle><img src="ptreal1h.gif" border=0></td>
+</tr>
+</table>
+
+<br><center><img src="tsbar33d.jpg" border=0></center><br><br>
+
+<center><a name="magic"><font size=6>Magic 11's</font></a></center>
+If a row is made into a single number by using each element as a digit of the number 
+(carrying over when an element itself has more than one digit), the number is equal to 
+11 to the n<i><sup>th</sup></i> power or 11<sup>n</sup> when n is the number of the row 
+the multi-digit number was taken from.<br>
+<center><table border=1 cellspacing=0>
+<tr align=center>
+<td><b>Row #</b></td>
+<td><b>Formula</b></td>
+<td><b>=</b></td>
+<td><b>Multi-Digit number</b></td>
+<td><b>Actual Row</b></td>
+</tr>
+<tr align=center>
+<td>Row 0</td><td>11<sup>0</sup></td><td>=</td><td>1</td><td>1</td>
+</tr>
+<tr align=center>
+<td>Row 1</td><td>11<sup>1</sup></td><td>=</td><td>11</td><td>1  1</td>
+</tr>
+<tr align=center>
+<td>Row 2</td><td>11<sup>2</sup></td><td>=</td><td>121</td><td>1  2  1</td>
+</tr>
+<tr align=center>
+<td>Row 3</td><td>11<sup>3</sup></td><td>=</td><td>1331</td><td>1  3  3  1</td>
+</tr>
+<tr align=center>
+<td>Row 4</td><td>11<sup>4</sup></td><td>=</td><td>14641</td><td>1  4  6  4  1</td>
+</tr>
+<tr align=center>
+<td>Row 5</td><td>11<sup>5</sup></td><td>=</td><td>161051</td><td>1  5  10  10  5  1</td>
+</tr>
+<tr align=center>
+<td>Row 6</td><td>11<sup>6</sup></td><td>=</td><td>1771561</td><td>1  6  15  20  15  6  1</td>
+</tr>
+<tr align=center>
+<td>Row 7</td><td>11<sup>7</sup></td><td>=</td><td>19487171</td><td>1  7  21  35  35  21  7  1</td>
+</tr>
+<tr align=center>
+<td>Row 8</td><td>11<sup>8</sup></td><td>=</td><td>214358881</td><td>1  8  28  56  70  56  28  8  1</td>
+</tr>
+</table></center>
+
+<br><center><img src="tsbar33d.jpg" border=0 width=610></center><br><br>
+
+<center><a name="fib"><font size=6>Fibonnacci's Sequence</font></a></center>
+<table border=0>
+<tr>
+<td>
+Fibonnacci's Sequence can also be located in Pascal's Triangle. The sum of the numbers 
+in the consecutive rows shown in the diagram are the first numbers of the Fibonnacci 
+Sequence. The Sequence can also be formed in a more direct way, very similar to 
+the method used to form the Triangle, by adding two consecutive numbers in 
+the sequence to produce the next number. The creates the sequence: 1,1,2,3,5,8,13,21,34,
+55,89,144,233, etc . . . . The Fibonnacci Sequence can be found in the Golden Rectangle, 
+the lengths of the segments of a pentagram, and in nature, and it decribes a curve which 
+can be found in string instruments, such as the curve of a grand piano. 
+The formula for the n<i><sup>th</sup></i> number 
+in the Fibonnacci Sequence is <img src="fibform.gif" align=top>
+<br>Try the formula out below (requires JavaScript)<br>
+
+<form name="fibform">
+Enter N: <input size=5 name="txtN">
+<input type=button name="cmdCalculate" value="Calculate" onClick="calc_fib()">
+Result: <input size=20 name="txtResult">
+</td>
+<td align=center valign=middle><img src="ptreal1f.gif" border=0></td>
+</tr>
+</table>
+</form>
+
+<script>
+function calc_fib()
+{
+  var N = document.fibform.txtN.value;
+  if (N > 1470) { document.fibform.txtResult.value = "Error"; }
+  document.fibform.txtResult.value = Math.round((1/Math.sqrt(5)) * (Math.pow((1+Math.sqrt(5))/2,N)-Math.pow((1-Math.sqrt(5))/2,N)));
+}
+</script>
+
+
+
+
+<br><center><img src="tsbar33d.jpg" border=0 width=610></center><br><br>
+
+<center><a name="tri"><font size=6>Triangular Numbers</font></a></center>
+<table border=0>
+<tr>
+<td align=center valign=middle><img src="ptreal1t.gif" border=0></td>
+<td align=right>
+Triangular Numbers are just one type of polygonal numbers. See the section on 
+<a href="#polygonal">Polygonal Numbers</a> for an explaination of polygonal and 
+triangular numbers. The triangular numbers can be found in the diagonal starting 
+at row 3 as shown in the diagram. The first triangular number is 1, the second is 3, 
+the third is 6, the fourth is 10, and so on.
+</td>
+</tr>
+</table>
+
+<br><center><img src="tsbar33d.jpg" border=0 width=610></center><br><br>
+
+<center><a name="square"><font size=6>Square Numbers</font></a></center>
+<table border=0>
+<tr>
+<td align=center valign=middle><img src="ptreal1q.gif" border=0></td>
+<td align=right>
+Square Numbers are another type of <a href="#polygonal">Polygonal Numbers</a> 
+They are found in the same diagonal as the triangular numbers. A Square Number 
+is the sum of the two numbers in any circled area in the diagram. (The colors 
+are different only to distinguish between the separate "rubber bands"). The 
+n<sup>th</sup> square number is equal to the n<sup>th</sup> triangular number plus 
+the (n-1)<sup>th</sup> triangular number. (Remember, any number outside the triangle 
+is 0). The interesting thing about these 4-sided polygonal numbers is that their 
+name explains them perfectly. The very first square number is 0<sup>2</sup>. The second 
+is 1<sup>2</sup>, the third is 2<sup>2</sup> (4), the fourth is 3<sup>2</sup> (9), and 
+so on. Read on to the Polygonal Number section to learn more.
+</td>
+</tr>
+</table>
+
+<br><center><img src="tsbar33d.jpg" border=0 width=610></center><br><br>
+
+<center><a name="polygonal"><font size=6>Polygonal Numbers</font></a></center>
+Polygonal Numbers are really just the number of vertexes in a figure formed by 
+a certain polygon. The first number in any group of polygonal numbers is 
+always 1, or a point. The second number is equal to the number of vertexes of 
+the polygon. For example, the second pentagonal number is 5, since pentagons 
+have 5 vertexes (and sides). The third polygonal number is made by extending two of 
+the sides of the polygon from the second polygonal number, completing the larger polygon, 
+and placing vertexes <i>and other points where necessary</i>. The third polygonal number 
+is found by adding all the vertexes <i>and points</i> in the resulting figure. (Look at 
+the table below for a clearer explaination). My colleagues' formula (the Shi-Cheng formula) 
+for the n<sup><i>th</i></sup> x-gonal number (for example: the 2<sup>nd</sup> 3-gonal, 
+or triangular number) is:<br><br>
+If x is even, then:<br>
+y = x/2 - 1 and the formula is n+y(n<sup>2</sup>-n)<brgt;<br>
+If x is odd, then:<br>
+y = (x-1)/2 and the formula is (-(n<sup>2</sup>)+3n+2n<sup>2</sup>y-2ny)/2<br><br>
+These formulas work fine, but I think my own formula (the Winton formula) is much less convoluted, 
+and is based on the fact that to find the n<sup><i>th</i></sup> x-gonal number, you multiply 
+the number in the 3<sup>rd</sup> diagonal in the n<sup><i>th</i></sup> row by x-2, and 
+then add the number in that same row but in the 2<sup>nd</sup> diagonal. Therefore:<br><br>
+((n<sup>2</sup>-n)/2) &times (x-2) + n<br><br>
+
+<form name="ngonform">
+<center><hr size=2 width=50%>
+Find the n<sup><i>th</i></sup> x-gonal number using the Winton formula:<br>
+N: <input size=10 name="txtNw"><br>
+X: <input size=10 name="txtXw"><br>
+<input type=button value="Calculate w" name="cmdCalculate" onClick="calcw()">
+Result: <input size=20 name="txtResultw"><br><br>
+
+
+<hr size=2 width=50%>
+Find the n<sup><i>th</i></sup> x-gonal number using the Shi-Cheng formula:<br>
+N: <input size=10 name="txtNsc"><br>
+X: <input size=10 name="txtXsc"><br>
+<input type=button value="Calculate" name="cmdCalculatesc" onClick="calcs()">
+Result: <input size=20 name="txtResultsc"><br><br>
+<hr size=2 width=50%></center>
+</form>
+
+<script>
+function calcw()
+{
+var n = Number(document.ngonform.txtNw.value);
+var x = Number(document.ngonform.txtXw.value);
+
+document.ngonform.txtResultw.value = (n*n - n)/2 * (x-2) + n;
+}
+
+function calcs()
+{
+var x = Number(document.ngonform.txtXsc.value);
+var n = Number(document.ngonform.txtNsc.value);
+var y = Number(0);
+
+if (x/2 == Math.floor(x/2))
+{
+ y = Number(x/2-1);
+ document.ngonform.txtResultsc.value = n + y*(n*n-n)
+}
+
+if (x/2 != Math.floor(x/2))
+{
+ y = Number((x-1)/2);
+ document.ngonform.txtResultsc.value = (-(n*n)+(3*n)+(2*n*n*y)-(2*n*y))/2;
+}
+
+}
+</script>
+
+
+<center><table border=2 cellspacing=0>
+<tr align=center bgcolor=#ccffcc>
+ 
+ <td>Type</td><td>1<sup>st</sup></td><td>2<sup>nd</sup></td><td>3<sup>rd</sup></td>
+ <td>4<sup>th</sup></td><td>5<sup>th</sup></td><td>6<sup>th</sup></td><td>7<sup>th</sup></td>
+ </font>
+
+<tr align=left valign=baseline bgcolor=#ffffff>
+ <td align=center valign=middle>Triangular</td>
+ <td><img src="polydot.gif" border=0></td> 
+ <td><img src="tri1.gif" border=0></td>
+ <td><img src="tri2.gif" border=0></td>
+ <td><img src="tri3.gif" border=0></td>
+ <td><img src="tri4.gif" border=0></td>
+ <td><img src="tri5.gif" border=0></td>
+ <td><img src="tri6.gif" border=0></td>
+</tr>
+<tr bgcolor=#ceceff align=center>
+ <td>Value</td><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+</tr>
+<tr align=left valign=baseline bgcolor=#ffffff>
+ <td align=center valign=middle>Square</td>
+ <td><img src="polydot.gif" border=0></td> 
+ <td><img src="quad1.gif" border=0></td>
+ <td><img src="quad2.gif" border=0></td>
+ <td><img src="quad3.gif" border=0></td>
+ <td><img src="quad4.gif" border=0></td>
+ <td><img src="quad5.gif" border=0></td>
+ <td><img src="quad6.gif" border=0></td>
+</tr>
+<tr bgcolor=#ceceff align=center>
+ <td>Value</td><td>1</td><td>4</td><td>9</td><td>16</td><td>25</td><td>36</td><td>49</td>
+</tr>
+<tr align=left valign=baseline bgcolor=#ffffff>
+ <td align=center valign=middle>Pentagonal</td>
+ <td><img src="polydot.gif" border=0></td> 
+ <td><img src="pent1.gif" border=0></td>
+ <td><img src="pent2.gif" border=0></td>
+ <td><img src="pent3.gif" border=0></td>
+ <td><img src="pent4.gif" border=0></td>
+ <td><img src="pent5.gif" border=0></td>
+ <td><img src="pent6.gif" border=0></td>
+</tr>
+<tr bgcolor=#ceceff align=center>
+ <td>Value</td><td>1</td><td>5</td><td>12</td><td>22</td><td>35</td><td>51</td><td>70</td>
+</tr>
+<tr align=left valign=baseline bgcolor=#ffffff>
+ <td align=center valign=middle>Hexagonal</td>
+ <td><img src="polydot.gif" border=0></td> 
+ <td><img src="hex1.gif" border=0></td>
+ <td><img src="hex2.gif" border=0></td>
+ <td><img src="hex3.gif" border=0></td>
+ <td><img src="hex4.gif" border=0></td>
+ <td><img src="hex5.gif" border=0></td>
+ <td><img src="hex6.gif" border=0></td>
+</tr>
+<tr bgcolor=#ceceff align=center>
+ <td>Value</td><td>1</td><td>6</td><td>15</td><td>28</td><td>45</td><td>66</td><td>91</td>
+</tr>
+</table></center>
+
+<br><center><img src="tsbar33d.jpg" border=0 width=610></center><br><br>
+
+<center><a name="points"><font size=6>Points on a Circle</font></a></center>
+
+<center><table border=1 width=90%>
+<tr align=center valign=bottom bgcolor="#669999">
+<td>Image</td>
+<td>Points</td>
+<td>Segments</td>
+<td>Triangles</td>
+<td>Quadrilaterals</td>
+<td>Pentagons</td>
+<td>Hexagons</td>
+<td>Heptagons</td>
+</tr>
+<tr align=center bgcolor="#ffffff"><td bgcolor="#ffffff"><img src="ptc1.gif"></td><td>1</td></tr>
+<tr align=center bgcolor="#ffffff"><td bgcolor="#ffffff"><img src="ptc2.gif"></td><td>2</td><td>1</td></tr>
+<tr align=center bgcolor="#ffffff"><td bgcolor="#ffffff"><img src="ptc3.gif"></td><td>3</td><td>3</td><td>1</td></tr>
+<tr align=center bgcolor="#ffffff"><td bgcolor="#ffffff"><img src="ptc4.gif"></td><td>4</td><td>6</td><td>4</td><td>1</td></tr>
+<tr align=center bgcolor="#ffffff"><td bgcolor="#ffffff"><img src="ptc5.gif"></td><td>5</td><td>10</td><td>10</td><td>5</td><td>1</td></tr>
+<tr align=center bgcolor="#ffffff"><td bgcolor="#ffffff"><img src="ptc6.gif"></td><td>6</td><td>15</td><td>20</td><td>15</td><td>6</td><td>1</td></tr>
+<tr align=center bgcolor="#ffffff"><td bgcolor="#ffffff"><img src="ptc7.gif"></td><td>7</td><td>21</td><td>35</td><td>35</td><td>21</td><td>7</td><td>1</td></tr>
+
+</table></center>
+As you may have noticed, the numbers in the chart above are actually the tip of the 
+right-angled form of Pascal's Triangle, except the preceeding 1's in each row are missing. 
+The circular figures are formed by simply placing a number of points on a circle and then 
+drawing all the possible lines between them. This chart shows that for a figure with 
+n points, all you need to do is look at the n<i><sup>th</sup></i> row of the Triangle
+in order to find the number of points, line segments, and polygons in 
+the figure with ALL of their vertices on the circle.
+<br><center><img src="tsbar33d.jpg" border=0 width=610></center><br><br>
+
+<center><a name="sierpinski"><font size=6>Connection to Sierpinski's Triangle</font></a></center>
+
+<table border=0>
+<tr>
+<td>
+When all the odd numbers (numbers not divisible by 2) in Pascal's Triangle 
+are filled in (black) and the rest (the evens) are left blank (white), the recursive
+Sierpinski Triangle fractal is revealed (see figure at near right), showing yet another 
+pattern in Pascal's Triangle. Other interesting patterns are formed if the elements not divisible 
+by other numbers are filled, especially those indivisible by prime numbers. 
+<a href="ptriprogs.html">Go here</a> to download programs that calculate 
+Pascal's Triangle and then use it to create patterns, such as the detailed, right-angle 
+Sierpinski Triangle at the far right.
+</td>
+<td align=center valign=middle><img src="pascal8.gif" border=0></td>
+<td align=center valign=middle><img src="sierpin1.gif" border=0></td>
+</tr>
+</table>
+<br>
+<hr>
+<center>
+<!-- Comments? Tell me <a href="comments2.html">here</a><br> -->
+
+
+<table border=0>
+<tr>
+<td>
+
+</td>
+
+
+<td>
+
+
+
+</td>
+</td>
+<td valign=middle>
+</td>
+</table>
+
+</center>
+                                                                                                                                                                                                                                                                         
+<center><!-- Begin PayPal Logo --><A HREF="https://www.paypal.com/row/mrb/pal=FFFDPFF6RPB8G" target="_blank"><IMG  SRC="http://images.paypal.com/en_US/i/bnr/paypal_mrb_banner.gif" BORDER="0" ALT="Sign up for PayPal and start accepting credit card payments instantly."></A><!-- End PayPal Logo -->
+
+<div align='center'><a href='http://www.hit-counts.com'><img src='http://www.hit-counts.com/counter.php?t=MTIxNzU0MQ==' border='0' alt='Hit Counter'></a><BR><a href='http://www.hit-counts.com'>Hit Counter</a></div>
+ 
+</body>
+</html>  

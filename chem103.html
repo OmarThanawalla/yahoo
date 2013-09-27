@@ -1,0 +1,49 @@
+<base href="http://ull.chemistry.uakron.edu/erd/">
+<HTML>
+<HEAD>
+<TITLE>The Chemical Database</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<p align="center"><img src="logo.gif" width="500" height="100"> </p>
+<p><font face="Arial, Helvetica, sans-serif">
+<center>
+<form method="post" action="/cgi-bin/htsearch">
+<font size="-1">
+Match: <select name="method">
+<option value="and">All
+<option value="or">Any
+<option value="boolean">Boolean
+</select>
+Format: <select name="format">
+<option value="builtin-long">Long
+<option value="builtin-short">Short
+</select>
+Sort by: <select name="sort">
+<option value="score">Score
+<option value="time">Time
+<option value="title">Title
+<option value="revscore">Reverse Score
+<option value="revtime">Reverse Time
+<option value="revtitle">Reverse Title
+</select>
+</font>
+<input type="hidden" name="config" value="DEFAULT">
+<input type="hidden" name="restrict" value="">
+<input type="hidden" name="exclude" value="">
+<br>
+Search:
+<input type="text" size="40" name="words" value="">
+<input type="submit" value="Search">
+</form>
+</center>
+</font>
+<p align="center"><font face="Arial, Helvetica, sans-serif">
+        <a href="sources.html">Data sources and disclaimer.</a> </font></p>
+<hr align="center">
+<blockquote>
+  <div><font size="2" face="Arial, Helvetica, sans-serif"> The 
+    views and opinions expressed in this page are strictly those of the page
+      author.  The contents of this page have not been reviewed or approved by
+      The University  of Akron. This page and the database was last updated September 27, 2010. </font></div>
+</blockquote>

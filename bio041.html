@@ -1,0 +1,513 @@
+<base href="http://www.els.net/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Build: R16B056 -->
+<!-- Strand Id: 0966495520 -->
+
+<!-- layout( ELS Home Page ) -->
+ <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <link rel="canonical" href="http://www.els.net" />
+  <link href="http://media.wiley.com/spa_assets/R16B056/site/els/include/style.css" type="text/css" rel="stylesheet" />
+   <title>
+
+
+
+eLS: Citable Reviews in the Life Sciences
+
+   </title>
+   <!-- primaryContent ( isCommon:true property:head ) : /site/els/pvo/COMMON_head.jsp -->
+
+
+<meta name="description" content="Spanning the entire spectrum of life sciences, the Encyclopedia of Life Sciences (eLS) features more than 4,800 specially commissioned and peer-reviewed articles. This alone makes it an essential read for life scientists as well as a valuable resource for teaching. The articles within ELS are written by leaders in the field to provide comprehensive and authoritative coverage of this subject area and are aimed at researchers, students and teachers alike." />
+
+
+<script language="javascript" type="text/javascript" src="http://media.wiley.com/spa_assets/R16B056/site/shared/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="http://media.wiley.com/spa_assets/R16B056/site/shared/form_validation.js"></script>
+<script>
+var mediaRoot = 'http://media.wiley.com/spa_assets/R16B056';
+var isCDA = true 
+</script>
+<script language="javascript" type="text/javascript" src="http://media.wiley.com/spa_assets/R16B056/site/els/include/js/tools.js"></script>
+<noscript>
+    <link href="http://media.wiley.com/spa_assets/R16B056/site/els/include/noscript.css" rel="stylesheet" type="text/css" />
+</noscript>
+
+<script language="JavaScript" type="text/javascript">
+$(document).ready(function(){
+	var homeTopicsHeight = $('#fb-topics .fb-list').height();
+	var homeThemesHeight = $('#fb-themes .fb-list').height();
+    var contentHeight = $('#content').height();
+    var sidebarHeight = $('.sidebar-content').height();
+    var itemlistHeight = $('.fb-list').height();
+    var subtopicHeight = $('.fb-list-subtopics').height();
+    var oversuggHeight = $('.fb-list-over-sugg').height();
+
+    // For homepage
+    if ( homeTopicsHeight > homeThemesHeight) {
+    	$('#fb-themes .fb-list').height(homeTopicsHeight);
+    }
+
+    // For articles static pages
+    if ( contentHeight > sidebarHeight ) {
+        $('.sidebar-content').height(contentHeight + 10);
+    }
+    if ( sidebarHeight > contentHeight ) {
+    	$('#content').css("min-height",sidebarHeight - 10);
+    }
+
+    // For menu pages
+    if ( itemlistHeight > sidebarHeight ) {
+        $('.sidebar-content').height(itemlistHeight + 44);
+    }
+    if ( sidebarHeight > itemlistHeight ) {
+    	$('.fb-list').height(sidebarHeight - 44);
+    }
+
+    if ( subtopicHeight > oversuggHeight ) {
+        $('.fb-list-over-sugg').height(subtopicHeight);
+    }
+    if ( oversuggHeight > subtopicHeight ) {
+        $('.fb-list-subtopics').height(oversuggHeight);
+    }
+});
+</script>
+   <!-- / primaryContent ( isCommon:true property:head ) : /site/els/pvo/COMMON_head.jsp -->
+   <!--[if lt IE 8]>
+    <link href="/missingAsset?cd=ELS_STYLE_IE_CSS" rel="stylesheet" type="text/css" />
+   <![endif]-->
+   <link href="http://media.wiley.com/assets/5003/64/500364.css" media="print" rel="stylesheet" type="text/css" />
+   <link href="http://media.wiley.com/assets/5005/36/500536.css" rel="stylesheet" type="text/css" />
+   <!-- staticFeature ( ref:ELS_SP_CHAR_INCLUDE ) -->
+   <script type="text/javascript">
+function spchr(code, facename, pos, nested)
+{
+	var bitstreamStr = '<font face="' + facename + '">' + pos + '</font>';
+	//adjustments for giflibrary naming
+	if (code == "epsi") {
+		code = "epsis";
+	}
+	else if (code == "phi") {
+		code = "phis";
+	}
+        else if (code == "hbar" || code == "hslash" || code == "plankv") {
+               code = "planck";
+        }
+        else if (code == "srarr") {
+               code = "rarr";
+        }
+        else if (code == "slarr") {
+               code = "larr";
+        }
+        var giflibStr = '<img src="http://onlinelibrarystatic.wiley.com/giflibrary/12/' + code + '.gif" border="0">';
+        if (code == "ctdot") {  //not available in giflibrary
+           giflibStr = '&#183;&#183;&#183;';
+        }
+
+        var unicodeStr = giflibStr; // for browsers that support
+                                    // Unicode, improve at least the
+                                    // Greeks in legacy content
+        if      (code=='alpha')  unicodeStr="<i>&#x03B1;</i>";
+        else if (code=='beta')   unicodeStr="<i>&#x03B2;</i>";
+        else if (code=='gamma')  unicodeStr="<i>&#x03B3;</i>";
+        else if (code=='delta')  unicodeStr="<i>&#x03B4;</i>";
+        else if (code=='epsis')  unicodeStr="<i>&#x03B5;</i>"; //sub above
+        else if (code=='epsiv')  unicodeStr="<i>&#x025B;</i>";
+        else if (code=='zeta')   unicodeStr="<i>&#x03B6;</i>";
+        else if (code=='eta')    unicodeStr="<i>&#x03B7;</i>";
+        else if (code=='theta')  unicodeStr="<i>&#x03B8;</i>";
+        else if (code=='thetav') unicodeStr="<i>&#x03D1;</i>";
+        else if (code=='iota')   unicodeStr="<i>&#x03B9;</i>";
+        else if (code=='kappa')  unicodeStr="<i>&#x03BA;</i>";
+        else if (code=='kappav') unicodeStr="<i>&#x03F0;</i>";
+        else if (code=='lambda') unicodeStr="<i>&#x03BB;</i>";
+        else if (code=='mu')     unicodeStr="<i>&#x03BC;</i>";
+        else if (code=='nu')     unicodeStr="<i>&#x03BD;</i>";
+        else if (code=='xi')     unicodeStr="<i>&#x03BE;</i>";
+              // no omicron in isogrk3
+        else if (code=='pi')     unicodeStr="<i>&#x03C0;</i>";
+        else if (code=='piv')    unicodeStr="<i>&#x03D6;</i>";
+        else if (code=='rho')    unicodeStr="<i>&#x03C1;</i>";
+        else if (code=='rhov')   unicodeStr="<i>&#x03F1;</i>";
+        else if (code=='sigma')  unicodeStr="<i>&#x03C3;</i>";
+        else if (code=='sigmav') unicodeStr="<i>&#x03C2;</i>";
+        else if (code=='tau')    unicodeStr="<i>&#x03C4;</i>";
+        else if (code=='upsi')   unicodeStr="<i>&#x03C5;</i>";
+        else if (code=='phiv')   unicodeStr="<i>&#x03C6;</i>";
+        else if (code=='phis')   unicodeStr="<i>&#x03D5;</i>"; //sub above
+        else if (code=='chi')    unicodeStr="<i>&#x03C7;</i>";
+        else if (code=='psi')    unicodeStr="<i>&#x03C8;</i>";
+        else if (code=='omega')  unicodeStr="<i>&#x03C9;</i>";
+        else if (code=='Gamma')  unicodeStr="<i>&#x0393;</i>";
+        else if (code=='Delta')  unicodeStr="<i>&#x0394;</i>";
+        else if (code=='Theta')  unicodeStr="<i>&#x0398;</i>";
+        else if (code=='Lambda') unicodeStr="<i>&#x039B;</i>";
+        else if (code=='Xi')     unicodeStr="<i>&#x039E;</i>";
+        else if (code=='Pi')     unicodeStr="<i>&#x03A0;</i>";
+        else if (code=='Sigma')  unicodeStr="<i>&#x03A3;</i>";
+        else if (code=='Upsi')   unicodeStr="<i>&#x03D2;</i>";
+        else if (code=='Phi')    unicodeStr="<i>&#x03A6;</i>";
+        else if (code=='Psi')    unicodeStr="<i>&#x03A8;</i>";
+        else if (code=='Omega')  unicodeStr="<i>&#x03A9;</i>";
+
+	if (
+	(navigator.appName == "Netscape" && navigator.appVersion.substring(0,1) == 4 && navigator.appVersion.indexOf("Linux", 0) == -1) ||
+	(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.indexOf("Windows", 0) != -1 && navigator.appVersion.substring(0,1) >= 4)
+	) {
+                if (arguments.length != 4 || !nested) {
+			document.write(giflibStr);
+		}
+		else {
+	    	return(giflibStr);
+		}
+	}
+        else if (window.getComputedStyle || window.opera || isSaf) { //Firefox, Opera, or Safari 
+		if (arguments.length != 4 || !nested) {
+                        document.write(unicodeStr);
+		}
+		else {
+			return(unicodeStr);
+		}
+        }
+	else { // browsers that aren't IE, Firefox, Opera or Safari
+		if (arguments.length != 4 || !nested) {
+			document.write(giflibStr);
+		}
+		else {
+			return(giflibStr);
+		}
+	}
+}
+</script>
+<!-- / staticFeature ( ref:ELS_SP_CHAR_INCLUDE ) -->
+  <!-- Page Vars -->
+  <script type="text/javascript">var pageVars={
+  "adInfo": ";navArea\u003dELS_HOME;pageType\u003dHTML",
+  "bookmarkKey": "610175",
+  "breadCrumbTrail": [],
+  "country.a2": "US",
+  "country.a3": "USA",
+  "country.geographicRegion": "Americas",
+  "country.iSOCountryName": "UNITED STATES",
+  "country.n3": "840",
+  "country.region": "us",
+  "country.regionName": "United States",
+  "country.sortName": "UNITED STATES",
+  "country.wileyCountryName": "United States",
+  "country.wileyPlusCurrencyCd": "USD",
+  "country.wileyPlusLocationCd": "NY",
+  "defaultPrimaryContentGroup": "Sections",
+  "effectiveDate.date": 26,
+  "effectiveDate.day": 1,
+  "effectiveDate.hours": 11,
+  "effectiveDate.minutes": 10,
+  "effectiveDate.month": 7,
+  "effectiveDate.seconds": 57,
+  "effectiveDate.time": 1377529857404,
+  "effectiveDate.timezoneOffset": 240,
+  "effectiveDate.year": 113,
+  "hTMLTitle": "eLS: Citable Reviews in the Life Sciences",
+  "html": "\u003c!-- --\u003e",
+  "jspFolder": "/site/els",
+  "layoutIdentifier.int": 500357,
+  "metaText": "Spanning the entire spectrum of life sciences, the Encyclopedia of Life Sciences (eLS) features more than 4,800 specially commissioned and peer-reviewed articles. This alone makes it an essential read for life scientists as well as a valuable resource for ...",
+  "navArea": "ELS_HOME",
+  "navId": 610175,
+  "navIdObject": 610175,
+  "pVOTypeNm": "HTML",
+  "pageInfoMap": "{Section\u003d610175 Encyclopedia of Life Sciences (ELS), SiteCd\u003dELS, PrimaryContentGroup\u003dSections, Level2\u003dHome, NavArea\u003dELS_HOME, PageType\u003dHTML, Level1\u003d}",
+  "placementIdentifier.int": 610175,
+  "primaryContentGroup": "Sections",
+  "qualifyingClassName": "HtmlPVO",
+  "specialUseCd": "ELS_HOME_PAGE",
+  "title": "Encyclopedia of Life Sciences (ELS)"
+};
+  </script>
+  <!-- / Page Vars -->
+  </head>
+  <body>
+  <!-- Omniture Code Start Block -->
+  <script type="text/javascript">
+     var Wiley = Wiley || {};  Wiley.Events = Wiley.Events || []; Wiley.Vars = Wiley.Vars || {}; Wiley.Props = Wiley.Props || {};
+     var WRInitTime=(new Date()).getTime();
+</script>
+
+  <!-- / Omniture Code Start Block -->
+   <div id="page-shadow">
+    <div style="width: 992px; margin: 0 auto;">
+     <!-- staticFeature ( ref:WILEY_GLOBAL_HEADER_OPEN ) -->
+     <!-- Begin: Wiley Global Header -->
+<link rel="stylesheet" type="text/css" href="http://media.wiley.com/assets/7070/95/global-header-footer.css" />
+<div id="wiley-global-header">
+	<a href="http://www.wiley.com/"><img class="wiley-global-logo" src="http://media.wiley.com/assets/7070/94/wiley-global-logo.png" alt="Wiley" /></a>
+	<ul id="wiley-global-header-links">
+		<li><a href="http://www.wiley.com/about">About Wiley</a> |</li>
+		<li><span>View Related Sites &#9662;</span>
+<!-- / staticFeature ( ref:WILEY_GLOBAL_HEADER_OPEN ) -->
+     <!-- staticFeature ( ref:WILEY_GLOBAL_HEADER_ELS ) -->
+     			<ul>
+				<!-- Related Websites - min. 3, max. 12 -->
+				<li><a href="http://www.comprehensivephysiology.com">Comprehensive Physiology</a></li>
+				<li><a href="http://www.currentprotocols.com">Current Protocols</a></li>
+				<li><a href="http://wires.wiley.com">WIREs</a></li>
+				<li><a href="http://www.wiley.com/WileyCDA/Section/id-302256.html"><strong>More...</strong></a></li>
+			</ul>
+<!-- / staticFeature ( ref:WILEY_GLOBAL_HEADER_ELS ) -->
+     <!-- staticFeature ( ref:WILEY_GLOBAL_HEADER_CLOSE ) -->
+     		</li>
+	</ul>
+</div>
+<!-- End: Wiley Global Header -->
+<!-- / staticFeature ( ref:WILEY_GLOBAL_HEADER_CLOSE ) -->
+    </div>
+    <div id="page-wrapper">
+     <!-- dynamicFeature ( ref:SITE_SPECIFIC_NAV ) -->
+
+
+
+
+
+
+        <!-- START HEADER -->
+        <div id="header">
+            <a href="/"><img id="logo" src="http://media.wiley.com/spa_assets/R16B056/site/els/include/images/els-logo.png" alt="Encyclopedia of Life Sciences" /></a>
+            <ul id="topnav">
+	             
+                    <li><a href="/"><img src="http://media.wiley.com/spa_assets/R16B056/site/els/include/images/bttn1-home-ON.gif" alt="Home" height="25" width="118"></a></li>
+                
+                
+                    <li><a href="/WileyCDA/ElsTopics/index.html"><img src="http://media.wiley.com/spa_assets/R16B056/site/els/include/images/bttn2-topics-OFF.png" alt="Topics" height="25" width="118"></a></li>
+                
+                
+                    <li><a href="/WileyCDA/ElsTopics/index.html?show=latest"><img src="http://media.wiley.com/spa_assets/R16B056/site/els/include/images/bttn3-latest-OFF.png" alt="Latest Articles" height="25" width="118"></a></li>
+                
+            </ul>
+            
+            <div id="search-box">
+                <form action="/WileyCDA/Section/id-610176.html">
+                    <input type="text" class="search-form-text" id="query" name="query" value="Enter keyword(s)" autocomplete="off" onblur="if (this.value == '') {this.value = 'Enter keyword(s)';}" onfocus="if (this.value == 'Enter keyword(s)') {this.value = '';}" />
+                    &nbsp;
+                    <input type="submit" class="search-form-button" value="Search eLS" />
+                    
+                </form>
+            </div>
+        </div>
+        <div id="predictive-window"></div>
+        <!-- END HEADER --><!-- dynamicFeature ( ref:SITE_SPECIFIC_NAV ) -->
+     <!-- dynamicFeature ( ref:ELS_TOPICS_DF ) -->
+
+
+
+
+
+
+
+<div id="fb-topics">
+    <div class="header-green"><div class="corner-round-left-green"></div><h2>Select a Topic</h2><div class="corner-square-right-green"></div><div class="pointer-green"></div></div>
+    <div class="fb-list fb-list-2col-narrow">
+        <ul>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-BIO.html">Biochemistry</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-BPH.html">Bioethics & Philosophy</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-CEL.html">Cell Biology</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-DVB.html">Developmental Biology</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-ECO.html">Ecology</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-EDL.html">Evolution & Diversity of Life</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-GED.html">Genetics & Disease</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-IMM.html">Immunology</a></li>
+	        
+	    </ul>
+	    <ul>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-MIC.html">Microbiology</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-MOL.html">Molecular Biology</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-NEU.html">Neuroscience</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-PLS.html">Plant Science</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-SCS.html">Science & Society</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-STB.html">Structural Biology</a></li>
+	        
+	                    <li><a href="/WileyCDA/ElsTopics/L1-VIR.html">Virology</a></li>
+	        
+        </ul>
+    </div>
+</div>
+
+
+
+<!-- dynamicFeature ( ref:ELS_TOPICS_DF ) -->
+     <!-- dynamicFeature ( ref:ELS_THEMES_DF ) -->
+
+
+
+
+
+
+
+
+	 
+	<div id="fb-themes">
+	    <div class="header-green"><div class="corner-square-left-green"></div><h2>Explore a Theme</h2><div class="corner-round-right-green"></div><div class="pointer-green"></div></div>
+	    <div class="fb-list fb-list-1col">
+	        <ul>
+	
+
+			
+			         <li><a href="/WileyCDA/ElsThemeArticles/themeId-13.html">Human Brain</a></li>
+			
+			         <li><a href="/WileyCDA/ElsThemeArticles/themeId-12.html">Vaccination</a></li>
+			
+			         <li><a href="/WileyCDA/ElsThemeArticles/themeId-2.html">Mitochondria</a></li>
+			
+			         <li><a href="/WileyCDA/ElsThemeArticles/themeId-9.html">Obesity</a></li>
+			
+			         <li><a href="/WileyCDA/ElsThemeArticles/themeId-11.html">GWAS & Complex Disease</a></li>
+			
+			         <li><a href="/WileyCDA/ElsThemeArticles/themeId-1.html">Stem Cells</a></li>
+			
+		            <li class="more-themes"><a href="/WileyCDA/ElsTopics/index.html">More Themes &gt;</a></li>
+		            
+			
+        </ul>
+
+	 
+	    </div>
+	</div>
+	
+<!-- dynamicFeature ( ref:ELS_THEMES_DF ) -->
+     <div id="fb-spotlight">
+      <!-- placementZone ( num:1 ) -->
+      <!-- placement ( pos:0 zone:1 ) : STATIC -->
+      <div class="placement" style="margin-bottom:8px;"><div class="header-blue"><div class="corner-round-left-blue"></div><h2>In the Spotlight</h2><div class="corner-round-right-blue"></div><div class="pointer-blue"></div></div>
+<div class="fb-content-right">
+    <ul>
+        <li><img src="http://media.wiley.com/assets/7153/87/Zhongming_Zhao.jpg" width="69" height="70" alt="" />
+    <a href="http://www.els.net/WileyCDA/Section/id-817397.html">Zhongming Zhao</a><br />Dr Zhao is an Associate Professor of both Cancer Research and Biomedical Informatics at Vanderbilt University Medical Center.<a href="http://www.els.net/WileyCDA/Section/id-817397.html">Read more about Zhongming Zhao</a></li>
+
+<li><img src="http://media.wiley.com/assets/7061/21/Robin_Attfield.jpg" width="69" height="70" alt="" />
+        <a href="http://www.els.net/WileyCDA/Section/id-813411.html">Robin Attfield</a><br />
+         Professor of Philosophy based at Cardiff University, his research spans the ethics and history of ideas, philosophy of religion and environmental philosophy...  <a href="http://www.els.net/WileyCDA/Section/id-813411.html">Read more about Robin Attfield</a></li>
+        
+                                
+    <!-- START EMAIL ALERTS -->
+<div class="fb-promo fb-promo-alert">
+    <a href="http://dmmsclick.wiley.com/optin.asp?template=ELS" style="padding: 14px; display: block;" class="tracking-ealerts">Sign up for e-alerts</a>
+</div>
+<!-- END EMAIL ALERTS -->
+
+<!-- START FACEBOOK FEATURE-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<br clear="all" />
+<div class="fb-text">
+    <div class="editor-photo">
+<a href="http://www.facebook.com/pages/ELS-Citable-Reviews-in-the-Life-Sciences/476316075540" target="_blank"><img src="http://media.wiley.com/assets/7154/77/Small_FB_logo.png" width="29" height="29" alt="" /></a>
+    </div>
+
+   <div class="editor-text">
+        <a href="http://www.facebook.com/pages/ELS-Citable-Reviews-in-the-Life-Sciences/476316075540" target="_blank">Follow us on Facebook</a><br />
+
+
+<div class="fb-like" data-href="http://www.facebook.com/pages/ELS-Citable-Reviews-in-the-Life-Sciences/476316075540" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+
+    </div>
+</div>
+<!-- END FACEBOOK FEATURE -->
+
+<!-- START TWITTER FEATURE-->
+<br clear="all" />
+<div class="fb-text">
+    <div class="editor-photo">
+        <a href="http://twitter.com/#!/eLifesciences" target="_blank"><img src="http://media.wiley.com/assets/7092/02/twitter-bird-blue-on-white.png" width="38.4" height="33.6" alt="" /></a>
+    </div>
+    <div class="editor-text">
+        <a href="http://twitter.com/#!/eLifesciences" target="_blank">Join us on Twitter</a><br />
+        Follow tweets on recent articles @eLifeSciences. <a href="http://twitter.com/#!/eLifesciences" target="_blank">Follow</a>
+    </div>
+</div>
+<!-- END TWITTER FEATURE -->
+</div>
+      <!-- / placement ( pos:0 zone:1 ) : STATIC -->
+      <!-- / placementZone ( num:1 ) -->
+     </div>
+    </div>
+   </div>
+   <!-- staticFeature ( ref:ELS_FOOTER ) -->
+   <div id="footer-wrapper">
+    <ul>
+        <li><a href="/WileyCDA/Section/id-610173.html">About</a></li>
+        <li><a href="http://onlinelibrary.wiley.com/recommend/to/librarian/doi/10.1002/047001590X">Recommend to your Librarian</a></li>
+        <li><a href="/WileyCDA/ElsTopics/index.html">Browse Topics</a></li>
+        <li><a href="/WileyCDA/Section/id-610187.html">Sample Articles</a></li>
+        <li><a href="/WileyCDA/Section/id-610185.html">Copyright Information</a></li>
+        <li><a href="/WileyCDA/Section/id-610183.html">For Librarians</a></li>
+        <li><a href="/WileyCDA/Section/id-610253.html">For Authors</a></li>
+        <li class="last"><a href="/WileyCDA/Section/id-610186.html">Editors</a></li>
+    </ul>
+</div>
+<div id="footer-wol">
+    <a href="http://onlinelibrary.wiley.com/" target="_blank"><img src="http://media.wiley.com/assets/5003/42/wol-logo.png" width="205" height="23" alt="Wiley Online Library" /></a>
+</div>
+<!-- / staticFeature ( ref:ELS_FOOTER ) -->
+   <div style="width: 992px; margin: 0 auto;">
+    <!-- staticFeature ( ref:WILEY_GLOBAL_FOOTER ) -->
+    <!-- Begin: Wiley Global Footer -->
+<div id="wiley-global-footer">
+	<p><a href="http://www.wiley.com/go/copyright">Copyright &copy; 2000-2013</a> by John Wiley & Sons, Inc., or related companies. All rights reserved.</p>
+	<a href="http://www.wiley.com/"><img class="wiley-global-logo" src="http://media.wiley.com/assets/7070/94/wiley-global-logo.png" alt="Wiley" /></a>
+</div>
+<!-- End: Wiley Global Footer -->
+<!-- / staticFeature ( ref:WILEY_GLOBAL_FOOTER ) -->
+   </div>
+  <!-- Omniture Code End Block -->
+  <!-- Adobe Marketing Cloud Tag Management code
+Copyright 1996-2013 Adobe, Inc. All Rights Reserved
+More info available at http://www.adobe.com -->
+<script type="text/javascript">//<![CDATA[
+var amc=amc||{};if(!amc.on){amc.on=amc.call=function(){}};
+document.write("<scr"+"ipt type=\"text/javascript\" src=\"//www.adobetag.com/d1/v2/ZDEtd2lsZXlwdWJsaXNoaW5nLTE0NTYtMjE5OS0=/amc.js\"></sc"+"ript>");
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+if(s){
+	s.pageName = ""
+	s.server = ""
+	s.channel = ""
+	s.t()
+}
+//]]></script>
+<!-- End Adobe Marketing Cloud Tag Management code -->
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-23301097-1']);
+_gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  <!-- / Omniture Code End Block -->
+  </body>
+ </html>
+<!-- / layout( ELS Home Page ) -->

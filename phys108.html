@@ -1,0 +1,273 @@
+<base href="http://www.ligo-la.caltech.edu/">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>LIGO Livingston Observatory</title>
+
+<!--[if lt IE 7]>
+
+<script type="text/javascript">
+var arVersion = navigator.appVersion.split("MSIE")
+var version = parseFloat(arVersion[1])
+
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 and 6.
+{
+   if ((version >= 5.5) && (document.body.filters)) 
+   {
+       for(var i=0; i<document.images.length; i++)
+       {
+	      var img = document.images[i]
+	      var imgName = img.src.toUpperCase()
+	      if (imgName.substring(imgName.length-3, imgName.length) == "PNG")
+	      {
+		     var imgID = (img.id) ? "id='" + img.id + "' " : ""
+		     var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+		     var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+		     var imgStyle = "display:inline-block;" + img.style.cssText 
+		     var imgAttribs = img.attributes;
+		     for (var j=0; j<imgAttribs.length; j++)
+			 {
+			    var imgAttrib = imgAttribs[j];
+			    if (imgAttrib.nodeName == "align")
+			    {		  
+			       if (imgAttrib.nodeValue == "left") imgStyle = "float:left;" + imgStyle
+			       if (imgAttrib.nodeValue == "right") imgStyle = "float:right;" + imgStyle
+			       break
+			    }
+             }
+		     var strNewHTML = "<span " + imgID + imgClass + imgTitle
+		     strNewHTML += " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+	         strNewHTML += "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+		     strNewHTML += "(src='" + img.src + "', sizingMethod='scale');\""
+		     strNewHTML += " onmouseover=\"PNGswap('" + img.id + "');\" onmouseout=\"PNGswap('" + img.id +"');\""
+		     strNewHTML += "></span>" 
+		     img.outerHTML = strNewHTML
+		     i = i-1
+	      }
+       }
+   }
+}
+window.attachEvent("onload", correctPNG);
+
+function PNGswap(myID)
+{
+   var strOver  = "over"
+   var strOff = "up"
+   var oSpan = document.getElementById(myID)
+   var currentAlphaImg = oSpan.filters(0).src
+   if (currentAlphaImg.indexOf(strOver) != -1)
+      oSpan.filters(0).src = currentAlphaImg.replace(strOver,strOff)
+   else
+      oSpan.filters(0).src = currentAlphaImg.replace(strOff,strOver)
+}
+
+
+</script>
+<![endif]-->
+
+<link href="llostyle.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	margin-left: 1px;
+	margin-top: 1px;
+	background-color: #EEEEEE;
+}
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000000;
+	font-weight: bold;
+}
+.style4 {
+	font-size: 10px;
+	color: #CCCCCC;
+}
+.style21 {
+	font-size: 9px;
+	color: #CCCCCC;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style22 {
+	color: #003366;
+}
+a:visited {
+	color: #FFFFFF;
+}
+.style26 {color: #330033}
+-->
+</style>
+
+
+
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function imgSwap(ImgId, newImg)
+{	
+	ImgId.src = newImg
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style28 {color: #000066}
+.style29 {color: #EEEEEE}
+-->
+</style>
+</head>
+
+<body>
+<table width="800" border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><div align="right"><span class="style22">| <a href="LLO/sitemap.htm" >Site Map</a> | <a href="LLO/contactwel.htm">Contacts</a> | <a href="LLO/directionwel.htm">Directions</a> |
+  	  <a href="https://jobs.caltech.edu/applicants/jsp/shared/Welcome_css.jsp" target="_blank" >CURRENT JOB OPPORTUNITIES</a></span>
+</div></td>
+  </tr>
+</table>
+  	
+<table width="800" border="0" cellspacing="0" bgcolor="#000000">
+<tr>
+	<td height="95"><img src="graphics/internalhead.png" name="head" align="middle" id="head"></td>
+</tr>
+<tr>
+	<td valign="top"><div align="right" class="style21">Graphic courtesy of: Werner Benger * Zuse Institute Berlin (ZIB) * Max-Planck Institute fuer Gravitational Physics (Albert Einstein Institute-AEI )*<br>Center for Computation &amp; Technology at Louisiana State University (CCT) </div></td>
+</tr>
+</table>
+    
+    <table width="800" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><ul id="MenuBar1" class="MenuBarHorizontal">
+      <li>
+        <div align="center"><a href="http://www.ligo-la.caltech.edu">HOME</a></div>
+  </li>
+      <li>
+        <div align="center"><a href="#" class="MenuBarHorizontal">Welcome To Ligo Livingston</a>
+            <ul>
+              <li><a href="http://www.ligo-la.caltech.edu/LLO/contactwel.htm">Contact Us</a></li>
+              <li><a href="http://www.ligo-la.caltech.edu/LLO/directionwel.htm">Directions</a></li>
+              <li><a href="http://www.ligo-la.caltech.edu/LLO/sitebldgmap.htm">Building Map</a></li>
+              <li><a href="http://www.ligo-la.caltech.edu/LLO/localareaw.htm">Local Area Information</a></li>
+              <li><a href="http://www.ligo-la.caltech.edu/LLO/staffwel.htm">Livingston Staff</a></li>
+              <li><a href="http://www.ligo-la.caltech.edu/LLO/photos.htm">Site Photos</a></li>
+              <li><a href="https://jobs.caltech.edu/applicants/jsp/shared/Welcome_css.jsp" target="_blank">Employment Opportunity</a></li>
+            </ul>
+        </div>
+      </li>
+          <li>
+            <div align="center"><a href=""class="MenuBarHorizontal">Science of LIGO</a>
+          <ul>
+                  <li><a href="http://www.ligo-la.caltech.edu/LLO/overviewsci.htm">Overview of LIGO</a></li>
+                  <li><a href="http://www.ligo-la.caltech.edu/LLO/time.htm">Timeline of Events</a></li>
+                  <li><a href="http://www.ligo-la.caltech.edu/LLO/facts.htm">Fact Sheet</a></li>
+                  <li><a href="http://www.amnh.org/sciencebulletins/astro/f/gravity.20041101/index.php" target="_blank">AMNH Science Bulletin</a></li>
+                  <li><a href="http://www.ligo.org" target="_blank">LIGO Scientifc Collaboration</a></li>
+                  <li><a href="http://www.advancedligo.mit.edu/" target="_blank">Advanced LIGO</a></li>
+                  <li><a href="http://ilog.ligo-la.caltech.edu/" target="_blank">ILog</a></li>
+                  <li><a href="http://www.lsc-group.phys.uwm.edu/ppcomm/Papers.html#observational">Observatory Results</a></li>
+                  <li><a href="http://www.ligo.caltech.edu" target="_blank">Project Features / News</a></li>
+              </ul>
+            </div>
+        </li>
+          <li>
+            <div align="center"><a href="SEC.html" class="MenuBarHorizontal">Science Education Center</a></div>
+        </li>
+          <li>
+            <div align="center"><a class="MenuBarItemSubmenu" href="#">Working Visitors</a>
+                  <ul>
+                    <li><a href="http://www.ligo-la.caltech.edu/LLO/visitororient.htm">Orientation</a> </li>
+                    <li><a href="http://www.ligo-la.caltech.edu/LLO/directionswork.htm">Directions</a> </li>
+                    <li><a href="http://www.ligo-la.caltech.edu/LLO/sitebldgmap.htm">Building Map</a></li>   
+                    <li><a href="http://www.ligo-la.caltech.edu/LLO/localareawv.htm">Local Area Information</a> </li>
+                    <li><a href="http://www.ligo-la.caltech.edu/LLO/contactvisitor.htm">Contact Us</a></li>
+                  </ul>
+            </div>
+        </li>
+      <li>
+        <div align="center"><a href="http://www.ligo.caltech.edu/LIGO_web/PR/scripts/" target="_blank" class="MenuBarHorizontal">Media</a></div>
+      </li>
+      <li><a href="http://www.ligo-la.caltech.edu/SEC1/tourFAQ.html">Public Tours</a></li>
+</ul></td>
+  </tr>
+</table>
+
+<table width="800" border="0" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="243" rowspan="2"><div align="center"><img src="graphics/buttons/swap/galaxyup.png" name="galaxy" width="229" height="197" id="galaxy" onMouseOver="MM_swapImage('galaxy','','graphics/buttons/swap/galaxyover.png',1)" onMouseOut="MM_swapImgRestore()"></div></td>
+    <td width="358"><div align="center"><img src="graphics/buttons/swap/welcometextover.png" name="aerial" width="347" height="107" id="aerial" onMouseOver="MM_swapImage('aerial','','graphics/buttons/swap/welcometextup.png',1)" onMouseOut="MM_swapImgRestore()"></div></td>
+    <td width="199"><div align="center"><img src="graphics/buttons/swap/media1up.png" name="media1" width="148" height="100" align="middle" id="media1" onMouseOver="MM_swapImage('media1','','graphics/buttons/swap/media1over.png',1)" onMouseOut="MM_swapImgRestore()"></div></td>
+  </tr>
+  <tr>
+    <td><div align="center" class="style28">WELCOME TO THE LIVINGSTON LASER INTERFEROMETER GRAVITATIONAL-WAVE OBSERVATORY</div></td>
+    <td rowspan="2"><img src="graphics/buttons/swap/space_timeup.png" name="spacetime" width="191" height="181" align="middle" id="spacetime" onMouseOver="MM_swapImage('spacetime','','graphics/buttons/swap/space_timeover.png',1)" onMouseOut="MM_swapImgRestore()"></td>
+  </tr>
+  <tr>
+    <td rowspan="2"><div align="center"><img src="graphics/buttons/swap/workup.png" name="work1" width="227" height="145" align="middle" id="work1" onMouseOver="MM_swapImage('work1','','graphics/buttons/swap/workover.png',1)" onMouseOut="MM_swapImgRestore()"></div></td>
+    <td rowspan="2"><div align="center"><img src="graphics/buttons/swap/kidslearnup.png" name="kids" width="300" height="222" align="middle" id="kids" onMouseOver="MM_swapImage('kids','','graphics/buttons/swap/kidslearnover.png',1)" onMouseOut="MM_swapImgRestore()"></div></td>
+  </tr>
+  <tr>
+    <td><a href="LLO/internalmain.htm"><img src="graphics/buttons/swap/gaterup.png" alt="Link to Interal Pages" name="gator" width="199" height="87" border="0" align="middle" id="gator" onMouseOver="MM_swapImage('gator','','graphics/buttons/swap/gaterover.png',1)" onMouseOut="MM_swapImgRestore()"></a></td>
+  </tr>
+</table>
+
+<table width="800" border="0" cellspacing="0" cellpadding="0" bgcolor="#000000">
+	<tr>
+  		<td colspan="7" class="style22">PARTNERS OF LIGO:</td>
+	</tr>
+	<tr>
+    	<td width="64"><a href="http://www.caltech.edu" target="_blank"><img src="graphics/buttons/cit.png" name="cit" width="60" height="61" border="0" id="cit"></a></td>
+   	  <td width="89"><a href="http://space.mit.edu/LIGO/" target="_blank"><img src="graphics/buttons/mitlogo.png" width="85" height="65" border="0" name="MIT" id="MIT"></a></td>
+    	<td width="64"><a href="http://www.ligo.caltech.edu" target="_blank"><img src="graphics/buttons/ligologo.png" name="caltech" width="60" height="43" border="0" id="caltech"></a></td>
+   	  <td width="104"><a href="http://www.ligo.org" target="_blank"><img src="graphics/buttons/lsclogo.png" name="LSC" width="100" height="47" border="0" id="LSC"></a></td>
+   	  <td width="84"><a href="http://www.ligo-wa.caltech.edu" target="_blank"><img src="graphics/buttons/lhologo.png" name="LHO" width="80" height="50" border="0" id="LHO"></a></td>
+   	  <td width="72"><a href="http://www.nsf.gov" target="_blank"><img src="graphics/buttons/nsf4.png" name="NSF" width="60" height="65" border="0" id="NSF"> </a></td>
+   	  <td width="306" class="xsmitalic"><div align="right" class="style4">LIGO is supported by the<br>
+      	National Science Foundation (NSF).<br>
+      	Any opinions, findings, conclusions or recommendations expressed here are those of the author(s) and do not
+      	necessarily reflect the view of the NSF</div></td>
+  	</tr>
+  	<tr>
+    	<td colspan="7">&nbsp;</td>
+	</tr>
+</table>
+<script type="text/javascript">
+<!--
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+//-->
+</script>
+</body>
+</html>

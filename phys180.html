@@ -1,0 +1,158 @@
+<base href="http://hexadecimal.uoregon.edu/relativity/">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+  <head>
+    <title>Relativistic Starflight</title>
+  </head>
+
+  <body>
+      <h1>Relativistic Starflight</h1>
+
+      <p>What would it be like to travel in a <em>real</em> starship?
+      It's weirder than <i>Star Trek</i>, but not nearly as fast-paced.
+      <i>xrel</i> depicts, as realistically as possible, the
+      appearance of stars as seen from a starship moving at speeds close
+      to the speed of light.  The results are surprising, maybe even
+      counterintuitive, but physically accurate to the limits of my
+      knowledge.</p>
+
+      <img src="lat5.gif" alt="imagine a big curved cube lattice here">
+      <p>Example: Traveling through the Lattice Cluster at 0.5 c</p>
+
+      <p>You can run <i>xrel</i> yourself, if you have <a
+      href="takes.html">what it takes</a> -- it should run on most UNIX
+      systems with the standard math library and X window system
+      libraries and display on any X terminal or workstation X display.
+      Just get the <a href="xrel.c">source code</a>, and read about how
+      to <a href="build.html">build it</a> and <a href=run.html>run
+      it</a> on your system.</p>
+
+      <hr>
+      <h2>Sample images</h2>
+      <p>Each image is a 640x480 GIF, but don't worry -- most images are
+      fairly small files that won't take long to download (the largest
+      is about 12K and most are around 5K).  You can pick images from
+      their descriptions below, or view <a href="samples.html">a page
+      where they're all inlined</a>.</p>
+
+      <hr>
+      <p>These images were generated with <samp>xrel -seed 19660410 -times
+      0 -size 2</samp> at the indicated velocity, and show the same
+      random starfield.</p>
+      <p><a href="stars0.gif">"Normal" space at rest</a></p>
+      <p><a href="stars2.gif">"Normal" space at 0.2 c</a></p>
+      <p><a href="stars5.gif">"Normal" space at 0.5 c</a></p>
+      <p><a href="stars8.gif">"Normal" space at 0.8 c</a></p>
+      <p><a href="stars9.gif">"Normal" space at 0.9 c</a></p>
+      <p><a href="stars95.gif">"Normal" space at 0.95 c</a></p>
+      <p><a href="stars99.gif">"Normal" space at 0.99 c</a></p>
+      <p><a href="stars-2.gif">"Normal" space moving backwards at 0.2 c</a></p>
+      <p><a href="stars-5.gif">"Normal" space moving backwards at 0.5 c</a></p>
+      <p><a href="stars-8.gif">"Normal" space moving backwards at 0.8 c</a></p>
+
+      <hr>
+      <p>These were generated with <samp>xrel -lattice 5 -times 0 -size 2</samp>at
+      the indicated velocity, and show a cubic lattice of stars.</p>
+      <p><a href="lat0.gif">The Lattice Cluster at rest</a></p>
+      <p><a href="lat2.gif">The Lattice Cluster at 0.2 c</a></p>
+      <p><a href="lat5.gif">The Lattice Cluster at 0.5 c</a> (shown at
+      the top of this page)</p>
+      <p><a href="lat8.gif">The Lattice Cluster at 0.8 c</a></p>
+      <p><a href="lat9.gif">The Lattice Cluster at 0.9 c</a></p>
+      <p><a href="lat95.gif">The Lattice Cluster at 0.95 c</a></p>
+      <p><a href="lat99.gif">The Lattice Cluster at 0.99 c</a></p>
+      <p><a href="lat-2.gif">The Lattice Cluster moving backwards at 0.2 c</a></p>
+      <p><a href="lat-5.gif">The Lattice Cluster moving backwards at 0.5 c</a></p>
+      <p><a href="lat-8.gif">The Lattice Cluster moving backwards at 0.8 c</a></p>
+
+      <hr>
+      <h2>This is too weird!  What's going on?</h2>
+
+      <p>Coming soon: about the physics behind <i>xrel</i>, and how
+      <i>xrel</i> works (including the cheesy
+      approximations).</p>
+
+      <p>As a start, here's a brief <a href="astro.html">explanation</a>
+      of how the apparent brightness of stars is measured and why
+      they have the colors they do.</p>
+
+      <hr>
+      <h2>Similar projects by other people</h2>
+
+      <p>These people have also done relativistic visualization work,
+      with varying focuses and levels of realism.</p>
+
+      <p>Wade Lutgen &lt;wade@pacific.mps.ohio-state.edu&gt; has
+      what is probably the most similar program to mine, his own
+      <a href="http://www.physics.ohio-state.edu/~wade/relativity.html">
+      Relativistic Flight Simulator</a> which is available both
+      in MS-DOS/MS-Windows and UNIX/X versions.  Despite the
+      similarity in intent, his simulator is very different in
+      implementation.  Among the differences are that his stars
+      appear to be monochromatic sources and he allows you to
+      turn your ship incrementally.  On the down side his
+      simulator seems to be a lot slower than mine on the same
+      hardware, requires either a lot of free colors or a
+      TrueColor display in X, and core dumps whenever I quit from
+      it.  All in all, it's an interesting comparison in
+      approaches to the same problem.
+      </p>
+
+      <p>David Porterhouse &lt;anima@compuserve.com&gt; has a
+      <a href="http://ourworld.compuserve.com/homepages/anima/rfslink.htm">
+      Relativistic Flight Simulation</a> page with links to other
+      simulation projects, including his own.  Here you can also find
+      links to MS-DOS/MS-Windows-based simulation software and
+      downloadable movies/animations.</p>
+
+      <p>Antony Searle &lt;acsearle@ozemail.com.au&gt; has
+      written an excellent relativistic raytracer called <a
+      href="http://www.anu.edu.au/Physics/Searle/">Backlight</a>
+      that accurately depicts several relativistic effects.  Of
+      particular interest is that Backlight was written from the
+      beginning to handle relativistic effects like the finite
+      speed of light and frame computations, rather than as
+      modifications to an existing raytracer to introduce
+      relativistic corrections to traditional raytracer
+      assumptions (such as an infinite speed of light and
+      absolute space/time coordinates).  He distributes the
+      source code, so you can play with it yourself.  His web
+      page includes sample images and animations, and you can
+      order videotapes of animations made with his software.</p>
+
+      <p>Andrew Howard &lt;andrbh@cs.mu.OZ.AU&gt; developed
+      extensions to the POVray raytracer to depict most relativistic
+      optical effects (except for doppler shifting) and has some nice
+      images and movies demonstrating them.  His <a
+      href="http://www.cs.mu.oz.au/~andrbh/raytrace/raytrace.html">
+      Relativistic Ray-Tracing</a> page includes a good technical paper
+      on relativistic optical effects.</p>
+
+      <p>John Walker &lt;kelvin@fourmilab.ch&gt; also
+      attempted to modify POVray to depict relativistic effects,
+      although with less accuracy than Andrew Howard's project.  His <a
+      href="http://www.fourmilab.ch/cship/cship.html">C-ship</a> pages
+      include movies and his explanations of relativistic optical
+      effects, and while he does attempt to simulate the color effects
+      of doppler shifting he does not successfully depict the effects of
+      the finite speed of light.  Nevertheless, his depictions are
+      interesting to compare to the other simulations.</p>
+
+      <p>Robert Nemiroff created the excellent <a
+      href="http://antwrp.gsfc.nasa.gov/htmltest/rjn_bht.html">Virtual
+      Trips to Black Holes and Neutron Stars Page</a>, which depicts
+      general relativistic effects, as opposed to the special
+      relativistic effects shown by <i>xrel</i>.  He is also one of
+      the maintainers of one of my favorite web sites, <a
+      href="http://antwrp.gsfc.nasa.gov/apod/astropix.html">Astronomy
+      Picture of the Day</a>.</p>
+
+      <hr>
+      <address><a href="mailto:stevev@hexadecimal.uoregon.edu">Steve VanDevender</a></address>
+<!-- Created: Tue Dec 17 10:38:50 PST 1996 -->
+<!-- hhmts start -->
+Last modified: Wed Feb 23 15:02:33 PST 2000
+<!-- hhmts end -->
+  </body>
+</html>
+

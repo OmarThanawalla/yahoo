@@ -1,0 +1,559 @@
+<base href="http://www.ssxray.com/">
+ <html>
+
+<head>
+<meta NAME="save" CONTENT="history">
+<style>
+   	.saveHistory {behavior:url(#default#savehistory);}
+</style>
+<script LANGUAGE="JavaScript">
+<!--
+v=false;
+//-->
+</script>
+<script LANGUAGE="JavaScript1.1">
+<!--
+if (typeof(Option)+"" != "undefined") v=true;
+//-->
+</script>
+<script LANGUAGE="JavaScript">
+
+if(v){a=new Array(22);}
+
+function getFormNum (formName) {
+	var formNum =-1;
+	for (i=0;i<document.forms.length;i++){
+		tempForm = document.forms[i];
+		if (formName == tempForm) {
+			formNum = i;
+			break;
+		}
+	}
+	return formNum;
+}
+
+function jmp(form, elt)
+// The first parameter is a reference to the form.
+{
+	if (form != null) {
+		with (form.elements[elt]) {
+			if (0 <= selectedIndex)
+				location = options[selectedIndex].value;
+		}
+	}
+}
+
+var catsIndex = -1;
+var itemsIndex;
+
+if (v) { // ns 2 fix
+function newCat(){
+	catsIndex++;
+	a[catsIndex] = new Array();
+	itemsIndex = 0;
+}
+
+function O(txt,url) {
+	a[catsIndex][itemsIndex]=new myOptions(txt,url);
+	itemsIndex++;
+}
+
+function myOptions(text,value){
+	this.text = text;
+	this.value = value;
+}
+
+// fill array
+
+newCat();
+O("CrystalViewer for Mammography - ","/pdf/CrystalViewer_Nov04.PDF");
+O("VistaViewer for Mammography - ","/pdf/DS018 - VistaViewer.pdf");
+O("Mammography Workstation - ","/pdf/DS019 - MammoWorkstation.pdf");
+O("Mammography Digital Viewing Station - ","/pdf/MDVS_JAN05_FINAL.PDF");
+O("RADX Mammography MS880 - ","/pdf/MS880 data sheet.pdf");
+O("RADX Mammography MS824 - ","/pdf/MS824 data sheet.pdf");
+O("VersaViewer Crossformat - ","/pdf/DS017 - VersaViewer DS 01-02.pdf");
+O("FlexiViewer Crossformat - ","/pdf/FlexiViewer_Nov04.PDF");
+O("RADX MV4000A","/pdf/RADXCAT8.pdf");
+O("RADX MV3200A","/pdf/RADXCAT9.pdf");
+O("RADX MV3000A","/pdf/RADXCAT10.pdf");
+O("RADX MV200DT/MV200DVS","/pdf/RADXCAT11.pdf");
+O("MV200QT/MV300QT","/pdf/sscata6.pdf");
+O("MV200A/MV300A","/pdf/sscata7.pdf");
+O("All RADX Mammography Viewers","/pdf/RADXCAT2_5.pdf");
+
+newCat();
+O("CrystalViewer - ","/pdf/CrystalViewer_Nov04.PDF");
+O("FlexiViewer - ","/pdf/FlexiViewer_Nov04.PDF");
+O("VistaViewer for Mammography - ","/pdf/DS018 - VistaViewer.pdf");
+O("Mammography Workstation - ","/pdf/DS019 - MammoWorkstation.pdf");
+O("Mammography Digital Viewing Station - ","/pdf/MDVS_JAN05_FINAL.PDF");
+O("RADX Mammography MS880 - ","/pdf/MS880 data sheet.pdf");
+O("RADX Mammography MS824 - ","/pdf/MS824 data sheet.pdf");
+O("All RADX Mammography Viewers","/pdf/RADXCAT2_5.pdf");
+O("VersaViewer Crossformat - ","/pdf/DS017 - VersaViewer DS 01-02.pdf");
+
+newCat();
+O("248004 Precision Mammography","/pdf/248004_Nov04.PDF");
+O("149004 Precision Mammography","/pdf/sscatb5.pdf");
+O("149005 Precision Mammography","/pdf/sscatb6.pdf");
+O("149006 Precision Mammography","/pdf/sscatb6a.pdf");
+O("24x30cm/18x24cm Mammography","/pdf/sscatb21.pdf");
+
+
+newCat();
+O("Digital Viewing Station","/pdf/sscatb1_2.pdf");
+O("Mammography Digital Viewing Station - ","/pdf/MDVS_JAN05_FINAL.PDF");
+O("Flat Panel Digital Viewing Station - ","/pdf/DVS2FP_Nov04.PDF");
+O("Mammography Workstation - ","/pdf/DS019 - MammoWorkstation.pdf");
+
+newCat();
+O("OR PACS Cart - ","/pdf/OR PACS_Nov04.PDF");
+O("PACS Cart - ","/pdf/Pacs_cart.pdf");
+O("PACS Workstation - ","/pdf/PACSWorkstation.pdf");
+
+
+newCat();
+O("Chameleon series ","/pdf/sscatb3_4.pdf");
+O("2000/4000 series","/pdf/sscatb7_8.pdf");
+O("2X/4X Hi/Lo Illuminator","/pdf/sscatb9_10.pdf");
+O("Deluxe 470","/pdf/sscatb11.pdf");
+O("Streamliner III","/pdf/sscatb12.pdf");
+O("Circulite","/pdf/sscatb13.pdf");
+O("460 Thin Line","/pdf/sscatb14.pdf");
+O("Wet Film/Countertop recessed","/pdf/sscatb14.pdf");
+O("Vuelite Aluminum","/pdf/sscatb15.pdf");
+O("200 Series/240 Series Recessed","/pdf/sscatb17_18.pdf");
+O("200 Series Console/Mobile","pdf/sscatb19_20.pdf");
+O("14x36/14x51 Illuminators","/pdf/sscatb22.pdf");
+O("Modular Mobile Illuminator System","/pdf/sscatb23.pdf");
+O("Corner Modules","/pdf/sscatb24.pdf");
+O("Hinged Connectors","/pdf/sscatb24.pdf");
+O("Four Bank Mobile Stand","/pdf/sscatb25.pdf");
+O("Console Arms/Adjustable Angle Viewing","/pdf/sscatb25.pdf");
+O("Dental Illuminators","/pdf/sscatb27.pdf");
+O("4.5 x 17 Illuminator","/pdf/sscatb27.pdf");
+O("Economy Illuminator","/pdf/sscatb28.pdf");
+O("12 x 24 Illuminator","/pdf/sscatb28.pdf");
+O("General Information/Options","/pdf/sscatb29_30.pdf");
+
+newCat();
+O("188 Bright Spot","/pdf/sscatb16.pdf");
+O("CoolBrite","/pdf/RADXCAT15.pdf");
+
+newCat();
+O("High Intensity Industrial Illuminators","/pdf/sscatb26.pdf");
+
+newCat();
+O("PBL Wall Cassette Holders","/pdf/sscatc1.pdf");
+O("Extra Heavy Duty Wall Cassette Holders","/pdf/sscatc2.pdf");
+O("Wall and Floor Cassette Holders","/pdf/sscatc3.pdf");
+O("14 x 36 Heavy Duty Wall Cassette Holders","/pdf/sscatc4.pdf");
+O("Motorized Cassette Holders","/pdf/sscatc4.pdf");
+O("X-Almor Table Top Cassette Holder","/pdf/sscatc5.pdf");
+O("X-Almor Wall Cassette Holder","/pdf/sscatc5.pdf");
+O("X-Almor Mobile Cassette Holders","/pdf/sscatc6.pdf");
+O("X-Almor Portable Hang-On Cassette Holder","/pdf/sscatc7.pdf");
+O("X-Almor 14 x 36 Adapter Series","/pdf/sscatc7.pdf");
+
+newCat();
+O("Aluminum Interspaced Grids","/pdf/sscatc8.pdf");
+O("Deluxe Calipers","/pdf/sscatc8.pdf");
+
+newCat();
+O("Emergency Carts","/pdf/sscatd1.pdf");
+O("Utility Carts","/pdf/sscatd1.pdf");
+O("Mobile Cassette and Film Carts","/pdf/sscatd3.pdf");
+O("Catheter Carts","/pdf/sscatd5_6.pdf");
+
+newCat();
+O("Contrast Cabinets","/pdf/sscatd2.pdf");
+
+newCat();
+O("Catheter Cabinets - ","/pdf/CC200_Nov04.PDF");
+
+newCat();
+O("Open Steel Shelving","/pdf/sscate1.pdf");
+O("Vertifiles","/pdf/sscate2.pdf");
+O("Economy Open Shelf Vertifile","/pdf/sscate3.pdf");
+O("Fixed Partition Vertifile","/pdf/sscate3.pdf");
+O("Letter Size/18 x 24cm Mammography Vertifile","/pdf/sscate4.pdf");
+O("Extra Wide One Shelf Vertifile","/pdf/sscate4.pdf");
+O("Small Size/Mammography Vertifile","/pdf/sscate5.pdf");
+O("Index Guides/Filing/Mailing Envelopes","/pdf/sscate6.pdf");
+
+newCat();
+O("Deluxe Protectopanels (R)","/pdf/sscatf1.pdf");
+O("Ribbed Protectopanels","/pdf/sscatf2.pdf");
+O("Ribbed Ready Made Booth","/pdf/sscatf3.pdf");
+O("Ribbed Mobile Double Wing Screen","/pdf/sscatf3.pdf");
+O("Ribbed Protective Screens - Mobile/Stationary/Hinged","/pdf/sscatf4.pdf");
+O("Clear-Pb (R) Radiation Barriers","/pdf/sscatf5.pdf");
+O("Half Film Blockers","/pdf/sscatf5.pdf");
+O("Radiation Protective Eyewear","/pdf/sscatf6.pdf");
+O("Apron and Glove Racks","/pdf/sscatf6.pdf");
+O("Tuf-Guard Protective Aprons and Shields","/pdf/sscatf6.pdf");
+
+
+
+newCat();
+O("Film Loading Bins","/pdf/sscatg1.pdf");
+O("Table-Top Film Loading Bins","/pdf/sscatg1.pdf");
+O("Film ID Printers and Cards","/pdf/sscatg2.pdf");
+O("Cassette Transfer Cabinets - Passboxes","/pdf/sscatg3_5.pdf");
+O("Safelights","/pdf/sscatg6.pdf");
+O("Darkroom Cabinets","/pdf/sscatg7_10.pdf");
+O("Developing Tank/Agitators/Timers/Thermometers","/pdf/sscatg11.pdf");
+O("Light Louvers","/pdf/sscatg12.pdf");
+O("Developing Hangers/Storage Rack","/pdf/sscatg12.pdf");
+O("Film Dryers","/pdf/sscatg13_14.pdf");
+
+newCat();
+O("Storage Chests","/pdf/sscatd4.pdf");
+
+
+
+} // if (v)
+
+function relate(formName,elementNum,j) {
+if(v){
+var formNum = getFormNum(formName);
+ if (formNum>=0) {
+	formNum++; // reference next form, assume it follows in HTML
+	with (document.forms[formNum].elements[elementNum]) {
+		for(i=options.length-1;i>0;i--) options[i] = null; // null out in reverse order (bug workarnd)
+		for(i=0;i<a[j].length;i++){
+			options[i] = new Option(a[j][i].text,a[j][i].value); 
+		}
+		options[0].selected = true;
+	}
+ }
+} else {
+jmp(formName,elementNum);
+}
+}
+
+
+
+function IEsetup(){
+	if(!document.all) return;
+	IE5 = navigator.appVersion.indexOf("5.")!=-1;
+	if(!IE5) {
+		for (i=0;i<document.forms.length;i++) {
+			document.forms[i].reset();
+		}
+	}
+}
+
+window.onload = IEsetup;
+
+//-->
+</script>
+
+
+<META http-equiv=expires content=0>
+<META content="Copyright 2008, S&amp;S X-Ray Products" name=copyright>
+name=description>
+<META content="MSHTML 5.50.4207.2601" name=GENERATOR>
+<META 
+content="mammography, mammo, motorized viewer, mv, radiograph, radiology, oncology, dual belt, vertical belt, horizontal belt, CrystalViewer, FlexiViewer, S&amp;S X-Ray Products, RSNA, AHRA, general radiology, film viewer, light boxes, illuminators, digitial viewing station, hospital, x-ray, xray, Broadwest, AMS, Maxant, R2 Technology, InfiMed" 
+name=keywords>
+<META content="none, default" name="Microsoft Theme">
+<title>S&amp;S X-Ray Products / S&amp;S RADX: Motorized Film Viewers, Illuminators and
+Radiology Accessories</title>
+<META content=none name="Microsoft Border"></HEAD>
+<BODY>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="100%" bgColor=#808080><IMG height=125 
+      alt="header.gif (33237 bytes)" 
+      src="./header.gif" 
+      width=800></TD></TR></TBODY></TABLE></CENTER></DIV>
+<DL>
+  <DIV align=center>
+  <CENTER>
+  <DT>&nbsp;&nbsp;&nbsp; <IMG height=88 alt="sslogos.gif (23623 bytes)" 
+  src="./sslogos.gif" 
+  width=540> </CENTER></DT></DIV>
+  <DD>&nbsp; 
+  <DIV align=center>
+  <CENTER></DIV>
+  <DT><FONT face=Arial color=#000080><BIG><center>Global excellence in design, engineering, manufacturing, fabrication, and quality assurance
+<DT> enables S&S Technology to produce the finest in patient care technology solutions
+ </BIG></FONT> </CENTER>
+<DT>
+<p>
+</p>
+<DT><CENTER><A href="http://www.ssxray.com/surplus.html"><FONT face=Arial color=#ff0000><BIG>Now: Factory Surplus Sale!</BIG></FONT></A></CENTER>
+
+  <DIV></DIV>
+  <DD> </DD></DL>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="5%"></TD>
+    <TD width="25%">
+      <P align=center><IMG height=132 alt="mv4000cc.gif (58469 bytes)" 
+      src="./mv4000cc.gif" 
+      width=126 align=right></P></TD>
+    <TD width="18%"></TD>
+    <TD width="23%"><IMG height=129 alt="mv400ba.gif (68996 bytes)" 
+      src="./mv400ba.gif" 
+      width=130></TD>
+
+<TD width="20%">
+  <p><B><FONT face=Arial color=#000080> See our new Patented PACS
+Workstation with Keyboard Sanitizer!
+
+
+		
+
+ </B></p>
+
+
+ 
+
+
+
+
+
+
+
+
+</TD>
+
+
+
+    <TD width="5%"></TD></TR>
+  <TR>
+    <TD align=middle width="5%">
+      <DL>
+        <DT> </DT></DL></TD>
+    <TD align=middle width="25%">
+      <DL>
+        <DT> </DT></DL></TD>
+    <TD align=middle width="18%">
+      <DL>
+        <DT> </DT></DL></TD>
+    <TD align=middle width="23%">
+      <DL>
+        <DT> </DT></DL></TD>
+    <TD align=middle width="24%">
+        <DT> </DT></DL></TD>
+    <TD align=middle width="5%">
+      <DL>
+        <DD> </DD></DL></TD></TR>
+  <TR>
+    <TD width="5%">
+      <P align=center></P></TD>
+    <TD width="25%">
+      <P align=center><!--webbot bot="ImageMap" rectangle="(6,4) (140, 150)  _private/MDVS_JAN05_FINAL.PDF" src="./mdvs.gif" width="157" height="169" alt="mdvs.gif (16291 bytes)" border="0" startspan --><MAP 
+      name=FrontPageMap><AREA shape=RECT coords=6,4,140,150 
+        href="/pdf/MDVS_JAN05_FINAL.PDF"></MAP><A 
+      href="./index.htm/map"><IMG 
+      height=169 alt="mdvs.gif (16291 bytes)" isMap 
+      src="./mdvs.gif" 
+      width=157 useMap=#FrontPageMap border=0></A><!--webbot bot="ImageMap" endspan i-checksum="62127" --></P></TD>
+    <TD width="18%">
+      <P align=center><!--webbot bot="ImageMap" rectangle="(7,4) (123, 211)  _private/CC200_Nov04.PDF" src="./cc300.gif" alt="cc300.gif (17378 bytes)" border="0" startspan --><MAP 
+      name=FrontPageMap1><AREA shape=RECT coords=7,4,123,211 
+        href="/pdf/CC300.PDF"></MAP><A 
+      href="./index.htm/map1"><IMG 
+      height=216 alt="cc300.gif (17378 bytes)" isMap 
+      src="./cc300.gif" 
+      width=131 useMap=#FrontPageMap1 border=0></A><!--webbot bot="ImageMap" endspan i-checksum="65118" --></P></TD>
+    <TD width="23%">
+      <P align=center><!--webbot bot="ImageMap" rectangle="(1,4) (122, 215)  _private/OR PACS_Nov04.PDF" src="./ORPACScart.gif" alt="ORPACScart.gif (12924 bytes)" border="0" startspan --><MAP 
+      name=FrontPageMap2><AREA shape=RECT coords=1,4,122,215 
+        href="/pdf/OR PACS_Nov04.PDF"></MAP><A 
+      href="./index.htm/map2"><IMG 
+      height=216 alt="ORPACScart.gif (12924 bytes)" isMap 
+      src="./ORPACScart.gif" 
+      width=123 useMap=#FrontPageMap2 border=0></A><!--webbot bot="ImageMap" endspan i-checksum="47607" --></P></TD>
+
+      <TD width="24%">
+      <P align=center><!--webbot bot="ImageMap" rectangle="(1,4) (122, 215)  _private/PacsWorkstation.pdf" src="./PACSWorkstation.gif" alt="PACSWorkstation.gif" border="0" startspan --><MAP 
+      name=FrontPageMap3><AREA shape=RECT coords=1,4,122,215 
+        href="/pdf/PACSWorkstation.pdf"></MAP><A 
+      href="./index.htm/map3"><IMG 
+      height=216 alt="PACSWorkstation.gif" isMap 
+      src="./PACSWorkstation.gif" 
+      width=123 useMap=#FrontPageMap3 border=0></A><!--webbot bot="ImageMap" endspan i-checksum="47607" --></P></TD>
+
+    <TD width="5%">
+      <P align=center></P></TD></TR>
+  <TR>
+    <TD align=middle width="5%"></TD>
+    <TD align=middle width="25%"><FONT color=#ff0000><STRONG>&nbsp; 
+      Mammography Digital Viewing Station</STRONG></FONT></TD>
+    <TD align=middle width="18%"><FONT color=#ff0000><STRONG>&nbsp; CC300 
+      CathCabinet</STRONG></FONT></TD>
+    <TD align=middle width="23%">
+      <P align=center><FONT color=#ff0000><STRONG> OR PACS 
+      Cart</STRONG></FONT></P></TD>
+    <TD align=middle width="24%">
+      <P align=center><FONT color=#ff0000><STRONG> PACS Workstation 
+      </STRONG></FONT></P></TD>
+    <TD align=middle width="5%">
+      <DL>
+        <DD> </DD></DL></TD></TR></TBODY></TABLE>
+<DIV align=center>
+<HR align=center>
+
+
+<P align=center><FONT color=#000080><B>S&amp;S X-Ray Products/S&amp;S RADX Product Literature (In 
+PDF format)</B></P>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=8 bgColor=#c0c0c0 border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <td>Catalog section:<br>
+  
+         <form NAME="f1" METHOD="POST" ACTION="../../../../cgi-bin/redirect.cgi" onSubmit="return false;">
+          <select NAME="m1" ID="m1" CLASS="saveHistory" onChange="relate(this.form,0,this.selectedIndex)">
+            <option VALUE="/pdf/mv.pdf">Motorized Viewers
+            <option VALUE="/pdf/mmv.pdf">Mammography Motorized Viewers
+            <option VALUE="/pdf/mammo.pdf">Mammography Illuminators
+	    <option VALUE="/pdf/sscatb1_2.pdf">Digital Viewing Stations
+            <option VALUE="/pdf/OR PACS_Nov04.PDF">OR PACS Cart - PACS Workstation - 
+	    <option VALUE="/pdf/illum.pdf">14 x 17 Illuminators
+            <option VALUE="/pdf/188cb3.pdf">Bright Spot Illuminators
+            <option VALUE="/pdf/sscatb26.pdf">Industrial Illuminators
+            <option VALUE="/pdf/sscatc1_7.pdf">Cassette Holders
+            <option VALUE="/pdf/sscatc8.pdf">Grids/Calipers
+            <option VALUE="/pdf/carts.pdf">Carts
+            <option VALUE="/pdf/sscatd2.pdf">Contrast Cabinets
+            <option VALUE="/pdf/sscatd5_6.pdf">Catheter Cabinets
+            <option VALUE="/pdf/sscate.pdf">File Cabinets and Supplies
+            <option VALUE="/pdf/sscatf.pdf">Radiation Protection
+            <option VALUE="/pdf/sscatg.pdf">Darkroom Equipment
+            <option VALUE="/pdf/sscatd4.pdf">Storage Chests
+          </select><input TYPE="SUBMIT" VALUE="Go" onClick="jmp(this.form,0);">
+        </form>
+      <!--mstheme--></font></td>
+      <td BGCOLOR="#c0c0c0" VALIGN="MIDDLE"><!--mstheme--><font face="Arial, Arial, Helvetica"><b>---&gt;</b><!--mstheme--></font></td>
+      <td><!--mstheme--><font face="Arial, Arial, Helvetica">Model:<br>
+        <form NAME="f2" METHOD="POST" ACTION="../../../../cgi-bin/redirect.cgi" onSubmit="return false;">
+          <select NAME="m2" ID="m2" CLASS="saveHistory" onChange="jmp(this.form,0)">
+	    <option VALUE="/pdf/CrystalViewer_Nov04.PDF">CrystalViewer for Mammography
+            <option VALUE="/pdf/DS018 - VistaViewer.pdf"> VistaViewer for Mammography
+            <option VALUE="/pdf/DS019 - MammoWorkstation.pdf"> Mammography Workstation
+	    <option VALUE="/pdf/MDVS_JAN05_FINAL.PDF"> Mammography Digital Viewing Station
+            <option VALUE="/pdf/MS880 data sheet.pdf">RADX Mammography MS880  
+            <option VALUE="/pdf/MS824 data sheet.pdf">RADX Mammography MS824
+            <option VALUE="/pdf/DS017 - VersaViewer DS 01-02.pdf">VersaViewer Crossformat
+            <option VALUE="/pdf/FlexiViewer_Nov04.PDF">FlexiViewer Crossformat       
+            <option VALUE="/pdf/RADXCAT8.pdf">RADX MV4000A
+            <option VALUE="/pdf/RADXCAT9.pdf">RADX MV3200A
+            <option VALUE="/pdf/RADXCAT10.pdf">RADX MV3000A
+            <option VALUE="/pdf/RADXCAT11.pdf">RADX MV200DT/MV200DVS
+            <option VALUE="/pdf/RADXCAT2_5.pdf">All RADX Mammography Viewers
+          </select> <input TYPE="SUBMIT" VALUE="Go" onClick="jmp(this.form,0);">
+          <input TYPE="hidden" NAME="baseurl" </form> 
+    </td>
+  </tr>
+</table>
+</center></div><div align="center">
+
+<HR align=center>
+
+
+
+
+<DL>
+  <TABLE height=1 cellSpacing=0 cellPadding=0 width="100%" border=0>
+    <TBODY>
+    <TR>
+      <TD vAlign=center align=left width="50%" height=116><!--webbot bot="ImageMap" rectangle="(3,2) (177, 27)  http://www.medcart.com" src="./medcart.gif" width="180" height="28" alt="medcart.gif (1982 bytes)" border="0" startspan --><MAP 
+        name=FrontPageMap3><AREA shape=RECT coords=3,2,177,27 
+          href="http://www.medcart.com/"></MAP><A 
+        href="./index.htm/map3"><IMG 
+        height=28 alt="medcart.gif (1982 bytes)" isMap 
+        src="./medcart.gif" 
+        width=180 useMap=#FrontPageMap3 border=0></A><!--webbot bot="ImageMap" endspan i-checksum="54212" -->
+        <DL>
+          <DT><SMALL><FONT face=Arial color=#000080>S&amp;S MedCart products 
+          maximize convenience and security for the following hospital 
+          applications: unit-dose dispensing medication carts, point-of-care 
+          carts, anesthesia carts, latex-free carts, isolation carts, emergency 
+          carts, mobile computing carts, wall charts, wall desks, and nurse 
+          servers.&nbsp; </FONT></SMALL></DT></DL></TD>
+      <TD vAlign=center align=middle width="50%" height=116><!--webbot bot="ImageMap" rectangle="(6,4) (220, 213)  http://www.medcart.com" src="./sidekick.jpg" width="137" height="218" alt="sidekick.jpg (22903 bytes)" border="0" startspan --><MAP 
+        name=FrontPageMap4><AREA shape=RECT coords=6,4,220,213 
+          href="http://www.medcart.com/"></MAP><A 
+        href="./index.htm/map4"><IMG 
+        height=218 alt="sidekick.jpg (22903 bytes)" isMap 
+        src="./sidekick.jpg" 
+        width=137 useMap=#FrontPageMap4 border=0></A><!--webbot bot="ImageMap" endspan i-checksum="29489" --></TD></TR>
+    <TR>
+      <TD vAlign=top align=left width="100%" colSpan=2 height=21>
+        <HR>
+      </TD></TR>
+    <TR>
+      <TD vAlign=top align=left width="50%" height=93>
+        <DL>
+          <DT><!--webbot bot="ImageMap" rectangle="(5,5) (301, 41)  http://www.parscientific.com" src="./ParScientific.gif" width="305" height="44" alt="ParScientific.gif (8046 bytes)" border="0" startspan --><MAP 
+          name=FrontPageMap5><AREA shape=RECT coords=5,5,301,41 
+            href="http://www.parscientific.com/"></MAP><A 
+          href="./index.htm/map5"><IMG 
+          height=44 alt="ParScientific.gif (8046 bytes)" isMap 
+          src="./ParScientific.gif" 
+          width=305 useMap=#FrontPageMap5 border=0></A><!--webbot bot="ImageMap" endspan i-checksum="2854" --> 
+          <DT><SMALL><FONT face=Arial color=#000080>Manufacturer of block 
+          cutters, compensator filters and patient immobilization products for 
+          Radiation Therapy.</FONT></SMALL> </DT></DL></TD>
+      <TD vAlign=center align=middle width="50%" height=93><FONT face=Arial 
+        color=#000080><!--webbot bot="ImageMap" rectangle="(10,7) (174, 177)  http://www.parscientific.com" src="./ParScientific-product.gif" alt="ParScientific-product.gif (23555 bytes)" border="0" startspan --><MAP 
+        name=FrontPageMap6><AREA shape=RECT coords=10,7,174,177 
+          href="http://www.parscientific.com/"></MAP><A 
+        href="./index.htm/map6"><IMG 
+        height=180 alt="ParScientific-product.gif (23555 bytes)" isMap 
+        src="./ParScientific-product.gif" 
+        width=180 useMap=#FrontPageMap6 border=0></A><!--webbot bot="ImageMap" endspan i-checksum="55735" --></FONT></TD></TR>
+    <TR>
+      <TD vAlign=top align=left width="100%" colSpan=2 height=21>
+        <HR>
+      </TD></TR>
+    
+      <TD vAlign=top align=left width="100%" colSpan=2 height=21>
+        <HR>
+      </TD></TR>
+    <TR>
+      
+    
+      <TD vAlign=top align=left width="100%" colSpan=2 height=21>
+        <HR>
+      </TD></TR></TBODY></TABLE>
+
+<DT><CENTER><A href="http://www.ssxray.com/pdf/ISO_certificates.PDF"><FONT face=Arial color=#000080><BIG>S&S X-Ray Products is ISO certified to ISO 13485:2003 and ISO 9001:2008
+</BIG></FONT></A></CENTER>
+<P>
+</P>
+
+  <DT><FONT color=#000080><STRONG><BIG>
+Contact Us:</BIG></STRONG></FONT> 
+  <DD> 
+  <DT><FONT color=#000080><STRONG>S&amp;S Technology</STRONG> 
+  <DT>10625 Telge Road, Houston, TX 77095 
+  <DT>Phone: 800-231-1747  Phone: 281-815-1300  Fax: 281-815-1494
+  <DT><A href="http://www.ss-technology.com/"> www.ss-technology.com 
+  <DT><P ALIGN="CENTER"><IMG SRC="em.jpg" WIDTH=237 HEIGHT=16></P> 
+  <DD> </DD></DL>
+<DIV align=left>
+<DT> </DT></DIV>
+<DIV align=left>
+<DT><SMALL><SMALL><FONT face=Arial>� 2012 - S&amp;S 
+Technology</FONT></SMALL></SMALL> </DT></DIV>
+<DL>
+  <DIV align=left>
+  <DT><SMALL><SMALL><FONT face=Arial>Last revised 07/09/2012</FONT></SMALL></SMALL> 
+  </DT></DIV>
+  <DT> </DT></DL></DIV></DIV></BODY></HTML>
+
+
+
+

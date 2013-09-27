@@ -1,0 +1,752 @@
+<base href="http://www.dops.dk/">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>DOPS - Danish Optical Society</TITLE>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="DC.Format" scheme="MIME">
+<META name="verify-v1" content="CX/hRiXmT49Pzx8Wh4tsGPTVOAethrYuxWv0JQFZiik=" />
+
+
+<link rel="alternate" type="application/rss+xml" title="Seneste nyheder" href="http://dops.dk/rss.xml">
+<link REL="shortcut icon" type="image/x-icon" HREF="favicon.ico">
+<link REL="stylesheet" href="/css/style.css">
+
+<script type="text/javascript">
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("cont").getElementsByTagName("DIV");
+		if(el.style.display == "none"){
+			for (var i=0; i<ar.length; i++){
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+
+function SwitchMenuSearch(obj, obj2){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var el2 = document.getElementById(obj2);
+	var ar = document.getElementById("cont").getElementsByTagName("DIV");
+		if(el.style.display == "none"){
+			if(el2.style.display == "block") {
+				el2.style.display = "none";
+			}
+			for (var i=0; i<ar.length; i++){
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+
+
+function ChangeClass(menu, newClass) { 
+	 if (document.getElementById) { 
+	 	document.getElementById(menu).className = newClass;
+	 } 
+}
+
+
+
+function popupPage(url)
+   {
+     var windowprops = "location=no,scrollbars=no,menubars=no,toolbars=no,resizable=no" +
+       ",left=" + 0 + ",top=" + 0 + ",width=" + 500 + ",height=" + 400;
+
+     popup = window.open(url,"preview",windowprops);
+   }
+</SCRIPT>
+</HEAD>
+<BODY>
+
+
+<!-- Working area -->
+<!-- 
+<center>
+
+<script type="text/javascript">
+-->
+<!-- Always as comment -->
+<!--
+google_ad_client = "pub-6465584269718403";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+//2007-09-02: top_text
+google_ad_channel = "4568364673";
+google_color_border = "EEEEEE";
+google_color_bg = "EEEEEE";
+google_color_link = "666666";
+google_color_text = "000000";
+google_color_url = "F2984C";
+google_ui_features = "rc:10";
+-->
+<!-- 
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</center>
+-->
+<br>
+
+<TABLE align="center" class="workarea">
+<COL WIDTH="15"><COL WIDTH="125"><COL WIDTH="6"><COL WIDTH="239"><COL WIDTH="239"><COL WIDTH="6"><COL WIDTH="125"><COL WIDTH="15">
+
+ <tr>
+  <td class="top_left_corner">
+	<!-- top left corner -->
+  </td>
+  <td class="top" colspan="6">
+	<!--
+	rest of left menu bar / 
+	left sidebar column / 
+	First half of variant contents (defines the width for DOPS logo!) / 
+	Second half of variant contents (defines the width for commercial banner!) / 
+	right sidebar column / 
+	rest of rigth menu bar 
+	-->
+  </td>
+  <td class="top_right_corner">
+	<!-- top right corner -->
+  </td>
+ </tr>
+
+<!-- Dops logo and commercial banner -->
+
+ <tr>
+  <td class="side_left_1">
+	<!-- left side -->
+  </td>
+  <td colspan="6" align="center">
+	<table width="100%">
+	<tr>
+	<td>
+	<a href="/" name="#top">	
+	<img src="/pictures/dops_logo/headline.png" alt="Danish Optical Society" border="0">
+	</a>
+	</td>
+	<td align="right">
+	<a href="http://www.jeos.org">
+	<img src="/pictures/banner/jeos_banner.gif" alt="Our sponsors" border="0">
+	</a>
+	</td>
+	<td align="right">
+	<a href="/adds/">
+	<img src="/pictures/banner/commercial_banner_3.gif" alt="Our sponsors" border="0">
+	</a>
+	</td>
+	</tr>
+	</table>
+  </td>
+  <td class="side_right">
+	<!-- right side -->
+  </td>
+ </tr>
+ 
+  <tr>
+  <td class="side_left">
+	<!-- left side background -->
+  </td>
+  <td>
+  </td>
+  <td class="top_left_corner_content">
+	<!-- top left corner -->
+  </td>
+  <td class="top_content" colspan="2">
+	<!-- top -->
+  </td>
+  <td class="top_right_corner_content">
+	<!-- top right corner -->
+  </td>
+  <td>
+  </td>
+  <td class="side_right">
+	<!-- right side background -->
+  </td>
+ </tr>
+
+ <tr>
+  <td class="side_left">
+	<!-- left side -->
+  </td>
+  
+  <td id="menu_left" valign="top">
+
+	<!-- First part of left menu -->
+
+	<span>
+	<a href="/"><img src="/pictures/menu/home.gif" border="0" onmouseover="this.src='/pictures/menu/home_over.gif';" onmouseout="this.src='/pictures/menu/home.gif';" alt="Home"></a>
+	</span>
+
+	<div id="cont">
+	<span
+	id="menu1"
+	class="menuOut"
+	onclick="SwitchMenu('sub1')"
+	onmouseover="ChangeClass('menu1','menuOver')"
+	onmouseout="ChangeClass('menu1','menuOut')"
+	>
+	<img style="cursor:hand" src="/pictures/menu/about.gif" onmouseover="this.src='/pictures/menu/about_over.gif';" onmouseout="this.src='/pictures/menu/about.gif';" alt="About">
+	</span>
+		<span
+		class="submenu"
+		id="sub1"
+		style="display:none;"
+		>
+		&nbsp;&bull; <a href="/about/about.php">About DOPS</a><br>
+		&nbsp;&bull; <a href="/about/details.php">Details</a><br><br>
+		</span>
+	</div>
+
+	<div id="cont">
+	<span
+	id="menu2"
+	class="menuOut"
+	onclick="SwitchMenu('sub2')"
+	onmouseover="ChangeClass('menu2','menuOver')"
+	onmouseout="ChangeClass('menu2','menuOut')"
+	>
+	<img src="/pictures/menu/dops.gif" onmouseover="this.src='/pictures/menu/dops_over.gif';" onmouseout="this.src='/pictures/menu/dops.gif';" alt="Dops">
+	</span>
+		<span
+		class="submenu"
+		id="sub2"
+		style="display:none;"
+		>	
+		&nbsp;&bull; <a href="/dops/dops_award.php">DOPS Award</a><br>
+		&nbsp;&bull; <a href="/dd/dd.php">DOPS Directory</a><br>
+		&nbsp;&bull; <a href="/dops/executive_board.php">Executive Board</a><br>
+		&nbsp;&bull; <a href="/pictures/pdf/pricelist.pdf" target="_blank">Service Pricelist (28 KB)</a><br>
+		&nbsp;&bull; <a href="/dops/financial_support.php">Financial Support</a><br>
+		&nbsp;&bull; <a href="/dops/mailinglist.php">Mailinglist</a><br><br>
+		</span>
+	</div>
+
+	<div id="cont">
+	<span
+	id="menu3"
+	class="menuOut"
+	onclick="SwitchMenu('sub3')"
+	onmouseover="ChangeClass('menu3','menuOver')"
+	onmouseout="ChangeClass('menu3','menuOut')"
+	>
+	<img src="/pictures/menu/membership.gif" border="0" onmouseover="this.src='/pictures/menu/membership_over.gif';" onmouseout="this.src='/pictures/menu/membership.gif';" alt="Membership">
+	</span>
+		<span
+		class="submenu"
+		id="sub3"
+		style="display:none;"
+		>
+		&nbsp;&bull; <a href="/membership/membership_information.php">Why become a member?</a><br>
+		&nbsp;&bull; <a href="/membership/member_start.php">Apply for membership</a><br>
+		&nbsp;&bull; <a href="/membership/change_address.php">Change address</a><br><br>
+		</span>
+	</div>
+
+	<div id="cont">
+	<span
+	id="menu4"
+	class="menuOut"
+	onclick="SwitchMenu('sub4')"
+	onmouseover="ChangeClass('menu4','menuOver')"
+	onmouseout="ChangeClass('menu4','menuOut')"
+	>
+	<img src="/pictures/menu/dops_nyt.gif" onmouseover="this.src='/pictures/menu/dops_nyt_over.gif';" onmouseout="this.src='/pictures/menu/dops_nyt.gif';" alt="DOPS-NYT">
+	</span>
+		<span
+		class="submenu"
+		id="sub4"
+		style="display:none;"
+		>
+		&nbsp;&bull; <a href="/dops_nyt/dops_nyt.php">The Journal</a><br>
+		&nbsp;&bull; <a href="/dops_nyt/recent_issues.php">Recent Issues</a><br>
+		&nbsp;&bull; <a href="/dops_nyt/archive.php">Archive</a><br>
+		&nbsp;&bull; <a href="/dops_nyt/author_instructions.php?lang=2">Author Instructions</a><br>
+		&nbsp;&bull; <a href="/dops_nyt/reprint_info.php">Reprint Service</a><br>
+		&nbsp;&bull; <a href="/dops_nyt/advertisement.php">Advertisement</a><br><br>
+		</span>
+	</div>
+
+	<div id="cont">
+	<span
+	id="menu5"
+	class="menuOut"
+	onclick="SwitchMenu('sub5')"
+	onmouseover="ChangeClass('menu5','menuOver')"
+	onmouseout="ChangeClass('menu5','menuOut')"
+	>
+	<img src="/pictures/menu/optics.gif" onmouseover="this.src='/pictures/menu/optics_over.gif';" onmouseout="this.src='/pictures/menu/optics.gif';" alt="Optics">
+	</span>
+		<span
+		class="submenu"
+		id="sub5"
+		style="display:none;"
+		>
+		&nbsp;&bull; <a href="/news/all.php">News Archive</a><br>
+		&nbsp;&bull; <a href="/optics/calendar.php">Calendar</a><br>
+		&nbsp;&bull; <a href="/optics/jobs.php">Jobs</a><br>
+		&nbsp;&bull; <a href="/optics/history.php">History</a><br>
+		&nbsp;&bull; <a href="/optics/calendar_old.php">Previous Events</a><br><br>
+		</span>
+	</div>
+
+	<span><a href="/contact/contact.php">
+	<img src="/pictures/menu/contact.gif" border="0" onmouseover="this.src='/pictures/menu/contact_over.gif';" onmouseout="this.src='/pictures/menu/contact.gif';" alt="Contact"></a>
+	</span>
+
+	<div id="cont">
+	<span
+	id="menu6"
+	class="menuOut"
+	onclick="SwitchMenu('sub6')"
+	onmouseover="ChangeClass('menu6','menuOver')"
+	onmouseout="ChangeClass('menu6','menuOut')"
+	>
+	<img src="/pictures/menu/links.gif" onmouseover="this.src='/pictures/menu/links_over.gif';" onmouseout="this.src='/pictures/menu/links.gif';" border="0" alt="Links">
+	</span>
+		<span
+		class="submenu"
+		id="sub6"
+		style="display:none;"
+		>
+		&nbsp;&bull; <a href="/link/link_member.php">Members of DOPS</a><br>
+		&nbsp;&bull; <a href="/link/link_foreign.php">Foreign societies</a><br>
+		&nbsp;&bull; <a href="/link/link_other.php">Other links</a><br><br>
+		</span>
+	</div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/news/all.php?view=0'><img src='/pictures/candy/search_news.gif'></a>
+
+	<p>
+	<a href="/dd/dd.php">
+	<img src="/pictures/dd/dd_logo/dd_logo.png" onmouseover="this.src='/pictures/dd/dd_logo/dd_logo_over.png';" onmouseout="this.src='/pictures/dd/dd_logo/dd_logo.png';" border="0" alt="Dops Directory"></a>
+	</p>
+	<br>
+
+	<table class="search_table_style">
+	<COL WIDTH=6><COL WIDTH=91><COL WIDTH=6>
+		<tr>
+			<td class="top_left_corner_content">
+			<!-- top left corner -->
+			</td>
+			<td class="top_content">
+			<!-- top -->
+			</td>
+			<td class="top_right_corner_content">
+			<!-- top right corner -->
+			</td>
+		</tr>
+		<tr>
+			<td class="side_left_content"></td>
+		
+			<!-- Search Start -->
+			<td>
+			<form action="/search/search.php" method="post">
+			<b>Search in:</b><br>
+			<input type="text" name="search_text" class="search_textbox">
+			<input type="image" src="/pictures/candy/search_go.gif" value="Search" name="search"><br>
+			<label class="label_radio_search" for="news">News Archive</label>
+			<input type="radio" value="news" name="check" CHECKED><br>
+			<label class="label_radio_search" for="dd">DOPS Directory</label>
+			<input type="radio" value="dd" name="check">
+			</form>
+			</td>
+			<!-- Search End -->
+		
+			<td class="side_right_content"></td>
+		</tr>
+		<tr>
+			<td class="bottom_left_corner_content">
+			<!-- top left corner -->
+			</td>
+			<td class="bottom_content">
+			<!-- top -->
+			</td>
+			<td class="bottom_right_corner_content">
+			<!-- top right corner -->
+  			</td>
+		</tr>
+	</table>
+
+  </td>
+
+  <td class="side_left_content" rowspan="2">
+  <!-- left side of contents ::: HINT ::: rowspan="the number of rows in left/right menu" -->
+  </td>
+
+  <td rowspan="2" colspan="2" id="content" valign="top">
+  <!-- contents ::: HINT ::: rowspan="the number of rows in left/right menu" -->
+
+
+	
+
+<table width='460'>
+        	<tr>
+        		<td valign='top' align="center" width="130" class="pics" rowspan="2"> <font color="red">Thu 04-07-2013</font> <a href="http://www.o-netcom.com/en/newsDetail48.html"><img src=/pictures/newsbox/opdi_2_news.gif title="Dansk touch-teknik klar til globalt marked"></a> </td>
+        		<td class="news_title_static">Dansk touch-teknik klar til globalt marked</td>
+        	</tr>
+        	<tr>
+        		<td class="news_text"> Det danske udviklingsfirma OPDI Technologies har indg�et i et Joint Venture med det kinesiske firma O-NetCommunication. Inden �rets udgang g�r en fabrik i Shenzhen i gang med at producere de danske komponenter, der vil kunne revolutionere brugen af touch-sk�rme p� en lang r�kke elektroniske hverdagsprodukter. Aftalen med kineserne blev skrevet under tirsdag den 4. juni. <br> <a href='/?id=640'>L�s mere her</a> </td>
+        	</tr>
+        	<tr>
+        		<td colspan="2"> <hr></td>
+        	</tr><table border='0' width='460'>
+	<tr>
+		<td valign='top' align="center" width="130" class="pics" rowspan="2"><A name="643"></a>Thu 01-08-2013 <a href="/pictures/pdf/fotonik_training_course_2013.pdf"><img src=/pictures/newsbox/fotonik_news.gif title="Training on optical modeling in lighting and illumination design using Zemax"></a> </td>
+		<td class="news_title">Training on optical modeling in lighting and illumination design using Zemax</td>
+	</tr>
+	<tr>
+		<td class="news_text"> The diode & LED system group in Fotonik is arranging private training on optical modeling in lighting and illumination design using Zemax. This is an open invitation notice for everyone interested to join the course.
+<br /><br /><strong>The course will take place from Tuesday August 13th to Friday August 16th 2013</strong>.
+<br /><br />
+<a href="/pictures/pdf/fotonik_training_course_2013.pdf">Course information details</a> (93 KB).
+<br /><br />
+Interested candidates can send an email to macha@fotonik.dtu.dk by 5th of August 2013. <br> <a href='/?id=643'></a> </td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr> </td>
+	</tr>
+
+	<tr>
+		<td valign='top' align="center" width="130" class="pics" rowspan="2"><A name="642"></a>Tue 16-07-2013 <a href="http://ing.dk/artikel/naturligt-klorofyl-goer-grafen-til-optisk-transistor-159747"><img src=/pictures/newsbox/ing_new_news.gif title="Naturligt klorofyl g�r grafen til optisk transistor"></a> </td>
+		<td class="news_title">Naturligt klorofyl g�r grafen til optisk transistor</td>
+	</tr>
+	<tr>
+		<td class="news_text"> Taiwanske forskere l�gger klorofyl oven p� grafen og flytter dermed en million elektroner for hver foton, der rammer overfladen. Resultatet kan l�gge grunden til supereffektive fotoelektriske komponenter baseret p� grafen.
+<br /><br />
+<a href="http://ing.dk/artikel/naturligt-klorofyl-goer-grafen-til-optisk-transistor-159747">L�s mere p� ing.dk</a> <br> <a href='/?id=642'></a> </td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr> </td>
+	</tr>
+
+	<tr>
+		<td valign='top' align="center" width="130" class="pics" rowspan="2"><A name="641"></a>Wed 10-07-2013 <a href="http://ing.dk/artikel/nu-kan-forskere-styre-en-optisk-transistor-med-kun-en-foton-160213"><img src=/pictures/newsbox/ing_new_news.gif title="Nu kan forskere styre en optisk transistor med kun �n foton"></a> </td>
+		<td class="news_title">Nu kan forskere styre en optisk transistor med kun �n foton</td>
+	</tr>
+	<tr>
+		<td class="news_text"> Principperne for langsomt og parkeret lys kan anvendes til at lave en ny form for optisk transistor, der l�nge har st�et p� forskernes �nskeliste.
+<br /><br />
+<a href="http://ing.dk/artikel/nu-kan-forskere-styre-en-optisk-transistor-med-kun-en-foton-160213">L�s mere p� ing.dk</a> <br> <a href='/?id=641'></a> </td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr> </td>
+	</tr>
+
+	<tr>
+		<td valign='top' align="center" width="130" class="pics" rowspan="2"><A name="639"></a>Tue 02-07-2013 <a href="http://ing.dk/artikel/et-lille-twist-af-lyset-mangedobler-kapaciteten-i-optisk-fiber-160157"><img src=/pictures/newsbox/ing_new_news.gif title="Et lille twist af lyset mangedobler kapaciteten i optisk fiber"></a> </td>
+		<td class="news_title">Et lille twist af lyset mangedobler kapaciteten i optisk fiber</td>
+	</tr>
+	<tr>
+		<td class="news_text"> Dansk producent har fremstillet en optisk fiber, der udnytter en hidtil overset mulighed til at �ge b�ndbredden for datatransmission.
+<br /><br />
+<a href="http://ing.dk/artikel/et-lille-twist-af-lyset-mangedobler-kapaciteten-i-optisk-fiber-160157">L�s mere p� ing.dk</a> <br> <a href='/?id=639'></a> </td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr> </td>
+	</tr>
+
+	<tr>
+		<td valign='top' align="center" width="130" class="pics" rowspan="2"><A name="638"></a>Thu 20-06-2013 <a href="/pictures/pdf/opticscamp13.pdf"><img src=/pictures/newsbox/dops_news.gif title="Optics Camp 2013"></a> </td>
+		<td class="news_title">Optics Camp 2013</td>
+	</tr>
+	<tr>
+		<td class="news_text"> Alle DOPS medlemmer er hermed inviteret til kursusdagen Optics Camp 2013 der handler om laserlys, LED og optisk kommunikation.
+<br /><br />
+<style="color:red">Det foreg�r p� DTU Fotonik mandag d. 8. juli 2013</style>.
+<br /><br />
+<a href="/pictures/pdf/opticscamp13.pdf">L�s programmet i denne pdf (234 KB)</a> <br> <a href='/?id=638'></a> </td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr> </td>
+	</tr>
+
+	<tr>
+		<td valign='top' align="center" width="130" class="pics" rowspan="2"><A name="637"></a>Thu 20-06-2013 <a href="http://www.bridle.eu/"><img src=/pictures/newsbox/dops_news.gif title="BRIDLE - Brilliant Industrial Diode Laser"></a> </td>
+		<td class="news_title">BRIDLE - Brilliant Industrial Diode Laser</td>
+	</tr>
+	<tr>
+		<td class="news_text"> The BRIDLE project brings together seven European industrial and academic partners who seek to harness the power and efficiency of diode lasers to develop an affordable direct diode laser source for industrial applications requiring the cutting and welding of sheet metal.
+<br /><br />
+The BRIDLE project seeks to deliver a technological breakthrough in cost effective, high-brilliance diode lasers for industrial applications. By employing advanced high-power diode laser technologies and beam combination architectures, dramatic improvements in performance, cost, manufacturability and future scalability will be achieved. During the project, these technologies will be integrated into a sequence of increasingly high-brilliance demonstrators, each targeting specific industrial applications, leading up to an affordable diode laser source with an output power of >2kW from a &#934;100&#956;m optical fibre and efficiency >40%, which will target industrial applications requiring the cutting and welding of sheet metal.
+<br /><br />
+<a href="http://www.bridle.eu/">Read more at bridle.eu</a> <br> <a href='/?id=637'></a> </td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr> </td>
+	</tr>
+
+	<tr>
+		<td valign='top' align="center" width="130" class="pics" rowspan="2"><A name="636"></a>Wed 29-05-2013 <a href="http://ing.dk/artikel/supermolekyle-skal-knuse-blodpropper-med-infraroedt-lys-159124"><img src=/pictures/newsbox/ing_new_news.gif title="Supermolekyle skal knuse blodpropper med infrar�dt lys"></a> </td>
+		<td class="news_title">Supermolekyle skal knuse blodpropper med infrar�dt lys</td>
+	</tr>
+	<tr>
+		<td class="news_text"> Danske forskere er med i et internationalt samarbejde, der skal udvikle en helt unik metode til at bek�mpe blodpropper med infrar�dt lys. Forskerne vil bruge nogle k�mpemolekyler, som kaldes dendrimerer.
+<br /><br />
+<a href="http://ing.dk/artikel/supermolekyle-skal-knuse-blodpropper-med-infraroedt-lys-159124">L�s mere p� ing.dk</a> <br> <a href='/?id=636'></a> </td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr> </td>
+	</tr>
+
+	<tr>
+		<td valign='top' align="center" width="130" class="pics" rowspan="2"><A name="635"></a>Tue 07-05-2013 <a href="http://jobbank.dtu.dk/job/365586/danmarks-tekniske/phd-scholarship-in-luminescence"><img src=/pictures/newsbox/dtu_news.gif title="PhD scholarship in Luminescence Spectroscopy"></a> </td>
+		<td class="news_title">PhD scholarship in Luminescence Spectroscopy</td>
+	</tr>
+	<tr>
+		<td class="news_text"> The Radiation Physics Programme at DTU Nutech, Technical University of Denmark (DTU), is seeking candidates for a PhD position in optically stimulated luminescence (OSL) spectroscopy and its applications in retrospective and forensic dosimetry. 
+<br /><br />
+<a href="http://jobbank.dtu.dk/job/365586/danmarks-tekniske/phd-scholarship-in-luminescence">L�s opslaget p� dtu.dk</a> <br> <a href='/?id=635'></a> </td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr> </td>
+	</tr>
+
+	<tr>
+		<td valign='top' align="center" width="130" class="pics" rowspan="2"><A name="634"></a>Tue 07-05-2013 <a href="http://ing.dk/artikel/laserscanner-maaler-ujaevnheder-i-vejen-med-100-kmh-158526"><img src=/pictures/newsbox/ing_new_news.gif title="Laserscanner m�ler uj�vnheder i vejen med 100 km/h"></a> </td>
+		<td class="news_title">Laserscanner m�ler uj�vnheder i vejen med 100 km/h</td>
+	</tr>
+	<tr>
+		<td class="news_text"> Det skal v�re billigere at vedligeholde veje med en nyudviklet scanner, som lynhurtigt kan kortl�gge huller med en n�jagtighed p� ned til 0,15 mm. <br> <a href='/?id=634'></a> </td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr> </td>
+	</tr>
+
+	<tr>
+		<td valign='top' align="center" width="130" class="pics" rowspan="2"><A name="633"></a>Sun 28-04-2013 <a href="/pictures/pdf/20130530_dops_foss.pdf"><img src=/pictures/newsbox/dops_news.gif title="Se FOSS nye Innovations Center"></a> </td>
+		<td class="news_title">Se FOSS nye Innovations Center</td>
+	</tr>
+	<tr>
+		<td class="news_text"> H�r om fotonik og multivariat matematik - et perfekt match til hurtig og p�lidelig analyse af f�devarekvalitet.
+<br /><br />
+Baseret p� kernekompetencer inden for fotonik og matematik udvikler FOSS dedikeret analyseudstyr til rutinekontrol og overv�gning af kvalitet og processer i prim�rt agrikultur og f�devareforsyningsk�den.
+<br /><br />
+Arrangementet foreg�r <strong>torsdag den 30. maj kl. 16:00-18:00 i Hiller�d</strong>. Arrangementet er for DOPS medlemmer samt for IDA-medlemmer, medlemmer af IEEE Denmark section og studerende. Der vil blive serveret en let anretning efter foredraget.
+<br /><br /><strong>Tilmelding kan ske ved at skrive til <a href="http://dops.dk/dops/executive_board.php">Lars Lindvold</a>.</strong>
+<br /><br />
+<a href="/pictures/pdf/20130530_dops_foss.pdf">L�s flyeren her</a> <br> <a href='/?id=633'></a> </td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr> </td>
+	</tr>
+</table><p align='center'><a href='/news/all.php?view=0'><img src='/pictures/candy/archive.gif'></a></p></td>
+
+  <td class="side_right_content" rowspan="2">
+  <!-- right side of contents ::: HINT ::: rowspan="the number of rows in left/right menu" -->
+  </td>
+
+  <td id="menu_right" valign="top">
+
+<!-- 
+	<a href="/"><img src="/pictures/menu/news.gif" border="0" onmouseover="this.src='/pictures/menu/news_over.gif';" onmouseout="this.src='/pictures/menu/news.gif';" alt="News"></a>
+	<br>
+	<div class="submenu">
+&bull;&nbsp;<a href='/?id=643'>Training on optical modeling in lighting and illumination design using Zemax</a><br>&bull;&nbsp;<a href='/?id=642'>Naturligt klorofyl g�r grafen til optisk transistor</a><br>&bull;&nbsp;<a href='/?id=641'>Nu kan forskere styre en optisk transistor med kun �n foton</a><br><br>
+	</div>
+
+ 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="/patentklumme"><img src="/pictures/candy/idea_icon.gif" border="0" alt="Patentklumme"></a>
+	<br />
+    -->
+	&nbsp;&nbsp;&nbsp;Mon 26-08-2013<br />
+
+    <!-- <a href="/forum/"><img src="/pictures/menu/forum.gif" border="0" onmouseover="this.src='/pictures/menu/forum_over.gif';" onmouseout="this.src='/pictures/menu/forum.gif';" alt="Forum"></a>
+    <br> -->
+
+    <!-- <a href="/patentklumme/"><img src="/pictures/menu/patent_blog.gif" border="0" onmouseover="this.src='/pictures/menu/patent_blog_over.gif';" onmouseout="this.src='/pictures/menu/patent_blog.gif';" alt="Patent Blog"></a>
+    <br> -->
+
+<!-- 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="/forum/"><img src="/pictures/menu/forum_icon.jpg" border="0" onmouseover="this.src='/pictures/menu/forum_icon_over.jpg';" onmouseout="this.src='/pictures/menu/forum_icon.jpg';" alt="Forum"></a>
+	<br> -->
+<!--
+	<a href="/news/submit_news.php"><img src="/pictures/menu/submit_news.gif" border="0" onmouseover="this.src='/pictures/menu/submit_news_over.gif';" onmouseout="this.src='/pictures/menu/submit_news.gif';" alt="Submit your own news!"></a>
+	<br>
+-->
+	<a href="/membership/member_start.php"><img src="/pictures/menu/become_member.gif" border="0" onmouseover="this.src='/pictures/menu/become_member_over.gif';" onmouseout="this.src='/pictures/menu/become_member.gif';" alt="Become a Member!"></a>
+	<br>
+
+	<a href="/dops/financial_support.php"><img src="/pictures/menu/financial_support.gif" border="0" onmouseover="this.src='/pictures/menu/financial_support_over.gif';" onmouseout="this.src='/pictures/menu/financial_support.gif';" alt="Financial Support"></a>
+	<br>
+
+	<a href="/dops/mailinglist.php"><img src="/pictures/menu/mailinglist.gif" border="0" onmouseover="this.src='/pictures/menu/mailinglist_over.gif';" onmouseout="this.src='/pictures/menu/mailinglist.gif';" alt="Join the Mailinglist!"></a>
+	<br>
+<!--
+	<a href="/membership/change_address.php"><img src="/pictures/menu/change_address.gif" border="0" onmouseover="this.src='/pictures/menu/change_address_over.gif';" onmouseout="this.src='/pictures/menu/change_address.gif';" alt="Change your address (Members Only!)"></a>
+	<hr>
+-->
+	<img src="/pictures/menu/poll_yellow.gif" border="0" alt="Quick Poll">
+	<br>
+	<div class="poll_text">
+
+<form method=post action='/poll/cast_vote.php'><b>Why do you visit dops.dk?</b><br><label for='stem' class='label_poll'>The news</label><input type='radio' name='stem' value=53 align='left'></input><br><label for='stem' class='label_poll'>DOPS Directory</label><input type='radio' name='stem' value=54 align='left'></input><br><label for='stem' class='label_poll'>Upcoming events</label><input type='radio' name='stem' value=55 align='left'></input><br><label for='stem' class='label_poll'>All of it</label><input type='radio' name='stem' value=56 align='left'></input><br><input type='hidden' name='poll' value='12'><input type='hidden' name='poll_number' value='12'><input type='hidden' name='poll_code' value='jasdflFSKJjhsdu3247324lSFDsdflLKSJD323rkj'><br><div align='center'><input type=submit name=send value=Stem></div></form><hr></div>
+
+<div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.dops.dk/rss.xml">
+<img border="0" alt="RSS!" title="RSS!" src="/pictures/candy/rss_icon_small.gif"></a>
+</div>
+
+
+<!-- 	<div align="center">
+	<a href="/pictures/pdf/ole_2006_04.pdf">
+	<img src="/pictures/candy/ole_2006_04.gif"  border="0" alt="Opto &amp; Laser Europe Magazine - August 2013"></a>
+	</div>
+	<div class="submenu" align="center">April 2006 (7.61 MB)</div>
+
+
+	<hr>
+ -->
+	<br>
+<!-- 
+<script type="text/javascript">
+ -->
+<!-- �lways as comment -->
+<!--
+google_ad_client = "pub-6465584269718403";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text_image";
+//2007-09-02: side_text
+google_ad_channel = "6932997508";
+google_color_border = "EEEEEE";
+google_color_bg = "EEEEEE";
+google_color_link = "666666";
+google_color_text = "000000";
+google_color_url = "F2984C";
+google_ui_features = "rc:0";
+-->
+<!-- 
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+ -->
+  </td>
+
+  <td class="side_right">
+	<!-- right side -->
+  </td>
+
+ </tr>
+
+	<!-- This sequence generates an extra row in left AND right menu. This can be performed as many times as necessary, 		but remember to change the appropriate ROWSPAN values as hintet above-->
+
+ <tr>
+  <td class="side_left">
+	<!-- left side -->
+  </td>
+  <td>
+	<!-- left menu 2 -->
+  </td>
+  <td>
+    <!-- right menu 2 -->
+  </td>
+  <td class="side_right">
+	<!-- right side -->
+  </td>
+ </tr>
+
+<!-- end -->
+
+ <tr>
+  <td class="side_left">
+	<!-- left side -->
+  </td>
+  <td>
+  <!-- background left -->
+  </td>
+  <td class="bottom_left_corner_content">
+	<!-- top left corner -->
+  </td>
+  <td class="bottom_content" colspan="2">
+	<!-- top -->
+  </td>
+  <td class="bottom_right_corner_content">
+	<!-- top right corner -->
+  </td>
+  <td>
+  <!-- background right -->
+  </td>
+  <td class="side_right">
+	<!-- right side -->
+  </td>
+ </tr>
+
+ <tr>
+  <td class="bottom_left_corner">
+  <!-- bottom corner left -->
+  </td>
+  <td class="bottom" colspan="6">
+  </td>
+  <td class="bottom_right_corner">
+  <!-- bottom corner right -->
+  </td>
+ </tr>
+
+</table>
+
+<div class="copyright">2006-2013 &copy; Design &amp; programming by <a href="http://www.dedic8.dk/">Dedic8 I/S</a>. All rights reserved.</div>
+
+<br>
+<!-- 
+<center>
+<script type="text/javascript">
+-->
+<!--
+google_ad_client = "pub-6465584269718403";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_cpa_choice = "CAEQ6Oq6-wMQpOu6-wMaCIhEvYMH2PywKPiAjaUCKPiAjaUC";
+google_ad_channel = "6226588598";
+-->
+<!--
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+ -->
+<div class="nodisplay">
+<img src="/pictures/menu/home_over.gif" alt='picture'><br>
+<img src="/pictures/menu/about_over.gif" alt='picture'><br>
+<img src="/pictures/menu/dops_over.gif" alt='picture'><br>
+<img src="/pictures/menu/membership_over.gif" alt='picture'><br>
+<img src="/pictures/menu/dops_nyt_over.gif" alt='picture'><br>
+<img src="/pictures/menu/optics_over.gif" alt='picture'><br>
+<img src="/pictures/menu/contact_over.gif" alt='picture'><br>
+<img src="/pictures/menu/links_over.gif" alt='picture'><br>
+<img src="/pictures/menu/search_over.gif" alt='picture'><br>
+
+<img src="/pictures/dd/dd_logo/dd_logo_over.png" alt='picture'><br>
+
+<img src="/pictures/menu/news_over.gif" alt='picture'><br>
+<img src="/pictures/menu/internal_news_over.gif" alt='picture'><br>
+<img src="/pictures/menu/forum_over.gif" alt='picture'><br>
+<img src="/pictures/menu/mailinglist_over.gif" alt='picture'><br>
+<img src="/pictures/menu/change_address_over.gif" alt='picture'> <br>
+<img src="/pictures/menu/poll_over.gif" alt='picture'>
+</div>
+
+<!-- TIL GOOGLE ANALYTICS -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-662115-1";
+urchinTracker();
+</script>
+</BODY>
+</HTML>

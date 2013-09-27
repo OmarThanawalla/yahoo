@@ -1,0 +1,997 @@
+<base href="http://www.sgm.ac.uk/">
+
+<!DOCTYPE html PUBLIC  "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> 
+<title>Society for General Microbiology</title>
+<meta name="ROBOTS" content="INDEX,FOLLOW">
+<meta name="revisit-after" content="1 day" />
+<meta name="generator" content="Preside CMS enterprise (www.presidecms.com) - Licensed to : Society for General Microbiology" />
+<meta name="description" content="The Society for General Microbiology (SGM) is a worldwide membership organisation for scientists who work in all areas of microbiology." />
+<meta name="keywords" content="" />
+<meta name="author" content="Seak Chiew" />
+<link rel="stylesheet" type="text/css" href="http://www.sgm.ac.uk/page_templates/css_style.css" />
+<link rel="stylesheet" media="print" href="/inc/css/print.css" type="text/css" />
+<link rel="stylesheet" media="screen,projection,tv" href="/inc/css/jquery/customselect.css" type="text/css" />
+<link rel="stylesheet" media="screen,projection,tv" href="/inc/css/layers.css" type="text/css" />
+<link rel="stylesheet" media="screen,projection,tv" href="/inc/css/frontpage.css" type="text/css" />
+<link rel="stylesheet" media="screen,projection,tv" href="/inc/css/ao-latest-feed.css" type="text/css" />
+<link rel="stylesheet" media="screen,projection,tv" href="/inc/css/theme_layers.css" type="text/css" />
+<script type="text/javascript" src="/inc/js/jquery/core.js"></script>
+<script type="text/javascript" src="/inc/js/jquery/ui.js"></script>
+<script type="text/javascript" src="/inc/js/jquery/cycle.all.js"></script>
+<script type="text/javascript" src="/inc/js/jquery/cookie.js"></script>
+<script type="text/javascript" src="/inc/js/jquery-pixl8/font.js"></script>
+<script type="text/javascript" src="/inc/js/jquery-pixl8/onload.js"></script>
+<script type="text/javascript" src="/inc/js/jquery-pixl8/cufon.js"></script>
+<script type="text/javascript" src="/inc/js/jquery-pixl8/Gill_Sans_MT_400.font.js"></script>
+<script type="text/javascript" src="/inc/js/jquery-pixl8/custom-select-list.js"></script>
+<script type="text/javascript" src="/inc/js/jquery-pixl8/messagebox.js"></script>
+<script type="text/javascript">
+$(function(){
+//lf: script for audience panel hover image
+$(".list-item-audience")
+.mouseover(function() { 
+var hoverimage = $(this).find('img').attr("rel");
+var normalimage = $(this).find('img').attr("src");
+$(this).find('img').attr("rel", normalimage);
+$(this).find('img').attr("src", hoverimage);
+})
+.mouseout(function() {
+var normalimage = $(this).find('img').attr("rel");
+var hoverimage = $(this).find('img').attr("src");
+$(this).find('img').attr("src", normalimage);
+$(this).find('img').attr("rel", hoverimage);
+});
+});
+</script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-36305724-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</head>
+<body>
+<div id="layer-page">
+<div id="layer-pagewrapper">
+<div class="layer-accessibility">
+<ul>
+<li><a href="http://www.sgm.ac.uk/index.cfm#layer-body">Skip to the content</a></li>
+<li><a href="http://www.sgm.ac.uk/index.cfm#layer-menu-main">Skip to the menu</a></li>
+<li><a href="http://www.sgm.ac.uk/index.cfm#layer-search">Skip to the search</a></li>
+</ul>
+</div>
+<div id="layer-header" class="clearfix">
+<a href="http://www.sgm.ac.uk/" class="link-home-page">
+<div id="layer-logo">
+<h1>Society for General Microbiology</h1>
+</div>
+</a>
+</div>
+<div id="layer-body-bg"></div>
+<div id="layer-body-wrapper">
+<div id="layer-body">
+<div id="layer-frontpage" class="layer-standard clearfix">
+<!--pageBody-->
+<script type="text/javascript">
+$(document).ready(function(){
+$('#layer-banner .panel-more').each(function(){
+$(this).css('height',$(this).height());
+$(this).hide();
+});
+$('.link-banner:not(.link-no-sum-text)').hover(function(){
+if($(this).find('.panel-more').length){
+$(this).find('.panel-more').stop(true,true).animate({height: "show"}, 500, "swing");
+}
+},function(){
+if($(this).find('.panel-more').length){
+$(this).find('.panel-more').stop(true,true).animate({height: "hide"}, 300, "swing");
+}
+});
+$('#layer-banner').hover(function(){
+$('.layer-controller').stop(true,true).fadeIn(500);
+},function(){
+$('.layer-controller').stop(true,true).fadeOut(500);
+});
+$slideshow = {  
+context: false,  
+tabs: false,  
+timeout: 4000,     // time before next slide appears (in ms)  
+speed:2000,   // time it takes to slide in each slide (in ms)  
+tabSpeed: 1000,      // time it takes to slide in each slide (in ms) when clicking through tabs  
+fx: 'scrollHorz',   // the slide effect to use  
+init: function() {  
+// set tabs to current hard coded navigation items  
+this.tabs = $('ol.listing-banner-pagination li');  
+// remove hard coded navigation items from DOM  
+// because they aren't hooked up to jQuery cycle  
+this.tabs.remove();  
+// prepare slideshow and jQuery cycle tabs  
+this.prepareSlideshow();  
+},  
+prepareSlideshow: function() {  
+// initialise the jquery cycle plugin -  
+// for information on the options set below go to:  
+// http://malsup.com/jquery/cycle/options.html  
+$("#layer-banner ul").cycle({  
+fx: $slideshow.fx,  
+timeout: $slideshow.timeout,  
+speed: $slideshow.slideSpeed,  
+fastOnEvent: $slideshow.tabSpeed,  
+pager: $("ol.listing-banner-pagination"),  
+pagerAnchorBuilder: $slideshow.prepareTabs,  
+before: $slideshow.activateTab,  
+pauseOnPagerHover: true,  
+pause: true,
+next:   '#layer-banner  .layer-arrow-next a', 
+prev:   '#layer-banner  .layer-arrow-previous a' 
+});  
+},  
+prepareTabs: function(i, slide) {  
+// return markup from hardcoded tabs for use as jQuery cycle tabs  
+// (attaches necessary jQuery cycle events to tabs)  
+return $slideshow.tabs.eq(i);  
+}
+};  
+$(function() {  
+// initialise the slideshow when the DOM is ready  
+$slideshow.init();  
+}); 
+});
+</script>    
+<div id="layer-banner" class="clearfix"> 
+<div class="layer-arrow-previous layer-controller"><a href="#previous"></a></div>
+<div class="layer-arrow-next layer-controller"><a href="#next"></a></div>
+<div class="layer-pagination-wrapper">
+<ol class="listing-banner-pagination">
+<li><a>1</a></li>
+<li><a>2</a></li>
+<li><a>3</a></li>
+<li><a>4</a></li>
+</ol>
+</div>                 
+<ul class="banner-campaign-listing">
+<li class="clearfix">
+<div class="layer-column-4 ">
+<a class="link-banner link-border clearfix   style-margin-bottom-10px" href="http://www.sgm.ac.uk/en/events/conferences/index.cfm/autumn-2013-conference" title="Autumn Conference 2013" style="border-color:#89BDCD">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Autumn Conference 2013</h3>
+<p class="panel-more">This year, the Society for General Microbiology's Autumn Conference will take place at the University of Sussex, located near the seaside town of Brighton.</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/54DE9D79F7A4533FCC6DAFD10B0981CA.jpg" alt="Autumn Conference 2013" >
+</a>
+<a class="link-banner link-border clearfix   " href="http://www.sgm.ac.uk/en/policy/briefings.cfm/publication/measles" title="Measles briefing" style="border-color:#51CFB8">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Measles briefing</h3>
+<p class="panel-more">The UK now has good levels of childhood vaccine uptake. However, keeping vaccination rates high is a continual task. Read our latest briefing document.
+</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/506A2CC3B4A51235792501C003C51C0E.jpg" alt="Measles briefing" >
+</a>
+</div>
+<div class="layer-column-4 style-margin-left-20px">
+<a class="link-banner link-border clearfix   style-margin-bottom-10px" href="http://www.sgm.ac.uk/en/events/other-microbiology-meetings/index.cfm" title="Other microbiology meetings" style="border-color:#89BDCD">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Other microbiology meetings</h3>
+<p class="panel-more">Check out the full listing of national and international microbiology meetings coming up.</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/8D6B30CA74195E2B1DBAA826F3CFFC4D.jpg" alt="Other microbiology meetings" >
+</a>
+<a class="link-banner link-border clearfix   " href="http://www.surveymonkey.com/s/TJJR2YB" title="Membership survey" style="border-color:#dbb728">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Membership survey</h3>
+<p class="panel-more">This is your chance to shape the future of the Society for General Microbiology. Let us know what you think.</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/6EEA607BD31E49D6324490FED69BC5A9.jpg" alt="Membership survey" >
+</a>
+</div>
+</li>                        
+<li class="clearfix">
+<div class="layer-column-3 ">
+<a class="link-banner link-border clearfix " href="http://sgm.us5.list-manage.com/subscribe?u=58ac9d79206e254d766dbf291&id=37008a8e41" title="Sign up to our monthly e-newsletter" style="border-color:#A3B08B">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Sign up to our monthly e-newsletter</h3>
+<p class="panel-more">For all the latest Society news!</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/7051C0098BAD54C9554C5C229282DF6A.jpg" alt="Sign up to our monthly e-newsletter" >
+</a>
+</div>
+<div class="layer-column-3 style-margin-left-19px">
+<a class="link-banner link-border clearfix " href="http://www.sgm.ac.uk/en/education/microbiology-online.cfm" title="Microbiology online" style="border-color:#a79988">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Microbiology online</h3>
+<p class="panel-more">Visit our dedicated educational website which features all the resources currently available from the Society.</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/13FC55A7A09090F4D762B68FF1ED21B0.jpg" alt="Microbiology online" >
+</a>
+</div>
+<div class="layer-column-3 style-margin-left-19px">
+<a class="link-banner link-border clearfix " href="http://www.sgm.ac.uk/en/membership/index.cfm" title="Join us!" style="border-color:#E6982C">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Join us!</h3>
+<p class="panel-more">Become a member and enjoy a whole host of benefits and opportunities.</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/C92F944DFA6B25470912852FF1D0D60A.jpg" alt="Join us!" >
+</a>
+</div>
+</li>
+<li class="clearfix">
+<div class="layer-column-4 ">
+<a class="link-banner link-border clearfix   style-margin-bottom-10px" href="http://www.sgm.ac.uk/en/outreach/index.cfm" title="Get involved with microbiology outreach" style="border-color:#dbb728">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Get involved with microbiology outreach</h3>
+<p class="panel-more">From science fairs to flower shows, there are lots of opportunities for members to participate in outreach events and engage with the public.</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/0366552B55C08B7597D8B38505075993.jpg" alt="Get involved with microbiology outreach" >
+</a>
+<a class="link-banner link-border clearfix   " href="http://www.sgm.ac.uk/en/publications/journals/index.cfm" title="Publishing journals of international repute" style="border-color:#acb3d5">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Publishing journals of international repute</h3>
+<p class="panel-more">Looking for a home for your research paper or review article? Want to keep abreast of the latest developments in the field of microbiology research? Why not consider one of our wide reaching journals?</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/9D6DA6CCA7095BE653311FE90987459E.jpg" alt="Publishing journals of international repute" >
+</a>
+</div>
+<div class="layer-column-4 style-margin-left-20px">
+<a class="link-banner link-border clearfix   style-margin-bottom-10px" href="http://www.sgm.ac.uk/en/grants-prizes/index.cfm" title="Are you eligible for a grant?" style="border-color:#E4ADC2">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Are you eligible for a grant?</h3>
+<p class="panel-more">Check out our Grants & Awards to see if you are entitled to funding.</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/8539CEC2F690C8DF45A207BFAFF113E9.jpg" alt="Are you eligible for a grant?" >
+</a>
+<a class="link-banner link-border clearfix   " href="http://www.themedcalls.nihr.ac.uk/amr/home?src=amrC177_6" title="NIHR funding opportunities" style="border-color:#E4ADC2">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>NIHR funding opportunities</h3>
+<p class="panel-more">NIHR Themed Call: preventing the development and spread of antimicrobial resistance.</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/8D1D41782CFB22F35B2012DDFF61925F.jpg" alt="NIHR funding opportunities" >
+</a>
+</div>
+</li>                        
+<li class="clearfix">
+<div class="layer-column-1 layer-twin">
+<a class="link-banner link-border clearfix " href="http://www.sgm.ac.uk/en/education/resources/index.cfm" title="Educational resources" style="border-color:#a79988">
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>Educational resources</h3>
+<p class="panel-more">Explore our educational resources, free to members, including <i>Marvellous Microbes</i>, a series of comics illustrating the key facts about microbes.</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/82E349A208571C287E4955C6A816A259.jpg" alt="Educational resources" >
+</a>
+</div>
+<div class="layer-column-2 clearfix  layer-twin">
+<a class="link-banner link-border clearfix " href="http://www.sgm.ac.uk/en/utilities/about-sgm/index.cfm" title="What is microbiology?" >
+<div class="layer-caption-wrapper">
+<div class="layer-caption">
+<h3>What is microbiology?</h3>
+<p class="panel-more">Find out more about microbiology, the Society and its work.</p>
+</div>
+</div>
+<img class="image-banner" border="0" src="/objects_store/homepage_banner/thumbnail/2C9A929049CAA37F19CFB97C80070172.jpg" alt="What is microbiology?" >
+</a>
+</div>
+</li>
+</ul>
+</div>        
+<div class="layer-bottom clearfix"> 
+<div class="layer-left">
+<div class="layer-standard-container">
+<h4>Welcome to the Society for General Microbiology</h4>
+<p>The Society for General Microbiology is a membership organisation  for scientists who work in all areas of microbiology. It is the largest  learned microbiological society in Europe with a worldwide membership  based in universities, industry, hospitals, research institutes and  schools.</p>
+<p><a href="http://www.sgm.ac.uk/en/utilities/about-sgm/index.cfm">More about SGM</a> <span class="style-grey-divider">|</span> <a href="http://www.sgm.ac.uk/en/utilities/about-sgm/our-history.cfm">The History of SGM</a></p>
+<div style="display:none">&nbsp;<!-- Start of Brightcove Player --><script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script></div>
+<p><object class="BrightcoveExperience" id="myExperience">
+<p>&nbsp;</p>
+<br />
+<p>&nbsp;
+<param value="#FFFFFF" name="bgcolor" /></p>
+<br />
+<p>&nbsp;
+<param value="425" name="width" /></p>
+<br />
+<p>&nbsp;
+<param value="215" name="height" /></p>
+<br />
+<p>&nbsp;
+<param value="2360103560001" name="playerID" /></p>
+<br />
+<p>&nbsp;
+<param value="AQ~~,AAABzzHyMXE~,LV6rpSDKvQdeg7fUz9iSh8obnH5xYpaY" name="playerKey" /></p>
+<br />
+<p>&nbsp;
+<param value="true" name="isVid" /></p>
+<br />
+<p>&nbsp;
+<param value="true" name="isUI" /></p>
+<br />
+<p>&nbsp;
+<param value="true" name="dynamicStreaming" /></p>
+<br />
+<p>&nbsp;</p>
+<br />
+<p>&nbsp;</p>
+</object><!--</p>
+<br />
+<p>This script tag will cause the Brightcove Players defined above it to be created as soon</p>
+<br />
+<p>as the line is read by the browser. If you wish to have the player instantiated only after</p>
+<br />
+<p>the rest of the HTML is processed and the page load is complete, remove the line.</p>
+<br />
+<p>--><script type="text/javascript">brightcove.createExperiences();</script><!-- End of Brightcove Player --></p>
+</div>
+<div class="layer-information clearfix">
+<div class="layer-heading-wrapper"><img src="/graphics/sgm/txt-information-for.png" alt="Information for" /></div>
+<ul class="clearfix">
+<li  class="list-item-audience">
+<a href="http://www.sgm.ac.uk/en/education/">
+<img src="/objects_store/1.png" rel="/objects_store/2.png">
+<span class="cufon">Educators</span>
+</a>
+</li>
+<li  class="list-item-audience">
+<a href="http://www.sgm.ac.uk/en/events/">
+<img src="/objects_store/3.png" rel="/objects_store/4.png">
+<span class="cufon">Members</span>
+</a>
+</li>
+<li  class="list-item-audience list-right">
+<a href="http://www.sgm.ac.uk/en/policy/">
+<img src="/objects_store/5.png" rel="/objects_store/6.png">
+<span class="cufon">Policy makers</span>
+</a>
+</li>
+<li  class="list-item-audience">
+<a href="http://www.sgm.ac.uk/en/media_centre/">
+<img src="/objects_store/7.png" rel="/objects_store/8.png">
+<span class="cufon">Journalists</span>
+</a>
+</li>
+<li  class="list-item-audience">
+<a href="http://www.sgm.ac.uk/en/outreach/">
+<img src="/objects_store/9.png" rel="/objects_store/10.png">
+<span class="cufon">The public</span>
+</a>
+</li>
+<li  class="list-item-audience list-right">
+<a href="http://www.sgm.ac.uk/en/grants-prizes/">
+<img src="/objects_store/11.png" rel="/objects_store/12.png">
+<span class="cufon">Students & Professionals</span>
+</a>
+</li>
+</ul>
+</div>  
+<div class="layer-social-media">
+<div class="layer-heading-wrapper"><img alt="Information for" src="/graphics/sgm/txt-follow-us.png" /></div>
+<ul class="clearfix">
+<li >
+<a href="http://twitter.com/SocGenMicro" target="_blank">
+<img src="/objects_store/ico-twitter-home.png">
+<span class="cufon">Twitter</span>
+</a>
+</li>
+<li >
+<a href="http://www.facebook.com/pages/Society-for-General-Microbiology/188529991077" target="_blank">
+<img src="/objects_store/ico-facebook-home.png">
+<span class="cufon">Facebook</span>
+</a>
+</li>
+<li class="list-right">
+<a href="http://www.youtube.com/user/SocGenMicrobiology" target="_blank">
+<img src="/objects_store/ico-youtube-home.png">
+<span class="cufon">YouTube</span>
+</a>
+</li>
+<li >
+<a href="http://microbepost.org/" target="_blank">
+<img src="/objects_store/ico-blog-home.png">
+<span class="cufon">Blog</span>
+</a>
+</li>
+<li >
+<a href="http://www.linkedin.com/groups?gid=4304288&trk=myg_ugrp_ovr" target="_blank">
+<img src="/objects_store/ico-linkedin-home.png">
+<span class="cufon">Linkedln</span>
+</a>
+</li>
+<li class="list-right">
+<a href="http://sgm.us5.list-manage.com/subscribe?u=58ac9d79206e254d766dbf291&id=37008a8e41" target="_blank">
+<img src="/objects_store/enews.jpg">
+<span class="cufon">Newsletter</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="layer-right style-margin-left-20px">
+<div class="layer-standard-container">
+<h4 style="text-align: left;"><a href="http://www.sgm.ac.uk/en/membership/join-the-society/index.cfm"><img alt="Join the society" width="198" height="27" src="http://www.sgm.ac.uk/filemanager/root/site_assets/images/banner_buttons/Jointhesociety.gif"
+alt="Join the society"/></a></h4>
+<h4 style="text-align: left;"><a href="http://www.sgm.ac.uk/en/membership/online-renewal.cfm"><img alt="Renew membership" width="198" height="27" src="http://www.sgm.ac.uk/filemanager/root/site_assets/images/banner_buttons/Renew-membership_1373641861865_1.gif"
+alt="Renew membership"/></a></h4>
+<h4><i style="line-height: 18px; color: rgb(80, 80, 80); font-size: 13px;"><span style="font-size:13.5pt;
+font-family:Arial;mso-fareast-font-family:" times="" new=""><a href="http://www.sgm.ac.uk/en/utilities/about-sgm/index.cfm">What is microbiology?</a></span></i></h4>
+<!--[if gte mso 9]><xml>
+<o:DocumentProperties>
+<o:Revision>0</o:Revision>
+<o:TotalTime>0</o:TotalTime>
+<o:Pages>1</o:Pages>
+<o:Words>60</o:Words>
+<o:Characters>346</o:Characters>
+<o:Company>SGM</o:Company>
+<o:Lines>2</o:Lines>
+<o:Paragraphs>1</o:Paragraphs>
+<o:CharactersWithSpaces>405</o:CharactersWithSpaces>
+<o:Version>14.0</o:Version>
+</o:DocumentProperties>
+<o:OfficeDocumentSettings>
+<o:AllowPNG />
+</o:OfficeDocumentSettings>
+</xml><![endif]-->  <!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:TrackMoves />
+<w:TrackFormatting />
+<w:PunctuationKerning />
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF />
+<w:LidThemeOther>EN-GB</w:LidThemeOther>
+<w:LidThemeAsian>JA</w:LidThemeAsian>
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:SplitPgBreakAndParaMark />
+<w:EnableOpenTypeKerning />
+<w:DontFlipMirrorIndents />
+<w:OverrideTableStyleHps />
+<w:UseFELayout />
+</w:Compatibility>
+<m:mathPr>
+<m:mathFont m:val="Cambria Math" />
+<m:brkBin m:val="before" />
+<m:brkBinSub m:val="&#45;-" />
+<m:smallFrac m:val="off" />
+<m:dispDef />
+<m:lMargin m:val="0" />
+<m:rMargin m:val="0" />
+<m:defJc m:val="centerGroup" />
+<m:wrapIndent m:val="1440" />
+<m:intLim m:val="subSup" />
+<m:naryLim m:val="undOvr" />
+</m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="276">
+<w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" />
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" />
+<w:LsdException Locked="false" Priority="39" Name="toc 1" />
+<w:LsdException Locked="false" Priority="39" Name="toc 2" />
+<w:LsdException Locked="false" Priority="39" Name="toc 3" />
+<w:LsdException Locked="false" Priority="39" Name="toc 4" />
+<w:LsdException Locked="false" Priority="39" Name="toc 5" />
+<w:LsdException Locked="false" Priority="39" Name="toc 6" />
+<w:LsdException Locked="false" Priority="39" Name="toc 7" />
+<w:LsdException Locked="false" Priority="39" Name="toc 8" />
+<w:LsdException Locked="false" Priority="39" Name="toc 9" />
+<w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" />
+<w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" />
+<w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" />
+<w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" />
+<w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" />
+<w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" />
+<w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" />
+<w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" />
+<w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" />
+<w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" />
+<w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" />
+<w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" />
+<w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" />
+<w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" />
+<w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" />
+<w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" />
+<w:LsdException Locked="false" Priority="37" Name="Bibliography" />
+<w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" />
+</w:LatentStyles>
+</xml><![endif]-->  <!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:"Table Normal";
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:12.0pt;
+font-family:Cambria;
+mso-ascii-font-family:Cambria;
+mso-ascii-theme-font:minor-latin;
+mso-hansi-font-family:Cambria;
+mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]-->    <!--StartFragment-->
+<p class="MsoNormal" style="margin-bottom:14.4pt;line-height:13.5pt"><span style="font-size: 10pt; font-family: Arial;">Microbiology is the study of all living organisms that are too small to be visible with the naked eye. This includes bacteria, archaea, viruses, fungi, protozoa and algae, collectively known as 'microbes'.<o:p></o:p></span></p>
+<!--EndFragment-->
+</div>
+<div class="layer-knowledge-centre">
+<p><a href="http://www.surveymonkey.com/s/TJJR2YB" target="_blank"><img alt="SGM Membership Survey" width="220" height="200" src="http://www.sgm.ac.uk/filemanager/root/site_assets/images/homepage/homepage_survey1.jpg"
+alt="SGM Membership Survey"/></a></p>
+<div class="layer-content-wrapper">
+<h4><a target="_blank" href="http://www.surveymonkey.com/s/TJJR2YB">Membership survey</a></h4>
+<p>This is your chance to shape the future of the Society for General Microbiology. Let us know what you think.</p>
+</div>
+</div>
+</div>
+<div class="layer-right style-margin-left-20px">
+<div class="layer-standard-container">
+<div>
+<div class="layer-ao layer-ao-latest-feed">
+<div class="clearfix">
+<h4 class="heading-ao">What's New</h4>
+<a href="http://www.sgm.ac.uk/index.cfm/latestfeedrss/1" class="link-rss" target="_blank"></a>
+</div>
+<ol class="listing-standard">
+<li class="clearfix list-first">
+<div class="layer-ao-description">
+<a class="link-feed-header" href="http://www.sgm.ac.uk/en/events/index.cfm/annual-conference-2014">Annual Conference 2014</a>
+</div>
+<p class="panel-date">14 April 2014</p>
+</li> 
+<li class="clearfix ">
+<div class="layer-ao-description">
+<a class="link-feed-header" href="http://www.sgm.ac.uk/en/events/index.cfm/autumn-2013-conference">Autumn 2013 Conference</a>
+</div>
+<p class="panel-date">2 September 2013</p>
+</li> 
+<li class="clearfix ">
+<div class="layer-ao-description">
+<p class="panel-twitter-label">RT <a href="http://twitter.com/bbcscitech" rel="nofollow" onclick="window.open(this.href); return false;">@bbcscitech</a>: Deadly virus found in tomb bat <a href="http://t.co/QBaXkrR9wf" onclick="window.open(this.href); return false;">http://t.co/QBaXkrR9wf</a></p>
+</div>
+<p class="panel-twitter">
+<a href="https://twitter.com/SocGenMicro" target="_blank" class="link-twitter">@SocGenMicro</a>
+</p>
+</li> 
+<li class="clearfix ">
+<div class="layer-ao-description">
+<p class="panel-twitter-label"><a href="http://twitter.com/laurencowley4" rel="nofollow" onclick="window.open(this.href); return false;">@laurencowley4</a> Afraid not this time, but it is definitely something we're investigating for the future. See you at the conference!</p>
+</div>
+<p class="panel-twitter">
+<a href="https://twitter.com/SocGenMicro" target="_blank" class="link-twitter">@SocGenMicro</a>
+</p>
+</li> 
+<li class="clearfix list-last">
+<div class="layer-ao-description">
+<a class="link-feed-header" href="http://www.sgm.ac.uk/en/media_centre/society-news.cfm/science-council-competition-to-highlight-top-100-scientists">Science Council competition to highlight top 100 scientists</a>
+</div>
+<p class="panel-date">1 August 2013</p>
+</li> 
+</ol>
+</div>
+</div>
+</div>
+</div>    
+</div>
+<!--pageBody-->    
+</div>
+<div class="clear"></div>
+</div>
+</div>    
+<div id="layer-menu-main">
+<div class="layer-menu-wrapper">
+<div id="layer-menu">
+<h3>Main Menu</h3>
+<ol class="clearfix"><li class="state-selected"><a class="" href="http://www.sgm.ac.uk/index.cfm">Home</a></li><li class=" looseblue"><a class="looseblue " href="http://www.sgm.ac.uk/en/events/index.cfm">Events</a><ol class="clearfix"><li class=""><a class="" href="http://www.sgm.ac.uk/en/events/conferences/index.cfm">Conferences</a></li><li><a class="" href="http://www.sgm.ac.uk/en/events/outreach.cfm">Education &amp; Outreach</a></li><li><a class="" href="http://www.sgm.ac.uk/en/events/policy.cfm">Policy</a></li><li><a class="" href="http://www.sgm.ac.uk/en/events/society-supported-conferences.cfm">Society-supported conferences</a></li><li class=""><a class="" href="http://www.sgm.ac.uk/en/events/other-microbiology-meetings/index.cfm">Other microbiology meetings</a><ol class="clearfix"><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/events/other-microbiology-meetings/submit-an-event.cfm">Submit an event</a></li></ol></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/events/event-listing/index.cfm">Full event listing</a><ol class="clearfix"><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/events/event-listing/submit-an-event.cfm">Submit an event</a></li></ol></li></ol></li><li class=" loosepurple"><a class="loosepurple " href="http://www.sgm.ac.uk/en/publications/index.cfm">Publications</a><ol class="clearfix"><li class=""><a class="" href="http://www.sgm.ac.uk/en/publications/journals/index.cfm">Journals</a><ol class="clearfix"><li><a class="" href="http://www.sgm.ac.uk/en/publications/journals/microbiology.cfm">Microbiology</a></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/journals/journal-of-general-virology.cfm">Journal of General Virology</a></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/journals/journal-of-medical-microbiology.cfm">Journal of Medical Microbiology</a></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/journals/international-journal-of-systematic-and-evolutionary-microbiology.cfm">International Journal of Systematic and Evolutionary Microbiology</a></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/journals/news.cfm">News</a></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/journals/pricing.cfm">Pricing</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/publications/journals/how-to-get-published.cfm">How to get published</a></li></ol></li><li class=""><a class="" href="http://www.sgm.ac.uk/en/publications/microbiology-today/index.cfm">Microbiology Today</a><ol class="clearfix"><li><a class="" href="http://www.sgm.ac.uk/en/publications/microbiology-today/current-issue.cfm">Current issue</a></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/microbiology-today/forthcoming-issues.cfm">Forthcoming Issues</a></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/microbiology-today/past-issues.cfm">Past issues</a></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/microbiology-today/editorial-contacts.cfm">Editorial contacts</a></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/microbiology-today/contribute.cfm">Contribute</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/publications/microbiology-today/advertising.cfm">Advertising</a></li></ol></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/policy-docs.cfm">Policy documents</a></li><li><a class="" href="http://www.sgm.ac.uk/en/publications/symposia.cfm">Symposia</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/publications/education-resources.cfm">Education resources</a></li></ol></li><li class=" loosecyan"><a class="loosecyan " href="http://www.sgm.ac.uk/en/policy/index.cfm">Policy</a><ol class="clearfix"><li><a class="" href="http://www.sgm.ac.uk/en/policy/about.cfm">About</a></li><li><a class="" href="http://www.sgm.ac.uk/en/policy/briefings.cfm">Briefings</a></li><li><a class="" href="http://www.sgm.ac.uk/en/policy/consultation-responses.cfm">Consultation responses</a></li><li><a class="" href="http://www.sgm.ac.uk/en/policy/position-statements.cfm">Position statements</a></li><li><a class="" href="http://www.sgm.ac.uk/en/policy/events.cfm">Events</a></li><li><a class="" href="http://www.sgm.ac.uk/en/policy/campaigns.cfm">Campaigns</a></li><li><a class="" href="http://www.sgm.ac.uk/en/policy/policy-education.cfm">Education</a></li><li><a class="" href="http://www.sgm.ac.uk/en/policy/interactions.cfm">Interactions</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/policy/opportunities.cfm">Opportunities</a></li></ol></li><li class=" loosebrown"><a class="loosebrown " href="http://www.sgm.ac.uk/en/education/index.cfm">Education</a><ol class="clearfix"><li><a class="" href="http://www.sgm.ac.uk/en/education/about.cfm">About</a></li><li><a class="" href="http://www.sgm.ac.uk/en/education/education-events.cfm">Events</a></li><li class=""><a class="" href="http://www.sgm.ac.uk/en/education/resources/index.cfm">Resources</a><ol class="clearfix"><li><a class="" href="http://www.sgm.ac.uk/en/education/resources/microbiology-online.cfm">Microbiology online</a></li><li><a class="" href="http://www.sgm.ac.uk/en/education/resources/microbiology-today.cfm">Microbiology Today</a></li><li><a class="" href="http://www.sgm.ac.uk/en/education/resources/careers.cfm">Careers</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/education/resources/other-resources.cfm">Other resources</a></li></ol></li><li><a class="" href="http://www.sgm.ac.uk/en/education/microbiology-online.cfm">Microbiology online</a></li><li><a class="" href="http://www.sgm.ac.uk/en/education/get-involved.cfm">Get involved</a></li><li><a class="" href="http://www.sgm.ac.uk/en/education/schools-membership.cfm">Membership</a></li><li><a class="" href="http://www.sgm.ac.uk/en/education/careers.cfm">Careers</a></li><li><a class="" href="http://www.sgm.ac.uk/en/education/grant-prizes.cfm">Grants &amp; Prizes</a></li><li><a class="" href="http://www.sgm.ac.uk/en/education/policy.cfm">Policy</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/education/collaborations.cfm">Collaborations</a></li></ol></li><li class=" yellow"><a class="yellow " href="http://www.sgm.ac.uk/en/outreach/index.cfm">Outreach</a><ol class="clearfix"><li><a class="" href="http://www.sgm.ac.uk/en/outreach/outreach-about.cfm">About</a></li><li><a class="" href="http://www.sgm.ac.uk/en/outreach/outreach-events.cfm">Events</a></li><li><a class="" href="http://www.sgm.ac.uk/en/outreach/outreach-resources.cfm">Resources</a></li><li><a class="" href="http://www.sgm.ac.uk/en/outreach/outreach-get-involved.cfm">Get involved</a></li><li><a class="" href="http://www.sgm.ac.uk/en/outreach/outreach-grants-prizes.cfm">Grants &amp; Prizes</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/outreach/outreach-collaborations.cfm">Collaborations</a></li></ol></li><li class=" loosegreen"><a class="loosegreen " href="http://www.sgm.ac.uk/en/media_centre/index.cfm">Media Centre</a><ol class="clearfix"><li><a class="" href="http://www.sgm.ac.uk/en/media_centre/society-news.cfm">Society news</a></li><li><a class="" href="http://www.sgm.ac.uk/en/media_centre/press-room.cfm">Press room</a></li><li><a class="" href="http://www.sgm.ac.uk/en/media_centre/press-releases.cfm">Press releases</a></li><li><a class="" href="http://www.sgm.ac.uk/en/media_centre/media-training-and-briefing.cfm">Media training and briefing</a></li><li><a class="" href="http://www.sgm.ac.uk/en/media_centre/working-with-the-media.cfm">Working with the media</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/media_centre/newsletter.cfm">Newsletter</a></li></ol></li><li class=" loosepink"><a class="loosepink " href="http://www.sgm.ac.uk/en/grants-prizes/index.cfm">Grants &amp; Prizes</a><ol class="clearfix"><li><a class="" href="http://www.sgm.ac.uk/en/grants-prizes/all-grants.cfm">All grants &amp; prizes</a></li><li><a class="" href="http://www.sgm.ac.uk/en/grants-prizes/sgm-conference-funds.cfm">Conferences</a></li><li><a class="" href="http://www.sgm.ac.uk/en/grants-prizes/meetings-speakers.cfm">Meetings &amp; speakers</a></li><li><a class="" href="http://www.sgm.ac.uk/en/grants-prizes/research-funds.cfm">Research</a></li><li><a class="" href="http://www.sgm.ac.uk/en/grants-prizes/education-funds.cfm">Education</a></li><li><a class="" href="http://www.sgm.ac.uk/en/grants-prizes/outreach-funds.cfm">Outreach</a></li><li><a class="" href="http://www.sgm.ac.uk/en/grants-prizes/international-funds.cfm">International</a></li><li><a class="" href="http://www.sgm.ac.uk/en/grants-prizes/careers-funds.cfm">Careers</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/grants-prizes/prize-lectures.cfm">Prize lectures</a></li></ol></li><li class="position-last brightorange"><a class="brightorange " href="http://www.sgm.ac.uk/en/membership/index.cfm">Membership</a><ol class="clearfix"><li><a class="" href="http://www.sgm.ac.uk/en/membership/benefits.cfm">Benefits</a></li><li class=""><a class="" href="http://www.sgm.ac.uk/en/membership/join-the-society/index.cfm">Join the Society</a><ol class="clearfix"><li><a class="" href="http://www.sgm.ac.uk/en/membership/join-the-society/ordinary-membership.cfm">Ordinary Membership</a></li><li><a class="" href="http://www.sgm.ac.uk/en/membership/join-the-society/associate-membership.cfm">Associate Membership</a></li><li><a class="" href="http://www.sgm.ac.uk/en/membership/join-the-society/international-membership.cfm">International Associate Membership</a></li><li><a class="" href="http://www.sgm.ac.uk/en/membership/join-the-society/undergraduate-membership.cfm">Undergraduate Membership</a></li><li><a class="" href="http://www.sgm.ac.uk/en/membership/join-the-society/school-corporate-membership.cfm">School Corporate Membership</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/membership/join-the-society/honorary-membership.cfm">Honorary Membership</a></li></ol></li><li><a class="" href="http://www.sgm.ac.uk/en/membership/membership-subs.cfm">Membership subscriptions</a></li><li><a class="" href="http://www.sgm.ac.uk/en/membership/journals.cfm">Journal subscriptions</a></li><li class="position-last"><a class="" href="http://www.sgm.ac.uk/en/membership/online-renewal.cfm">Online renewal</a></li></ol></li></ol>
+</div>
+</div>
+<div class="layer-menu-bg"></div>
+<div class="layer-submenu-bg"></div>
+</div>
+<div class="clear"></div>
+<div id="layer-footer" class="clearfix">
+<div id="wc-module-directory">
+<div class="directory-listing">
+<h3 class="heading-directory">Directory</h3>
+<div class="layer-entry-wrapper ">
+<h5>About us</h5>
+<ul>
+<li><a href="http://www.sgm.ac.uk/en/utilities/about-sgm/index.cfm">About the Society</a></li>
+<li><a href="http://www.sgm.ac.uk/en/utilities/about-sgm/our-history.cfm">Our history</a></li>
+<li><a href="http://www.sgm.ac.uk/en/utilities/about-sgm/vacancies.cfm">Vacancies</a></li>
+<li><a href="http://www.sgm.ac.uk/en/utilities/about-sgm/whos-who/index.cfm">Who's who</a></li>
+</ul>
+</div>
+<div class="layer-entry-wrapper ">
+<h5>Contact us</h5>
+<ul>
+<li><a href="http://www.sgm.ac.uk/en/utilities/about-sgm/contact-us.cfm">Contact SGM</a></li>
+</ul>
+</div>
+<div class="layer-entry-wrapper layer-entry-right">
+<h5>Search</h5>
+<ul>
+<li><a href="http://www.sgm.ac.uk/en/utilities/knowledge-centre.cfm">Knowledge Centre search results</a></li>
+</ul>
+</div>
+</div>            
+<div class="layer-social-media">
+<h3 class="heading-directory">Connect with us</h3>
+<ol>
+<li>
+<a href="http://twitter.com/SocGenMicro" class="clearfix" title="Follow us on Twitter"><img src="/objects_store/icon-twitter.gif"><span>Follow us on Twitter</span></a>
+</li>							
+<li>
+<a href="http://www.facebook.com/pages/Society-for-General-Microbiology/188529991077" class="clearfix" title="Like our Facebook page"><img src="/objects_store/icon-facebook.gif"><span>Like our Facebook page</span></a>
+</li>							
+<li>
+<a href="http://www.youtube.com/user/SocGenMicrobiology" class="clearfix" title="View our videos on YouTube"><img src="/objects_store/icon-youtube.gif"><span>View our videos on YouTube</span></a>
+</li>							
+<li>
+<a href="http://microbepost.org/" class="clearfix" title="Read our blog"><img src="/objects_store/icon-blog.gif"><span>Read our blog</span></a>
+</li>							
+<li>
+<a href="http://www.linkedin.com/groups?gid=4304288&trk=myg_ugrp_ovr" class="clearfix" title="Join us on LinkedIn"><img src="/objects_store/icon-linkedin.gif"><span>Join us on LinkedIn</span></a>
+</li>							
+<li>
+<a href="http://sgm.us5.list-manage.com/subscribe?u=58ac9d79206e254d766dbf291&id=37008a8e41" class="clearfix" title="Sign-up to our newsletter"><img src="/objects_store/enews_small.jpg"><span>Sign-up to our newsletter</span></a>
+</li>							
+</ol>
+</div>
+<div class="layer-contact-info">
+<p><br />
+&nbsp;</p>
+</div>
+</div>
+<div class="clear"></div>
+<div class="layer-footer-link-wrapper">
+<ul class="listing-footer-link">
+<li class="list-first">
+<a href="http://www.sgm.ac.uk/en/utilities/disclaimer.cfm">Disclaimer</a>
+</li>
+<li class="">
+<a href="http://www.sgm.ac.uk/en/utilities/privacy-policy.cfm">Privacy Policy</a>
+</li>
+<li class="">
+<a href="http://www.sgm.ac.uk/en/utilities/cookies.cfm">Cookies</a>
+</li>
+<li class="list-last">
+<a href="http://www.sgm.ac.uk/en/utilities/accessibility.cfm">Accessibility</a>
+</li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="layer-top-toolbar-wrapper">
+<div class="layer-top-toolbar">
+<ul class="clearfix">
+<li ><a href="http://www.sgm.ac.uk/en/membership/join-the-society/index.cfm">Join</a></li>
+<li >
+<a href="https://secure.sgm.ac.uk/membersarea/login/login.asp?type=EXTRANET">Login</a>
+</li>
+<li ><a href="http://www.sgm.ac.uk/en/utilities/about-sgm/index.cfm">About us</a></li>
+<li class="position-last"><a href="http://www.sgm.ac.uk/en/utilities/sitemap.cfm">Sitemap</a></li>
+<li class="position-last list-text-resize clearfix">
+<a href="#13px" class="link-resize text-smallest">A</a> <a href="#15px" class="link-resize text-medium">A</a> <a href="#17px" class="link-resize text-largest">A</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="layer-site-search-wrapper">
+<div class="layer-site-search">
+<form class="form-standard form-site-search" action="http://www.sgm.ac.uk/en/utilities/knowledge-centre.cfm">
+<fieldset>
+<legend>Search Form</legend>
+<ul class="clearfix">
+<li>
+<label for="form-query">Search</label>
+<input id="form-query" name="keyword" type="text" class="text input-text placeholder" placeholder="Search Site" />
+<input name="search_type" type="hidden" value="web" />
+</li>
+<li><input type="submit" class="input-search-submit input-button style-margin-left-10px" value="Search" /></li>
+</ul>
+</fieldset>
+</form>
+</div>
+</div>
+<div id="layer-footer-content">
+<div class="layer-copyright">	
+<p>
+Copyright &copy; 2012 SGM, Registered as Charity in England and Wales 264017. A Charity registered in Scotland  SC039250. Company Limited by Guarantee. Registered in England 1039582.
+</p>
+</div>
+<div class="layer-copyright">   
+<p><a href="http://www.pixl8.co.uk/what-we-do/design.htm">Website design</a> and <a href="http://www.pixl8.co.uk/what-we-do/development.htm">web development</a> by <a href="http://www.pixl8.co.uk"><img src="/graphics/logo-pixl8-min.gif" alt="Preside"/> Pixl8</a></p>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div id="layer-overlay"></div>
+<div id="layer-message">
+<div class="layer-alert">
+<h3 class="heading-title cufon">test</h3>
+<p class="panel-description"></p>
+<p class="panel-center">
+<input type="button" class="input-button style-center" value="Close" name="submit" id="input-close">
+</p>
+</div>
+</div> 
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+	
+

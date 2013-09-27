@@ -1,0 +1,435 @@
+<base href="http://www.ktf-split.hr/periodni/en/calc4chem.html">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en-us">
+<head>
+<title>Scientific calculator for chemists @ periodni.com</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta name="description" content="Calc4Chem is a JavaScript scientific calculator for chemists. This calculator can be used as common scientific calculator (sin, cos, log, power, root, memory), but it also includes a molecular weight calculator and the tables with various physical and chemical constants. The calculator contains a list with task history, storing all the recent inputs and results. Scientific calculator displays the numbers rounded to a user-specified number of decimal places.">
+<meta name="keywords" content="javascript, scientific, calculator, chemists, calc4chem, enig, mathematic, chemistry, molecular, weight, physical, constants, memory, decimals, sine, cosine, tangent, power, root, logarithm, percent, factorial, memory, round, numbers, free, program">
+<meta name="url" content="http://www.periodni.com">
+<meta name="author" content="Eni Generalic, Faculty of Chemistry and Technology, Split, Croatia">
+<meta name="reply-to" content="enig@periodni.com">
+<meta name="copyright" content="Copyright &copy; 2013 Eni Generalic, All Rights Reserved">
+<link rel="shortcut icon" href="http://www.periodni.com/slike/pse.ico">
+<script type="text/javascript" src="http://www.periodni.com/css/calc4chem.js"></script>
+<link media="all" href="http://www.periodni.com/css/enig.css" type="text/css" rel="stylesheet">
+<link media="all" href="http://www.periodni.com/css/calc4chem.css" type="text/css" rel="stylesheet">
+<link media="all" href="http://www.periodni.com/css/ddmenu.css" type="text/css" rel="stylesheet">
+<link media="print" href="http://www.periodni.com/css/print_pse.css" type="text/css" rel="stylesheet">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1925923-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+
+<body onLoad="start()">
+
+<div id="glavni">
+
+<div id="gore">
+<div class="logo">
+ <a href="http://www.periodni.com"><img src="http://www.periodni.com/slike/pse.png" width="75" height="74" title="EniG. Periodic Table of the Elements, Calculators, and Printable Materials" alt="www.periodni.com"></a>
+<!--  <div class="txt-logo"><a href="http://www.periodni.com">PTE</a></div> -->
+ <div class="pse-logo">www.periodni.com</div>
+</div>   <!-- END DIV - logo -->
+
+</div>   <!-- END DIV - gore -->
+
+
+<div id="dole">
+
+<!-- START PSE Menu -->
+<ul id="mmenu">
+<li><a href="http://www.periodni.com/index.html">Periodic table</a>
+   <ul>
+   <li><a href="http://www.periodni.com/periodic_table_of_the_elements.html">Short form of the periodic table</a></li>
+   <li><a href="http://www.periodni.com/long_form_of_the_periodic_table.html">The long form of the periodic table</a></li>
+   <li><a href="http://www.periodni.com/elements_names_sorted_alphabetically.html">Alphabetical list of chemical elements</a><hr></li>
+   <li><a href="http://ascii.periodni.com/index.html">ASCII Periodic table</a></li>
+   </ul>
+</li>
+<li><a href="http://www.periodni.com/scientific_calculator.html">Online Calculators</a>
+   <ul>
+   <li><a href="http://www.periodni.com/scientific_calculator.html">Scientific calculator for chemists</a></li>
+   <li><a href="http://www.periodni.com/preparation_of_solutions.php">Preparation of solutions</a></li>
+   <li><a href="http://www.periodni.com/angle_converter.html">Angle converter</a></li>
+   <li><a href="http://www.periodni.com/roman_numerals_converter.html">Roman numerals converter</a></li>
+   <li><a href="http://www.periodni.com/number_systems_converter.html">Number systems converter</a><hr></li>
+   <li><a href="http://www.periodni.com/memory_game.html">Memory game</a></li>
+   <li><a href="http://www.periodni.com/find_the_pairs.html">Find the pairs</a></li>
+   </ul>
+</li>
+<li><a href="http://www.periodni.com/articles_and_tables.html">Articles and tables</a>
+   <ul>
+   <li><a href="http://www.periodni.com/rare_earth_elements.html">History of rare earth elements</a></li>
+
+   <li><a href="http://www.periodni.com/fundamental_physical_constants.html">Fundamental physical constants</a></li>
+   <li><a href="http://www.periodni.com/solubility_product_constants.html">Solubility product constants</a></li>
+   <li><a href="http://www.periodni.com/electronic_configuration_of_the_elements.html">Electronic configurations of the elements</a></li>
+   <li><a href="http://www.periodni.com/international_system_of_units.html">SI - The International system of units</a><hr></li>
+   <li><a href="http://www.periodni.com/hexadecimal_color_codes.html">Hexadecimal color codes</a></li>
+   <li><a href="http://www.periodni.com/mathematical_and_chemical_equations_on_web.html">Writing equations on the Web</a></li>
+   <li><a href="http://www.periodni.com/character_entity_references_in_html.html">Character entity references in HTML</a></li>
+   <li><a href="http://www.periodni.com/unicode_utf-8_encoding.html">Unicode UTF-8 encoding</a></li>
+   </ul>
+</li>
+<li><a href="http://www.periodni.com/software.html">Download</a>
+   <ul>
+   <li><a href="http://www.periodni.com/download.html">Download printable materials</a></li>
+   <li><a href="http://www.periodni.com/software.html">Free software for Windows</a></li>
+   <li><a href="http://www.periodni.com/gallery/images.php">Chemistry images gallery</a></li>
+   </ul>
+</li>
+<li><a href="http://glossary.periodni.com/dictionary.php">Chemistry dictionary</a>
+   <ul>
+   <li><a href="http://glossary.periodni.com/dictionary.php">English-Croatian chemistry dictionary and glossary</a></li>
+   </ul>
+</li>
+</ul>
+
+<div class="sl">
+<a title="Deutsch" href="http://www.periodni.com/de/wissenschaftlicher_taschenrechner.html"><img title="Deutsch" src="http://www.periodni.com/slike/s_de.jpg" width="20" height="10" alt="de"></a>
+<a title="English" href="http://www.periodni.com/scientific_calculator.html" class="aktiv"><img title="English" src="http://www.periodni.com/slike/s_en.jpg" width="20" height="10" alt="en"></a>
+<a title="Fran&#231;ais" href="http://www.periodni.com/fr/calculatrice_scientifique.html"><img title="Fran&#231;ais" src="http://www.periodni.com/slike/s_fr.jpg" width="20" height="10" alt="fr"></a>
+<a title="Hrvatski" href="http://www.periodni.com/hr/znanstveni_kalkulator.html"><img title="Hrvatski" src="http://www.periodni.com/slike/s_hr.jpg" width="20" height="10" alt="hr"></a>
+<a title="Italiano" href="http://www.periodni.com/it/calcolatore_scientifico.html"><img title="Italiano" src="http://www.periodni.com/slike/s_it.jpg" width="20" height="10" alt="it"></a>
+<a title="Espa&#241;ol" href="http://www.periodni.com/es/calculadora_cientifica.html"><img title="Espa&#241;ol" src="http://www.periodni.com/slike/s_es.jpg" width="20" height="10" alt="es"></a>
+</div>
+<!-- END PSE Menu -->
+
+
+<div class="data">
+
+<div id="calc4chem">
+
+<form action="http://www.periodni.com" name="racunalo">
+<input type="hidden" name="oldrezultat" value="">
+<input type="hidden" name="memorija" value="Memory recall">
+
+<div id="kalkulator">
+
+<div class="displej">
+<input type="text" name="numauto" value="AUTO" id="numauto" onfocus="ascifix[0].click()">
+<input type="text" name="numsci" value="SCI" id="numsci" onfocus="ascifix[1].click()">
+<input type="text" name="numfix" value="FIX" id="numfix" onfocus="ascifix[2].click()">
+<input type="text" name="nummem" value="MEM" id="nummem" onfocus="MS.click()">
+<input type="text" name="numrad" value="RAD" id="numrad" onfocus="stupnjevi[0].click()">
+<input type="text" name="numdeg" value="DEG" id="numdeg" onfocus="stupnjevi[1].click()">
+<input type="text" name="numgrad" value="GRAD" id="numgrad" onfocus="stupnjevi[2].click()">
+
+<input type="text" name="upit" value="Problem" onClick="this.select()" class="upit">
+<input type="text" name="rezultat" value="Solution" onClick="this.select()" class="rezultat">
+</div>
+
+<div class="zadatak">
+<input type="text" name="zadatak" value="" onKeyDown="if (event.keyCode==13) {enter.click()}" class="unos">
+</div>
+
+<input type="button" name="cls" value="Cls" title="Clear" onClick="memory(3)" class="cls">
+<div class="tipkovnica">
+
+<input type="button" name="sqrt" value="&#8730;&#175;" title="Square root" onClick="izracunaj(3)" class="b11">
+<input type="button" name="root" value="y&#8730;&#175;x" title="Root" onClick="izracunaj(22)" class="b12">
+<input type="button" name="ln" value="ln" title="Natural logarithm" onClick="izracunaj(5)" class="b13">
+<input type="button" name="log" value="log" title="Common logarithm" onClick="izracunaj(8)" class="b14">
+<input type="button" name="tan" value="tan" title="Tangent" onClick="izracunaj(14)" class="b15">
+<input type="button" name="atan" value="atan" title="Arc tangent" onClick="izracunaj(10)" class="b16">
+
+<input type="button" name="kvadrat" value="x&#178;" title="Square" onClick="izracunaj(2)" class="b21">
+<input type="button" name="potencija" value="x^y" title="Power" onClick="izracunaj(21)" class="b22">
+<input type="button" name="aln" value="e^x" title="Natural antilogarithm" onClick="izracunaj(6)" class="b23">
+<input type="button" name="alog" value="10^x" title="Common antilogarithm" onClick="izracunaj(9)" class="b24">
+<input type="button" name="cos" value="cos" title="Cosine" onClick="izracunaj(15)" class="b25">
+<input type="button" name="acos" value="acos" title="Arc cosine" onClick="izracunaj(11)" class="b26">
+
+<input type="button" name="sign" value="+/-" title="Sign change" onClick="izracunaj(4)" class="b31">
+<input type="button" name="1/x" value="1/x" title="Reciprocal" onClick="izracunaj(7)" class="b32">
+<input type="button" name="fact" value="x!" title="Factorial" onClick="izracunaj(20)" class="b33">
+<input type="button" name="postotak" value="%" title="Percent" onClick="izracunaj(17)" class="b34">
+<input type="button" name="sin" value="sin" title="Sine" onClick="izracunaj(16)" class="b35">
+<input type="button" name="asin" value="asin" title="Arc sine" onClick="izracunaj(12)" class="b36">
+
+<input type="button" name="7" value="7" title="Seven" onClick="dodajBroj(7)" class="b41">
+<input type="button" name="8" value="8" title="Eight" onClick="dodajBroj(8)" class="b42">
+<input type="button" name="9" value="9" title="Nine" onClick="dodajBroj(9)" class="b43">
+<input type="button" name="djeljeno" value="&#247;" title="Division" onClick="dodajBroj('/')" class="b44">
+<input type="button" name="MS" value="MS" title="Memory store" onClick="memory(1)" class="b45">
+<input type="button" name="MR" value="MR" title="Memory recall" onClick="memory(2)" class="b46">
+
+<input type="button" name="4" value="4" title="Four" onClick="dodajBroj(4)" class="b51">
+<input type="button" name="5" value="5" title="Five" onClick="dodajBroj(5)" class="b52">
+<input type="button" name="6" value="6" title="Six" onClick="dodajBroj(6)" class="b53">
+<input type="button" name="puta" value="&#215;" title="Multiplication" onClick="dodajBroj('*')" class="b54">
+<input type="button" name="con" value="Constants" title="Physical Constants" onClick="vidi('konstante'); return false;" class="b55">
+
+<input type="button" name="1" value="1" title="One" onClick="dodajBroj(1)" class="b61">
+<input type="button" name="2" value="2" title="Two" onClick="dodajBroj(2)" class="b62">
+<input type="button" name="3" value="3" title="Three" onClick="dodajBroj(3)" class="b63">
+<input type="button" name="minus" value="-" title="Subtraction" onClick="dodajBroj('-')" class="b64">
+<input type="button" name="lijevo" value="(" title="Parentheses" onClick="dodajBroj('(')" class="b65">
+<input type="button" name="desno" value=")" title="Parentheses" onClick="dodajBroj(')')" class="b66">
+
+<input type="button" name="0" value="0" title="Zero" onClick="dodajBroj(0)" class="b71">
+<input type="button" name="." value="." title="Decimal point" onClick="dodajBroj('.')" class="b72">
+<input type="button" name="exp" value="exp" title="Exponent" onClick="dodajBroj('e')" class="b73">
+<input type="button" name="plus" value="+" title="Addition" onClick="dodajBroj('+')" class="b74">
+<input type="button" name="enter" value="=" title="Calculate" onClick="izracunaj(1)" class="b75">
+
+</div>   <!-- END  tipkovnica -->
+
+<div id="numformat">
+<p class="formatnaslov">Number formats</p>
+<div class="formatbr">
+
+<div class="automatik">
+<input type="radio" name="ascifix" checked title="Automatic" onClick="scifix(0)">
+<a href="javascript:document.racunalo.ascifix[0].click()" onMouseOver="self.status='Automatic'; return true">Auto</a>
+</div>
+<div class="scienc">
+<input type="radio" name="ascifix" title="Scientific notation" onClick="scifix(1)">
+<a href="javascript:document.racunalo.ascifix[1].click()" onMouseOver="self.status='Scientific notation'; return true">Sci</a>
+</div>
+<div class="fiksed">
+<input type="radio" name="ascifix" title="Fixed number of decimal places" onClick="scifix(2)">
+<a href="javascript:document.racunalo.ascifix[2].click()" onMouseOver="self.status='Fixed number of decimal places'; return true">Fix</a>
+</div>
+<div class="decnaslov">Decimals</div>
+<select name="izaZareza" SIZE="1" onChange="numformat(this.selectedIndex)" class="decimal">
+<option value="0"> 0 </option>
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+<option value="11"> 11 </option>
+<option value="12"> 12 </option>
+<option value="13"> ---- </option>
+<option value="14" selected> auto </option>
+</select>
+<div class="separator">
+<a href="javascript:seplk(1)" onMouseOver="self.status='1000 separator'; return true">1000 separator </a>
+<input type="checkbox" id="tisucice" onClick="seplk(0)">
+</div>
+</div>   <!-- END  formatbr -->
+
+<div class="rad">
+<input type="radio" name="stupnjevi" checked title="Radians" onClick="raddeg(0)">
+<span class="deg">
+<a href="javascript:document.racunalo.stupnjevi[0].click()" onMouseOver="self.status='Radians'; return true">Rad&nbsp;</a>
+</span>
+<input type="radio" name="stupnjevi" title="Degrees" onClick="raddeg(1)">
+<span class="deg">
+<a href="javascript:document.racunalo.stupnjevi[1].click()" onMouseOver="self.status='Degrees'; return true">Deg&nbsp;</a>
+</span>
+<input type="radio" name="stupnjevi" title="Grads" onClick="raddeg(2)">
+<span class="deg">
+<a href="javascript:document.racunalo.stupnjevi[2].click()" onMouseOver="self.status='Grads'; return true">Grad</a>
+</span>
+</div>
+<input type="button" name="close" value="Close" title="Close Form" onClick="memory(4)" class="n4">
+<div class="n2copy">Copyright &copy; 2010 by Eni Generalic</div>
+</div>   <!-- END  numformat -->
+
+</div>   <!-- END  racunalo -->
+
+<div id="biljeska">
+
+<textarea name="notes" class="tekstarea">
+
+       www.periodni.com
+
+</textarea>
+
+<input type="button" name="mode" value="Mode" title="Number formats" onClick="memory(4)" class="n1">
+<input type="button" name="select" value="Select All" title="Select All" onClick="document.racunalo.notes.select()" class="n2">
+<input type="reset" name="clear" value="Clear" title="Clear All" onClick="memory(5)" class="n3">
+
+</div>   <!-- END  biljeska -->
+
+<div id="konstante">
+<div class="constnaslov"><b>PHYSICAL CONSTANTS</b></div>
+<div class="const" onClick="dodajConst(-273.16)"><a href="#">Absolute zero<br>-273.16 &#176;C</a></div>
+<div class="const" onClick="dodajConst(9.80665)"><a href="#">Acceleration of free fall, standard<br>9.806&nbsp;65 m/s<sup>2</sup></a></div>
+<div class="const" onClick="dodajConst(1.660538782e-27)"><a href="#">Atomic mass unit<br>1.660&nbsp;538&nbsp;782&#215;10<sup>-27</sup> kg</a></div>
+<div class="const" onClick="dodajConst(6.02214179e23)"><a href="#">Avogadro constant<br>6.022&nbsp;141&nbsp;79&#215;10<sup>23</sup> 1/mol</a></div>
+<div class="const" onClick="dodajConst(2.718281828459)"><a href="#">Base of natural logarithms <br>2.718&nbsp;281&nbsp;828&nbsp;459...</a></div>
+<div class="const" onClick="dodajConst(1.3806504e-23)"><a href="#">Boltzmann constant<br>1.380&nbsp;6504&#215;10<sup>-23</sup> J/K</a></div>
+<div class="const" onClick="dodajConst(2.8179402894e-15)"><a href="#">Classical electron radius<br>2.817&nbsp;940&nbsp;2894&#215;10<sup>-15</sup> m</a></div>
+<div class="const" onClick="dodajConst(9.10938215e-31)"><a href="#">Electron mass<br>9.109&nbsp;382&nbsp;15&#215;10<sup>-31</sup> kg</a></div>
+<div class="const" onClick="dodajConst(5.4461702177e-4)"><a href="#">Electron-proton mass ratio<br>5.446&nbsp;170&nbsp;2177&#215;10<sup>-4</sup></a></div>
+<div class="const" onClick="dodajConst(1.602176487e-19)"><a href="#">Electronvolt<br>1.602&nbsp;176&nbsp;487&#215;10<sup>-19</sup> J</a></div>
+<div class="const" onClick="dodajConst(1.602176487e-19)"><a href="#">Elementary charge<br>1.602&nbsp;176&nbsp;487&#215;10<sup>-19</sup> C</a></div>
+<div class="const" onClick="dodajConst(96485.3399)"><a href="#">Faraday constant<br>96&nbsp;485.3399 C/mol</a></div>
+<div class="const" onClick="dodajConst(3.74177118e-16)"><a href="#">First radiation constant<br>3.741&nbsp;771&nbsp;18&#215;10<sup>-16</sup> W m<sup>2</sup></a></div>
+<div class="const" onClick="dodajConst(8.314472)"><a href="#">Molar gas constant<br>8.314&nbsp;472 J/mol K</a></div>
+<div class="const" onClick="dodajConst(22.413996e-3)"><a href="#">Molar volume<br>(Ideal gas, <i>T</i> = 273.15 K, <i>p</i> = 101.325 kPa)<br>22.413&nbsp;996&#215;10<sup>-3</sup> m<sup>3</sup>/mol</a></div>
+<div class="const" onClick="dodajConst(6.67428e-11)"><a href="#">Newtonian constant of gravitation<br>6.674&nbsp;28&#215;10<sup>-11</sup> N m<sup>2</sup>/kg<sup>2</sup></a></div>
+<div class="const" onClick="dodajConst(12.566370614e-7)"><a href="#">Permeability of vacuum<br>12.566&nbsp;370&nbsp;614...&#215;10<sup>-7</sup> N/A<sup>2</sup></a></div>
+<div class="const" onClick="dodajConst(8.854187817e-12)"><a href="#">Permittivity of vacuum<br>8.854&nbsp;187&nbsp;817...&#215;10<sup>-12</sup> F/m</a></div>
+<div class="const" onClick="dodajConst(3.141592653589793238)"><a href="#">PI<br> 3.141&nbsp;592&nbsp;653&nbsp;589&nbsp;793&nbsp;238...</a></div>
+<div class="const" onClick="dodajConst(6.62606896e-34)"><a href="#">Planck constants<br>6.626&nbsp;068&nbsp;96&#215;10<sup>-34</sup> J s</a></div>
+<div class="const" onClick="dodajConst(0.014387752)"><a href="#">Second radiation constant<br>0.014&nbsp;387&nbsp;752 m K</a></div>
+<div class="const" onClick="dodajConst(1366)"><a href="#">Solar constant<br>1366 W/m<sup>2</sup></a></div>
+<div class="const" onClick="dodajConst(299792458)"><a href="#">Speed of light in vacuum<br>299&nbsp;792&nbsp;458 m/s</a></div>
+<div class="const" onClick="dodajConst(331.5)"><a href="#">Speed of sound in air at STP<br>331.5 + 0.6 * T/&#176;C m/s</a></div>
+<div class="const" onClick="dodajConst(101325)"><a href="#">Standard pressure<br>101&nbsp;325 Pa</a></div>
+</div>   <!-- END  konstante -->
+
+</form>
+
+<div class="crta"></div>
+</div>   <!-- END  calc4chem -->
+
+<br>
+<p class="copycent">Copyright &copy; 2013 by Eni Generali&#263;&nbsp;&nbsp;<g:plusone size="medium" count="false"></g:plusone></p>
+
+
+<h1>SCIENTIFIC CALCULATOR FOR CHEMISTS</h1>
+
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-507fd107765204c1"></script>
+<!-- AddThis Button END -->
+<p>Calc4Chem is a JavaScript scientific calculator for chemists. This calculator can be used as common scientific calculator (sin, cos, log, power, root, memory), but it also includes a molecular weight calculator and the tables with various physical and chemical constants. The calculator contains a list with task history, storing all the recent inputs and results. Scientific calculator displays the numbers rounded to a user-specified number of decimal places. (<a href="http://www.periodni.com/use_calculator.html">How to use a Scientific calculator</a>)</p>
+
+<p>&nbsp;</p>
+
+<hr>
+<table border="0" width="90%" cellspacing="0" cellpadding="5" align="center">
+<tr> 
+<td width="40%" valign="top"><h2>Online calculators</h2>
+
+<ul>
+   <li><a href="http://www.periodni.com/scientific_calculator.html">Scientific calculator for chemists</a></li>
+   <li><a href="http://www.periodni.com/preparation_of_solutions.php">Preparation of solutions</a></li>
+   <li><a href="http://www.periodni.com/angle_converter.html">Angle converter</a></li>
+   <li><a href="http://www.periodni.com/roman_numerals_converter.html">Roman numerals converter</a></li>
+   <li><a href="http://www.periodni.com/number_systems_converter.html">Number systems converter</a></li>
+</ul>
+<h2>Online games</h2>
+
+<ul>
+   <li><a href="http://www.periodni.com/memory_game.html">Memory game</a></li>
+   <li><a href="http://www.periodni.com/find_the_pairs.html">Find the pairs</a></li>
+</ul>
+</td>
+<td width="60%" valign="top"><h2>Portable aplications</h2>
+<dl>
+<dt><a href="http://www.periodni.com/software.html#Calculator_for_Chemists">Calculator for Chemists</a></dt>
+	<dd>is a small but powerful scientific expression calculator which supports many scientific functions (sin, cos, log, power, root, memory, ...), normal and inverse. All of the calculations can be printed or saved and recalled again.</dd>
+<dt><a href="http://www.periodni.com/software.html#Solution_Calculator">Solution Calculator</a></dt>
+	<dd>is a useful tool which allows you to calculate how many solid chemicals or stock solutions you will need to prepare the desired solution. The program provides lab-ready directions on how to prepare the desired solution.</dd>
+</dl>
+</td>
+</tr>
+</table>
+
+</div>   <!-- END  data -->
+
+
+<div class="google-dno">
+<script type="text/javascript"><!--
+google_ad_client = "pub-1400010696125762";
+//728x90, dole centriran 2008.01.15
+google_ad_slot = "0390007740";
+google_ad_width = 728;
+google_ad_height = 90;
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>   <!-- END  google-dno -->
+
+
+<div id="footer">
+
+<p>&nbsp;</p>
+
+<table width="95%" border="0" cellpadding="5" align="center">
+<tr>
+<td colspan="3" class="tdcentar">
+<a href="http://www.periodni.com/scientific_calculator.html" class="linkdno">Scientific calculator for chemists</a>
+</td>
+</tr>
+<tr>
+<td width="35%" class="tddesno">
+<a href="http://www.periodni.com/download.html" class="linkdno">Download printable materials</a>
+</td>
+<td width="30%" class="linkdno">
+|&nbsp;
+<a href="http://www.periodni.com/de/wissenschaftlicher_taschenrechner.html"><img title="Deutsch" src="http://www.periodni.com/slike/s_de.jpg" width="20" height="10" alt="de"></a>
+<a href="http://www.periodni.com/scientific_calculator.html"><img title="English" src="http://www.periodni.com/slike/s_en.jpg" width="20" height="10" alt="en"></a>
+<a href="http://www.periodni.com/fr/calculatrice_scientifique.html"><img title="Fran&#231;ais" src="http://www.periodni.com/slike/s_fr.jpg" width="20" height="10" alt="fr"></a>
+<a href="http://www.periodni.com/hr/znanstveni_kalkulator.html"><img title="Hrvatski" src="http://www.periodni.com/slike/s_hr.jpg" width="20" height="10" alt="hr"></a>
+<a href="http://www.periodni.com/it/calcolatore_scientifico.html"><img title="Italiano" src="http://www.periodni.com/slike/s_it.jpg" width="20" height="10" alt="it"></a>
+<a href="http://www.periodni.com/es/calculadora_cientifica.html"><img title="Espa&#241;ol" src="http://www.periodni.com/slike/s_es.jpg" width="20" height="10" alt="es"></a>
+&nbsp;|
+</td>
+<td width="35%" class="tdlivo">
+<a href="http://www.periodni.com/software.html" class="linkdno">Free software for Windows</a>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="tdcentar">
+<a href="http://www.periodni.com/gallery/images.php" class="linkdno">Chemistry images gallery</a>
+</td>
+</tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p>Citing this page:</p>
+<p class="citat">Generalic, Eni. "Scientific calculator for chemists." <i>EniG. Periodic Table of the Elements</i>. 14 Aug. 2013. KTF-Split. <span class="rfont">{Date of access}</span>. &#60;http://www.periodni.com/scientific_calculator.html&#62;.</p>
+
+
+<p>&nbsp;</p>
+<div class="copyme">Copyright &copy; 2013 by Eni Generalic. All rights reserved. | <a href="http://www.periodni.com/disclaimer.html">Disclaimer</a></div>
+<p>&nbsp;</p>
+
+</div>   <!-- END DIV - footeri -->
+
+
+</div>   <!-- END DIV - dole -->
+
+<div class="google-vrh">
+<script type="text/javascript"><!--
+google_ad_client = "pub-1400010696125762";
+//Base Vodoravno Gore 728x90
+google_ad_slot = "1202123988";
+google_ad_width = 728;
+google_ad_height = 90;
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+</div> <!-- END DIV - glavni -->
+
+</body>
+</html>
+

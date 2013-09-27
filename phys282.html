@@ -1,0 +1,1269 @@
+<base href="http://www.astro.wisc.edu/~dolan/constants/calc.html">
+<HTML>
+<HEAD>
+<TITLE>Astro-Physical Calculator</TITLE>
+<script language=javascript>
+<!--  This is to hide the JavaScript from browsers which do not support it.
+
+ // Adapted by Chris Dolan
+ // Rolf gave me permission to copy and modify his code.
+
+ // Original code from:  (see the URL at the bottom of the page)
+ // Javascript scientific calculator  (4 March 1996)
+ // (C) Copyright Rolf Howarth 1996
+ // rolf@insect.demon.co.uk
+
+ // Further adapted by Bruce Busby (busby@umich.edu)
+ // Bruce did the code for the redout on the top of the page.
+
+ var NDIGITS = 16;
+ var STACKSIZE = 12;
+
+ var value = 0;		// current value in display
+ var memory = 0;	// current value in memory
+ var memory2 = 0;	// current value in memory2
+ var level = 0;		// no. of items on stack
+ var entered = true;	// has value on display been 'entered'?
+ var decimal = 0;	// multiplier when entering after decimal point
+ var fixed = 0;		// force trailing zero display when entering decimals
+ var exponent = false;	// currently entering exponent?
+ var inverse = false;	// has the INV key been pressed?
+ var whichplanet = 0;   // Mercury
+ var planetname = "Mercury";
+ var cgs_units = true;	// Use CGS units or SI units
+ var CurrentMsg = '        Welcome to the Radiation and Health Physics HomePage';
+
+ if (location.search)
+ {
+ 	// pass in value through command line
+ 	value = location.search.substring(1,location.search.length);
+ }
+
+ function stackItem()
+ {
+ 	this.value = 0;
+ 	this.op = "";
+ }
+
+ function array(length)
+ {
+ 	this[0] = 0;
+ 	for (i=0; i<length; ++i)
+ 	{
+ 		this[i] = 0;
+ 		this[i] = new stackItem();
+ 	}
+ 	this.length = length;
+ }
+
+ stack = new array(STACKSIZE);
+
+ function push(value,op,prec)
+ {
+ 	if (level==STACKSIZE)
+ 		return false;
+ 	for (i=level;i>0; --i)
+	{
+		stack[i].value = stack[i-1].value;
+		stack[i].op = stack[i-1].op;
+		stack[i].prec = stack[i-1].prec;
+	}
+	stack[0].value = value;
+	stack[0].op = op;
+	stack[0].prec = prec;
+	++level;
+	return true;
+}
+
+function pop()
+{
+	if (level==0)
+		return false;
+	for (i=0;i<level; ++i)
+ 	{
+ 		stack[i].value = stack[i+1].value;
+ 		stack[i].op = stack[i+1].op;
+ 		stack[i].prec = stack[i+1].prec;
+ 	}
+ 	--level;
+ 	return true;
+ }
+
+
+
+
+ function format(value)
+ {
+ 	var valStr = "" + value;
+// Check for NaN (is that really what this does?)
+ 	if (valStr.indexOf("N")>=0 || (value == 2*value && value == 1+value))
+		return "Error ";
+
+	var i = valStr.indexOf("e")
+	if (i>=0)
+	{
+		var expStr = valStr.substring(i+1,valStr.length);
+//		if (i>11) i=11;  // max 11 digits
+//		if (i>NDIGITS) i=NDIGITS;  // max NDIGITS digits
+		if (i>NDIGITS-5) i=NDIGITS-5;  // max NDIGITS-5 digits
+		valStr = valStr.substring(0,i);
+		if (valStr.indexOf(".")<0) valStr += ".";
+ 		valStr += " " + expStr;
+ 	}
+ 	else
+ 	{
+ 		var valNeg = false;
+ 		if (value < 0) { value = -value; valNeg = true; }
+                var expval = Math.log(value)*Math.LOG10E;
+                if (value == 0) {
+ 		  expval = 0;
+ 		} else if (expval > NDIGITS-5) {
+                  expval = Math.floor(expval);
+                  value /= Math.pow(10, expval);
+                } else if (-expval > NDIGITS-5) {
+                  expval = Math.ceil(expval);
+                  value /= Math.pow(10, expval);
+                } else {
+                  expval = 0;
+                }
+ 		var valInt = Math.floor(value);
+ 		var valFrac = value - valInt;
+ 		var prec = NDIGITS - (""+valInt).length - 1;	// how many digits available after period
+                if (prec < 0) return "Error"
+ 		if (! entered && fixed>0)
+			prec = fixed;
+		var mult = " 1000000000000000000".substring(1,prec+2);
+		var frac = Math.floor(valFrac * mult + 0.5);
+		valInt = Math.floor(Math.floor(value * mult + .5) / mult);
+		if (valNeg)
+			valStr = "-" + valInt;
+		else
+			valStr = "" + valInt;
+		var fracStr = "00000000000000"+frac;
+		fracStr = fracStr.substring(fracStr.length-prec, fracStr.length);
+		i = fracStr.length-1;
+		if (entered || fixed==0)
+		{
+			// remove trailing zeros unless fixed during entry.
+			while (i>=0 && fracStr.charAt(i)=="0")
+				--i;
+			fracStr = fracStr.substring(0,i+1);
+		}
+		if (i>=0) valStr += "." + fracStr;
+//		document.result.debugField.value = "prec "+prec+", mult "+mult+", frac "+frac;
+                if (expval != 0) {
+                  var expStr = "" + expval;
+		  valStr += " " + expStr;
+                }
+	}
+	return valStr;
+}
+
+function refresh()
+{
+	var display = format(value);
+	if (exponent)
+	{
+		if (expval<0)
+ 			display += " " + expval;
+ 		else
+ 			display += " +" + expval;
+ 	}
+ 	if (display.indexOf(".")<0 && display != "Error ")
+ 	{
+ 		if (entered || decimal>0)
+			display += '.';
+		else
+			display += ' ';
+	}
+	display = "               " + display;
+	display = display.substring(display.length-NDIGITS-3,display.length);
+	document.result.result.value = display;
+	inverse = false;
+}
+
+function clearAll()
+{
+	level = 0;
+	clearDisp();
+}
+
+function clearDisp()
+{
+	exponent = false;
+	value = 0;
+	enter();
+	refresh();
+}
+
+function evalx()
+{
+	if (level==0)
+		return false;
+	op = stack[0].op;
+	sval = stack[0].value;
+//	alert("eval "+sval+op+value);
+	if (op == "+")
+		value = sval + value;
+	else if (op == '-')
+		value = sval - value;
+	else if (op == '*')
+		value = sval * value;
+	else if (op == '/')
+		value = sval / value;
+	else if (op == 'pow')
+		value = Math.pow(sval,value);
+	pop();
+	if (op=='(')
+		return false;
+	return true;
+}
+
+function openp()
+{
+	enter();
+	if (!push(0,'(',0))
+	{
+		value = "NAN";
+	}
+	refresh();
+}
+
+function closep()
+{
+	enter();
+	while (evalx())
+		;
+	refresh();
+}
+
+function operator(op)
+{
+	enter();
+	if (op=='+' || op=='-')
+		prec = 1;
+	else if (op=='*' || op=='/')
+		prec = 2;
+	else if (op=="pow")
+		prec = 3;
+	if (level>0 && prec <= stack[0].prec)
+ 		evalx();
+ 	if (!push(value,op,prec))
+ 	{
+ 		value = "NAN";
+ 	}
+ 	refresh();
+ }
+
+ function enter()
+ {
+ 	if (exponent)
+ 		value = value * Math.exp(expval * Math.LN10);
+ 	entered = true;
+ 	exponent = false;
+ 	decimal = 0;
+ 	fixed = 0;
+ }
+
+ function equals()
+ {
+ 	enter()
+ 	while (level>0)
+		evalx();
+	refresh();
+}
+
+function digit(n)
+{
+	if (entered)
+	{
+		value = 0;
+		digits = 0;
+		entered = false;
+	}
+	if (n==0 && digits==0)
+	{
+		refresh();
+		return;
+	}
+	if (exponent)
+	{
+		if (expval<0)
+ 			n = -n;
+ 		if (digits < 3)
+ 		{
+ 			expval = expval * 10 + n;
+ 			++digits;
+ 			refresh();
+ 		}
+ 		return;
+ 	}
+ 	if (value<0)
+ 		n = -n;
+ 	if (digits < NDIGITS-1)
+ 	{
+ 		++digits;
+ 		if (decimal>0)
+		{
+			decimal = decimal * 10;
+			value = value + (n/decimal);
+			++fixed;
+		}
+		else
+			value = value * 10 + n;
+	}
+	refresh();
+}
+
+function bksp()
+{
+	if (entered)
+	{
+		refresh();
+		return;
+	}
+	if (digits==0)
+	{
+		refresh();
+		return;
+	}
+	if (exponent)
+	{
+		if (expval<0)
+			expval = -Math.floor(-expval/10);
+		else
+			expval = Math.floor(expval/10);
+		--digits;
+		refresh();
+ 		return;
+ 	}
+	if (decimal>1)
+	{
+		if (value<0)
+			value = -Math.floor(-value*decimal/10);
+		else
+			value = Math.floor(value*decimal/10);
+		decimal = decimal / 10;
+		value = value/decimal;
+		--fixed;
+		if (decimal == 1)
+			decimal = 0;
+	}
+	else
+	{
+		if (value<0)
+			value = -Math.floor(-value/10);
+		else
+			value = Math.floor(value/10);
+		decimal = 0;
+	}
+	--digits;
+	refresh();
+}
+
+function sign()
+{
+	if (exponent)
+		expval = -expval;
+	else
+		value = -value;
+	refresh();
+}
+
+function period()
+{
+	if (entered)
+	{
+		value = 0;
+		digits = 1;
+	}
+	entered = false;
+	if (decimal == 0)
+	{
+		decimal = 1;
+	}
+	refresh();
+}
+
+function exp()
+{
+	if (entered || exponent)
+		return;
+	exponent = true;
+	expval = 0;
+	digits = 0;
+	decimal = 0;
+	refresh();
+}
+
+function inv()
+{
+	inverse = !inverse;
+}
+
+function func(f)
+{
+	enter();
+	if (f=="1/x")
+		value = 1/value;
+	else if (f=="swap")
+	{
+		var tmp = value;
+		value = stack[0].value;
+		stack[0].value = tmp;
+	}
+	else if (f=='n!')
+	{
+		if (value<0 || value>200 || value != Math.round(value))
+			value = "NAN";
+		else
+		{
+			var n = 1;
+			var i;
+			for (i=1;i<=value;++i)
+ 				n *= i;
+ 			value = n;
+ 		}
+ 	}
+ 	else if (f=="MR")
+ 		value = memory;
+ 	else if (f=="M+")
+ 	{
+ 		memory += value;
+ 	}
+ 	else if (f=="Min")
+ 	{
+ 		memory = value;
+ 	}
+ 	else if (f=="MR2")
+ 		value = memory2;
+ 	else if (f=="M2+")
+ 	{
+ 		memory2 += value;
+ 	}
+ 	else if (f=="M2in")
+ 	{
+ 		memory2 = value;
+ 	}
+ 	else if (inverse)
+ 	{
+ 	 	if (f=="sin")
+ 			value = Math.asin(value)*180/Math.PI;
+ 		else if (f=="cos")
+ 			value = Math.acos(value)*180/Math.PI;
+ 		else if (f=="tan")
+ 			value = Math.atan(value)*180/Math.PI;
+ 		else if (f=="log")
+ 			value = Math.exp(value * Math.LN10);
+ 		else if (f=="log2")
+ 			value = Math.exp(value * Math.LN2);
+ 		else if (f=="ln")
+ 			value = Math.exp(value);
+ 		else if (f=="sqrt")
+ 			value = value*value;
+ 		else if (f=="pi")
+ 			value = Math.E;
+ 	}
+ 	else
+ 	{
+ 	 	if (f=="sin")
+ 			value = Math.sin(value/180 * Math.PI);
+ 		else if (f=="cos")
+ 			value = Math.cos(value/180 * Math.PI);
+ 		else if (f=="tan")
+ 			value = Math.tan(value/180 * Math.PI);
+ 		else if (f=="log")
+ 			value = Math.log(value)/Math.LN10;
+ 		else if (f=="log2")
+ 			value = Math.log(value)/Math.LN2;
+ 		else if (f=="ln")
+ 			value = Math.log(value);
+ 		else if (f=="sqrt")
+ 			value = Math.sqrt(value);
+ 		else if (f=="pi")
+ 			value = Math.PI;
+ 	 	else if (f=="asin")
+ 			value = Math.asin(value)*180/Math.PI;
+ 		else if (f=="acos")
+ 			value = Math.acos(value)*180/Math.PI;
+ 		else if (f=="atan")
+ 			value = Math.atan(value)*180/Math.PI;
+ 		else if (f=="alog")
+ 			value = Math.exp(value * Math.LN10);
+ 		else if (f=="alog2")
+ 			value = Math.exp(value * Math.LN2);
+ 		else if (f=="exp")
+ 			value = Math.exp(value);
+ 		else if (f=="sqr")
+ 			value = value*value;
+ 		else if (f=="e")
+ 			value = Math.E;
+ 	}
+ 	refresh();
+ }
+
+function setUnits(s) {
+	if (s == "CGS")
+		cgs_units = true;
+	else if (s == "SI")
+		cgs_units = false;
+}
+
+function constant(x,y)
+{
+	if (cgs_units) {
+		value=x;
+	} else {
+		value=y;
+	}
+	refresh();
+}
+
+function planetItem(m,r,p,a,e,n)
+{
+
+// CGS units by default
+	this.mass = m;
+	this.radius = r;
+	this.period = p * 3.156e7;
+	this.semimajaxis = a * 1.496e13;
+	this.eccen = e;
+
+// Also allow SI units
+	this.mass_SI = m * 0.001;
+	this.radius_SI = r * 0.01;
+	this.period_SI = p * 3.156e7;
+	this.semimajaxis_SI = a * 1.496e13 * 0.01;
+	this.eccen_SI = e;
+
+        this.name = n;
+}
+
+function planetArray()
+{
+
+// Load the array with 1) mass (g) 2) radius (cm) 3) orbit period (yr)
+//    4) semimajor axis (AU) 5) eccentricity
+
+// Mercury
+	this[0] = new planetItem(3.303e26, 2.439e8, 2.4085e-1, 3.87096e-1, 0.205622, "Mercury");
+// Venus
+	this[1] = new planetItem(4.870e27, 6.050e8, 6.1521e-1, 7.23342e-1, 0.006783, "Venus");
+// Earth
+	this[2] = new planetItem(5.976e27, 6.378e8, 1.00004e0, 9.99987e-1, 0.016684, "Earth");
+// Mars
+	this[3] = new planetItem(6.418e26, 3.397e8, 1.88089e0, 1.523705e0, 0.093404, "Mars");
+// Jupiter
+	this[4] = new planetItem(1.899e30, 7.140e9, 1.18622e1, 5.204529e0, 0.047826, "Jupiter");
+// Saturn
+	this[5] = new planetItem(5.686e29, 6.000e9, 2.94577e1, 9.575133e0, 0.052754, "Saturn");
+// Uranus
+	this[6] = new planetItem(8.66e28,  2.615e9, 8.40139e1, 1.930375e1, 0.050363, "Uranus");
+// Neptune
+	this[7] = new planetItem(1.030e29, 2.43e9,  1.64793e2, 3.020652e1, 0.004014, "Neptune");
+// Pluto
+	this[8] = new planetItem(1.0e25,   1.2e8,   2.47686e2, 3.991136e1, 0.256695, "Pluto");
+}
+
+theplanets = new planetArray();
+
+
+function setplanet()
+{
+	whichplanet = document.constants.planetselect.selectedIndex;
+        if (whichplanet == 0)
+                planetname = "Mercury";
+        else if (whichplanet == 1)
+                planetname = "Venus";
+        else if (whichplanet == 2)
+                planetname = "Earth";
+        else if (whichplanet == 3)
+                planetname = "Mars";
+        else if (whichplanet == 4)
+                planetname = "Jupiter";
+        else if (whichplanet == 5)
+                planetname = "Saturn";
+        else if (whichplanet == 6)
+                planetname = "Uranus";
+        else if (whichplanet == 7)
+                planetname = "Neptune";
+        else if (whichplanet == 8)
+                planetname = "Pluto";
+        else
+                planetname = "Planet";
+}
+
+function planet(f)
+{
+	if (cgs_units) {
+		if (f=="mass") {
+			value = theplanets[whichplanet].mass;
+		} else if (f=="radius") {
+			value = theplanets[whichplanet].radius;
+		} else if (f=="period") {
+			value = theplanets[whichplanet].period;
+		} else if (f=="semimajaxis") {
+			value = theplanets[whichplanet].semimajaxis;
+		} else if (f=="eccen") {
+			value = theplanets[whichplanet].eccen;
+		}
+	} else {
+		if (f=="mass") {
+			value = theplanets[whichplanet].mass_SI;
+		} else if (f=="radius") {
+			value = theplanets[whichplanet].radius_SI;
+		} else if (f=="period") {
+			value = theplanets[whichplanet].period_SI;
+		} else if (f=="semimajaxis") {
+			value = theplanets[whichplanet].semimajaxis_SI;
+		} else if (f=="eccen") {
+			value = theplanets[whichplanet].eccen_SI;
+		}
+	}
+	refresh();
+}
+function update(msg1,msg2)
+{
+	if (cgs_units) {
+		msg=msg1;
+	} else {
+		msg=msg2;
+	}
+	refresh();
+	var pad_str="";
+	n = msg.length;
+	if(n<59) {
+		pad = (60-n)/2;
+		for(var i=0; i<pad; i++) {
+			pad_str+=" ";
+		}
+	}
+	CurrentMsg = pad_str + msg;
+	document.messages.field.value = CurrentMsg;
+}
+
+function nochange() {
+	document.messages.field.value = CurrentMsg;
+}
+
+function planetUpdate(msg1,msg2)
+{
+  msg1 = planetname + msg1;
+  msg2 = planetname + msg2;
+  update(msg1, msg2);
+}
+
+// -->
+</script>
+</HEAD>
+
+<body onLoad="refresh()"> <font color="#dd1111">This calculator only
+works if your browser can process JavaScript</font>
+
+<center>
+<form name="messages" onSubmit="return false">
+	<input type="text" name="field" size=60 value="    Welcome to the Astro-Physical Calculator" onFocus="self.status='This is a JavaScript information data field'; return true" onChange="nochange()">
+</form>
+</center>
+<center>
+<form name=units>
+Units:
+<input type=radio name=units onClick="setUnits('CGS')" checked> CGS
+<input type=radio name=units onClick="setUnits('SI')"> SI
+</form>
+</center>
+<center>
+<table border=5 cellpadding=5>
+<tr>
+<td align=center colspan=2>
+
+<form name=result>
+<input size=20 name=result onFocus="refresh()">
+</form>
+</td>
+</tr>
+
+<tr>
+<td align=center>
+
+<form name=calculator>
+
+<input type="button" value=" log " onClick="func('log')">
+<input type="button" value="10^x" onClick="func('alog')">
+<input type="button" value=" ln " onClick="func('ln')">
+<input type="button" value=" e^x " onClick="func('exp')">
+<input type="button" value="  pi  " onClick="func('pi')">
+<input type="button" value="  e   " onClick="func('e')">
+<input type="button" value="  AC  " onClick="clearAll()">
+<br>
+<input type="button" value=" sin " onClick="func('sin')">
+<input type="button" value="asin" onClick="func('asin')">
+<input type="button" value=" cos " onClick="func('cos')">
+<input type="button" value="acos" onClick="func('acos')">
+<input type="button" value=" tan " onClick="func('tan')">
+<input type="button" value="atan" onClick="func('atan')">
+<input type="button" value="   C   " onClick="clearDisp()">
+<br>
+<input type="button" value=" EE " onClick="exp()">
+<input type="button" value=" sqr " onClick="func('sqr')">
+<input type="button" value="sqrt" onClick="func('sqrt')">
+<input type="button" value=" y^x " onClick="operator('pow')">
+<input type="button" value=" 1/x " onClick="func('1/x')">
+<input type="button" value="  x!  " onClick="func('n!')">
+<input type="button" value="Bksp" onClick="bksp()">
+<hr>
+<input type="button" value="  7  " onClick="digit(7)">
+<input type="button" value="  8  " onClick="digit(8)">
+<input type="button" value="  9  " onClick="digit(9)">
+<input type="button" value="  /  " onClick="operator('/')">
+<input type="button" value=" STO " onClick="func('Min')">
+<input type="button" value=" STO2 " onClick="func('M2in')">
+<br>
+<input type="button" value="  4  " onClick="digit(4)">
+<input type="button" value="  5  " onClick="digit(5)">
+<input type="button" value="  6  " onClick="digit(6)">
+<input type="button" value="  x  " onClick="operator('*')">
+<input type="button" value="  MR  " onClick="func('MR')">
+<input type="button" value="  MR2  " onClick="func('MR2')">
+<br>
+<input type="button" value="  1  " onClick="digit(1)">
+<input type="button" value="  2  " onClick="digit(2)">
+<input type="button" value="  3  " onClick="digit(3)">
+<input type="button" value="  -  " onClick="operator('-')">
+<input type="button" value="  M+  " onClick="func('M+')">
+<input type="button" value="  M2+  " onClick="func('M2+')">
+<br>
+<input type="button" value="  0  " onClick="digit(0)">
+<input type="button" value="+/-" onClick="sign()">
+<input type="button" value="   .  " onClick="period()">
+<input type="button" value="  +  " onClick="operator('+')">
+<input type="button" value="    =    " onClick="equals()">
+<input type="button" value=" (  " onClick="openp()">
+<input type="button" value="  ) " onClick="closep()">
+
+</form>
+
+</td>
+
+<td align=center>
+
+<form name=constants>
+
+<b><a name="phy">Physical</a> Constants</b>
+<br>
+<input type="button" value="c" onclick="constant(2.99792458e10, 2.99792458e8), update('Speed of Light in cm/s','Speed of Light in meters/sec')">
+<input type="button" value="k" onClick="constant(1.380658e-16, 1.380658e-23), update('Boltzmann constant in erg/Kelvin','Boltzmann constant in Joules/Kelvin')">
+<input type="button" value="G" onClick="constant(6.67259e-8, 6.67259e-11), update('Gravitational constant in cm^3 / gram sec^2','Gravitational constant in meter^3 / kg sec^2')">
+<input type="button" value="m_e" onClick="constant(9.1093897e-28, 9.1093897e-31), update('Mass of an electon in grams','Mass of an electron in kilograms')">
+<input type="button" value="m_p" onClick="constant(1.672631e-24, 1.672631e-27), update('Mass of a proton in grams','Mass of a proton in kilograms')">
+<input type="button" value="amu" onClick="constant(1.6605402e-24, 1.6605402e-27), update('Mass of one amu in grams','Mass of one amu in kilograms')">
+<input type="button" value="eV" onClick="constant(1.6021772e-12, 1.6021772e-19), update('Electron Volt in ergs','Electron Volt in Joules')">
+<input type="button" value="alpha" onClick="constant(7.29735308e-3, 7.29735308e-3), update('Fine Structure Constant (no units)','Fine Structure Constant (no units)')">
+<br>
+<input type="button" value="h" onClick="constant(6.6260755e-27, 6.6260755e-34), update('Planck Constant in erg seconds','Planck Constant in Joule seconds')">
+<input type="button" value="e" onClick="constant(4.8032068e-10, 1.602e-19), update('Electron Charge in esu','Electron Charge in Coulombs')">
+<input type="button" value="R" onClick="constant(2.1798741e-11, 2.1798741e-18), update('Rydberg constant in ergs','Rydberg constant in Joules')">
+<input type="button" value="m_n" onClick="constant(1.6749286e-24, 1.6749286e-27), update('Mass of a neutron in grams','Mass of a neutron in kilograms')">
+<input type="button" value="m_H" onClick="constant(1.6733e-24, 1.6733e-27), update('Mass of one hydrogen atom in grams','Mass of one hydrogen atom in kilograms')">
+<input type="button" value="N_A" onClick="constant(6.0221367e23, 6.0221367e23), update('Avagadro Number #/mole','Avagadro Number #/mole')">
+<input type="button" value="a" onClick="constant(7.5646e-15, 7.5646e-16), update('Radiation density constant in erg / cm^3 Kelvin^4','Radiation density constant in Joule / meter^3 Kelvin^4')">
+<input type="button" value="sigma" onClick="constant(5.67051e-5, 5.67051e-8), update('Stefan-Boltzmann constant in erg / cm^2 Kelvin^4 second','Stefan-Boltzmann constant in Joule / meter^2 K^4 second')">
+<hr>
+<b>Astronomical Constants</b>
+<br>
+<input type="button" value="yr" onClick="constant(3.156e7, 3.156e7), update('Number of seconds in a year','Number of seconds in a year')">
+<input type="button" value="pc" onClick="constant(3.086e18, 3.086e16), update('Parsec in cm','Parsec in meters')">
+<input type="button" value="M_sun" onClick="constant(1.99e33, 1.99e30), update('Solar mass in grams ','Solar mass in kilograms')">
+<input type="button" value="R_sun" onClick="constant(6.96e10, 6.96e8), update('Solar radius in cm ','Solar radius in meters')">
+<br>
+<input type="button" value="AU" onClick="constant(1.496e13, 1.496e11), update('Astronomical unit in cm','Astronomical unit in meters')">
+<input type="button" value="ly" onClick="constant(9.463e17, 9.463e15), update('Light Year in cm','Light Year in meters')">
+<input type="button" value="L_sun" onClick="constant(3.9e33, 3.9e26), update('Solar luminosity in erg / second','Solar luminosity in Joule / second')">
+<input type="button" value="T_sun" onClick="constant(5.780e3, 5.780e3), update('Solar Temperature in Kelvin','Solar Temperature in Kelvin')">
+<hr>
+<b>Planetary Data</b>
+<br>
+<select name="planetselect" onChange="setplanet()">
+<option selected value=0>Mercury
+<option value=1>Venus
+<option value=2>Earth
+<option value=3>Mars
+<option value=4>Jupiter
+<option value=5>Saturn
+<option value=6>Uranus
+<option value=7>Neptune
+<option value=8>Pluto
+</select>
+<input type="button" value="m" onClick="planet('mass'), planetUpdate(' Mass in grams',' Mass in kilograms')">
+<input type="button" value="r" onClick="planet('radius'), planetUpdate(' Radius in cm',' Radius in meters')">
+<input type="button" value="p" onClick="planet('period'), planetUpdate(' Period in seconds',' Period in seconds')">
+<input type="button" value="a" onClick="planet('semimajaxis'), planetUpdate(' Semi-Major Axis in cm',' Semi-Major Axis in meters')">
+<input type="button" value="e" onClick="planet('eccen'), planetUpdate(' Eccentricity',' Eccentricity')">
+
+</form>
+
+</td>
+</tr>
+</table>
+
+</center>
+
+<p>
+
+<font size=-1>
+The Units switch above does not change the units of your calculation!
+It only specifies the units of the constants buttons for future entries!
+</font>
+
+<p>
+<p>
+
+<table border=5 cellpadding=5>
+<TR VALIGN="bottom">
+<Th ALIGN="left">
+NAME</Th>
+<Th ALIGN="Center">
+SYMBOL</TD>
+<Th ALIGN="Center">
+NUMBER</Th>
+
+<Th ALIGN="Center">
+CGS UNITS</Th>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Velocity of light</TD>
+<TD ALIGN="left">
+c</TD>
+<TD ALIGN="right">
+2.998 x 10<sup>10</sup></TD>
+<TD ALIGN="left">
+cm s<sup>-1</sup></TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Planck constant</TD>
+<TD ALIGN="left">
+h</TD>
+<TD ALIGN="right">
+6.626
+ x 10<sup>-27</sup></TD>
+<TD ALIGN="left">
+erg s</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Gravitational constant</TD>
+<TD ALIGN="left">
+G</TD>
+<TD ALIGN="right">
+6.67
+ x 10<sup>-8</sup></TD>
+<TD ALIGN="left">
+cm<sup>3</sup> g<sup>-1</sup> s<sup>-2</sup></TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Electron charge</TD>
+<TD ALIGN="left">
+e</TD>
+<TD ALIGN="right">
+4.803
+  x 10<sup>-10</sup></TD>
+<TD ALIGN="left">
+esu</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Mass of electron</TD>
+<TD ALIGN="left">
+m_e</TD>
+<TD ALIGN="right">
+9.1096
+  x 10<sup>-28</sup></TD>
+<TD ALIGN="left">
+g</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Mass of proton</TD>
+<TD ALIGN="left">
+m_p</TD>
+<TD ALIGN="right">
+1.6724
+  x 10<sup>-24</sup></TD>
+<TD ALIGN="left">
+g</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Mass of neutron</TD>
+<TD ALIGN="left">
+m_n</TD>
+<TD ALIGN="right">
+1.6747
+  x 10<sup>-24</sup></TD>
+<TD ALIGN="left">
+g</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Mass of hydrogen</TD>
+<TD ALIGN="left">
+m_H</TD>
+<TD ALIGN="right">
+1.6733
+  x 10<sup>-24</sup></TD>
+<TD ALIGN="left">
+g</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Atomic mass unit</TD>
+<TD ALIGN="left">
+amu</TD>
+<TD ALIGN="right">
+1.661
+  x 10<sup>-24</sup></TD>
+<TD ALIGN="left">
+g</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Avagadro's number</TD>
+<TD ALIGN="left">
+N_A</TD>
+<TD ALIGN="right">
+6.0222
+  x 10<sup>23</sup></TD>
+<TD ALIGN="right">
+</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Boltzmann constant</TD>
+<TD ALIGN="left">
+k</TD>
+<TD ALIGN="right">
+1.38
+  x 10<sup>-16</sup></TD>
+<TD ALIGN="left">
+erg K<sup>-1</sup></TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Electron volt</TD>
+<TD ALIGN="left">
+ev</TD>
+<TD ALIGN="right">
+1.602
+  x 10<sup>-12</sup></TD>
+<TD ALIGN="left">
+erg</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Rad'n density constant</TD>
+<TD ALIGN="left">
+a</TD>
+<TD ALIGN="right">
+7.5646
+  x 10<sup>-15</sup></TD>
+<TD ALIGN="left">
+erg cm<sup>-3</sup> K<sup>-4</sup></TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Stefan-Boltzmann const</TD>
+<TD ALIGN="left">
+sigma</TD>
+<TD ALIGN="right">
+5.67
+  x 10<sup>-5</sup></TD>
+<TD ALIGN="left">
+erg cm<sup>-2</sup> K<sup>-4</sup> s<sup>-1</sup></TD>
+<td></td>
+</FONT></TR>
+
+<tr valign=bottom>
+<td align=left>
+Fine structure constant</td>
+<td align=left>
+\alpha</td>
+<td align=right>7.29735308 x 10<sup>-3</sup></td>
+</tr>
+
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Rydberg constant</TD>
+<TD ALIGN="left">
+R</TD>
+<TD ALIGN="right">
+2.17992
+  x 10<sup>-11</sup></TD>
+<TD ALIGN="left">
+erg</TD>
+</FONT></TR>
+
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Year</TD>
+<TD ALIGN="left">
+yr</TD>
+<TD ALIGN="right">
+3.156
+  x 10<sup>7</sup></TD>
+<TD ALIGN="left">
+s</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Astronomical unit</TD>
+<TD ALIGN="left">
+AU</TD>
+<TD ALIGN="right">
+1.496
+  x 10<sup>13</sup></TD>
+<TD ALIGN="left">
+cm</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Parsec</TD>
+<TD ALIGN="left">
+pc</TD>
+<TD ALIGN="right">
+3.086
+  x 10<sup>18</sup></TD>
+<TD ALIGN="left">
+cm</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Light year</TD>
+<TD ALIGN="left">
+ly</TD>
+<TD ALIGN="right">
+9.463
+  x 10<sup>17</sup></TD>
+<TD ALIGN="left">
+cm</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Solar mass</TD>
+<TD ALIGN="left">
+M_sun</TD>
+<TD ALIGN="right">
+1.99   x 10<sup>33</sup></TD>
+<TD ALIGN="left">
+g</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Solar radius</TD>
+<TD ALIGN="left">
+R_sun</TD>
+<TD ALIGN="right">
+6.96   x 10<sup>10</sup></TD>
+<TD ALIGN="left">
+cm</TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Solar Luminosity</TD>
+<TD ALIGN="left">
+L_sun</TD>
+<TD ALIGN="right">
+3.9   x 10<sup>33</sup></TD>
+<TD ALIGN="left">
+erg s<sup>-1</sup></TD>
+</FONT></TR>
+<TR VALIGN="bottom">
+<TD ALIGN="left">
+Solar Temperature</TD>
+<TD ALIGN="left">
+T_sun</TD>
+<TD ALIGN="right">
+5780</TD>
+<TD ALIGN="left">
+K</TD>
+</FONT></TR>
+</table>
+<p>
+
+In the calculator above, the Period has been converted to seconds and
+the Semi-Major Axis has been changed to cm.
+
+
+<p>
+<Table border=5 cellpadding=5>
+<TR VALIGN="bottom"> 
+<Th>
+Name</th>
+<th align="center">
+Mass (g)</th>
+<th align="center">
+Radius (cm)</th>
+<th align="center">
+Period (yr)</th>
+<th align="center">
+Semi-Major (AU)</th>
+<th align="center">
+Eccentricity</th>
+</FONT></TR>
+<TR VALIGN="bottom"> 
+<TD><B>
+Mercury</B></TD>
+<TD>
+3.303 x 10<sup>26</sup></TD>
+<TD>
+2.439 x 10<sup>8</sup></TD>
+<TD>
+2.4085 x 10<sup>-1</sup></TD>
+<TD>
+3.87096 x 10<sup>-1</sup></TD>
+<TD>
+0.205622</TD>
+</FONT></TR>
+<TR VALIGN="bottom"> 
+<TD><B>
+Venus</B></TD>
+<TD>
+4.87 x 10<sup>27</sup></TD>
+<TD>
+6.05 x 10<sup>8</sup></TD>
+<TD>
+6.1521 x 10<sup>-1</sup></TD>
+<TD>
+7.23342 x 10<sup>-1</sup></TD>
+<TD>
+0.006783</TD>
+</FONT></TR>
+<TR VALIGN="bottom"> 
+<TD><B>
+Earth</B></TD>
+<TD>
+5.976 x 10<sup>27</sup></TD>
+<TD>
+6.378 x 10<sup>8</sup></TD>
+<TD>
+1.00004 x 10<sup>0</sup></TD>
+<TD>
+9.99987 x 10<sup>-1</sup></TD>
+<TD>
+0.016684</TD>
+</FONT></TR>
+<TR VALIGN="bottom"> 
+<TD><B>
+Mars</B></TD>
+<TD>
+6.418 x 10<sup>26</sup></TD>
+<TD>
+3.397 x 10<sup>8</sup></TD>
+<TD>
+1.88089 x 10<sup>0</sup></TD>
+<TD>
+1.523705 x 10<sup>0</sup></TD>
+<TD>
+0.093404</TD>
+</FONT></TR>
+<TR VALIGN="bottom"> 
+<TD><B>
+Jupiter</B></TD>
+<TD>
+1.899 x 10<sup>30</sup></TD>
+<TD>
+7.14 x 10<sup>9</sup></TD>
+<TD>
+1.18622 x 10<sup>1</sup></TD>
+<TD>
+5.204529 x 10<sup>0</sup></TD>
+<TD>
+0.047826</TD>
+</FONT></TR>
+<TR VALIGN="bottom"> 
+<TD><B>
+Saturn</B></TD>
+<TD>
+5.686 x 10<sup>29</sup></TD>
+<TD>
+6 x 10<sup>9</sup></TD>
+<TD>
+2.94577 x 10<sup>1</sup></TD>
+<TD>
+9.575133 x 10<sup>0</sup></TD>
+<TD>
+0.052754</TD>
+</FONT></TR>
+<TR VALIGN="bottom"> 
+<TD><B>
+Uranus</B></TD>
+<TD>
+8.66 x 10<sup>28</sup></TD>
+<TD>
+2.615 x 10<sup>9</sup></TD>
+<TD>
+8.40139 x 10<sup>1</sup></TD>
+<TD>
+1.930375 x 10<sup>1</sup></TD>
+<TD>
+0.050363</TD>
+</FONT></TR>
+<TR VALIGN="bottom"> 
+<TD><B>
+Neptune</B></TD>
+<TD>
+1.03 x 10<sup>29</sup></TD>
+<TD>
+2.43 x 10<sup>9</sup></TD>
+<TD>
+1.64793 x 10<sup>2</sup></TD>
+<TD>
+3.020652 x 10<sup>1</sup></TD>
+<TD>
+0.004014</TD>
+</FONT></TR>
+<TR VALIGN="bottom"> 
+<TD><B>
+Pluto</B></TD>
+<TD>
+1 x 10<sup>25</sup></TD>
+<TD>
+1.2 x 10<sup>8</sup></TD>
+<TD>
+2.47686 x 10<sup>2</sup></TD>
+<TD>
+3.991136 x 10<sup>1</sup></TD>
+<TD>
+0.256695</TD>
+</FONT></TR>
+</Table>
+
+<p>
+
+<b>Note:</b> This calculator was written and tested on a Unix
+computer.  If it looks bad to you, try making your window wider.  The
+calculator looks especially bad on Macs, unfortunately...
+
+<p>
+
+Most of the JavaScript code for this calculator came (with permission)
+from the <a href="http://www.parallax.co.uk/~rolf/Calculator/">
+Scientific Calculator</a> by Rolf Howarth.  (rolf@insect.demon.co.uk)
+
+<p>
+
+The code for the comment field at the top of the page came from Bruce
+Busby (bbusby@umich.edu)
+
+<p>
+
+<h4>
+Last updated: 9/30/96<br>
+<a href="http://www.astro.wisc.edu/~dolan/constants.html">Constants Page</a><br>
+<a href="http://www.astro.wisc.edu/~dolan/">Chris Dolan's Home Page</a>
+</h4>
+
+</BODY>
+</HTML>

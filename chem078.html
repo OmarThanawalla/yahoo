@@ -1,0 +1,223 @@
+<base href="http://www.csmcri.org/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/indexMain.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Central Salt &amp; Marine Chemicals Research Institute - Home</title>
+<!-- InstanceEndEditable -->
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!-- InstanceBeginEditable name="head" -->
+<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(function() {
+	  
+		//cache the ticker
+		var ticker = $("#ticker");
+		  
+		//wrap dt:dd pairs in divs
+		ticker.children().filter("li").each(function() {
+		  
+		  var li = $(this),
+		    container = $("#bloga");
+		  
+		  li.next().appendTo(container);
+		  li.prependTo(container);
+		  
+		  container.appendTo(ticker);
+		});
+		//animator function
+		function animator(currentItem) {
+		    
+		  //work out new anim duration
+		  var distance = currentItem.height();
+			duration = (distance + parseInt(currentItem.css("marginTop"))) / 0.025;
+
+		  //animate the first child of the ticker
+		  currentItem.animate({ marginTop: -distance }, duration, "linear", function() {
+		    
+			//move current item to the bottom
+			currentItem.appendTo(currentItem.parent()).css("marginTop", 0);
+
+			//recurse
+			animator(currentItem.parent().children(":first"));
+		  }); 
+		};
+
+		//start the ticker
+		animator(ticker.children(":first"));
+				
+		//set mouseenter
+		ticker.mouseenter(function() {
+		  
+		  //stop current animation
+		  ticker.children().stop();
+		  
+		});
+		
+		//set mouseleave
+		ticker.mouseleave(function() {
+		          
+          //resume animation
+		  animator(ticker.children(":first"));
+		  
+		});
+	  });
+</script>
+<!-- InstanceEndEditable -->
+<!-- InstanceParam name="home" type="text" value="hover" -->
+<!-- InstanceParam name="about" type="text" value="noNav" -->
+<!-- InstanceParam name="Research" type="text" value="noNav" -->
+<!-- InstanceParam name="projects" type="text" value="noNav" -->
+<!-- InstanceParam name="technology" type="text" value="noNav" -->
+<!-- InstanceParam name="business" type="text" value="noNav" -->
+<!-- InstanceParam name="Resources" type="text" value="noNav" -->
+<!-- InstanceParam name="Jobs" type="text" value="noNav" -->
+<!-- InstanceParam name="contact" type="text" value="noNav" -->
+<!-- InstanceParam name="Tenders" type="text" value="noNav" -->
+
+<meta name="keywords" content="CSMCRI, Research and Development, Research, Science, Reverse Osmosis, Electrodialysis, Marine Science, salt & marine,Marine chemicals, waste land devlopment, jojoba, jojoba seads, Seminar, Desalination, Membrane Technology, Ultrafiltration, Nanofiltration, Electrodialysis">
+<meta name="description" content="The mission of the Institute and its people is to work in partnership with visionary sponsors and collaborators to generate the knowledge and innovations required for efficient utilization of our coastal wasteland, seawater, marine algae, solar power" >
+</head>
+<body>
+	<!-- header start -->
+
+<div id="header">
+  <h1>Council of Scientific and Industrial Research</h1>
+  <a href="Hindi/index.php" title="Hindi" target="_self" class="LanguageHin"></a>
+</a>
+<a href="index.php" title="English" target="_self" class="LanguageEng"></a>
+<div class="clr"></div>
+<a href="index.php" title="CSIR Logo"><img src="images/csirlogo.png" alt="CSIR" width="130" height="130" border="0" /></a></a></div>
+	<!-- header end -->	
+	<!-- top navigation pannel start -->
+<div id="topNav">
+  <ul>
+    <li><a href="index.php" title="Home" target="_self" class="hover">Home</a></li>
+    <li><a href="Pages/About/about_us.php" title="About Us" target="_self" class="noNav">About Us</a></li>
+    <li><a href="Pages/Research/Research.php" title="Research" target="_self" class="noNav">Research</a></li>
+    <li><a href="Pages/Projects/projects.php" title="Projects" target="_self" class="noNav">Projects</a></li>
+    <li><a href="Pages/Technology/Technology.php" title="Technology" target="_self" class="noNav">Technology</a></li>
+    <li><a href="Pages/Business/business.php" title="Business" target="_self" class="noNav">Business</a></li>
+    <li><a href="Pages/Resources/KRC_Library.php" title="Resources" target="_self" class="noNav">Resources</a></li>
+    <li><a href="Pages/Jobs/Jobs.php" title="Jobs" target="_self" class="noNav">Jobs</a></li>
+    <li><a href="Pages/Contact/Contact.php" title="Contact" target="_self" class="noNav">Contact</a></li>
+    <li><a href="Pages/Tenders/Tenders.php" title="Tenders" target="_self" class="noNav">Tenders</a></li>
+  </ul>
+</div>
+<br class="spacer" />
+	<!-- top navigation pannel end -->
+	<!-- body start -->
+	<div class="wrapper">
+	<!-- InstanceBeginEditable name="MainContant" -->
+	
+	  <div id="body">
+<div class="contentLayout">
+    <h2><span>&quot;INNOVATIONS THAT REACH THE PEOPLE&quot;</span></h2><br />
+<img src="images/image_swap/CSMCRI_Building.jpg" alt="screen 1" name="img" width="265" height="180" class="imageLayoutRight" id="img" />
+    <h2>Our Mission</h2>
+    <p>The mission of the Institute and its people is to work in partnership with visionary sponsors and collaborators to generate the knowledge and innovations required for efficient utilization of our coastal wasteland, sea water, marine algae, solar power and silicates. The Institute will also harness its capabilities in biosciences, chemical transformation, process engineering, environmental monitoring, separation science and analysis to address focused needs of industries and organizations in the region and beyond.</p><br />
+    <br />
+</div>
+<div id="alignLeft"> 
+  <div id="alignLeft2">
+    <h5></h5>
+  </div>
+  <h5><a title="acsir_2013" href="../../Files/acsir_aug_2013.pdf" target="_self">AcSIR   Ph.D. Program, August 2013</a></h5>
+  <h5><a title="acsir_2013" href="../../Files/shortlisted_aug_13.pdf" target="_self">AcSIR Ph.D. Program, August 2013 : LIST OF SHORTLISTED   CANDIDATES FOR INTERVIEW</a></h5>
+  <h3>&nbsp;</h3>
+</div>
+<div class="ContMain">
+<div id="TabbedPanels2" class="TabbedPanels">
+	        <ul class="TabbedPanelsTabGroup">
+              <li class="TabbedPanelsTab" tabindex="0">Events</li>
+              <li class="TabbedPanelsTab" tabindex="0">Schematic Description </li>
+<li class="TabbedPanelsTab" tabindex="0"> Biennial Reports</li>
+</ul>
+	        <div class="TabbedPanelsContentGroup">
+              <div class="TabbedPanelsContent">
+                <h2>CSIR-CSMCRI Water Purification through Ultrafiltration at  Srinagar, Uttarakhand</h2>
+                <iframe width="560" height="315" src="//www.youtube.com/embed/KKYYPcnGSkU" frameborder="0" allowfullscreen></iframe>
+
+                <H3><br />
+                <a href="/Pages/About/CSIR-CSMCRI Events.php" title="CSIR-CSMCRi Events" target="_self">More Videos clips</a></H3>
+              </div>
+              <div class="TabbedPanelsContent">
+                <div class="TextCenter">
+                  <h4>Schematic description of our activities with sea water as a central theme</h4>
+                  <br />
+                </div>
+                <br />
+                <img src="images/DeptImage/CSMCRI - WebSite - FlowChart.png" name="alignCenter" width="422" height="294" id="alignCenter" /></div>
+<div class="TabbedPanelsContent">
+            <ul>
+                  <li> <a href="Files/Biennial_08-10.pdf" title="Biennial Report" target="_new">2008-2010</a></li>
+                  <li> <a href="Files/Biennial_06-08.pdf" title="Biennial Report" target="_new">2006-2008</a></li>
+                  <li><a href="http://www.csmcri.org/Files/Biennial_04-06.pdf" title="Biennial Report" target="_new">2004-2006</a></li>
+                  <li><a href="http://www.csmcri.org/Files/Biennial_02-04.pdf" title="Biennial Report" target="_new">2002-2004</a> </li>
+                  <li><a href="http://www.csmcri.org/Files/Biennial_00-02.pdf"><span>2000-2002</span></a> </li>
+                  <li><a href="http://www.csmcri.org/Files/Biennial_98-00.pdf"><span>1998-2000</span></a> </li>
+                </ul>
+              </div>
+</div>
+      </div>
+  </div>
+	    <div class="top_header">
+	      <div class="bloga">
+	        <h2>More...</h2>
+	        <a href="Pages/RTI/RTI_Act.php" target="_self" class="backg">Right to Information Act</a><br/><a href="Pages/About/Recent-Achivements.php" target="_self">Our Recent Achievements</a><br/>
+	        <a href="http://www.csir.res.in/External/Utilities/Frames/achievements/main_page.asp?a=topframe.htm&amp;b=leftcon.htm&amp;c=../../../Heads/achievements/major_achievements.htm" target="_new">Recent Achievements (CSIR)</a><br />
+	        <a href="Files/Final Rajbhasha Sahaika for Web.pdf" target="_new">Rajbhasha Sahaieka booklet</a><a href="http://www.csir.res.in/External/Utilities/Frames/achievements/main_page.asp?a=topframe.htm&amp;b=leftcon.htm&amp;c=../../../Heads/achievements/major_achievements.htm" target="_new"></a><br />
+	        <p><a href="#">more info</a></p>
+	        <h2></h2>
+	        
+	        <br />
+	        
+          </div>
+	      <div class="bloga2">
+	        <h2>Services Overview</h2>
+	        <p class="backg"><a href="http://ir.csmcri.org/" title="Institute Degital Repository" target="_blank">Online Institute Degital Repository</a></p>
+            <p class="backg"><a href="Pages/Technology/Technology.php" target="_self">Technologies ready for transfer</a></p>
+	        
+	        <p class="backg"><a href="Pages/Resources/AnalyticalServices.php" target="_self">Sophisticated Analytical Instruments Services</a></p>
+	        
+	        <p class="backg"><a href="Pages/Business/business.php" target="_self">Business Development</a></p>
+	        
+          </div>
+		    <div class="bloga">
+	        <h2>News</h2>
+	                   </div>
+        </div>
+        <br class="spacer" />
+    </div>
+<script type="text/javascript">
+var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
+</script>
+	<!-- InstanceEndEditable --><!-- body end -->
+	</div>
+    <div class="push"></div>
+    <!-- footer start -->
+    <div id="footer">
+		<div class="footer">
+			<ul>
+    <li><a href="index.php" title="Home" target="_self" class="hover">Home</a></li>
+    <li><a href="Pages/About/about_us.php" title="About Us" target="_self" class="noNav">About Us</a></li>
+    <li><a href="Pages/Research/Research.php" title="Research" target="_self" class="noNav">Research</a></li>
+    <li><a href="Pages/Projects/projects.php" title="Projects" target="_self" class="noNav">Projects</a></li>
+    <li><a href="Pages/Technology/Technology.php" title="Technology" target="_self" class="noNav">Technology</a></li>
+    <li><a href="Pages/Business/business.php" title="Business" target="_self" class="noNav">Business</a></li>
+    <li><a href="Pages/Resources/KRC_Library.php" title="Resources" target="_self" class="noNav">Resources</a></li>
+    <li><a href="Pages/Jobs/Jobs.php" title="Jobs" target="_self" class="noNav">Jobs</a></li>
+    <li><a href="Pages/Contact/Contact.php" title="Contact" target="_self" class="noNav">Contact</a></li>
+    <li><a href="Pages/Tenders/Tenders.php" title="Tenders" target="_self" class="noNav">Tenders</a></li>
+  </ul>
+			<p>�CSMCRI. All rights reserved.<br class="spacer" />
+		</p>
+          <p class="tworld"><a href="#" title="Address">Address:- Gijubhai Badheka Marg, Bhavnagar - 364021, Gujarat, INDIA</a></p>
+		</div>
+	</div>
+	<!-- footer end -->		
+</body>
+<!-- InstanceEnd --></html>

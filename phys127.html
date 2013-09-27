@@ -1,0 +1,351 @@
+<base href="http://www.kettering.edu/~drussell/demos.html">
+<!DOCTYPE html>
+
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<TITLE>Dan Russell's Acoustics and Vibration Animations</TITLE>
+<base href="http://www.acs.psu.edu/drussell/">
+<!-- Start date script -->
+<script><!-- Hide from JavaScript-Disabled Browsers
+function getFullYear(n)
+{
+  var yr = n.getYear()
+  if (yr < 1000) yr += 1900
+  return yr
+}
+function adddate() {
+var isnMonths = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+var isnDays   = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
+var now       = new Date();
+var day       = now.getDate();
+var month     = now.getMonth();
+var year      = getFullYear(now);
+var dname     = isnDays[now.getDay()];
+var mname     = isnMonths[now.getMonth()]
+document.write(dname + ", " + mname + " " + day + ", " + year );
+}
+var today     = new Date();
+hrs=today.getHours();
+min=today.getMinutes();
+sec=today.getSeconds();
+clckh=""+((hrs>12)?hrs-12:hrs);
+clckm=((min<10)?"0":"")+min;
+clcks=((sec<10)?"0":"")+sec;
+clck=(hrs>=12)?"P.M.":"A.M.";
+// End Hiding -->
+</script>
+<!-- End date script -->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24823805-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<style type="text/css">
+	body {
+		font-family: Arial, Verdana, sans-serif;
+		font-size: 90%;
+		width: 1100px;
+		margin: 5px auto 5px auto;
+		text-align: center;
+		column-count: 2;
+		background-color: white;}
+	header {
+		float: center;
+		color: white;
+		background-color: #003266; }
+	h1 {
+		font-size: 300%;
+		text-align: center;
+		padding: 30px 0 30px 0;
+		margin: 0 0 5px 0;}
+	h2 {
+		font-size: 200%;
+		color: #003266;
+		text-align: center;}
+	h3 {
+		font-size: 150%;
+		color: #003266;
+		text-align: left;}
+	p {text-align:left;}
+	div.column1of2 { 
+		float: left;
+		width: 540px;
+		margin: 0px 10px 0px 0px;
+		text-align:left;}
+	div.column2of2 {
+		float: left;
+		width: 540px;
+		margin: 0px 0px 0px 10px;
+		text-align: left;}
+	div.one {
+		text-align: left;
+		width: 900px;
+		float: left;
+		margin: 0px 100px 0px 100px;}
+	p.name {
+		font-size: 175%;
+		font-weight: bold;
+		padding-top: 20px;}
+	p.psu {
+		font-size: 130%;}
+	p.date {
+		color: green;
+		font-size: 80%;
+		text-align: center;}
+	p.copy {
+		color: red;
+		font-size: 80%;
+		text-align: center;}
+	p.center {
+		text-align: center;
+		font-size: 80%;
+		color: green;}
+	hr {
+		width: 1100px;
+		float: left;
+		height: 6px;
+		border: 0;
+		background-color: #003266;}
+	img.left {
+		border: 0;
+		padding-right: 10px;
+		vertical-align: text-top;
+		float: left;}
+	img.top {
+		border: 0;
+		padding: auto;
+		position: absolute;
+		vertical-align: text-top;
+		float: top;}
+	img.mid {
+		border: 0;
+		padding-left: 10px;
+		vertical-align: middle;}
+	li {
+		margin-left: 0;
+		margin-right: 10%;
+		margin-top: .5em;
+		margin-bottom: .5em;}
+	footer {
+		color: white;
+		background-color: #003266;	
+		font-size: 80%; 		
+		text-align: center;
+		width: 800px;
+		float: left;
+		padding-top: 15px;
+		padding-bottom: 5px;
+		padding-left: 150px;
+		padding-right: 150px;
+		clear: both;}
+</style>
+</HEAD>
+
+<body>
+<header >
+<h1>Acoustics and Vibration Animations</h1>
+</header>
+
+<article>
+<div class="column1of2">
+<p><img class="left" src="images/cru-talk-1.jpg" width=220 alt="photograph of Dan Russell" />
+	<a href="http://www.acs.psu.edu">
+<img class="top" src="http://www.acs.psu.edu/drussell/images/psu-acs.gif" width=200 alt="Logo for Penn State Acoustics"></a></p><br />
+	<p class="name"><br /><a href="http://www.acs.psu.edu/drussell/">Dan Russell</a></p>
+	<p class="psu">Professor of Acoustics <br /> Director of Distance Education <br />
+	Graduate Program in Acoustics</p>
+</div>
+<div class="column2of2">
+<p>The links below contain animations illustrating acoustics and vibration, waves and oscillation concepts. I started using <a href="http://www.wolfram.com/"><i>Mathematica</i></a> to create animations to help me understand and visualize certain acoustics and vibration phenomena in 1992 while I was a Ph.D. student in the Graduate Program in Acoustics at Penn State.  For the next 16 years (1995-2011) I was a physics professor at Kettering University and continued creating animations and using them as educational tools for the courses I was teaching about waves and acoustics. Sometime around 1998 or so I began writing webpages and adding them to this online collection. Now that I'm back at Penn State, teaching graduate level acoustics, I'm continuing to add to my collection of animations.  My intent has always been to create physically and mathematically correct animations, accompanied by explanatory text, that illustrate complicated phenomena involving waves and vibration in a manner that aids student understanding.  I hope you find these animations useful.  </p>
+<ul>
+	<li style="list-style-type:circle"> <a href="http://www.acs.psu.edu/drussell/Demos/copyright.html"><b> Copyright Questions and Permissable Use of Animations</b></a></li>
+	<li style="list-style-type:circle"> Please send comments about this page to: <a HREF="mailto:drussell@engr.psu.edu"> <i>drussell@engr.psu.edu</i> </a></li>
+</ul>
+</div>
+</article>
+
+<hr />
+<p class="copy">All contents of these pages are &copy;1998-2013 by <a href="http://www.acs.psu.edu/drussell/">Daniel A. Russell</a> and may not used in other web pages or reports without <a href="http://www.acs.psu.edu/drussell/Demos/copyright.html">permission</a>.</p>
+<p class="date">Today is <script> adddate() // </script>. The contents (and links) on this page were last updated on <b>March 18, 2013</b>.
+<div style="color:red; text-align:left;width:900;margin-left:100px;margin-right:100px; float:center;">
+<p>I am in the process of attempting to bring all of the pages on this site into compliance with current HTML5, CSS3, and W3c Web Accessibility standards.  The bullet symbols used in the lists below identify pages as </p>
+<ul>
+<li style="list-style-type:circle"> (open circle) still needs to be updated</li>
+<li style="list-style-type:disk"> (filled disk) updated to HTML5 and CSS3.</li>
+</ul>
+<p>As far as I can tell most of the updated pages work correctly with <b>Safari v6</b>, <b>Google Chrome v24</b>, <b>Maxthon 4</b>, and <b>Explorer v10</b>.  I am finding some layout and style problems with <b>Firefox v19</b>.  I'll try to fix these as soon as possible.  Please let me know if you find page errors or pages that don't load correctly.  Thanks!</p></div>
+<hr />
+
+<article>
+<div class="column1of2">
+<h2>Sound Waves and Sources</h2>
+<h3>Basic Wave Phenomena</h3>
+<ul>
+	<li> <a href="Demos/waves-intro/waves-intro.html">What is a Wave?</a> - a disturbance which travels through a medium</li>
+	<li> <a href="Demos/wave-x-t/wave-x-t.html">Wave Motion in Space and Time</a> - distinguishing between the time behavior and spatial behavior of waves</li> 
+	<li style="list-style-type:circle"> <a href="Demos/superposition/superposition.html"> Superposition of Two Waves</a> - Interference, Standing Waves, and Beats</li>
+	<li style="list-style-type:circle"> <a href="Demos/Fourier/Fourier.html">Fourier Decomposition </a> - building a wave shape from sines and cosines </li>
+	<li> <a href="Demos/reflect/reflect.html"> Phase changes upon reflection </a> from hard, soft, and mixed boundaries</li>
+	<li> <a href="Demos/SWR/SWR.html">Reflections from Impedance and the Standing Wave Ratio.</a> - A sinusoidal wave train reflects from an impedance discontinuity. The resulting wave pattern defines the Standing Wave Ratio used to measure impedance.</li>
+	<li style="list-style-type:circle"> <a href="Demos/refract/refract.html">Refraction of Sound Waves</a> - how temperature gradients make sound waves change direction</li>
+	<li style="list-style-type:circle"><a href="Demos/doppler/doppler.html"><b>The Doppler Effect</b></a> - moving sound sources and sonic booms</li>
+<!--  <li style="list-style-type:circle"> <a href="Demos/interference/interference.html"> Constructive and Destructive Interference</a> of Two Coherent Wave Sources (<i>under construction</i>) -->
+</ul>
+
+<h3>Sound Waves and Radiation from Sources</h3>
+<ul>
+	<li><a href="Demos/waves/wavemotion.html">Longitudinal and Transverse Waves</a> - Particle Motion for Longitudinal, Transverse, Water and Rayleigh Surface Waves</li>
+	<li> <a href="Demos/StandingWaves/StandingWaves.html">Standing Longitudinal Sound Waves.</a> - Animating the relationship between particle motion and pressure in a standing longitudinal sound wave in a pipe.</li>
+	<li style="list-style-type:circle"> <a href="Demos/rad2/mdq.html"> Sound Fields Radiated by Simple Sources</a> - pressure sound fields produced by monopole, dipole, and quadrupole sources</li>
+	<li> <a href="Demos/Bipole/Bipole-kd.html"> Directivity Patterns for an Acoustic Doublet (bipole) as a function of <i>kd</i>
+	<li style="list-style-type:circle"> <a href="Demos/radiation/radiation.html">Sound Radiation from Cylindrical Radiators</a> - particle motion and sound fields produced by vibrational modes of a cylinder</li>
+	<li style="list-style-type:circle"><a href="Demos/forkanim/forkanim.html">Sound field radiated by a Tuning Fork</a> - animations to accompany a paper published in the <i>American Journal of Physics</i></li>
+	<li style="list-style-type:circle"> <a href="Demos/BaffledPiston/BaffledPiston.html">The Baffled Piston </a> - approximation of the sound field radiated by a loudspeaker</li>
+</ul>
+
+<h3>More Complicated Wave Phenomena</h3>
+<ul>
+	<li style="list-style-type:circle"> <a href="Demos/waveguide/waveguide.html">Evanescent Modes in Waveguides</a> - higher order modes in ducts driven above and below their cutoff frequency.</li>
+<!--	<li style="list-style-type:circle"> <a href="Demos/PhaseGroupSpeed/PG.html">Phase Speed versus Group Speed</a> - Dispersion (wave speed not constant) <font color=darkgreen> [under construction, but movies work]</font></li> -->
+	<li style="list-style-type:circle"> <a href="Demos/Dispersion/dispersion.html">Waves in Dispersive Media</a> - when wave speed depends on frequency</li>
+	<li style="list-style-type:circle"> Examples of Dispersive Waves - <a href="Demos/Dispersion/Flexural.html">Flexural waves</a> and Quasi-longitudinal waves on a rod</li>
+	<li style="list-style-type:circle"> <a href="Demos/Solitons/solitons.html">Collision Between Two Solitary Waves</a> - what is a soliton? and what happens when two solitons collide?</li>
+<!-- 
+ <li style="list-style-type:circle"> Trace Velocity - phase speed versus group speed for waves travelling along a surface </li>
+ <li style="list-style-type:circle">  Waveguides - higher order acosutic modes in a duct </li>
+ <li style="list-style-type:circle"> Partial Wave Expansion - expressing a 3-D plane wave in terms of spherical waves </li>
+ <li style="list-style-type:circle"> Plane Waves, Cylindrical Waves, and Spherical Waves</li>
+-->
+</ul>
+<h3>Room Acoustics</h3>
+<ul>
+	<li style="list-style-type:circle"> <a href="Demos/RoomModes/driving.html">Driving room modes & source location</a> - How does the (resonance) response of a room depend on source location?</li>
+	<li style="list-style-type:circle"> <a href="Demos/RT60/RT60.html">Reverberation Times in a small room</a> - sound files and plots for measurements of <i>T</i><sub>60</sub>.</li>
+</ul>
+</div>
+
+<div class="column2of2">
+<h2>Vibration and Structural Waves</h2>
+<h3>Vibration of 1-DOF Simple Oscillators</h3>
+<ul>
+	<li style="list-style-type:circle"><a href="Demos/complex/complex.html">Comparing Circular and Sinusoidal Motion </a> - how is circular motion in the complex plane (magnitude and phase) related to sine and cosine functions?</li>
+	<li style="list-style-type:circle"> <a href="Demos/SHO/mass.html">Simple Harmonic Oscillator</a> - with and without damping, transfer of energy between kinetic and potential forms</li>
+	<li style="list-style-type:circle"> <a href="Demos/SHO/damp.html"> Damped Harmonic Oscillator</a> - underdamped, overdamped, and critically damped</li>
+	<li style="list-style-type:circle"> <a href="Demos/phase-diagram/phase-diagram.html">Phase-Space Diagrams for an Oscillator</a> - plotting velocity v(t) as a function of position x(t)</li>
+	<li style="list-style-type:circle"> <a href="Demos/SHO/mass-force.html">Forced Harmonic Oscillator</a> - transient and steady state response to a force applied to the mass</li>
+	<li style="list-style-type:circle"> <a href="Demos/basemotion/BaseMotion.html">Base Motion</a> - transient and steady state response of an oscillator to displacement of its support</li>
+	<li style="list-style-type:circle"> <a href="Demos/Pendulum/Pendula.html">The Simple Pendulum </a> - comparing the linear approximation (small angle) with a real pendulum</li>
+</ul>
+<h3>Vibration of Multi-DOF Systems</h3>
+<ul>
+	<li style="list-style-type:circle"><a href="Demos/coupled/coupled.html">Coupled Oscillators</a> - energy transfer between two mass-spring systems coupled together</li>
+	<li style="list-style-type:circle"> <a href="Demos/absorber/DynamicAbsorber.html">Dynamic Absorbers</a> - J.P. Den Hartog's classical undamped tuned dynamic absorber</li>
+	<li style="list-style-type:circle"> <a href="Demos/multi-dof/multi-dof.html">Vibrational modes of a multi-dof system</a> - progression of mode shapes from single degree-of-freedom to continuous structure</li>
+	<li> <a href="Demos/multi-dof-springs/multi-dof-springs.html">Multiple-DOF mass-spring systems.</a> - improved animation of the natural modes of a multi-degree-of-freedom mass-spring system.</li>
+</ul>
+<h3>Vibrational Modes of Continuous Systems</h3>
+<ul>
+	<li style="list-style-type:circle"> <a href="Demos/HangChain/HangChain.html"> Vibrational Modes of a Hanging Chain </a> - mode shapes for a hanging chain</li>
+	<li style="list-style-type:circle"> <a href="Demos/string/Fixed.html">Vibration of a Fixed-Fixed String </a> - mode shapes, and frequency spectra for a plucked string</li>
+	<li style="list-style-type:circle"> <a href="Demos/MembraneSquare/Square.html">Rectangular Membrane</a> - and degenerate modes of a square membrane <i>[no text yet, but movies work]</i></li>
+	<li style="list-style-type:circle"> <a href="Demos/MembraneCircle/Circle.html">Circular Membrane</a> - or how a drum head vibrates</li>
+	<li style="list-style-type:circle"> <a href="Demos/Flexural/bending.html">Flexural Vibrations of a Beam</a> - how the mode shapes depend on boundary conditions (no text yet, but animations work)</li>
+	<li> <a href="Demos/TuningFork/fork-modes.html">Vibrational Modes of a Tuning Fork.</a> - how does a tuning fork vibrate?  </li>
+	<li style="list-style-type:circle"> <a href="Demos/batvibes.html">Vibration of Baseball Bats</a> - flexural bending modes and cylinder modes </li>
+	<li style="list-style-type:circle"> <a href="Demos/hockey/hockey.html">Bending and Torsional Vibration in a Hockey Stick</a> - flexural bending and torsional twisting vibration in a hockey stick</li>
+	<li style="list-style-type:circle"> <a href="Demos/BeerBottle/beerbottle.html">Vibration Modes of a Glass Beer Bottle</a> - what vibration shapes are responsible for the "clink" of a glass bear bottle?</li>
+	<li style="list-style-type:circle"> <a href="Demos/Rackets/Racket.html">Vibrational Mode Shapes of a Racquetball Racket</a> - Bending, Torsional and Membrane modes in a racket.</li>
+	<li style="list-style-type:circle"><a href="guitars/electric.html">Vibrational Modes of an Electric Guitar</a> - actual experimental data</li>
+	<li style="list-style-type:circle"><a href="guitars/hummingbird.html">Vibrational Modes of an Acoustic Guitar</a> - actual experimental data</li>
+</ul>
+
+<h3>Miscellaneous Animations</h3>
+<ul>
+	<li style="list-style-type:circle"> <a href="Demos/COM/com-a.html">Motion of the Center-of-Mass</a> - not exactly acoustics and vibration, but the animations are cool</li>
+</ul>
+</div>
+<hr />
+</article>
+
+<article>
+<div class="one">
+<h2>Interactive Plots Demonstrating Acoustic Phenomena</h2>
+<p class="center"><img style="padding-left:auto; vertical-align:middle;" src="images/cdf_player-logo.png" height=25 >The <b>interactive plot</b> in these links contain <i>Mathematica</i> Computable Document Format files and require the use of the free <a href="http://www.wolfram.com/cdf-player/">Wolfram CDF Player</a>.</p>
+<ul>
+<li> <a href="Demos/Bipole/Bipole-kd.html"> Directivity Patterns for an Acoustic Doublet (bipole) as a function of <i>kd</i>
+
+<li><a href="Demos/Stiffness-Inharmonicity/Stiffness-B.html">Inharmonicity due to Stiffness for Guitar Strings</a> - how does the stiffness of a steel guitar string affect the integer relationship of the resonance frequencies?</li>
+</ul>
+</div>
+<hr />
+</article
+
+<article>
+<div class="one">
+<h2>Videos of Acoustics Demonstrations on my <a href="http://www.youtube.com/user/drdanku">YouTube Channel</a> </h2>
+<ul>
+<li><a href="http://www.youtube.com/watch?v=y7qS6SyyrFU">Longitudinal Wave Propagation on a Slinky </a> - High Speed Video of two demonstrations:  (1) Propagation speed depends on the number of slinky coils and (2) Propagation time is constant because wave speed is linearly proportional the stretch slinky length.</li>
+<li><a href="http://www.youtube.com/watch?v=YyOUJUOUvso">The Coupled Oscillator </a> - Two pendulums connected by a soft spring exhibit a coupled behavior</li>
+<li><a href="http://www.youtube.com/watch?v=kvG7OrjBirI">Multiple-DOF Oscillations </a> - Whiffle Balls and Rubber bands demonstrate mode shapes for 1-, 2-, 3-, and 4-degree-of-freedom mass-spring systems.</li>
+<li><a href="http://www.youtube.com/watch?v=46lk2FXzwT8">The Friction Oscillator </a> - A simple harmonic oscillator for which kinetic friction forces provide the restoring force that actually causes the oscillation to occur. <ul><li style="color:red"><i>This movie tied for First Place in the 2012 <a href="http://devel.acosoc.org/galleryofacoustics.htm">Gallery of Acoustics</a> at the 164th meeting of the Acoustical Society of America.</i></li></ul></li>
+<li><a href="http://www.youtube.com/watch?v=_X72on6CSL0">Motion of a Plucked String </a> - High Speed Video (1000fps) showing the motion of a plucked string.</li>
+<li><a href="http://www.youtube.com/watch?v=QksHbCwYngw">Mode Shapes of a Circular Membrane #2 </a> - High Speed Video (1000fps) showing the first several mode shapes of a circular membrane.</li>
+<li><a href="http://www.youtube.com/watch?v=v4ELxKKT5Rw">Mode Shapes of a Circular Membrane #1 </a> - The first several mode shapes of a circular membrane (captured with a strobe light)</li>
+<li><a href="http://www.youtube.com/watch?v=uVWnQoVtxck">Regions of Forced Response </a> - Comparing the stiffness-controlled, damping-controlled, and mass-controlled regions of the response curve for a forced, damped simple harmonic oscillator.</li>
+<li><a href="http://www.youtube.com/watch?v=je7eLZS6GG0">Acoustic Propulsion </a> - nonlinearities in Helmholtz resonators driven at very high pressure levels (greater than 125dB) create an acoustic thrust, similar to a rocket.</li>
+</ul>
+</div>
+</article>
+	
+
+<article>
+<hr />
+<div class="one">
+<h2>Awards and Reviews</h2>
+<ul>
+	<li> This web site was favorably reviewed in <a href="Demos/RR_2010_Vol31_No4.pdf"><i>Ear and Hearing,</i>, Vol. 31, No. 4, pp. 585-586 (2010)</a></li>
+	<li> This web site was highlighted in the <a href="Demos/physicstoday.pdf">Web Watch</a> section of the <u>May 2003</u> issue of <a href="http://www.physicstoday.org/"><i>Physics Today</i></a></li>
+	<li>This web site was awarded the 2002 <a href="http://www.science-web-award.com/">Science-Web-Award</a> <a href="http://www.science-web-award.com/"><img class="mid" src="images/award2002.gif" alt="2002 Science Web Award"></a></li>
+	<li> On Nov 26, 2002 this web side received a 5-star 
+		<img src="images/1star.gif" alt="MERLOT 5-star rating">
+		<img src="images/1star.gif" alt="MERLOT 5-star rating">
+		<img src="images/1star.gif" alt="MERLOT 5-star rating">
+		<img src="images/1star.gif" alt="MERLOT 5-star rating">
+		<img src="images/1star.gif" alt="MERLOT 5-star rating"> 
+<a href="http://www.merlot.org/artifact/ArtifactDetail.po?oid=1010000000000059219">peer review</a> rating from <b><a href="http://www.merlot.org">MERLOT</a> (<small>Multimedia Educational Resource for Learning and Online Teaching</small>)</b><br /> 5 out of 5 stars in each of the three categories:
+<ul>
+<li style="list-style-type:circle">Content Quality</li>
+<li style="list-style-type:circle">Potential Effectiveness as a Teaching Tool</li>
+<li style="list-style-type:circle">Ease of Use for both Students and Faculty</li>
+</ul> 
+</li>
+	<li> In July 2002 this web site was awarded the <a href="http://www.science-web-award.com/">Science-Web-Award</a> seal "<i>For Extraordinary Effort</i>" <a href="http://www.science-web-award.com/"><img class="mid" src="Demos/ScienceWebAward.gif" alt="Science Web Award Seal for Extraordinary Effort"></a></li>
+	<li> This web site was highlighted in the NETWATCH section of the <a href="Demos/Science.pdf">August 31, 2001</a> issue of <a 
+href="http://www.science.com/"><i>Science</i></a> Magazine</li>
+	<li> This web site was a <a href="http://docs.yahoo.com/picks/20010827.html#6">Yahoo! Pick of the Week (08-27-2001)</a></li>
+	<li> This web site was <a href="Demos/review2.pdf">reviewed</a> in the February 21, 2000 issue of <i><u>Sound & Communications</u></i> (Vol. 21, No. 2, pg 18)</li>
+	<li> This web site was given a <i>Five Star Rating</i> by <a href="http://www.schoolzone.co.uk/"><b>Schoolzone's</b></a> panel of expert teachers<a href="http://www.schoolzone.co.uk"><img class="mid" src="Demos/SZ5star.gif" width="120" alt="Schoolzone Five Star Rating"></a></li>
+</ul>					
+</div>
+</article>
+
+<hr />
+
+<footer>	
+<div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://www.acs.psu.edu/drussell/demos.html', 'user' : 907922, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2011-07-09', 'lang' : 'en' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript> <a href="http://www2.clustrmaps.com/user/32ddda92">
+<img class="left" src="http://www2.clustrmaps.com/stats/maps-no_clusters/www.acs.psu.edu-drussell-demos.html-thumb.jpg" alt="Locations of visitors to this page"/></a></noscript>
+</div>
+<img class="right" src="Demos/ClusterMaps/9July2011-10July2013.jpg">
+</footer>
+
+</body>
+
+</HTML> 

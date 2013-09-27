@@ -1,0 +1,1151 @@
+<base href="http://www.separationsnow.com/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Home - separationsNOW.com</title>
+		<meta name="description" content="."/>
+		<link rel="stylesheet" type="text/css" media="screen" href="/sepspec/css/template.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="/sepspec/css/sepspec.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="/sepspec/css/siteStyles.css" />
+<!-- 	<link rel="stylesheet" type="text/css" media="screen" href="/sepspec/css/home.css" /> -->
+		<link rel="stylesheet" type="text/css" media="screen" href="/sepspec/css/sep.css" />
+		<link rel="stylesheet" type="text/css" media="print" href="/sepspec/css/print.css" />
+		
+
+		<!--[if IE 6]>
+			<link href="/sepspec/css/ie6.css" rel="stylesheet" type="text/css">
+		<![endif]-->
+
+		<!--[if IE 7]>
+			<link href="/sepspec/css/ie7.css" rel="stylesheet" type="text/css">
+		<![endif]-->
+				
+		<!--[if IE 8]>
+			<link href="/sepspec/css/ie8.css" rel="stylesheet" type="text/css">
+		<![endif]-->
+		
+		<!--[if IE 9]>
+			<link href="/sepspec/css/ie9.css" rel="stylesheet" type="text/css">
+		<![endif]-->
+		
+		<script type="text/javascript" src="/common/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/common/jquery/spr/jquery.sprcore.min.js"></script>
+<script type="text/javascript" src="/common/jquery/spr/jquery.sprnavhighlight.js"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-17566142-6");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script language="Javascript" src="/common/jquery/spr/jquery.sprcontentblind.js" type="text/javascript"></script>
+
+			<script>
+	$(document).ready( function(){
+		jQuery.resourceLoader({
+			resources : [
+				'/common/jquery/jquery.cookie.js'
+			],
+			ready: function(){
+				if (jQuery.cookie('utc_offset') == null) {
+					var d = new Date();
+					var offset =  -d.getTimezoneOffset();
+					jQuery.cookie('utc_offset',offset,{ path: '/',expiry:'3600' });
+					
+										if ("/SpringboardWebApp/sepspec/view/sepIndex.html".indexOf("email-validation") > -1) {
+						// Don't update timezone for email change validation URLs
+					} else {
+					
+						if (location.href.indexOf('?') < 0) {
+							location.href = location.href + "?tzcheck=1";
+						} else {
+							location.href = location.href + "&tzcheck=1";
+						}
+						
+						location.refresh(true);
+					
+					}					
+				}
+			}
+		})
+	});
+</script>
+
+	</head>
+	<body>
+
+		<div id="siteWrap">
+			<!-- Customise Area Block / Place Holder  START / END -->
+
+				<div id="siteHeaderWrap" class="home">
+
+					<div id="siteHeader">	
+						<div id="logoAndSearchWrap">
+							<!-- Logo and Search Area / Blocks START -->
+							<h1><a href="http://www.separationsnow.com/">separationsNOW.com </a>
+</h1>
+							<p class="offScreen"><a href="#mainSiteCenterWrap">Skip to content</a></p>
+							
+							<h2 class="offScreen">Site Search</h2>
+							    <!-- start template: searchFormBlock -->
+  <form action="/view/searchResults.html" method="get">
+	<fieldset>
+		<legend>Search the site</legend>
+		<label><span class="offScreen">Please enter </span>Search<span class="offScreen"> term</span>: </label><input name="q" type="text" value="" />
+		  <!--  value=  -->
+
+  <select id="searchtid" name="tid" >
+      <option id="" value="" class="tierl"
+                  selected = "true"
+                       >All Content</option>
+      <option id="1493281" value="1493281" class="tierl"
+            >Ezines</option>
+      <option id="1493293" value="1493293" class="tierl"
+            >News</option>
+      <option id="1493295" value="1493295" class="tierl"
+            >Webinars</option>
+      <option id="1493273" value="1493273" class="tierl"
+            >Books</option>
+      <option id="1493301" value="1493301" class="tierl"
+            >Education Articles</option>
+      <option id="1493297" value="1493297" class="tierl"
+            >Events</option>
+      <option id="1493291" value="1493291" class="tierl"
+            >Videos</option>
+      <option id="1493299" value="1493299" class="tierl"
+            >Journals</option>
+      <option id="1493289" value="1493289" class="tierl"
+            >Blog</option>
+      <option id="1493287" value="1493287" class="tierl"
+            >Suppliers</option>
+      <option id="1493633" value="1493633" class="tierl"
+            >Societies</option>
+      <option id="1493303" value="1493303" class="tierl"
+            >Advertorials</option>
+      <option id="1493277" value="1493277" class="tierl"
+            >Early View Articles</option>
+      <option id="1493279" value="1493279" class="tierl"
+            >Application Notes</option>
+    </select>
+		  <!--  value=  -->
+
+  <select id="searchcid" name="cid" >
+      <option id="" value="" class="tierl"
+                  selected = "true"
+                       >Entire Site</option>
+      <option id="1493661" value="1493661" class="tierl1"
+            >Sample Preparation</option>
+      <option id="1497539" value="1497539" class="tierl2"
+            >&nbsp; Headspace sampling</option>
+      <option id="1497543" value="1497543" class="tierl2"
+            >&nbsp; Solids: sample prep techniques</option>
+      <option id="1497541" value="1497541" class="tierl2"
+            >&nbsp; Liquids: SPE/SPME</option>
+      <option id="1497525" value="1497525" class="tierl2"
+            >&nbsp; Liquids: LLE</option>
+      <option id="1497537" value="1497537" class="tierl2"
+            >&nbsp; Liquids: other techniques</option>
+      <option id="1497533" value="1497533" class="tierl2"
+            >&nbsp; Gases: VOST & trapping techniques</option>
+      <option id="1497531" value="1497531" class="tierl2"
+            >&nbsp; Gases: other sample prep technqiues</option>
+      <option id="1497529" value="1497529" class="tierl2"
+            >&nbsp; Suspensions: sample prep techniques</option>
+      <option id="1497535" value="1497535" class="tierl2"
+            >&nbsp; Material science</option>
+      <option id="1497527" value="1497527" class="tierl2"
+            >&nbsp; Nanotechnology</option>
+      <option id="1497549" value="1497549" class="tierl2"
+            >&nbsp; Forensics/drug testing</option>
+      <option id="1497545" value="1497545" class="tierl2"
+            >&nbsp; Environmental analysis</option>
+      <option id="1497547" value="1497547" class="tierl2"
+            >&nbsp; Biotechnology/pharmaceutical analysis</option>
+      <option id="1497551" value="1497551" class="tierl2"
+            >&nbsp; Food quality analysis</option>
+      <option id="1493675" value="1493675" class="tierl1"
+            >Electrophoresis</option>
+      <option id="1497559" value="1497559" class="tierl2"
+            >&nbsp; Capillary electrophoresis</option>
+      <option id="1497555" value="1497555" class="tierl2"
+            >&nbsp; Gel electrophoresis</option>
+      <option id="1497561" value="1497561" class="tierl2"
+            >&nbsp; Microfluidics</option>
+      <option id="1497553" value="1497553" class="tierl2"
+            >&nbsp; Other electroseparations</option>
+      <option id="1497557" value="1497557" class="tierl2"
+            >&nbsp; Proteomics</option>
+      <option id="1665695" value="1665695" class="tierl2"
+            >&nbsp; Isoelectric focusing</option>
+      <option id="1665701" value="1665701" class="tierl2"
+            >&nbsp; Electrochromatography</option>
+      <option id="1665703" value="1665703" class="tierl2"
+            >&nbsp; Dielectrophoresis</option>
+      <option id="1665699" value="1665699" class="tierl2"
+            >&nbsp; Forensics/Drug Testing</option>
+      <option id="1665709" value="1665709" class="tierl2"
+            >&nbsp; Environmental Analysis</option>
+      <option id="1665697" value="1665697" class="tierl2"
+            >&nbsp; Biotechnology/Pharmaceutical Analysis</option>
+      <option id="1665707" value="1665707" class="tierl2"
+            >&nbsp; Food Quality Analysis</option>
+      <option id="1665705" value="1665705" class="tierl2"
+            >&nbsp; Two dimensional gel electrophoresis</option>
+      <option id="1493653" value="1493653" class="tierl1"
+            >Gas Chromatography</option>
+      <option id="1497577" value="1497577" class="tierl2"
+            >&nbsp; GCxGC</option>
+      <option id="1497579" value="1497579" class="tierl2"
+            >&nbsp; Other multidimensional GC techniques</option>
+      <option id="1497575" value="1497575" class="tierl2"
+            >&nbsp; GC-MS</option>
+      <option id="1497569" value="1497569" class="tierl2"
+            >&nbsp; Other hyphenated GC techniques</option>
+      <option id="1497573" value="1497573" class="tierl2"
+            >&nbsp; Supercritical fluid chromatography (SFC)</option>
+      <option id="1497567" value="1497567" class="tierl2"
+            >&nbsp; Other GC separations</option>
+      <option id="1497565" value="1497565" class="tierl2"
+            >&nbsp; Material science</option>
+      <option id="2019259" value="2019259" class="tierl2"
+            >&nbsp; Industrial GC</option>
+      <option id="1497563" value="1497563" class="tierl2"
+            >&nbsp; Nanotechnology</option>
+      <option id="1497571" value="1497571" class="tierl2"
+            >&nbsp; Forensics/drug testing</option>
+      <option id="1497583" value="1497583" class="tierl2"
+            >&nbsp; Environmental analysis</option>
+      <option id="1497585" value="1497585" class="tierl2"
+            >&nbsp; Biotechnology/pharmaceutical analysis</option>
+      <option id="2032973" value="2032973" class="tierl2"
+            >&nbsp; Plant studies</option>
+      <option id="2036835" value="2036835" class="tierl2"
+            >&nbsp; Clinical</option>
+      <option id="1497587" value="1497587" class="tierl2"
+            >&nbsp; Food quality analysis</option>
+      <option id="1493643" value="1493643" class="tierl1"
+            >HPLC</option>
+      <option id="1497597" value="1497597" class="tierl2"
+            >&nbsp; RPLC</option>
+      <option id="1497599" value="1497599" class="tierl2"
+            >&nbsp; NPLC</option>
+      <option id="1497605" value="1497605" class="tierl2"
+            >&nbsp; Capillary LC</option>
+      <option id="1497611" value="1497611" class="tierl2"
+            >&nbsp; Nano LC</option>
+      <option id="1497609" value="1497609" class="tierl2"
+            >&nbsp; UHPLC</option>
+      <option id="1497601" value="1497601" class="tierl2"
+            >&nbsp; SEC</option>
+      <option id="1986739" value="1986739" class="tierl2"
+            >&nbsp; GPC</option>
+      <option id="1497603" value="1497603" class="tierl2"
+            >&nbsp; LCxLC</option>
+      <option id="1497607" value="1497607" class="tierl2"
+            >&nbsp; Other multidimensional LC techniques</option>
+      <option id="1497595" value="1497595" class="tierl2"
+            >&nbsp; LC-MS</option>
+      <option id="1497593" value="1497593" class="tierl2"
+            >&nbsp; Other hyphenated LC techniques</option>
+      <option id="1497591" value="1497591" class="tierl2"
+            >&nbsp; Other LC separations</option>
+      <option id="1497615" value="1497615" class="tierl2"
+            >&nbsp; Material science</option>
+      <option id="1497617" value="1497617" class="tierl2"
+            >&nbsp; Nanotechnology</option>
+      <option id="1497613" value="1497613" class="tierl2"
+            >&nbsp; Forensics/drug testing</option>
+      <option id="1497623" value="1497623" class="tierl2"
+            >&nbsp; Environmental analysis</option>
+      <option id="2033067" value="2033067" class="tierl2"
+            >&nbsp; Plant studies</option>
+      <option id="2036837" value="2036837" class="tierl2"
+            >&nbsp; Clinical</option>
+      <option id="1497621" value="1497621" class="tierl2"
+            >&nbsp; Biotechnology/pharmaceutical analysis</option>
+      <option id="1497619" value="1497619" class="tierl2"
+            >&nbsp; Food quality analysis</option>
+      <option id="1493647" value="1493647" class="tierl1"
+            >Ion Chromatography</option>
+      <option id="1497629" value="1497629" class="tierl2"
+            >&nbsp; IEC</option>
+      <option id="1497631" value="1497631" class="tierl2"
+            >&nbsp; ISC</option>
+      <option id="1497633" value="1497633" class="tierl2"
+            >&nbsp; IPC</option>
+      <option id="1497635" value="1497635" class="tierl2"
+            >&nbsp; other ion chromatography techniques</option>
+      <option id="1665717" value="1665717" class="tierl2"
+            >&nbsp; Novel chromatography techniques</option>
+      <option id="1665719" value="1665719" class="tierl2"
+            >&nbsp; Multimodal chromatography</option>
+      <option id="1665711" value="1665711" class="tierl2"
+            >&nbsp; Thin-layer chromatography</option>
+      <option id="1665715" value="1665715" class="tierl2"
+            >&nbsp; Forensics/Drug Testing</option>
+      <option id="1665713" value="1665713" class="tierl2"
+            >&nbsp; Environmental Analysis</option>
+      <option id="1665723" value="1665723" class="tierl2"
+            >&nbsp; Biotechnology/Pharmaceutical Analysis</option>
+      <option id="1665721" value="1665721" class="tierl2"
+            >&nbsp; Food Quality Analysis</option>
+      <option id="1493673" value="1493673" class="tierl1"
+            >Proteomics & Genomics</option>
+      <option id="1497641" value="1497641" class="tierl2"
+            >&nbsp; PMF - peptide mass fingerprinting</option>
+      <option id="1497651" value="1497651" class="tierl2"
+            >&nbsp; MALDI-TOF-MS</option>
+      <option id="1497653" value="1497653" class="tierl2"
+            >&nbsp; 2-D gel electrophoresis</option>
+      <option id="1497647" value="1497647" class="tierl2"
+            >&nbsp; Capillary / nano LC</option>
+      <option id="1497643" value="1497643" class="tierl2"
+            >&nbsp; Chemometrics / Informatics</option>
+      <option id="1497649" value="1497649" class="tierl2"
+            >&nbsp; Metabolomics</option>
+      <option id="2034935" value="2034935" class="tierl2"
+            >&nbsp; Clinical</option>
+      <option id="1497645" value="1497645" class="tierl2"
+            >&nbsp; Other proteomics & genomics applications</option>
+      <option id="1665729" value="1665729" class="tierl2"
+            >&nbsp; LC-MS</option>
+      <option id="1665727" value="1665727" class="tierl2"
+            >&nbsp; DNA electrophoresis</option>
+      <option id="1493667" value="1493667" class="tierl1"
+            >Detectors</option>
+      <option id="1497661" value="1497661" class="tierl2"
+            >&nbsp; mass spectroscopy hyphenation</option>
+      <option id="1497665" value="1497665" class="tierl2"
+            >&nbsp; thermal conductivity detector (TCD)</option>
+      <option id="1497667" value="1497667" class="tierl2"
+            >&nbsp; flame photometric detector (FPD)</option>
+      <option id="1497655" value="1497655" class="tierl2"
+            >&nbsp; nitrogen phosphorus detector (NPD)</option>
+      <option id="1497663" value="1497663" class="tierl2"
+            >&nbsp; electron capture detector (ECD)</option>
+      <option id="2121191" value="2121191" class="tierl2"
+            >&nbsp; biosensors</option>
+      <option id="1497659" value="1497659" class="tierl2"
+            >&nbsp; flame ionisation detector (FID)</option>
+      <option id="1497657" value="1497657" class="tierl2"
+            >&nbsp; other detectors</option>
+      <option id="1665737" value="1665737" class="tierl2"
+            >&nbsp; UV detector</option>
+      <option id="1665747" value="1665747" class="tierl2"
+            >&nbsp; Laser-induced fluorescence detector</option>
+      <option id="1665735" value="1665735" class="tierl2"
+            >&nbsp; Electrochemical detectors</option>
+      <option id="1665731" value="1665731" class="tierl2"
+            >&nbsp; NMR detector</option>
+      <option id="1665739" value="1665739" class="tierl2"
+            >&nbsp; Other spectroscopy detectors</option>
+      <option id="1665741" value="1665741" class="tierl2"
+            >&nbsp; Forensics/Drug Testing</option>
+      <option id="1665745" value="1665745" class="tierl2"
+            >&nbsp; Environmental Analysis</option>
+      <option id="1665743" value="1665743" class="tierl2"
+            >&nbsp; Biotechnology/Pharmaceutical Analysis</option>
+      <option id="1665733" value="1665733" class="tierl2"
+            >&nbsp; Food Quality Analysis</option>
+      <option id="1493649" value="1493649" class="tierl1"
+            >Laboratory Informatics</option>
+      <option id="1497669" value="1497669" class="tierl2"
+            >&nbsp; data acquisition</option>
+      <option id="1497675" value="1497675" class="tierl2"
+            >&nbsp; data processing</option>
+      <option id="1497671" value="1497671" class="tierl2"
+            >&nbsp; data management</option>
+      <option id="1497673" value="1497673" class="tierl2"
+            >&nbsp; laboratory information management system (LIMS)</option>
+      <option id="1497687" value="1497687" class="tierl2"
+            >&nbsp; laboratory information system (LIS)</option>
+      <option id="1497689" value="1497689" class="tierl2"
+            >&nbsp; chromatography data system (CDS)</option>
+      <option id="1497691" value="1497691" class="tierl2"
+            >&nbsp; electronic lab notebook (ELN)</option>
+      <option id="1497685" value="1497685" class="tierl2"
+            >&nbsp; scientific data management system (SDMS)</option>
+      <option id="1497683" value="1497683" class="tierl2"
+            >&nbsp; other laboratory informatics solutions</option>
+      <option id="1665767" value="1665767" class="tierl2"
+            >&nbsp; Mathematical modelling</option>
+      <option id="1665763" value="1665763" class="tierl2"
+            >&nbsp; Multivariate analysis</option>
+      <option id="1665759" value="1665759" class="tierl2"
+            >&nbsp; Method optimization</option>
+      <option id="1665765" value="1665765" class="tierl2"
+            >&nbsp; Compound identification and classification</option>
+      <option id="1665755" value="1665755" class="tierl2"
+            >&nbsp; Forensics/Drug Testing</option>
+      <option id="1665757" value="1665757" class="tierl2"
+            >&nbsp; Environmental Analysis</option>
+      <option id="1665761" value="1665761" class="tierl2"
+            >&nbsp; Biotechnology/Pharmaceutical Analysis</option>
+    </select>
+	</fieldset>
+	<input type="submit" value="Go" class="searchButton" />
+	
+</form>
+							
+
+  <!-- end template: searchFormBlock -->
+  
+							<!-- Logo and Search Area / Blocks END-->
+							<p><a href="http://www.wiley.com">Brought to you by Wiley</a></p>
+						</div>
+	
+						<div id="siteNavigationWrap">
+							<h2 class="offScreen">Site Main Navigation</h2>
+							    <!-- start template: sepTopNavigationBlock -->
+  						<script type="text/javascript">
+							$(document).ready(function () {
+								$("#topnav").navhighlight({	highlightselector : ".home"});
+							});
+						</script>
+ 						<!-- Navigation Area / Block START -->
+						<ul id="topnav">
+							<li class="home on"><a href="/view/index.html">Home</a></li>
+							<li class="sampleprep"><a href="/sampleprep">Sample Prep</a></li>
+							<li class="electrophoresis"><a href="/electrophoresis">Electrophoresis</a></li>
+							<li class="gc "><a href="/gc">GC</a></li>
+							<li class="hplc"><a href="/hplc">HPLC</a></li>
+							<li class="ic "><a href="/ic">IC</a></li>
+							<li class="proteomic "><a href="/proteomic">Proteomics & Genomics</a></li>
+							<li class="detectors "><a href="/detectors">Detectors</a></li>
+							<li class="informatics "><a href="/informatics">Informatics</a></li>
+						</ul>
+						<!-- Navigation Area / Block END -->
+						<p><a href="http://www.spectroscopynow.com">Link to spectroscopyNow.com</a></p>
+  <!-- end template: sepTopNavigationBlock -->
+  							  						</div>
+	
+	
+						<div id="mainLoginWrap">
+							<h2 class="offScreen">Site Login Area</h2>
+							<!-- Header Login Block START -->
+							    <!-- start template: loginFormBlock -->
+  
+<!-- <div id="loginArea"> -->
+	
+    	<form method="post" action="/submit/login.html">
+		<fieldset>
+			<legend>Log In Area</legend>
+			<label>Username: </label><input id="loginModelusername" type="text" value="Enter your email address" name="username" size=\"30\" maxlength=\"50\" style=\"input\"
+            onfocus="if(this.value == 'Enter your email address') { this.value='';}" onblur="if(this.value == ''){ this.value = 'Enter your email address';}"
+      />
+			<label>Password: </label>  <input id="loginModelpassword" type="password"  name="password" value="" size="30" maxlength="30" style="input"  />
+
+			<label>Remember Me: </label>  <a name="FieldrememberMe">
+      <input id="loginModelrememberMe" type="checkbox" name="rememberMe" value="true"  class="rememberMe" />
+    
+    </a>
+		</fieldset>
+		<input type="submit" value="Log In" class="loginButton" />
+	</form>
+	<ul>
+		<li><a href="/view/help.html">Help</a></li>
+		<li><a href="/view/reminder.html">Remind</a></li>
+		<li><a href="/view/registration.html">Register</a></li>
+	</ul>
+	
+<!-- </div> -->
+
+  <!-- end template: loginFormBlock -->
+  							<!-- Header Login Block END -->
+						</div>
+
+					</div>
+
+				</div>
+
+				<div id="mainSiteCenterWrap" class="home">
+					<div class="siteLeftSideWrap">
+
+						<!--
+							***************************
+
+								START OF NESTED AREA
+
+							***************************
+						-->
+						    <!-- start template: nestedHomepageContentBlock -->
+  						<div class="centerTopSection">
+							<div class="leftCol">
+								<div class="siteIntroBox">
+									    <!-- start template: sepHomeIntroBlock -->
+  <p><span style="color: #ffffff">.</span></p>
+  <!-- end template: sepHomeIntroBlock -->
+  								</div>
+								<div class="centerAdBox">
+									    <!-- start template: topBannerAdBlock -->
+  <div><style type="text/css">
+.centerAdBox {
+border: none !important;
+}
+</style></div>
+<div>				
+	<!-- begin ad tag (tile=1) -->
+	<script type="text/javascript">
+		//<![CDATA[
+			document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/separationsnow.com/home_general;tile=1;sz=468x60;ord=1377548182881?"/><\/script>');
+		//]]>
+	</script>
+
+	<noscript>
+		<a href="http://ad.doubleclick.net/jump/separationsnow.com/home_general;tile=1;sz=468x60;ord=1377548182881?" target="_blank" >
+			<img src="http://ad.doubleclick.net/ad/separationsnow.com/home_general;tile=1;sz=468x60;ord=1377548182881?" border="0" alt="" />
+		</a>
+	</noscript>
+	<!-- end ad tag -->
+</div>
+  <!-- end template: topBannerAdBlock -->
+  								</div>
+								<div class="featureWrap featureBox">
+									    <!-- start template: homepageMonthlyHighlightBlock -->
+  <h2>Monthly Highlight</h2>
+
+	<div class="featureLeftBox withFeatureThumb">
+		<h3><a href="	/details/highlight/1404e120690/Forthcoming-Webinar-Determination-of-Choline-in-Infant-Formula-by-Ion-Chromatogr.html
+">Forthcoming Webinar: Determination of Choline in Infant Formula by Ion Chromatography</a></h3>
+		
+		<p>This webinar will discuss the improvements made to the IC method for the determination of total choline (free and bound forms) in all forms of infant formula, adult nutritionals and pediatric formulas.</p>
+		
+		<a href="	/details/highlight/1404e120690/Forthcoming-Webinar-Determination-of-Choline-in-Infant-Formula-by-Ion-Chromatogr.html
+" class="homeButtonRead"><strong><span>Read More</span></strong></a>
+		
+                <a href="	/details/highlight/1404e120690/Forthcoming-Webinar-Determination-of-Choline-in-Infant-Formula-by-Ion-Chromatogr.html
+" title="link to: Forthcoming Webinar: Determination of Choline in Infant Formula by Ion Chromatography" class="articleThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/tiny/1404e120690.jpg" class="articleThumbnail" alt="thumbnail image: Forthcoming Webinar: Determination of Choline in Infant Formula by Ion Chromatography"/>
+        </a>
+                  	 </div>
+
+	<div class="featureRightBox withFeatureThumb">
+	
+	
+		<h3><a href="	/details/highlight/13fc92dbf40/On-demand-Webinar-The-Inert-Flow-Path---Your-Analytes-Journey-from-Injection-to-.html
+">On-demand Webinar: The Inert Flow Path - Your Analyte's Journey from Injection to Detection</a></h3>
+		
+		<p>This seminar discusses in detail some common applications and how Agilent’s  unique sampling technology can provide a better solution to many of your daily  challenges.</p>
+		
+		<a href="	/details/highlight/13fc92dbf40/On-demand-Webinar-The-Inert-Flow-Path---Your-Analytes-Journey-from-Injection-to-.html
+" class="homeButtonRead"><strong><span>Read More</span></strong></a>
+	 	
+                <a href="	/details/highlight/13fc92dbf40/On-demand-Webinar-The-Inert-Flow-Path---Your-Analytes-Journey-from-Injection-to-.html
+" title="link to: On-demand Webinar: The Inert Flow Path - Your Analyte's Journey from Injection to Detection" class="articleThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/tiny/13fc92dbf40.jpg" class="articleThumbnail" alt="thumbnail image: On-demand Webinar: The Inert Flow Path - Your Analyte's Journey from Injection to Detection"/>
+        </a>
+                  	</div>
+  <!-- end template: homepageMonthlyHighlightBlock -->
+  								</div>
+							</div>
+							<div class="rightCol">
+								    <!-- start template: homepageAdvertorialBlock -->
+  <div class="featureBox">
+
+	<h2>Advertorial Feature</h2>
+	
+			<h3><a href="	/details/advertorial/13e46c213fd/Download-the-New-App-specNOW--sepNOWMonthly-Digest.html
+">Download the New App: specNOW & sepNOW<br/>Monthly Digest</a></h3>
+		
+                <a href="	/details/advertorial/13e46c213fd/Download-the-New-App-specNOW--sepNOWMonthly-Digest.html
+" title="link to: Download the New App: specNOW & sepNOW<br/>Monthly Digest" class="articleWideThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/frame/13e46c213fd.jpg" class="articleWideThumbnail" alt="thumbnail image: Download the New App: specNOW & sepNOW<br/>Monthly Digest"/>
+        </a>
+                  	
+		<p>Download today to your smartphone or tablet and access a monthly compendium of ezine highlights from spectroscopyNOW and separationsNOW in a clear, easy-to-read format.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; June Edition now available.</p>
+		
+		<a href="	/details/advertorial/13e46c213fd/Download-the-New-App-specNOW--sepNOWMonthly-Digest.html
+" class="homeButtonRead"><strong><span>Read More</span></strong></a>
+	
+</div>
+
+  <!-- end template: homepageAdvertorialBlock -->
+  							</div>
+						</div>
+						
+
+  <!-- end template: nestedHomepageContentBlock -->
+  						  						    <!-- start template: nestedHomepageBtmContentBlock -->
+  <div class="homeContentRowBottom">
+
+	<div class="homepageContentCol">
+			    <!-- start template: homepageEzineBlock -->
+  <div class="contentBox">
+<h2>Ezines</h2>
+<div class="rssBox">
+		<a href="/graphicalrss/sep/sepEzineFeed.xml">rss</a>
+</div>
+
+			<div class="homePageListing hasDesc withHomeThumbNail">
+				<h3><a href="	/details/ezine/14086cd7b22/Journal-Highlight-Antioxidant-activity-and-HPLC-analysis-of-polyphenol-enriched-.html
+">Journal Highlight: Antioxidant activity and HPLC analysis of polyphenol-enriched extracts from industrial apple pomace</a></h3>
+			<p>separationsNOW</p>			<p class="listingDate">Aug 26, 2013</p>
+			
+                <a href="	/details/ezine/14086cd7b22/Journal-Highlight-Antioxidant-activity-and-HPLC-analysis-of-polyphenol-enriched-.html
+" title="link to: Journal Highlight Antioxidant activity and HPLC analysis of polyphenol-enriched extracts from industrial apple pomace" class="articleThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/tiny/14086cd7b22.jpg" class="articleThumbnail" alt="thumbnail image: Journal Highlight Antioxidant activity and HPLC analysis of polyphenol-enriched extracts from industrial apple pomace"/>
+        </a>
+                  		</div>
+	<p class="description">An antioxidant assay and HPLC analysis of polyphenol-enriched extracts from industrial apple pomace suggests that they are rich in phenols and exhibit potent antioxidant activity.</p>
+			<div class="homePageListing hasDesc withHomeThumbNail">
+				<h3><a href="	/details/ezine/140abb7e1c0/Journal-Highlight-Fouling-of-an-anion-exchange-chromatography-operation-in-a-mon.html
+">Journal Highlight: Fouling of an anion exchange chromatography operation in a monoclonal antibody process</a></h3>
+			<p>separationsNOW</p>			<p class="listingDate">Aug 26, 2013</p>
+			
+                <a href="	/details/ezine/140abb7e1c0/Journal-Highlight-Fouling-of-an-anion-exchange-chromatography-operation-in-a-mon.html
+" title="link to: Journal Highlight Fouling of an anion exchange chromatography operation in a monoclonal antibody process" class="articleThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/tiny//140abb7e1c0.jpg" class="articleThumbnail" alt="thumbnail image: Journal Highlight Fouling of an anion exchange chromatography operation in a monoclonal antibody process"/>
+        </a>
+                  		</div>
+	<p class="description">British and US chemical engineers have used a variety of analytical and microscopy techniques to probe fouling of an anion exchange chromatography column during purification of a monoclonal antibody.</p>
+			<div class="homePageListing hasDesc withHomeThumbNail">
+				<h3><a href="	/details/ezine/140ab9029dd/Journal-Highlight-Steady-state-continuous-flow-purification-by-electrophoresis.html
+">Journal Highlight: Steady-state continuous-flow purification by electrophoresis</a></h3>
+			<p>separationsNOW</p>			<p class="listingDate">Aug 26, 2013</p>
+			
+                <a href="	/details/ezine/140ab9029dd/Journal-Highlight-Steady-state-continuous-flow-purification-by-electrophoresis.html
+" title="link to: Journal Highlight Steady-state continuous-flow purification by electrophoresis" class="articleThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/tiny///140ab9029dd.jpg" class="articleThumbnail" alt="thumbnail image: Journal Highlight Steady-state continuous-flow purification by electrophoresis"/>
+        </a>
+                  		</div>
+	<p class="description">By venting bubbles generated during free-flow electrophoresis through chimneys open to the atmosphere, Canadian scientists have been able to prevent the bubbles from entering the separation channel.</p>
+<a href="	/view/allEzine.html
+" class="viewAll">View All Ezines</a>
+</div>
+  <!-- end template: homepageEzineBlock -->
+  			    <!-- start template: homepageEducationBlock -->
+  <div class="contentBox">
+<h2>Education</h2>
+<div class="rssBox">
+		<a href="/graphicalrss/sep/sepEducationFeed.xml">rss</a>
+</div>
+
+			<div class="homePageListing hasDesc">
+				<h3><a href="	/details/education/sepspec10344education/Brereton-Chemometrics---Solutions-and-Data-Sets-Introduction.html
+">Brereton: Chemometrics - Solutions and Data Sets Introduction</a></h3>
+			<p></p>			<p class="listingDate">Jun 16, 2013</p>
+			
+            		</div>
+	<p class="description">The emphasis of this book is on understanding the principles and applications behind the main ideas in chemometrics, which can then be applied to a wide variety of problems in chemistry, chemical engineering and allied disciplines.</p>
+			<div class="homePageListing hasDesc withHomeThumbNail">
+				<h3><a href="	/details/education/sepspec10237education/Key-concepts-in-factor-analysis.html
+">Key concepts in factor analysis</a></h3>
+			<p></p>			<p class="listingDate">Jun 3, 2013</p>
+			
+                <a href="	/details/education/sepspec10237education/Key-concepts-in-factor-analysis.html
+" title="link to: Key concepts in factor analysis" class="articleThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/tiny/sepspec10237education.jpg" class="articleThumbnail" alt="thumbnail image: Key concepts in factor analysis"/>
+        </a>
+                  		</div>
+	<p class="description">Factor analysis is a mathematical tool for examining a wide range of data sets, with applications especially important to the design of experiments (DOE), spectroscopy, chromatography, and chemometrics. In this free chapter from "Factor Analysis in Chemistry" Edmund Malinowski introduces the technique, declaring that "every problem has a solution"!</p>
+			<div class="homePageListing hasDesc withHomeThumbNail">
+				<h3><a href="	/details/education/sepspec25838education/Educational-WebinarFood-Analysis-Modern-Techniques--Analytical-Challenges.html
+">Educational Webinar<br />Food Analysis: Modern Techniques & Analytical Challenges</a></h3>
+			<p></p>			<p class="listingDate">Jan 17, 2011</p>
+			
+                <a href="	/details/education/sepspec25838education/Educational-WebinarFood-Analysis-Modern-Techniques--Analytical-Challenges.html
+" title="link to: Educational WebinarFood Analysis Modern Techniques  Analytical Challenges" class="articleThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/tiny//sepspec25838education.jpg" class="articleThumbnail" alt="thumbnail image: Educational WebinarFood Analysis Modern Techniques  Analytical Challenges"/>
+        </a>
+                  		</div>
+	<p class="description">Paola Dugo and Peter Q. Tranchida discuss food analysis in general, as well as the modern techniques needed to overcome the current-day analytical challenges.</p>
+<a href="	/view/allEducation.html
+" class="viewAll">View All Education Articles</a>
+</div>
+  <!-- end template: homepageEducationBlock -->
+  			    <!-- start template: homepageEventBlock -->
+  <div class="contentBox">
+<h2>Events</h2>
+<div class="rssBox">
+		<a href="/graphicalrss/sep/sepEventsFeed.xml">rss</a>
+</div>
+
+<div class="editorsPick">
+  </div>
+<div>
+  </div>
+
+
+<a href="	/view/allEvents.html
+" class="viewAll">View All Events</a>
+</div>
+  <!-- end template: homepageEventBlock -->
+  			    <!-- start template: homepageJournalBlock -->
+  <div class="contentBox">
+<h2>Journals</h2>
+<div class="rssBox">
+		<a href="/graphicalrss/sep/sepJournalFeed.xml">rss</a>
+</div>
+
+			<div class="homePageListing hasDesc withHomeThumbNail journal">
+				<h3><a href="	/details/journal/sepspec1726journal/Journal-of-Mass-Spectrometry.html
+">Journal of Mass Spectrometry</a></h3>
+			
+                <a href="	/details/education/sepspec1726journal/Journal-of-Mass-Spectrometry.html
+" title="link to: Journal of Mass Spectrometry" class="articleThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/tiny/sepspec1726journal.gif" class="articleThumbnail" alt="thumbnail image: Journal of Mass Spectrometry"/>
+        </a>
+                  		</div>
+		<p class="description">The Journal of Mass Spectrometry (JMS) publishes papers on a broad range of topics of interest to scientists working in both fundamental and applied areas involving the study of gaseous ions.</p>
+<a href="	/view/allJournals.html
+" class="viewAll">View All Journals</a>
+</div>
+  <!-- end template: homepageJournalBlock -->
+  	</div>
+	<div class="homepageContentCol">
+			    <!-- start template: homepageWebinarBlock -->
+  <div class="contentBox">
+<h2>Webinars</h2>
+<div class="rssBox">
+		<a href="/graphicalrss/sep/sepWebinarFeed.xml">rss</a>
+</div>
+	
+<a href="	/view/allWebinars.html
+" class="viewAll">View All Webinars</a>
+</div>
+  <!-- end template: homepageWebinarBlock -->
+  			    <!-- start template: homepageBookBlock -->
+  <div class="contentBox">
+<h2>Books</h2>
+<div class="rssBox">
+		<a href="/graphicalrss/sep/sepBookFeed.xml">rss</a>
+</div>
+
+			<div class="homePageListing withHomeThumbNail books">
+				<h3><a href="	/details/book/978-1-118065-66-2/Trace-Analysis-of-Specialty-and-Electronic-Gases.html
+">Trace Analysis of Specialty and Electronic Gases</a></h3>
+			<p>William M. Geiger, Mark W. Raynor</p>			<p class="listingDate">Jul 29, 2013</p>
+			
+        <a href="	/details/book/978-1-118065-66-2/Trace-Analysis-of-Specialty-and-Electronic-Gases.html
+" title="link to: Trace Analysis of Specialty and Electronic Gases" class="articleThumbnail books">
+      <img src="http://media.wiley.com/product_data/coverImage/62/11180656/1118065662.jpg" class="articleThumbnail books" alt="thumbnail image: Trace Analysis of Specialty and Electronic Gases"/>
+      </a>
+          		</div>
+			<div class="homePageListing withHomeThumbNail books">
+				<h3><a href="	/details/book/978-0-470505-52-6/Guidelines-for-Laboratory-Design-Health-Safety-and-Environmental-Considerations-.html
+">Guidelines for Laboratory Design: Health, Safety, and Environmental Considerations, 4th Edition</a></h3>
+			<p>Louis J. DiBerardinis, Janet S. Baum, Melvin W. First, Gari T. Gatwood, Anand K. Seth</p>			<p class="listingDate">May 17, 2013</p>
+			
+        <a href="	/details/book/978-0-470505-52-6/Guidelines-for-Laboratory-Design-Health-Safety-and-Environmental-Considerations-.html
+" title="link to: Guidelines for Laboratory Design Health Safety and Environmental Considerations 4th Edition" class="articleThumbnail books">
+      <img src="http://media.wiley.com/product_data/coverImage/24/04705055/0470505524.jpg" class="articleThumbnail books" alt="thumbnail image: Guidelines for Laboratory Design Health Safety and Environmental Considerations 4th Edition"/>
+      </a>
+          		</div>
+			<div class="homePageListing withHomeThumbNail books">
+				<h3><a href="	/details/book/978-1-118065-63-1/High-Throughput-Screening-Methods-in-Toxicity-Testing.html
+">High-Throughput Screening Methods in Toxicity Testing</a></h3>
+			<p>Pablo Steinberg</p>			<p class="listingDate">May 1, 2013</p>
+			
+        <a href="	/details/book/978-1-118065-63-1/High-Throughput-Screening-Methods-in-Toxicity-Testing.html
+" title="link to: High-Throughput Screening Methods in Toxicity Testing" class="articleThumbnail books">
+      <img src="http://media.wiley.com/product_data/coverImage/38/11180656/1118065638.jpg" class="articleThumbnail books" alt="thumbnail image: High-Throughput Screening Methods in Toxicity Testing"/>
+      </a>
+          		</div>
+<a href="	/view/allBooks.html
+" class="viewAll">View All Books</a>
+
+</div>
+  <!-- end template: homepageBookBlock -->
+  			    <!-- start template: homepageNewsBlock -->
+  <div class="contentBox">
+<h2>News</h2>
+<div class="rssBox">
+		<a href="/graphicalrss/sep/sepNewsFeed.xml">rss</a>
+</div>
+
+			<div class="homePageListing">
+				<h3><a href="	/details/news/140ab668695/Explosive-detection-at-your-fingertips.html
+">Explosive detection at your fingertips</a></h3>
+			<p class="listingDate">Aug 23, 2013</p>
+			
+            		</div>
+			<div class="homePageListing withHomeThumbNail">
+				<h3><a href="	/details/news/140a5819a46/Next-weeks-BIOFPR-Webinar-Automating-the-GC-Analysis-of-Biodiesel--from-Sample-P.html
+">Next week's BIOFPR Webinar: Automating the GC Analysis of Biodiesel – from Sample Prep to Reporting</a></h3>
+			<p class="listingDate">Aug 22, 2013</p>
+			
+                <a href="	/details/news/140a5819a46/Next-weeks-BIOFPR-Webinar-Automating-the-GC-Analysis-of-Biodiesel--from-Sample-P.html
+" title="link to: Next weeks BIOFPR Webinar Automating the GC Analysis of Biodiesel  from Sample Prep to Reporting" class="articleThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/tiny/140a5819a46.jpg" class="articleThumbnail" alt="thumbnail image: Next weeks BIOFPR Webinar Automating the GC Analysis of Biodiesel  from Sample Prep to Reporting"/>
+        </a>
+                  		</div>
+			<div class="homePageListing">
+				<h3><a href="	/details/news/14053c55412/Waters-New-Web-based-Oasis-Method-Development-Tools-Streamline-Sample-Preparatio.html
+">Waters New Web-based Oasis Method Development Tools Streamline Sample Preparation Development</a></h3>
+			<p class="listingDate">Aug 6, 2013</p>
+			
+            		</div>
+			<div class="homePageListing">
+				<h3><a href="	/details/news/14052d939ed/Camos-introduction-to-multivariate-data-analysis-in-chemical-engineering.html
+">Camo's introduction to multivariate data analysis in chemical engineering</a></h3>
+			<p class="listingDate">Aug 6, 2013</p>
+			
+            		</div>
+			<div class="homePageListing withHomeThumbNail">
+				<h3><a href="	/details/news/1404f09694a/New-affordable-HPLC-systems-from-Cecil-Instruments.html
+">New affordable HPLC systems from Cecil Instruments</a></h3>
+			<p class="listingDate">Aug 5, 2013</p>
+			
+                <a href="	/details/news/1404f09694a/New-affordable-HPLC-systems-from-Cecil-Instruments.html
+" title="link to: New affordable HPLC systems from Cecil Instruments" class="articleThumbnail">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/tiny//1404f09694a.jpg" class="articleThumbnail" alt="thumbnail image: New affordable HPLC systems from Cecil Instruments"/>
+        </a>
+                  		</div>
+</div>
+  <!-- end template: homepageNewsBlock -->
+  			  	</div>
+	<div class="homepageContentCol homepageContentColNoPad">
+			    <!-- start template: homepageBlogBlock -->
+  <div class="contentBox">
+<h2>Blog</h2>
+<div class="rssBox">
+		<a href="/graphicalrss/sep/sepBlogFeed.xml">rss</a>
+</div>
+
+		<div class="homePageListing">
+			<h3><a href="	/details/blog/140b573583e/Pseudophase-separation-pioneer-named-ACS-Fellow.html
+">Pseudophase separation pioneer named ACS Fellow</a></h3>
+			<p>Jon Evans</p>			<p class="listingDate">Aug 25, 2013</p>
+			<p class="description">Daniel Armstrong, professor of chemistry and biochemistry at the  University of Texas at Arlington, US, has been named a fellow of the American Chemical Society  (ACS).</p>
+		</div>
+<a href="	/view/allBlog.html
+" class="viewAll">View All Blog Articles</a>
+</div>
+
+  <!-- end template: homepageBlogBlock -->
+  			    <!-- start template: homepageVideoBlock -->
+  <div class="contentBox">
+<h2>Videos</h2>
+<div class="rssBox">
+		<a href="/graphicalrss/sep/sepVideoFeed.xml">rss</a>
+</div>
+	
+			<div class="videoHomepageListing withWideThumbnail">
+		
+		
+		<h3><a href="	/details/video/13e55fbdb99/Gel-Electrophoresis.html
+">Gel Electrophoresis</a></h3>
+		<p><strong class="offScreen">Date:</strong> Apr 2, 2013</p>
+		<p>Setting up and running of a DNA gel using electrophoresis.</p>
+		
+                <a href="	/details/video/13e55fbdb99/Gel-Electrophoresis.html
+" title="link to: Gel Electrophoresis" class="articleThumbnailVideo">
+                        <img src="http://www.separationsnow.com/common/images/thumbnails/frame/13e55fbdb99.jpg" class="articleThumbnailVideo" alt="thumbnail image: Gel Electrophoresis"/>
+        </a>
+                  	
+	
+	</div>
+	
+<a href="	/view/allVideos.html
+" class="viewAll">View All Videos</a>
+</div>
+  <!-- end template: homepageVideoBlock -->
+  			    <!-- start template: homepageRSSBlock -->
+  <div class="contentBox">
+<h2>RSS Feed</h2>
+<div class="rssBox">
+	<a href="https://news.google.co.uk/news/feeds?hl=en&ds=n&pq=genomics&cp=11&gs_id=y&xhr=t&q=proteomics+genomics&safe=off&rlz=1T4SKPB_enGB393GB395&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.,cf.osb&biw=1280&bih=605&wrapid=tljp1336658001936020&um=1&ie=UTF-8&output=rss">rss</a>
+</div>
+
+				
+			<div class="homePageListing hasDesc">
+				<h3><a href="http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNE5oc8H2aIQXZoLkoNka608-3Zvsg&url=http://www.genomeweb.com/blog/week-plos-252" target="_new">This Week in PLOS - BioArray News (blog)</a></h3>
+				<p><em>Google News</em></p>
+			</div>
+				
+			<div class="homePageListing hasDesc">
+				<h3><a href="http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNFny_BbyEVoE1y-g-dfeGN0FLW0Yg&url=http://www.sciencedaily.com/releases/2013/08/130824131606.htm" target="_new">BT-R3 Mediates Killing of the Malaria Vector Anopheles Gambiae by Bacillus ... - Science Daily (press release)</a></h3>
+				<p><em>Google News</em></p>
+			</div>
+				
+			<div class="homePageListing hasDesc">
+				<h3><a href="http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNGPdHKuvbxoMD3oep0nycgQVgCsSw&url=http://www.the-scientist.com/?articles.view/articleNo/37207/title/Framingham-Heart-Study-Gutted/" target="_new">Framingham Heart Study Gutted - Scientist</a></h3>
+				<p><em>Google News</em></p>
+			</div>
+				
+			<div class="homePageListing hasDesc">
+				<h3><a href="http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNHcXQWPGQHV7Ik9CwJ1g8nnmDUJtA&url=http://www.marketwatch.com/story/lab-automation-market-by-equipment-software-automated-liquid-handling-robotics-microplate-readers-lims-and-automated-storage-and-applications-drug-discovery-clinical-diagnostics-genomics-proteomics-2013-08-26" target="_new">Lab Automation Market by Equipment & Software (Automated Liquid Handling ... - MarketWatch (press release)</a></h3>
+				<p><em>Google News</em></p>
+			</div>
+				
+			<div class="homePageListing hasDesc">
+				<h3><a href="http://news.google.com/news/url?sa=t&fd=R&usg=AFQjCNH1NM4gDLtrdLDM2R2Tmp72UkYQ1Q&url=http://www.genomeweb.com/proteomics/samples-available-abrf-sprg-2013-study" target="_new">Samples Available for ABRF sPRG 2013 Study - GenomeWeb</a></h3>
+				<p><em>Google News</em></p>
+			</div>
+		</div>
+  <!-- end template: homepageRSSBlock -->
+  			  	</div>
+	
+	
+</div>
+
+ 
+  <!-- end template: nestedHomepageBtmContentBlock -->
+  
+
+						<!--
+						***********************
+
+							NESTED AREA END
+
+						***********************
+						-->
+
+					</div>
+
+					<div class="siteRightSideWrap">
+						    <!-- start template: socialBookmarkBlock -->
+  <!-- spectroscopy / separattions now  links for facebook etc here-->
+<h2 class="offScreen">Social Links</h2>
+<ul class="socialLinks">
+	<li class="linkedIn"><a href="http://www.linkedin.com/groups/Spectroscopy-Separation-Science-spectroscopyNOW-separationsNOW-3842354" target="_blank">LinkedIn</a></li>
+	<li class="faceBook"><a href="http://www.facebook.com/spectroscopy.separation.science" target="_blank">Facebook </a></li>
+	<li class="twitter"><a href="http://twitter.com/#!/specANDsepNOW" target="_blank">Twitter</a></li>
+	<li class="youTube"><a href="http://www.youtube.com/specANDsepNOW" target="_blank">YouTube</a></li>
+</ul>
+<div class="shareThis">
+	<h2 class="offScreen">Share This Links</h2>
+
+	<div class="addthis_toolbox addthis_default_style ">
+		
+ <!-- AddThis Button BEGIN -->
+<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=wpschi" style="float:left;margin-right:2px;"> <img src="http://s7.addthis.com/static/btn/v2/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border:0"/></a>
+<script type="text/javascript">
+	var addthis_config = {
+							"data_track_textcopy":true,   			"data_track_clickback":true
+	};
+</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=wpschi"></script>
+<!-- AddThis Button END -->
+		<a class="addthis_button_google_plusone" g:plusone:size="small" style="width: 50px;"></a>
+		
+
+	</div>	
+</div>
+<div class="additionalLinks">
+	<h2 class="offScreen">Additional Links</h2>
+	<ul>
+		<li><a href="/view/allWebinars.html">Webinars</a></li>
+		<li><a href="/view/supplierListing.html">Supplier Directory</a></li>
+		<li><a href="/view/earlyview.html">EarlyView</a></li>
+		<li><a href="/view/advertorialArchive.html">Advertorial Archive</a></li>
+	</ul>
+</div>
+
+
+
+  <!-- end template: socialBookmarkBlock -->
+  						    <!-- start template: micrositeNavigationBlock -->
+  <div class="homeSideMicroBox">
+	<h2>Microsites</h2>
+		<form id="supplierMS" action="/view/micrositeRedirect.html" method="get">
+			<fieldset>
+				<legend>Suppliers<span class="offScreen"> Selection</span></legend>
+				<label for="siteId" class="offScreen">Suppliers</label>
+				  <!--  value=  -->
+
+  <select id="siteId" name="siteId" >
+      <option id="0" value="0" class="tier$show.status"
+            >Select a supplier</option>
+      <option id="2038539" value="2038539" class="tierl"
+            >Agilent Technologies</option>
+      <option id="4441001" value="4441001" class="tierl"
+            >Metrohm</option>
+      <option id="2041413" value="2041413" class="tierl"
+            >Thermo Fisher Scientific</option>
+    </select>
+				<input type="submit" value="Go"/>
+			</fieldset>
+		</form>
+		
+		<form id="societyMS"  action="/view/micrositeRedirect.html" method="get">
+			<fieldset>
+				<legend>Societies<span class="offScreen"> Selection</span></legend>
+				<label for="societyId" class="offScreen">Societies</label>	
+				  <!--  value=  -->
+
+  <select id="societyId" name="societyId" >
+      <option id="0" value="0" class="tier$show.status"
+            >Select a society</option>
+    </select>
+				<input type="submit" value="Go"/>
+			</fieldset>
+		</form>
+		
+	<script type="text/javascript">
+		$(document).ready( function () {
+			$("#societyMS").submit( function(e){	return  (  $("#societyId > option:selected").val() == 0 ) ? false : true;	});
+			$("#supplierMS").submit( function(e){	return  (  $("#siteId > option:selected").val() == 0 )  ? false : true;	});
+		});
+	</script>
+</div>
+
+  <!-- end template: micrositeNavigationBlock -->
+  									    <!-- start template: sideBannerAdBlock -->
+  <div class="sideBannerAds">
+<h2 class="offScreen">Banner Ad</h2>
+<div>				
+	<!-- begin ad tag (tile=2) -->
+	<script type="text/javascript">
+		//<![CDATA[
+			document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/separationsnow.com/home_general;tile=2;sz=120x600;ord=1377548182881?"/><\/script>');
+		//]]>
+	</script>
+
+	<noscript>
+		<a href="http://ad.doubleclick.net/jump/separationsnow.com/home_general;tile=2;sz=120x600;ord=1377548182881?" target="_blank" >
+			<img src="http://ad.doubleclick.net/ad/separationsnow.com/home_general;tile=2;sz=120x600;ord=1377548182881?" border="0" alt="" />
+		</a>
+	</noscript>
+	<!-- end ad tag -->
+</div>
+<div>				
+	<!-- begin ad tag (tile=3) -->
+	<script type="text/javascript">
+		//<![CDATA[
+			document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/separationsnow.com/home_general;tile=3;sz=120x90;ord=1377548182881?"/><\/script>');
+		//]]>
+	</script>
+
+	<noscript>
+		<a href="http://ad.doubleclick.net/jump/separationsnow.com/home_general;tile=3;sz=120x90;ord=1377548182881?" target="_blank" >
+			<img src="http://ad.doubleclick.net/ad/separationsnow.com/home_general;tile=3;sz=120x90;ord=1377548182881?" border="0" alt="" />
+		</a>
+	</noscript>
+	<!-- end ad tag -->
+</div>
+<div>				
+	<!-- begin ad tag (tile=4) -->
+	<script type="text/javascript">
+		//<![CDATA[
+			document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/separationsnow.com/home_general;tile=4;sz=120x60;ord=1377548182881?"/><\/script>');
+		//]]>
+	</script>
+
+	<noscript>
+		<a href="http://ad.doubleclick.net/jump/separationsnow.com/home_general;tile=4;sz=120x60;ord=1377548182881?" target="_blank" >
+			<img src="http://ad.doubleclick.net/ad/separationsnow.com/home_general;tile=4;sz=120x60;ord=1377548182881?" border="0" alt="" />
+		</a>
+	</noscript>
+	<!-- end ad tag -->
+</div>
+<div>				
+	<!-- begin ad tag (tile=5) -->
+	<script type="text/javascript">
+		//<![CDATA[
+			document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/separationsnow.com/home_general;tile=5;sz=120x60;ord=1377548182881?"/><\/script>');
+		//]]>
+	</script>
+
+	<noscript>
+		<a href="http://ad.doubleclick.net/jump/separationsnow.com/home_general;tile=5;sz=120x60;ord=1377548182881?" target="_blank" >
+			<img src="http://ad.doubleclick.net/ad/separationsnow.com/home_general;tile=5;sz=120x60;ord=1377548182881?" border="0" alt="" />
+		</a>
+	</noscript>
+	<!-- end ad tag -->
+</div>
+<div>				
+	<!-- begin ad tag (tile=6) -->
+	<script type="text/javascript">
+		//<![CDATA[
+			document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/separationsnow.com/home_general;tile=6;sz=120x60;ord=1377548182881?"/><\/script>');
+		//]]>
+	</script>
+
+	<noscript>
+		<a href="http://ad.doubleclick.net/jump/separationsnow.com/home_general;tile=6;sz=120x60;ord=1377548182881?" target="_blank" >
+			<img src="http://ad.doubleclick.net/ad/separationsnow.com/home_general;tile=6;sz=120x60;ord=1377548182881?" border="0" alt="" />
+		</a>
+	</noscript>
+	<!-- end ad tag -->
+</div>
+</div>
+<div style="width: 137px;"><!-- added the following non-blocking loading of css file via springboard component to stop situation of page waiting for timeout before loading when EPS site is down --><script>
+jQuery.resourceLoader({
+resources: [
+   'http://www.eurpepsoc.com/wp-content/uploads/2012/07/WileyJobWidget.css'
+],
+ready: function() {}
+});			
+</script><script type="text/javascript" src="http://www.wileyjobnetwork.com/Widget/jobadvertwidget.js" ></script><script type="text/javascript" id="MadgexJobWidgetScript">
+
+  madgexJobsWidget = new MadgexJobWidget( 'madgexJobsWidget' );
+  madgexJobsWidget.dataUrl = 'http://www.wileyjobnetwork.com/jobsjson/?Sector=131&countrycode=US&NumDisplayResults=3';
+  madgexJobsWidget.insertIntoId = 'widgetpreview';
+  madgexJobsWidget.title = 'madgexJobsWidget';
+  madgexJobsWidget.jobNumber = 3;
+  madgexJobsWidget.truncateDescription = 170;
+  madgexJobsWidget.displayTitle = 'Wiley Job Network Job Widget';
+  madgexJobsWidget.displaySearch = false;  
+
+</script></div>
+<div style="background-color: #F6F6F6; width: 135px; margin-bottom: 20px; padding-top: 5px; padding-bottom: 5px; border-left: 1px #BFBFBF solid; border-right: 1px #BFBFBF solid; border-bottom: 1px #BFBFBF solid; text-align: center">
+<p style="margin-top: 0px; margin-bottom: 0px"><a href="http://www.wileyjobnetwork.com" target="_blank" style="color: #007E8A; font-weight: bold">Click here to see<br />
+all job opportunities</a></p>
+</div>
+  <!-- end template: sideBannerAdBlock -->
+  	
+	  
+						    <!-- start template: rollingMostViewedBlock -->
+  <div class="mostViewed home">
+	<h2>Most Viewed</h2>
+			<ul class="ezine">
+			<li><a href="	/details/ezine/sepspec26171ezine/Battered-butter-Sterols-and-tocopherols-mark-adulteration-with-vegetable-oils.html
+" title="Battered butter: Sterols and tocopherols mark adulteration with vegetable oils">Battered butter: Sterols and tocopherols mark adulteration with vegetable oils</a> (251)</li>
+		</ul>
+			<ul class="ezine">
+			<li><a href="	/details/ezine/sepspec26463ezine/Fast-and-Simple-Charge-Heterogeneity-Analysis-of-Monoclonal-Antibodies-Using-Who.html
+" title="Fast and Simple Charge Heterogeneity Analysis of Monoclonal Antibodies Using Whole-Column Detection Capillary Isoelectric Focusing">Fast and Simple Charge Heterogeneity Analysis of Monoclonal Antibodies Using Whole-Column Detection Capillary Isoelectric Focusing</a> (248)</li>
+		</ul>
+			<ul class="ezine">
+			<li><a href="	/details/ezine/sepspec26418ezine/Automatic-alien-amino-acid-analysis-Detecting-amino-acids-on-a-single-microfluid.html
+" title="Automatic alien amino acid analysis: Detecting amino acids on a single microfluidic device">Automatic alien amino acid analysis: Detecting amino acids on a single microfluidic device</a> (242)</li>
+		</ul>
+			<ul class="ezine">
+			<li><a href="	/details/ezine/sepspec26350ezine/Solid-state-solution-Amino-acids-derivatised-with-solid-copper-ions-for-UV-vis-d.html
+" title="Solid-state solution: Amino acids derivatised with solid copper ions for UV-vis detection">Solid-state solution: Amino acids derivatised with solid copper ions for UV-vis detection</a> (240)</li>
+		</ul>
+			<ul class="ezine">
+			<li><a href="	/details/ezine/sepspec26130ezine/Straight-down-the-alley-Parallel-walls-separate-DNA-strands-without-touching.html
+" title="Straight down the alley: Parallel walls separate DNA strands without touching">Straight down the alley: Parallel walls separate DNA strands without touching</a> (239)</li>
+		</ul>
+	</div>
+  <!-- end template: rollingMostViewedBlock -->
+  						
+					</div>
+				</div>
+
+				<div id="footerWrap">
+					
+					    <!-- start template: sepFooterBlock -->
+  <!-- Footer Block START -->
+<div class="footerCopyright">
+<h2>Copyright Information</h2>
+<p class="boldText">Interested in spectroscopy? Visit our sister site <a href="http://www.spectroscopynow.com">spectroscopyNOW.com</a></p>
+<p>Copyright © 	2013
+ John Wiley &amp; Sons, Inc. All Rights Reserved</p>
+</div>
+<div class="footerSiteList">
+<h2>Additional Links</h2>
+<ul>
+    <li><a href="/view/about.html">About Us</a></li>
+    <li><a href="/view/contact.html">Contact Us</a></li>
+    <li class="noBorder"><a href="/view/privacy.html">Privacy policy</a></li>
+    <li><a href="/view/terms.html">Terms &amp; Conditions</a></li>
+    <li class="noBorder"><a href="/view/advertising.html">Advertising</a></li>
+</ul>
+</div>
+<!-- Footer Block END -->
+  <!-- end template: sepFooterBlock -->
+  
+				</div>
+				  		</div>
+ 
+
+  
+
+	</body>
+</html>

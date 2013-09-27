@@ -1,0 +1,362 @@
+<base href="http://www.physik3.gwdg.de/~rgeisle/nld/sbsl-howto.html">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Single Bubble Sonoluminescence HOWTO</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.04Gold (X11; I; SunOS 5.5 sun4m) [Netscape]">
+</HEAD>
+<BODY>
+
+<P><B>Reinhard's Experimental Physics Letters (unpublished) 5/1996</B>
+<HR></P>
+
+<H2>Single Bubble Sonoluminescence HOWTO</H2>
+
+<P>
+<HR></P>
+
+<H3>What's this all about?</H3>
+
+<P>There are many papers about the theory of Single Bubble Sonoluminescence
+available, but exact descriptions <I>how</I> to produce it are rare. So
+if you already know about sonoluminescence and now want to reproduce it,
+this is the right place to look at. I tried to give a complete and detailed
+report of the steps towards SBSL. Any suggestions, supplementations, comments
+are welcome... 
+<HR>
+<B>DISCLAIMER<BR>
+This experiment may be dangerous. Always think before you work.
+Working with vacuum or boiling water can cause explosions.
+High voltages are generated in this experiment.
+I will not be responsible for any injuries or damaged equipment.
+If you don't know what you are doing just don't do it at all.
+And: No, I am also not responsible for any
+thermonuclear accident you trigger.
+</B>
+<HR>
+<HR></P>
+
+<H3>Equipment (required):</H3>
+
+<UL>
+<LI>sine generator:<BR>
+any function generator working around 25&nbsp;kHz, adjustable to +/-&nbsp;1&nbsp;Hz
+(+/-&nbsp;10&nbsp;Hz <I>may</I> work, too) </LI>
+
+<LI>amplifier:<BR>
+nearly any kind of audio amplifier will do. If you're not sure, measure
+the saturation voltage: 40&nbsp;V peak-to-peak should be enough. </LI>
+
+<LI>2-trace oscilloscope </LI>
+
+<LI><A HREF="#manufac">2 piezoceramic Transducers (drivers):<BR>
+</A>around d=16&nbsp;mm in diameter, h=8&nbsp;mm thick </LI>
+
+<LI><A HREF="#manufac">piezoceramic pill-transducer (microphone):<BR>
+</A>around 3&nbsp;mm in diameter, 1&nbsp;mm thick </LI>
+
+<LI>three finger clamp </LI>
+
+<LI>laboratory stand </LI>
+
+<LI>flask:<BR>
+take a 100&nbsp;ml Pyrex/Duran spherical flask, diameter 65&nbsp;mm, with
+a small neck. An industrial one has poor optical quality, so better take
+a free blown one. </LI>
+
+<LI>coil(s): around 20&nbsp;mH, see <A HREF="#coil">text</A> </LI>
+
+<LI>resistors: 1M, 10k, 1R </LI>
+
+<LI>coaxial cable </LI>
+
+<LI>quick-drying epoxy glue </LI>
+
+<LI>an eyedropper or a syringe (one of those little do-it-yourself subcutaneous
+is very good) </LI>
+
+<LI><A HREF="#h2o">degassed</A> distilled water: </LI>
+
+<UL>
+<LI>Pyrex/Duran Erlenmeyer flask (0.5 or 1&nbsp;l) and airtight stopper
+with pipe, rubber hose and clamp to close it<BR>
+<I>or</I> </LI>
+
+<LI>aluminium/highgrade steel drinking bottle (0.5 or 1&nbsp;l) with screw
+cap; one of those found in camping stores, a bare one without varnish </LI>
+</UL>
+
+<LI>a bubble ;-) </LI>
+</UL>
+
+<P>
+<HR></P>
+
+<H3>Equipment (nice to have):</H3>
+
+<UL>
+<LI>second oscilloscope </LI>
+
+<LI>vacuum pump </LI>
+
+<LI>high-pass filter </LI>
+
+<LI>laser </LI>
+
+<LI>&nbsp;... </LI>
+</UL>
+
+<P>
+<HR>
+<HR></P>
+
+<H3>Set up the assembly:</H3>
+
+<OL>
+<LI>Prepare the transducers:<BR>
+They are polarized, so when connecting them in parallel watch out for the
+mark on the electrodes. Do <B>not</B> connect them antiparallel. Clean
+the electrodes of the transducer with a pencil eraser. Do <B>not</B> erase
+the mark. Put 3 dots of solder equidistantly on one electrode; This will
+give a better contact when glued to the flask. You may also connect 3 wires
+to the dots to have spares in case one breaks. Put one dot on the other
+electrode. Be careful soldering on the piezoceramic: Use a cold (250&nbsp;degrees
+centigrade) soldering iron and work <B>quickly</B> to avoid reaching the
+Curie Temperature (see transducer datasheet; 320&nbsp;degrees centigrade
+for PIC&nbsp;155, but most of them got an even lower one). Use fine wires
+to reduce sound loss. Tin the wires and solder them on the dots. In the
+same way put a wire on each electrode of the pill-transducer. These wires
+should be <I>really</I> short before entering a coaxial cable. It's also
+possible to connect a <I>thin</I> coaxial cable directly to the pill-transducer.
+</LI>
+
+<LI>Glue the transducers to the flask:<BR>
+Clean the glass with aceton. Fix the drivers on opposite sides of the flask.
+Remember the marks on both transducers have to point into the same direction
+i.e. both towards the flask or both away from it. Use a quick-drying epoxy
+but watch out: Some of them shrink when they set, causing the glass to
+crack. If this happens: </LI>
+
+<UL>
+<LI>take another epoxy</LI>
+
+<LI>take less epoxy --- cover the whole surface of the driver, but not
+more </LI>
+
+<LI>first attach the spherical form to the drivers, e.g. by using a separator
+between flask and epoxy. Between the resulting fit and the flask only a
+thin layer of epoxy glue is required, which will cause no trouble. </LI>
+
+<LI>take a lower diameter of the drivers </LI>
+</UL>
+
+<P>Fix the microphone transducer on the bottom of the flask.<BR>
+One final hint: You <I>really</I> have to glue the transducers. Don't try
+any clamp-press-or-something-stuff. It won't work.</P>
+
+<LI>Attach the flask with the three finger clamp to the laboratory stand.
+</LI>
+
+<LI><A NAME="coil"></A>select the coil(s):<BR>
+Measure the total capacity C of your drivers. A transducer makes quite
+a nice plate capacitor, so the following calculation may give you a hint,
+too:<BR>
+C=13.9 e (d^2)/h [pF/m]<BR>
+where d is the diameter, h is the thickness and e is the dielectric constant
+of a transducer (see datasheet of your transducers, 1700 for PIC&nbsp;155).
+To match this capacity to the audio amplifier, you have to set up a serial-resonant
+circuit with a coil of the inductance:<BR>
+L=1/(C (6.28 f)^2)<BR>
+where f is the resonance frequency (about 26000&nbsp;Hz for the used flask).<BR>
+Example: Two PIC&nbsp;155 transducers with d=16&nbsp;mm, h=8&nbsp;mm, e=&nbsp;1700
+have a calculated capacity of C=756&nbsp;pF. At a driving frequency of
+f=26&nbsp;kHz the needed inductance is about L=50&nbsp;mH.<BR>
+The inductance has to be variable. This is achieved by an adjustable core
+or by changing the distance between two (or more) coils wired in series.
+Last not least the coil has to be strong enough so it won't overheat. </LI>
+
+<LI>Connect the generator to the amplifier. Connect the coil in series
+to the driving transducers and the 1&nbsp;Ohm resistor (current sense).
+The other two resistors make a 1:100 voltage divider at the input of the
+resonant circuit (voltage sense). Use coaxial cable where ever possible.
+Fix the cables to the laboratory stand to avoid wire breakage. The voltage
+of the resonant circuit may give you a shock, so don't touch it, or even
+much better: Insulate any exposed connection with suitable tape or varnish,
+especially if you want to produce Multi Bubble Sonoluminescence.<BR> 
+<IMG SRC="aufbau_en.gif" ALT="SBSL assembly" HEIGHT=594 WIDTH=417>
+</LI>
+</OL>
+
+<P>
+<HR></P>
+
+<H3>Persuade one bubble to glow:</H3>
+
+<OL>
+<LI><A NAME="h2o"></A>Prepare degassed Water: </LI>
+
+<UL>
+<LI>with a vacuum pump:<BR>
+Fill the Erlenmeyer flask or the bottle up to the half with distilled water
+and pump off the air until the gas is completely pulled off the water (at
+least 15&nbsp;minutes). </LI>
+
+<LI>with an Erlenmeyer flask:<BR>
+Fill the Erlenmeyer flask up to the half with distilled water, close it
+with the airtight stopper and heat it. Leave it boiling with an open hose
+for about 15 minutes. Take it off the heat and clamp the hose. Let it cool
+down. </LI>
+
+<LI>with a drinking bottle:<BR>
+Fill the bottle up to the half with distilled water, put the cap loosely
+on top allowing the air to escape and heat it. Leave it boiling for about
+15 minutes. Take it off the heat and close the cap completely. Let it cool
+down. Don't bother me with &quot;my bottle exploded, what was wrong?&quot;-stuff;
+While the bottle is heated it <B>mustn't</B> be closed! </LI>
+</UL>
+
+<LI>Clean the flask thoroughly. </LI>
+
+<LI>Open your vessel with the degassed water. Pour the water into your
+flask letting it run down the glass. Be careful not to produce bubbles
+while filling. Fill it up to the neck, so the water is nearly spherical
+shaped. </LI>
+
+<LI><A NAME="resonance"></A>Find the acoustic resonance:<BR>
+By-pass the coil and set the sine generator to 26&nbsp;kHz. Display the
+microphone signal on your oscilloscope. Now change the frequency slowly
+to find the maximum amplitude of the signal. There may be several local
+maximums around that frequency, but in most cases you'll have to select
+the absolute maximum (i.e. the highest peak). If you got a sweep generator,
+it might be helpful to display a <A HREF="res_ac.gif" ALT="acoustic resonance">20-30&nbsp;kHz
+sweep</A> on the scope. The acoustic resonance appears as a some 100&nbsp;Hz
+broad peak. If you found the resonance, remove the by-pass. </LI>
+
+<LI><A NAME="inductance"></A>Adjust the inductance:<BR>
+Display voltage and current on your oscilloscope so you can see the phase
+shift. Adjust the core/change the distance between the coils until the
+phase shift is zero. If you got a sweep generator, it might be helpful
+to display a <A HREF="res_el.gif" ALT="electric resonance">20-30&nbsp;kHz
+sweep</A> of the microphone signal on the scope. The electric resonance
+appears as a 1&nbsp;kHz broad peak overlaying the acoustic resonance. </LI>
+
+<LI>Choose a low driving amplitude, e.g. 100&nbsp;mV peak-to-peak on your
+oscilloscope. </LI>
+
+<LI>Watch the microphone signal: It shows a pure sinusoidal voltage. If
+ripples are on the signal, there are some bubbles in the flask. Leave them
+alone a minute or two with the driving voltage switched off. If they don't
+vanish, your water contains too much air; you have to <A HREF="#h2o">degas
+it</A> more carefully. Ripples may also indicate a poor contact between
+a transducer and the flask. The epoxy has to cover the whole transducer
+and no air may be between transducer and flask. Air between epoxy and flask
+appears as a reflecting area. </LI>
+
+<LI><A NAME="bubble"></A>Create a bubble:<BR>
+Extract some water with the syringe or the eyedropper. With the syringe
+let a drop fall on the surface of the water. This creates a bunch of tiny
+bubbles. Some of them will dissolve whereas others will drift to the center
+of the flask and unite. To see them, you have to light them from behind
+and look against a dark background. A broadened laser beam is really nice
+and helpful! Watch the microphone signal; Now there should be some <A HREF="micro.gif" ALT="ripples on the microphone signal">ripples
+on the sinusoidal signal.</A> The ripples are still visible if the bubble
+is to small to be seen without a laser; So watch the ripples, not the bubble.
+A high-pass filter improves their visibility. If you see no ripples, increase
+the voltage and try again. If the ripples quickly vanish, turn the voltage
+lower and try again. </LI>
+
+<LI>Slowly increase the driving amplitude. At a certain amplitude the bubble
+becomes instable and vanishes: No ripples are visible. Turn the voltage
+lower a bit and create a <A HREF="#bubble">new bubble</A>. </LI>
+
+<LI>This is the big moment:<BR>
+Darken the surrounding light and look at the center of the flask. You should
+see a tiny blue-white dot, like you captured a little star from the night
+sky. </LI>
+
+<LI>If no glowing dot is visible: The microphone signal has to give a stable
+image of the ripples on the scope. Change the driving voltage and perhaps
+the frequency a bit to achieve that. Increase the driving voltage just
+below the instability border. You may change the frequency, too, but it
+isn't that critical. </LI>
+</OL>
+
+<P>Once you succeeded, you should be able to reproduce SBSL without difficulties.
+With this basic setup you may start experimenting. Investigate the parameter
+range where SBSL is visible. Try other flasks, other liquids (putting glycerine
+into the water improves SBSL),... 
+<HR></P>
+
+<H3>Persuade many bubbles to glow:</H3>
+
+<OL>
+<LI>Fill the flask with water up to the neck. </LI>
+
+<LI>Find the <A HREF="#resonance">acoustic resonance</A>. </LI>
+
+<LI>Adjust the <A HREF="#inductance">inductance</A>. </LI>
+
+<LI>Increase the driving voltage until you hear a horrible screeching noise,
+which sounds like your flask is going to crack. Don't be surprised if it
+does... and <B>don't touch any exposed connection</B>. The sound is produced
+by cavitation, i.e. by imploding cavities in the water. </LI>
+
+<LI><B>Pay attention not to overheat the coil(s) or transducers.</B> </LI>
+
+<LI>You need a very high driving amplitude (maybe some hundred volts).
+If your amplifier doesn't reach it:
+To double the voltage, feed the inverted signal to the second (stereo)
+amplifier channel and use the signal between the two live outputs. </LI>
+
+<LI>Darken your room <I>completely</I>. Adapt your eyes, which may take
+15&nbsp;minutes up to half an hour. Look at the flask or at least where
+you think your flask is (remember: the room is <I>completely</I> darkened).
+You will see a weak glowing in some areas of the water and sometimes flashes
+crossing the flask. This is the famous Multi Bubble Sonoluminescence. </LI>
+</OL>
+
+<P>
+<HR></P>
+
+<H3>References:</H3>
+
+<UL>
+<LI>R. A. Hiller, B. P. Barber, Scientific American Feb. 1995, 78 </LI>
+
+<LI>D. F. Gaitan et al., J. Accoust. Soc. Am. 91, 3166 (1992) </LI>
+
+<LI>L. A. Crum, Physics Today Sept. 1994, 22 </LI>
+
+<LI>...</LI>
+</UL>
+
+<P>
+<HR></P>
+
+<P><A NAME="manufac"></A></P>
+
+<H3>Manufacturers:</H3>
+
+<UL>
+<LI>Channel Industries, Inc.<BR>
+839 Ward Drive<BR>
+Santa Barbara, Calif.<BR>
+tel. (805) 967-0171; fax (805) 683-3420<BR>
+</LI>
+
+<LI>PI Ceramic GmbH<BR>
+Lindenstra&szlig;e<BR>
+D-07589 Lederhose, Germany<BR>
+tel. (+49[0]36604) 8820; fax (+49[0]36604) 88225<BR>
+*** you may take the PIC&nbsp;151 or 155 type *** </LI>
+</UL>
+
+<P>
+<HR></P>
+
+<P><A HREF="http://www.macgeisler.de">Zur&uuml;ck zur Homepage
+/ <I>back to the homepage</I></A> 
+<HR></P>
+
+</BODY>
+</HTML>

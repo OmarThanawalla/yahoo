@@ -1,0 +1,176 @@
+<base href="http://hubblesite.org/hubble_discoveries/discovering_planets_beyond/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>HubbleSite - Discovering Planets Beyond - Introduction</title>
+<link rel="stylesheet" href="/lib/styles.php?global,/hubble_discoveries/hubble_global.css" type="text/css" />
+<link rel="stylesheet" href="/lib/shadowbox-3.0/shadowbox.css" type="text/css" />
+<link rel="stylesheet" href="/hubble_discoveries/discovering_planets_beyond/styles.css" type="text/css" />
+
+<script type="text/javascript" src="/lib/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/lib/jquery.hubblesite.js"></script>
+<script type="text/javascript" src="/lib/shadowbox-3.0/shadowbox.js"></script>
+<script type="text/javascript" src="/lib/jquery.ba-hashchange.min.js"></script>
+<script type="text/javascript" src="/shared/expandable-widget/jquery.expandable-widget.js"></script>
+<script type="text/javascript" src="/lib/jquery.popup-videos.js"></script>
+<script type="text/javascript" src="/lib/swfobject.js"></script>
+<script type="text/javascript" src="/hubble_discoveries/discovering_planets_beyond/jquery.exoplanets.js"></script>
+
+<script type="text/javascript">
+  __HUBBLE_HOST__ = 'hubblesite.org';
+  Shadowbox.path = 'http://' + __HUBBLE_HOST__ + '/lib/shadowbox-3.0/';
+  Shadowbox.init({players:['iframe']});
+</script>
+
+
+<!-- Dynamically generated styles go here -->
+<!--[if lte IE 6]>
+<style type="text/css">
+  @import url('/styles/ie6_and_below.css');
+</style>
+<![endif]-->
+
+<!--[if IE]>
+<style type="text/css">
+  @import url('/styles/all_internet_explorer.css');
+</style>
+<![endif]-->
+<!--[if IE 7]>
+<style type="text/css">
+  #on-this-page li {
+    list-style-position: inside;
+  }
+</style>
+<![endif]-->
+
+<link rel="stylesheet" href="/shared/expandable-widget/styles.css" type="text/css" />
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.expandable-widget-popover-holder').exoplanetExpandableWidget();
+
+    if ($.browser.msie) {
+      $(window).bind('hashchange', function() {
+        $('object[id]').each(function() {
+          var origID = $(this).attr('id');
+
+          var width = $(this).attr('width');
+          var height = $(this).attr('height');
+
+          $(this).before($('<div id="' + (origID + 'a') + '" />').css({
+            width: width,
+            height: height
+          }));
+
+          var data;
+          $(this).children('param').each(function() {
+            if ($(this).attr('name') == 'movie') {
+              data = $(this).attr('value');
+            }
+          });
+
+          swfobject.removeSWF(origID);
+          swfobject.embedSWF(data, origID + 'a', width, height, '9', null, {}, {wmode: 'opaque'});
+        });
+      });
+    }
+
+    $('a[href$=flv]').setupPopupVideos();
+  });
+</script>
+
+<style type="text/css">
+
+	
+    				  li#home { min-width: 63px }
+				  li#newscenter { min-width: 118px }
+				  li#gallery { min-width: 87px }
+				  li#discoveries { min-width: 114px }
+				  li#telescope { min-width: 104px }
+				  li#astronomy { min-width: 110px }
+				  li#education { min-width: 106px }
+				  li#reference { min-width: 107px }
+				  li#webb_telescope { min-width: 155px }
+		</style>
+<!--[if IE]>
+<style type="text/css">
+					  li#home { width: 63px }
+				  li#newscenter { width: 118px }
+				  li#gallery { width: 87px }
+				  li#discoveries { width: 114px }
+				  li#telescope { width: 104px }
+				  li#astronomy { width: 110px }
+				  li#education { width: 106px }
+				  li#reference { width: 107px }
+				  li#webb_telescope { width: 155px }
+		</style>
+<![endif]-->
+	
+</head>
+<body><a id="top" name="top"></a>
+<div id="container" class="subpage exoplanets-index" style="height:auto">
+  	  <!--htdig_noidex-->
+  		<div id="top-menu-container">
+  			<div id="top-components">
+  				  				<form id="search-hubblesite"
+  					style="margin-top: 6px"
+  					class="search"
+  					action="/search/"
+  					method="get"><span id="search-hubblesite-text">Search all of HubbleSite</span>
+  					<input class="text" type="text" name="query" value="search" />
+  					<input id="hubblesite-search-button" onmouseover="this.src='/graphics/rollover_arrowcir.gif'" onmouseout="this.src='/hubble_discoveries/graphics/discoveries_circle_arrow.gif'" class="search-arrow" type="image" src="/hubble_discoveries/graphics/discoveries_circle_arrow.gif" />
+  				</form>
+  				<div id="hubblesite-logo"><a href="/"><img src="/hubble_discoveries/graphics/disc_navlogo.gif" alt="HubbleSite" border="0" /></a></div>
+  				  				<div style="min-height: 1px" class="top-links-discoveries" id="top-links-container">
+  					<ul id="top-links">
+  						  							<li id="home"><a href="/" class="tall">HOME</a></li>
+  						  							<li id="newscenter"><a href="/newscenter/" class="tall">NEWSCENTER</a></li>
+  						  							<li id="gallery"><a href="/gallery/" class="tall">GALLERY</a></li>
+  						  							<li id="discoveries"><a href="/hubble_discoveries/" class="current">HUBBLE<br />DISCOVERIES</a></li>
+  						  							<li id="telescope"><a href="/the_telescope/">HUBBLE<br />TELESCOPE</a></li>
+  						  							<li id="astronomy"><a href="/explore_astronomy/">EXPLORE<br />ASTRONOMY</a></li>
+  						  							<li id="education"><a href="/education_and_museums/">EDUCATION<br />&amp; MUSEUMS</a></li>
+  						  							<li id="reference"><a href="/reference_desk/">REFERENCE<br />DESK</a></li>
+  						  							  <li class="spacer">
+                    <div style="width: 3px"></div>
+                  </li>
+  							  							<li id="webb_telescope"><a href="/webb_telescope/">THE FUTURE:<br />WEBB TELESCOPE</a></li>
+  						<!--[if IE]><span style="display: none">&nbsp;&nbsp;&nbsp;</span><![endif]-->
+  					</ul>
+  				</div>
+  			</div>
+  		</div>
+    <!--/htdig_noindex-->
+	
+	<div id="search-section-bar"></div>
+  <div id="container-padding" class="subpage"><a href="/hubble_discoveries/" id="section-clicker"></a>
+		<div id="nav-box-container" class="left">
+      <div id="hubblesite-menu-box"><ul class="level-1"><li class="inactive "><a href="/hubble_discoveries/">Hubble Discoveries</a><ul class="level-2"><li class="inactive "><a href="/hubble_discoveries/breakthroughs/">Hubble's Top Breakthroughs</a></li><li class="inactive "><a href="/hubble_discoveries/dark_energy/">Dark Energy</a></li><li class="active final"><a href="/hubble_discoveries/discovering_planets_beyond/">Discovering Planets Beyond</a><ul class="level-3"><li class="inactive "><a href="/hubble_discoveries/discovering_planets_beyond/how-do-planets-form">How Do Planets Form?</a></li><li class="inactive "><a href="/hubble_discoveries/discovering_planets_beyond/hunting-for-planets">Hunting for Planets</a></li><li class="inactive "><a href="/hubble_discoveries/discovering_planets_beyond/alien-atmospheres">Alien Atmospheres</a></li><li class="inactive "><a href="/hubble_discoveries/discovering_planets_beyond/related-links">Related Links &amp; Credits</a></li></ul></li><li class="inactive "><a href="/hubble_discoveries/hstexhibit/">New Views of the Universe</a></li><li class="inactive "><a href="/hubble_discoveries/hubble_deep_field/">Hubble Deep Field</a></li><li class="inactive "><a href="/hubble_discoveries/10th/">A Decade of Discovery</a></li><li class="inactive "><a href="/hubble_discoveries/science_year_in_review/">Science Year in Review</a></li><li class="inactive "><a href="/hubble_discoveries/comet_ison/">ISONBlog</a></li></ul></li></ul></div>		</div>
+		<div id="subpage-content">
+			<div id="subpage-content-container">
+			  <div id="subpage-content-body">
+					<div class="subpage-body"><div id="overview-holder"> <div id="overview-title" style="position:relative; top:64px; left:135px;"></div> <div id="flash-movie" style=" position:relative; top:75px; left:90px;"> <script type="text/javascript"> //swfobject.registerObject('exo-overview', '9.0.0'); </script><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="560" height="370" id="exo-overview"><param name="movie" value="http://hubblesite.org/hubble_discoveries/discovering_planets_beyond/media/overview/exo_overview.swf" /><!--[if !IE]>--><object type="application/x-shockwave-flash" data="http://hubblesite.org/hubble_discoveries/discovering_planets_beyond/media/overview/exo_overview.swf" width="560" height="370"><!--<![endif]--><div class="warning">HubbleSite works better when you install <a href="http://www.adobe.com/go/getflash/">the latest Flash Player</a> for your browser.</div><!--[if !IE]>--></object><!--<![endif]--></object> <div style="width:562px" class="download-flash-file-holder" style="font-weight:bold;text-decoration:none !important;color: #69250e;"> <a href="http://hubblesite.org/hubble_discoveries/discovering_planets_beyond/download/media/overview/exo_overview.swf" style="font-weight:bold;text-decoration:underline ;color: #003333;">Download Flash file</a> </div> </div> <div class="padding" style="position:relative; top:85px;"> <p style="padding:9px">Select a story ...</p> </div><div id="explore-more-holder"> <a href="how-do-planets-form" alt="How Do Planets Form?: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, mauris ut tempor ultrices, neque." > <div class="page" style="background-image: url(graphics/exoplanet_intro_nav_planet_formation.jpg); position:relative; z-index:0;"> <div class="image-holder"> <h4>How Do Planets Form?</h4> <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, mauris ut tempor ultrices, neque.</p>---> </div> </div></a> <a href="hunting-for-planets" alt="Hunting for Planets: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, mauris ut tempor ultrices, neque." > <div class="page" style="background-image: url(graphics/exoplanet_intro_nav_planet_hunts.jpg); position:relative; z-index:0;"> <div class="image-holder"> <h4>Hunting for Planets</h4> <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, mauris ut tempor ultrices, neque.</p>---> </div> </div></a> <a href="alien-atmospheres" alt="Alien Atmospheres: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, mauris ut tempor ultrices, neque." > <div class="page" style="background-image: url(graphics/exoplanet_intro_nav_planet_habitability.jpg); position:relative; z-index:0;"> <div class="image-holder"> <h4>Alien Atmospheres</h4> <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, mauris ut tempor ultrices, neque.</p>---> </div> </div></a> <br class="clear" /> </div> </div> </div>
+				</div>
+			</div>
+		</div>
+    <div id="footer" class="clearfix">
+		    <a href="/search/">search</a> | <a href="/site_map/">site map</a> | <a href="http://m.hubblesite.org/">mobile</a> | <a href="/about_us/">about us</a> | <a href="/about_us/contact_us/">contact us</a> | <a href="/about_us/copyright.php">copyright</a>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2505395-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  		</div>
+	</div>
+</div>
+</body>
+</html>

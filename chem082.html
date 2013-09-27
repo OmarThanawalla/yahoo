@@ -1,0 +1,168 @@
+<base href="http://science.widener.edu/svb/tutorial/scinot.html">
+<html>
+<head><title>Scientific Notation</title>
+<script>
+//globals
+coef=0
+sign=""
+decimal=0
+exponent=0
+option=0
+theanswer=0
+theanswer2=0
+theanswer1=0
+answered=0
+function empty(){
+	document.forms[0].results.value=""
+	document.forms[0].total.value=0
+	document.forms[0].correct.value=0
+}
+function clear(){
+	document.forms[0].results.value=""
+	document.forms[0].dec.value=""
+	document.forms[0].coeff.value=""
+	document.forms[0].expon.value=""
+}
+function increment()
+{	answered=0
+	document.forms[0].total.value++
+	start()
+}
+function start()
+{
+	//document.forms[0].total.value++
+	clear()
+	coef=Math.round(10*(10*Math.random()))/10
+	coef=""+coef
+	if(coef.length<3)
+		{start()}
+	else
+	{	
+		if(Math.random()>.66)
+			{coef=coef+Math.ceil(6*Math.random())}
+		exponent=Math.ceil(8*Math.random())
+	
+		if(Math.random()<.5)
+			{sign="-"}
+		else
+			{sign="+"}
+		exponent=sign+exponent
+		decimal=coef
+		for(j=1;j<=Math.abs(exponent);j++)
+		{	if(sign=="+")
+			{	decimal=decimal*10   }
+			else
+			{	decimal=decimal/10}
+		}
+		decimal=""+decimal
+	}
+	if(decimal.length>(3+Math.abs(exponent))){start()}
+	else{
+	document.forms[0].coeff.value=coef
+	document.forms[0].expon.value=exponent
+	document.forms[0].dec.value=decimal
+	theanswer=decimal
+	theanswer1=coef
+	theanswer2=exponent
+	setproblem()
+	}
+}
+function setproblem(){
+which=Math.ceil(2*Math.random())
+if(which==1)
+	{
+	option=0
+	document.forms[0].dec.value=""
+	}
+if(which==2){
+	option=1
+	document.forms[0].coeff.value=""
+	document.forms[0].expon.value=""
+	}
+}
+function answer()
+{	
+	answered++
+	if(answered>1)
+	{	document.forms[0].total.value++}
+	count=0
+	if(option==0)
+	{  	if(1*document.forms[0].dec.value==1*theanswer)
+		{	count=1	}
+	}
+	else
+	{	if(1*document.forms[0].coeff.value==1*theanswer1 & 1*document.forms[0].expon.value==1*theanswer2){
+		count=1}}
+	if(count==1){
+	document.forms[0].results.value="correct"
+	document.forms[0].correct.value++}
+	else{
+	document.forms[0].results.value="incorrect"}
+}	
+</script>
+</head>
+<body onLoad=clear(),empty()>
+<h2>Scientific Notation</h2>
+This page is an exercise in scientific notation. When you press "New Problem", either the scientific notation or non-scientific notation representation of a number will be shown. Put the corresponding value(s) in the empty cell(s) and press "Check Answer". The results will appear in the second table.<br>
+<form>
+<input type=button value="New Problem" onClick=increment()>
+<input type=button value="Check Answer" onClick=answer()><br>
+<table border=4>
+<tr>
+<td></td>
+<td></td>
+<td>Coefficient</td>
+<td></td>
+<td align=center>Exponent</td>
+</tr>
+<tr>
+<td><input type=text size=12 name=dec></td>
+<td>=</td>
+<td><input type=text size=5 name=coeff></td>
+<td>*10</td>
+<td><input type=text size=5 name=expon></td>
+</tr>
+</table>
+<table border=4>
+<tr><td align=center><b>Results</td>
+<td align=center><b>Total Done</td>
+<td><b>Correct</b></td>
+</tr>
+<tr>
+<td><input type="text" size=12 name=results></td>
+<td align=center><input type="text" size=4 name=total></td>
+<td align=center><input type="text" size=4 name=correct></td>
+</tr>
+</table>
+</form>
+ <br>
+
+<P><HR>
+<CENTER><TABLE WIDTH=99% BORDER>
+<TR>
+<TD ALIGN=center><A HREF="index.html">Return to <BR> Drill and Practice Problems</A></TD>
+<TD ALIGN=center><A href="../../~svanbram/chem145/chem145.html">Return to <BR> Chemistry 145</A></TD>
+<TD ALIGN=center><A href="../../~svanbram/chem146/chem146.html">Return to <BR> Chemistry 146</A></TD>
+</TABLE></CENTER><P><HR>
+
+These problems are provided courtesy of <A HREF="http://chemistry.csudh.edu">Prof. George Wiger</A> (<A HREF="mailto:gwiger@chemistry.csudh.edu">gwiger@chemistry.csudh.edu</A>) at California State University, Dominguez Hills.<P>
+
+Please direct any questions about this site to 
+Please send comments or suggestions to<A HREF="mailto: svanbram@science.widener.edu"> svanbram@science.widener.edu</A><p>
+<A HREF="http://science.widener.edu/~svanbram">Scott Van Bramer</A><BR>
+<A HREF="http://www.widener.edu/CAS/chemistry">Department of Chemistry</A><BR>
+<A HREF="http://www.widener.edu">Widener University</A><BR>
+Chester, PA 19013<P>
+
+
+This page has been accessed 
+246490
+ times since  9/1 /98 .<P>
+
+Last Updated: Tuesday, September 01, 1998 11:12:46 AM
+
+
+</body>
+</html>
+
+

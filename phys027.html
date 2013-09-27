@@ -1,0 +1,2416 @@
+<base href="http://www.interactions.org/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+	<title>Interactions.org - Particle physics, high energy physics, news and resources</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	
+	<link href="/includes/css/layout.css" rel="stylesheet" type="text/css" />
+	<link href="/includes/css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="/includes/css/imagebank.css" rel="stylesheet" type="text/css" />
+	<link href="/includes/css/admin.css" rel="stylesheet" type="text/css" />
+	<link href="/social_bookmarks/css/sb_styles.css" rel="stylesheet" />
+	<link href="/includes/css/nav-vertical.css" rel="stylesheet" type="text/css" />
+	<link href="/includes/css/nav_core.css" rel="stylesheet" type="text/css" />
+	<link href="/includes/css/print.css" rel="stylesheet" type="text/css" media="print" />
+	
+	<!--//====== IE Styles ======//-->
+	<!--[if IE]>
+	<link href="/includes/css/nav_ie.css" rel="stylesheet" type="text/css">
+	<![endif]-->
+	
+	<!--[if IE 7]>
+	<link href="/includes/css/ie7-only.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	
+	<!--[if IE 8]>
+	<link href="/includes/css/ie8-only.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	
+	<!--[if lt IE 9]>
+	<link href="/includes/css/ie9-lt.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	
+	
+	<!--//====== Mobile-Only Styles ======//-->
+	<link rel="stylesheet" type="text/css" href="/includes/css/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" />
+	<!--[if IEMobile]>
+		<link rel="stylesheet" type="text/css" href="/includes/css/mobile.css" media="screen" />
+	<![endif]-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+	<script type="text/javascript">
+	(function(doc) {
+	
+		var addEvent = 'addEventListener',
+			type = 'gesturestart',
+			qsa = 'querySelectorAll',
+			scales = [1, 1],
+			meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+	
+		function fix() {
+			meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+			doc.removeEventListener(type, fix, true);
+		}
+	
+		if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+			fix();
+			scales = [.25, 1.6];
+			doc[addEvent](type, fix, true);
+		}
+	
+	}(document));
+	</script>
+
+
+	<!--//====== iPad-Only Styles ======//-->
+	<script type="text/javascript">
+	if((navigator.userAgent.match(/iPad/i))) {
+		document.write("<link type=\"text\/css\" rel=\"stylesheet\" media=\"all\" href=\"/includes/css/ipad.css\" charset=\"utf-8\" \/>");
+		document.write("<meta name=\"viewport\" content=width=1024px, minimum-scale=1.0, maximum-scale=1.0 \/>");
+	}
+	</script>
+	
+	
+	<!--//======== jQuery library ========//-->
+	<!-- script src="/includes/js/jcarousel/jquery-1.3.2.min.js" type="text/javascript"></script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+	
+	
+	<!--//======== jQuery Slideshow ========//-->
+	<!--jCarousel core stylesheet-->
+	<link href="/includes/js/jcarousel/jquery.jcarousel.css" rel="stylesheet" type="text/css" />
+	<link href="/includes/js/jcarousel/jquery.jcarousel.fonts.css" rel="stylesheet" type="text/css" />
+	<link href="/includes/js/jcarousel/jcarousel.css" rel="stylesheet" type="text/css" />
+
+	<!--jCarousel library-->
+	<script src="/includes/js/jcarousel/jquery.jcarousel.pack.js" type="text/javascript"></script>
+	<script src="/includes/js/jcarousel/jcarousel.js" type="text/javascript"></script>	
+	
+	
+	<!--//====== Accordian Script (for Mobile) ======//-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+	<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/includes/js/accordian/accordian.css" rel="stylesheet" type="text/css" />
+	
+	<script>
+		$(function() {
+			var icons = {
+				header: "ui-icon-circle-arrow-e",
+				headerSelected: "ui-icon-circle-arrow-s"
+			};
+			$( "#accordion" ).accordion({
+				icons: icons,
+				collapsible: true,
+				autoHeight: false,
+				navigation: true,
+				active: false
+			});
+			$( "#toggle" ).button().toggle(function() {
+				$( "#accordion" ).accordion( "option", "icons", false );
+			}, function() {
+				$( "#accordion" ).accordion( "option", "icons", icons );
+			});
+		});
+	</script>
+	
+
+<link rel="alternate" type="application/rss+xml" title="Interactions.org News" href="/rss/index.rdf">
+
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+<meta name='Generator' content='XenoCMS 4.0 (winans)'/>
+<meta name="DCS.dcsuri" content="/Home_Page"/>
+<meta name='description' content='Particle Physics news and resources' />
+	<meta name='keywords' content='particle physics, high energy physics, high-energy physics, physics, neutrinos, HEP, photos, images, database, press release, press releases, CERN, SLAC, DESY, fermilab, brookhaven, FNAL, BNL, berkeley, cornell, frascati, gran sasso, ihep, JINR, INFN, jlab, jefferson, kek, slac, stanford, TRIUMF' />
+	
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19758979-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+
+<!-- start body -->
+
+
+<!--//==============================
+Mobile Only
+===============================//-->
+<div id="mobile-page" class="mobile-only homepage">
+
+	<div id="mobile-header">
+		<img src="/tmpl_images/logo-interactions.jpg" alt="Interactions.org" title="Interactions.org" id="logo" />
+	</div><!--/mobile-header-->
+
+	<div id="accordion">
+
+		<h3><a href="#">News</a></h3>
+		<div class="content content-news">
+			
+
+
+<div ><!--//========================================================
+					***************** LATEST NEWSWIRES ***************************
+					========================================================//-->
+					
+					<!--//******** text-widget ********//-->
+					<div class="text-widget  text-widget-newswire  png">
+						
+						<h3 class="png">
+                        
+                            <ul class="sb-icons">
+                                <li class="rss"><a href="/cms/?pid=1022576"><img src="/tmpl_images/icons/rss-icon.png" alt="RSS Feed" /></a></li>
+                                <li class="twitter"><a href="http://twitter.com/particlenews/"><img src="/tmpl_images/icons/twitter-icon.png" alt="Twitter" /></a></li>
+                            </ul>
+                            
+                            <span>Latest Newswires</span>
+                            
+                        </h3>
+						
+						<div class="text-widget-body">
+							<div class="text-widget-content" style="height: 140px;">
+
+
+
+<p>21 August 2013: Berkeley Lab<br /><a href="http://www.interactions.org/cms/?pid=1033164" title="New Results from Daya Bay: Tracking the Disappearance of Ghostlike Neutrinos">New Results from Daya Bay: Tracking the Disappearance of Ghostlike Neutrinos</a></p>
+
+<p>15 August 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033161" title="CERN Open Days: bookings to visit the underground facilities are now being taken">CERN Open Days: bookings to visit the underground facilities are now being taken</a></p>
+
+<p>31 July 2013: Kavli IPMU<br /><a href="http://www.interactions.org/cms/?pid=1033122" title="A New View on the Origin of Dark Matter and Dark Energy">A New View on the Origin of Dark Matter and Dark Energy</a></p>
+
+<p>19 July 2013: KEK<br /><a href="http://www.interactions.org/cms/?pid=1033083" title="New results from T2K conclusively show muon neutrinos transform to electron neutrinos">New results from T2K conclusively show muon neutrinos transform to electron neutrinos</a></p>
+
+<p>19 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033081" title="CERN experiments put Standard Model to stringent test ">CERN experiments put Standard Model to stringent test </a></p>
+
+<p>17 July 2013: Fermilab<br /><a href="http://www.interactions.org/cms/?pid=1033080" title="Giant electromagnet to conclude its 3,200-mile journey on July 26">Giant electromagnet to conclude its 3,200-mile journey on July 26</a></p>
+
+<p>17 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033079" title="CERN experiments to present latest results at summer conferences">CERN experiments to present latest results at summer conferences</a></p>
+
+<p>16 July 2013: INFN Gran Sasso Laboratory<br /><a href="http://www.interactions.org/cms/?pid=1033078" title="News about ghost particles">News about ghost particles</a></p>
+
+<p>11 July 2013: TRIUMF/Kavli IPMU<br /><a href="http://www.interactions.org/cms/?pid=1033067" title="Japan and Canada to Compete for Top American Researcher">Japan and Canada to Compete for Top American Researcher</a></p>
+
+<p>11 July 2013: Fermilab/Berkeley Lab/Brookhaven Lab<br /><a href="http://www.interactions.org/cms/?pid=1033066" title="Successful Test of New U.S. Magnet Puts Large Hadron Collider on Track for Major Upgrade">Successful Test of New U.S. Magnet Puts Large Hadron Collider on Track for Major Upgrade</a></p>
+
+<p>11 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033065" title="CERN and EUROVISION Unite to Attract "Tweens" to Science">CERN and EUROVISION Unite to Attract "Tweens" to Science</a></p>
+
+<p>4 July 2013: John Adams Institute<br /><a href="http://www.interactions.org/cms/?pid=1033052" title="FLASHForward to the future – Helmholtz Virtual Institute">FLASHForward to the future – Helmholtz Virtual Institute</a></p>
+
+<p>4 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033051" title="CERN opens its doors to the world">CERN opens its doors to the world</a></p>
+
+
+
+
+
+							
+							</div><!-- END: text-widget-content -->
+						</div><!-- END: text-widget-body -->
+						
+					</div><!-- END: text-widget -->
+					<div class="text-widget-bottom  png"></div><!-- END: text-widget-bottom -->
+					<!--//******** END: text-widget ********//-->
+					
+					<!--//========================================================
+					***************** END: LATEST NEWSWIRES ***************************
+					========================================================//-->
+					
+					
+					<br /></div>
+
+<div ><!--//========================================================
+          ***************** IN THE NEWS ***************************
+          ========================================================//-->
+          
+          <!--//******** text-widget ********//-->
+          <div class="text-widget  text-widget-news  png">
+            
+            <h3 class="png">
+                        
+                            <ul class="sb-icons">
+                                <li class="rss"><a href="/cms/?pid=1022576"><img src="/tmpl_images/icons/rss-icon.png" alt="RSS Feed" /></a></li>
+                                <li class="twitter"><a href="http://twitter.com/particlenews/"><img src="/tmpl_images/icons/twitter-icon.png" alt="Twitter" /></a></li>
+                            </ul>a
+                            
+                            <span>Particle Physics In The News</span>
+                            
+                        </h3>
+                        
+                  <div class="text-widget-body">
+
+              <div class="text-widget-content" style="height: 485px;">
+
+
+<p>25 August 2013 - The Beacon News<br/>
+<a href="http://beaconnews.suntimes.com/news/22069257-418/physicists-set-out-to-answer-why-particle-physics-matters.html">Physicists set out to answer ‘why particle physics matters’ </a></p>
+
+<p>25 August 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/news/science-environment-23809234">Prize-winning scientist brings African teachers to Cern</a></p>
+
+<p>25 August 2013 - ANI News<br/>
+<a href="http://www.aninews.in/newsdetail9/story127473/new-radiotherapy-machine-can-zap-out-cancer-cells-without-harmful-side-effects.html">New radiotherapy machine can zap out cancer cells without harmful side-effects</a></p>
+
+<p>25 August 2013 - Express<br/>
+<a href="http://www.express.co.uk/news/health/424446/UK-scientists-develop-cancer-zapping-beam">UK scientists develop cancer zapping beam</a></p>
+
+<p>23 August 2013 - Laboratory Equipment<br/>
+<a href="http://www.laboratoryequipment.com/news/2013/08/scientists-see-how-ghost-particles-oscillate">Scientists See How Ghost-Like Particles Oscillate </a></p>
+
+<p>23 August 2013 - Live Science<br/>
+<a href="http://www.livescience.com/39115-neutrino-oscillation-daya-bay.html">Particle Personality Disorder: Neutrinos Change Flavors in Chinese Experiment</a></p>
+
+<p>23 August 2013 - Science AAAS<br/>
+<a href="http://news.sciencemag.org/asia/2013/08/japan-picks-tohoku-site-international-linear-collider">Japan Picks Tohoku Site for International Linear Collider</a></p>
+
+<p>23 August 2013 - The Mainichi<br/>
+<a href="http://mainichi.jp/english/english/newsselect/news/20130823p2a00m0na008000c.html">Miyagi, Iwate prefecture mountains picked as possible site for int'l particle accelerator</a></p>
+
+<p>23 August 2013 - Japan Times<br/>
+<a href="http://www.japantimes.co.jp/news/2013/08/23/national/tohoku-pitched-for-¥1-trillion-collider/#.UheB0uDn1YJ">Tohoku pitched for ¥1 trillion collider</a></p>
+
+<p>22 August 2013 - Physics<br/>
+<a href="http://physics.aps.org/synopsis-for/10.1103/PhysRevLett.111.080405">Synopsis: Spotlight on Photon-Photon Scattering</a></p>
+
+<p>21 August 2013 - Science 2.0<br/>
+<a href="http://www.science20.com/quantum_diaries_survivor/top_quark_shortest_lived_matter_universe-118840">Top Quark - The Shortest Lived Matter In The Universe</a></p>
+
+<p>20 August 2013 - Medill Reports Chicago<br/>
+<a href="http://news.medill.northwestern.edu/chicago/news.aspx?id=224028">Curiosity: A fundamental part of exploring the universe at CERN</a></p>
+
+<p>20 August 2013 - Laboratory Equipment<br/>
+<a href="http://www.laboratoryequipment.com/news/2013/08/rare-particle-decay-predicted-standard-model">Rare Particle Decay Predicted by the Standard Model </a></p>
+
+<p>19 August 2013 - Huffington Post<br/>
+<a href="http://www.huffingtonpost.com/2013/08/19/how-particle-accelerators-work-physicists_n_3777290.html">How Do Particle Accelerators Work? Physicists Explain</a></p>
+
+<p>18 August 2013 - The Varsity<br/>
+<a href="http://thevarsity.ca/2013/08/18/toronto-researchers-contribute-to-new-understanding-of-neutrino-oscillations/">Toronto researchers contribute to new understanding of neutrino oscillations</a></p>
+
+<p>16 August 2013 - World Science Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8880/20130816/upgraded-lhc-super-collider-takes-shape-cern-engineers-replacing-dipole.htm">Upgraded LHC Super-Collider Takes Shape With CERN Engineers Replacing Dipole Magnets</a></p>
+
+<p>16 August 2013 - Zee News<br/>
+<a href="http://zeenews.india.com/news/space/race-to-solve-mystery-of-dark-energy-begins_869400.html">Race to solve mystery of dark energy begins</a></p>
+
+<p>15 August 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn24049-oddball-space-neutrinos-may-be-spawn-of-dark-matter.html#.Ug1Kmz-DmCg">Oddball space neutrinos may be spawn of dark matter</a></p>
+
+<p>14 August 2013 - The Telegraph<br/>
+<a href="http://www.telegraph.co.uk/technology/news/10242837/How-CERNs-Grid-may-place-the-power-of-the-worlds-computers-in-your-hands.html">How CERN’s Grid may place the power of the world’s computers in your hands</a></p>
+
+
+<p>14 August 2013 - Newser<br/>
+<a href="http://www.newser.com/story/172468/physicists-need-new-accelerator-for-god-particle.html">Physicists Need New Accelerator for 'God Particle'</a></p>
+
+<p>13 August 2013 - Times of India<br/>
+<a href="http://articles.timesofindia.indiatimes.com/2013-08-11/science/41293874_1_higgs-boson-dark-energy-dark-matter">Higgs boson may unravel dark energy mystery</a></p>
+
+<p>13 August 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn24033-play-with-antimatter-from-the-comfort-of-your-home.html#.Ugp1x22DmCg">Play with antimatter from the comfort of your home</a></p>
+
+<p>12 August 2013 - Northeast Public Radio<br/>
+<a href="http://www.wamc.org/post/particle-physicists-want-new-collider-study-higgs">Particle Physicists Want A New Collider To Study The Higgs</a></p>
+
+<p>12 August 2013 - Live Science<br/>
+<a href="http://www.livescience.com/38812-how-atom-smashers-work.html">Incredible Technology: How Atom Smashers Work</a></p>
+
+<p>11 August 2013 - Science 2.0<br/>
+<a href="http://www.science20.com/quantum_diaries_survivor/demystifying_fivesigma_criterion-118228">Demystifying The Five-Sigma Criterion</a></p>
+
+<p>11 August 2013 - The Hindu<br/>
+<a href="http://www.thehindu.com/sci-tech/science/higgs-boson-may-unravel-dark-energy-mystery/article5012402.ece">Higgs Boson may unravel dark energy mystery</a></p>
+
+<p>11 August 2013 - Zee News<br/>
+<a href="http://zeenews.india.com/news/science/higgs-boson-key-to-resolving-cosmological-constant-problem_868187.html">Higgs Boson key to resolving cosmological constant problem</a></p>
+
+<p>9 August 2013 - Science World Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8735/20130809/antimatter-experiment-cern-calls-croudsourced-help.htm">Antimatter Experiment at CERN Calls for Crowdsourced Help</a></p>
+
+<p>9 August 2013 - Eurekalert<br/>
+<a href="http://www.eurekalert.org/pub_releases/2013-08/asu-tpp080913.php">2 physicists propose Higgs boson 'portal' as the source of this elusive entity</a></p>
+
+<p>9 August 2013 - The Daily Galaxy<br/>
+<a href="http://www.dailygalaxy.com/my_weblog/2013/08/beyond-the-higgs-boson-worlds-physicists-search-for-hidden-dimensions-of-space-and-time.html">Beyond the Higgs Boson" --World's Physicists Search for Hidden Dimensions of Space and Time</a></p>
+
+<p>8 August 2013 - Vancouver Sun<br/>
+<a href="http://www.vancouversun.com/health/TRIUMF+team+signs+million+deal+with+Indian+scientists/8765980/story.html">TRIUMF team signs $10-million deal with Indian scientists</a></p>
+
+<p>8 August 2013 - University of Cambridge<br/>
+<a href="https://www.repository.cam.ac.uk/handle/1810/224431">Detecting exotic heavy leptons at the large hadron collider</a></p>
+
+<p>8 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-higgs-discovery-physicists-vision-unravel.html">Following Higgs discovery, physicists offer vision to unravel mysteries of universe</a></p>
+
+<p>8 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-theorist-sharpen-fundamental-theory-high.html">Theorist helps sharpen tests of fundamental theory in high energy experiments</a></p>
+
+<p>7 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-thousand-years-universe-tantalizing-hints.html">First hundred thousand years of our universe: Researchers find tantalizing new hints of clues</a></p>
+
+<p>7 August 2013 - Science Codex<br/>
+<a href="http://www.sciencecodex.com/first_hundred_thousand_years_of_our_universe-117158">First hundred thousand years of our universe</a></p>
+
+<p>7 August 2013 - GenevaLunch.com<br/>
+<a href="http://genevalunch.com/2013/08/07/does-it-matter-cern-and-the-universe/">Does it matter? Cern and the universe</a></p>
+
+<p>6 August 2013 - The Guardian<br/>
+<a href="http://www.theguardian.com/science/2013/aug/06/higgs-boson-physics-hits-buffers-discovery">One year on from the Higgs boson find, has physics hit the buffers?</a></p>
+
+<p>6 August 2013 - Science Insider<br/>
+<a href="http://news.sciencemag.org/2013/08/isotope-accelerator-gets-green-light-almost-start-construction">Isotope Accelerator Gets Green Light (Almost) to Start Construction</a></p>
+
+
+<p>6 August 2013 - World News<br/>
+<a href="http://www.sbs.com.au/news/article/1796563/New-theory-of-general-relativity-casts-doubt-on-da">New theory of general relativity casts doubt on dark matter</a></p>
+
+<p>5 August 2013 - The Nation<br/>
+<a href="http://www.nation.com.pk/pakistan-news-newspaper-daily-english-online/snippets/05-Aug-2013/cern-readies-for-next-cosmic-after-higgs-breakthrough">CERN readies for next cosmic </a></p>
+
+<p>2 August 2013 - Discovery News<br/>
+<a href="http://news.discovery.com/space/hints-of-new-physics-detected-in-the-lhc-130802.htm">Hints of New Physics Detected in the LHC?</a></p>
+
+<p>2 August 2013 - Physics World<br/>
+<a href="http://physicsworld.com/cws/article/news/2013/aug/02/has-lhcb-spotted-physics-beyond-the-standard-model">Has LHCb spotted physics beyond the Standard Model?</a></p>
+
+<p>1 August 2013 - Daily Mail<br/>
+<a href="http://www.dailymail.co.uk/sciencetech/article-2382458/Better-faster-stronger-Large-Hadron-Collider-gets-major-upgrade-help-scientists-learn-God-Particle.html?ITO=1490&ns_mchannel=rss&ns_campaign=1490">Better, faster, stronger: Large Hadron Collider gets a major upgrade to help scientists learn more about the God Particle</a></p>
+
+<p>1 August 2013 - The Daily Galaxy<br/>
+<a href="http://www.dailygalaxy.com/my_weblog/2013/08/cerns-lhc-future-to-probe-dark-energy-and-supersymmetry.html">CERN's 'LHC' New Mission to Probe Mystery of Dark Energy</a></p>
+
+
+<p>1 August 2013 - Examiner .com<br/>
+<a href="http://www.examiner.com/article/physics-first-alpha-particle-preformation-constant-confirmed-china">Physics first: Alpha particle preformation constant confirmed in China</a></p>
+
+<p>1 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-higgs-breakthrough-cern-readies-cosmic.html">After Higgs breakthrough, CERN readies for next cosmic quest</a></p>
+
+<p>31 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-experimental-physics-standard.html">First experimental signs of a New Physics beyond the Standard Model</a></p>
+
+<p>31 July 2013 - Live Science<br/>
+<a href="http://www.livescience.com/38533-photons-may-emit-faster-than-light-particles.html">Photons May Emit Faster-Than-Light Particles, Physicists Suggest</a></p>
+
+
+<p>29 July 2013 - Science World Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8476/20130729/standard-model-physics-confirmed-again-cern-rare-process-observations.htm">Standard Model of Physics Confirmed Again by CERN Rare Process Observations</a></p>
+
+<p>29 July 2013 - Gizmodo<br/>
+<a href="http://gizmodo.com/fermilab-hunts-rare-subatomic-particles-with-this-50-fo-922941100">Fermilab Hunts Rare Subatomic Particles With This 50-Foot Electromagnet</a></p>
+
+<p>29 July 2013 - Science Codex<br/>
+<a href="http://www.sciencecodex.com/experimental_quest_to_test_einsteins_speed_limit-116527">Experimental quest to test Einstein's speed limit</a></p>
+
+<p>28 July 2013 - The Space Reporter<br/>
+<a href="http://thespacereporter.com/2013/07/confirmation-that-neutrinos-do-change-flavor/">Confirmation that neutrinos do change ‘flavor’</a></p>
+
+<p>26 July 2013 - Financial Times<br/>
+<a href="http://www.ft.com/intl/cms/s/2/d3ea9832-eee4-11e2-b8ec-00144feabdc0.html#axzz2aRgeuIYe">Cern physicist Fabiola Gianotti on hunting for the ‘God particle’</a></p>
+
+<p>26 July 2013 - WGN<br/>
+<a href="http://wgntv.com/2013/07/26/fermilabs-giant-magnet-finally-reaches-destination-in-batavia/">Fermilab’s giant magnet finally reaches destination in Batavia</a></p>
+
+<p>25 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-cern-latest-supersymmetry.html">CERN latest data shows no sign of supersymmetry – yet</a></p>
+
+
+<p>25 July 2013 - Nanowerk<br/>
+<a href="http://www.nanowerk.com/news2/space/newsid=31537.php">Scientists discover massive particle accelerator in heart of Van Allen radiation belts</a></p>
+
+<p>25 July 2013 - Scientific Computing<br/>
+<a href="http://www.scientificcomputing.com/news/2013/07/cern-experiments-put-standard-model-stringent-test#.UfExKG1Lrms">CERN Experiments put Standard Model to Stringent Test </a></p>
+
+<p>24 July 2013 - Discovery News<br/>
+<a href="http://news.discovery.com/space/lhc-discovery-maims-supersymmetry-again-130724.htm">LHC Discovery Maims Supersymmetry, Again</a></p>
+
+<p>24 July 2013 - Nature<br/>
+<a href="http://www.nature.com/news/cyclotrons-come-full-circle-1.13436?WT.ec_id=NATURE-20130725">Cyclotrons come full circle</a></p>
+
+<p>24 July 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/news/science-environment-23431797">Ultra-rare decay confirmed in LHC</a></p>
+
+
+<p>24 July 2013 - CBS Chicago<br/>
+<a href="http://chicago.cbslocal.com/2013/07/23/giant-electromagnets-3200-mile-trek-to-fermilab-nearly-finished/">Giant Electromagnet’s 3,200-Mile Trek To Fermilab Nearly Finished</a></p>
+
+<p>24 July 2013 - Syracuse University<br/>
+<a href="http://news.syr.edu/su-scientists-assist-in-landmark-discovery-of-rare-particle-decay-98724/">SU Scientists Assist in Landmark Discovery of Rare Particle Decay</a></p>
+
+<p>23 July 2013 - Science World Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8334/20130723/physicists-discover-shape-shifting-particles-muon-neutrinos-transform.htm">Physicists Discover Shape-Shifting Particles: Muon Neutrinos Transform</a></p>
+
+<p>23 July 2013 - Space Daily<br/>
+<a href="http://www.spacedaily.com/reports/Toronto_researchers_part_of_international_team_that_caught_neutrinos_in_the_act_999.html">Toronto researchers part of international team that caught neutrinos in the act</a></p>
+
+<p>22 July 2013 - Scientific American<br/>
+<a href="http://www.scientificamerican.com/podcast/episode.cfm?id=neutrino-identity-switch-confirmed-13-07-22">Neutrino Identity Switch Confirmed </a></p>
+
+<p>22 July 2013 - physicsworld.com<br/>
+<a href="http://physicsworld.com/cws/article/news/2013/jul/22/physicists-call-for-five-billion-euro-neutrino-factory">Physicists call for €5bn Neutrino Factory</a></p>
+
+<p>22 July 2013 - The Times<br/>
+<a href="http://www.thetimes.co.uk/tto/news/uk/scotland/article3822149.ece?CMP=OTH-gnws-standard-2013_07_22">Scientists 'may lose access to facilities after independence'</a></p>
+
+<p>22 July 2013 - Wired<br/>
+<a href="http://www.wired.com/wiredscience/2013/07/dark-matter-hunt-zeroing-in/">Dark-Matter Hunt Appears to Be Zeroing In on a Leading Contender</a></p>
+
+<p>21 July 2013 - Aurora Beacon News<br/>
+<a href="http://beaconnews.suntimes.com/news/21416840-418/fermilabs-prized-supermagnet-arrives-in-lemont.html">Fermilab's prized supermagnet arrives in Lemont</a></p>
+
+<p>21 July 2013 - The Japan News<br/>
+<a href="http://the-japan-news.com/news/article/0000395535">Neutrino change confirmed in Japan</a></p>
+
+<p>21 July 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/programmes/p01c3jy5">What neutrinos might tell us about the big bang</a></p>
+
+<p>20 July 2013 - Nature World News<br/>
+<a href="http://www.natureworldnews.com/articles/3067/20130720/new-type-neutrino-flip-explain-existence-matter-confirmed.htm"> New Type of Neutrino Flip that Could Explain the Existence of Matter Confirmed
+ </a></p>
+
+<p>19 July 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn23906#.Uewv_hZn-BI">Rare particle decay is bad news for exotic physics</a></p>
+
+<p>19 July 2013 - Huffington Post<br/>
+<a href="http://www.huffingtonpost.com/2013/07/19/cern-scientists-rare-particle-decay-theory-universe-birth_n_3622595.html">CERN Scientists Observe Rare Particle Decay That Helps Confirm Theory About Universe's Birth</a></p>
+
+<p>19 July 2013 - ABC News<br/>
+<a href="http://abcnews.go.com/Technology/wireStory/physicists-unveil-results-helping-explain-universe-19709305">Physicists Unveil Results Helping Explain Universe</a></p>
+
+<p>19 July 2013 - The Daily Galaxy<br/>
+<a href="http://www.dailygalaxy.com/my_weblog/2013/07/rare-phenomenon-discovered-that-provides-way-to-test-models-of-a-new-physics.html">Rare Phenomenon Discovered --Provides Way to Test Models of a New Physics</a></p>
+
+<p>19 July 2013 - Economic Times<br/>
+<a href="http://economictimes.indiatimes.com/news/news-by-industry/et-cetera/new-tests-back-concept-for-particle-physics-cern/articleshow/21168520.cms">New tests back concept for particle physics: CERN</a></p>
+
+<p>19 July 2013 - The Guardian<br/>
+<a href="http://www.guardian.co.uk/science/life-and-physics/2013/jul/19/t2k-neutrino-eps-stockholm">T2K neutrino experiment reports new oscillation results</a></p>
+
+<p>19 July 2013 - Space Ref<br/>
+<a href="http://www.spaceref.com/news/viewpr.html?pid=41223">UK Researchers Make New Discovery About Neutrinos</a></p>
+
+<p>19 July 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/news/science-environment-23366318">Neutrino 'flavour' flip confirmed</a></p>
+
+<p>19 July 2013 - The Hindu<br/>
+<a href="http://www.thehindu.com/sci-tech/science/cern-physicists-observe-particle-that-bolsters-standard-model/article4931574.ece">CERN physicists observe particle that bolsters Standard Model</a></p>
+
+<p>19 July 2013 - The Washington Post<br/>
+<a href="http://www.washingtonpost.com/world/europe/physicists-unveil-new-particle-results-helping-explain-universe/2013/07/19/85168852-f055-11e2-8c36-0e868255a989_story.html">Physicists unveil new particle results helping to explain the universe</a></p>
+
+<p>19 July 2013 - RTE.ie<br/>
+<a href="http://www.rte.ie/news/2013/0719/463414-cern-science/">Ireland 'losing out' on science contracts</a></p>
+
+<p>18 July 2013 - Huffington Post<br/>
+<a href="http://www.huffingtonpost.com/2013/07/18/neutrino-study-subatomic-particles_n_3617932.html">Neutrino Study Fails To Show Interaction Of Weird Subatomic Particles</a></p>
+
+<p>18 July 2013 - euronews<br/>
+<a href="http://www.euronews.com/2013/07/18/atom-smashing-at-cern-what-does-it-mean-to-us-/">Atom smashing at CERN - what does it mean to us?</a></p>
+
+<p>17 July 2013 - The Daily Californian<br/>
+<a href="http://www.dailycal.org/2013/07/17/new-magnet-technology-developed-by-researchers/">New magnet technology developed by researchers</a></p>
+
+<p>17 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-particle-physicists-post-higgs.html">What's next for particle physicists, post-Higgs?</a></p>
+
+<p>16 July 2013 - Science Magazine<br/>
+<a href="http://news.sciencemag.org/sciencenow/2013/07/are-neutrinos-their-own-antipart.html?ref=em">Are Neutrinos Their Own Antiparticles?</a></p>
+
+<p>16 July 2013 - International Business Times<br/>
+<a href="http://www.ibtimes.com/large-hadron-collider-could-soon-get-boost-powerful-us-made-magnet-1348569">Large Hadron Collider Could Soon Get Boost From Powerful US-Made Magnet</a></p>
+
+<p>16 July 2013 - Gizmodo Australia<br/>
+<a href="http://www.gizmodo.com.au/2013/07/monster-machines-quadpole-super-magnets-will-increase-the-lhcs-power-tenfold/">Monster Machines: Quadpole Super Magnets Will Increase The LHC's Power Tenfold</a></p>
+
+<p>15 July 2013 - ETH Life<br/>
+<a href="http://www.ethlife.ethz.ch/archive_articles/130715_arktis_radiation_su/index_EN">Particle physics for internal security</a></p>
+
+<p>14 July 2013 - The Times of India<br/>
+<a href="http://timesofindia.indiatimes.com/city/varanasi/Mass-of-dark-matter-particle-more-than-proton-particle-Researchers/articleshow/21062847.cms">Mass of dark matter particle more than proton particle: Researchers</a></p>
+
+<p>13 July 2013 - Micro Finance Monitor<br/>
+<a href="http://www.microfinancemonitor.com/2013/07/14/cern-eurovision-to-attract-tweens-to-science/">CERN, Eurovision to attract ‘TWEENS’ to science </a></p>
+
+
+<p>12 July 2013 - E & T Magazine<br/>
+<a href="http://eandt.theiet.org/news/2013/jul/cern-supermagnets.cfm">New supermagnets to unlock Cern's possibilities</a></p>
+
+
+<p>12 July 2013 - India Blooms<br/>
+<a href="http://www.indiablooms.com/EnvironmentDetailsPage/2013/environmentDetails120713c.php">Cern, Eurovison unite to attract children</a></p>
+
+<p>12 July 2013 - Live Science<br/>
+<a href="http://www.livescience.com/38129-large-hadron-collider-magnet-passes-tests.html">New Atom-Smashing Magnet Passes First Tests</a></p>
+
+<p>11 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-successful-magnet-large-hadron-collider.html">Successful test of new US magnet puts Large Hadron Collider on track for major upgrade</a></p>
+
+
+<p>10 July 2013 - Scientific American<br/>
+<a href="http://www.scientificamerican.com/gallery_directory.cfm?photo_id=E0603221-0383-DFB4-256CC7176C9F6648">Mass Movement: A 50-Ton Magnet's 3,200-Mile Journey</a></p>
+
+<p>8 July 2013 - WebProNews<br/>
+<a href="http://www.webpronews.com/cern-to-open-for-tourists-in-september-2013-07">CERN to Open For Tourists in September</a></p>
+
+<p>5 July 2013 - Discovery News<br/>
+<a href="http://news.discovery.com/space/to-be-or-not-to-be-thats-the-higgs-boson-question-130705.htm">Decoding the Higgs Boson: Is it the Real Deal?</a></p>
+
+<p>5 July 2013 - iDigitalTimes.co.uk<br/>
+<a href="http://www.idigitaltimes.co.uk/articles/487042/20130705/cern-god-particle-experiment-one-year-old.htm">CERN God Particle Experiment One - year Old Now</a></p>
+
+<p>5 July 2013 - e! Science News<br/>
+<a href="http://esciencenews.com/articles/2013/07/05/laser.system.allows.determination.atomic.binding.energy.rarest.element.earth">Laser system allows determination of atomic binding energy of the rarest element on earth</a></p>
+
+<p>5 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-higgs-boson-year.html">The Higgs boson: One year on</a></p>
+
+<p>5 July 2013 - The Inquirer<br/>
+<a href="http://www.theinquirer.net/inquirer/news/2279640/cern-opens-its-doors-to-the-public">CERN opens its doors to the public</a></p>
+
+<p>4 July 2013 - ABC News<br/>
+<a href="http://abcnews.go.com/Technology/god-particle-higgs-boson-year/story?id=19574423">'God Particle': The Higgs Boson One Year Later</a></p>
+
+<p>4 July 2013 - IT Web<br/>
+<a href="http://www.itweb.co.za/index.php?option=com_content&view=article&id=65430:two-decade-journey-for-collider">Two-decade journey for collider</a></p>
+
+<p>3 July 2013 - Cornell Chronicle<br/>
+<a href="http://news.cornell.edu/stories/2013/07/linear-collider-gains-key-insights-cornell-physicists">Linear collider gains key insights from Cornell physicists</a></p>
+
+<p>3 July 2013 - TG Daily<br/>
+<a href="http://www.tgdaily.com/general-sciences-features/72343-physicists-develop-rationale-for-the-next-gen-particle-collider">Physicists develop rationale for the next-gen particle collider</a></p>
+
+<p>2 July 2013 - Smithsonian<br/>
+<a href="http://www.smithsonianmag.com/science-nature/How-the-Higgs-Boson-Was-Found-213876841.html#Higgs-boson-ATLAS-detector-1.jpg">How the Higgs Boson Was Found </a></p>
+
+<p>2 July 2013 - e! Science News<br/>
+<a href="http://esciencenews.com/articles/2013/07/02/ou.physicists.develop.rationale.next.generation.particle.collider">OU physicists develop rationale for the next-generation particle collider</a></p>
+
+
+<p>2 July 2013 - Engadget<br/>
+<a href="http://www.engadget.com/2013/07/02/CERN-LHC-underground-tour/?utm_medium=feed&utm_source=Feed_Classic&utm_campaign=Engadget">Into the heart of CERN: an undergound tour of the Large Hadron Collider</a></p>
+
+<p>2 July 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn23798-highenergy-cosmos-is-violent-with-hint-of-dark-matter.html#.UdNN7W3NmGs">High-energy cosmos is violent with hint of dark matter </a></p>
+
+<p>2 July 2013 - Computer World<br/>
+<a href="http://www.computerworld.com/s/article/9240523/We_want_to_be_surprised_CERN_scientist_says?taxonomyId=154">We want to be surprised, CERN scientist says</a></p>
+
+<p>2 July 2013 - The University of Manchester<br/>
+<a href="http://www.manchester.ac.uk/aboutus/news/display/?id=10324">Higgs particle not the only sweet success for science</a></p>
+
+<p>2 July 2013 - Information Week<br/>
+<a href="http://www.informationweek.com/cloud-computing/infrastructure/cerns-hadron-collider-research-fueled-by/240157584">CERN's Hadron Collider Research Fueled By OpenStack</a></p>
+
+<p>1 July 2013 - Google News<br/>
+<a href="http://www.google.com/hostednews/afp/article/ALeqM5i6ACmY7XTHeAfOG5tMfjrdZV01yA?docId=CNG.70f1882e28153423656e7499adb11ace.d1">Higgs evidence mounts one year on, as does suspense</a></p>
+
+
+
+
+
+
+
+
+
+
+
+              </div><!-- END: text-widget-content -->
+            </div><!-- END: text-widget-body -->
+            
+          </div><!-- END: text-widget -->
+          <div class="text-widget-bottom  png"></div><!-- END: text-widget-bottom --></div>
+
+
+
+
+		</div><!-- /.content -->
+
+
+		<h3><a href="#">Latest Newswires</a></h3>
+		<div class="content content-newswire">
+			
+
+
+<div ><!--//========================================================
+					***************** LATEST NEWSWIRES ***************************
+					========================================================//-->
+					
+					<!--//******** text-widget ********//-->
+					<div class="text-widget  text-widget-newswire  png">
+						
+						<h3 class="png">
+                        
+                            <ul class="sb-icons">
+                                <li class="rss"><a href="/cms/?pid=1022576"><img src="/tmpl_images/icons/rss-icon.png" alt="RSS Feed" /></a></li>
+                                <li class="twitter"><a href="http://twitter.com/particlenews/"><img src="/tmpl_images/icons/twitter-icon.png" alt="Twitter" /></a></li>
+                            </ul>
+                            
+                            <span>Latest Newswires</span>
+                            
+                        </h3>
+						
+						<div class="text-widget-body">
+							<div class="text-widget-content" style="height: 140px;">
+
+
+
+<p>21 August 2013: Berkeley Lab<br /><a href="http://www.interactions.org/cms/?pid=1033164" title="New Results from Daya Bay: Tracking the Disappearance of Ghostlike Neutrinos">New Results from Daya Bay: Tracking the Disappearance of Ghostlike Neutrinos</a></p>
+
+<p>15 August 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033161" title="CERN Open Days: bookings to visit the underground facilities are now being taken">CERN Open Days: bookings to visit the underground facilities are now being taken</a></p>
+
+<p>31 July 2013: Kavli IPMU<br /><a href="http://www.interactions.org/cms/?pid=1033122" title="A New View on the Origin of Dark Matter and Dark Energy">A New View on the Origin of Dark Matter and Dark Energy</a></p>
+
+<p>19 July 2013: KEK<br /><a href="http://www.interactions.org/cms/?pid=1033083" title="New results from T2K conclusively show muon neutrinos transform to electron neutrinos">New results from T2K conclusively show muon neutrinos transform to electron neutrinos</a></p>
+
+<p>19 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033081" title="CERN experiments put Standard Model to stringent test ">CERN experiments put Standard Model to stringent test </a></p>
+
+<p>17 July 2013: Fermilab<br /><a href="http://www.interactions.org/cms/?pid=1033080" title="Giant electromagnet to conclude its 3,200-mile journey on July 26">Giant electromagnet to conclude its 3,200-mile journey on July 26</a></p>
+
+<p>17 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033079" title="CERN experiments to present latest results at summer conferences">CERN experiments to present latest results at summer conferences</a></p>
+
+<p>16 July 2013: INFN Gran Sasso Laboratory<br /><a href="http://www.interactions.org/cms/?pid=1033078" title="News about ghost particles">News about ghost particles</a></p>
+
+<p>11 July 2013: TRIUMF/Kavli IPMU<br /><a href="http://www.interactions.org/cms/?pid=1033067" title="Japan and Canada to Compete for Top American Researcher">Japan and Canada to Compete for Top American Researcher</a></p>
+
+<p>11 July 2013: Fermilab/Berkeley Lab/Brookhaven Lab<br /><a href="http://www.interactions.org/cms/?pid=1033066" title="Successful Test of New U.S. Magnet Puts Large Hadron Collider on Track for Major Upgrade">Successful Test of New U.S. Magnet Puts Large Hadron Collider on Track for Major Upgrade</a></p>
+
+<p>11 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033065" title="CERN and EUROVISION Unite to Attract "Tweens" to Science">CERN and EUROVISION Unite to Attract "Tweens" to Science</a></p>
+
+<p>4 July 2013: John Adams Institute<br /><a href="http://www.interactions.org/cms/?pid=1033052" title="FLASHForward to the future – Helmholtz Virtual Institute">FLASHForward to the future – Helmholtz Virtual Institute</a></p>
+
+<p>4 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033051" title="CERN opens its doors to the world">CERN opens its doors to the world</a></p>
+
+
+
+
+
+							
+							</div><!-- END: text-widget-content -->
+						</div><!-- END: text-widget-body -->
+						
+					</div><!-- END: text-widget -->
+					<div class="text-widget-bottom  png"></div><!-- END: text-widget-bottom -->
+					<!--//******** END: text-widget ********//-->
+					
+					<!--//========================================================
+					***************** END: LATEST NEWSWIRES ***************************
+					========================================================//-->
+					
+					
+					<br /></div>
+
+<div ><!--//========================================================
+          ***************** IN THE NEWS ***************************
+          ========================================================//-->
+          
+          <!--//******** text-widget ********//-->
+          <div class="text-widget  text-widget-news  png">
+            
+            <h3 class="png">
+                        
+                            <ul class="sb-icons">
+                                <li class="rss"><a href="/cms/?pid=1022576"><img src="/tmpl_images/icons/rss-icon.png" alt="RSS Feed" /></a></li>
+                                <li class="twitter"><a href="http://twitter.com/particlenews/"><img src="/tmpl_images/icons/twitter-icon.png" alt="Twitter" /></a></li>
+                            </ul>a
+                            
+                            <span>Particle Physics In The News</span>
+                            
+                        </h3>
+                        
+                  <div class="text-widget-body">
+
+              <div class="text-widget-content" style="height: 485px;">
+
+
+<p>25 August 2013 - The Beacon News<br/>
+<a href="http://beaconnews.suntimes.com/news/22069257-418/physicists-set-out-to-answer-why-particle-physics-matters.html">Physicists set out to answer ‘why particle physics matters’ </a></p>
+
+<p>25 August 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/news/science-environment-23809234">Prize-winning scientist brings African teachers to Cern</a></p>
+
+<p>25 August 2013 - ANI News<br/>
+<a href="http://www.aninews.in/newsdetail9/story127473/new-radiotherapy-machine-can-zap-out-cancer-cells-without-harmful-side-effects.html">New radiotherapy machine can zap out cancer cells without harmful side-effects</a></p>
+
+<p>25 August 2013 - Express<br/>
+<a href="http://www.express.co.uk/news/health/424446/UK-scientists-develop-cancer-zapping-beam">UK scientists develop cancer zapping beam</a></p>
+
+<p>23 August 2013 - Laboratory Equipment<br/>
+<a href="http://www.laboratoryequipment.com/news/2013/08/scientists-see-how-ghost-particles-oscillate">Scientists See How Ghost-Like Particles Oscillate </a></p>
+
+<p>23 August 2013 - Live Science<br/>
+<a href="http://www.livescience.com/39115-neutrino-oscillation-daya-bay.html">Particle Personality Disorder: Neutrinos Change Flavors in Chinese Experiment</a></p>
+
+<p>23 August 2013 - Science AAAS<br/>
+<a href="http://news.sciencemag.org/asia/2013/08/japan-picks-tohoku-site-international-linear-collider">Japan Picks Tohoku Site for International Linear Collider</a></p>
+
+<p>23 August 2013 - The Mainichi<br/>
+<a href="http://mainichi.jp/english/english/newsselect/news/20130823p2a00m0na008000c.html">Miyagi, Iwate prefecture mountains picked as possible site for int'l particle accelerator</a></p>
+
+<p>23 August 2013 - Japan Times<br/>
+<a href="http://www.japantimes.co.jp/news/2013/08/23/national/tohoku-pitched-for-¥1-trillion-collider/#.UheB0uDn1YJ">Tohoku pitched for ¥1 trillion collider</a></p>
+
+<p>22 August 2013 - Physics<br/>
+<a href="http://physics.aps.org/synopsis-for/10.1103/PhysRevLett.111.080405">Synopsis: Spotlight on Photon-Photon Scattering</a></p>
+
+<p>21 August 2013 - Science 2.0<br/>
+<a href="http://www.science20.com/quantum_diaries_survivor/top_quark_shortest_lived_matter_universe-118840">Top Quark - The Shortest Lived Matter In The Universe</a></p>
+
+<p>20 August 2013 - Medill Reports Chicago<br/>
+<a href="http://news.medill.northwestern.edu/chicago/news.aspx?id=224028">Curiosity: A fundamental part of exploring the universe at CERN</a></p>
+
+<p>20 August 2013 - Laboratory Equipment<br/>
+<a href="http://www.laboratoryequipment.com/news/2013/08/rare-particle-decay-predicted-standard-model">Rare Particle Decay Predicted by the Standard Model </a></p>
+
+<p>19 August 2013 - Huffington Post<br/>
+<a href="http://www.huffingtonpost.com/2013/08/19/how-particle-accelerators-work-physicists_n_3777290.html">How Do Particle Accelerators Work? Physicists Explain</a></p>
+
+<p>18 August 2013 - The Varsity<br/>
+<a href="http://thevarsity.ca/2013/08/18/toronto-researchers-contribute-to-new-understanding-of-neutrino-oscillations/">Toronto researchers contribute to new understanding of neutrino oscillations</a></p>
+
+<p>16 August 2013 - World Science Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8880/20130816/upgraded-lhc-super-collider-takes-shape-cern-engineers-replacing-dipole.htm">Upgraded LHC Super-Collider Takes Shape With CERN Engineers Replacing Dipole Magnets</a></p>
+
+<p>16 August 2013 - Zee News<br/>
+<a href="http://zeenews.india.com/news/space/race-to-solve-mystery-of-dark-energy-begins_869400.html">Race to solve mystery of dark energy begins</a></p>
+
+<p>15 August 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn24049-oddball-space-neutrinos-may-be-spawn-of-dark-matter.html#.Ug1Kmz-DmCg">Oddball space neutrinos may be spawn of dark matter</a></p>
+
+<p>14 August 2013 - The Telegraph<br/>
+<a href="http://www.telegraph.co.uk/technology/news/10242837/How-CERNs-Grid-may-place-the-power-of-the-worlds-computers-in-your-hands.html">How CERN’s Grid may place the power of the world’s computers in your hands</a></p>
+
+
+<p>14 August 2013 - Newser<br/>
+<a href="http://www.newser.com/story/172468/physicists-need-new-accelerator-for-god-particle.html">Physicists Need New Accelerator for 'God Particle'</a></p>
+
+<p>13 August 2013 - Times of India<br/>
+<a href="http://articles.timesofindia.indiatimes.com/2013-08-11/science/41293874_1_higgs-boson-dark-energy-dark-matter">Higgs boson may unravel dark energy mystery</a></p>
+
+<p>13 August 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn24033-play-with-antimatter-from-the-comfort-of-your-home.html#.Ugp1x22DmCg">Play with antimatter from the comfort of your home</a></p>
+
+<p>12 August 2013 - Northeast Public Radio<br/>
+<a href="http://www.wamc.org/post/particle-physicists-want-new-collider-study-higgs">Particle Physicists Want A New Collider To Study The Higgs</a></p>
+
+<p>12 August 2013 - Live Science<br/>
+<a href="http://www.livescience.com/38812-how-atom-smashers-work.html">Incredible Technology: How Atom Smashers Work</a></p>
+
+<p>11 August 2013 - Science 2.0<br/>
+<a href="http://www.science20.com/quantum_diaries_survivor/demystifying_fivesigma_criterion-118228">Demystifying The Five-Sigma Criterion</a></p>
+
+<p>11 August 2013 - The Hindu<br/>
+<a href="http://www.thehindu.com/sci-tech/science/higgs-boson-may-unravel-dark-energy-mystery/article5012402.ece">Higgs Boson may unravel dark energy mystery</a></p>
+
+<p>11 August 2013 - Zee News<br/>
+<a href="http://zeenews.india.com/news/science/higgs-boson-key-to-resolving-cosmological-constant-problem_868187.html">Higgs Boson key to resolving cosmological constant problem</a></p>
+
+<p>9 August 2013 - Science World Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8735/20130809/antimatter-experiment-cern-calls-croudsourced-help.htm">Antimatter Experiment at CERN Calls for Crowdsourced Help</a></p>
+
+<p>9 August 2013 - Eurekalert<br/>
+<a href="http://www.eurekalert.org/pub_releases/2013-08/asu-tpp080913.php">2 physicists propose Higgs boson 'portal' as the source of this elusive entity</a></p>
+
+<p>9 August 2013 - The Daily Galaxy<br/>
+<a href="http://www.dailygalaxy.com/my_weblog/2013/08/beyond-the-higgs-boson-worlds-physicists-search-for-hidden-dimensions-of-space-and-time.html">Beyond the Higgs Boson" --World's Physicists Search for Hidden Dimensions of Space and Time</a></p>
+
+<p>8 August 2013 - Vancouver Sun<br/>
+<a href="http://www.vancouversun.com/health/TRIUMF+team+signs+million+deal+with+Indian+scientists/8765980/story.html">TRIUMF team signs $10-million deal with Indian scientists</a></p>
+
+<p>8 August 2013 - University of Cambridge<br/>
+<a href="https://www.repository.cam.ac.uk/handle/1810/224431">Detecting exotic heavy leptons at the large hadron collider</a></p>
+
+<p>8 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-higgs-discovery-physicists-vision-unravel.html">Following Higgs discovery, physicists offer vision to unravel mysteries of universe</a></p>
+
+<p>8 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-theorist-sharpen-fundamental-theory-high.html">Theorist helps sharpen tests of fundamental theory in high energy experiments</a></p>
+
+<p>7 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-thousand-years-universe-tantalizing-hints.html">First hundred thousand years of our universe: Researchers find tantalizing new hints of clues</a></p>
+
+<p>7 August 2013 - Science Codex<br/>
+<a href="http://www.sciencecodex.com/first_hundred_thousand_years_of_our_universe-117158">First hundred thousand years of our universe</a></p>
+
+<p>7 August 2013 - GenevaLunch.com<br/>
+<a href="http://genevalunch.com/2013/08/07/does-it-matter-cern-and-the-universe/">Does it matter? Cern and the universe</a></p>
+
+<p>6 August 2013 - The Guardian<br/>
+<a href="http://www.theguardian.com/science/2013/aug/06/higgs-boson-physics-hits-buffers-discovery">One year on from the Higgs boson find, has physics hit the buffers?</a></p>
+
+<p>6 August 2013 - Science Insider<br/>
+<a href="http://news.sciencemag.org/2013/08/isotope-accelerator-gets-green-light-almost-start-construction">Isotope Accelerator Gets Green Light (Almost) to Start Construction</a></p>
+
+
+<p>6 August 2013 - World News<br/>
+<a href="http://www.sbs.com.au/news/article/1796563/New-theory-of-general-relativity-casts-doubt-on-da">New theory of general relativity casts doubt on dark matter</a></p>
+
+<p>5 August 2013 - The Nation<br/>
+<a href="http://www.nation.com.pk/pakistan-news-newspaper-daily-english-online/snippets/05-Aug-2013/cern-readies-for-next-cosmic-after-higgs-breakthrough">CERN readies for next cosmic </a></p>
+
+<p>2 August 2013 - Discovery News<br/>
+<a href="http://news.discovery.com/space/hints-of-new-physics-detected-in-the-lhc-130802.htm">Hints of New Physics Detected in the LHC?</a></p>
+
+<p>2 August 2013 - Physics World<br/>
+<a href="http://physicsworld.com/cws/article/news/2013/aug/02/has-lhcb-spotted-physics-beyond-the-standard-model">Has LHCb spotted physics beyond the Standard Model?</a></p>
+
+<p>1 August 2013 - Daily Mail<br/>
+<a href="http://www.dailymail.co.uk/sciencetech/article-2382458/Better-faster-stronger-Large-Hadron-Collider-gets-major-upgrade-help-scientists-learn-God-Particle.html?ITO=1490&ns_mchannel=rss&ns_campaign=1490">Better, faster, stronger: Large Hadron Collider gets a major upgrade to help scientists learn more about the God Particle</a></p>
+
+<p>1 August 2013 - The Daily Galaxy<br/>
+<a href="http://www.dailygalaxy.com/my_weblog/2013/08/cerns-lhc-future-to-probe-dark-energy-and-supersymmetry.html">CERN's 'LHC' New Mission to Probe Mystery of Dark Energy</a></p>
+
+
+<p>1 August 2013 - Examiner .com<br/>
+<a href="http://www.examiner.com/article/physics-first-alpha-particle-preformation-constant-confirmed-china">Physics first: Alpha particle preformation constant confirmed in China</a></p>
+
+<p>1 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-higgs-breakthrough-cern-readies-cosmic.html">After Higgs breakthrough, CERN readies for next cosmic quest</a></p>
+
+<p>31 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-experimental-physics-standard.html">First experimental signs of a New Physics beyond the Standard Model</a></p>
+
+<p>31 July 2013 - Live Science<br/>
+<a href="http://www.livescience.com/38533-photons-may-emit-faster-than-light-particles.html">Photons May Emit Faster-Than-Light Particles, Physicists Suggest</a></p>
+
+
+<p>29 July 2013 - Science World Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8476/20130729/standard-model-physics-confirmed-again-cern-rare-process-observations.htm">Standard Model of Physics Confirmed Again by CERN Rare Process Observations</a></p>
+
+<p>29 July 2013 - Gizmodo<br/>
+<a href="http://gizmodo.com/fermilab-hunts-rare-subatomic-particles-with-this-50-fo-922941100">Fermilab Hunts Rare Subatomic Particles With This 50-Foot Electromagnet</a></p>
+
+<p>29 July 2013 - Science Codex<br/>
+<a href="http://www.sciencecodex.com/experimental_quest_to_test_einsteins_speed_limit-116527">Experimental quest to test Einstein's speed limit</a></p>
+
+<p>28 July 2013 - The Space Reporter<br/>
+<a href="http://thespacereporter.com/2013/07/confirmation-that-neutrinos-do-change-flavor/">Confirmation that neutrinos do change ‘flavor’</a></p>
+
+<p>26 July 2013 - Financial Times<br/>
+<a href="http://www.ft.com/intl/cms/s/2/d3ea9832-eee4-11e2-b8ec-00144feabdc0.html#axzz2aRgeuIYe">Cern physicist Fabiola Gianotti on hunting for the ‘God particle’</a></p>
+
+<p>26 July 2013 - WGN<br/>
+<a href="http://wgntv.com/2013/07/26/fermilabs-giant-magnet-finally-reaches-destination-in-batavia/">Fermilab’s giant magnet finally reaches destination in Batavia</a></p>
+
+<p>25 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-cern-latest-supersymmetry.html">CERN latest data shows no sign of supersymmetry – yet</a></p>
+
+
+<p>25 July 2013 - Nanowerk<br/>
+<a href="http://www.nanowerk.com/news2/space/newsid=31537.php">Scientists discover massive particle accelerator in heart of Van Allen radiation belts</a></p>
+
+<p>25 July 2013 - Scientific Computing<br/>
+<a href="http://www.scientificcomputing.com/news/2013/07/cern-experiments-put-standard-model-stringent-test#.UfExKG1Lrms">CERN Experiments put Standard Model to Stringent Test </a></p>
+
+<p>24 July 2013 - Discovery News<br/>
+<a href="http://news.discovery.com/space/lhc-discovery-maims-supersymmetry-again-130724.htm">LHC Discovery Maims Supersymmetry, Again</a></p>
+
+<p>24 July 2013 - Nature<br/>
+<a href="http://www.nature.com/news/cyclotrons-come-full-circle-1.13436?WT.ec_id=NATURE-20130725">Cyclotrons come full circle</a></p>
+
+<p>24 July 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/news/science-environment-23431797">Ultra-rare decay confirmed in LHC</a></p>
+
+
+<p>24 July 2013 - CBS Chicago<br/>
+<a href="http://chicago.cbslocal.com/2013/07/23/giant-electromagnets-3200-mile-trek-to-fermilab-nearly-finished/">Giant Electromagnet’s 3,200-Mile Trek To Fermilab Nearly Finished</a></p>
+
+<p>24 July 2013 - Syracuse University<br/>
+<a href="http://news.syr.edu/su-scientists-assist-in-landmark-discovery-of-rare-particle-decay-98724/">SU Scientists Assist in Landmark Discovery of Rare Particle Decay</a></p>
+
+<p>23 July 2013 - Science World Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8334/20130723/physicists-discover-shape-shifting-particles-muon-neutrinos-transform.htm">Physicists Discover Shape-Shifting Particles: Muon Neutrinos Transform</a></p>
+
+<p>23 July 2013 - Space Daily<br/>
+<a href="http://www.spacedaily.com/reports/Toronto_researchers_part_of_international_team_that_caught_neutrinos_in_the_act_999.html">Toronto researchers part of international team that caught neutrinos in the act</a></p>
+
+<p>22 July 2013 - Scientific American<br/>
+<a href="http://www.scientificamerican.com/podcast/episode.cfm?id=neutrino-identity-switch-confirmed-13-07-22">Neutrino Identity Switch Confirmed </a></p>
+
+<p>22 July 2013 - physicsworld.com<br/>
+<a href="http://physicsworld.com/cws/article/news/2013/jul/22/physicists-call-for-five-billion-euro-neutrino-factory">Physicists call for €5bn Neutrino Factory</a></p>
+
+<p>22 July 2013 - The Times<br/>
+<a href="http://www.thetimes.co.uk/tto/news/uk/scotland/article3822149.ece?CMP=OTH-gnws-standard-2013_07_22">Scientists 'may lose access to facilities after independence'</a></p>
+
+<p>22 July 2013 - Wired<br/>
+<a href="http://www.wired.com/wiredscience/2013/07/dark-matter-hunt-zeroing-in/">Dark-Matter Hunt Appears to Be Zeroing In on a Leading Contender</a></p>
+
+<p>21 July 2013 - Aurora Beacon News<br/>
+<a href="http://beaconnews.suntimes.com/news/21416840-418/fermilabs-prized-supermagnet-arrives-in-lemont.html">Fermilab's prized supermagnet arrives in Lemont</a></p>
+
+<p>21 July 2013 - The Japan News<br/>
+<a href="http://the-japan-news.com/news/article/0000395535">Neutrino change confirmed in Japan</a></p>
+
+<p>21 July 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/programmes/p01c3jy5">What neutrinos might tell us about the big bang</a></p>
+
+<p>20 July 2013 - Nature World News<br/>
+<a href="http://www.natureworldnews.com/articles/3067/20130720/new-type-neutrino-flip-explain-existence-matter-confirmed.htm"> New Type of Neutrino Flip that Could Explain the Existence of Matter Confirmed
+ </a></p>
+
+<p>19 July 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn23906#.Uewv_hZn-BI">Rare particle decay is bad news for exotic physics</a></p>
+
+<p>19 July 2013 - Huffington Post<br/>
+<a href="http://www.huffingtonpost.com/2013/07/19/cern-scientists-rare-particle-decay-theory-universe-birth_n_3622595.html">CERN Scientists Observe Rare Particle Decay That Helps Confirm Theory About Universe's Birth</a></p>
+
+<p>19 July 2013 - ABC News<br/>
+<a href="http://abcnews.go.com/Technology/wireStory/physicists-unveil-results-helping-explain-universe-19709305">Physicists Unveil Results Helping Explain Universe</a></p>
+
+<p>19 July 2013 - The Daily Galaxy<br/>
+<a href="http://www.dailygalaxy.com/my_weblog/2013/07/rare-phenomenon-discovered-that-provides-way-to-test-models-of-a-new-physics.html">Rare Phenomenon Discovered --Provides Way to Test Models of a New Physics</a></p>
+
+<p>19 July 2013 - Economic Times<br/>
+<a href="http://economictimes.indiatimes.com/news/news-by-industry/et-cetera/new-tests-back-concept-for-particle-physics-cern/articleshow/21168520.cms">New tests back concept for particle physics: CERN</a></p>
+
+<p>19 July 2013 - The Guardian<br/>
+<a href="http://www.guardian.co.uk/science/life-and-physics/2013/jul/19/t2k-neutrino-eps-stockholm">T2K neutrino experiment reports new oscillation results</a></p>
+
+<p>19 July 2013 - Space Ref<br/>
+<a href="http://www.spaceref.com/news/viewpr.html?pid=41223">UK Researchers Make New Discovery About Neutrinos</a></p>
+
+<p>19 July 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/news/science-environment-23366318">Neutrino 'flavour' flip confirmed</a></p>
+
+<p>19 July 2013 - The Hindu<br/>
+<a href="http://www.thehindu.com/sci-tech/science/cern-physicists-observe-particle-that-bolsters-standard-model/article4931574.ece">CERN physicists observe particle that bolsters Standard Model</a></p>
+
+<p>19 July 2013 - The Washington Post<br/>
+<a href="http://www.washingtonpost.com/world/europe/physicists-unveil-new-particle-results-helping-explain-universe/2013/07/19/85168852-f055-11e2-8c36-0e868255a989_story.html">Physicists unveil new particle results helping to explain the universe</a></p>
+
+<p>19 July 2013 - RTE.ie<br/>
+<a href="http://www.rte.ie/news/2013/0719/463414-cern-science/">Ireland 'losing out' on science contracts</a></p>
+
+<p>18 July 2013 - Huffington Post<br/>
+<a href="http://www.huffingtonpost.com/2013/07/18/neutrino-study-subatomic-particles_n_3617932.html">Neutrino Study Fails To Show Interaction Of Weird Subatomic Particles</a></p>
+
+<p>18 July 2013 - euronews<br/>
+<a href="http://www.euronews.com/2013/07/18/atom-smashing-at-cern-what-does-it-mean-to-us-/">Atom smashing at CERN - what does it mean to us?</a></p>
+
+<p>17 July 2013 - The Daily Californian<br/>
+<a href="http://www.dailycal.org/2013/07/17/new-magnet-technology-developed-by-researchers/">New magnet technology developed by researchers</a></p>
+
+<p>17 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-particle-physicists-post-higgs.html">What's next for particle physicists, post-Higgs?</a></p>
+
+<p>16 July 2013 - Science Magazine<br/>
+<a href="http://news.sciencemag.org/sciencenow/2013/07/are-neutrinos-their-own-antipart.html?ref=em">Are Neutrinos Their Own Antiparticles?</a></p>
+
+<p>16 July 2013 - International Business Times<br/>
+<a href="http://www.ibtimes.com/large-hadron-collider-could-soon-get-boost-powerful-us-made-magnet-1348569">Large Hadron Collider Could Soon Get Boost From Powerful US-Made Magnet</a></p>
+
+<p>16 July 2013 - Gizmodo Australia<br/>
+<a href="http://www.gizmodo.com.au/2013/07/monster-machines-quadpole-super-magnets-will-increase-the-lhcs-power-tenfold/">Monster Machines: Quadpole Super Magnets Will Increase The LHC's Power Tenfold</a></p>
+
+<p>15 July 2013 - ETH Life<br/>
+<a href="http://www.ethlife.ethz.ch/archive_articles/130715_arktis_radiation_su/index_EN">Particle physics for internal security</a></p>
+
+<p>14 July 2013 - The Times of India<br/>
+<a href="http://timesofindia.indiatimes.com/city/varanasi/Mass-of-dark-matter-particle-more-than-proton-particle-Researchers/articleshow/21062847.cms">Mass of dark matter particle more than proton particle: Researchers</a></p>
+
+<p>13 July 2013 - Micro Finance Monitor<br/>
+<a href="http://www.microfinancemonitor.com/2013/07/14/cern-eurovision-to-attract-tweens-to-science/">CERN, Eurovision to attract ‘TWEENS’ to science </a></p>
+
+
+<p>12 July 2013 - E & T Magazine<br/>
+<a href="http://eandt.theiet.org/news/2013/jul/cern-supermagnets.cfm">New supermagnets to unlock Cern's possibilities</a></p>
+
+
+<p>12 July 2013 - India Blooms<br/>
+<a href="http://www.indiablooms.com/EnvironmentDetailsPage/2013/environmentDetails120713c.php">Cern, Eurovison unite to attract children</a></p>
+
+<p>12 July 2013 - Live Science<br/>
+<a href="http://www.livescience.com/38129-large-hadron-collider-magnet-passes-tests.html">New Atom-Smashing Magnet Passes First Tests</a></p>
+
+<p>11 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-successful-magnet-large-hadron-collider.html">Successful test of new US magnet puts Large Hadron Collider on track for major upgrade</a></p>
+
+
+<p>10 July 2013 - Scientific American<br/>
+<a href="http://www.scientificamerican.com/gallery_directory.cfm?photo_id=E0603221-0383-DFB4-256CC7176C9F6648">Mass Movement: A 50-Ton Magnet's 3,200-Mile Journey</a></p>
+
+<p>8 July 2013 - WebProNews<br/>
+<a href="http://www.webpronews.com/cern-to-open-for-tourists-in-september-2013-07">CERN to Open For Tourists in September</a></p>
+
+<p>5 July 2013 - Discovery News<br/>
+<a href="http://news.discovery.com/space/to-be-or-not-to-be-thats-the-higgs-boson-question-130705.htm">Decoding the Higgs Boson: Is it the Real Deal?</a></p>
+
+<p>5 July 2013 - iDigitalTimes.co.uk<br/>
+<a href="http://www.idigitaltimes.co.uk/articles/487042/20130705/cern-god-particle-experiment-one-year-old.htm">CERN God Particle Experiment One - year Old Now</a></p>
+
+<p>5 July 2013 - e! Science News<br/>
+<a href="http://esciencenews.com/articles/2013/07/05/laser.system.allows.determination.atomic.binding.energy.rarest.element.earth">Laser system allows determination of atomic binding energy of the rarest element on earth</a></p>
+
+<p>5 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-higgs-boson-year.html">The Higgs boson: One year on</a></p>
+
+<p>5 July 2013 - The Inquirer<br/>
+<a href="http://www.theinquirer.net/inquirer/news/2279640/cern-opens-its-doors-to-the-public">CERN opens its doors to the public</a></p>
+
+<p>4 July 2013 - ABC News<br/>
+<a href="http://abcnews.go.com/Technology/god-particle-higgs-boson-year/story?id=19574423">'God Particle': The Higgs Boson One Year Later</a></p>
+
+<p>4 July 2013 - IT Web<br/>
+<a href="http://www.itweb.co.za/index.php?option=com_content&view=article&id=65430:two-decade-journey-for-collider">Two-decade journey for collider</a></p>
+
+<p>3 July 2013 - Cornell Chronicle<br/>
+<a href="http://news.cornell.edu/stories/2013/07/linear-collider-gains-key-insights-cornell-physicists">Linear collider gains key insights from Cornell physicists</a></p>
+
+<p>3 July 2013 - TG Daily<br/>
+<a href="http://www.tgdaily.com/general-sciences-features/72343-physicists-develop-rationale-for-the-next-gen-particle-collider">Physicists develop rationale for the next-gen particle collider</a></p>
+
+<p>2 July 2013 - Smithsonian<br/>
+<a href="http://www.smithsonianmag.com/science-nature/How-the-Higgs-Boson-Was-Found-213876841.html#Higgs-boson-ATLAS-detector-1.jpg">How the Higgs Boson Was Found </a></p>
+
+<p>2 July 2013 - e! Science News<br/>
+<a href="http://esciencenews.com/articles/2013/07/02/ou.physicists.develop.rationale.next.generation.particle.collider">OU physicists develop rationale for the next-generation particle collider</a></p>
+
+
+<p>2 July 2013 - Engadget<br/>
+<a href="http://www.engadget.com/2013/07/02/CERN-LHC-underground-tour/?utm_medium=feed&utm_source=Feed_Classic&utm_campaign=Engadget">Into the heart of CERN: an undergound tour of the Large Hadron Collider</a></p>
+
+<p>2 July 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn23798-highenergy-cosmos-is-violent-with-hint-of-dark-matter.html#.UdNN7W3NmGs">High-energy cosmos is violent with hint of dark matter </a></p>
+
+<p>2 July 2013 - Computer World<br/>
+<a href="http://www.computerworld.com/s/article/9240523/We_want_to_be_surprised_CERN_scientist_says?taxonomyId=154">We want to be surprised, CERN scientist says</a></p>
+
+<p>2 July 2013 - The University of Manchester<br/>
+<a href="http://www.manchester.ac.uk/aboutus/news/display/?id=10324">Higgs particle not the only sweet success for science</a></p>
+
+<p>2 July 2013 - Information Week<br/>
+<a href="http://www.informationweek.com/cloud-computing/infrastructure/cerns-hadron-collider-research-fueled-by/240157584">CERN's Hadron Collider Research Fueled By OpenStack</a></p>
+
+<p>1 July 2013 - Google News<br/>
+<a href="http://www.google.com/hostednews/afp/article/ALeqM5i6ACmY7XTHeAfOG5tMfjrdZV01yA?docId=CNG.70f1882e28153423656e7499adb11ace.d1">Higgs evidence mounts one year on, as does suspense</a></p>
+
+
+
+
+
+
+
+
+
+
+
+              </div><!-- END: text-widget-content -->
+            </div><!-- END: text-widget-body -->
+            
+          </div><!-- END: text-widget -->
+          <div class="text-widget-bottom  png"></div><!-- END: text-widget-bottom --></div>
+
+
+
+
+		</div><!-- /.content -->
+
+
+		<h3><a href="#">Latest Images</a></h3>
+		<div class="content content-latest-images">
+
+			<iframe src="http://www.interactions.org/cms/?pid=1031716&offset=0&keywords=keywords&lab=&new_images=checked&limit=3" scrolling="auto" frameborder="0"></iframe>
+
+			<ul class="arrow-nav">
+				<li><a href="/cms/?pid=1900">View more images</a></li>
+			</ul>
+
+		</div><!-- /.content -->
+
+
+		<h3><a href="#">Search</a></h3>
+		<div class="content content-search">
+
+			<form method="get" action="/cms/" class="mobile-search" id="SearchForm" name="SearchForm">
+
+				<!--// google search: hidden fields //-->
+				<input type="hidden" name="pid" id="search_pid" value="1028747" />
+				<input type="hidden" name="cx" value="008959558807554711557:yjg24intd-8" />
+				<input type="hidden" name="cof" value="FORID:11" />
+				<input type="hidden" name="ie" value="UTF-8" />
+
+				<!--// news search: hidden fields //-->
+				<input type="hidden" name="p" value="1" />
+				<input type="hidden" name="lang" value="en" />
+				<input type="hidden" name="include" />
+				<input type="hidden" name="exclude" />
+				<input type="hidden" name="penalty" value="0" />
+
+				<ul class="search-row search-row-01">
+					<li class="input-radio input-radio-news">
+						<input name="search_type" type="radio" value="news" class="radio" onclick="document.getElementById('search_pid').value = '1009632'; document.getElementById('q').name = 'criteria';" />
+					</li>
+					<li class="input-label input-label-news">
+						<label for="">News</label>
+					</li>
+					<li class="input-radio input-radio-site">
+						<input name="search_type" type="radio" value="site" checked="checked" class="radio" onclick="document.getElementById('search_pid').value = '1028747'; document.getElementById('q').name = 'q';" />
+					</li>
+					<li class="input-label input-label-site">
+						<label for="">Site</label>
+					</li>
+				</ul>
+
+				<ul class="search-row search-row-02">
+					<li class="input-text">
+						<input type="text" value="" name="q" id="q" class="text-field" />
+					</li>
+					<li class="input-submit">
+						<input type="submit" name="submit" value="Go" />
+					</li>
+				</ul>
+			</form>
+
+		</div><!-- /.content -->
+
+
+		<h3><a href="#">Full Navigation</a></h3>
+		<div class="content content-full-nav">
+
+			<ul class="arrow-nav">
+				<li><a href="/cms/?pid=1000025">About Interactions.org</a></li>
+				<li><a href="/cms/?pid=1026142">Video Channel</a></li>
+				<!--<li><a href="#">Blog Watch</a></li>-->
+				<li><a href="/cms/?pid=1900">Image Bank</a></li>
+				<li><a href="/cms/?pid=1000109">Resources</a></li>
+				<li><a href="/cms/?pid=1000098">Policy and Funding</a></li>
+				<li><a href="/cms/?pid=1003378">Benefits to Society</a></li>
+				<li><a href="/cms/?pid=1000143">Education</a></li>
+				<li><a href="/cms/?pid=1000113">Contact Us</a></li>
+				<li><a href="/cms/?pid=1000335">Workspaces</a></li>
+			</ul>
+
+		</div><!-- /.content -->
+
+
+	</div><!--/accordion-->
+
+
+</div><!-- /#mobile-page -->
+<!--//==============================
+END: Mobile Only
+===============================//-->
+
+
+
+
+<div id="image-bank-wrapper" class="hide-from-mobile">
+	<div id="image-bank-wrapper2">
+	<!--//**************************************
+			********** Image Bank Form **********
+			**************************************//-->
+			<div id="image-bank-popup" style="display: none;">
+			<div id="image-bank">
+				<div id="image-bank-arrow"></div>
+				<div id="image-bank-top"></div>
+				<div id="image-bank-body">
+					<!--// insert dynamic Image Bank form here //-->
+				</div><!-- END: image-bank-body -->
+				<div id="image-bank-bottom"></div>
+			</div><!-- END: image-bank -->
+			</div>
+			<!--//**************************************
+			********** END: Image Bank Form **********
+			**************************************//-->
+	</div><!-- END: image-bank-wrapper2 -->
+</div><!-- END: image-bank-wrapper -->
+
+
+
+<div id="wrapper" class="hide-from-mobile">
+
+	<!--//========== pf-header ==========//-->
+	<div id="pf-header">
+		<div id="pf-header-body">
+
+			<h1 class="logo"><img src="/tmpl_images/pf-logo-interactions.jpg" alt="Interactions.org - Particle Physics News and Resources" /></h1>
+			<h2 class="slogan">A communication resource from the world's particle physics laboratories</h2>
+
+		</div><!-- END: pf-header-body -->
+	</div>
+	<!--//========== END: pf-header ==========//-->
+
+
+	<!--//========== header ==========//-->
+	<div id="header">
+		<div id="header-body">
+
+			<h1 class="logo"><a href="/" title="Interactions.org - Particle Physics News and Resources">Interactions.org - Particle Physics News and Resources</a></h1>
+
+			<ul class="sb-icons">
+				<li class="rss"><a href="/cms/?pid=1022576"><img src="/tmpl_images/icons/rss-icon.png" alt="RSS Feed" /></a></li>
+				<li class="twitter"><a href="http://twitter.com/particlenews/"><img src="/tmpl_images/icons/twitter-icon.png" alt="Twitter" /></a></li>
+			</ul>
+
+
+			<h2 class="slogan">A communication resource from the world's particle physics laboratories</h2>
+
+			<ul class="nav  header-nav">
+				<li class="active"><a onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;" href="/cms/">Home</a></li>
+				<li class=""><a onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;" href="/cms/?pid=1000680">News</a></li>
+				<li class=""><a onmouseover="ReverseDisplay('image-bank-popup'); return true;" href="/cms/?pid=1900">Image Bank</a></li>
+				<li class=""><a onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;" href="/video/">Video Channel</a></li>
+			</ul>
+
+
+
+
+			<form method="get" action="/cms/" class="header-search" id="SearchForm" name="SearchForm">
+
+			<!--// google search: hidden fields //-->
+			<input type="hidden" name="pid" id="search_pid" value="1028747" />
+			<input type="hidden" name="cx" value="008959558807554711557:yjg24intd-8" />
+			<input type="hidden" name="cof" value="FORID:11" />
+			<input type="hidden" name="ie" value="UTF-8" />
+
+			<!--// news search: hidden fields //-->
+			<input type="hidden" name="p" value="1" />
+			<input type="hidden" name="lang" value="en" />
+			<input type="hidden" name="include" />
+			<input type="hidden" name="exclude" />
+			<input type="hidden" name="penalty" value="0" />
+
+			<ul>
+			<!--// in reverse order... css hack for float: right //-->
+				<li>
+					<label for="">News</label>
+				</li>
+				<li>
+					<input name="search_type" type="radio" value="news" class="radio" onclick="document.getElementById('search_pid').value = '1009632'; document.getElementById('q').name = 'criteria';" />
+				</li>
+				<li>
+					<label for="">Site</label>
+				</li>
+				<li>
+					<input name="search_type" type="radio" value="site" checked="checked" class="radio" onclick="document.getElementById('search_pid').value = '1028747'; document.getElementById('q').name = 'q';" />
+				</li>
+				<li>
+					<input type="submit" value="" class="button" />
+				</li>
+				<li>
+					<input type="text" value="" name="q" id="q" class="text-field" />
+				</li>
+				<li>
+					<label for="q">Search</label>
+				</li>
+			</ul>
+			</form>
+
+
+		</div><!-- END: header-body -->
+	</div>
+	<!--//========== END: header ==========//-->
+
+
+
+
+
+
+
+	<!--//========== content-row ==========//-->
+	<div id="content-row">
+		<div id="content-row-body">
+
+
+
+
+			<!--//========== left-column ==========//-->
+			<div id="left-column">
+				<div id="left-column-body">
+
+				<!--//==== left-nav ====//-->
+<div id="left-nav-top" class="png"></div>
+
+<!--  ****** Infinite Menus Structure & Links ***** -->
+<div id="imenuscontainer"><div class="imcm imde" id="imouter0"><ul id="imenus0"><li class="homeMenuItem"><a href="/cms" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Home</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=5999" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Photowalk</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1000025" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">About InterActions</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1000047" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Image Bank</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1026142" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Video Channel</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1026141" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Blog Watch</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1008840" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Newswire Archive</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1003378" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Benefits to Society</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1028447" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Peer Reviews</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1000109" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Additional Resources</a><div class="imsc"><div class="imsubc" id="submenu_additionalresources"><ul style=""><li><a href="http://www.interactions.org/cms/?pid=1004913">Physics Societies/ Organizations</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1000103">Additional News Sources</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1000143">Education</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1000098">Policy and Funding</a><div class="imsc"><div class="imsubc" id="submenu_policyandfunding"><ul style=""><li><a href="http://www.interactions.org/cms/?pid=1002106">Science Policy</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1002111">Advisory Groups</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1002116">Funding</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1003860">Reports</a></li>
+</ul></div></div></li><li><a href="http://www.interactions.org/cms/?pid=1032138">Glossaries</a><div class="imsc"><div class="imsubc" id="submenu_glossaries"><ul style=""><li><a href="http://www.interactions.org/cms/?pid=1002289">Particle Physics Glossary</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1002285">Acronyms</a></li>
+</ul></div></div></li></ul></div></div></li><li><a href="http://www.interactions.org/cms/?pid=1010335" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Collaboration Workspaces</a></li>
+<li><a href="http://www.interactions.org/cms/?pid=1000113" onmouseover="document.getElementById('image-bank-popup').style.display='none'; return true;">Contact Us</a></li>
+</ul><div class="imclear"><div></div></div></div></div>
+<script language="javascript" src="/includes/js/nav.js" type="text/javascript"></script>
+
+<noscript>
+<!--// nav for browsers without javascript //-->
+	<ul class="left-nav">
+		<li class=""><a href="/cms/?pid=1000025">About Interactions.org</a></li>
+		<li class=""><a href="/imagebank/">Image Bank</a></li>
+		<li class=""><a href="/cms/?pid=1026142">Video Channel</a></li>
+		<li class=""><a href="#">Notice Board</a></li>
+		<li class=""><a href="/cms/?pid=1026141">Blog Watch</a></li>
+		<li class=""><a href="/cms/?pid=1000109">Resources</a></li>
+		<li class=""><a href="/cms/?pid=1000098">Policies and Funding</a></li>
+		<li class=""><a href="/cms/?pid=1003378">Physics and Society</a></li>
+		<li class=""><a href="/cms/?pid=1000143">Education</a></li>
+		<li class=""><a href="/cms/?pid=1001471">Universities / Institutes</a></li>
+		<li class=""><a href="/cms/?pid=1004987">Future</a></li>
+		<li class=""><a href="/cms/?pid=1000113">Contact Us</a></li>
+		<li class=""><a href="/cms/?pid=1010335">Workspaces</a></li>
+		<li class=""><a href="http://www.quantumdiaries.org/">Quantum Diaries</a></li>
+	</ul>
+</noscript>
+
+<div id="left-nav-bottom" class="png"></div>
+<!--//==== END: left-nav ====//-->
+
+
+
+
+
+
+
+<br />
+
+
+<!--//========================================================
+***************** NEWSWIRE SIGNUP ***************************
+========================================================//-->
+					
+<!--//******** text-widget ********//-->
+<div class="text-widget  text-widget-sidebar  png">
+						
+	<h3 class="png"><span class="icon-email">Newswire Signup</span></h3>
+	
+	<div class="text-widget-body">
+		<div class="text-widget-content" style="height: auto;">
+		
+			<p>Sign up for our newswire and receive the latest press releases from particle physics labs around the world.</p>
+			
+			<a href="/cms/?pid=1000502"><img src="/tmpl_images/buttons/sign-up.jpg" alt="Click to sign up" /></a>
+		
+		</div><!-- END: text-widget-content -->
+	</div><!-- END: text-widget-body -->
+						
+</div><!-- END: text-widget -->
+<div class="text-widget-sidebar-bottom  png"></div><!-- END: text-widget-bottom -->
+<!--//******** END: text-widget ********//-->
+
+<!--//========================================================
+***************** END: NEWSWIRE SIGNUP ***************************
+========================================================//-->
+
+
+
+
+<!--//========================================================
+***************** OTHER ***************************
+========================================================//-->
+
+<br />
+		
+<!--//******** text-widget ********//-->
+<div class="text-widget  text-widget-sidebar  png">
+						
+	<h3 class="png"><span class="">InterAction Websites</span></h3>
+	
+	<div class="text-widget-body">
+		<div class="text-widget-content" style="height: auto;">
+		
+			<a href="http://www.interactions.org/beacons/"><img src="http://interactions.org/images/ad-beacons-v2-xsm.jpg" alt="" title="" /></a>
+			<h4 style="text-align: center; margin: 0; padding: 0.3em 0;"><a href="http://www.interactions.org/beacons/">Beacons of Discovery</a></h4>
+			
+			<br />
+			
+			<a href="http://www.quantumdiaries.org/"><img src="http://interactions.org/images/ad-quantum-diaries-xsm.jpg" alt="" title="" /></a>
+			<h4 style="text-align: center; margin: 0; padding: 0.3em 0;"><a href="http://www.quantumdiaries.org/">Quantum Diaries</a></h4>
+			
+		</div><!-- END: text-widget-content -->
+	</div><!-- END: text-widget-body -->
+						
+</div><!-- END: text-widget -->
+<div class="text-widget-sidebar-bottom  png"></div><!-- END: text-widget-bottom -->
+<!--//******** END: text-widget ********//-->
+
+<!--//========================================================
+***************** END: OTHER ***************************
+========================================================//-->
+
+				</div><!-- END: left-column-body -->
+			</div>
+			<!--//========== END: left-column ==========//-->
+
+
+			<!--//========== middle-column ==========//-->
+			<div id="middle-column">
+				<div id="middle-column-body" style="position: relative;">
+
+
+
+
+
+				<!--//**********************************************
+	============== FEATURE Slideshow ==============
+	**********************************************//-->
+	<div id="hp-slideshow">
+
+			<!--//========== thumbnails ==========//-->
+			<div id="slides">
+				<img src="/tmpl_images/hp-slideshow/01_sm.png" border="0" id="slide-1" />
+				<img src="/tmpl_images/hp-slideshow/02_sm.png" border="0" id="slide-2" />
+				<img src="/tmpl_images/hp-slideshow/03_sm.png" border="0" id="slide-3" />
+				<img src="/tmpl_images/hp-slideshow/04_v2_sm.png" border="0" id="slide-4" />
+			</div>
+			<!--//========== END: thumbnails ==========//-->
+
+			<ul id="mycarousel" class="jcarousel-skin-ie7">
+
+
+				<!--//========== slide-01 ==========//-->
+				<li>
+					<div class="yui-gc">
+						<div class="yui-u  first">
+							<a href="/cms/?pid=2100&image_no=CE0280"><img src="/tmpl_images/hp-slideshow/01_lg.png" alt="Photo" class="png" /></a>
+						</div>
+
+						<div class="yui-u  yiu-u-caption">
+							<p class="secondary">View more images in the Interactions <a href="/cms/?pid=1900">Image Bank</a></p>
+						</div>
+					</div>
+				</li>
+				<!--//========== END: slide-01 ==========//-->
+
+
+				<!--//========== slide-02 ==========//-->
+				<li>
+					<div class="yui-gc">
+						<div class="yui-u  first">
+							<a href="/cms/?pid=2100&image_no=CE0275"><img src="/tmpl_images/hp-slideshow/02_lg.png" alt="Photo" class="png" /></a>
+						</div>
+
+						<div class="yui-u  yui-u-caption">
+							<p class="secondary">View more images in the Interactions <a href="/cms/?pid=1900">Image Bank</a></p>
+						</div>
+					</div>
+				</li>
+				<!--//========== END: slide-02 ==========//-->
+
+
+				<!--//========== slide-03 ==========//-->
+				<li>
+					<div class="yui-gc">
+						<div class="yui-u  first">
+							<a href="/cms/?pid=2100&image_no=LB0045"><img src="/tmpl_images/hp-slideshow/03_lg.png" alt="Photo" class="png" /></a>
+						</div>
+
+						<div class="yui-u  yui-u-caption">
+							<p class="secondary">View more images in the Interactions <a href="/cms/?pid=1900">Image Bank</a></p>
+						</div>
+					</div>
+				</li>
+				<!--//========== END: slide-03 ==========//-->
+
+
+
+				<!--//========== slide-04 ==========//-->
+				<li>
+					<div class="yui-gc">
+						<div class="yui-u  first">
+							<a href="/cms/?pid=2100&image_no=CE0295"><img src="/tmpl_images/hp-slideshow/04_v2_lg.png" alt="Photo" class="png" /></a>
+						</div>
+
+						<div class="yui-u  yui-u-caption">
+							<p class="secondary">View more images in the Interactions <a href="/cms/?pid=1900">Image Bank</a></p>
+
+						</div>
+					</div>
+				</li>
+				<!--//========== END: slide-04 ==========//-->
+
+			</ul>
+
+	</div>
+	<!--//**********************************************
+	============== END: FEATURE Slideshow ==============
+	**********************************************//-->
+
+
+				
+
+
+<div ><!--//========================================================
+					***************** LATEST NEWSWIRES ***************************
+					========================================================//-->
+					
+					<!--//******** text-widget ********//-->
+					<div class="text-widget  text-widget-newswire  png">
+						
+						<h3 class="png">
+                        
+                            <ul class="sb-icons">
+                                <li class="rss"><a href="/cms/?pid=1022576"><img src="/tmpl_images/icons/rss-icon.png" alt="RSS Feed" /></a></li>
+                                <li class="twitter"><a href="http://twitter.com/particlenews/"><img src="/tmpl_images/icons/twitter-icon.png" alt="Twitter" /></a></li>
+                            </ul>
+                            
+                            <span>Latest Newswires</span>
+                            
+                        </h3>
+						
+						<div class="text-widget-body">
+							<div class="text-widget-content" style="height: 140px;">
+
+
+
+<p>21 August 2013: Berkeley Lab<br /><a href="http://www.interactions.org/cms/?pid=1033164" title="New Results from Daya Bay: Tracking the Disappearance of Ghostlike Neutrinos">New Results from Daya Bay: Tracking the Disappearance of Ghostlike Neutrinos</a></p>
+
+<p>15 August 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033161" title="CERN Open Days: bookings to visit the underground facilities are now being taken">CERN Open Days: bookings to visit the underground facilities are now being taken</a></p>
+
+<p>31 July 2013: Kavli IPMU<br /><a href="http://www.interactions.org/cms/?pid=1033122" title="A New View on the Origin of Dark Matter and Dark Energy">A New View on the Origin of Dark Matter and Dark Energy</a></p>
+
+<p>19 July 2013: KEK<br /><a href="http://www.interactions.org/cms/?pid=1033083" title="New results from T2K conclusively show muon neutrinos transform to electron neutrinos">New results from T2K conclusively show muon neutrinos transform to electron neutrinos</a></p>
+
+<p>19 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033081" title="CERN experiments put Standard Model to stringent test ">CERN experiments put Standard Model to stringent test </a></p>
+
+<p>17 July 2013: Fermilab<br /><a href="http://www.interactions.org/cms/?pid=1033080" title="Giant electromagnet to conclude its 3,200-mile journey on July 26">Giant electromagnet to conclude its 3,200-mile journey on July 26</a></p>
+
+<p>17 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033079" title="CERN experiments to present latest results at summer conferences">CERN experiments to present latest results at summer conferences</a></p>
+
+<p>16 July 2013: INFN Gran Sasso Laboratory<br /><a href="http://www.interactions.org/cms/?pid=1033078" title="News about ghost particles">News about ghost particles</a></p>
+
+<p>11 July 2013: TRIUMF/Kavli IPMU<br /><a href="http://www.interactions.org/cms/?pid=1033067" title="Japan and Canada to Compete for Top American Researcher">Japan and Canada to Compete for Top American Researcher</a></p>
+
+<p>11 July 2013: Fermilab/Berkeley Lab/Brookhaven Lab<br /><a href="http://www.interactions.org/cms/?pid=1033066" title="Successful Test of New U.S. Magnet Puts Large Hadron Collider on Track for Major Upgrade">Successful Test of New U.S. Magnet Puts Large Hadron Collider on Track for Major Upgrade</a></p>
+
+<p>11 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033065" title="CERN and EUROVISION Unite to Attract "Tweens" to Science">CERN and EUROVISION Unite to Attract "Tweens" to Science</a></p>
+
+<p>4 July 2013: John Adams Institute<br /><a href="http://www.interactions.org/cms/?pid=1033052" title="FLASHForward to the future – Helmholtz Virtual Institute">FLASHForward to the future – Helmholtz Virtual Institute</a></p>
+
+<p>4 July 2013: CERN<br /><a href="http://www.interactions.org/cms/?pid=1033051" title="CERN opens its doors to the world">CERN opens its doors to the world</a></p>
+
+
+
+
+
+							
+							</div><!-- END: text-widget-content -->
+						</div><!-- END: text-widget-body -->
+						
+					</div><!-- END: text-widget -->
+					<div class="text-widget-bottom  png"></div><!-- END: text-widget-bottom -->
+					<!--//******** END: text-widget ********//-->
+					
+					<!--//========================================================
+					***************** END: LATEST NEWSWIRES ***************************
+					========================================================//-->
+					
+					
+					<br /></div>
+
+<div ><!--//========================================================
+          ***************** IN THE NEWS ***************************
+          ========================================================//-->
+          
+          <!--//******** text-widget ********//-->
+          <div class="text-widget  text-widget-news  png">
+            
+            <h3 class="png">
+                        
+                            <ul class="sb-icons">
+                                <li class="rss"><a href="/cms/?pid=1022576"><img src="/tmpl_images/icons/rss-icon.png" alt="RSS Feed" /></a></li>
+                                <li class="twitter"><a href="http://twitter.com/particlenews/"><img src="/tmpl_images/icons/twitter-icon.png" alt="Twitter" /></a></li>
+                            </ul>a
+                            
+                            <span>Particle Physics In The News</span>
+                            
+                        </h3>
+                        
+                  <div class="text-widget-body">
+
+              <div class="text-widget-content" style="height: 485px;">
+
+
+<p>25 August 2013 - The Beacon News<br/>
+<a href="http://beaconnews.suntimes.com/news/22069257-418/physicists-set-out-to-answer-why-particle-physics-matters.html">Physicists set out to answer ‘why particle physics matters’ </a></p>
+
+<p>25 August 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/news/science-environment-23809234">Prize-winning scientist brings African teachers to Cern</a></p>
+
+<p>25 August 2013 - ANI News<br/>
+<a href="http://www.aninews.in/newsdetail9/story127473/new-radiotherapy-machine-can-zap-out-cancer-cells-without-harmful-side-effects.html">New radiotherapy machine can zap out cancer cells without harmful side-effects</a></p>
+
+<p>25 August 2013 - Express<br/>
+<a href="http://www.express.co.uk/news/health/424446/UK-scientists-develop-cancer-zapping-beam">UK scientists develop cancer zapping beam</a></p>
+
+<p>23 August 2013 - Laboratory Equipment<br/>
+<a href="http://www.laboratoryequipment.com/news/2013/08/scientists-see-how-ghost-particles-oscillate">Scientists See How Ghost-Like Particles Oscillate </a></p>
+
+<p>23 August 2013 - Live Science<br/>
+<a href="http://www.livescience.com/39115-neutrino-oscillation-daya-bay.html">Particle Personality Disorder: Neutrinos Change Flavors in Chinese Experiment</a></p>
+
+<p>23 August 2013 - Science AAAS<br/>
+<a href="http://news.sciencemag.org/asia/2013/08/japan-picks-tohoku-site-international-linear-collider">Japan Picks Tohoku Site for International Linear Collider</a></p>
+
+<p>23 August 2013 - The Mainichi<br/>
+<a href="http://mainichi.jp/english/english/newsselect/news/20130823p2a00m0na008000c.html">Miyagi, Iwate prefecture mountains picked as possible site for int'l particle accelerator</a></p>
+
+<p>23 August 2013 - Japan Times<br/>
+<a href="http://www.japantimes.co.jp/news/2013/08/23/national/tohoku-pitched-for-¥1-trillion-collider/#.UheB0uDn1YJ">Tohoku pitched for ¥1 trillion collider</a></p>
+
+<p>22 August 2013 - Physics<br/>
+<a href="http://physics.aps.org/synopsis-for/10.1103/PhysRevLett.111.080405">Synopsis: Spotlight on Photon-Photon Scattering</a></p>
+
+<p>21 August 2013 - Science 2.0<br/>
+<a href="http://www.science20.com/quantum_diaries_survivor/top_quark_shortest_lived_matter_universe-118840">Top Quark - The Shortest Lived Matter In The Universe</a></p>
+
+<p>20 August 2013 - Medill Reports Chicago<br/>
+<a href="http://news.medill.northwestern.edu/chicago/news.aspx?id=224028">Curiosity: A fundamental part of exploring the universe at CERN</a></p>
+
+<p>20 August 2013 - Laboratory Equipment<br/>
+<a href="http://www.laboratoryequipment.com/news/2013/08/rare-particle-decay-predicted-standard-model">Rare Particle Decay Predicted by the Standard Model </a></p>
+
+<p>19 August 2013 - Huffington Post<br/>
+<a href="http://www.huffingtonpost.com/2013/08/19/how-particle-accelerators-work-physicists_n_3777290.html">How Do Particle Accelerators Work? Physicists Explain</a></p>
+
+<p>18 August 2013 - The Varsity<br/>
+<a href="http://thevarsity.ca/2013/08/18/toronto-researchers-contribute-to-new-understanding-of-neutrino-oscillations/">Toronto researchers contribute to new understanding of neutrino oscillations</a></p>
+
+<p>16 August 2013 - World Science Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8880/20130816/upgraded-lhc-super-collider-takes-shape-cern-engineers-replacing-dipole.htm">Upgraded LHC Super-Collider Takes Shape With CERN Engineers Replacing Dipole Magnets</a></p>
+
+<p>16 August 2013 - Zee News<br/>
+<a href="http://zeenews.india.com/news/space/race-to-solve-mystery-of-dark-energy-begins_869400.html">Race to solve mystery of dark energy begins</a></p>
+
+<p>15 August 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn24049-oddball-space-neutrinos-may-be-spawn-of-dark-matter.html#.Ug1Kmz-DmCg">Oddball space neutrinos may be spawn of dark matter</a></p>
+
+<p>14 August 2013 - The Telegraph<br/>
+<a href="http://www.telegraph.co.uk/technology/news/10242837/How-CERNs-Grid-may-place-the-power-of-the-worlds-computers-in-your-hands.html">How CERN’s Grid may place the power of the world’s computers in your hands</a></p>
+
+
+<p>14 August 2013 - Newser<br/>
+<a href="http://www.newser.com/story/172468/physicists-need-new-accelerator-for-god-particle.html">Physicists Need New Accelerator for 'God Particle'</a></p>
+
+<p>13 August 2013 - Times of India<br/>
+<a href="http://articles.timesofindia.indiatimes.com/2013-08-11/science/41293874_1_higgs-boson-dark-energy-dark-matter">Higgs boson may unravel dark energy mystery</a></p>
+
+<p>13 August 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn24033-play-with-antimatter-from-the-comfort-of-your-home.html#.Ugp1x22DmCg">Play with antimatter from the comfort of your home</a></p>
+
+<p>12 August 2013 - Northeast Public Radio<br/>
+<a href="http://www.wamc.org/post/particle-physicists-want-new-collider-study-higgs">Particle Physicists Want A New Collider To Study The Higgs</a></p>
+
+<p>12 August 2013 - Live Science<br/>
+<a href="http://www.livescience.com/38812-how-atom-smashers-work.html">Incredible Technology: How Atom Smashers Work</a></p>
+
+<p>11 August 2013 - Science 2.0<br/>
+<a href="http://www.science20.com/quantum_diaries_survivor/demystifying_fivesigma_criterion-118228">Demystifying The Five-Sigma Criterion</a></p>
+
+<p>11 August 2013 - The Hindu<br/>
+<a href="http://www.thehindu.com/sci-tech/science/higgs-boson-may-unravel-dark-energy-mystery/article5012402.ece">Higgs Boson may unravel dark energy mystery</a></p>
+
+<p>11 August 2013 - Zee News<br/>
+<a href="http://zeenews.india.com/news/science/higgs-boson-key-to-resolving-cosmological-constant-problem_868187.html">Higgs Boson key to resolving cosmological constant problem</a></p>
+
+<p>9 August 2013 - Science World Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8735/20130809/antimatter-experiment-cern-calls-croudsourced-help.htm">Antimatter Experiment at CERN Calls for Crowdsourced Help</a></p>
+
+<p>9 August 2013 - Eurekalert<br/>
+<a href="http://www.eurekalert.org/pub_releases/2013-08/asu-tpp080913.php">2 physicists propose Higgs boson 'portal' as the source of this elusive entity</a></p>
+
+<p>9 August 2013 - The Daily Galaxy<br/>
+<a href="http://www.dailygalaxy.com/my_weblog/2013/08/beyond-the-higgs-boson-worlds-physicists-search-for-hidden-dimensions-of-space-and-time.html">Beyond the Higgs Boson" --World's Physicists Search for Hidden Dimensions of Space and Time</a></p>
+
+<p>8 August 2013 - Vancouver Sun<br/>
+<a href="http://www.vancouversun.com/health/TRIUMF+team+signs+million+deal+with+Indian+scientists/8765980/story.html">TRIUMF team signs $10-million deal with Indian scientists</a></p>
+
+<p>8 August 2013 - University of Cambridge<br/>
+<a href="https://www.repository.cam.ac.uk/handle/1810/224431">Detecting exotic heavy leptons at the large hadron collider</a></p>
+
+<p>8 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-higgs-discovery-physicists-vision-unravel.html">Following Higgs discovery, physicists offer vision to unravel mysteries of universe</a></p>
+
+<p>8 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-theorist-sharpen-fundamental-theory-high.html">Theorist helps sharpen tests of fundamental theory in high energy experiments</a></p>
+
+<p>7 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-thousand-years-universe-tantalizing-hints.html">First hundred thousand years of our universe: Researchers find tantalizing new hints of clues</a></p>
+
+<p>7 August 2013 - Science Codex<br/>
+<a href="http://www.sciencecodex.com/first_hundred_thousand_years_of_our_universe-117158">First hundred thousand years of our universe</a></p>
+
+<p>7 August 2013 - GenevaLunch.com<br/>
+<a href="http://genevalunch.com/2013/08/07/does-it-matter-cern-and-the-universe/">Does it matter? Cern and the universe</a></p>
+
+<p>6 August 2013 - The Guardian<br/>
+<a href="http://www.theguardian.com/science/2013/aug/06/higgs-boson-physics-hits-buffers-discovery">One year on from the Higgs boson find, has physics hit the buffers?</a></p>
+
+<p>6 August 2013 - Science Insider<br/>
+<a href="http://news.sciencemag.org/2013/08/isotope-accelerator-gets-green-light-almost-start-construction">Isotope Accelerator Gets Green Light (Almost) to Start Construction</a></p>
+
+
+<p>6 August 2013 - World News<br/>
+<a href="http://www.sbs.com.au/news/article/1796563/New-theory-of-general-relativity-casts-doubt-on-da">New theory of general relativity casts doubt on dark matter</a></p>
+
+<p>5 August 2013 - The Nation<br/>
+<a href="http://www.nation.com.pk/pakistan-news-newspaper-daily-english-online/snippets/05-Aug-2013/cern-readies-for-next-cosmic-after-higgs-breakthrough">CERN readies for next cosmic </a></p>
+
+<p>2 August 2013 - Discovery News<br/>
+<a href="http://news.discovery.com/space/hints-of-new-physics-detected-in-the-lhc-130802.htm">Hints of New Physics Detected in the LHC?</a></p>
+
+<p>2 August 2013 - Physics World<br/>
+<a href="http://physicsworld.com/cws/article/news/2013/aug/02/has-lhcb-spotted-physics-beyond-the-standard-model">Has LHCb spotted physics beyond the Standard Model?</a></p>
+
+<p>1 August 2013 - Daily Mail<br/>
+<a href="http://www.dailymail.co.uk/sciencetech/article-2382458/Better-faster-stronger-Large-Hadron-Collider-gets-major-upgrade-help-scientists-learn-God-Particle.html?ITO=1490&ns_mchannel=rss&ns_campaign=1490">Better, faster, stronger: Large Hadron Collider gets a major upgrade to help scientists learn more about the God Particle</a></p>
+
+<p>1 August 2013 - The Daily Galaxy<br/>
+<a href="http://www.dailygalaxy.com/my_weblog/2013/08/cerns-lhc-future-to-probe-dark-energy-and-supersymmetry.html">CERN's 'LHC' New Mission to Probe Mystery of Dark Energy</a></p>
+
+
+<p>1 August 2013 - Examiner .com<br/>
+<a href="http://www.examiner.com/article/physics-first-alpha-particle-preformation-constant-confirmed-china">Physics first: Alpha particle preformation constant confirmed in China</a></p>
+
+<p>1 August 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-08-higgs-breakthrough-cern-readies-cosmic.html">After Higgs breakthrough, CERN readies for next cosmic quest</a></p>
+
+<p>31 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-experimental-physics-standard.html">First experimental signs of a New Physics beyond the Standard Model</a></p>
+
+<p>31 July 2013 - Live Science<br/>
+<a href="http://www.livescience.com/38533-photons-may-emit-faster-than-light-particles.html">Photons May Emit Faster-Than-Light Particles, Physicists Suggest</a></p>
+
+
+<p>29 July 2013 - Science World Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8476/20130729/standard-model-physics-confirmed-again-cern-rare-process-observations.htm">Standard Model of Physics Confirmed Again by CERN Rare Process Observations</a></p>
+
+<p>29 July 2013 - Gizmodo<br/>
+<a href="http://gizmodo.com/fermilab-hunts-rare-subatomic-particles-with-this-50-fo-922941100">Fermilab Hunts Rare Subatomic Particles With This 50-Foot Electromagnet</a></p>
+
+<p>29 July 2013 - Science Codex<br/>
+<a href="http://www.sciencecodex.com/experimental_quest_to_test_einsteins_speed_limit-116527">Experimental quest to test Einstein's speed limit</a></p>
+
+<p>28 July 2013 - The Space Reporter<br/>
+<a href="http://thespacereporter.com/2013/07/confirmation-that-neutrinos-do-change-flavor/">Confirmation that neutrinos do change ‘flavor’</a></p>
+
+<p>26 July 2013 - Financial Times<br/>
+<a href="http://www.ft.com/intl/cms/s/2/d3ea9832-eee4-11e2-b8ec-00144feabdc0.html#axzz2aRgeuIYe">Cern physicist Fabiola Gianotti on hunting for the ‘God particle’</a></p>
+
+<p>26 July 2013 - WGN<br/>
+<a href="http://wgntv.com/2013/07/26/fermilabs-giant-magnet-finally-reaches-destination-in-batavia/">Fermilab’s giant magnet finally reaches destination in Batavia</a></p>
+
+<p>25 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-cern-latest-supersymmetry.html">CERN latest data shows no sign of supersymmetry – yet</a></p>
+
+
+<p>25 July 2013 - Nanowerk<br/>
+<a href="http://www.nanowerk.com/news2/space/newsid=31537.php">Scientists discover massive particle accelerator in heart of Van Allen radiation belts</a></p>
+
+<p>25 July 2013 - Scientific Computing<br/>
+<a href="http://www.scientificcomputing.com/news/2013/07/cern-experiments-put-standard-model-stringent-test#.UfExKG1Lrms">CERN Experiments put Standard Model to Stringent Test </a></p>
+
+<p>24 July 2013 - Discovery News<br/>
+<a href="http://news.discovery.com/space/lhc-discovery-maims-supersymmetry-again-130724.htm">LHC Discovery Maims Supersymmetry, Again</a></p>
+
+<p>24 July 2013 - Nature<br/>
+<a href="http://www.nature.com/news/cyclotrons-come-full-circle-1.13436?WT.ec_id=NATURE-20130725">Cyclotrons come full circle</a></p>
+
+<p>24 July 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/news/science-environment-23431797">Ultra-rare decay confirmed in LHC</a></p>
+
+
+<p>24 July 2013 - CBS Chicago<br/>
+<a href="http://chicago.cbslocal.com/2013/07/23/giant-electromagnets-3200-mile-trek-to-fermilab-nearly-finished/">Giant Electromagnet’s 3,200-Mile Trek To Fermilab Nearly Finished</a></p>
+
+<p>24 July 2013 - Syracuse University<br/>
+<a href="http://news.syr.edu/su-scientists-assist-in-landmark-discovery-of-rare-particle-decay-98724/">SU Scientists Assist in Landmark Discovery of Rare Particle Decay</a></p>
+
+<p>23 July 2013 - Science World Report<br/>
+<a href="http://www.scienceworldreport.com/articles/8334/20130723/physicists-discover-shape-shifting-particles-muon-neutrinos-transform.htm">Physicists Discover Shape-Shifting Particles: Muon Neutrinos Transform</a></p>
+
+<p>23 July 2013 - Space Daily<br/>
+<a href="http://www.spacedaily.com/reports/Toronto_researchers_part_of_international_team_that_caught_neutrinos_in_the_act_999.html">Toronto researchers part of international team that caught neutrinos in the act</a></p>
+
+<p>22 July 2013 - Scientific American<br/>
+<a href="http://www.scientificamerican.com/podcast/episode.cfm?id=neutrino-identity-switch-confirmed-13-07-22">Neutrino Identity Switch Confirmed </a></p>
+
+<p>22 July 2013 - physicsworld.com<br/>
+<a href="http://physicsworld.com/cws/article/news/2013/jul/22/physicists-call-for-five-billion-euro-neutrino-factory">Physicists call for €5bn Neutrino Factory</a></p>
+
+<p>22 July 2013 - The Times<br/>
+<a href="http://www.thetimes.co.uk/tto/news/uk/scotland/article3822149.ece?CMP=OTH-gnws-standard-2013_07_22">Scientists 'may lose access to facilities after independence'</a></p>
+
+<p>22 July 2013 - Wired<br/>
+<a href="http://www.wired.com/wiredscience/2013/07/dark-matter-hunt-zeroing-in/">Dark-Matter Hunt Appears to Be Zeroing In on a Leading Contender</a></p>
+
+<p>21 July 2013 - Aurora Beacon News<br/>
+<a href="http://beaconnews.suntimes.com/news/21416840-418/fermilabs-prized-supermagnet-arrives-in-lemont.html">Fermilab's prized supermagnet arrives in Lemont</a></p>
+
+<p>21 July 2013 - The Japan News<br/>
+<a href="http://the-japan-news.com/news/article/0000395535">Neutrino change confirmed in Japan</a></p>
+
+<p>21 July 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/programmes/p01c3jy5">What neutrinos might tell us about the big bang</a></p>
+
+<p>20 July 2013 - Nature World News<br/>
+<a href="http://www.natureworldnews.com/articles/3067/20130720/new-type-neutrino-flip-explain-existence-matter-confirmed.htm"> New Type of Neutrino Flip that Could Explain the Existence of Matter Confirmed
+ </a></p>
+
+<p>19 July 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn23906#.Uewv_hZn-BI">Rare particle decay is bad news for exotic physics</a></p>
+
+<p>19 July 2013 - Huffington Post<br/>
+<a href="http://www.huffingtonpost.com/2013/07/19/cern-scientists-rare-particle-decay-theory-universe-birth_n_3622595.html">CERN Scientists Observe Rare Particle Decay That Helps Confirm Theory About Universe's Birth</a></p>
+
+<p>19 July 2013 - ABC News<br/>
+<a href="http://abcnews.go.com/Technology/wireStory/physicists-unveil-results-helping-explain-universe-19709305">Physicists Unveil Results Helping Explain Universe</a></p>
+
+<p>19 July 2013 - The Daily Galaxy<br/>
+<a href="http://www.dailygalaxy.com/my_weblog/2013/07/rare-phenomenon-discovered-that-provides-way-to-test-models-of-a-new-physics.html">Rare Phenomenon Discovered --Provides Way to Test Models of a New Physics</a></p>
+
+<p>19 July 2013 - Economic Times<br/>
+<a href="http://economictimes.indiatimes.com/news/news-by-industry/et-cetera/new-tests-back-concept-for-particle-physics-cern/articleshow/21168520.cms">New tests back concept for particle physics: CERN</a></p>
+
+<p>19 July 2013 - The Guardian<br/>
+<a href="http://www.guardian.co.uk/science/life-and-physics/2013/jul/19/t2k-neutrino-eps-stockholm">T2K neutrino experiment reports new oscillation results</a></p>
+
+<p>19 July 2013 - Space Ref<br/>
+<a href="http://www.spaceref.com/news/viewpr.html?pid=41223">UK Researchers Make New Discovery About Neutrinos</a></p>
+
+<p>19 July 2013 - BBC News<br/>
+<a href="http://www.bbc.co.uk/news/science-environment-23366318">Neutrino 'flavour' flip confirmed</a></p>
+
+<p>19 July 2013 - The Hindu<br/>
+<a href="http://www.thehindu.com/sci-tech/science/cern-physicists-observe-particle-that-bolsters-standard-model/article4931574.ece">CERN physicists observe particle that bolsters Standard Model</a></p>
+
+<p>19 July 2013 - The Washington Post<br/>
+<a href="http://www.washingtonpost.com/world/europe/physicists-unveil-new-particle-results-helping-explain-universe/2013/07/19/85168852-f055-11e2-8c36-0e868255a989_story.html">Physicists unveil new particle results helping to explain the universe</a></p>
+
+<p>19 July 2013 - RTE.ie<br/>
+<a href="http://www.rte.ie/news/2013/0719/463414-cern-science/">Ireland 'losing out' on science contracts</a></p>
+
+<p>18 July 2013 - Huffington Post<br/>
+<a href="http://www.huffingtonpost.com/2013/07/18/neutrino-study-subatomic-particles_n_3617932.html">Neutrino Study Fails To Show Interaction Of Weird Subatomic Particles</a></p>
+
+<p>18 July 2013 - euronews<br/>
+<a href="http://www.euronews.com/2013/07/18/atom-smashing-at-cern-what-does-it-mean-to-us-/">Atom smashing at CERN - what does it mean to us?</a></p>
+
+<p>17 July 2013 - The Daily Californian<br/>
+<a href="http://www.dailycal.org/2013/07/17/new-magnet-technology-developed-by-researchers/">New magnet technology developed by researchers</a></p>
+
+<p>17 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-particle-physicists-post-higgs.html">What's next for particle physicists, post-Higgs?</a></p>
+
+<p>16 July 2013 - Science Magazine<br/>
+<a href="http://news.sciencemag.org/sciencenow/2013/07/are-neutrinos-their-own-antipart.html?ref=em">Are Neutrinos Their Own Antiparticles?</a></p>
+
+<p>16 July 2013 - International Business Times<br/>
+<a href="http://www.ibtimes.com/large-hadron-collider-could-soon-get-boost-powerful-us-made-magnet-1348569">Large Hadron Collider Could Soon Get Boost From Powerful US-Made Magnet</a></p>
+
+<p>16 July 2013 - Gizmodo Australia<br/>
+<a href="http://www.gizmodo.com.au/2013/07/monster-machines-quadpole-super-magnets-will-increase-the-lhcs-power-tenfold/">Monster Machines: Quadpole Super Magnets Will Increase The LHC's Power Tenfold</a></p>
+
+<p>15 July 2013 - ETH Life<br/>
+<a href="http://www.ethlife.ethz.ch/archive_articles/130715_arktis_radiation_su/index_EN">Particle physics for internal security</a></p>
+
+<p>14 July 2013 - The Times of India<br/>
+<a href="http://timesofindia.indiatimes.com/city/varanasi/Mass-of-dark-matter-particle-more-than-proton-particle-Researchers/articleshow/21062847.cms">Mass of dark matter particle more than proton particle: Researchers</a></p>
+
+<p>13 July 2013 - Micro Finance Monitor<br/>
+<a href="http://www.microfinancemonitor.com/2013/07/14/cern-eurovision-to-attract-tweens-to-science/">CERN, Eurovision to attract ‘TWEENS’ to science </a></p>
+
+
+<p>12 July 2013 - E & T Magazine<br/>
+<a href="http://eandt.theiet.org/news/2013/jul/cern-supermagnets.cfm">New supermagnets to unlock Cern's possibilities</a></p>
+
+
+<p>12 July 2013 - India Blooms<br/>
+<a href="http://www.indiablooms.com/EnvironmentDetailsPage/2013/environmentDetails120713c.php">Cern, Eurovison unite to attract children</a></p>
+
+<p>12 July 2013 - Live Science<br/>
+<a href="http://www.livescience.com/38129-large-hadron-collider-magnet-passes-tests.html">New Atom-Smashing Magnet Passes First Tests</a></p>
+
+<p>11 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-successful-magnet-large-hadron-collider.html">Successful test of new US magnet puts Large Hadron Collider on track for major upgrade</a></p>
+
+
+<p>10 July 2013 - Scientific American<br/>
+<a href="http://www.scientificamerican.com/gallery_directory.cfm?photo_id=E0603221-0383-DFB4-256CC7176C9F6648">Mass Movement: A 50-Ton Magnet's 3,200-Mile Journey</a></p>
+
+<p>8 July 2013 - WebProNews<br/>
+<a href="http://www.webpronews.com/cern-to-open-for-tourists-in-september-2013-07">CERN to Open For Tourists in September</a></p>
+
+<p>5 July 2013 - Discovery News<br/>
+<a href="http://news.discovery.com/space/to-be-or-not-to-be-thats-the-higgs-boson-question-130705.htm">Decoding the Higgs Boson: Is it the Real Deal?</a></p>
+
+<p>5 July 2013 - iDigitalTimes.co.uk<br/>
+<a href="http://www.idigitaltimes.co.uk/articles/487042/20130705/cern-god-particle-experiment-one-year-old.htm">CERN God Particle Experiment One - year Old Now</a></p>
+
+<p>5 July 2013 - e! Science News<br/>
+<a href="http://esciencenews.com/articles/2013/07/05/laser.system.allows.determination.atomic.binding.energy.rarest.element.earth">Laser system allows determination of atomic binding energy of the rarest element on earth</a></p>
+
+<p>5 July 2013 - Phys.org<br/>
+<a href="http://phys.org/news/2013-07-higgs-boson-year.html">The Higgs boson: One year on</a></p>
+
+<p>5 July 2013 - The Inquirer<br/>
+<a href="http://www.theinquirer.net/inquirer/news/2279640/cern-opens-its-doors-to-the-public">CERN opens its doors to the public</a></p>
+
+<p>4 July 2013 - ABC News<br/>
+<a href="http://abcnews.go.com/Technology/god-particle-higgs-boson-year/story?id=19574423">'God Particle': The Higgs Boson One Year Later</a></p>
+
+<p>4 July 2013 - IT Web<br/>
+<a href="http://www.itweb.co.za/index.php?option=com_content&view=article&id=65430:two-decade-journey-for-collider">Two-decade journey for collider</a></p>
+
+<p>3 July 2013 - Cornell Chronicle<br/>
+<a href="http://news.cornell.edu/stories/2013/07/linear-collider-gains-key-insights-cornell-physicists">Linear collider gains key insights from Cornell physicists</a></p>
+
+<p>3 July 2013 - TG Daily<br/>
+<a href="http://www.tgdaily.com/general-sciences-features/72343-physicists-develop-rationale-for-the-next-gen-particle-collider">Physicists develop rationale for the next-gen particle collider</a></p>
+
+<p>2 July 2013 - Smithsonian<br/>
+<a href="http://www.smithsonianmag.com/science-nature/How-the-Higgs-Boson-Was-Found-213876841.html#Higgs-boson-ATLAS-detector-1.jpg">How the Higgs Boson Was Found </a></p>
+
+<p>2 July 2013 - e! Science News<br/>
+<a href="http://esciencenews.com/articles/2013/07/02/ou.physicists.develop.rationale.next.generation.particle.collider">OU physicists develop rationale for the next-generation particle collider</a></p>
+
+
+<p>2 July 2013 - Engadget<br/>
+<a href="http://www.engadget.com/2013/07/02/CERN-LHC-underground-tour/?utm_medium=feed&utm_source=Feed_Classic&utm_campaign=Engadget">Into the heart of CERN: an undergound tour of the Large Hadron Collider</a></p>
+
+<p>2 July 2013 - New Scientist<br/>
+<a href="http://www.newscientist.com/article/dn23798-highenergy-cosmos-is-violent-with-hint-of-dark-matter.html#.UdNN7W3NmGs">High-energy cosmos is violent with hint of dark matter </a></p>
+
+<p>2 July 2013 - Computer World<br/>
+<a href="http://www.computerworld.com/s/article/9240523/We_want_to_be_surprised_CERN_scientist_says?taxonomyId=154">We want to be surprised, CERN scientist says</a></p>
+
+<p>2 July 2013 - The University of Manchester<br/>
+<a href="http://www.manchester.ac.uk/aboutus/news/display/?id=10324">Higgs particle not the only sweet success for science</a></p>
+
+<p>2 July 2013 - Information Week<br/>
+<a href="http://www.informationweek.com/cloud-computing/infrastructure/cerns-hadron-collider-research-fueled-by/240157584">CERN's Hadron Collider Research Fueled By OpenStack</a></p>
+
+<p>1 July 2013 - Google News<br/>
+<a href="http://www.google.com/hostednews/afp/article/ALeqM5i6ACmY7XTHeAfOG5tMfjrdZV01yA?docId=CNG.70f1882e28153423656e7499adb11ace.d1">Higgs evidence mounts one year on, as does suspense</a></p>
+
+
+
+
+
+
+
+
+
+
+
+              </div><!-- END: text-widget-content -->
+            </div><!-- END: text-widget-body -->
+            
+          </div><!-- END: text-widget -->
+          <div class="text-widget-bottom  png"></div><!-- END: text-widget-bottom --></div>
+
+
+
+
+
+
+				</div><!-- END: middle-column-body -->
+			</div>
+			<!--//========== END: middle-column ==========//-->
+
+
+			<!--//========== right-column ==========//-->
+			<div id="right-column">
+				<div id="right-column-body">
+
+				<div ><!--//========================================================
+***************** FEATURES ***************************
+========================================================//-->
+<!--//******** text-widget ********//-->
+  <div class="text-widget  text-widget-sidebar  png">
+    <h3 class="png"><span class="icon-feature">Features</span></h3>
+    <div class="text-widget-body">
+      <div class="text-widget-content" style="height: 255px;">
+        
+
+  
+        <!-- entry -->
+        <a href="http://www.symmetrymagazine.org" target="_blank"><img class="iconlink" src="http://www.interactions.org/images/symmetry_icon.gif" align="right"></a>
+        <h5><em><a href="http://www.symmetrymagazine.org/contest/why-particle-physics-matters" target="_blank">Symmetry Video Contest</a></em></h5>
+        <p><b>Why Particle Physics Matters</b><br />
+        Contest Dates: <br />Aug 20 - Sept 3<br />
+        <a href="http://www.symmetrymagazine.org/contest/why-particle-physics-matters" target="_blank">Vote Now</a></p>
+        <hr noshade="noshade">
+        <!-- END: entry -->
+
+
+        <!-- entry -->
+        <a href="http://newsline.linearcollider.org/" target="_blank"><img class="iconlink" src="http://www.interactions.org/images/ilc_icon.gif" align="right"></a>
+        <h5><em><a href="http://newsline.linearcollider.org/" target="_blank">LC Newsline</a></em></h5>
+        <p>22 August 2013<br></p>
+        <ul>
+          <li>ILC Ink</li>  
+          <li>Common ground in ILC and CLIC detector concepts</li>
+          <li>Strategy for linear colliders</li>
+          
+        </ul> 
+        <hr noshade="noshade">
+        <!-- END: entry -->
+
+        <!-- entry -->
+        <a href="http://cdsweb.cern.ch/journal/?name=CERNBulletin" target="_blank"><img class="iconlink" src="http://www.interactions.org/images/cernbulletin_icon.gif" align="right"></a>
+        <h5><em><a href="http://cdsweb.cern.ch/journal/?name=CERNBulletin">CERN Bulletin</a></em></h5>
+        <p>12 August 2013</p>
+        <ul>
+          <li>The Amazing World of Smashed Protons and Lead Ions </li>        
+          <li>Summer at CERN: A Time to Make Friends</li> 
+          <li>LS1 Report: The Cryogenic Line goes through the Scanner</li>
+          <li>Alice Upgrades its Powerful Eyes</li>
+        </ul>
+        <hr noshade="noshade">
+        <!-- END: entry -->
+
+        <!-- entry -->
+        <a href="http://www.desy.de/news/desy_inform/online/index_eng.html" target="_blank"><img class="iconlink" src="http://www.interactions.org/images/desy_icon.gif" align="right"></a>
+        <h5><em><a href="http://www.desy.de/news/desy_inform/online/index_eng.html" target="_blank">DESY inForm</a></em></h5>
+        <p>July/August 2013</p>
+        <ul>
+          <li>Superconducting cavities non-stop</li>
+          <li>Tetraquark!?</li>
+          <li>The ILC is now ready for construction</li>
+          <li>FLASH makes magnetisation invisible</li>
+        </ul>
+        <hr noshade="noshade">
+        <!-- END: entry -->
+
+        <!-- entry -->
+        <a href="http://cerncourier.com/cws/latest/cern" target="_blank"><img class="iconlink" src="http://www.interactions.org/images/cerncourier_icon.gif" align="right"></a>
+        <h5><a href="http://cerncourier.com/cws/latest/cern" target="_blank">CERN Courier</a></h5>
+        <p>July/August 2013</p>
+        <ul>
+          <li>The Tevatron's data continue to excite</li>
+          <li>ClearPEM clarifies breast cancer diagnosis</li>
+          <li>The case for a circular e+e– Higgs factory</li>
+          <li>From CERN to space – and back </li>
+        </ul>
+        <hr noshade="noshade">
+        <!-- END: entry -->
+
+        <!-- 
+        <a href="http://www.aspera-eu.org/" target="_blank"><img class="iconlink" src="http://www.interactions.org/images/aspera_icon.gif" align="right"></a>
+        <h5><em><a href="http://www.aspera-eu.org/" target="_blank">ASPERA This Month</a></em></h5>
+        <ul>
+          <li>Towards the new ApPEC structure</li>
+          <li>Dubna Town Meeting</li>
+          <li>European research agencies create sustainable entity for astroparticle physics
+</li>
+          <li>Underground Synergies with Astroparticle Physics | 18/19 December 2012 | Durham</li>
+        </ul>
+        <hr noshade="noshade" />
+        -->
+
+        <!-- entry -->
+        <a href="http://www.symmetrymagazine.org" target="_blank"><img class="iconlink" src="http://www.interactions.org/images/symmetry_icon.gif" align="right"></a>
+        <h5><em><a href="http://www.symmetrymagazine.org" target="_blank">symmetry magazine</a></em></h5>
+        <ul>
+          <li>Contest: Why particle physics matters</li>
+          <li>Antimatter experiment seeks help from the crowd </li>
+          <li>Fundamental forces and medicinal molecules</li>
+          <li>US program at CERN broadens undergrads' horizons</li>
+        </ul>
+        <hr noshade="noshade">
+        <!-- END: entry -->
+
+       <!-- 
+        <h5><a href="http://listserv.in2p3.fr/archives/e-lettre-l.html" target="_blank"><img class="iconlink" src="http://www.interactions.org/images/info-express-icon.jpg" align="right"></a>
+        <h5><em><a href="http://listserv.in2p3.fr/cgi-bin/wa?A2=E-LETTRE-L;4d52c7eb.1301">IN2P3</a></em></h5>
+        <p>24 janvier 2013</p>
+        <p>La lettre &eacute;lectronique de l'IN2P3</p>
+        <hr noshade="noshade" />
+          <!-- END: entry -->
+
+        <!-- entry -->
+        <h5><a href="http://www.interactions.org/cms/?pid=1033187">A Week of Interactions</a></h5>
+        <p>18 - 24 August 2013</p>
+        <p>A weekly compilation highlighting news articles, press releases, images and features on Interactions.org.<br>
+        <a href="http://www.interactions.org/cms/?pid=1024770">Sign up</a>&nbsp; |&nbsp; <a href="http://www.interactions.org/cms/?pid=1026163">Archive</a></p>
+        <hr noshade="noshade">
+ <!-- END: entry -->
+
+
+
+
+      </div><!-- END: text-widget-content -->
+    </div><!-- END: text-widget-body -->
+  </div><!-- END: text-widget -->
+<div class="text-widget-sidebar-bottom  png"></div><!-- END: text-widget-bottom -->
+<!--//******** END: text-widget ********//-->
+          
+<!--//========================================================
+***************** END: FEATURES ***************************
+========================================================//-->
+<br></div>
+
+<div ><div class="text-widget  text-widget-sidebar  png">
+	<h3 class="png"><span class="icon-video">Photowalk</span></h3>
+		<div class="text-widget-body">
+            <div class="text-widget-content" style="height: auto; overflow: none;">
+                <p style="margin: 0 0 5px 0; text-align: center;"><a href="http://www.interactions.org/cms/?pid=5999"><strong>View the Photowalk winners!</strong></a></p>
+                <a href="http://www.interactions.org/cms/?pid=5999"><img src="http://www.interactions.org/images/photowalk2/thumbs/40.jpg" alt="thumb" width="100%"></a>
+            </div><!-- END: text-widget-content -->
+        </div><!-- END: text-widget-body -->
+    </div><!-- END: text-widget -->
+<div class="text-widget-sidebar-bottom  png"></div><!-- END: text-widget-bottom -->
+<br></div>
+
+<div ><!--//========================================================
+***************** QUANTUM DIARIES ***************************
+========================================================//-->
+
+<!--//******** text-widget ********//-->
+<div class="text-widget  text-widget-sidebar  png">
+	<h3 class="png"><span class="icon-feature">Quantum Diaries</span></h3>
+	<div class="text-widget-body">
+		<div class="text-widget-content" style="height: 160px;">
+	
+		<div class="text-widget-body"></div>
+
+<div>
+<div class="rss-feed">
+					<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/25/girls-at-cern-loads-of-em/">Girls, at CERN &ndash; loads of &rsquo;em!</a></div>
+		<div class="date">August 25, 2013</div>
+		<div class="text">My pal got chatting to a drunk fella in a bar in Oxford a few weeks before he started a new job at CERN. When he mentioned the identity of his future employer, the drunk fella guffawed with a &ldquo;well you won&rsquo;t be getting much action there&rdquo;. Now, either this intoxicated chap was implying that [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/23/ilc-more-than-just-a-higgs-factory/">The International Linear Collider: More than Just a Higgs Factory</a></div>
+		<div class="date">August 23, 2013</div>
+		<div class="text">The ILC site has been chosen. What does this mean for Japan? Hi Folks, It is official [Japanese1,Japanese2]: the Linear Collider Collaboration and the Japanese physics community have selected the Kitakami mountain range in northern Japan as the site for the proposed International Linear Collider. Kitakami is a located in the Iwate Prefecture and is [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/21/visiting-my-high-school-in-arkansas/">Visiting my high school in Arkansas</a></div>
+		<div class="date">August 21, 2013</div>
+		<div class="text">This week I will be going to visit my high school in Arkansas. &nbsp;It was 20 years ago that the school first opened its doors and I was part of that Charter class. &nbsp;The Arkansas School for Mathematics, Science &amp; the Arts is a bit unusual, it is &ldquo;one of only fifteen public, residential high [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/21/at-fermilab-national-accelerator-is-our-middle-name/">At Fermilab, National Accelerator is our middle name</a></div>
+		<div class="date">August 21, 2013</div>
+		<div class="text">This article appeared in Fermilab Today on Aug. 21, 2013. Craig Hogan Craig Hogan, head of the Center for Particle Astrophysics, wrote this column. Everyone knows that Fermilab builds accelerators, fabulous machines that boost elementary particles to almost the speed of light. But Fermilab accelerates more than just particles: It propels the advancement of our [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/20/can-string-theory-predict-stuff/">Can String Theory predict stuff?</a></div>
+		<div class="date">August 20, 2013</div>
+		<div class="text">What&rsquo;s the deal with string theory? Why do people claim string theory is nonsense? Can we predict anything with it? As a theorist with too many experimental friends, these questions are thrown at me all the time. So today answering these will be my challenge. Dislaimer: In the following I might have wiped too many [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/19/a-fresh-look-for-the-standard-model/">A fresh look for the standard model</a></div>
+		<div class="date">August 19, 2013</div>
+		<div class="text">(Note: This is an updated version of a post that I originally made on my personal website&nbsp;theoryandpractice.org.) Recently I&rsquo;ve been more involved in communication, education, and outreach activities via the&nbsp;&ldquo;Snowmass&rdquo; Community Summer Study. &nbsp;One of the goals we discussed was to get to the point that the public is more aware of the fundamental particles. [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/18/mother-hunting-at-cern/">Mother-hunting at CERN</a></div>
+		<div class="date">August 18, 2013</div>
+		<div class="text">The Summer Student Webfest 2013 was held at CERN during the first weekend of August. The objective of the weekend was for student web enthusiasts to work together in teams to design web-based applications that will encourage the public to learn more about science, and in particular CERN, the LHC and particle physics. The Webfest [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/11/confessions-of-a-cern-summer-student/">Confessions of a CERN summer student</a></div>
+		<div class="date">August 11, 2013</div>
+		<div class="text">This post focuses on the social aspects of life on the CERN Student Summer Programme. Gathering hundreds of 20-somethings from around the globe and plonking them in Switzerland is inevitably going to lead to some shenanigans &ndash; right? CERN has approximately 10,000 people on site each day and a plethora of clubs and societies to [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/09/snowmass-take-away/">The Take Away Message of Snowmass on the Mississippi</a></div>
+		<div class="date">August 9, 2013</div>
+		<div class="text">Snowmass Came and Passed. What have we learned from it? Hi All, Science is big. It is the systematic study of nature, so it has to be big. In another way, science is about asking questions, questions that expands our knowledge of nature just a bit more. Innocuous questions like, &ldquo;Why do apples fall to [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/09/notre-univers-est-le-votre/">Notre Univers est le v&ocirc;tre</a></div>
+		<div class="date">August 9, 2013</div>
+		<div class="text">Les 28 et 29 septembre de 9h00 &agrave; 20h00, le CERN ouvrira encore une fois ses portes au grand public. Ce sera l&rsquo;occasion de visiter des dizaines de montages exp&eacute;rimentaux et de d&eacute;couvrir le plus grand laboratoire de physique des particules au monde. Tout cela gratuitement. Des visiteurs d&eacute;couvrent le d&eacute;tecteur CMS durant les journ&eacute;es [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/09/our-universe-is-yours/">Our Universe is Yours</a></div>
+		<div class="date">August 9, 2013</div>
+		<div class="text">September 28 and 29, from 9:00 to 20:00, CERN is going to open its doors to the public once again. This is a not-to-be-missed opportunity to visit dozens of experimental setups and get to see what is happening in the world&rsquo;s largest particle physics laboratory. All of that free of charge. A group of visitors [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/08/join-the-dots-to-measure-antimatter/">Join the dots to measure antimatter</a></div>
+		<div class="date">August 8, 2013</div>
+		<div class="text">This article was also&nbsp;published on&nbsp;CERN&rsquo;s website&nbsp;on 8.8.13. Does antimatter fall up or down? The AEgIS experiment&nbsp;at CERN needs your help to analyse experimental results to figure out how antimatter&nbsp;is affected by gravity. Just join the dots to reconstruct particle tracks and your contribution could be included in an upcoming scientific publication. The aim of AEgIS [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/08/fermilab-accelerator-complex-starts-up-after-long-shutdown/">Fermilab accelerator complex starts up after long shutdown</a></div>
+		<div class="date">August 8, 2013</div>
+		<div class="text">This article appeared in Fermilab Today on Aug. 8, 2013. A beam of protons whizzed through the Main Injector for the first time in over a year on July 30, representing a major milestone in the year-long process of overhauling the Fermilab accelerator complex. The upgrade will eventually culminate in an accelerator with double the [&hellip;]</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/07/wedding-cake/">Wedding Cake</a></div>
+		<div class="date">August 7, 2013</div>
+		<div class="text">The decorations on our wedding cake feature one of my wife&rsquo;s hobbies and one of mine. Can you identify both? Cake by Clare Brown. &nbsp;Photograph by Malcolm Anderson.</div>		
+				<div class="headline"><a href="http://www.quantumdiaries.org/2013/08/06/snowmass-in-frontierland/">Snowmass: in Frontierland</a></div>
+		<div class="date">August 6, 2013</div>
+		<div class="text">What an interesting but exhausting week it has been here at the Snowmass workshop in Minneapolis. I wrote last week about the opening of the workshop. In the following days, we followed what seemed to me like a pretty original schedule for a workshop. Each morning, we bifurcated (or multi-furcated, if that&rsquo;s a word) into [&hellip;]</div>		
+			
+</div>
+
+
+<div></div><!-- END: text-widget-body -->
+						
+	</div><!-- END: text-widget-content -->
+	</div><!-- END: text-widget-body -->
+	
+</div><!-- END: text-widget -->
+<div class="text-widget-sidebar-bottom  png"></div><!-- END: text-widget-bottom -->
+<!--//******** END: text-widget ********//-->
+
+<!--//========================================================
+***************** END: QUANTUM DIARIES ***************************
+========================================================//-->
+<br>
+
+
+
+
+
+
+
+</div>
+
+<div ><!--//========================================================
+					***************** BLOG WATCH ***************************
+					========================================================//-->
+					
+					<!--//******** text-widget ********//-->
+					<div class="text-widget  text-widget-sidebar  png">
+						
+						<h3 class="png"><span class="icon-blog">Blog Watch</span></h3>
+						
+						<div class="text-widget-body">
+							<iframe src="/blogs/xeno_include.sidebar.php" width="167" height="160" frameborder="0" scrolling="auto"></iframe>
+						</div><!-- END: text-widget-body -->
+						
+					</div><!-- END: text-widget -->
+					<div class="text-widget-sidebar-bottom  png"></div><!-- END: text-widget-bottom -->
+					<!--//******** END: text-widget ********//-->
+					
+					<!--//========================================================
+					***************** END: BLOG WATCH ***************************
+					========================================================//-->
+					
+					
+					<br /></div>
+
+<div ><!--//========================================================
+					***************** FEATURED VIDEO ***************************
+					========================================================//-->
+					
+					<!--//******** text-widget ********//-->
+					<div class="text-widget  text-widget-sidebar  png">
+						
+						<h3 class="png"><span class="icon-video">Featured Video</span></h3>
+						
+						<div class="text-widget-body">
+							<div class="text-widget-content" style="height: auto; overflow: none;">
+								
+								<!--// video thumbnail == 154 pixels wide (MAX) //-->
+								<a href="http://www.symmetrymagazine.org/contest/why-particle-physics-matters" alt="Symmetry Video Contest: Why Particle Physics Matters" /><img src="http://www.interactions.org/images/video/2013/2013-Symmetry-Video-Contest-01.jpg" alt="Symmetry Video Contest: Why Particle Physics Matters" style="width: 100%; height: auto;" />
+								</a>
+								<p class="text-widget-caption" style="margin: 0.5em 0 0 0;">
+									<a href="http://www.symmetrymagazine.org/contest/why-particle-physics-matters">Symmetry Video Contest: Why Particle Physics Matters</a>
+								</p>
+							
+							</div><!-- END: text-widget-content -->
+						</div><!-- END: text-widget-body -->
+						
+					</div><!-- END: text-widget -->
+					<div class="text-widget-sidebar-bottom  png"></div><!-- END: text-widget-bottom -->
+					<!--//******** END: text-widget ********//-->
+					
+					<!--//========================================================
+					***************** END: FEATURED VIDEO ***************************
+					========================================================//--></div>
+
+				</div><!-- END: right-column-body -->
+			</div>
+			<!--//========== END: right-column ==========//-->
+
+
+
+		</div><!-- END: content-row-body -->
+	</div>
+	<!--//========== END: content-row ==========//-->
+
+
+
+
+
+	<!--//========== footer ==========//-->
+	<div id="footer">
+		<div id="footer-body">
+		<div id="footer-body2">
+
+			<ul class="nav  footer-nav">
+				<li class="active"><a href="/cms/">Home</a></li>
+				<li class=""><a href="/cms/?pid=1000680">News</a></li>
+				<li class=""><a href="/cms/?pid=1900">Image Bank</a></li>
+				<li class=""><a href="/video/">Video Channel</a></li>
+			</ul>
+
+			<p class="footer-text">&copy; Copyright 2012 Interactions.org</p>
+
+		</div><!-- END: footer-body2 -->
+		</div><!-- END: footer-body -->
+	</div>
+	<!--//========== END: footer ==========//-->
+
+
+	<!--//========== pf-footer ==========//-->
+	<div id="pf-footer">
+		<div id="pf-footer-body">
+
+			&copy; Copyright 2013 Interactions.org
+
+		</div><!-- END: pf-footer-body -->
+	</div>
+	<!--//========== END: pf-footer ==========//-->
+
+
+
+</div><!-- END: wrapper -->
+
+
+
+<script type="text/javascript" language="javascript">
+<!--
+	function HideContent(d)
+	{
+		document.getElementById(d).style.display = "none";
+	}
+
+	function ShowContent(d)
+	{
+		document.getElementById(d).style.display = "block";
+	}
+
+	function ReverseDisplay(d)
+	{
+		if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+		else { document.getElementById(d).style.display = "none"; }
+	}
+
+	function openWindow(url, name, width, height, resizable, scrollbars, status, menubar, toolbar, locationbar)
+	{
+		var options = "width=" + width + ",height=" + height + ",";
+		options += "resizable=" + resizable + ",scrollbars=" + scrollbars + ",status=" + status + ",";
+		options += "menubar=" + menubar + ",toolbar=" + toolbar + ",location=" + locationbar + ",directories=no";
+		var newWin = window.open(url, name, options);
+		newWin.focus();
+	}
+
+
+//-->
+</script>
+
+
+<!-- end body -->
+
+
+	
+	
+<!--//======== Image Bank Form ========//-->
+<!-- script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script -->
+<script type="text/javascript">jQuery(function($) { $('#image-bank-body').load('/cms/?pid=1800&noredirect=1 #plaincontent_container > *'); })</script>
+<!--//======== END: Image Bank Form ========//-->
+
+
+
+</body>
+</html>

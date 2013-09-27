@@ -1,0 +1,318 @@
+<base href="http://www.lalena.com/ai/ant/">
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script type="text/javascript" language="JavaScript">
+<!--
+function googleSearch() {
+    document.forms["googleSearchForm"].q.value = document.forms["aspnetForm"].google_searchtext.value;
+    document.forms["googleSearchForm"].submit();
+}
+
+function checkForReturn(ev) {
+    if (!ev) ev = window.event;
+
+    if (ev.keyCode)
+    {
+        keycode = ev.keyCode;
+    }
+    else
+    {
+        keycode = ev.which;
+    }
+
+    if (keycode == 13 )
+    {
+        googleSearch();
+        
+        if (ev.keyCode)
+        {
+            ev.returnValue = false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+}
+// -->
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head><title>
+	Teamwork in Genetic Programming
+</title><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /><link rel="icon" href="/favicon.ico" type="image/x-icon" /><link href="../../App_Themes/Silver/Default.css" type="text/css" rel="stylesheet" /><link href="../../App_Themes/Silver/Frame.css" type="text/css" rel="stylesheet" /></head>
+<body>
+
+<!-- SiteSearch Google -->
+<form id="googleSearchForm" method="get" action="http://www.lalena.com/Search.aspx" target="_top">
+<script type="text/javascript">
+    window.google_analytics_uacct = "UA-598905-4";
+</script>
+<input type="hidden" name="cx" value="partner-pub-3648668650018342:vh7ejc-r0qs" />
+<input type="hidden" name="cof" value="FORID:10" />
+<input type="hidden" name="ie" value="ISO-8859-1" />
+<input type="hidden" name="q" value="" />
+</form>
+<!-- SiteSearch Google -->
+
+    <form name="aspnetForm" method="post" action="Default.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTcwODg1MTE2NmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFGGN0bDAwJExvZ2luU3RhdHVzMSRjdGwwMQUYY3RsMDAkTG9naW5TdGF0dXMxJGN0bDAz" />
+
+        <div class="header">
+            <div class="headertitle">
+                <div class="header-left" id="header-left"></div>
+                <div class="header-right" id="header-right"></div>
+	            <h1 id="SiteTitle">LaLena.com</h1>
+                <h3 id="UserTitle" class="userinfoheader">
+                    
+                        <img src="/images/NotLoggedIn.gif" width="117" height="11" alt="Not logged in" />
+                    
+                </h3>
+	        </div>
+	        <div class="menua">
+                <table cellpadding="3"><tr>
+	            <td><a href="/"><center class="staticmenuitem">Home</center></a></td>
+	            
+	            <td><a href="/Forums/"><center class="staticmenuitem">Forums</center></a></td>
+	            <td><a href="/AI/"><center class="staticmenuitem">AI</center></a></td>
+	            <td><a href="/Games/"><center class="staticmenuitem">Games</center></a></td>
+	            
+	            </tr></table>
+            </div> 
+        
+	        <div class="nav">
+		        <span id="ctl00_SiteMapPath1"><a href="#ctl00_SiteMapPath1_SkipLink"><img alt="Skip Navigation Links" height="0" width="0" src="/WebResource.axd?d=AEMF4A2cH6fBwlwrlXkA6w2&amp;t=633570095601305000" border="0" /></a><span>
+		                <a id="ctl00_SiteMapPath1_ctl00_HyperLink1" title="Home Page" href="/">Home</a>
+		            </span><span> &gt; </span><span>
+		                <a id="ctl00_SiteMapPath1_ctl02_HyperLink1" title="Artificial Intelligence / Life" href="/AI/">AI</a>
+		            </span><span> &gt; </span><span>
+		                <a id="ctl00_SiteMapPath1_ctl04_HyperLink1" title="A Genetic Program simulating ant food collection behaviors" href="/AI/Ant/">Ant</a>
+		            </span><a id="ctl00_SiteMapPath1_SkipLink"></a></span>
+		        &nbsp; | &nbsp;
+		        <a id="ctl00_LoginStatus1" href="javascript:__doPostBack('ctl00$LoginStatus1$ctl02','')">Login</a>
+	        </div>
+	        <div class="headersearch">
+	            
+	        </div>
+	        <div class="headerbanner">
+                <script type="text/javascript"><!--
+                google_ad_client = "pub-3648668650018342";
+                google_ad_width = 468;
+                google_ad_height = 60;
+                google_ad_format = "468x60_as";
+                google_ad_type = "text_image";
+                google_ad_channel ="";
+                google_color_border = "333333"; google_color_bg = "E4E4E4"; google_color_link = "D32525"; google_color_text = "000000"; google_color_url = "D32525"; 
+                //--></script>
+                <script type="text/javascript"
+                  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+	        </div>
+        </div>
+        
+	    <div class="outerpage">
+	        <div class="middlepage">
+	        	<div class="pagetopleft"></div>
+		        <div class="pagetopright"></div>
+	            <div class="innerpage">
+                    
+
+    <div class="shim gradient"></div>
+
+    <div class="page" id="ai">
+    
+        <center>
+        <h3>Teamwork In Genetic Programming</h3>
+        </center>
+                <br />
+        <center>
+            <a href="Ant.aspx">
+                <img src="AntRunning.gif" width="323" height="256" alt="Screen shot of TSP Program" />
+            </a>
+            <br />
+            Click the image to run the <a href="Ant.aspx">Ant</a> Genetic Program.
+        </center>
+        <br />
+        <br />
+        I have developed a Genetic Program that will evolve
+        programs that will emulate the food collection behavior of ants.
+        The teamwork aspect of this program comes into play when the ants
+        must work together to solve a problem.
+        The ant programs are written in a special language developed for this application.
+        The language consists of ant actions such as: MoveForward, PickUpFood... 
+        This genetic program consists of an an intepreter to execute the special ant language, 
+        the Genetic Program evolver that will create the ant programs,
+        and a simulator that lets you view the ants in action as they collect food.
+
+        <br />
+        <br />
+        
+        <div class="itembox">
+             <div class="itemtop">
+                <div class="itemtopleft"></div>
+                <div class="itemtopright"></div>
+             </div>
+             <div class="itembody">
+                <h3>Background</h3>
+                <ul>
+                    <li><a href="Background.aspx" target="_top">Background</a> - What this Project is all about.</li>
+                    <li><a href="Guide.aspx" target="_top">User Guide</a> - The basics on how to use the programs.</li>
+                </ul>
+             </div>
+             <div class="itembottom">
+                <div class="itembottomleft"></div>
+                <div class="itembottomright"></div>
+             </div> 
+        </div>
+        
+        <div class="itembox">
+             <div class="itemtop">
+                <div class="itemtopleft"></div>
+                <div class="itemtopright"></div>
+             </div>
+             <div class="itembody">
+                <h3>Input Data</h3>
+                <ul>
+                    <li><a href="Parameters.aspx" target="_top">Parameters</a> - Variables to control the execution of the Genetic Program.</li>
+                    <li><a href="InstructionSet.aspx" target="_top">Instruction Set</a> - Set of instructions to be used in the ant programs.</li>
+                    <li><a href="Map.aspx" target="_top">Map File</a> - Environment where the ants execute their program.</li>
+                </ul>
+             </div>
+             <div class="itembottom">
+                <div class="itembottomleft"></div>
+                <div class="itembottomright"></div>
+             </div> 
+        </div>
+        
+        <div class="itembox">
+             <div class="itemtop">
+                <div class="itemtopleft"></div>
+                <div class="itemtopright"></div>
+             </div>
+             <div class="itembody">
+                <h3>Testing</h3>
+                <ul>
+                    <li><a href="Solutions.aspx" target="_top">Solutions</a> - Hand written solutions of possible solutions to different problems.</li>
+                    <li><a href="Results.aspx" target="_top">Results</a> - Actual results from different tests using the Genetic Program.</li>
+                </ul>
+        </div>
+             <div class="itembottom">
+                <div class="itembottomleft"></div>
+                <div class="itembottomright"></div>
+             </div> 
+        </div>
+        
+        <div class="itembox">
+             <div class="itemtop">
+                <div class="itemtopleft"></div>
+                <div class="itemtopright"></div>
+             </div>
+             <div class="itembody">
+                <h3>Download</h3>
+                <ul>
+                    <li>Run it online:
+                    <a href="Ant.aspx"><b>Online Ant Simulator</b></a></li>
+                    <li>Source Code:
+                    <a href="Ant.zip"><b>ant.zip</b></a></li>
+                    <li>Executable:
+                    <a href="Ant.exe.zip"><b>ant.exe.zip</b></a></li>
+                    <li>Thesis Paper:
+                    <a href="Thesis.pdf"><b>thesis.pdf</b></a>
+                    <br />
+                    <br />Note: This thesis paper is based on the original Genetic Program implementation written in 1997.
+                    <br />The original program was written in C using Motif and lex &amp; yacc on a Unix platform.
+                    <br />It was written for speed and not readability due to the limitations of computers at that time.
+                    <br />Hopefully the new .NET implementation will allow for more reuse and further research.</li>
+                    
+                </ul>
+             </div>
+             <div class="itembottom">
+                <div class="itembottomleft"></div>
+                <div class="itembottomright"></div>
+             </div> 
+        </div>
+        
+        <div class="itembox">
+             <div class="itemtop">
+                <div class="itemtopleft"></div>
+                <div class="itemtopright"></div>
+             </div>
+             <div class="itembody">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="/AI/" target="_top">Artificial Life</a> Return to the main Artificial Life page.</li>
+                </ul>
+             </div>
+             <div class="itembottom">
+                <div class="itembottomleft"></div>
+                <div class="itembottomright"></div>
+             </div> 
+        </div>
+    </div>
+
+		        </div>
+            </div>
+        </div>
+        
+        
+            <div class="footersearch">
+                <div class="footersearchinner">
+                    <table style="width: auto;" class="footersearchtable"><tr>
+                    <td nowrap="nowrap" valign="top" align="left" height="32"><a href="http://www.google.com/"  rel="nofollow"><img src="http://www.google.com/logos/Logo_25gry.gif" border="0" alt="Google" align="middle" /></a>&nbsp;&nbsp;&nbsp;</td>
+                    <td nowrap="nowrap"><input type="text" name="google_searchtext" size="31" maxlength="255" value="" onkeydown="return checkForReturn(event);" />&nbsp;<input type="button" value="Search" onclick="googleSearch();" />&nbsp;&nbsp;&nbsp;</td>
+                    </tr></table>
+                </div>
+            </div>
+	    
+	        
+	    <div class="footerbg">
+	    
+		    <div class="footer">
+		        <div class="pagebottomleft"></div>
+		        <div class="pagebottomright"></div>
+	            <div class="menub">
+	                <center>
+                    <table cellpadding="3"><tr>
+	                <td><a href="/"><center class="staticmenuitem">Home</center></a></td>
+	                
+	                <td><a href="/Forums/"><center class="staticmenuitem">Forums</center></a></td>
+	                <td><a href="/AI/"><center class="staticmenuitem">AI</center></a></td>
+	                <td><a href="/Games/"><center class="staticmenuitem">Games</center></a></td>
+	                
+	                </tr></table>
+	                </center>
+                </div> 
+		        Copyright &copy; 1996-2013 Michael LaLena. All rights reserved.<br /><a href="Contact.aspx">Contact Us</a>
+		    </div>
+
+		    <div class="footermiddle">
+ 	        </div>
+
+		    <div class="footer-bottom">
+		        <div class="footer-left"></div>
+ 	            <div class="footer-right"></div>
+	        </div>
+	        		        
+	    </div>
+	    
+	    <input name="ctl00$ReqForIEBug" type="text" id="ctl00_ReqForIEBug" style="visibility:hidden;display:none;" />
+
+		
+	
+	
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwK+vaf6BALh8vmTCALOl5G8Bg==" /></form>
+	
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-598905-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>

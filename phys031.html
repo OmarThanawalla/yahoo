@@ -1,0 +1,533 @@
+<base href="http://www.colorado.edu/physics/phet/">
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+        "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>PhET: Free online physics, chemistry, biology, earth science and math simulations</title>
+    
+        <meta name="description" content="Free educational simulations covering a diverse topics designed by the University of Colorado available in various languages."/>
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/phet-v16-min.css"/>
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="/css/ie6fix-v3.css"/>
+    <![endif]-->
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="/css/ie7fix-v2.css"/>
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8fix-v1.css"/>
+    <![endif]-->
+    <!--[if lt IE 7]>
+    <script defer type="text/javascript" src="/js/pngfix.js"></script>
+    <![endif]-->
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="/css/ie-v1.css"/>
+    <![endif]-->
+    <!-- class edu.colorado.phet.website.content.IndexPage -->
+    <!-- host phet.colorado.edu -->
+    <script type="text/javascript">
+        //<![CDATA[
+        var _gaq = _gaq || [];
+        _gaq.push( ["_setAccount","UA-5033201-1"] );
+        _gaq.push( ["_setDomainName","phet.colorado.edu"] );
+        _gaq.push( ["_trackPageview"] );
+        _gaq.push( ['_trackPageLoadTime'] );
+        _gaq.push( ["b._setAccount","UA-5033010-1"] );
+        _gaq.push( ["b._setDomainName","phet.colorado.edu"] );
+        _gaq.push( ["b._trackPageview"] );
+        var benchmarkTracker = null;
+        var overallTracker = null;
+        (function() {
+            var b = document.createElement( "script" );
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            b.onload = b.onreadystatechange = function() {
+                var c = this.readyState;
+                if ( c && c != "complete" && c != "loaded" ) {return}
+                benchmarkTracker = _gat._getTracker( "UA-5033201-1" );
+                benchmarkTracker._setDomainName( "phet.colorado.edu" );
+                overallTracker = _gat._getTracker( "UA-5033010-1" );
+                overallTracker._setDomainName( "phet.colorado.edu" )
+            };
+            var a = document.getElementsByTagName( "script" )[0];
+            a.parentNode.insertBefore( b, a )
+        })();
+        (function() {
+            var b = document.createElement( "script" );
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = "/js/phet-v12-min.js";
+            var a = document.getElementsByTagName( "script" )[0];
+            a.parentNode.insertBefore( b, a )
+        })();
+        //]]>
+    </script>
+    
+
+        <script type="text/javascript">var phetLocale = "en";var phetSimulationString = "{0} (simulation)";</script>
+    <script type="text/javascript" src="/js/swfobject.js"></script><script type="text/javascript">swfobject.registerObject( "rotator-id", "9.0.0" );</script><script type="text/javascript">
+/* <![CDATA[ */
+var phetHomeSponsors = {totalWeight:51.0,sponsors:[{weight:3.0,html:"     <div><a href=\"http://jila.colorado.edu/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/jila_logo_medium.gif\" alt=\"JILA logo\" width=\"136\" height=\"56\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 4px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.techsmith.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/techsmith.png\" alt=\"TechSmith logo\" width=\"137\" height=\"31\" style=\"border: 1px solid #aaa; background-color: #fff;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://bitrock.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/bitrock-small.png\" alt=\"BitRock logo\" width=\"159\" height=\"65\" style=\"border: 1px solid #aaa; background-color: #fff;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.jetbrains.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/jetbrains.gif\" alt=\"JetBrains logo\" width=\"124\" height=\"44\" style=\"border: 1px solid #aaa; background-color: #fff;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.ej-technologies.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/ej-small.png\" alt=\"ej-technologies logo\" width=\"150\" height=\"31\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 4px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.idahodigitallearning.org/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/idaho-digital-learning-logo.png\" alt=\"Idaho Digital Learning logo\" width=\"130\" height=\"95\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 8px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.compasslearning.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/compass-learning-small.png\" alt=\"CompassLearning logo\" width=\"150\" height=\"39\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 5px;\"/></a></div>      "},{weight:2.0,html:"     <div><a href=\"http://www.learning.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/learning-com-extra-small.png\" alt=\"Learning.com logo\" width=\"135\" height=\"19\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 5px;\"/></a></div>      "},{weight:2.0,html:"     <div><a href=\"http://www.wirelessgeneration.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/wireless-generation-160x19.png\" alt=\"Wireless Generation logo\" width=\"160\" height=\"19\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 3px;\"/></a></div>      "},{weight:3.0,html:"     <div><a href=\"http://www.ode.state.or.us\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/oregon-doe-black-small.png\" alt=\"Oregon Department of Education logo\" width=\"150\" height=\"27\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 5px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.jcesc.k12.oh.us/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/jefferson-county-vla-125x128.png\" alt=\"Jefferson County Virtual Learning Academy logo\" width=\"125\" height=\"128\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 5px;\"/></a></div>      "},{weight:2.0,html:"     <div><a href=\"http://www.carolina.com\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/carolina-160x56.png\" alt=\"Carolina Biological Supply Company logo\" width=\"160\" height=\"56\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 0px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.knsh.com.tw/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/kang-hsuan-logo.png\" alt=\"Kang Hsuan Educational Publishing Group logo\" width=\"155\" height=\"36\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 2px;\"/></a></div>      "},{weight:5.0,html:"     <div><a href=\"http://www.pearsoned.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/pearson-medium.png\" alt=\"Pearson logo\" width=\"150\" height=\"45\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 0px;\"/></a></div>      "},{weight:5.0,html:"     <div><a href=\"http://www.pancopty.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/pan-america-medium.png\" alt=\"Pan America Construction logo\" width=\"150\" height=\"77\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 0px;\"/></a></div>      "},{weight:5.0,html:"     <div><a href=\"http://education.ti.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/ti-small.png\" alt=\"Texas Instruments logo\" width=\"150\" height=\"37\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 2px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.mheonline.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/mcgraw-hill-small.png\" alt=\"McGraw-Hill Education logo\" width=\"155\" height=\"43\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 2px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.hark.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/hark-logo-full.png\" alt=\"Hark logo\" width=\"110\" height=\"80\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 5px;\"/></a></div>      "},{weight:2.0,html:"     <div><a href=\"http://www.zanichelli.it\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/zanichelli-small.png\" alt=\"Zanichelli logo\" width=\"150\" height=\"28\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 2px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.cybernetyx.com/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/cybernetyx-small.png\" alt=\"Cybernetyx logo\" width=\"150\" height=\"29\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 5px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.cengage.com\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/cengage-small.png\" alt=\"Cengage Learning logo\" width=\"150\" height=\"48\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 5px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://www.noas.com.br/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/cnec-small.png\" alt=\"Campanha Nacional de Escolas da Comunidade logo\" width=\"150\" height=\"59\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 5px;\"/></a></div>      "},{weight:1.0,html:"     <div><a href=\"http://education.whro.org/\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/whro-small.png\" alt=\"WHRO Education logo\" width=\"120\" height=\"89\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 5px;\"/></a></div>      "},{weight:5.0,html:"     <div><a href=\"http://ndla.no/en\" class=\"external\" rel=\"nofollow\"><img src=\"/images/support/ndla-small.png\" alt=\"Norwegian Digital Learning Arena logo\" width=\"150\" height=\"61\" style=\"border: 1px solid #aaa; background-color: #fff;padding: 0px;\"/></a></div>      "},{weight:3.0,html:"     <div style=\"border: 1px solid #aaa; background-color: #fff;border: none;background-color: transparent;\">     <div style=\"margin-top: -10px;border: none;background-color: transparent;\">         <table style=\"width: 160px; height: 100px; background-image:url('/images/support/you.png'); margin: 0 auto;\">             <tr>                 <td style=\"vertical-align: middle;\">                     <a href=\"https://donatenow.networkforgood.org/1437859\"                        rel=\"external,nofollow\"                        style=\"text-decoration: none !important; color: #fff; line-height: normal;\">                         <span style=\"width: 130px; margin: 0 auto; display: block;\">                             <span style=\"font-size: 26px;\">You?</span>                             <br/>                             <span style=\"font-size: 9px;\">(support PhET today and help education worldwide.)</span>                         </span>                     </a>                 </td>             </tr>         </table>     </div> </div>      "}]};
+/* ]]> */
+</script></head>
+<body dir="ltr" class="ltr" id="other-body">
+<div id="skipNav">
+    <a href="#main-content" accesskey="0">
+        Skip to Main Content
+    </a>
+</div>
+
+
+
+
+
+<div id="page-header" class="ltr">
+    <div id="page-header-container">
+        <div id="page-header-logo">
+            <a href="/">
+                <!--<img wicket:id="page-header-logo-image" src="../../../../../../../root/images/phet-logo.gif"-->
+                <img src="/images/phet-logo-117.svg" alt="PhET Logo" title="Go to the PhET home page" class="header-logo-image" width="223" height="106" id="phet-logo-main-image"/>
+            </a>
+        </div>
+        <div id="page-header-sims-served">
+            <span>Over 110 million simulations delivered</span>
+        </div>
+        <div id="page-header-cu">
+            University of Colorado <strong>Boulder</strong>
+        </div>
+        <div id="page-header-search">
+    <form method="get" id="search-form" class="autocompleteOff" action="/en/search">
+        <div>
+            <label for="search-text-id" style="display: none;">
+                Search
+            </label>
+            <input type="text" size="15" name="q" class="always-enabled acInput" id="search-text-id"/>
+            <input type="submit" value="Search" title="Click here to search the PhET website" class="always-enabled autocompleteOff" id="search-submit-id"/>
+        </div>
+    </form>
+</div>
+    </div>
+</div>
+
+    <div id="html-banner">
+        <div id="html-banner-container">
+    <a class="html-banner-container" href="/en/simulations/category/html">
+        <div class="html-banner-text">TRY OUR NEW HTML5 SIMS</div>
+        <div class="html-banner-logo">
+            <img class="html-banner-image" src="/images/HTML5_Badge_80_clean.svg"/>
+            <span class="html-banner-html">HTML</span>
+        </div>
+    </a>
+</div>
+    </div>
+
+<div class="log-in-out">
+    <a id="sign-in-link" href="https://phet.colorado.edu/en/sign-in?dest=%2F">
+        Sign in / Register
+    </a>
+    
+</div>
+<div id="page-content" class="ltr">
+    
+    <div class="index-holder">
+        
+    <div id="main-content" class="index-content" dir="ltr">
+        <div id="index-middle-div">
+            <div id="index-animated-screenshot-holder">
+    <object id="rotator-id" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="300" height="220">
+        <param name="movie" value="/files/rotator/home-rotator.swf"/>
+        <param name="FlashVars" value="dir=ltr&amp;quantity=12&amp;offlineInstaller=false&amp;next=next&amp;previous=previous&amp;startIndex=0&amp;sim1=mass-spring-lab&amp;title1=Masses+%26+Springs&amp;url1=%2Fen%2Fsimulation%2Fmass-spring-lab&amp;v1=1&amp;sim2=circuit-construction-kit-dc&amp;title2=Circuit+Construction+Kit+%28DC+Only%29&amp;url2=%2Fen%2Fsimulation%2Fcircuit-construction-kit-dc&amp;v2=1&amp;sim3=soluble-salts&amp;title3=Salts+%26+Solubility&amp;url3=%2Fen%2Fsimulation%2Fsoluble-salts&amp;v3=1&amp;sim4=my-solar-system&amp;title4=My+Solar+System&amp;url4=%2Fen%2Fsimulation%2Fmy-solar-system&amp;v4=1&amp;sim5=wave-on-a-string&amp;title5=Wave+on+a+String&amp;url5=%2Fen%2Fsimulation%2Fwave-on-a-string&amp;v5=1&amp;sim6=glaciers&amp;title6=Glaciers&amp;url6=%2Fen%2Fsimulation%2Fglaciers&amp;v6=1&amp;sim7=lunar-lander&amp;title7=Lunar+Lander&amp;url7=%2Fen%2Fsimulation%2Flunar-lander&amp;v7=1&amp;sim8=gene-machine-lac-operon&amp;title8=Gene+Machine%3A+The+Lac+Operon&amp;url8=%2Fen%2Fsimulation%2Fgene-machine-lac-operon&amp;v8=1&amp;sim9=curve-fitting&amp;title9=Curve+Fitting&amp;url9=%2Fen%2Fsimulation%2Fcurve-fitting&amp;v9=1&amp;sim10=projectile-motion&amp;title10=Projectile+Motion&amp;url10=%2Fen%2Fsimulation%2Fprojectile-motion&amp;v10=1&amp;sim11=equation-grapher&amp;title11=Equation+Grapher&amp;url11=%2Fen%2Fsimulation%2Fequation-grapher&amp;v11=1&amp;sim12=friction&amp;title12=Friction&amp;url12=%2Fen%2Fsimulation%2Ffriction&amp;v12=1&amp;"></param>
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="/files/rotator/home-rotator.swf" width="300" height="220">
+            <param name="FlashVars" value="dir=ltr&amp;quantity=12&amp;offlineInstaller=false&amp;next=next&amp;previous=previous&amp;startIndex=0&amp;sim1=mass-spring-lab&amp;title1=Masses+%26+Springs&amp;url1=%2Fen%2Fsimulation%2Fmass-spring-lab&amp;v1=1&amp;sim2=circuit-construction-kit-dc&amp;title2=Circuit+Construction+Kit+%28DC+Only%29&amp;url2=%2Fen%2Fsimulation%2Fcircuit-construction-kit-dc&amp;v2=1&amp;sim3=soluble-salts&amp;title3=Salts+%26+Solubility&amp;url3=%2Fen%2Fsimulation%2Fsoluble-salts&amp;v3=1&amp;sim4=my-solar-system&amp;title4=My+Solar+System&amp;url4=%2Fen%2Fsimulation%2Fmy-solar-system&amp;v4=1&amp;sim5=wave-on-a-string&amp;title5=Wave+on+a+String&amp;url5=%2Fen%2Fsimulation%2Fwave-on-a-string&amp;v5=1&amp;sim6=glaciers&amp;title6=Glaciers&amp;url6=%2Fen%2Fsimulation%2Fglaciers&amp;v6=1&amp;sim7=lunar-lander&amp;title7=Lunar+Lander&amp;url7=%2Fen%2Fsimulation%2Flunar-lander&amp;v7=1&amp;sim8=gene-machine-lac-operon&amp;title8=Gene+Machine%3A+The+Lac+Operon&amp;url8=%2Fen%2Fsimulation%2Fgene-machine-lac-operon&amp;v8=1&amp;sim9=curve-fitting&amp;title9=Curve+Fitting&amp;url9=%2Fen%2Fsimulation%2Fcurve-fitting&amp;v9=1&amp;sim10=projectile-motion&amp;title10=Projectile+Motion&amp;url10=%2Fen%2Fsimulation%2Fprojectile-motion&amp;v10=1&amp;sim11=equation-grapher&amp;title11=Equation+Grapher&amp;url11=%2Fen%2Fsimulation%2Fequation-grapher&amp;v11=1&amp;sim12=friction&amp;title12=Friction&amp;url12=%2Fen%2Fsimulation%2Ffriction&amp;v12=1&amp;"></param>
+            <!--<![endif]-->
+            <span>
+    <a href="/en/simulation/mass-spring-lab">
+        <img src="/images/mass-spring-lab-animated-screenshot.gif" alt="Simulation screenshot"
+             style="border: none;" width="300" height="199"/>
+    </a>
+</span>
+            <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+    </object>
+</div>
+            <div id="right-middle">
+                <div id="index-header">
+                    Interactive Science Simulations
+                </div>
+                <div id="index-main-text">Fun, interactive, <a href="/en/research">research-based</a> simulations of physical phenomena from the PhET™ project at the University of Colorado.</div>
+                <div class="pws-holder" dir="ltr">
+                    <table class="pws-table" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="pws-left">
+
+                            </td>
+                            <td class="pws-middle">
+                                <a href="/en/simulations/category/new" id="play-sims">
+                                    Play with sims... &gt;
+                                </a>
+                            </td>
+                            <td class="pws-right">
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="sponsors" class="ie6sponsors">
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width: 30px"></td>
+                            <td style="width: 100px" class="sponsor">
+                                <a href="http://www.nsf.gov/" rel="external" dir="ltr">
+                                    <img src="/images/support/nsf-logo-small.gif" alt="NSF Logo" width="28" height="28"/>
+                                    <br/>
+                                    National Science Foundation
+                                </a>
+                            </td>
+                            <td style="width: 120px" class="sponsor">
+                                <a href="http://www.hewlett.org/" rel="external" dir="ltr">
+                                    <img src="/images/support/hewlett-logo-small.jpg" alt="Hewlett Foundation logo" width="116" height="28"/>
+                                    The William and Flora Hewlett Foundation
+                                </a>
+                            </td>
+                            <td style="width: 130px;" class="sponsor">
+                                <a href="http://www.odf.org/" rel="external" style="margin-left: 10px;" dir="ltr">
+                                    <img src="/images/support/odf-combined-130.png" alt="O'Donnell Foundation logo" width="130" height="27"/>
+                                    The O'Donnell Foundation
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; font-size: 16px;margin: 13px auto 5px; width: 430px;">
+            <div style="float: left; margin-top: 9px;">
+                <div style="text-align: center;">Recipient of <a href="/en/media/tech-award-2011">The Tech Award 2011</a></div>
+                <div style="text-align: center; font-size: 10px; font-style: italic;">
+                    <span>honoring technology benefitting humanity</span>
+                </div>
+            </div>
+
+            <a href="/en/media/tech-award-2011" style="text-decoration: none;">
+                <img src="/images/logos/tech-awards-combined-160x51.png" style="vertical-align: middle; float: right; border: none;" width="160" height="51"/>
+            </a>
+
+            <div style="clear: both;"></div>
+        </div>
+
+        <div style="text-align: center; font-size: 11px; vertical-align:middle; position: relative; top: 13px;">
+            <a href="http://www.facebook.com/pages/PhET-Interactive-Simulations/161503243888932?v=wall" rel="external">Join us on <img class="index-social-image" src="/images/icons/social/facebook.png" alt="Facebook icon" width="16" height="16"/></a> &nbsp;|&nbsp;
+            <a href="http://twitter.com/PhETSims" rel="external">Follow us on  <img class="index-social-image" src="/images/icons/social/twitter.png" alt="Twitter icon" width="16" height="16"/></a> &nbsp;|&nbsp;
+            <a href="/blog/" rel="external">Read our blog</a> &nbsp;|&nbsp;
+            <a href="/en/subscribe">
+                Subscribe to our newsletter
+            </a>
+        </div>
+
+        <div class="practices">
+            <dl class="get-phet-links">
+                <dt>
+                    <a href="/en/get-phet">
+                        <span>How to Run Simulations</span>
+                        <!--<wicket:message key="home.runOurSims">How to Run Simulations</wicket:message>-->
+                    </a>
+                </dt>
+                
+                    <dd>
+                        <a href="/en/simulations/category/new">
+                            <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                            On Line
+                        </a>
+                    </dd>
+                
+                
+                    <dd>
+                        <a href="/en/get-phet/full-install">
+                            <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                            Full Installation
+                        </a>
+                    </dd>
+                
+                
+                    <dd>
+                        <a href="/en/get-phet/one-at-a-time">
+                            <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                            One at a Time
+                        </a>
+                    </dd>
+                
+                <dd style="margin-top: 1em;">
+                    <a href="/en/troubleshooting">
+                        <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                        Troubleshooting
+                    </a>
+                </dd>
+                <dd>
+                    <a href="/en/faqs">
+                        <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                        FAQs
+                    </a>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>
+                    <a href="/en/for-teachers">
+                        For Teachers
+                    </a>
+                </dt>
+                
+                    <dd>
+                        <a href="/en/for-teachers/browse-activities">
+                            <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                            Browse Activities
+                        </a>
+                    </dd>
+                
+                <dd>
+                    <a href="/en/for-teachers" id="home-submit-activity-link">
+                        <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                        Contribute Activities
+                    </a>
+                </dd>
+                <dd>
+                    <a href="/en/for-teachers/workshops">
+                        <img id="green-arrow-image" src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                        Workshops / Materials
+                    </a>
+                </dd>
+                <dd style="margin-top: 1em;">
+                    <a href="/en/for-translators/translation-utility">
+                        <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                        Translate simulations
+                    </a>
+                </dd>
+                <dd>
+                    
+                        <a href="/en/for-translators/website">
+                            <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                            Translate the website
+                        </a>
+                    
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>
+                    <a href="/en/about">
+                        About
+                    </a>
+                </dt>
+                <dd>
+                    <a href="/en/about/news">
+                        <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                        What's New?
+                    </a>
+                </dd>
+                <dd>
+                    <a href="/en/about">
+                        <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                        About PhET
+                    </a>
+                </dd>
+                <dd>
+                    <a href="/en/about/contact">
+                        <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                        Contact Us
+                    </a>
+                </dd>
+                <dd style="margin-top: 1em;">
+                    <a href="/en/donate">
+                        <img src="/images/circleArrow_Icon.gif" alt="Green arrow" width="14" height="13"/>
+                        Donate
+                    </a>
+                </dd>
+            </dl>
+
+            <dl class="last">
+                <dt>
+                    <a href="/en/about/sponsors">
+                        PhET is supported by...
+                    </a>
+                </dt>
+                <dd style="padding: 0 10px 5px; min-height: 70px;" id="featured-sponsor-dd">
+                    <!-- here we use a table with invisible elements with a specific height to mimic the min-height for a table -->
+                    <table cellpadding="0" cellspacing="0" style="margin: 0; padding: 0; width: 100%; height: 100%;">
+                        <tr>
+                            <td style="margin: 0; padding: 0;">
+                                <div style="height: 70px; width: 0;"></div>
+                            </td>
+                            <td style="margin: 0; padding: 0; text-align: center; vertical-align:middle;">
+                                <div id="featured-sponsor-spot" style="display: none;"></div>
+                                <script type="text/javascript">
+                                    //<![CDATA[
+                                    (function() {
+                                        var r = Math.random() * phetHomeSponsors.totalWeight;
+                                        var i;
+                                        for ( i = 0; i <= phetHomeSponsors.sponsors.length; i++ ) {
+                                            r -= phetHomeSponsors.sponsors[i].weight;
+                                            if ( r <= 0 ) {
+                                                break;
+                                            }
+                                        }
+                                        var html = phetHomeSponsors.sponsors[i].html;
+                                        document.getElementById( 'featured-sponsor-spot' ).innerHTML = html;
+                                        document.getElementById( 'featured-sponsor-spot' ).style.display = "block";
+                                    })();
+                                    //]]>
+                                </script>
+                                
+                                <noscript>
+                                    <div>
+    <div><a href="http://www.cybernetyx.com/" class="external" rel="nofollow"><img src="/images/support/cybernetyx-small.png" alt="Cybernetyx logo" width="150" height="29" style="border: 1px solid #aaa; background-color: #fff;padding: 5px;"/></a></div>
+    
+</div>
+                                </noscript>
+                            </td>
+                            <td style="margin: 0; padding: 0;">
+                                <div style="height: 70px; width: 0;"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </dd>
+                <dd style="text-align: center;">
+                    <span>and our <a href="/en/about/sponsors">other sponsors</a>, including educators like you.</span>
+                </dd>
+            </dl>
+            <div class="clear">
+
+            </div>
+        </div>
+
+        <div class="clear">
+
+        </div>
+
+        <div class="index-footer" style="text-align: center; padding-top: 5px; font-size: 12px;">
+            
+
+            <span style="padding-bottom: 5px;">
+    <span>
+        <a href="/" class="translation-link"><span class="current-locale">English</span></a>
+    </span>
+    <span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/ar_SA/" class="translation-link"><span>العربية</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/bs/" class="translation-link"><span>Bosanski</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/zh_CN/" class="translation-link"><span>简体中文</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/zh_TW/" class="translation-link"><span>正體中文</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/cs/" class="translation-link"><span>Česky</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/da/" class="translation-link"><span>Dansk</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/nl/" class="translation-link"><span>Nederlands</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/et/" class="translation-link"><span>Eesti</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/fi/" class="translation-link"><span>Suomi</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/fr/" class="translation-link"><span>Français</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/gl/" class="translation-link"><span>Galego</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/ka/" class="translation-link"><span>ქართული</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/de/" class="translation-link"><span>Deutsch</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/el/" class="translation-link"><span>Ελληνικά</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/hu/" class="translation-link"><span>Magyar</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/in/" class="translation-link"><span>Bahasa Indonesia</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/it/" class="translation-link"><span>Italiano</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/ja/" class="translation-link"><span>日本語</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/ko/" class="translation-link"><span>한국어</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/ku/" class="translation-link"><span>كوردي</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/mk/" class="translation-link"><span>Македонски</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/mr/" class="translation-link"><span>मराठी</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/fa/" class="translation-link"><span>فارسی</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/pt/" class="translation-link"><span>Português</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/pt_BR/" class="translation-link"><span>Português do Brasil</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/ro/" class="translation-link"><span>Română</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/sr/" class="translation-link"><span>Српски</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/es/" class="translation-link"><span>Español</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/es_PE/" class="translation-link"><span>Español (Perú)</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/tr/" class="translation-link"><span>Türkçe</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/uk/" class="translation-link"><span>Українська</span></a>
+    </span><span>
+        <span class="translation-separator"> &nbsp;|&nbsp; </span>
+        <a href="/vi/" class="translation-link"><span>Tiếng Việt</span></a>
+    </span>
+    
+</span>
+
+            <div class="copyright">&copy; 2013 University of Colorado. <a href="/en/about/licensing">
+                Some rights reserved.
+            </a></div>
+        </div>
+    </div>
+
+    </div>
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,509 @@
+<base href="http://www.aatcc.org/">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/Home.dwt.cfm" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>AATCC Online</title>
+<meta name="keywords" content="AATCC,textile,color,chemist,finishing,chemist,faahion,standards,test methods,QC,quality control,testing,lab,research,garment,fabric,fiber,colorist,dyeing,dye,wet processing,concept 2 consumer,concept to consumer,design,materials,smart fabrics,nanotech,nanotechnology ">
+<!-- InstanceEndEditable -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+
+    function getObject( obj ) {
+
+    var strObj
+
+    if ( document.all ) {
+
+    strObj = document.all.item( obj );
+
+    } else if ( document.getElementById ) {
+
+    strObj = document.getElementById( obj );
+
+    }
+
+    return strObj;
+
+    }
+	//Edit theTop to position the scrolling banner vertically
+	//Edit theHeight to set the height that the banner scrolls
+
+    var theTop = 377;	
+
+    var theHeight = 440;
+
+    var theWidth = 100;
+
+    var theLeft = 650;
+
+    var toClip = 100;
+
+
+    function scrollNews( newsDiv, toMove ) {
+
+    theDiv = getObject( newsDiv.toString() );
+
+    if ( theDiv == null ) { return; }
+
+    if ( document.layers ) {
+
+    theDiv.clip.top = toMove;
+
+    theDiv.clip.bottom = toMove + toClip;
+
+    theDiv.top = theTop - toMove;
+
+    } else {
+
+    theDiv = theDiv.style;
+
+    theDiv.clip = "rect(" + toMove + "px " + (theWidth + theLeft) + "px " + (toMove + toClip) + "px 0px)";
+
+    theDiv.top = theTop - toMove + 'px';
+
+    }
+
+    if ( ( theTop + theHeight - toMove ) < ( theTop - theHeight - 20 ) ) {
+
+    toMove = 0;
+
+    if ( document.layers ) {
+
+    theDiv.clip.top = theTop;
+
+    theDiv.clip.bottom = toClip;
+
+    theDiv.top = theTop
+
+    } else {
+
+    theDiv.clip = "rect(" + toMove + "px " + (theWidth + theLeft) + "px " + (toMove + toClip) + "px 0px)";
+
+    theDiv.top = theTop + 'px';
+
+    }
+
+    }
+//number in line 121 sets scroll speed. 100 is default value.
+    toMove = (toMove + 1);
+
+    setTimeout("scrollNews('" + newsDiv + "'," + toMove + ")", 100);
+
+    }
+	
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.Header {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #2677ae;
+}
+.Subheader {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 18px;
+	color: 2677ae;
+}
+.body_text {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 14px;
+	color: #4d4d4d;
+}
+.Table_Text {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 12px;
+	color: #000000;
+	font-weight: normal;
+}
+.Date {font-size: 14px; font-weight: bold; color: #003366; font-family: "Trebuchet MS", sans-serif; }
+.style1 {
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 12px;
+}
+.style2 {
+  color: #FF0000;
+  font-weight: bold;
+  font-size: 18px;
+}-->
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+.style5 {color: #CC3333}
+-->
+</style>
+<!-- InstanceEndEditable -->
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+
+<body onLoad="MM_preloadImages('images/index_20-over.gif','images/index_30-over.gif','images/index_34-over.gif','images/index_38-over.gif','images/foundroll.jpg','images/homesroll_nav.jpg','images/prodsroll_nav.jpg','images/membrsroll_nav.jpg','images/testroll_nav.jpg','images/pubsroll_nav.jpg','images/searchroll_nav.jpg','images/aboutroll_nav.jpg','images/progsroll_nav.jpg','images/search_navroll.jpg','images/index_32-over.gif','images/index_118-over.gif','images/navbar/corp.gif','images/navbar/corp-over.gif','images/navbar/site_map.gif','images/navbar/corp.gif','images/navbar/corp-over.gif','images/homeroll_link7.jpg','images/homeroll_link5.jpg','images/homeroll_link6.jpg','images/homeroll_link3.jpg','images/homeroll_link4.jpg','images/homeroll_link2.jpg')">
+<table width="780" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="795" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="793"><table width="780" height="50" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+          <tr>
+            <td width="466" rowspan="3"><img src="images/Home_03.jpg" alt="AATCC" width="454" height="76"></td>
+            <td height="31" align="center" bgcolor="#FFFFFF"><a href="http://members.aatcc.org/Scripts/4Disapi.dll/4DCGI/join/intro.html?Action=Join"><img src="images/join9.jpg" alt="Join" width="178" height="50" border="0"></a></td>
+			<td height="31" align="center" bgcolor="#FFFFFF"><a href="https://members.aatcc.org/Scripts/4Disapi.dll/4DCGI/logon/logonmain.html"><img src="images/login9.jpg" alt="Log In" width="137" height="50" border="0"></a></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center" valign="bottom" bgcolor="#FFFFFF">
+			<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<form action="http://www.google.com/cse" target="_blank" id="cse-search-box" style="margin-top: 0">
+  <div>
+    <input type="hidden" name="cx" value="015467428557975815459:tteghrkdj4y">
+    <input type="hidden" name="ie" value="UTF-8">
+    <span class="Date"></span>
+    <input type="text" name="q" size="31">
+    <input type="submit" name="sa" value="Search"> 
+	<script type="text/javascript" src="http://www.google.com/jsapi" target="_blank"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&t13n_langs=en"></script>
+
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+  </div>	
+</form></td>
+          </tr>
+                
+        </table>
+          <table width="728" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="66"><div align="left"><a href="default.cfm"><img src="images/homeroll_nav.jpg" alt="Home" name="Image54" width="61" height="31" border="0"></a></div></td>
+              <td width="3"><div align="left"><img src="images/index_21.gif"></div></td>
+              <td width="97"><div align="left"><a href="events/index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image52','','images/progsroll_nav.jpg',1)"><img src="images/progs_nav.jpg" alt="Programs" name="Image52" width="90" height="31" border="0"></a></div></td>
+              <td width="3"><div align="left"><img src="images/index_13.gif" width="2" height="31"></div></td>
+              <td width="95"><div align="left"><a href="products/index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image46','','images/prodsroll_nav.jpg',1)"><img src="images/prods_nav.jpg" alt="Products" name="Image46" width="88" height="31" border="0"></a></div></td>
+              <td width="3"><div align="left"><img src="images/index_15.gif" width="2" height="31"></div></td>
+              <td><div align="left"><a href="members/index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image47','','images/membrsroll_nav.jpg',1)"><img src="images/membrs_nav.jpg" name="Image47" width="101" height="31" border="0"></a></div></td>
+              <td width="2"><img src="images/index_17.gif" width="2" height="31"></td>
+              <td width="80"><div align="left"><a href="testing/index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image48','','images/testroll_nav.jpg',1)"><img src="images/test_nav.jpg" alt="Testing" name="Image48" width="74" height="31" border="0"></a></div></td>
+              <td width="2"><img src="images/index_19.gif" width="2" height="31"></td>
+              <td width="120"><div align="left"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','images/index_20-over.gif',1)"></a><a href="media/index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image49','','images/pubsroll_nav.jpg',1)"><img src="images/pubs_nav.jpg" alt="Publications" name="Image49" width="112" height="31" border="0"></a></div></td>
+              <td width="2"><img src="images/index_21.gif" width="2" height="31"></td>
+              <td width="119"><div align="left"><a href="foundation/index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image53','','images/foundroll.jpg',1)"><img src="images/found.jpg" alt="Foundation" name="Image53" width="111" height="31" border="0"></a></div></td>
+              <td width="1"><img src="images/index_23.gif" width="1" height="31"></td>
+              <td width="70"><div align="left"><a href="students/index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image50','','images/studentsroll_nav.jpg',1)"><img src="images/students_main.jpg" alt="Students" name="Image50" width="66" height="31" border="0"></a></div></td>
+              <td width="2"><img src="images/index_21.gif"></td>
+              <td width="64"><div align="left"><a href="about/index.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','images/aboutroll_nav.jpg',1)"><img src="images/about_nav.jpg" alt="About" name="Image51" width="63" height="31" border="0"></a></div></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>
+      <table width="780" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="780" height="100">
+          <param name="movie" value="swfs/HOME.SWF">
+          <param name="quality" value="high">
+          <embed src="swfs/HOME.SWF" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="780" height="100"></embed>
+        </object></td>
+      </tr>
+    </table>
+    <div class="x_page_links">
+	<div id="vert_links"><table width="130" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="5"><div align="left"><img src="images/bar-white.jpg"></div></td>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="http://members.aatcc.org/Scripts/4Disapi.dll/4DCGI/join/intro.html?Action=Join" onMouseOver="MM_swapImage('Join','','images/homeroll_link1.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/home_link1.jpg" alt="Join AATCC" name="Join" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="members/corporate/corp_memb.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Corp','','images/homeroll_link2.jpg',1)"><img src="images/home_link2.jpg" alt="Corporate Members" name="Corp" width="129" height="30" border="0"></a></div></th>
+	</tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="bg/index.cgi" onMouseOver="MM_swapImage('BG','','images/homeroll_link3.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/home_link3.jpg" alt="Buyers Guide" name="BG" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="awards/index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('CS','','images/homeroll_link4.jpg',1)"><img src="images/home_link4.jpg" alt="Awards" name="CS" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="testing/methods/index.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('TMs','','images/homeroll_link5.jpg',1)"><img src="images/home_link5.jpg" alt="Test Methods" name="TMs" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="events/meetings/index.htm" onMouseOver="MM_swapImage('Com','','images/homeroll_link6.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/home_link6.jpg" alt="Committees" name="Com" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="ic/gen_info.cfm" onMouseOver="MM_swapImage('IC','','images/homeroll_link0.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/home_link0.jpg" alt="International Conference" name="IC" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="igroups/index.cfm" onMouseOver="MM_swapImage('IGS','','images/homeroll_link7.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="images/home_link7.jpg" alt="Interest Groups" name="IGS" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="members/sections/index.cfm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Sec','','images/homeroll_link8.jpg',1)"><img src="images/home_link8.jpg" alt="Sections" name="Sec" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="JobSite/index.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('A2R','','images/homeroll_link9.jpg',1)"><img src="images/home_link9.jpg" alt="Sample AATCC Review" name="A2R" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="http://www.colour-index.com/" target="_blank" onmouseover="MM_swapImage('CI','','images/homeroll_link10.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="images/home_link10.jpg" alt="Colour Index" name="CI" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="center"><img src="images/bar-short.jpg"></div></th></th>
+  </tr>
+  <tr>
+    <th scope="row"><div align="left"><a href="about/contact/index.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Con','','images/homeroll_link11.jpg',1)"><img src="images/home_link11.jpg" alt="Contact" name="Con" width="129" height="30" border="0"></a></div></th>
+  </tr>
+  <!-- begin link to Resources video -->
+      <!-- InstanceBeginEditable name="Video" -->
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr><td><a href= "http://www.aatcc.org/media/Video/AATCC_Resources.cfm" target="_blank"><img src="media/Video/AATCC_Resources.jpg"></a></td></tr><!-- InstanceEndEditable --></table></div>
+    <div id="sitemap"><table width="630" height="15" border="0" cellpadding="5" cellspacing="0" id="sitelink">
+  <tr>
+    <td align="right"><span class="sitemap"><a href="general/sitemap.htm"><img src="images/sitemap.gif" alt="Site Map" width="50" height="15" border="0" usemap="#sitemap"></a></span></td>
+  </tr>
+</table>
+</div>
+<div id="main_content"><!-- InstanceBeginEditable name="Header" --><span class="Header">Welcome! </span><!-- InstanceEndEditable -->
+<p>
+<!-- InstanceBeginEditable name="Subheading 1" --><!-- InstanceEndEditable -->
+      <!-- InstanceBeginEditable name="Table1" -->
+  <table width="378" height="233" border="1" align="center" cellpadding="10" bordercolor="#FF0000">
+        <tr valign="top">
+          <td width="350" height="227" valign="top" bgcolor="#FFFFFF"><p align="center" style="margin-top: 0; margin-bottom: 0;"><span class="style2" style="margin-top: 0; margin-bottom: 0;">~What's New~</span></p><br />
+            <div align="left">
+              <p align="center"><a href="ic/2013photos.cfm" target="_blank" class="Date">Photos and Videos from 2013 AATCC IC! </a></p>
+              &#8226; <strong>August 29:</strong> <a href="events/online/webinar23.htm" title="Workshop" target="_blank">Enzymes, Fibers &amp; Texties Webinar</a><br>
+              &#8226; <strong>Sept. 4: </strong><span class="body_text"><a href="testing/improve/proficiency.htm">Antibacterial Proficiency Prog. Reg. Due</a></span><br>
+              &#8226; <strong>Sept. 17-18:</strong> <a href="events/workshops/ITT.htm">Intro to Textile Testing Workshop</a><br>
+              &#8226; <strong>Oct. 1-2:&nbsp;</strong><a href="events/India_2013_Conference/India_Conference_2013.htm" target="_blank">Tech Textiles &amp; Nonwovens Conf.-India</a><br>
+            &#8226; <strong>Oct. 16-17:&nbsp;</strong><a href="events/symposia/CAIG_Symp_2013.htm" target="_blank">Textile Wet Processing Symposium</a><br>
+            &#8226;<strong> Oct. 24: </strong><a href="events/symposia/IFAISeminar.htm" target="_blank">AATCC Performance Textile Seminar at IFAI</a><br>
+            &#8226; <strong>Nov. 12-14:&nbsp;</strong><a href="events/meetings/index.htm">Fall AATCC Committee Meetings</a></div></td>
+        </tr>
+      </table>
+		  <!-- InstanceEndEditable -->
+		  <!-- <br />
+        Editible text goes here. -->
+        <br />
+        <!-- InstanceBeginEditable name="Subheading 2" -->AATCC is the world&rsquo;s leading not-for-profit association serving        textile professionals. AATCC provides test method development, quality        control materials, and professional networking for thousands of members        in 60 countries throughout the world.<BR>
+        <BR>
+These goals are achieved through the activities of three interest        groups&mdash;<A href="igroups/chemapp.htm" target="_blank"><EM>Chemical Applications</EM></A>, <A href="igroups/c2c.htm" target="_blank"><EM>Concept          2 Consumer</EM></A><A href="../../igroups/c2c.htm">&reg;</A>, and <A href="igroups/mig.htm" target="_blank"><EM>Materials</EM></A>&mdash;by <A href="events/meetings/index.htm" target="_blank"><EM>Committee</EM></A> and <A href="members/sections/index.cfm" target="_blank"><EM>Section</EM></A> activities,        and through the award-winning publications, <A href="media/index.htm" target="_blank"><EM>AATCC          Review</EM></A> and <a href="media/Read/newsletters.htm"><em>AATCC News</em></a>.<br>
+<br />
+<br />
+
+ <table width="420" border="0" cellpadding="0" cellspacing="0" bordercolor="#0175C0">
+      
+	   <tr>
+          <td><p align="center" style="margin-top: 0;"><strong>Want to talk textiles?
+                Check out AATCC on<br />
+            </strong><strong><a href="http://www.linkedin.com/groups?gid=57984" target="_blank">LinkedIn <img src="images/LinkedIn.jpg" alt="LinkedIn" width="15" height="15" border="0" /></a>, <a href="http://www.facebook.com/pages/AATCC/53271800215" target="_blank">Facebook <img src="images/Facebook.jpg" alt="Facebook" width="14" height="14" border="0" /></a>,
+             <a href="http://www.twitter.com/AATCC" target="_blank">Twitter</a> <a href="http://www.twitter.com/AATCC"><img src="http://twitter-badges.s3.amazonaws.com/t_mini-c.png" alt="Follow AATCC on Twitter" width="14" height="14" align="bottom"/></a>,and <a href="http://www.youtube.com/user/theAATCC" title="AATCC on YouTube" target="_blank">YouTube</a> <img src="images/YouTube.jpg" width="15" height="15" alt="YouTube">!</strong><br>
+          </p>
+            <p align="center"><span style="margin-top: 0; margin-bottom: 0;"><strong><a href="media/Read/app.cfm"><img src="images/AATCC-APP-ICON-57x57.png" alt="AATCC App" width="57" height="57" align="right"></a></strong></span></p>
+            <p align="center">&nbsp;</p>
+            <p align="center" style="margin-bottom: 0;">Take AATCC along with you! Get  AATCC app<br>
+              for <a href="https://itunes.apple.com/us/app/aatcc/id586525147?mt=8">iPhone</a> and <a href="https://play.google.com/store/apps/details?id=com.genwi.aatcc&feature=search_result">Android</a>.</p>
+<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<div align="left"></div></td>
+        </tr>
+      </table>
+        <!-- InstanceEndEditable -->
+
+      <!-- InstanceBeginEditable name="Subheading 3" -->
+      <div align="center"></div>
+      <!-- InstanceEndEditable -->
+          <p><br />
+          <span class="Table_Text"><a href="default.cfm">Home</a> | <a href="events/index.htm">Events</a> | <a href="products/index.htm">Products</a> | <a href="members/index.htm">Membership</a> |<a href="testing/index.htm">Testing</a> | <a href="media/index.htm">Publications</a> | <a href="foundation/index.htm">Foundation</a> | <a href="students/index.htm">Students</a> | <a href="about/index.htm">About</a></span> </p>
+          <p><span class="body_text">&copy; 2013, American Association of Textile
+              Chemists and Colorists </span><br />
+            <br />
+          </p>
+          </p>
+    </div>
+
+      
+        <!-- InstanceBeginEditable name="Ads" -->
+        <div id="ad2">
+		<table width="50" align="center" cellpadding="0" cellspacing="0" border="0"> <tr>  </tr>
+ 
+   <tr>
+  <th scope="row"><script language="JavaScript" type="text/javascript">
+<!--
+// Create arrays to contain all the values 
+// for links and image locations
+// key array added by JMQ 8/19/08 for Google Analytics tracking
+link = new Array
+image = new Array
+key = new Array
+
+link[1]="http://www.q-lab.com/en-us/products/q-sun-xenon-arc-test-chambers"
+image[1]="ads/qlab/textile-web-button.gif"
+key[1]="/bannerads/qlab.com"
+
+link[2]="http://www.huntsman.com/textile_effects"
+image[2]="ads/huntsman/huntsman-ad.gif"
+key[2]="/bannerads/huntsman.com"
+
+link[3]="http://www.textiles.clariant.com/"
+image[3]="ads/clariant/AATCC_May_2013_OneWay_en.gif"
+key[3]="/bannerads/textiles.clariant.com"
+
+link[4]="http://clk.atdmt.com/MSR/go/386290715/direct/01/"
+image[4]="ads/cottoninc/CottonBanner_Range_of_Services_150x100.jpg"
+key[4]="http://view.atdmt.com/MSR/view/386290715/direct/01/"
+
+link[5]="http://clk.atdmt.com/MSR/go/388626945/direct/01/"
+image[5]="ads/cottoninc/CottonBanner_Sustainability_150x100.jpg"
+key[5]="http://view.atdmt.com/MSR/view/388626945/direct/01/"
+
+link[6]="http://www2.dupont.com/Teflon_Fabric_Protector_Partners/en_US/nothing_messes_announcement.html?src=AATCC_150x100"
+image[6]="ads/dupont/Banner_AATCC_150x100.gif"
+key[6]="/bannerads/dupont.com"
+
+link[7]="http://www.colorsolutionsinternational.com/Active-Brights-for-Polyamide-and-Polyester.cfm"
+image[7]="ads/dystar/Active-Brights1212.jpg"
+key[7]="/bannerads/dystar.com"
+
+
+// Create a random number between 1 and last number
+random_num = (Math.round((Math.random()*6)+1))
+// Write a link and images with random array
+// Javascript updated by JMQ 8/19/08 to include each banner ad in Google Analytics
+
+document.write('<a href="' + link[random_num] + '" target="_blank"' + 'onClick="javascript: pageTracker._trackPageview(' + key[random_num] + ');">'); 
+document.write('<img src="' + image[random_num] + '" border="0"></a>'); 
+//-->
+</script></th>
+  </tr>
+  <!--<tr>
+    <th scope="row">&nbsp;</th>
+  </tr>
+   <tr>
+     <th scope="row">&nbsp;</th>
+   </tr> -->
+   <tr>
+    <th scope="row">&nbsp;</th>
+  </tr>
+   <tr>
+     <th scope="row"><a href="ic/2013photos.cfm"><img src="ads/house/2013ICpics.gif" alt="IC 2013 Photos" width="150" height="100" border="0"></a></th>
+   </tr>
+   <tr>
+     <th scope="row">&nbsp;</th>
+   </tr> 
+   <tr>
+  <th scope="row"><a href="http://ifaiexpo.com/" target="_blank"><img src="ads/ifai/IFAIExpo2013.jpg" width="150" height="100" alt="IFAI Expo"></a></th>
+  </tr>
+  <tr>
+   <th scope="row">&nbsp;</th>
+  </tr>
+  <tr>
+    <th scope="row"><a href="http://www.smartfabricsconference.com" target="_blank">
+      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="150" height="100" align="middle">
+        <param name="allowScriptAccess" value="sameDomain" />
+        <param name="movie" value="swfs/text_fund4.swf" />
+        <param name="quality" value="high" />
+        <param name="bgcolor" value="#f4f5f7" />
+        <embed src="swfs/text_fund4.swf" quality="high" bgcolor="#f4f5f7" width="150" height="100" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />      
+</object>
+    </a></th>
+  </tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+  </tr>
+    
+  <tr>
+    <th scope="row"><a href="http://www.techtextilNA.com/TT9" target="_blank"></a></th>
+  </tr>
+ <tr>
+    <th scope="row">&nbsp;</th>
+ </tr>
+    <th scope="row">&nbsp;</th>
+  <tr>
+    <th scope="row">&nbsp;</th>
+</tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+  </tr>
+</table>
+</div>
+  <!-- InstanceEndEditable -->  
+      <div id="news_events">	  </div>
+	  
+    </div></td>
+  </tr>
+</table>
+<p style="margin-top: 0; margin-bottom: 0;">&nbsp;</p>
+<blockquote style="margin-top: 0">&nbsp;</blockquote>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4827130-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+<!-- InstanceEnd --></html>

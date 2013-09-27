@@ -1,0 +1,195 @@
+<base href="http://www.petroleumcollege.com/">
+<html>
+<head>
+<title>Petroleum College International/ Petroleum Training International</title>
+<!-- All contents of this file and all associated Page Concepts files are copyright 2001, ajk concepts, inc. -->
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="Page Concepts, www.pageconcepts.com, ajk@pageconcepts.com, Alfred J. Kopecky, ajk concepts, inc.">
+<link REL="STYLESHEET" TYPE="text/css" HREF="styles/default.css">
+</head>
+<script LANGUAGE="JavaScript">
+<!--
+// - - - - - - - - - - - document globals
+var supported = 0;
+
+ button1txt = "Click here for general information";
+ button2txt = "Click here to view our courses";
+ button3txt = "Click here for info about our simulator";
+ button4txt = "Click here to request info";
+ button5txt = "Click here for our kill sheet";
+ button6txt = "Click here to view our image gallery";
+ button7txt = "Click here for links";
+ button8txt = "Click here for our customer list";
+ button10txt = "Click here to return home";
+// - - - - - - - - - - - function definitions
+
+function Init()
+{ if(document.images)
+       {     supported = 1; 
+             //- - - - - - allocate memory for Images & then load them
+             //- - - - - - "button up" images
+             button1up = new Image();
+                  button1up.src = "images/btn_general.gif";
+			button2up = new Image();
+                  button2up.src = "images/btn_courses.gif";
+	     	button3up = new Image();
+                  button3up.src = "images/btn_simulator.gif";
+ 			button4up = new Image();
+                  button4up.src = "images/btn_info.gif";
+			button5up = new Image();
+                  button5up.src = "images/btn_killsheet.gif";
+			button6up = new Image();
+                  button6up.src = "images/btn_imagegallery.gif";
+			button7up = new Image();
+                  button7up.src = "images/btn_links.gif";
+			button8up = new Image();
+                  button8up.src = "images/btn_customer.gif";
+			button10up = new Image();
+                  button10up.src = "images/btn_home.gif";
+     
+             //- - - - - - "button down" images
+           
+            button1down = new Image();
+                  button1down.src = "images/btn_general2.gif";
+			button2down = new Image();
+                  button2down.src = "images/btn_courses2.gif";
+	     	button3down = new Image();
+                  button3down.src = "images/btn_simulator2.gif";
+ 			button4down = new Image();
+                  button4down.src = "images/btn_info2.gif";
+			button5down = new Image();
+                  button5down.src = "images/btn_killsheet2.gif";
+			button6down = new Image();
+                  button6down.src = "images/btn_imagegallery2.gif";
+			button7down = new Image();
+                  button7down.src = "images/btn_links2.gif";
+			button8down = new Image();
+                  button8down.src = "images/btn_customer2.gif";
+				button10down = new Image();
+                  button10down.src = "images/btn_home2.gif";
+		
+
+        }
+}
+Init();
+
+function img_xchg(ImageName)
+{  if(supported)
+      { NewImage  = eval(ImageName + "down.src");
+         document [ImageName].src = NewImage;
+         ButtonText= eval(ImageName + "txt")
+         parent.status = ButtonText;
+      }
+   else
+      { ButtonText= eval(ImageName + "txt")
+        parent.status = ButtonText;
+      }
+   return;
+}
+
+function img_rstr(ImageName)
+{ if(supported)
+     { RestoreImage = eval(ImageName + "up.src");
+       document [ImageName].src = RestoreImage;
+       parent.status ="";
+      }
+  else 
+      { parent.status ="";  }
+  return;
+}
+
+// -->
+</script>
+<body background="images/bg.gif" bgcolor="#FFFFFF" TOPMARGIN="0" LEFTMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+<table width="742" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="top">
+	<script language="JavaScript" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+function loadMenus() {
+  if (window.mm_menu_0) return;	
+	
+	//General Info
+	window.mm_menu_0 = new Menu("root",115,"#FFFFFF","#396999","#6C8DBF","#FFFFFF",-74,18);
+		
+			mm_menu_0.addMenuItem("Mission","mission.asp");
+		
+			mm_menu_0.addMenuItem("Contact Us","contact.asp");
+		
+	//Courses
+	window.mm_menu_1 = new Menu("root",200,"#FFFFFF","#396999","#6C8DBF","#FFFFFF",-74,18);
+		
+			mm_menu_1.addMenuItem("Certified IADC Courses","courses_iadc.asp");
+		
+			mm_menu_1.addMenuItem("Additional Classes By Request","additionalclasses.asp");
+		
+			mm_menu_1.addMenuItem("Convenient Training Locations","locations.asp");
+		  
+  
+    mm_menu_0.writeMenus();
+}
+</script>
+<script language="JavaScript1.2" src="includeLibrary/flyoutmenu.js"></script>
+<script language="JavaScript1.2">loadMenus();</script>
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+	<td colspan="9">
+		<table width="760" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><img src="images/hdr_top.jpg" width="597" height="82" alt="Petroleum College International/Petroleum Training International" border="0"></td>
+			<td><a href="http://www.techtranint.com" target="new"><img src="images/techtranlogo.jpg" width="163" height="82" alt="TechTran International" border="0"></a></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td width="110"><a href="general.asp" onMouseOver="img_xchg('button1'); MM_showMenu(window.mm_menu_0,11,29,null,'button1'); return true;" onMouseOut="img_rstr('button1'); MM_startTimeout(); return true"><img name="button1" src="images/btn_general.gif" width="110" height="41" alt="General Info" border="0"></a></td>
+	<td width="67"><a href="courses_iadc.asp"onMouseOver="img_xchg('button2'); MM_showMenu(window.mm_menu_1,0,29,null,'button2'); return true;" onMouseOut="img_rstr('button2'); MM_startTimeout(); return true;"><img name="button2" src="images/btn_courses.gif" width="67" height="41" alt="Courses" border="0"></a></td>
+	<td width="82"><a href="simulator.asp" onMouseOver="img_xchg('button3'); return true;" onMouseOut="img_rstr('button3'); return true"><img name="button3"  src="images/btn_simulator.gif" width="82" height="41" alt="Simulator" border="0"></a></td>
+	<td width="94"><a href="requestinfo.asp" onMouseOver="img_xchg('button4'); return true;" onMouseOut="img_rstr('button4'); return true"><img name="button4"  src="images/btn_info.gif" width="94" height="41" alt="Request Info" border="0"></a></td>
+	<td width="82"><a href="killsheet.asp" onMouseOver="img_xchg('button5'); return true;" onMouseOut="img_rstr('button5'); return true"><img name="button5"  src="images/btn_killsheet.gif" width="82" height="41" alt="Kill Sheet" border="0"></a></td>
+	<td width="102"><a href="imagegallery.asp" onMouseOver="img_xchg('button6'); return true;" onMouseOut="img_rstr('button6'); return true"><img name="button6"  src="images/btn_imagegallery.gif" width="102" height="41" alt="Image Gallery" border="0"></a></td>
+	<td width="52"><a href="links.asp" onMouseOver="img_xchg('button7'); return true;" onMouseOut="img_rstr('button7'); return true"><img name="button7"  src="images/btn_links.gif" width="52" height="41" alt="Links" border="0"></a></td>
+	<td width="104"><a href="customerlist.asp" onMouseOver="img_xchg('button8'); return true;" onMouseOut="img_rstr('button8'); return true"><img name="button8"  src="images/btn_customer.gif" width="104" height="41" alt="Customer List" border="0"></a></td>
+	<td width="67"><a href="default.asp" onMouseOver="img_xchg('button10'); return true;" onMouseOut="img_rstr('button10'); return true"><img name="button10"  src="images/btn_home.gif" width="67" height="41" alt="Home" border="0"></a></td>
+</tr>
+</table>
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      <table width="760" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="images/collage1.jpg" width="410" height="412" alt="Petroleum College International/Petroleum Training International" border="0"></td>
+          <td><img src="images/collage2.jpg" width="350" height="412" alt="Petroleum College International/Petroleum Training International" border="0" usemap="#Map"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="copyright" align="center" valign="top" >
+		<br><br><table width="25%" border="0" cellspacing="2" cellpadding="2">
+        <tr> 
+          <td align="center">Questions? <a href="mailto:perezr@petroleumcollege.com"><b>Email 
+            Us</b></a></td>
+        </tr>
+      </table>
+      <br><br>
+	  <img src="images/address.gif" border="0" alt="Call Us Toll-Free! 866-575-4882"><br>
+
+<p><a href="http://www.pageconcepts.com" title="Professional Web Site Design" target="_new">Professional Web Site Design</a> 
+      provided by <b><a href="http://www.pageconcepts.com" title="Professional Web Site Design" target="_new">Page Concepts</a></b><br>
+      Copyright � 1996 <b><a href="http://www.pageconcepts.com" title="Professional Web Site Design" target="_new">Page 
+      Concepts</a></b>. &nbsp;All rights reserved.<br></p>
+<br>
+<br>
+<br>
+
+    </td>
+  </tr>
+</table>
+<map name="Map"> 
+  <area shape="circle" coords="280,323,62" href="http://www.iadc.org/wellcap.htm" target="_new" alt="International Association of Drilling Contractors" title="International Association of Drilling Contractors">
+</map>
+</body>
+</html>

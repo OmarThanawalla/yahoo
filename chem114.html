@@ -1,0 +1,373 @@
+<base href="http://www.library.uiuc.edu/chx/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Chemistry Library</title>
+
+<style type="text/css">
+<!--
+@import url("css/chemistry.css");
+@import url("css/chemistry_subpage.css");
+@import url("css/chem.css");
+@import url("css/chemfront.css");
+-->
+
+
+p.note {
+margin-top: 5px;
+}
+
+div#news {
+	width: 275px;
+	z-index: 3;
+	position: absolute;
+	margin-left: 250px;
+	margin-top: 10px;
+	left: 115px;
+	top: 204px;
+}
+
+div#news p {
+padding: 6px 6px 6px 10px;
+border: 1px dashed #ff6600;
+}
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+
+<script src="http://www.library.uiuc.edu/cpsdev/includes/dropdown.js" type="text/javascript"></script>
+<script src="http://www.library.uiuc.edu/cpsdev/includes/catalog.js" type="text/javascript"></script>
+<script src="http://www.library.uiuc.edu/cpsdev/includes/searchtoggle.js" type="text/javascript"></script>
+
+<script src="http://www.library.uiuc.edu/cpsdev/includes/clearfield.js" type="text/javascript"></script>
+
+
+<!-- the following script was added 12/2/2010 by Camilla Fulton to track outbound links on the Chemistry Library homepage -->
+<script src="http://www.library.illinois.edu/chx/ga_analytics_link_tracking.js" type="text/javascript"></script>
+
+<!-- added by Robert Slater 4/10/2012 to provide the Snapshot day popup survey. Can be removed 4/12/2012 -->
+<script type="text/javascript" src="http://www.library.illinois.edu/scripts/survey/pop.php"></script>
+
+</style>
+<style type="text/css">
+<!--
+.style1 {font-weight: bold}
+#outer .topbar table tr td #subtitle p a {
+	color: #FFF;
+}
+#red {
+	color: #F00;
+}
+.Yellow {
+	color: #FF0;
+}
+-->
+</style>
+</head>
+
+<!--Google Analytics Info!-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11021652-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<body>
+<div align="center">
+<div id="outer" align="left">
+<div id="globalhead">
+<div id="globallogo"><a href="http://www.uiuc.edu/"><img src="images/i.gif" width="86" height="37" alt="University of Illinois at Urbana-Champaign homepage" /></a><a href="http://www.library.uiuc.edu/"><img src="images/ulib.gif" width="273" height="37" alt="UIUC Library homepage" /></a></div>
+<div id="globalsearch">
+<form name="querybox" method="get" action="http://www.google.com/u/uiuclib">
+<div id="searchtop">
+<input onfocus="clearText(this)" type="text" name="q" id="searchbox" size="17" maxlength="255" value="search" onkeypress="return ActionDeterminator();" /> <select size="1" name="Search_Code" id="searchdrop" style="display:none" > 
+	  <option value="FT*">Any word anywhere</option>
+        <option value="TALL">Start of Title (omit first a, an, the)</option>
+        <option value="JALL">Start of Magazine/Journal Title</option>
+        <option value="CMD">Boolean Search (use and, or, not, ?)</option>
+        <option value="NAME+">Browse Author (last name, first name)</option>
+	</select><input name="searchchoice" id="webbutton" type="radio" value="website" checked="checked" onclick="togglePurDec1(event)" /><p class="buttonp">website</p><input name="searchchoice" id="catbutton" type="radio" value="catalog" onclick="togglePurDec(event)" /><p class="buttonp">catalog</p><input id="searchbutton" type="image" src="images/search_button_go.gif" alt="GO: Submit Search" onclick="return ActionDeterminator();" />
+	<input type="hidden" name="type" value="search" />
+      <input type="hidden" name="sitesearch" value="library.uiuc.edu" />
+	<input type="hidden" name="url" value="http://www.google.com\/u\/uiuclib" />
+	<input type="hidden" value="local" name="DB" /> 
+	<input type="hidden" value="50" name="CNT" /> 
+</div>
+</form>
+</div><!-- End globalsearch div -->
+</div><!-- End globalhead div -->
+<div class="clearfloats"><!-- --></div>
+<div id="globalnav">
+<ul id="findlist">
+		<li><a id="howlink" href="/rex/">FIND <img width="12" height="10" src="images/down.gif" alt="Down arrow for dropdown" /></a>
+
+			<ul>
+				<li><a href="http://vufind.carli.illinois.edu/vf-uiu/">Books</a></li>
+				<li><a href="http://www.library.illinois.edu/catalog/vufind/dbsubject.html">Articles</a></li>
+                <li><a href="http://vufind.carli.illinois.edu/vf-uiu/">Movies and Games</a></li>
+				<li><a href="http://www.library.uiuc.edu/ipm/reserves.html">Course Reserves</a></li>
+				<li><a href="/learn/">More resources...</a></li>
+			</ul>
+		</li>
+	</ul>
+<ul id="navlist">
+<li><a href="http://www.library.uiuc.edu/catalog/">CATALOG</a></li>
+<li><a href="http://openurl.library.uiuc.edu/sfxlcl3/az">ONLINE JOURNALS AND DATABASES</a></li> 
+<li><a href="http://www.library.uiuc.edu/services/libraryservices.html">SERVICES</a></li>
+<li><a href="http://www.library.uiuc.edu/libraryhelp.html">HELP</a></li></ul>
+
+</div>
+<div class="clearfloats"><!-- --></div>
+
+<div class="topbar">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#003366">
+	<tr><td width="386" align="left" valign="bottom" border="0"><div id="title">
+	  <!--<h5>CHEMISTRY LIBRARY</h5>
+	  </div></td>-->
+	<td width="450" rowspan="3" valign="bottom"><img src="images/chemistry.gif" alt="Chemistry Library" width="450" height="91" /></td>
+	
+	<tr><td align="left" valign="top"><div id="subtitle">
+
+<div id="library_chx_title">
+ <div id="library_chx_title_text">
+ <h1>CHEMISTRY LIBRARY</h1>
+ <address>
+  170 Noyes Lab | 217.333.3737<br/>
+  505 S. Mathews | Urbana, IL 61801<br/>
+ </address>
+ </div>
+</div>
+
+<div align="center"><strong><h7></h7>
+	    </strong></div>
+	  
+	    <div align="center"><h7></h7>
+	    </div>
+	  </div>
+
+	 
+ </td>
+	</tr>
+	</table>
+</div>
+<div id="breadcrumb"><a href="http://www.uiuc.edu"><br />
+  University of Illinois at Urbana-Champaign</a> &raquo; <a href="http://www.library.uiuc.edu">University Library</a> &raquo; <a href="index.html">Chemistry Library </a></div>
+<center>
+  <p class="note"><strong>FALL SEMESTER HOURS</strong></p
+
+
+
+>
+<p class="note">Closed Labor Day, September 2</p
+
+
+
+>
+<p class="note"><strong>Monday-Thursday: 8:30am - 9:00pm</strong></p
+
+
+
+>
+<p class="note"><strong>Friday: 8:30am - 5:00pm</strong></p
+
+
+
+>
+<p class="note"><strong>Saturday: 1:00pm- 5:00pm</strong></p
+
+
+
+>
+<p class="note"><strong>Sunday: 1:00pm-9:00pm</strong></p
+
+
+
+>
+<p class="note">Library <a href="http://www.library.uiuc.edu/services/hours.php">HOURS </a>and <a href="http://www.library.illinois.edu/services/findp/">MAPS.</a></p>
+<p class="note"><strong><a href="tutorials/nsfdata.html" id="red" onclick="javascript:pageTracker._trackPageview('/outbound_link/NSF_Plans.html');">NEW: Info on NSF Data Management Plan Requirements</a></strong></p>
+<p class="note"><strong><a href="tutorials/goldforgold.html" id="red" onclick="javascript:pageTracker._trackPageview('/outbound_link/NSF_Plans.html');">NEW: RSC Gold for Gold Program</a></strong></p>
+</center>
+
+
+
+<div id="nonavwrap"><div id="content"><div id="index_lists">
+  <table id="taketable" width="100%" cellspacing="10">
+
+<tr>
+
+	<td width="50%" height="338"><h2><strong>DATABASES</strong></h2>
+	
+	<ul>
+	<li><a href="reaxys.html">Beilstein/Gmelin via Reaxys</a>
+       <ul>
+         <li><a href="http://e01.ams11.com/OutboundMessage.aspx?M=1183.1c4109a4-ed80-4f95-9773-b203afbecdc1">See account changes from August 2012</a></li></ul></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www.ncbi.nlm.nih.gov/gquery/gquery.fcgi?itool=toolbar" onclick="javascript:pageTracker._trackPageview('/outbound_link/Entrez.html');">Entrez</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www.f1000.com/" onclick="javascript:pageTracker._trackPageview('/outbound_link/Faculty_of_1000.html');">Faculty of 1000</a></li>
+    <li><a href="http://openurl.library.uiuc.edu/sfxlcl3?rft.title=ISI journal citation reports&rfr_id=info:sid/sfxit.com:azlist&sfx.ignore_date_threshold=1&url_ver=Z39.88-2004&url_ctx_fmt=infofi/fmt:kev:mtx:ctx" onclick="javascript:pageTracker._trackPageview('/outbound_link/Journal_Citation_Reports.html');">Journal Citation Reports</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://pubget.com/search?institution=illinois" onclick="javascript:pageTracker._trackPageview('/outbound_link/Pubget.html');">Pubget</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?holding=uiuclib,f1000" onclick="javascript:pageTracker._trackPageview('/outbound_link/Pubmed.html');">Pubmed</a></li>
+    <li><a href="http://openurl.library.uiuc.edu/sfxlcl3?sfx.ignore_date_threshold=1&rft.object_id=17160000000000506" onclick="javascript:pageTracker._trackPageview('/outbound_link/Science_of_Synthesis.html');">Science of Synthesis</a></p></li>
+    
+    <li>SciFinder
+    <ul>
+	<li><a href="sfchanges.html">Info and Registration</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=https://scifinder.cas.org" onclick="javascript:pageTracker._trackPageview('/outbound_link/SciFinder.html');">LOGIN</a></li>
+	 <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=https://scifinder.cas.org/mobile" onclick="javascript:pageTracker._trackPageview('/outbound_link/SciFinderMobile.html');">Mobile</a></li>
+     </ul></li>
+     <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www.scopus.com/home.url" onclick="javascript:pageTracker._trackPageview('/outbound_link/Scopus.html');">Scopus</a></li>
+	  <li><a href="http://www.library.illinois.edu/proxy/go.php?url=http://apps.webofknowledge.com/WOS_GeneralSearch_input.do?product=WOS&search_mode=GeneralSearch" onclick="javascript:pageTracker._trackPageview('/outbound_link/Web_of_Science.html');">Web of Science</a></li>
+	  <li><a href="http://www.ideals.illinois.edu/handle/2142/14789" onclick="javascript:pageTracker._trackPageview('/outbound_link/UIUC_Chemistry_Dissertations_in_IDEALS.html');">UIUC Chemistry Dissertations (in IDEALS)<br/>
+	  </a></li>
+      <li><a href="http://uiuc.libguides.com/content.php?pid=344663&sid=2819657" "javascript:pageTracker._trackPageview('/outbound_link/chemebooks_Tutorial.html');">UIUC Chemistry Ebooks by Publisher</a></li>
+      <li><a href="http://openurl.library.uiuc.edu/sfxlcl3/az?param_sid_save=a9ba2544905095f10f5f86217caf803b&param_category_search_type_save=browseCategory&param_chinese_checkbox_type_save=Pinyin&param_lang_save=eng&param_letter_group_save=&param_perform_save=searchCategories&param_letter_group_script_save=&param_chinese_checkbox_save=0&param_services2filter_save=getFullTxt&param_current_view_save=detail&param_subcategory_save=&param_jumpToPage_save=&param_type_save=textSearch&param_category_save=8&param_textSearchType_save=contains&param_jumpToPage_value=&param_category_search_type_value=browseSubCategory&display_single_object=&param_category_value=8&param_subcategory_active=1&param_subcategory_value=-1" onclick="javascript:pageTracker._trackPageview('/outbound_link/Chemistry_Online_Research_Resources.html');">UIUC Chemistry Online Journals and Databases</a></li>
+	  <li><a href="http://search.grainger.uiuc.edu/citedsearch/citeform.asp" onclick="javascript:pageTracker._trackPageview('/outbound_link/UIUC_Citing_References_Search.html');">UIUC Citing References Search<br/>
+	  </a></li>
+	  <li><a href="http://search.grainger.uiuc.edu/linker/" onclick="javascript:pageTracker._trackPageview('/outbound_link/UIUC_Journal_and_Article_Locator.html');">UIUC Journal and Article Locator</a></li>
+	  <li><a href="http://search.grainger.uiuc.edu/searchaid2/searchassist.asp" onclick="javascript:pageTracker._trackPageview('/outbound_link/UIUC_Library_Easy_Search.html');">UIUC Library Easy Search<br/>
+	    <br/>--Find Articles, Books &amp; Web Pages in Multiple Sources</a></li>
+	  <li><a href="http://m.library.illinois.edu" onclick="javascript:pageTracker._trackPageview('/outbound_link/UIUC_Mobile_Device_Access.html');">UIUC - Mobile Device Access</a></li></ul>
+	 </td>
+	
+
+	<td width="50%">
+	
+	<h2><strong>ELECTRONIC REFERENCE  </strong></h2>
+	
+	<ul>
+    <li><a href="http://www.library.ubc.ca/scieng/coden.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/Abbreviations_of_Journal_Titles.html');">Abbreviations of Journal Titles (courtesy UBC)</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://pubs.acs.org/series/symposium" onclick="javascript:pageTracker._trackPageview('/outbound_link/ACS_Symposium.html');"> ACS Symposium Series  </a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://webcsd.ccdc.cam.ac.uk" onclick="javascript:pageTracker._trackPageview('/outbound_link/WebCSD.html');">Cambridge Structural Database/WebCSD</a> <a href="http://www.ccdc.cam.ac.uk/products/csd_system/webcsd/" onclick="javascript:pageTracker._trackPageview('/outbound_link/WebCSD_About.html');">(About)</a></li>
+    <li><a href="http://cassi.cas.org" onclick="javascript:pageTracker._trackPageview('/outbound_link/CAS_Source_Index.html');">CAS Source Index (CASSI)</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www.chemnetbase.com/" onclick="javascript:pageTracker._trackPageview('/outbound_link/Combined_Chemical_Dictionary.html');">ChemNETBase</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://ccd.chemnetbase.com/dictionary-search.do?method=view&id=318348" onclick="javascript:pageTracker._trackPageview('/outbound_link/Combined_Chemical_Dictionary.html');">Combined Chemical Dictionary </a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www.sciencedirect.com/science/referenceworks/9780080437484" onclick="javascript:pageTracker._trackPageview('/outbound_link/Comprehensive_Coordination_Chemistry_II.html');">Comprehensive Coordination Chemistry II </a></li>
+     <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www.sciencedirect.com/science/referenceworks/9780080449920" onclick="javascript:pageTracker._trackPageview('/outbound_link/Comprehensive_Heterocyclic_Chemistry_III.html');">Comprehensive Heterocyclic Chemistry III </a></li>
+        <li><a href="http://onlinelibrary.wiley.com/book/10.1002/9780470638859/titles" onclick="javascript:pageTracker._trackPageview('/outbound_link/Comprehensive_Organic_Name_Reactions.html');">Comprehensive Organic Name Reactions and Reagents</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www.sciencedirect.com/science/referenceworks/9780080450476" onclick="javascript:pageTracker._trackPageview('/outbound_link/Comprehensive_Organometallic_Chemistry_III.html');">Comprehensive Organometallic Chemistry III</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www.hbcpnetbase.com/" onclick="javascript:pageTracker._trackPageview('/outbound_link/CRC_Handbook_of_Chemistry_and_Physics.html');">CRC Handbook of Chemistry and Physics</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www.crcnetbase.com/action/showPublications?display=bySubject" onclick="javascript:pageTracker._trackPageview('/outbound_link/CRCNetBASE.html');">CRCnetBASE Electronic Resources</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://www3.interscience.wiley.com/cgi-bin/mrwhome/104554785/HOME" onclick="javascript:pageTracker._trackPageview('/outbound_link/e-EROS.html');">e-EROS</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://mrw.interscience.wiley.com/emrw/9780470048672/home/" onclick="javascript:pageTracker._trackPageview('/outbound_link/Encyclopedia_of_Chemical_Biology.html');">Encyclopedia of Chemical Biology</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://onlinelibrary.wiley.com/book/10.1002/9781119951438/topics" onclick="javascript:pageTracker._trackPageview('/outbound_link/Encyclopedia_of_Inorganic_Chemistry.html');">Encyclopedia of Inorganic and Bioinorganic Chemistry</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://onlinelibrary.wiley.com/bookseries/10.1002/SERIES2146" onclick="javascript:pageTracker._trackPageview('/outbound_link/Inorganic_Synthesis.html');">Inorganic Syntheses </a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://onlinelibrary.wiley.com/book/10.1107/97809553602060000001/toc" onclick="javascript:pageTracker._trackPageview('/outbound_link/Interntational_Tables_for_Crystallography.html');">International Tables for Crystallography</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://mrw.interscience.wiley.com/emrw/9780471238966/home" onclick="javascript:pageTracker._trackPageview('/outbound_link/Kirk-Othmer_Encyclopedia_of_Chem_Technology.html');">Kirk-Othmer Encyclopedia of Chem. Technology </a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://themerckindex.cambridgesoft.com/" onclick="javascript:pageTracker.trackPageview('/outbound_link/Merck_Index.html');">Merck Index</a></li>
+    <li><a href="http://www.grad.illinois.edu/nrc" onclick="javascript:pageTracker._trackPageview('/outbound_link/National_Research_Council_Assessment_Database.html');">National Research Council Assessment Database </a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://onlinelibrary.wiley.com/book/10.1002/0471264180" onclick="javascript:pageTracker._trackPageview('/outbound_link/Organic_Reactions.html');">Organic Reactions</a></li>
+    <li><a href="http://www.orgsyn.org/" onclick="javascript:pageTracker._trackPageview('/outbound_link/Organic_Syntheses.html');">Organic Syntheses</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://onlinelibrary.wiley.com/book/10.1002/9780470682531/toc" onclick="javascript:pageTracker._trackPageview('/outbound_link/Patai_Chemistry_of_Functional_Groups.html');">Patai's Chemistry of Functional Groups (1995-Present)</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://onlinelibrary.wiley.com/bookseries/10.1002/SERIES1078" onclick="javascript:pageTracker._trackPageview('/outbound_link/Patai_Chemistry_of_Functional_Groups2.html');">Patai's Chemistry of Functional Groups (1964-1995)</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://site.ebrary.com/lib/uiuc/docDetail.action?docID=10211725" onclick="javascript:pageTracker._trackPageview('/outbound_link/Perrys_ChemE_Handbook.html');">Perry's Chemical Engineers' Handbook</a></li>
+    <!--<a href="https://i-share.carli.illinois.edu/uiu/cgi-bin/Pwebrecon.cgi?ti=1,0&SC=Title&SA=Chemistry%20of%20functional%20groups.&PID=Ipble55lanVt-iZfPuqWhA&SEQ=20100920123658&SID=2"> (UIUC Catalog for complete Patai set.)</a>-->
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://onlinelibrary.wiley.com/book/10.1002/0471701343" onclick="javascript:pageTracker._trackPageview('/outbound_link/Sax_Dangerous.html');">Sax's Dangerous Properties of Industrial Materials</a></li>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://mrw.interscience.wiley.com/emrw/9783527306732/home/" onclick="javascript:pageTracker._trackPageview('/outbound_link/Ullmann_Encyclopedia_of_Industrial_Chemistry.html');">Ullmann's Encyclopedia of Industrial Chemistry </a></li>
+    </ul>
+	</td>
+</tr>
+
+<tr>
+
+	<td bgcolor="#FFFFFF">
+	
+	<h2 class="style1">CLASS RESOURCES </h2>
+    <ul>
+    <li><a href="http://www.library.uiuc.edu/proxy/go.php?url=http://pubs.acs.org/isbn/9780841239999" onclick="javascript:pageTracker._trackPageview('/outbound_link/ACS_Style_Guide_Chapter14_Citing_References.html');">ACS Style Guide</a></li>
+    <li><a href="http://www.library.illinois.edu/refworks/index.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/RefWorks.html');">RefWorks Citation Management Software</a></li>
+    <li><a href="http://computing.scs.illinois.edu/content/chem-draw-scs-illinois" onclick="javascript:pageTracker._trackPageview('/outbound_link/ChemDraw.html');">ChemDraw - via the School of Chemical Sciences</a></li>
+    <li><a href="http://www.chem.uiuc.edu/clcwebsite/index.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/Chemistry_Learning_Center.html');">Chemistry Learning Center</a></li>
+    <li><a href="http://www.library.uiuc.edu/ugl/reserves.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/Course_Reserves.html');">Course Reserves</a></li>
+    <li><a href="http://www.library.uiuc.edu/irrc/" onclick="javascript:pageTracker._trackPageview('/outbound_link/Interlibrary_Loan.html');">Interlibrary Loan</a></li>
+    <li><a href="onlineresources.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/online_resources.html');">Online Resource Guide for the Chemical Sciences</a></li>
+    <li><a href="http://uiuc.libguides.com/chbe" id="red" onclick="javascript:pageTracker._trackPageview('/outbound_link/chbe_guide.html');">NEW: Resource Guide for Chemical and Biomolecular Engineering</a></li>
+	  <li><a href="http://www.scs.uiuc.edu/" onclick="javascript:pageTracker._trackPageview('/outbound_link/School_of_Chemical_Sciences.html');">School of Chemical Sciences</a></li>
+     <li><a href="http://www.library.illinois.edu/chx/HSChemTeach.html">Web Resources for High School Chemistry Teachers</a></li>
+     <!--<li><a href="http://uiuc.libguides.com/chem205" id="red" onclick="javascript:pageTracker._trackPageview('/outbound_link/CHEM_205');">CHEM 205 Library Guide for Cobalt Lab</a></li>-->
+     </ul>
+     	</td>
+
+	
+	<td background="scifinder.html">
+	
+	<h2 class="style1">TUTORIALS</h2>
+    <ul> 
+    <li><a href="http://lgdata.s3-website-us-east-1.amazonaws.com/docs/876/68337/ChemBioDraw_Ultra_tutorial_winter%202010.pdf" onclick="javascript:pageTracker._trackPageview('/outbound_link/chemdraw_tutorial1.html');">ChemDraw Tutorial 1</a> / <a href="http://guides.lib.umich.edu/chembiooffice" "javascript:pageTracker._trackPageview('/outbound_link/chemdraw_tutorial2.html');">Tutorial 2</a></li>
+    <li><a href="tutorials/e-eros.pdf" onclick="javascript:pageTracker._trackPageview('/outbound_link/e-EROS_Tutorial.html');">e-EROS Tutorial</a></li>
+    <li><a href="http://uiuc.libguides.com/chemebooks" onclick="javascript:pageTracker._trackPageview('/outbound_link/chemebooks_Tutorial.html');" id="red">NEW: Finding Chemistry Ebooks</a></li>
+    <li><a href="http://www.carli.illinois.edu/mem-serv/mem-train/movies/opac-mov.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/I-SHARE_Tutorials.html');">I-SHARE Online Catalog Tutorials</a></li>
+    <li><a href="http://search.grainger.uiuc.edu/searchaid2/easysearchabout.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/UIUC_Library_Easy_Search.html');">UIUC Library Easy Search</a></li>
+    <li><a href="tutorials/other.html">Other Library Tutorials </a></li>
+    <li><a href="http://pubget.com/site/help/basics" onclick="javascript:pageTracker._trackPageview('/outbound_link/Pubget_Help.html');">Pubget Help</a></li>
+    <li><a href="https://www.reaxys.com/reaxys/WebHelp/Reaxys_Help.htm#All_Files/Query_Page.htm" onclick="javascript:pageTracker._trackPageview('/outbound_link/Beilstein_Gmelin_Tutorial.html');">Reaxys Tutorial (for Beilstein/Gmelin)</a></li>
+    <li><a href="sfchanges.html">SciFinder Tutorials and Information</a></li>
+    <li><a href="http://www.library.uiuc.edu/help/db/wos/savesearch.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/Web_of_Science_Tutorial_Saved_Search.html');">Web of Science--Create a Saved Search</a></li>
+   </ul>
+  </td>
+</tr>
+
+<tr>
+	<td>
+
+	<h2 class="style1">ABOUT THE LIBRARY </h2>
+    <ul>
+    <li><a href="http://www.library.illinois.edu/chx/confroom.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/confroom.html');">Conference Room Reservations</a></li>
+     <li><a href="aboutus.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/aboutus.html');">Hours, Location & Staff</a></li>
+     <li><a href="http://www.library.illinois.edu/newtitles/view.php?type=html&units=28&dateFixed=month&sort=title" onclick="javascript:pageTracker._trackPageview('/outbound_link/Recent_Acquisitions.html');">Recent Print Acquisitions</a></li>
+     <li><a href="new_chem_ebooks.doc" onclick="javascript:pageTracker._trackPageview('/outbound_link/Recent_Ebooks.html');">Recent E-Book Acquisitions</a></li>
+     <li><a href="statistics.html">Statistics</a></li>
+     <li><a href="Reports/reports00.html">Annual Reports</a></li>
+     <li><a href="FloorPlan.pdf">Library Floor Plan</a></li>
+     <li><a href="key_policy.pdf">Key Policy</a></li>
+     <li><a href="faq.html">FAQ</a></li>
+     <li><a href="email.html">E-mail Us </a></li></ul>
+     	</td>
+	
+	<td>
+	
+	<h2 class="style1">HISTORY</h2>
+	<ul>
+	<li><a href="chxphotos.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/chxphotos.html');">Chemistry Library Photos</a></li>
+    <li><a href="renovationphotos.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/renovation.html');">Chemistry Library 2006 Renovation</a></li>
+        <li><a href="previouschemlibsite.html">Previous Chemistry Library Site Before the 2006 Move</a></li>
+        <li><a href="firstfloornoyes.html">First Floor Noyes Lab NE Corner Before Remodeling to Chemistry Library in 2006</a></li>
+    <li><a href="history.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/history.html');">Chemistry Library History</a></li>
+    <li><a href="http://www.scs.uiuc.edu/~mainzv/exhibit/" onclick="javascript:pageTracker._trackPageview('/outbound_link/Chemistry_Rare_Books_Exhibit.html');">Chemistry Rare Books Exhibit</a></li>
+    <li><a href="JournalHoldings.xls">Chemistry Library Print Journal Holdings (Excel file)</a></li>
+    <li><a href="http://www.library.illinois.edu/chx/bulletin.html" title="The Bulletin for the History of Chemistry">The Bulletin for the History of Chemistry</a></li>
+    <li><a href="http://www.library.uiuc.edu/imay/" onclick="javascript:pageTracker._trackPageview('/outbound_link/The_Illinois_Chemist_1915-1921.html');">The Illinois Chemist (1915-1921)</a></li>
+    <li><a href="http://www.library.uiuc.edu/chx/sparks/index.html" onclick="javascript:pageTracker._trackPageview('/outbound_link/Sparks.html');">Marion Sparks Website</a></li></ul>
+    	</td>
+</tr>
+</table>
+
+<p class="note"></p>
+
+</div>
+</div>
+</div> <!-- End content div -->
+</div> <!-- End index_lists div -->
+
+<div class="intro"></div>
+
+<div class="clearfloats">
+<!-- -->
+</div>
+
+	<div id="footer" align="left">
+     <a href="http://www.uiuc.edu"><img class="floatleft" width="35" height="46" src="images/ilogo.gif" alt="University of Illinois at Urbana-Champaign" /></a>
+	<a href="http://www.uiuc.edu/">University of Illinois at Urbana-Champaign</a><br />
+
+    <a href="http://www.library.uiuc.edu/">Library Gateway</a><br />
+    <a href="email.html">Comments/Questions?</a><br />
+    Last Updated: Monday, 26-Aug-2013 10:19:55 CDT /jlz	</div>
+
+</div>
+</body>
+</html>

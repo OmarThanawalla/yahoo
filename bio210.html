@@ -1,0 +1,620 @@
+<base href="http://www.seas.upenn.edu/be/">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/be-home.dwt" codeOutsideHTMLIsLocked="true" -->
+
+<head>
+
+<!-- InstanceBeginEditable name="head" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta name="Description" content="The School of Engineering and Applied Science at the University of Pennsylvania, Penn Engineering, provides world-class undergraduate and graduate education, conducting innovative research in Bioengineering, Chemical and Biomolecular Engineering, Computer and Information Science, Electrical and Systems Engineering, Materials Science and Engineering and Mechanical Engineering and Applied Mechanics. Graduate programs in Robotics, Nanotechnology, Digital Media and Gaming Technologies, Embedded Systems, Engineering Entrepreneurship and Executive education."/>
+<meta name="Keywords" content="Bioengineering, bioengineering, phd, undergraduate, undergrad, graduate, artificial heart, bioactive materials, biocompatibility, bioengineering, biofluid mechanics, biological response, biological systems, biology, biomaterials, biomechanics, biomedical, biomedical devices, biomedical engineering, biomedical optics, biophysical engineering, biosignals, biotechnology, blood vessels, bone tissue, brain, cardiovascular, cartilage, cell biology, cell proliferation, chemical engineering, clinical applications, clinical trials, colorimetry, computational, neuroscience, deformation, developmental biology, disease, DNA, dynamics, ECG, EEG, elasticity, electromagnetic, electromagnetism, engineering,Fourier analysis, growth enhancement, hard tissue, hip arthoplasty, hip prosthesis, human body, human physiology, hyperthermia, imaging, imaging techniques, immune and inflammatory responses, immunology, implants, injury, injury biomechanics, kinematics, knee ligament, living systems lung, magnetic resonance, magnetic resonance imaging, mammography, material science, mechanical properties, medical, medical devices, medical diagnosis, medical radiation, medical technology, medicine, microstructure, molecular and cell biology, musculoskeletal system, neural, neural computation, neural simulation, neuroengineering, neuromorphing, optical imaging, organs, orthopaedic bioengineering, physics, polymer, post-Harveyan principle of impedance, pulmonary, radiation, RNA, robotics, signal processing, soft tissue, surgical implants, tissue engineering, transplants, veterinary, wound healing, x-ray, masters, phd, doctorate, ivy league"/> 
+ <!-- InstanceEndEditable -->
+<link href="images/favicon.ico" rel="shortcut icon" type="image/favicon" />
+<link rel='stylesheet' type='text/css' href='css/styles2.css' />
+<link rel='stylesheet' type='text/css' href='css/menu_styles.css' />
+<link rel='stylesheet' type='text/css' href='css/dept_nav.css' />
+<link rel="stylesheet" type="text/css" href="css/layout_home_kf5.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/print_home.css" media="print" />
+<script type='text/javascript' src='javascript/quick_menu.js'></script>
+<!-- InstanceBeginEditable name="doctitle" --><title>Welcome to the Department of Bioengineering (BE)</title>
+<style type="text/css">
+<!--
+#apDiv2 {
+	position:absolute;
+	left:5px;
+	top:30px;
+	width:260px;
+	height:58px;
+	z-index:1;
+}
+
+#story1, #story2, #story3, #story4 {
+	display: none;	
+}
+#story2 {
+	display: block;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+
+<!--this script is for the cool stuff array-->
+<style type="text/css">
+
+.jsclass body .randomcontent{ /*Do NOT remove! CSS to hide random contents in JS enabled browsers*/
+display: none;
+}
+
+</style>
+
+<script language="JavaScript" type="text/javascript">
+//this script is for the stories - you can change the content of the divs in the array, not the names of the divs themselves.
+var ids=new Array('story1','story2','story3','story4');
+
+function switchid(id){	
+	hideallids();
+	showdiv(id);
+}
+
+function hideallids(){
+	//loop through the array and hide each element by id
+	for (var i=0;i<ids.length;i++){
+		hidediv(ids[i]);
+	}		  
+}
+
+function hidediv(id) {
+	//safe function to hide an element with a specified id
+	if (document.getElementById) { // DOM3 = IE5, NS6
+		document.getElementById(id).style.display = 'none';
+	}
+	else {
+		if (document.layers) { // Netscape 4
+			document.id.display = 'none';
+		}
+		else { // IE 4
+			document.all.id.style.display = 'none';
+		}
+	}
+}
+
+function showdiv(id) {
+	//safe function to show an element with a specified id
+		  
+	if (document.getElementById) { // DOM3 = IE5, NS6
+		document.getElementById(id).style.display = 'block';
+	}
+	else {
+		if (document.layers) { // Netscape 4
+			document.id.display = 'block';
+		}
+		else { // IE 4
+			document.all.id.style.display = 'block';
+		}
+	}
+}
+</script>
+
+<script type="text/javascript">
+
+/***********************************************
+* Random Content (from DIVs) script- by JavaScript Kit (www.javascriptkit.com)
+* This notice must stay intact for usage
+* Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and 100s more
+***********************************************/
+
+if (document.getElementById)
+document.documentElement.className = 'jsclass'; //hide content for DOM capable browsers
+
+
+var randomcontentdisplay={
+	divholders:new Object(),
+	masterclass: "randomcontent",
+
+	init:function(){
+		if (!document.getElementById)
+			return
+		var alldivs=document.getElementsByTagName("div")
+		var randomcontentsearch=new RegExp(this.masterclass+"\\s+(group\\d+)", "i") //check for CSS class="randomcontent groupX" (x=integer)
+		for (var i=0; i<alldivs.length; i++){
+			if (randomcontentsearch.test(alldivs[i].className)){
+				if (typeof this.divholders[RegExp.$1]=="undefined") //if array to hold this group of divs doesn't exist yet
+					this.divholders[RegExp.$1]=new Array() //create array first
+					this.divholders[RegExp.$1].push(alldivs[i]) //add this div to the array
+			}
+		}
+	this.showone()
+	},
+
+	showone:function(){
+		for (group in this.divholders){ //loop thru each array within object
+			var chosenOne=Math.floor(Math.random()*this.divholders[group].length) //randomly pick one entry from array
+			this.divholders[group][chosenOne].style.display="block" //display content corresponding to the chosen entry
+		}
+	}
+}
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1517333-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<div id="logoPrint"><img src="images/template/print-logo.gif"
+width="200" height="72" /></div>
+<div id="container">
+	
+  <div id="datebox">
+		<div class="padded">
+      <div class="uppercase_gray">
+      <script type='text/javascript' src='javascript/clock.js'></script>
+      </div>
+      <br/>
+    <div class="eventtext">
+     <p class="uppercase_gray" style="margin-bottom: 0"><a href="about-be/news-events.php">News &amp; Events</a><br />
+       <a href="http://www.seas.upenn.edu/quicklinks/index.php" target="_blank"> Directories</a><br />
+       <a href="http://www.be.seas.upenn.edu/">BE Home</a><br />
+       <a href="http://www.upenn.edu/" target="_blank"> Penn Home</a><br /></p>
+    </div>
+    <div id="search">
+<form action="http://www.be.seas.upenn.edu/search/" method="GET" style="margin-bottom: 0">
+<p style="margin-bottom: 0">
+  <input type="submit" value="Search" id="mySubmit" />
+  <input type="text" name="q" size=25 maxlength=255 style="width: 120px" />
+</p>
+
+</form></div>
+    </div>
+</div>
+   
+<div id="header"> <a href="http://www.seas.upenn.edu/" target="_blank"><img src="images/template/top_nav_eng_bnr.gif" alt="Link to Penn Engineering Home" style="margin:30px 0px 0px 10px;" width="200" height="80" align="left"/></a>
+  <div id="be-logo"><a href="http://www.be.seas.upenn.edu"></a></div>
+    <div class="yellow_bar">Welcome to the Department of Bioengineering</div>
+    <div class="sidenav">
+      
+<ul id="qm0" class="qmmc">
+<li><a class="qmparent" href="#" >Information For:</a></li>
+	<li><a  class="qmparent" href="JavaScript:void(0);">Prospective Students</a>
+	  <ul>
+	 
+	  <li><a  class="qmparent" href="#">Undergraduates</a>
+	  
+		  <ul>
+          <li><a href="http://www.be.seas.upenn.edu/prospective-students/undergraduates/index.php">Program Options</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/prospective-students/undergraduates/curriculum.php">Curriculum</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/prospective-students/undergraduates/applying.php">Admissions</a></li>
+		  <li><a href="http://www.sfs.upenn.edu/paying/paying-pro.htm" target="_blank">Tuition &amp; Fees</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/prospective-students/undergraduates/ap-transfer.php">AP Credits</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/about-academics/ug-labs.php">Undergraduate Labs</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/prospective-students/undergraduates/faq.php">FAQs</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/about-academics/index.php">Accreditation</a></li>
+        </ul>
+
+	  <li><a  class="qmparent" href="#">Masters</a>
+
+		  <ul>
+          <li><a href="http://www.be.seas.upenn.edu/prospective-students/masters/index.php">Program Overview</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/prospective-students/masters/applying.php">Admissions</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/about-research/index.php">Research Areas</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/about-research/grad-group.php">Graduate Group</a></li>
+		  <li><a href="http://www.seas.upenn.edu/prospective-students/graduate/tuition.php" target="_blank">Tuition &amp; Fees</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/prospective-students/masters/financial-aid.php">Financial Aid</a></li>
+        </ul>
+		
+	  <li><a  class="qmparent" href="#">Doctoral</a>
+
+		  <ul>
+          <li><a href="http://www.be.seas.upenn.edu/prospective-students/doctoral/index.php">Program Overview</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/prospective-students/doctoral/applying.php">Admissions</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/prospective-students/doctoral/timeline.php">Degree Timeline</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/prospective-students/doctoral/dual-degrees.php">Combined Degrees</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/about-research/index.php">Research Areas</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/about-research/grad-group.php">Graduate Group</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/prospective-students/doctoral/financial-aid.php">Fellowships &amp; Aid</a></li>
+		  <li><a href="http://www.seas.upenn.edu/prospective-students/graduate/admissions-faq.php" target="_blank">FAQs</a></li>
+        </ul>
+		</ul></li>
+	  
+	<li><a    class="qmparent" href="#">Current Students</a>
+      <ul>
+	
+	  <li><a   class="qmparent" href="#">Undergraduates</a>
+
+		  <ul>
+          <li><a href="http://www.be.seas.upenn.edu/current-students/undergraduates/index.php">Curriculum</a></li>
+		   <li><a href="http://www.be.seas.upenn.edu/current-students/undergraduates/options.php">Program Options</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/current-students/undergraduates/advising.php">Advising</a></li>
+		   <li><a href="http://www.be.seas.upenn.edu/prospective-students/undergraduates/faq.php">FAQs</a></li>
+		  <li><a href="http://www.seas.upenn.edu/undergraduate/handbook/index.php" target="balnk">Student Handbook</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/current-students/undergraduates/research.php">Research</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/current-students/undergraduates/internships.php">Internships</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/current-students/undergraduates/study-abroad.php">Study Abroad</a></li>
+		  <li><a href="http://www.seas.upenn.edu/undergraduate/student-life/index.php" target="_blank">Student Life</a></li>
+        </ul>
+		  
+	  <li><a  class="qmparent" href="#">Masters</a>
+		 
+		  <ul>
+          <li><a href="http://www.be.seas.upenn.edu/current-students/masters/index.php">Getting Started</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/current-students/masters/degree-requirements.php">Degree Requirements</a></li>
+	      <li><a href="http://www.be.seas.upenn.edu/about-research/index.php">Research Areas</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/about-research/grad-group.php">Graduate Group</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/current-students/masters/advising.php">Advising</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/current-students/masters/forms.php">Student Forms</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/current-students/masters/handbook.php">Student Handbook</a></li>
+        </ul>
+
+	  <li><a  class="qmparent" href="javascript:void(0)">Doctoral</a>
+		 
+          <ul>
+          <li><a href="http://www.be.seas.upenn.edu/current-students/doctoral/new-students.php">Getting Started</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/current-students/doctoral/index.php">Degree Requirements</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/about-research/index.php">Research Areas</a></li>
+	      <li><a href="http://www.be.seas.upenn.edu/about-research/grad-group.php">Graduate Group</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/prospective-students/doctoral/financial-aid.php">Fellowships &amp; Aid</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/current-students/doctoral/advising.php">Advising</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/current-students/doctoral/forms.php">Student Forms</a></li>
+          <li><a href="http://www.be.seas.upenn.edu/current-students/doctoral/handbook/index.php">Student Handbook</a></li>
+		  <li><a href="http://www.be.seas.upenn.edu/current-students/doctoral/directory.php">Current PhD List</a></li>
+        </ul>
+		<li><a href="http://www.be.seas.upenn.edu/current-students/index.php">Student Resources</a></li>
+		</ul></li>
+	
+	<li><a  class="qmparent" href="JavaScript:void(0);">Faculty &amp; Staff</a>
+		<ul>
+     <li><a href="http://www.seas.upenn.edu/staff/resources.php" target="_blank">Helpful Links</a></li>
+	 <li><a href="https://medley.isc-seo.upenn.edu/penn_portal/u@penn.php" target="_blank">U@Penn</a></li>
+	  <li><a href="http://www.be.seas.upenn.edu/faculty-staff/index.php">Graduate Group Bylaws</a></li>
+	  <li><a href="http://www.seas.upenn.edu/research/policy/index.php" target="_blank">Research Policies</a></li>
+	  <li><a href="http://www.be.seas.upenn.edu/about-people/faculty/searches.php">Open Faculty Positions</a></li>
+	  <li><a href="http://www.be.seas.upenn.edu/about-people/staff.php">Departmental Contacts</a></li>
+	  <li><a href="http://www.seas.upenn.edu/about-seas/buildings.php" target="_blank">School Buildings</a></li>
+      <li><a href="http://www.seas.upenn.edu/about-seas/dean-staff.php" target="_blank">School Leadership</a></li>
+	  <li><a href="http://www.seas.upenn.edu/undergraduate/advising/apo-info.php" target="_blank">Academic Programs Office</a></li>
+	  <li><a href="http://www.seas.upenn.edu/faculty/index.php" target="_blank">Faculty Affairs</a></li>
+	  <li><a href="http://www.hr.upenn.edu/" target="_blank">Human Resources</a></li>
+	</ul>
+  </li>
+  
+  <li><a  class="qmparent" href="JavaScript:void(0);">Post Docs</a>
+	    <ul>
+	 <li><a href="http://www.be.seas.upenn.edu/post-docs/index.php">Current Post Docs</a></li>
+	 <li><a href="http://www.be.seas.upenn.edu/post-docs/positions.php">Open Positions</a></li>
+	 <li><a href="http://www.be.seas.upenn.edu/about-people/post-docs.php">Penn BE Post Docs</a></li>
+	 <li><a href="http://www.be.seas.upenn.edu/about-research/index.php">Research Areas</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-research/shared-resources.php" >Research Facilities</a></li>
+        <li><a href="http://www.seas.upenn.edu/post-docs/index.php" target="_blank">Resources List</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-be/events/index.php">Seminar Series</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-research/grad-group.php">Graduate Group</a></li>
+    </ul>
+  </li>
+          
+	<li><a   class="qmparent" href="JavaScript:void(0);">Alumni and Friends</a>
+	    <ul>
+      <li><a href="http://www.be.seas.upenn.edu/alumni/index.php">Welcome Back!</a></li>
+      <li><a href="http://www.seas.upenn.edu/giving/index.php" target="_blank">Make a Gift</a></li>
+	  <li><a href="http://www.upenn.edu/registrar/student-services/transcripts.html" target="_blank">Request a Transcript</a></li>
+      <li><a href="http://www.seas.upenn.edu/alumni/alumni-society/index.php" target="_blank">Alumni Society</a></li>
+      <li><a href="http://www.seas.upenn.edu/alumni/special-events.php" target="_blank">Alumni Events</a></li>
+      <li><a href="http://www.seas.upenn.edu/alumni/magazine.php" target="_blank">Penn Engineering Magazine</a></li>
+    </ul>
+  </li>
+	
+    <li><a  class="qmparent" href="JavaScript:void(0);">Corporate Partners</a>
+	    <ul>
+	  <li><a href="http://www.be.seas.upenn.edu/business-industry/index.php">BE Collaboration</a></li>
+        <li><a href="http://www.seas.upenn.edu/corporate-partners/recruiting.php" target="_blank">Recruiting Graduates</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-research/featured-research.php">Featured Research</a></li>
+        <li><a href="http://www.seas.upenn.edu/directory/departments.php?departments=Bioengineering" target="_blank">Faculty Expertise</a></li>
+    </ul>
+  </li>
+
+    <li><a  class="qmparent" href="JavaScript:void(0);">Visitors</a>
+	    <ul>
+      <li><a href="http://www.be.seas.upenn.edu/visitors/index.php">Visiting BE</a></li>
+	  <li><a href="http://www.seas.upenn.edu/visitors/index.php" target="_blank">Visiting SEAS</a></li>
+        <li><a href="http://www.admissionsug.upenn.edu/visit/accommodations" target="_blank">Accommodations</a></li>
+        <li><a href="http://www.facilities.upenn.edu/map.php" target="_blank">Campus Map</a></li>
+		<li><a href="http://maps.google.com/maps?f=q&hl=en&q=210+South+33rd+St,+Philadelphia,+PA+19104&ie=UTF8&z=15&om=1&iwloc=addr" target="_blank">Driving Directions</a></li>
+    </ul>
+  </li>
+
+<li class="qmclear">&nbsp;</li>
+</ul>
+
+<script type="text/javascript">qm_create(0,true,0,0,'all',false,false,false,false);</script>
+<!-- Create Menu Settings: (Menu ID, Is Vertical, Show Timer, Hide Timer, On Click (options: 'all' * 'all-always-open' * 'main' * 'lev2'), Right to Left, Horizontal Subs, Flush Left, Flush Top) -->
+    </div>
+</div>
+   
+<div id="wrapper">
+  
+  <div class="topnav">
+        
+<ul id="qm1" class="qmmc">
+
+	<li><a class="qmparent" href="javascript:void(0)">DEPARTMENT</a>
+
+		<ul>
+		<li><a href="http://www.be.seas.upenn.edu/prospective-students/index.php">Department Overview</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-be/index.php">Fast Facts</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-be/news-events.php">News & Events</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-be/events/index.php">Seminar Series</a></li>
+		</ul></li>
+
+	<li><a class="qmparent" href="javascript:void(0)">PEOPLE</a>
+
+		<ul>
+        <li><span class="qmtitle" >Faculty</span></li>
+        <li><span class="qmdivider qmdividerx" ></span></li>		
+		<li><a href="http://www.be.seas.upenn.edu/about-people/index.php">Departmental</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-research/grad-group.php">Graduate Group</a></li>
+        <li><span class="qmtitle" >Students</span></li>
+        <li><span class="qmdivider qmdividerx" ></span></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-people/students-ug.php">Undergraduates</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-people/students-grad-mse.php">MSE Students</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-people/students-grad-phd.php">PhD Students</a></li>
+        <li><span class="qmdivider qmdividerx" ></span></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-people/staff.php">Staff</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-people/post-docs.php">Postdoctoral Fellows</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-people/alumni.php">Alumni</a></li>
+		</ul></li>
+
+	<li><a class="qmparent" href="javascript:void(0)">ACADEMICS</a>
+
+		<ul>
+        <li><span class="qmtitle" >Undergraduate</span></li>
+        <li><span class="qmdivider qmdividerx" ></span></li>	
+		<li><a href="http://www.be.seas.upenn.edu/prospective-students/undergraduates/program-overview.php">Program Overview</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/prospective-students/undergraduates/courses.php">Featured Courses</a></li>
+         <li><a href="http://www.be.seas.upenn.edu/about-academics/preceptorship.php">Clinical Experience</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-research/ug-research.php">Undergraduate Research</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-academics/ug-labs.php">Instructional Labs</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/current-students/undergraduates/study-abroad.php">Study Abroad</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-academics/index.php">Accreditation</a></li>
+		<li><span class="qmtitle" >Graduate</span></li>
+        <li><span class="qmdivider qmdividerx" ></span></li>	
+        <li><a href="http://www.be.seas.upenn.edu/prospective-students/masters/index.php">Master's Program</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/prospective-students/doctoral/index.php">Doctoral Program</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/prospective-students/doctoral/dual-degrees.php">Combined PhD Degrees</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-research/index.php">Research Areas</a></li>
+		</ul></li>
+	
+	<li><a class="qmparent" href="javascript:void(0);">RESEARCH</a>
+
+		<ul>
+		<li><a href="http://www.be.seas.upenn.edu/about-research/index.php">Research Areas</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-research/centers-institutes.php">Centers &amp; Institutes</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-research/featured-research.php">Featured Faculty Research</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-research/grad-group.php">Graduate Group Faculty</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-research/ug-research.php">Undergraduate Research</a></li> 
+        <li><a href="http://www.be.seas.upenn.edu/about-research/shared-resources.php">Shared Resources</a></li>
+		</ul></li>
+	
+	<li><a class="qmparent" href="javascript:void(0);">OUTREACH</a>
+
+		<ul>
+		<li><a href="http://www.be.seas.upenn.edu/about-outreach/index.php">Mission</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-outreach/local.php">Local Activities</a></li>
+		<li><a href="http://www.be.seas.upenn.edu/about-outreach/global.php">Global Activities</a></li>
+		</ul></li>
+		
+	<li><a class="qmparent" href="javascript:void(0)">QUICK LINKS</a>
+
+		<ul>
+		<li><a href="http://www.be.seas.upenn.edu/about-academics/courses.php">Courses</a></li>
+		<li><a href="https://courseweb.library.upenn.edu/" target="_blank">Blackboard</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/about-people/faculty/searches.php">Open Faculty Positions</a></li>        
+		<li><a href="http://www.be.seas.upenn.edu/about-be/events/index.php">BE Seminar Series</a></li>
+		<li><a href="http://www.seas.upenn.edu/undergraduate/handbook/index.php" target="_blank">SEAS Undergrad Handbook</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/current-students/masters/handbook.php">MSE Handbook</a></li>
+        <li><a href="http://www.be.seas.upenn.edu/current-students/doctoral/handbook/index.php">PhD Handbook</a></li>
+        <li><a href="http://www.seas.upenn.edu/cets/" target="_blank">Tech Support (CETS)</a></li>
+        <li><a href="http://www.seas.upenn.edu/eos/forms.html" target="_blank">Facilities Support (EOS)</a></li>
+        <li><a href="http://www.library.upenn.edu/scitech/" target="_blank">Engineering Library</a></li>
+		</ul></li>
+
+<li class="qmclear">&nbsp;</li></ul>
+
+<script type="text/javascript">qm_create(1,false,0,0,false,false,false,false,false);</script>
+
+<!-- Create Menu Settings: (Menu ID, Is Vertical, Show Timer, Hide Timer, On Click (options: 'all' * 'all-always-open' * 'main' * 'lev2'), Right to Left, Horizontal Subs, Flush Left, Flush Top) --></div>
+  <!-- InstanceBeginEditable name="stories" -->
+  <div id="features">
+    <div id='story1'>
+
+		<table width="830" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="19" height="54">&nbsp;</td>
+    <td width="210" align="left" valign="middle" class="featureGreat">great research</td>
+    <td width="160" align="right" valign="middle" class="mainContent"><span class="fltrt">click stories&nbsp; <a href="javascript:switchid('story1');">1</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story2');">2</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story3');">3</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story4');">4</a>&nbsp;&nbsp;</span></td>
+    <td width="440" rowspan="6"><img src="images/media/feature-burdick-chen.jpg" alt="Burdick-Chen" width="400" height="380" align="right" /></td>
+  </tr>
+  <tr>
+    <td height="62">&nbsp;</td>
+    <td colspan="2" class="featureHead"><strong>Penn Bioengineers Show Stem Cell Fate Depends on 'Grip' </strong></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2" align="left" valign="top" class="featurestory">The field of regenerative medicine holds great promise, propelled by greater understanding of how stem cells differentiate themselves into many of the body's different cell types. But clinical applications in the field have been slow to materialize, partially owing to difficulties in replicating the conditions these cells naturally experience. Penn Bioengineers have generated new insight on how a stem cell's environment influences what type of cell a stem cell will become.</td>
+    </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td colspan="2" align="left" valign="top"><h5 class="fltrt"><a href="http://www.upenn.edu/pennnews/news/penn-researchers-show-stem-cell-fate-depends-grip" target="blank">read more...</a></h5></td>
+    </tr>
+        </table>
+	</div>
+
+	<div id='story2'>
+		<table width="830" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="19" height="54">&nbsp;</td>
+    <td width="210" align="left" valign="middle" class="featureGreat">great outreach</td>
+    <td width="160" align="right" valign="middle" class="mainContent"><span class="fltrt">click stories&nbsp; <a href="javascript:switchid('story1');">1</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story2');">2</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story3');">3</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story4');">4</a>&nbsp;&nbsp;</span></td>
+    <td width="440" rowspan="6"><img src="images/media/feature-eweek13.jpg" alt="McBaine" width="400" height="380" align="right" /></td>
+  </tr>
+  <tr>
+    <td height="62">&nbsp;</td>
+    <td colspan="2" class="featureHead"><strong>Penn Engineering Learns a Few New Tricks</strong></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2" align="left" valign="top" class="featurestory"><br />The Department of Bioengineering celebrated Engineering Week in February by sponsoring several events, including one with a special canine visitor from the Penn Vet Working Dog Center (PVWDC). McBaine, an eleven-week-old springer spaniel puppy, visited Penn Engineering as part of the "Dogs & Devices" event, where undergraduate students joined together to build a scent wheel for PVWDC. </td>
+    </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td colspan="2" align="left" valign="top"><h5 class="fltrt"><a href="http://www.be.seas.upenn.edu/media/features/feature-eweek13.php" target="_blank">read more...</a></h5></td>
+    </tr>
+        </table>	
+	</div>
+
+	<div id='story3'>
+    <table width="830" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="19" height="54">&nbsp;</td>
+    <td width="210" align="left" valign="middle" class="featureGreat">great research</td>
+    <td width="160" align="right" valign="middle" class="mainContent"><span class="fltrt">click stories&nbsp; <a href="javascript:switchid('story1');">1</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story2');">2</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story3');">3</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story4');">4</a>&nbsp;&nbsp;</span></td>
+    <td width="440" rowspan="6"><img src="images/media/feature-meaney13.jpg" alt="Dave Meaney" width="400" height="380" align="right" /></td>
+  </tr>
+  <tr>
+    <td height="62">&nbsp;</td>
+    <td colspan="2" class="featureHead"><strong>Penn Bioengineers Find New Therapeutic Target for Treating Traumatic Brain Injury</strong></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2" align="left" valign="top" class="featurestory"><br />A research team led by David Meaney, Solomon R. Pollack Professor and Chair of Bioengineering, has discovered that drug intervention to reduce intercellular signaling between astrocytes following traumatic brain injury reduces cognitive deficits and damage. Signaling between astrocytes plays a prominent role in cell death after brain injury and a single injury to the brain can trigger widespread signaling through the astrocyte network.</td>
+    </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td colspan="2" align="left" valign="top"><h5 class="fltrt"><a href="http://www.upenn.edu/pennnews/news/penn-researchers-help-find-new-therapeutic-target-treating-traumatic-brain-injury" target="_blank">read more...</a></h5></td>
+    </tr>
+  <tr>
+        </table>	
+	</div>
+<div id='story4'>
+
+	   <table width="830" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="19" height="54">&nbsp;</td>
+            <td width="210" align="left" valign="middle" class="featureGreat">great students</td>
+    <td width="160" align="right" valign="middle" class="mainContent"><span class="fltrt">click stories&nbsp; <a href="javascript:switchid('story1');">1</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story2');">2</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story3');">3</a>&nbsp;&nbsp;
+        <a href="javascript:switchid('story4');">4</a>&nbsp;&nbsp;</span></td>
+    <td width="440" rowspan="6"><img src="images/media/feature-gems-13.jpg" alt="GEMS 2013" width="400" height="380" align="right" /></a></td>
+  </tr>
+  <tr>
+    <td height="62">&nbsp;</td>
+    <td colspan="2" class="featureHead"><strong>Sophomore Kate Miller introduces tech-savvy middle school girls to programming</strong></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="2" align="left" valign="top" class="featurestory"><br />Using funding from her AspireIT prize, Kate Miller, a sophomore in Bioengineering, was able to bring an intro to programming course for middle-school girls to the University as part of the Penn Girls in Engineering, Math and Science (Penn GEMS) summer camp. Her session on programming was a first for Penn GEMS, which is now in its sixth year.</td>
+    </tr>
+  <tr>
+    <td height="40">&nbsp;</td>
+    <td colspan="2" align="left" valign="top"><h5 class="fltrt"> <a href="http://www.upenn.edu/pennnews/current/2013-08-08/latest-news/penn-sophomore-introduces-tech-savvy-middle-school-girls-programming" target="blank">read more...</a></h5></td>
+    </tr>
+        </table></div>
+    </div><!-- InstanceEndEditable -->
+<div id="Left">
+<div id="sidebar1"><!-- InstanceBeginEditable name="coolstuff" -->
+  <p class="bodywhite"><img src="images/transparent_box.gif" width="30" height="214" class="img2" /></p> 
+  <div class="randomcontent group1">
+    <p class="bodywhite"><strong><a href="http://youtu.be/9VHFlwJQIkE" target="_blank">Rep Rap 3D Printing Blood Vessel Networks</a></strong></p>
+    <p class="bodywhite"><a href="http://youtu.be/9VHFlwJQIkE" target="_blank"><img src="images/cool-stuff/reprap.jpg" width="150" height="100" /></a></p>
+        <p class="lowercase_gray" style="margin-bottom: 0;">Bioengineers from the University of Pennsylvania have turned the problem inside out by using a 3D printer called a RepRap to make templates of blood vessel networks out of sugar. <a href="http://youtu.be/9VHFlwJQIkE" target="_blank"><strong>Check it out!</strong></a></p>
+</div>
+      <div class="randomcontent group1">
+        <p class="bodywhite"><strong><a href="about-outreach/index.php">The World is Your Classroom</a></strong></p>
+        <p class="lowercase_gray"><img src="images/cool-stuff/gbs-6-10.jpg" width="150" height="100" /></p>
+        <p class="lowercase_gray" style="margin-bottom: 0;">Our students have the opportunity to serve anywhere, from providing  Science, Technology, Engineering and Math (STEM) outreach activities at  the University and in Philadelphia area schools, to serving the needs  of communities in Honduras, Cameroon and China using their  technological and engineering knowledge.</p>
+</div>
+      <div class="randomcontent group1">
+        <p class="bodywhite"><strong><a href="about-academics/preceptorship.php">Undergraduate Clinical Experience</a></strong></p>
+        <p class="lowercase_gray"><img src="images/cool-stuff/clinical-preceptorship-6-10.jpg" width="150" height="100" /></p>
+        <p class="lowercase_gray" style="margin-bottom: 0;">In the course &quot;Clinical Preceptorship in Bioengineering&quot; (BE 400),  students receive what few undegraduates in united states ever have the  opportunity to experience: a chance to shadow renowned physicians for  10 weeks as they treat patients, perform surgeries, and diagnose  disease.</p>
+</div>
+      <script type="text/javascript">
+randomcontentdisplay.init()
+</script><p></p><p></p><!-- InstanceEndEditable -->
+
+</div>
+    </div><!-- end #Left -->
+	<!-- This clearing element should immediately follow the #Left div in order to force the #wrapper div to contain all child floats -->
+	<!-- InstanceBeginEditable name="main" -->
+    <div id="announcebox">
+    	<div id="left">
+        <div class="item">
+        	<h2>in the headlines <a href="http://www.be.seas.upenn.edu/media/headlines.xml"><img src="images/media/feeds/feed-icon_orange-12px.png" width="12" height="12" alt="RSS Feed" /></a></h2>
+   	      <div class="feed"><ul>
+<li><a href="http://www.sciencedaily.com/releases/2013/08/130812170333.htm" target="_blank">Ravi Radhakrishnan collaborates to identify protein required for cell movement</a><br />August 14, 2013</li>
+<li><a href="http://www.upenn.edu/pennnews/current/2013-08-08/latest-news/penn-sophomore-introduces-tech-savvy-middle-school-girls-programming" target="_blank">Sophomore Kate Miller introduces tech-savvy middle school girls to programming</a><br />August 9, 2013</li>
+<li><a href="http://www.pbs.org/wgbh/nova/next/body/nanoparticles-in-cancer-treatment/" target="_blank">Andrew Tsourkas is featured in NOVA's &quot;Nanoparticles Show Big Promise in Fight Against Cancer&quot;</a><br />July 8, 2013</li>
+<li><a href="http://www.upenn.edu/pennnews/news/penn-implement-aau-undergraduate-stem-education-initiative" target="_blank">Beth Winkelstein to lead implementation of AAU Undergraduate STEM Education Initiative</a><br />July 8, 2013</li>
+</ul>
+</div>   	      <p class="more" style="margin-bottom: 0"><a href="media/headlines.php" target="_blank">more news...</a></p>
+   	    </div>
+        	<div class="item">
+        	<h2>what's happening <a href="http://www.upenn.edu/calendar-export/?school=4&owner=155&showndays=200&type=rss2"><img src="images/media/feeds/feed-icon_orange-12px.png" width="12" height="12" alt="RSS Feed" /></a></h2>
+    <div class="feed"><ul>
+<li><a href="http://www.upenn.edu/calendar/?event=50693069" target="_blank">BE Seminar: &quot;Optical Imaging of the Human Heart&quot;</a><br />Thursday September 5, 2013 12 pm - 1 pm<br />337 Towne Building </li>
+<li><a href="http://www.upenn.edu/calendar/?event=50693070" target="_blank">Herman P. Schwan Distinguished Lecture: &quot;Tools for Mapping Brain Computation.&quot;</a><br />Thursday September 12, 2013 12 pm - 1 pm<br />Glandt Forum, Singh Center for Nanotechnology, 3205 Walnut St </li>
+</ul>
+</div>         <p class="more" style="margin-bottom: 0"><a href="about-be/events/index.php">see all events...</a></p>
+         	</div>
+        </div>
+        <div id="right">
+        	<div class="item">
+            <h2><a name="awards" id="awards"></a>awards &amp; accomplishments <a href="http://www.be.seas.upenn.edu/media/awards.xml"><img src="images/media/feeds/feed-icon_orange-12px.png" width="12" height="12" alt="RSS Feed" /></a></h2>
+            <div class="feed"><ul>
+<li><a href="http://www.upenn.edu/pennnews/news/penn-named-founding-partner-campus-aaas-emerging-leaders-science-society-program" target="_blank">Katie Reuther, a Ph.D. student in BE, collaborates to have Penn selected as a founding partner in the AAAS Emerging Leaders in Science &amp; Society</a><br />May 10, 2013</li>
+<li><a href="http://www.upenn.edu/pennnews/current/2013-05-09/latest-news/bioengineers-take-gold-senior-design-competition" target="_blank">Bioengineers receive first place in Penn Engineering's Senior Design Competition</a><br />May 9, 2013</li>
+<li><a href="http://www.be.seas.upenn.edu/media/features/news-gabrieli.php" target="_blank">David Gabrieli Receives Josephine de Karman Scholarship</a><br />April 26, 2013</li>
+<li><a href="http://www.seas.upenn.edu/media/news/teaching-awards-13.php#winkelstein" target="_blank">Beth Winkelstein is the 2013 recipient of the Ford Motor Company Award for Faculty Advising</a><br />April 12, 2013</li>
+</ul>
+</div><p class="more" style="margin-bottom: 0"><a href="http://www.be.seas.upenn.edu/media/awards.php" target="_blank">see more...</a></p>
+          </div>
+          <div class="item">
+        	<h2>announcements <a href="http://www.be.seas.upenn.edu/announcements.xml"><img src="images/media/feeds/feed-icon_orange-12px.png" width="12" height="12" alt="RSS Feed" /></a></h2>
+            <div class="feed"><ul>
+<li><a href="http://www.nano.upenn.edu/about/hiring-initiative/" target="_blank">Penn Nano Cluster-Hiring Initiative</a><br />The School of Engineering and Applied Science seeks to build interdisciplinary faculty clusters of eminence at the forefront of nanotechnology.</li>
+</ul>
+</div>        	</div>
+      </div>
+    </div>
+	<!-- InstanceEndEditable -->
+	<br class="clearfloat" />
+  <div id="footer">
+    <p align="center" class="uppercase_white" style="margin-bottom: 0"><a href="http://www.seas.upenn.edu/" target="_blank">Penn Engineering</a> &copy;2013  | <a href="http://www.upenn.edu/" target="_blank">university of pennsylvania</a> | <a href="http://www.seas.upenn.edu/" target="_blank">school of engineering and applied science<br />
+    </a>Department of <a href="http://www.be.seas.upenn.edu/">bioengineering </a><br />
+    <span class="bodywhite">210 South 33rd Street |  Suite 240 Skirkanich Hall| Philadelphia, PA 19104-6321 | P: 215-898-8501 | F: 215-573-2071<br />
+    <a href="mailto:be@seas.upenn.edu" target="_blank">Contact us with questions about admissions or academic programs</a>! | <a href="mailto:webmaster@seas.upenn.edu" target="_blank">For website issues, email the webmaster</a>.</span>
+    <!-- end #footer --></p></div>
+<!-- end #container --></div>
+</div>
+
+</body>
+<!-- InstanceEnd --></html>

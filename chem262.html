@@ -1,0 +1,438 @@
+<base href="http://www.ChemicalEngineer.com/">
+
+
+<!DOCTYPE html>
+
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	Chemical Engineering Jobs for Chemical Engineers
+</title>
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+	<link href="/Styles/web_styles.css" rel="stylesheet" type="text/css" /><link href="/Styles/CMI_Styles.css?v=1" rel="stylesheet" type="text/css" />
+	<script src="/Script/jquery.min.js" type="text/javascript"></script>
+	<script src="/Script/GetNewTimeStamp.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+	<script src="/Script/PostFormFuncs.js" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript" src="/Script/easyTooltip.min.js"></script>
+
+	<script type="text/javascript">
+		
+		function FormPostLogin() {
+			PostForm("https://www.jobjavelin.com/Company/Login.aspx");
+		}
+
+		function FormPostPostJob() {
+			PostForm("https://www.jobjavelin.com/Company/Post_Job.aspx");
+		}
+
+		function PostForm(url) {
+			var submitForm = getNewSubmitForm(url, "_blank");
+			createNewFormElement(submitForm, "add", "1");
+			createNewFormElement(submitForm, "SiteId", "228");
+			submitForm.submit();
+		}
+
+		$(document).ready(function() {
+			$(".icoFB").easyTooltip({ content: "Like us on Facebook." });			
+			$(".icoTwitter").easyTooltip({ content: "Follow us on Twitter" });
+			$(".icoGoogle").easyTooltip({ content: "Follow us on Google." });
+			$(".icoLinkedIn").easyTooltip({ content: "Follow us on LinkedIn." });
+		});
+		
+	</script>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-507188-11']);
+  _gaq.push(['_trackPageview']);
+ _gaq.push(['_trackPageLoadTime']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+	<meta name="verify-v1" content="OqlQSnhXzgG1ArTLJ/lfCagFYUQw8WH6EuHa43mM0So=" />
+<META name="y_key" content="f6c65b9a65a52d70">
+<meta name="msvalidate.01" content="F12A65B0C98BD37997867EAC5F09EF97" />
+
+	<script type="text/javascript">
+	    $(document).ready(function () {
+
+	        var sid = $("#sid").val();
+
+	        $(".jobjavyoutube").colorbox({ iframe: true, innerWidth: 800, innerHeight: 450 });
+
+	        $("#tblJobs tr:even").addClass("even");
+	        $("#tblJobs tr:odd").addClass("odd");
+
+	        $(".newjob").easyTooltip({
+	            content: "This job was added in the last 7 days."
+	        });
+
+	        $(".youtube").colorbox({ iframe: true, innerWidth: $("#vidWidth").val(), innerHeight: $("#vidHeight").val(), returnFocus: false });
+	        $("#imgJJAd").mouseover(function () { $(this).attr("src", "images/job_jav_video_ad_red.jpg"); }).mouseout(function () { $(this).attr("src", "images/job_jav_video_ad.jpg"); });
+
+
+	        $("#dvFeaturedEmployersBottom").hide();
+
+	        var deferreds = $(".featuredEmp").map(function () {
+
+	            var t = $(this);
+
+	            return $.ajax({
+	                type: "POST",
+	                url: "/Services/CMIServices.asmx/GetFeaturedEmployerBanner",
+	                data: "{'bannerId':" + t.attr("bannerid") + ",'siteId':" + sid + ",'dt':'" + new Date().toString() + "'}",
+	                contentType: "application/json; charset=utf-8",
+	                dataType: "json"
+	            })
+				.success(function (data) {
+				    if (data.d.Banner != null && data.d.Banner != undefined && data.d.Banner != "") {
+				        t.html("<div class=\"featuredEmployerAd\">" + data.d.Banner + "</div>");
+				    }
+				});
+
+	        });
+
+	        $.when.apply(null, deferreds.get()).then(function () {
+	            if ($(".featuredEmployerAd").length > 0)
+	                $("#dvFeaturedEmployersBottom").show();
+	        });
+
+	        $("#dvBubble").css({ position: "absolute", top: "-40px", right: "-31px" });
+	        $("#dvBubbleWrapper").css("margin-right", "240px");
+	    });
+
+	    function playeventhandler(e) {
+	        _gaq.push(['_trackEvent', 'Video', 'Play', 'Jingle', , false]);
+	    }
+	    function endeventhandler(e) {
+	        _gaq.push(['_trackEvent', 'Video', 'Finished', 'Jingle', , false]);
+	    }
+	</script>
+	<script src="Script/jquery.colorbox-min.js" type="text/javascript"></script>
+	<link href="Styles/colorbox.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="http://www.indeed.com/ads/apiresults.js"></script>
+	
+<meta name="description" content="Chemical Engineering jobs for Chemical Engineers." /><meta name="keywords" content="chemical engineering jobs, employment, recruiting,  chemical engineer, jobs" /></head>
+<body>
+    <form method="post" action="" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzg0MjI3MDkzZGQOeqkbbbYlpZhiUa5Mcn6dRMJdYw==" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQKGu+eyDAKg9OHkAwKUpoC7AQK5iofWCgLXksavCIZqEi70ovVi1on2xJJVzgRLvFJR" />
+    <div id="dvWrapper">
+		
+		<div id="dvNavWrapper">
+			<div id="dvEmployerNav">
+				<ul>
+					<li><a href="javascript:void(0);" onclick="FormPostLogin();" rel="nofollow">Employer Login</a></li>
+					<li><a href="javascript:void(0);" onclick="FormPostPostJob();" rel="nofollow">Post A Job</a></li>
+					<li><a href="/About_Us.aspx">About Us</a></li>
+					<li><a href="/Company/Rates.aspx">Rates</a></li>
+				</ul>
+			</div>
+
+			<div id="dvJobSeekerNav">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/Advanced_Search.aspx">Search Jobs</a></li>
+					<li><a href="/Company/Company_List.aspx">Jobs By Company</a></li>
+				
+					
+					<li><a href="http://blog.careermarketplace.com" target="_blank" rel="nofollow">Blog</a></li>
+
+					
+
+				</ul>
+			</div>
+		</div>
+
+		<div id="dvHeader">
+			
+
+			<div id="dvLogo">
+				<a href="/"><img src="/images/logo.png" border="0" alt="ChemicalEngineer.com"></a>
+
+				
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#txtKeywords').keyup(function (event) {
+			if (event.keyCode == '13') {
+				event.preventDefault();
+				__doPostBack('btnQuickSearch', '');
+			}
+		});
+		$('#txtLocation').keyup(function (event) {
+			if (event.keyCode == '13') {
+				event.preventDefault();
+				__doPostBack('btnQuickSearch', '');
+			}
+		});
+	});
+</script>
+<div id="dvQuickSearchJobsWrapper">
+	
+	<table align="center">
+		<tr>
+			<td><span class="searchTitle">Search Jobs</span></td>
+		</tr>
+		<tr>
+
+			<td valign="top">
+				<input name="ctl00$quicksearch$txtKeywords" type="text" id="quicksearch_txtKeywords" class="txtQuickSearchKeyword" /><br />
+
+				<div class="floatRight smallText">Keyword or Job ID</div>
+			</td>
+
+			<td valign="top">
+				<input name="ctl00$quicksearch$txtLocation" type="text" id="quicksearch_txtLocation" class="txtQuickSearchLocation" /><br />
+				<div class="floatRight smallText">City, State</div>
+			</td>
+
+			<td valign="top" id="dvAdvancedSearchLink">
+				<input type="submit" name="ctl00$quicksearch$btnSearch" value="Search" id="quicksearch_btnSearch" class="btnQuickSearch" /><br />
+				<a href="/Advanced_Search.aspx">Advanced Search</a>
+			</td>
+
+		</tr>
+	</table>
+	
+</div>
+
+
+				
+			</div>		
+			<br class="clear"/>	
+		</div>
+
+		<div id="contentWrapper">
+        
+    	
+
+
+
+<div id="hpWrapper">
+	<h1>Jobs for Chemical Engineers</h1>
+
+	<div id="dvBubbleWrapper" style="position:relative;float:right;margin-top:10px;margin-right:34px;">
+		<div id="dvBubble"><a href="javascript:void(0);" onclick="FormPostPostJob();"><img src="images/bubble.png" style="border:none;" alt="Post a Job" /></a></div>
+
+		<div id="dvRecentJobsButtons">
+			<input type="submit" name="ctl00$ContentPlaceHolder1$btnPostAJob" value="Post a Job" onclick="FormPostPostJob();return false;" id="ContentPlaceHolder1_btnPostAJob" class="button btnPostAJob" />
+		</div>	
+	</div>
+	
+	<div id="hpLeftCol">
+		<div id="hpMainContentWrapper">
+				
+			<div id="dvHpJobList">
+				<div id="dvResultCount">1 - 15 of 12,120 jobs</div>
+				<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Sales-Development-Manager-Fluorinated-Polymers-in-Philadelphia,-PA-WJ4005703.aspx" title="Sales Development Manager-Fluorinated Polymers">Sales Development Manager-Fluorinated Polymers</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">KLA Industries</div><div class="jobLocation">Philadelphia, PA</div>
+	<div class="jobShortDesc">A leading world producer of high performance plastics with a portfolio of over 30 brands in over 1500 formulations used in hundreds of applications with locations on five continents.  A $12 B...</div>
+	<div class="jobPostedOn">posted 23 mins ago</div>
+	<div class="jobCompanyJobList"><a href="/Company/KLA-Industries-jobs-CMP26355.aspx">all KLA Industries Jobs</a></div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Plant-Manager---Manufacturing-in-Greenville,-SC-WJ4005705.aspx" title="Plant Manager - Manufacturing">Plant Manager - Manufacturing</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Genie Matthews and Associates</div><div class="jobLocation">Greenville, SC</div>
+	<div class="jobShortDesc"> Exciting opportunity for highly motivated, results oriented Manufacturing Plant Manager for an expanding leader of roof, wall and specialty insulation products for commercial, industrial and...</div>
+	<div class="jobPostedOn">posted 23 mins ago</div>
+	<div class="jobCompanyJobList"><a href="/Company/Genie-Matthews-and-Associates-jobs-CMP33571.aspx">all Genie Matthews and Associates Jobs</a></div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Process-Development-Engineer-Manager---Permanent-in-Charlotte,-NC-WJ4005647.aspx" title="Process Development Engineer Manager - Permanent">Process Development Engineer Manager - Permanent</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Yoh</div><div class="jobLocation">Charlotte, NC</div>
+	<div class="jobShortDesc">Yoh has a direct hire, fulltime opportunity for a Manager - Technical Center Operations to join our client in Charlotte, NC. Job Responsibilities:- Direct the analytical and testing activities of the </div>
+	<div class="jobPostedOn">posted 14 hours ago</div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Chemist-in-Mount-Airy,-NC-WJ3976557.aspx" title="Chemist">Chemist</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Workforce Carolina</div><div class="jobLocation">Mount Airy, NC</div>
+	<div class="jobShortDesc">COMPANY PROFILE:   This company  holds the exclusive rights to one of the most cutting edge advances in synthetic materials in the US   Just completed a 7 million dollar restoration to create a state </div>
+	<div class="jobPostedOn">posted 19 hours ago</div>
+	<div class="jobCompanyJobList"><a href="/Company/Workforce-Carolina-jobs-CMP33865.aspx">all Workforce Carolina Jobs</a></div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Sales-Development-Manager-in-Houston,-TX-WJ3976540.aspx" title="Sales Development Manager">Sales Development Manager</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">KLA Industries</div><div class="jobLocation">Houston, TX</div>
+	<div class="jobShortDesc">Company: A leading world producer of high performance plastics with a portfolio of over 30 brands in over 1500 formulations used in hundreds of applications with locations on five continents.  A $12...</div>
+	<div class="jobPostedOn">posted 19 hours ago</div>
+	<div class="jobCompanyJobList"><a href="/Company/KLA-Industries-jobs-CMP26355.aspx">all KLA Industries Jobs</a></div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Catalyst-Manager-in-Wilmington,-NC-WJ3991324.aspx" title="Catalyst Manager">Catalyst Manager</a></h2><div class="newjob">NEW</div> </div>
+<div class="jobLocation" style="padding-left:0px">Wilmington, NC</div>
+	<div class="jobShortDesc">We have an excellent opportunity for a Catalyst Manager in a growing and dynamic company.    This is a highly visible strategic leadership position combing a strong technical background in catalytic...</div>
+	<div class="jobPostedOn">posted 22 hours ago</div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Carbon-Material-Development-Scientist-in-Solon,-OH-WJ4005150.aspx" title="Carbon Material Development Scientist">Carbon Material Development Scientist</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Carlisle Brake & Friction</div><div class="jobLocation">Solon, OH</div>
+	<div class="jobShortDesc"> Principal Area of Responsibility: This position will be responsible for developing revolutionary, new carbon based materials to meet demanding applications. New formulations and processing...</div>
+	<div class="jobPostedOn">posted  1 day ago</div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Group-Head-Executive-wProject-Management-Exp--Ch-in-Kansas-City,-MO-WJ4005156.aspx" title="Group Head Executive w/Project Management Exp & Ch">Group Head Executive w/Project Management Exp & Ch</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">ManTek Consulting</div><div class="jobLocation">Kansas City, MO</div>
+	<div class="jobShortDesc">Group Head Executive Position w/Project Manager Experience within Chemical Engineering &amp; Agricultural Industry&nbsp; Required Qualifications and Requirements  REQUIRES: &nbsp;BS Degree, Chemical...</div>
+	<div class="jobPostedOn">posted  1 day ago</div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/EHS--ISO-Coordinator-in-Greensboro,-NC-WJ4005261.aspx" title="EH&S / ISO Coordinator">EH&S / ISO Coordinator</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Alberdingk Boley, Inc</div><div class="jobLocation">Greensboro, NC</div>
+	<div class="jobShortDesc">Alberdingk Boley, Inc. is seeking EH&S / ISO Coordinator to facilitate the development and maintenance of behaviors, attitudes and a safety culture that supports the goals of the Company's EH&S...</div>
+	<div class="jobPostedOn">posted  1 day ago</div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Maintenance-Manager---chemical-plant-in-Beaumont,-TX-WJ4005316.aspx" title="Maintenance Manager - chemical plant">Maintenance Manager - chemical plant</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Southern Recruiting Solutions, Inc.</div><div class="jobLocation">Beaumont, TX</div>
+	<div class="jobShortDesc">Requirements   Bachelor of Science in Mechanical or&nbsp;Electrical Engineering. 5 years minimum supervisory&nbsp;experience in a reliability or maintenance setting in any of the...</div>
+	<div class="jobPostedOn">posted  1 day ago</div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Territory-Management-Sales-Position-in-Seattle,-WA-WJ4004964.aspx" title="Territory Management Sales Position">Territory Management Sales Position</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Stonhard</div><div class="jobLocation">Seattle, WA</div>
+	<div class="jobShortDesc">There are sales careers and there then there are sales careers with Stonhard. Two totally different things. Dayton Territory Management Sales Position  Why Stonhard? Because we are committed to...</div>
+	<div class="jobPostedOn">posted 2 days ago</div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Territory-Management-Sales-Position-in-Springfield,-IL-WJ4004965.aspx" title="Territory Management Sales Position">Territory Management Sales Position</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Stonhard</div><div class="jobLocation">Springfield, IL</div>
+	<div class="jobShortDesc">There are sales careers and there then there are sales careers with Stonhard. Two totally different things. Dayton Territory Management Sales Position  Why Stonhard? Because we are committed to...</div>
+	<div class="jobPostedOn">posted 2 days ago</div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Territory-Management-Sales-Position-in-Boulder,-CO-WJ4004966.aspx" title="Territory Management Sales Position">Territory Management Sales Position</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Stonhard</div><div class="jobLocation">Boulder, CO</div>
+	<div class="jobShortDesc">There are sales careers and there then there are sales careers with Stonhard. Two totally different things. Dayton Territory Management Sales Position  Why Stonhard? Because we are committed to...</div>
+	<div class="jobPostedOn">posted 2 days ago</div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Assets-Leader-in-Decatur,-AL-WJ3990089.aspx" title="Assets Leader">Assets Leader</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Joseph Michaels International</div><div class="jobLocation">Decatur, AL</div>
+	<div class="jobShortDesc"> Our client, a leading producer of paper products, seeks a dynamic leader to manage operational activities supporting its award winning product lines. For several decades these well-known products...</div>
+	<div class="jobPostedOn">posted 2 days ago</div>
+	<div class="jobCompanyJobList"><a href="/Company/Joseph-Michaels-International-jobs-CMP33049.aspx">all Joseph Michaels International Jobs</a></div>
+
+</div>
+<div class="jobListing ">
+	<div class="jobTitle"><h2 class="positionTitleH2"><a href="/Jobs/Fluidization-Engineer---Process-Development-Engine-in-North-Nj-Near-Nyc,-NJ-WJ4004703.aspx" title="Fluidization Engineer - Process Development Engine">Fluidization Engineer - Process Development Engine</a></h2><div class="newjob">NEW</div> </div>
+	<div class="jobCompany">Prof'l Recruiting Consultants</div><div class="jobLocation">North Nj Near Nyc, NJ</div>
+	<div class="jobShortDesc">Leave corporate red tape behind and make a huge impact right away....  This is an exciting opportunity for an accomplished Engineer with a passion for   Fluid Flow and Fluid Dynamics.  This work will </div>
+	<div class="jobPostedOn">posted 3 days ago</div>
+	<div class="jobCompanyJobList"><a href="/Company/Profl-Recruiting-Consultants-jobs-CMP26571.aspx">all Prof'l Recruiting Consultants Jobs</a></div>
+
+</div>
+
+				<div id="dvAllJobs">
+						
+				</div>					
+				
+					
+				<div id="pager">
+					<div class="prevlink">Previous</div><div class="linksWrapper"><div class='currentpage'>1</div> <a href="Jobs/JobSearchResults.aspx?P=2">2</a>  <a href="Jobs/JobSearchResults.aspx?P=3">3</a>  <a href="Jobs/JobSearchResults.aspx?P=4">4</a>  <a href="Jobs/JobSearchResults.aspx?P=5">5</a>  <a href="Jobs/JobSearchResults.aspx?P=808">...808</a></div><a href="Jobs/JobSearchResults.aspx?P=2" class="nextlink">Next</a>
+				</div>
+			</div>
+
+			<div id="dvHpSep"><img src="images/separator.png" /></div>
+
+			<div id="dvHpFeaturedCol">
+			    
+			    <div class="socialmediatop innerbox">
+			        <h2>Follow Us</h2>
+			        <a onclick="_gaq.push(['_trackSocial', 'FaceBook', 'FollowClick']);" href="http://www.facebook.com/pages/Chemical-Engineer/342127852346?v=box_3&ref=ts#!/pages/Chemical-Engineer/342127852346?v=wall&ref=ts" target="_blank" class="icoFB"><img src="/images/facebook.png" style="padding-right:5px;" border="0"  alt="Facebook"/></a> <a onclick="_gaq.push(['_trackSocial', 'Twitter', 'FollowClick']);" href="http://twitter.com/#!/chemejobs" target="_blank" class="icoTwitter"><img src="/images/twitter.png" style="padding-right:5px;" border="0" alt="Twitter" /></a><a onclick="_gaq.push(['_trackSocial', 'LinkedIn', 'FollowClick']);" href="http://www.linkedin.com/company/860305?trk=tyah" target="_blank" class="icoLinkedIn"><img src="/images/linkedin.png" style="padding-right:5px;" border="0" alt="LinkedIn" /></a>
+			    </div>
+
+				
+
+				<div class="innerbox featuredjobs">
+					<h2>Featured Jobs</h2>
+					<div class="featuredJob"><div class="featuredJobTitle"><a href="/Jobs/Regional-Sales-Manager-in-New-York,-NY-WJ4004672.aspx" title="Regional Sales Manager">Regional Sales Manager</a></div><div class="featuredJobCompany">Workforce Carolina</div><div class="featuredJobDate">posted 3 days ago</div></div><div class="featuredJob"><div class="featuredJobTitle"><a href="/Jobs/Corporate-Safety-Engineer-in-Cincinnati,-OH-WJ3993865.aspx" title="Corporate Safety Engineer">Corporate Safety Engineer</a></div><div class="featuredJobCompany">KLA Industries</div><div class="featuredJobDate">posted 26 days ago</div></div><div class="featuredJob"><div class="featuredJobTitle"><a href="/Jobs/Electrical-Engineer---Petrochem-Design--Maintenan-in-Jackson,-MS-WJ3999468.aspx" title="Electrical Engineer - Petrochem Design & Maintenan">Electrical Engineer - Petrochem...</a></div><div class="featuredJobCompany">Newman-Johnson-King, Inc. & A H Justice Search Consultants</div><div class="featuredJobDate">posted 13 days ago</div></div><div class="featuredJob"><div class="featuredJobTitle"><a href="/Jobs/NATIONAL-ACCOUNT-MANAGER-PROCESS-OPTIMIZATION-SOF-in-Atlanta,-GA-WJ4003484.aspx" title="NATIONAL ACCOUNT MANAGER (PROCESS OPTIMIZATION SOF">NATIONAL ACCOUNT MANAGER (PROCESS...</a></div><div class="featuredJobCompany">Progressive Executive Inc.</div><div class="featuredJobDate">posted 5 days ago</div></div><div class="featuredJob"><div class="featuredJobTitle"><a href="/Jobs/Paper-Mill-Plant-Manager-WJ4003913.aspx" title="Paper Mill Plant Manager">Paper Mill Plant Manager</a></div><div class="featuredJobCompany">Paper Industry Recruitment</div><div class="featuredJobDate">posted 4 days ago</div></div>
+				</div>
+
+				<div class="innerbox popularjobs">
+					<h2>Most Popular Jobs</h2>
+					<div class="featuredJob"><div class="featuredJobTitle"><a href="/Jobs/Chemist-in-Mount-Airy,-NC-WJ3976557.aspx" title="Chemist">Chemist</a></div><div class="featuredJobCompany">Workforce Carolina</div><div class="featuredJobDate">posted 19 hours ago</div></div><div class="featuredJob"><div class="featuredJobTitle"><a href="/Jobs/Technical-Specialist-in-Cleveland,-OH-WJ3921720.aspx" title="Technical Specialist">Technical Specialist</a></div><div class="featuredJobCompany">Johnson Resource Group, LLC.</div><div class="featuredJobDate">posted 10 days ago</div></div><div class="featuredJob"><div class="featuredJobTitle"><a href="/Jobs/Excellent-Quality-Assurance-Manager-in-Mount-Airy,-NC-WJ3970918.aspx" title="Excellent Quality Assurance Manager">Excellent Quality Assurance Manager</a></div><div class="featuredJobCompany">Workforce Carolina</div><div class="featuredJobDate">posted 12 days ago</div></div>
+				</div>
+
+				<div class="innerbox popularcities">
+					<h2>Popular Cities</h2>
+					<ul><li><a href='Jobs/Jobs-In-Houston,-TX.aspx'>Houston, TX</a></li><li><a href='Jobs/Jobs-In-Akron,-OH.aspx'>Akron, OH</a></li><li><a href='Jobs/Jobs-In-Charlotte,-NC.aspx'>Charlotte, NC</a></li><li><a href='Jobs/Jobs-In-Minneapolis,-MN.aspx'>Minneapolis, MN</a></li><li><a href='Jobs/Jobs-In-Philadelphia,-PA.aspx'>Philadelphia, PA</a></li><li><a href='Jobs/Jobs-In-Gainesville,-FL.aspx'>Gainesville, FL</a></li></ul>
+				</div>
+					
+				<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8701638687015183";
+/* 160 x 600 Sky - Home Page */
+google_ad_slot = "3971067902";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+					
+				
+			</div>
+		</div>
+
+		<div id="dvSiteLongDescription">ChemicalEngineer.com allows you to search for jobs for Chemical Engineers. As a job seeker, you can search jobs, submit a resume, set up career alerts to be notified whenever a job is posted that fits your skills.</div>
+
+	</div>
+</div>
+
+
+<input type="hidden" name='sid' id="sid" value="228"/>
+
+		</div>
+
+
+		<div id="dvBottomAd" style="clear:both;"><script type="text/javascript"><!--
+google_ad_client = "pub-8701638687015183";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "1044797974";
+google_ui_features = "rc:10";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+
+		<div id="dvSocialMedia">
+			
+            <a onclick="_gaq.push(['_trackSocial', 'FaceBook', 'FollowClick']);" href="http://www.facebook.com/pages/Chemical-Engineer/342127852346?v=box_3&ref=ts#!/pages/Chemical-Engineer/342127852346?v=wall&ref=ts" target="_blank" class="icoFB"><img src="/images/facebook.png" style="padding-right:5px;" border="0"  alt="Facebook"/></a> <a onclick="_gaq.push(['_trackSocial', 'Twitter', 'FollowClick']);" href="http://twitter.com/#!/chemejobs" target="_blank" class="icoTwitter"><img src="/images/twitter.png" style="padding-right:5px;" border="0" alt="Twitter" /></a><a onclick="_gaq.push(['_trackSocial', 'LinkedIn', 'FollowClick']);" href="http://www.linkedin.com/company/860305?trk=tyah" target="_blank" class="icoLinkedIn"><img src="/images/linkedin.png" style="padding-right:5px;" border="0" alt="LinkedIn" /></a>
+		</div>
+
+		<div id="dvFooter">
+			<ul><li><a href="/">Home</a></li><li><a href="/Privacy.aspx">Privacy</a></li><li><a href="/Terms.aspx">Terms of Usage</a></li><li><a href="/Contact.aspx">Contact Us</a></li></ul><div id="dvFooterSiteInfo">ChemicalEngineer.com is owned, operated, and copyrighted by Career Marketplace, Inc. (&copy;  2002-2014, All Rights Reserved)</div><div id="dvbbb"><a title="CAREERMARKETPLACE INC BBB Business Review" href="http://www.bbb.org/canton/business-reviews/employment-agencies/careermarketplace-inc-in-canton-oh-18003626/#bbbonlineclick" target="_blank"><img alt="CAREERMARKETPLACE INC BBB Business Review" style="border: 0;" src="http://seal-canton.bbb.org/seals/blue-seal-96-50-careermarketplace-inc-18003626.png" /></a></div>
+		</div>
+    </div>
+	
+
+	
+    </form>
+</body>
+</html>

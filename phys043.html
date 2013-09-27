@@ -1,0 +1,127 @@
+<base href="http://solar-center.stanford.edu/ask-solar/asksolar.html">
+<HTML>
+<!-- Stanford SOLAR Center -- "Ask a Solar Physicist"  -->
+<!-- Created by Amara Graps, amara@quake.stanford.edu  7 April 1997 -->
+<!-- Mods - Paul Mortfield, paul@fault.stanford.edu   22 June  1998 
+and Pavel K, 7 January 2009 -->
+
+<!-- Comments are Welcome. -->
+<!-- Comments -->
+<!-- Comments -->
+
+ 
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+
+<body bgcolor="#000000" text="#000000" link="#990000" vlink="#993300" alink="#993300" onLoad="MM_preloadImages('http://solar-center.stanford.edu/images/menu/about2.jpg','http://solar-center.stanford.edu/images/menu/students2.jpg','http://solar-center.stanford.edu/images/menu/educators2.jpg','http://solar-center.stanford.edu/images/menu/monitors2.jpg','http://solar-center.stanford.edu/images/menu/ao2.jpg','http://solar-center.stanford.edu/images/menu/folklore2.jpg','http://solar-center.stanford.edu/images/menu/art2.jpg')">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://solar-center.stanford.edu/css/links.css" type="text/css">
+<link rel="stylesheet" href="http://solar-center.stanford.edu/css/links2.css" type="text/css">
+
+
+
+
+<table width="650" border="0" cellspacing="0" cellpadding="0" align="center" height="104">
+  <tr> 
+    <td bgcolor="#FFFFFF" width="650" align="left" valign="top" height="100" nowrap><a href="http://solar-center.stanford.edu"><img src="/images/top.jpg" width="650" height="100" border="0" alt="Stanford Solar Center"></a></td>
+  </tr>
+
+  <tr>
+    <td height="2" align="center" valign="middle" bgcolor="#990000"></td>
+  </tr>
+  <tr> 
+    <td height="0" align="center" valign="middle" bgcolor="#FFFFFF"> <a href="http://solar-center.stanford.edu/about/" onClick="MM_nbGroup('down','group1','About_the_Sun','',1)" onMouseOver="MM_nbGroup('over','About_the_Sun','http://solar-center.stanford.edu/images/menu/about2.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="About_the_Sun" src="http://solar-center.stanford.edu/images/menu/about1.jpg" border="0" onLoad="" hspace="0" height="22" alt="About the Sun"></a><a href="http://solar-center.stanford.edu/activities/" onClick="MM_nbGroup('down','group1','For_Students','',1)" onMouseOver="MM_nbGroup('over','For_Students','http://solar-center.stanford.edu/images/menu/students2.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="For_Students" src="http://solar-center.stanford.edu/images/menu/students1.jpg" border="0" onLoad="" height="22" alt="For Students"></a><a href="http://solar-center.stanford.edu/teachers/" onClick="MM_nbGroup('down','group1','For_Educators','',1)" onMouseOver="MM_nbGroup('over','For_Educators','http://solar-center.stanford.edu/images/menu/educators2.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="For_Educators" src="http://solar-center.stanford.edu/images/menu/educators1.jpg" border="0" onLoad="" hspace="0" height="22" alt="For Educators"></a><a href="http://solar-center.stanford.edu/SID/" onClick="MM_nbGroup('down','group1','SID','',1)" onMouseOver="MM_nbGroup('over','SID','http://solar-center.stanford.edu/images/menu/monitors2.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="SID" src="http://solar-center.stanford.edu/images/menu/monitors1.jpg" border="0" onLoad="" hspace="0" height="22" alt="Space Weather Monitors"></a><a href="http://solar-center.stanford.edu/AO/" onClick="MM_nbGroup('down','group1','AO','',1)" onMouseOver="MM_nbGroup('over','AO','http://solar-center.stanford.edu/images/menu/ao2.jpg','',1)" onMouseOut="MM_nbGroup('out')"><br>
+      </a><a href="http://solar-center.stanford.edu/AO/" onClick="MM_nbGroup('down','group1','AO','',1)" onMouseOver="MM_nbGroup('over','AO','http://solar-center.stanford.edu/images/menu/ao2.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="AO" src="http://solar-center.stanford.edu/images/menu/ao1.jpg" border="0" onLoad="" height="22" alt="Ancient Observatories"></a><a href="http://solar-center.stanford.edu/folklore/" onClick="MM_nbGroup('down','group1','Folklore','',1)" onMouseOver="MM_nbGroup('over','Folklore','http://solar-center.stanford.edu/images/menu/folklore2.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="Folklore" src="http://solar-center.stanford.edu/images/menu/folklore1.jpg" border="0" onLoad="" hspace="0" height="22" alt="Solar Folklore"></a><a href="http://solar-center.stanford.edu/art/" onClick="MM_nbGroup('down','group1','Art','',1)" onMouseOver="MM_nbGroup('over','Art','http://solar-center.stanford.edu/images/menu/art2.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img name="Art" src="http://solar-center.stanford.edu/images/menu/art1.jpg" border="0" onLoad="" height="22" alt="Solar Art & Literature"></a></td>
+  </tr>
+  <tr> 
+    <td bgcolor="#FFFFFF" width="100%" height="18" align="left" valign="top" nowrap> 
+      <p><font color="#FFFFFF"></font></p>
+
+      <table width=100% cellpadding=5>
+        <tr> 
+          <td bgcolor="#FFFFFF" width="100%" height="15" align="left" valign="top" cellpadding=5><font face="Arial, Helvetica, sans-serif" size="2"> 
+  
+
+
+
+<HEAD>
+<title>Stanford SOLAR Center -- Ask A Solar Physicist </title>
+</HEAD>
+
+
+<!-- Make Background color Snow and links orange & Dark Red -->
+<BODY bgcolor="#FFFAFA" VLINK="#990000" LINK="#FF6600">
+
+
+<blockquote>
+
+The page has moved. Here is the new URL: http://solar-center.stanford.edu/ask-solar/index.html
+
+</blockquote>
+
+</BODY>
+
+
+  <tr> 
+    <td bgcolor="#CCCCCC"> 
+      <div align="center"> <font size="2" face="Arial, Helvetica, sans-serif">&copy;2008 by Stanford SOLAR Center <b>&middot;</b> <a href="http://solar-center.stanford.edu/credits.html#copyrights">Permitted 
+        Uses</a><b> &middot;</b> <a href="http://solar-center.stanford.edu/credits.html">Credits</a></font></div>
+    </td>
+  </tr>
+
+</table>
+
+
+
+
+
+</HTML>
+

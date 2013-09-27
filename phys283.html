@@ -1,0 +1,447 @@
+<base href="http://physics.web.cern.ch/physics/HEPWebSites.html">
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="ie6 ie6-7 ie6-8"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="ie7 ie6-7 ie6-8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="ie8 ie6-8"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr"
+  xmlns:content="//purl.org/rss/1.0/modules/content/"
+  xmlns:dc="//purl.org/dc/terms/"
+  xmlns:foaf="//xmlns.com/foaf/0.1/"
+  xmlns:og="//ogp.me/ns#"
+  xmlns:rdfs="//www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="//rdfs.org/sioc/ns#"
+  xmlns:sioct="//rdfs.org/sioc/types#"
+  xmlns:skos="//www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="//www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head profile="//www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortlink" href="//cern.ch/directory" />
+<meta name="copyright" content="//cern.ch/copyright" />
+
+<title>Directory | CERN</title>
+
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+<!-- Fonts from Google -->
+<link href="//framework.web.cern.ch/framework/2.0/fonts/PTSansWeb/PTSansWeb.css" rel="stylesheet" type="text/css">
+
+<link href="cern_toolbar/css/reset.css" rel="stylesheet" />
+<link href="./css/style.css" rel="stylesheet" />
+<link href="cern_toolbar/css/toolbar.css" rel="stylesheet" />
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+	<link href="./css/ie.css" rel="stylesheet" />
+  <script src="./js/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./js/directory.js"></script>
+
+</head>
+
+<body>
+
+<div class="region region-page-top">
+  <div id="cern-toolbar">
+		<h1><a href="http://cern.ch" title="CERN" onClick="trackOutboundLink(this, 'Outbound Links', 'toolbar'); return false;">CERN <span>Accelerating science</span></a></h1>
+		<ul>
+			<li><a class="cern-account" href="javascript:alert('Signing In from the Directory is in the process of being implemented. It will be working very soon.');" title="Sign in to your CERN account" onClick="trackOutboundLink(this, 'Outbound Links', 'toolbar'); return false;">Sign in</a></li>
+			<li class="active"><a class="cern-directory" href="http://cern.ch/directory" title="Search CERN resources and browse the directory" onClick="trackOutboundLink(this, 'Outbound Links', 'toolbar'); return false;">Directory</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="dir-header" class="clearfix">
+	
+	<div id="dir-search">
+	
+		<header class="clearfix">
+			<h1>The CERN Directory</h1>
+			<p>Search for what you need, or browse CERN websites. Looking for the <a href="http://cern.ch/scientists">Scientists</a> or <a href="http://cern.ch/cern-people">CERN people</a> sections, or just curious <a href="http://home.web.cern.ch/about">about CERN</a>?</p>
+		</header>
+	
+		<form class="cern-searchform" id="cern-searchform" action="https://found.cern.ch/foundpub/Phonebook/index.html">
+			
+			<fieldset>
+				<select id="cern-search-context">
+					<option value="" data-actionname="search" data-action="https://found.cern.ch/foundpub/Phonebook/index.html" data-description="Phonebook search" selected="selected">Phonebook</option>
+					<option value="" data-actionname="k" data-action="https://search.cern.ch/Pages/WebResults.aspx" data-description="CERN Search">CERN search (everything)</option>
+					<option value="" data-actionname="p" data-action="http://cds.cern.ch/search" data-description="CDS search">CDS (docs, publications and media)</option>
+					<option value="" data-actionname="q" data-action="https://cern.service-now.com/service-portal/search.do" data-description="CERN service portal search">CERN service portal</option>
+					<option value="" data-actionname="p" data-action="http://indico.cern.ch/search" data-description="Indico search">Indico (events)</option>
+					<option value="" data-actionname="n" data-action="https://maps.cern.ch/mapsearch/mapsearch.htm" data-description="Maps search (e.g. 50/1-016)">Buildings</option>
+				</select>
+				<input id="cern-search" type="search" value="What are you looking for?" title="What are you looking for?" name="search" />
+			
+				<button class="btn" type="submit">Search</button>
+			</fieldset>
+			
+		</form>
+	
+	</div><!-- /#dir-search -->
+	
+	<section id="help">
+	
+		<h3>Useful contacts</h3>
+		<!--<li><a href="http://cern.ch/emergencies">Emergencies <span class="urgent" href="tel:+41227674444">74444</a></li>
+		<li><a href="http://cern.ch/security">Computer security <span href="tel:+41227670500">70500</a></li>
+		<li><a href="http://cern.ch/service-desk">Service desk <span href="tel:+41227677777">77777</a></li>-->
+		<ul>
+			<li><a class="urgent" href="http://cern.ch/emergencies" onClick="trackOutboundLink(this, 'Outbound Links', 'Emergencies'); return false;">Emergencies <span>74444</span></a></li>
+			<li><a href="http://cern.ch/security" onClick="trackOutboundLink(this, 'Outbound Links', 'Computer security'); return false;">Computer security <span>70500</span></a></li>
+			<li><a href="http://cern.ch/service-portal" onClick="trackOutboundLink(this, 'Outbound Links', 'Service portal'); return false;">CERN service portal <span>77777</span></a></li>
+			<li><a href="tel:+41227676111">Switchboard <span>111</span></a></li>
+		</ul>
+		
+	</section>
+</div>
+
+<div id="main">
+	
+  <div id="directory" role="main">
+    <a id="main-content"></a>
+
+		<section id="departments" class="sect-horiz">
+			
+			<header>
+				<h1>Departments, groups and units</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>CERN's departments</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="https://espace.cern.ch/be-dep/default.aspx" onClick="trackOutboundLink(this, 'Outbound Links', 'BE department'); return false;">BE - Beams</a></li>
+				<li><a class="d-item" href="http://en-dep.web.cern.ch/en-dep/" onClick="trackOutboundLink(this, 'Outbound Links', 'EN department'); return false;">EN - Engineering</a></li>
+				<li><a class="d-item" href="http://fp-dep.web.cern.ch/fp-dep/" onClick="trackOutboundLink(this, 'Outbound Links', 'FP department'); return false;">FP - Finance, procurement and knowledge transfer</a></li>
+				<li><a class="d-item" href="http://gs-dep.web.cern.ch/en" onClick="trackOutboundLink(this, 'Outbound Links', 'GS department'); return false;">GS - General infrastructure services</a></li>
+				<li><a class="d-item" href="https://hr-dept.web.cern.ch/hr-dept/" onClick="trackOutboundLink(this, 'Outbound Links', 'HR department'); return false;">HR - Human resources</a></li>
+				<li><a class="d-item" href="http://it-dep.web.cern.ch/it-dep/" onClick="trackOutboundLink(this, 'Outbound Links', 'IT department'); return false;">IT - Information technology</a></li>
+				<li><a class="d-item" href="http://ph-dep.web.cern.ch/ph-dep/" onClick="trackOutboundLink(this, 'Outbound Links', 'PH department'); return false;">PH - Physics</a></li>
+				<li><a class="d-item" href="http://te-dep.web.cern.ch/te-dep/" onClick="trackOutboundLink(this, 'Outbound Links', 'TE department'); return false;">TE - Technology</a></li>
+				<li><a class="d-item" href="http://dgu.web.cern.ch/dgu/" onClick="trackOutboundLink(this, 'Outbound Links', 'DG unit'); return false;">DGU - Director general unit</a></li>
+				<li><a class="d-item" href="http://cerneu.web.cern.ch/cerneu/index.html" onClick="trackOutboundLink(this, 'Outbound Links', 'EU projects'); return false;">EU projects office</a></li>
+				<li><a class="d-item" href="https://espace.cern.ch/hse-unit/en/Pages/default.aspx" onClick="trackOutboundLink(this, 'Outbound Links', 'HSE unit'); return false;">HSE - Occupational health and safety and environmental protection unit</a></li>
+				<li><a class="d-item" href="http://international-relations.web.cern.ch/international-relations/" onClick="trackOutboundLink(this, 'Outbound Links', 'International relations'); return false;">International relations</a></li>
+				<li><a class="d-item" href="http://home.web.cern.ch/about/structure-cern" onClick="trackOutboundLink(this, 'Outbound Links', 'Org chart'); return false;">The structure of CERN</a></li>
+			</ul>
+			
+		</section>
+  
+  
+  		<section id="experiments" class="sect-horiz">
+			
+			<header>
+				<h1>Experiments and projects</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>Experiment, project and collaboration websites</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="http://greybook.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'Greybook'); return false;">CERN experiments (Grey Book)</a></li>
+				<li><a class="d-item" href="http://users-phys.au.dk/hknudsen/ad4homepage.html" onClick="trackOutboundLink(this, 'Outbound Links', 'ACE'); return false;">ACE</a></li>
+				<li><a class="d-item" href="http://aegis.web.cern.ch/aegis/home.html" onClick="trackOutboundLink(this, 'Outbound Links', 'AEGIS'); return false;">AEGIS</a></li>
+				<li><a class="d-item" href="http://aliweb.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'ALICE'); return false;">ALICE</a></li>
+				<li><a class="d-item" href="http://alpha.web.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'ALPHA'); return false;">ALPHA</a></li>
+				<li><a class="d-item" href="http://cern.ch/ASACUSA/" onClick="trackOutboundLink(this, 'Outbound Links', 'ASACUSA'); return false;">ASACUSA</a></li>
+				<li><a class="d-item" href="http://atlas.web.cern.ch/Atlas/Collaboration/" onClick="trackOutboundLink(this, 'Outbound Links', 'ATLAS'); return false;">ATLAS</a></li>
+				<li><a class="d-item" href="http://gabrielse.physics.harvard.edu/gabrielse/overviews/Antihydrogen/Antihydrogen.html" onClick="trackOutboundLink(this, 'Outbound Links', 'ATRAP'); return false;">ATRAP</a></li>
+				<li><a class="d-item" href="http://cast.web.cern.ch/CAST/" onClick="trackOutboundLink(this, 'Outbound Links', 'CAST'); return false;">CAST</a></li>
+				<li><a class="d-item" href="http://clic-study.org/" onClick="trackOutboundLink(this, 'Outbound Links', 'CLIC'); return false;">CLIC</a></li>
+				<li><a class="d-item" href="http://cern.ch/cloud/" onClick="trackOutboundLink(this, 'Outbound Links', 'CLOUD'); return false;">CLOUD</a></li>
+				<li><a class="d-item" href="http://proj-cngs.web.cern.ch/proj-cngs/" onClick="trackOutboundLink(this, 'Outbound Links', 'CNGS'); return false;">CNGS</a></li>
+				<li><a class="d-item" href="http://cms.web.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'CMS'); return false;">CMS</a></li>
+				<li><a class="d-item" href="http://wwwcompass.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'COMPASS'); return false;">COMPASS</a></li>
+				<li><a class="d-item" href="http://dirac.web.cern.ch/DIRAC/" onClick="trackOutboundLink(this, 'Outbound Links', 'DIRAC'); return false;">DIRAC</a></li>
+				<li><a class="d-item" href="https://espace.cern.ch/elena-project/SitePages/Home.aspx" onClick="trackOutboundLink(this, 'Outbound Links', 'ELENA'); return false;">ELENA</a></li>
+				<li><a class="d-item" href="http://www.eiroforum.org/" onClick="trackOutboundLink(this, 'Outbound Links', 'EIROforum'); return false;">EIROforum</a></li>
+				<li><a class="d-item" href="http://cern.ch/HiLumiLHC/" onClick="trackOutboundLink(this, 'Outbound Links', 'HL-LHC'); return false;">HL-LHC</a></li>
+				<li><a class="d-item" href="http://cern.ch/hiradmat/" onClick="trackOutboundLink(this, 'Outbound Links', 'HiRadMat'); return false;">HiRadMat</a></li>
+				<li><a class="d-item" href="http://cern.ch/isolde" onClick="trackOutboundLink(this, 'Outbound Links', 'ISOLDE'); return false;">ISOLDE</a></li>
+				<li><a class="d-item" href="http://lhcb.web.cern.ch/lhcb/" onClick="trackOutboundLink(this, 'Outbound Links', 'LHCb'); return false;">LHCb</a></li>
+				<li><a class="d-item" href="http://www.stelab.nagoya-u.ac.jp/LHCf/LHCf/index.html" onClick="trackOutboundLink(this, 'Outbound Links', 'LHCf'); return false;">LHCf</a></li>
+				<li><a class="d-item" href="http://espace.cern.ch/liu-project/default.aspx" onClick="trackOutboundLink(this, 'Outbound Links', 'LIU'); return false;">LIU project</a></li>
+				<li><a class="d-item" href="http://moedal.web.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'MoEDAL'); return false;">MoEDAL </a></li>
+				<li><a class="d-item" href="http://na61.web.cern.ch/na61/xc/index.html" onClick="trackOutboundLink(this, 'Outbound Links', 'NA61'); return false;">NA61/SHINE</a></li>
+				<li><a class="d-item" href="http://na62.web.cern.ch/na62/" onClick="trackOutboundLink(this, 'Outbound Links', 'NA62'); return false;">NA62</a></li>
+				<li><a class="d-item" href="http://ntof-exp.web.cern.ch/ntof-exp/" onClick="trackOutboundLink(this, 'Outbound Links', 'nTOF'); return false;">nTOF</a></li>
+				<li><a class="d-item" href="http://project-slhc.web.cern.ch/project-slhc/" onClick="trackOutboundLink(this, 'Outbound Links', 'sLHC'); return false;">sLHC</a></li>
+				<li><a class="d-item" href="http://totem.web.cern.ch/Totem/" onClick="trackOutboundLink(this, 'Outbound Links', 'TOTEM'); return false;">TOTEM</a></li>
+				<li><a class="d-item" href="http://www.infn.it/joomla/csn1/UA9/" onClick="trackOutboundLink(this, 'Outbound Links', 'UA9'); return false;">UA9</a></li>
+				<li><a class="d-item" href="http://wlcg.web.cern.ch" onClick="trackOutboundLink(this, 'Outbound Links', 'WLCG'); return false;">WLCG</a></li>
+			</ul>
+			
+		</section>
+  
+    
+    	<section id="applications" class="sect-horiz">
+			
+			<header>
+				<h1>Applications</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>Commonly-used applications from <a href="https://ais.web.cern.ch/ais/" onClick="trackOutboundLink(this, 'Outbound Links', 'AIS'); return false;">AIS</a> and beyond</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="http://cern.ch/adams" onClick="trackOutboundLink(this, 'Outbound Links', 'ADAMS'); return false;">ADAMS</a></li> 
+				<li><a class="d-item" href="https://indico.cern.ch/roomBooking.py/search4Rooms?forNewBooking=True" onClick="trackOutboundLink(this, 'Outbound Links', 'Indico: book a room'); return false;">book a room</a></li> 
+				<li><a class="d-item" href="https://edh.cern.ch/Desktop/" onClick="trackOutboundLink(this, 'Outbound Links', 'EDH'); return false;">EDH</a></li> 
+				<li><a class="d-item" href="https://edms.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'EDMS'); return false;">EDMS</a></li> 
+				<li><a class="d-item" href="https://cds.cern.ch" onClick="trackOutboundLink(this, 'Outbound Links', 'CDS'); return false;">CDS</a></li> 
+				<li><a class="d-item" href="https://cet.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'CET'); return false;">CET</a></li> 
+				<li><a class="d-item" href="https://hrt.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'HRT'); return false;">HRT</a></li> 
+				<li><a class="d-item" href="http://indico.cern.ch" onClick="trackOutboundLink(this, 'Outbound Links', 'Indico'); return false;">Indico</a></li>
+				<li><a class="d-item" href="http://oraclehr.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'OracleHR'); return false;">OracleHR</a></li> 
+				<li><a class="d-item" href="http://phonebook.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'Phonebook'); return false;">phonebook</a></li> 
+				<li><a class="d-item" href="https://sir.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'SIR'); return false;">SIR</a></li> 
+				<li><a class="d-item" href="https://wos.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'Qualiac'); return false;">Qualiac</a></li> 
+			</ul>
+						
+		</section>
+		
+    
+		<section id="admin" class="sect-horiz">
+			
+			<header>
+				<h1>Admin and procedures</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>Administrative procedures at CERN</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="https://admin-eguide.web.cern.ch/admin-eguide/accueil.asp" onClick="trackOutboundLink(this, 'Outbound Links', 'Admin e-guide'); return false;">Admin e-guide</a></li>
+				<li><a class="d-item" href="http://design-guidelines.web.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'Design guidelines'); return false;">CERN design guidelines</a></li>
+				<li><a class="d-item" href="http://cern.ch/account" onClick="trackOutboundLink(this, 'Outbound Links', 'Computing accounts'); return false;">Computing accounts</a></li>
+				<li><a class="d-item" href="http://ph-dep-usersoffice.web.cern.ch/ph-dep-UsersOffice/" onClick="trackOutboundLink(this, 'Outbound Links', 'User office'); return false;">Users&#39; Office</a></li>
+			</ul>
+						
+		</section>
+		
+	
+		
+		<section id="maps" class="sect-horiz">
+			
+			<header>
+				<h1>Maps and access</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>Finding a building, getting around</p>
+			</header>
+			
+			<ul class="nav-list clearfix">			
+				<li><a class="d-item" href="http://home.web.cern.ch/directions" onClick="trackOutboundLink(this, 'Outbound Links', 'directions'); return false;">How to get to CERN</a></li>
+				<li><a class="d-item" href="http://maps.cern.ch" onClick="trackOutboundLink(this, 'Outbound Links', 'maps'); return false;">Maps</a></li>
+				<li><a class="d-item" href="http://gs-dep.web.cern.ch/en/content/gis_mobile" onClick="trackOutboundLink(this, 'Outbound Links', 'mobile maps apps'); return false;">Mobile map apps</a></li>
+				<li><a class="d-item" href="http://m.cern.ch" onClick="trackOutboundLink(this, 'Outbound Links', 'mobile website'); return false;">Mobile website for CERN people</a></li>
+				<li><a class="d-item" href="http://gs-dep.web.cern.ch/en/content/registration-service" onClick="trackOutboundLink(this, 'Outbound Links', 'registration service'); return false;">Registration service</a></li>
+				<li><a class="d-item" href="http://cern.ch/ShuttleService" onClick="trackOutboundLink(this, 'Outbound Links', 'shuttle timetables'); return false;">Shuttle timetables</a></li>
+			</ul>
+			
+		</section>
+		
+		<section id="news" class="sect-horiz">
+			
+			<header>
+				<h1>News and events</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>News and events from CERN and the HEP community</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="http://home.web.cern.ch/cern-people/announcements" onClick="trackOutboundLink(this, 'Outbound Links', 'Core website'); return false;">Announcements for CERN people</a></li>
+				<li><a class="d-item" href="http://cdsweb.cern.ch/events/events.py/index?date=future&amp;categ=All&amp;order=date"  onClick="trackOutboundLink(this, 'Outbound Links', 'CDS HEP events'); return false;">CERN &amp; high-energy-physics events</a></li>
+				<li><a class="d-item" href="http://indico.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'Indico'); return false;">Indico</a></li>
+				<li><a class="d-item" href="https://cds.cern.ch/collection/Photos" onClick="trackOutboundLink(this, 'Outbound Links', 'CDS images'); return false;">Latest images in CDS</a></li>
+				<li><a class="d-item" href="https://cds.cern.ch/collection/Videos" onClick="trackOutboundLink(this, 'Outbound Links', 'CDS videos'); return false;">Latest videos in CDS</a></li>
+				<li><a class="d-item" href="http://home.web.cern.ch/cern-people/official-communications" onClick="trackOutboundLink(this, 'Outbound Links', 'Core website'); return false;">Official communications for CERN people</a></li>
+				<li><a class="d-item" href="http://cern.ch/press" onClick="trackOutboundLink(this, 'Outbound Links', 'Press office'); return false;">Press office</a></li>
+				<li><a class="d-item" href="https://home.web.cern.ch/cern-people/got-story-cern-website" onClick="trackOutboundLink(this, 'Outbound Links', 'Core website'); return false;">Submit a story for the CERN website</a></li>
+				<li><a class="d-item" href="http://home.web.cern.ch/cern-people/updates" onClick="trackOutboundLink(this, 'Outbound Links', 'Core website'); return false;">Updates for CERN people</a></li>
+				<li><a class="d-item" href="http://indico.cern.ch/categOverview.py?categId=0" onClick="trackOutboundLink(this, 'Outbound Links', 'Indico: today'); return false;">What&#39;s on today</a></li>				
+			</ul>
+			
+		</section>
+		
+		<section id="accelerators" class="sect-horiz">
+			
+			<header>
+				<h1>Accelerators and physics</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>Resources and links related to accelerators and physics</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="https://espace.cern.ch/acc-tec-sector/default.aspx" onClick="trackOutboundLink(this, 'Outbound Links', 'Accelerators and technology sector'); return false;">Accelerators and technology sector</a></li>			
+				<li><a class="d-item" href="https://espace.cern.ch/be-dep/OP/default.aspx" onClick="trackOutboundLink(this, 'Outbound Links', 'BE department'); return false;">Beams department operations group page</a></li>
+				<li><a class="d-item" href="http://op-webtools.web.cern.ch/op-webtools/vistar/vistars.php?usr=LHC1" onClick="trackOutboundLink(this, 'Outbound Links', 'LHC page 1'); return false;">LHC page 1</a></li>
+				<li><a class="d-item" href="http://cern.ch/lpcc" onClick="trackOutboundLink(this, 'Outbound Links', 'LPCC'); return false;">LHC physics centre at CERN (LPCC)</a></li>
+				<li><a class="d-item" href="http://cern.ch/lhc-archive" onClick="trackOutboundLink(this, 'Outbound Links', 'LHC project'); return false;">LHC project (archived)</a></li>
+				<li><a class="d-item" href="http://cern.ch/LS1-planning" onClick="trackOutboundLink(this, 'Outbound Links', 'LS1'); return false;">Long shutdown 1 planning</a></li>
+				<li><a class="d-item" href="http://ph-dep.web.cern.ch/ph-dep/" onClick="trackOutboundLink(this, 'Outbound Links', 'PH department'); return false;">PH department</a></li>
+			</ul>
+			
+		</section>
+
+		
+		<section id="documents" class="sect-horiz">
+			
+			<header>
+				<h1>Documents, reports and publications</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>Key publications</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="http://bulletin.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'Bulletin'); return false;">Bulletin</a></li>
+				<li><a class="d-item" href="http://oldlibrary.web.cern.ch/oldlibrary/Library/AnnualReport.html" onClick="trackOutboundLink(this, 'Outbound Links', 'Annual report'); return false;">CERN Annual Report</a></li>
+				<li><a class="d-item" href="http://cerncourier.com/cws/latest/cern" onClick="trackOutboundLink(this, 'Outbound Links', 'CERN Courier'); return false;">CERN Courier</a></li>						
+				<li><a class="d-item" href="http://cds.cern.ch" onClick="trackOutboundLink(this, 'Outbound Links', 'CDS'); return false;">CERN document server (CDS)</a></li>
+				<li><a class="d-item" href="http://library.web.cern.ch/library/" onClick="trackOutboundLink(this, 'Outbound Links', 'Library'); return false;">CERN library</a></li>
+				<li><a class="d-item" href="http://cdsweb.cern.ch/collection/CERN%20Yellow%20Reports?ln=en" onClick="trackOutboundLink(this, 'Outbound Links', 'Yellow reports'); return false;">CERN Yellow Reports</a></li>
+				<li><a class="d-item" href="http://cern.ch/edms" onClick="trackOutboundLink(this, 'Outbound Links', 'EDMS'); return false;">Engineering and equipment data management service (EDMS)</a></li>
+				<li><a class="d-item" href="http://echo.cern.ch" onClick="trackOutboundLink(this, 'Outbound Links', 'Echo'); return false;">Staff association newsletter</a></li>
+			</ul>
+			
+		</section>
+	
+		
+		<section id="committees" class="sect-horiz">
+			
+			<header>
+				<h1>Committees and council</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>Committees, CERN Council</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="http://ph-dep-accu.web.cern.ch/ph-dep-ACCU/Welcome.html" onClick="trackOutboundLink(this, 'Outbound Links', 'ACCU'); return false;">Advisory committee of CERN users (ACCU)</a></li>
+				<li><a class="d-item" href="http://cern.ch/council" onClick="trackOutboundLink(this, 'Outbound Links', 'Council'); return false;">CERN Council</a></li>
+				<li><a class="d-item" href="http://indico.cern.ch/categoryDisplay.py?categId=59" onClick="trackOutboundLink(this, 'Outbound Links', 'Committees in Indico'); return false;">Committees in Indico</a></li>
+				<li><a class="d-item" href="http://eps-hepp.web.cern.ch/eps-hepp/" onClick="trackOutboundLink(this, 'Outbound Links', 'EPS-HEP'); return false;">EPS High-energy particle physics board</a></li>
+				<li><a class="d-item" href="http://committees.web.cern.ch/Committees/" onClick="trackOutboundLink(this, 'Outbound Links', 'committees'); return false;">Scientific committees</a></li>
+			</ul>
+			
+		</section>
+		
+		<section id="working-at-cern" class="sect-horiz">
+			
+			<header>
+				<h1>Working at CERN</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>Resources for those working at CERN</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="http://cern.ch/jobs" onClick="trackOutboundLink(this, 'Outbound Links', 'jobs'); return false;">CERN jobs</a></li>					
+				<li><a class="d-item" href="http://home.web.cern.ch//cern-people/cern-official-holidays-2013" onClick="trackOutboundLink(this, 'Outbound Links', 'official holidays'); return false;">CERN official holidays</a></li>	
+				<li><a class="d-item" href="http://cern.ch/ombuds" onClick="trackOutboundLink(this, 'Outbound Links', 'ombudsperson'); return false;">CERN ombuds</a></li>
+				<li><a class="d-item" href="http://cern.ch/codeofconduct" onClick="trackOutboundLink(this, 'Outbound Links', 'codeofconduct'); return false;">CERN code of conduct</a></li>
+				<li><a class="d-item" href="http://diversity.web.cern.ch/" onClick="trackOutboundLink(this, 'Outbound Links', 'diversity website'); return false;">Diversity at CERN</a></li>
+				<li><a class="d-item" href="http://cdsweb.cern.ch/collection/CHIS%20Bulletin" onClick="trackOutboundLink(this, 'Outbound Links', 'CHIS Bulletin'); return false;">Health insurance scheme bulletin</a></li>
+				<li><a class="d-item" href="http://inspirehep.net/collection/Jobs"  onClick="trackOutboundLink(this, 'Outbound Links', 'jobs - INSPIRE'); return false;">High-energy physics jobs</a></li>
+				<li><a class="d-item" href="https://espace.cern.ch/Medical-service/SitePages/Home.aspx" onClick="trackOutboundLink(this, 'Outbound Links', 'medical service'); return false;">Medical service</a></li>
+				<li><a class="d-item" href="http://pensionfund.cern.ch/en" onClick="trackOutboundLink(this, 'Outbound Links', 'pension fund'); return false;">Pension fund</a></li>
+			</ul>
+			
+		</section>
+		
+		<section id="life" class="sect-horiz">
+			
+			<header>
+				<h1>Life at CERN</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>Resources for life at CERN</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="https://espace.cern.ch/cern-market/default.aspx" onClick="trackOutboundLink(this, 'Outbound Links', 'CERN market'); return false;">CERN market</a></li>
+				<li><a class="d-item" href="https://espace.cern.ch/cern-guides/default.aspx" onClick="trackOutboundLink(this, 'Outbound Links', 'CERN market'); return false;">CERN guides</a></li>
+				<li><a class="d-item" href="http://home.web.cern.ch/cern-people/clubs" onClick="trackOutboundLink(this, 'Outbound Links', 'clubs'); return false;">Clubs</a></li>
+				<li><a class="d-item" href="http://cern.ch/housing" onClick="trackOutboundLink(this, 'Outbound Links', 'housing service'); return false;">Housing</a></li>
+				<li><a class="d-item" href="http://ph-dep-usersoffice.web.cern.ch/ph-dep-usersoffice/NewcomersGuide/Welcome.html" onClick="trackOutboundLink(this, 'Outbound Links', 'newcomer guide'); return false;">Newcomers' guide</a></li>
+				<li><a class="d-item" href="http://cern.ch/resto1" onClick="trackOutboundLink(this, 'Outbound Links', 'restaurant'); return false;">Restaurant 1</a> <a class="d-item" href="http://cern.ch/restaurant2" onClick="trackOutboundLink(this, 'Outbound Links', 'restaurant'); return false;">Restaurant 2</a></li>
+				<li><a class="d-item" href="http://staff-association.web.cern.ch" onClick="trackOutboundLink(this, 'Outbound Links', 'staff association'); return false;">Staff association</a></li>
+			</ul>
+			
+		</section>
+		
+		<section id="training" class="sect-horiz">
+			
+			<header>
+				<h1>Training and development</h1>
+				<p class="sort-actions">Change order: <a class="sort-up" href="#">Move up</a> | <a class="sort-down" href="#">Move down</a> | <a class="sort-remove" href="#">Remove</a></p>
+				<p>Schools, training and development</p>
+			</header>
+			
+			<ul class="nav-list clearfix">
+				<li><a class="d-item" href="http://indico.cern.ch/categoryDisplay.py?categId=72" onClick="trackOutboundLink(this, 'Outbound Links', 'academic training'); return false;">Academic training lectures: Regular programme</a></li>
+				<li><a class="d-item" href="http://indico.cern.ch/categoryDisplay.py?categId=108" onClick="trackOutboundLink(this, 'Outbound Links', 'academic training'); return false;">Academic training lectures for postgraduate students</a></li>
+				<li><a class="d-item" href="http://cdsweb.cern.ch/collection/Academic%20Training%20Lectures?ln=en" onClick="trackOutboundLink(this, 'Outbound Links', 'academic training'); return false;">Academic training lecture videos</a></li>
+				<li><a class="d-item" href="http://cas.web.cern.ch/cas/" onClick="trackOutboundLink(this, 'Outbound Links', 'CERN schools'); return false;">CERN accelerator school (CAS)</a></li>
+				<li><a class="d-item" href="https://csc.web.cern.ch/CSC/" onClick="trackOutboundLink(this, 'Outbound Links', 'CERN schools'); return false;">CERN school of computing (CSC)</a></li>
+				<li><a class="d-item" href="http://physicschool.web.cern.ch/PhysicSchool/ESHEP/default.html" onClick="trackOutboundLink(this, 'Outbound Links', 'CERN schools'); return false;">European schools of high-energy physics</a></li>
+				<li><a class="d-item" href="https://hr-training.web.cern.ch/hr-training/" onClick="trackOutboundLink(this, 'Outbound Links', 'HR training'); return false;">HR learning and development</a></li>
+				<li><a class="d-item" href="http://physicschool.web.cern.ch/PhysicSchool/CLASHEP/" onClick="trackOutboundLink(this, 'Outbound Links', 'CERN schools'); return false;">Latin-American schools of high-energy physics</a></li>
+				<li><a class="d-item" href="http://jobs.web.cern.ch/join-us/summer-student-programme-member-states" onClick="trackOutboundLink(this, 'Outbound Links', 'summer students'); return false;">Summer students programme</a></li>
+			</ul>
+			
+		</section>
+		
+   </div><!-- /#content -->
+
+		<aside id="sidebar">
+			
+			<section id="dir-nav">
+						
+				<h2>Jump to section</h2>
+				
+				<ul class="nav-list clearfix">
+					<li><a href="#departments" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Departments, groups and units</a></li>
+					<li><a href="#experiments" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Experiments and projects</a></li>
+					<li><a href="#applications" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Applications</a></li>
+					<li><a href="#admin" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Admin and procedures</a></li>
+					<li><a href="#maps" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Maps and access</a></li>
+					<li><a href="#news" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">News and events</a></li>
+					<li><a href="#accelerators" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Accelerators and physics</a></li>
+					<li><a href="#documents" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Documents, reports and publications</a></li>
+					<li><a href="#committees" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Committees and council</a></li>
+					<li><a href="#working-at-cern" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Working at CERN</a></li>
+					<li><a href="#life" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Life at CERN</a></li>
+					<li><a href="#training" onClick="trackOutboundLink(this, 'Outbound Links', 'Jump'); return false;">Training and development</a></li>
+				</ul>
+			
+			</section><!-- /#dir-nav -->
+		
+		</aside><!-- /#sidebar -->
+ 
+</div><!-- /#main -->
+
+<footer id="dir-footer">
+	
+	<a href="http://cern.ch"><img src="./img/cern-logo-blue.png" alt="CERN" /></a>
+	
+</footer>
+
+
+<script type="text/javascript">
+//Google Analytics
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-8058079-24']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
